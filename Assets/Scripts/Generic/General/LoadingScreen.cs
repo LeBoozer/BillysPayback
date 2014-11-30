@@ -59,7 +59,7 @@ public class LoadingScreen : MonoBehaviour
 			// Notify controller?
 			if(m_targetConroller.isCustomScreen() == true)
 			{
-				m_isWaitingForConroller = m_targetConroller.onGui(m_isWaitingForConroller, Time.deltaTime);
+				m_isWaitingForConroller = !m_targetConroller.onGui(m_isWaitingForConroller, Time.deltaTime);
 				if(m_isWaitingForConroller == false)
 					onDone();
 			}
