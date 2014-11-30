@@ -167,7 +167,7 @@ public class GameStateMaschine : MonoBehaviour
 	}
 
 	// Will be called at a fixed rate
-	void UpdateFixed ()
+	void FixedUpdate()
 	{
 		// Update current state
 		if (m_currentGameState != null)
