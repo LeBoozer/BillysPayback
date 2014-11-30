@@ -14,7 +14,7 @@ public interface GameStateController
 {
 	// Returns whether the level can be added to the current level.
 	// This requires that all game-objects are grouped into one root game-object with the name: _Root_[levelname].
-	bool isAdaptiveLevel();
+	bool isAdditiveLevel();
 	
 	// Returns whether the loading screen uses a custom GUI or a pre-build one
 	bool isCustomScreen();

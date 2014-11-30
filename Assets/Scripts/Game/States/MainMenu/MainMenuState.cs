@@ -15,26 +15,31 @@ public class MainMenuState : GameState, GameStateController
 	// Overrides: GameState::onInit()
 	public void onInit()
 	{
+		Debug.Log("MainMenu::onInit()");
 	}
 	
 	// Overrides: GameState::onExit()
 	public void onExit()
 	{
+		Debug.Log("MainMenu::onExit()");
 	}
 	
 	// Overrides: GameState::onEnter()
 	public void onEnter()
 	{
+		Debug.Log("MainMenu::onEnter()");
 	}
 	
 	// Overrides: GameState::onLeave()
 	public void onLeave()
 	{
+		Debug.Log("MainMenu::onLeave()");
 	}
 	
 	// Overrides: GameState::onUpdate()
 	public void onUpdate(float _d)
-	{}
+	{
+	}
 	
 	// Overrides: GameState::onInit()
 	public void onUpdateFixed(float _d)
@@ -47,8 +52,8 @@ public class MainMenuState : GameState, GameStateController
 		return this;
 	}
 	
-	// Overrides: GameStateController::isAdaptiveLevel()
-	public bool isAdaptiveLevel()
+	// Overrides: GameStateController::isAdditiveLevel()
+	public bool isAdditiveLevel()
 	{
 		return false;
 	}

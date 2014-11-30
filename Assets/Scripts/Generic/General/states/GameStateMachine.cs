@@ -35,8 +35,34 @@ public class GameStateMaschine : MonoBehaviour
 		m_gameStateStack.Clear();
 	}
 	
+#region (Undo additive level-loading)
+	// Undos the additive level loading for the specified game-state (if required)
+	private void _undoAdditiveLevelLoading(GameState _state)
+	{
+		// Local variables
+		GameStateController stateCtrl = null;
+		GameObject rootObjectLevel = null;
+		string rootObjectLevelName = "";
+	
+		// Check parameter
+		if(_state == null)
+			return;
+		stateCtrl = _state.getController();
+		
+		// Retrieve root game-object for the additive level
+		rootObjectLevelName = GameConfig.LEVEL_ADDITIVE_ROOT_GO_NAME_RULE.Replace("x", stateCtrl.getTargetLevelName());
+		rootObjectLevel = GameObject.Find(rootObjectLevelName);
+		
+		// Destroy root game-object
+		if(rootObjectLevel != null)
+			GameObject.Destroy(rootObjectLevel);
+	}
+#endregion
+	
+#region (Setup loading-screen)
 	// Setups the loading screen for the specified game-state (if required!)
-	private void _setupLoadingScreen(GameState _target)
+	// Returns true on success, otherwise false
+	private bool _setupLoadingScreen(GameState _target, bool _additive)
 	{
 		// Local parameters
 		GameObject obj = null;
@@ -44,15 +70,19 @@ public class GameStateMaschine : MonoBehaviour
 	
 		// Check parameter
 		if(_target == null)
-			return;
+			return false;
 			
 		// Loading screen required?
 		stateCtrl = _target.getController();
 		if(stateCtrl == null || stateCtrl.getTargetLevelName() == null || stateCtrl.getTargetLevelName().Length == 0)
 		{
 			_target.onEnter();
-			return;
+			return true;
 		}
+		
+		// Additive required?
+		if(stateCtrl.isAdditiveLevel() != _additive)
+			return false;
 			
 		// Loading screen already available?
 		if(m_loadingScreen == null)
@@ -62,7 +92,7 @@ public class GameStateMaschine : MonoBehaviour
 			if(obj == null)
 			{
 				// Create game-object
-				obj = new GameObject();
+				obj = new GameObject(typeof(LoadingScreen).ToString());
 				obj.tag = Tags.TAG_LOADING_SCREEN;
 				Object.DontDestroyOnLoad(obj);
 			}
@@ -75,8 +105,14 @@ public class GameStateMaschine : MonoBehaviour
 		m_loadingScreen.reinitialize(_target);
 		
 		// Start loading
-		Application.LoadLevel(stateCtrl.getTargetLevelName());
+		if(_additive == true)
+			Application.LoadLevelAdditive(stateCtrl.getTargetLevelName());
+		else
+			Application.LoadLevel(stateCtrl.getTargetLevelName());
+			
+		return true;
 	}
+#endregion
 	
 	// Returns or updates the currently active game-state
 	public GameState ActiveState
@@ -85,6 +121,7 @@ public class GameStateMaschine : MonoBehaviour
 		private set {}
 	}
 	
+#region (Set new game-state)
 	// Sets a new game-state by replacing and terminated the currently active one. All stacked ones will be deleted also
 	public void setGameState<_T>()
 		where _T : GameState, new()
@@ -108,9 +145,11 @@ public class GameStateMaschine : MonoBehaviour
 		m_currentGameState.onInit();
 		
 		// Setup loading screen (if required)
-		_setupLoadingScreen(m_currentGameState);
+		_setupLoadingScreen(m_currentGameState, false);
 	}
+#endregion
 	
+#region (Stack operations for game-states)
 	// Changes the game-state. Instead of replacing and terminating the currently active state, the current state will be pushed onto the stack for later use
 	// Returns true on success, otherwise false
 	public bool pushGameState<_T>()
@@ -131,9 +170,9 @@ public class GameStateMaschine : MonoBehaviour
 		// Create next game-state
 		m_currentGameState = new _T();
 		m_currentGameState.onInit();
-		m_currentGameState.onEnter();
-			
-		return true;
+		
+		// Setup loading screen (if required)
+		return _setupLoadingScreen(m_currentGameState, true);		
 	}
 	
 	// Tries to pop the currently active game-state by replacing this one with the first stack element
@@ -148,6 +187,7 @@ public class GameStateMaschine : MonoBehaviour
 		if(m_currentGameState != null)
 		{
 			m_currentGameState.onLeave();
+			_undoAdditiveLevelLoading(m_currentGameState);
 			m_currentGameState.onExit();
 		}
 		
@@ -157,6 +197,7 @@ public class GameStateMaschine : MonoBehaviour
 	
 		return true;
 	}
+#endregion
 	
 	// Will be called once a frame
 	void Update ()

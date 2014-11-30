@@ -21,21 +21,25 @@ public class IntroState : GameState, GameStateController
 	// Overrides: GameState::onInit()
 	public void onInit()
 	{
+		Debug.Log("Intro::onInit()");
 	}
 	
 	// Overrides: GameState::onExit()
 	public void onExit()
 	{
+		Debug.Log("Intro::onExit()");
 	}
 	
 	// Overrides: GameState::onEnter()
 	public void onEnter()
 	{
+		Debug.Log("Intro::onEnter()");
 	}
 	
 	// Overrides: GameState::onLeave()
 	public void onLeave()
 	{
+		Debug.Log("Intro::onLeave()");
 	}
 	
 	// Overrides: GameState::onUpdate()
@@ -51,12 +55,12 @@ public class IntroState : GameState, GameStateController
 			if(m_remainingTime <= 0.0f)
 			{				
 				// Switch game-state: main-menu
-                Game.Instance.GSM.setGameState<MainMenuState>();
-                
+               	Game.Instance.GSM.setGameState<MainMenuState>();
+
                 // Set flag
                 m_timeIsUp = true;
             }
-        }	
+        }
 	}
 	
 	// Overrides: GameState::onInit()
@@ -70,8 +74,8 @@ public class IntroState : GameState, GameStateController
 		return this;
 	}
 	
-	// Overrides: GameStateController::isAdaptiveLevel()
-	public bool isAdaptiveLevel()
+	// Overrides: GameStateController::isAdditiveLevel()
+	public bool isAdditiveLevel()
 	{
 		return false;
 	}
