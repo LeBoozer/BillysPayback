@@ -199,6 +199,7 @@ public class GameStateMaschine : MonoBehaviour
 	}
 #endregion
 	
+#region (MonoBehaviour methods)
 	// Will be called once a frame
 	void Update ()
 	{
@@ -214,4 +215,19 @@ public class GameStateMaschine : MonoBehaviour
 		if (m_currentGameState != null)
 				m_currentGameState.onUpdateFixed (Time.deltaTime);
 	}
+	
+	// Will be called if the application is about to quit
+	void OnApplicationQuit()
+	{
+		// Delete current game-state
+		if(m_currentGameState != null)
+		{
+			m_currentGameState.onLeave();
+			m_currentGameState.onExit();
+		}
+		
+		// Reset stack
+		_clearStack();
+	}
+#endregion
 }

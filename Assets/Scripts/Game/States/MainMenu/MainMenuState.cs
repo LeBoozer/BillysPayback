@@ -12,6 +12,7 @@ using System.Collections;
  */
 public class MainMenuState : GameState, GameStateController
 {		
+#region (GameState methods)
 	// Overrides: GameState::onInit()
 	public void onInit()
 	{
@@ -45,7 +46,9 @@ public class MainMenuState : GameState, GameStateController
 	public void onUpdateFixed(float _d)
 	{
 	}
+#endregion
 	
+#region (GameStateController methods)	
 	// Overrides: GameStateController::getController()
 	public GameStateController getController()
 	{
@@ -75,4 +78,5 @@ public class MainMenuState : GameState, GameStateController
 	{
 		return true;
 	}
+#endregion
 }

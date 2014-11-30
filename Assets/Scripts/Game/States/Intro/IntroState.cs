@@ -18,6 +18,7 @@ public class IntroState : GameState, GameStateController
 	// Remaining time in seconds
 	private float m_remainingTime = GameConfig.INTRO_SHOW_TIME_SEC;
 
+#region (GameState methods)
 	// Overrides: GameState::onInit()
 	public void onInit()
 	{
@@ -67,7 +68,9 @@ public class IntroState : GameState, GameStateController
 	public void onUpdateFixed(float _d)
 	{
 	}
+#endregion
 	
+#region (GameStateController methods)
 	// Overrides: GameStateController::getController()
 	public GameStateController getController()
 	{
@@ -97,4 +100,5 @@ public class IntroState : GameState, GameStateController
 	{
 		return true;
 	}
+#endregion
 }
