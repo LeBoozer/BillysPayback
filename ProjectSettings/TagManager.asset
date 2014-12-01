@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Ally
   - LoadingScreen
+  - Diamond
+  - KiwanoPowerUp
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -16,12 +18,12 @@ TagManager:
   Builtin Layer 5: UI
   Builtin Layer 6: 
   Builtin Layer 7: 
-  User Layer 8: 
-  User Layer 9: 
-  User Layer 10: 
-  User Layer 11: 
-  User Layer 12: 
-  User Layer 13: 
+  User Layer 8: Collectable
+  User Layer 9: Enemy
+  User Layer 10: Player
+  User Layer 11: ProjectilePlayer
+  User Layer 12: ProjectileEnemy
+  User Layer 13: Environment
   User Layer 14: 
   User Layer 15: 
   User Layer 16: 

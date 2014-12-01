@@ -24,4 +24,6 @@ public abstract class Tags
 	public static readonly string TAG_ENEMY				= "Enemy";
 	public static readonly string TAG_ALLY				= "Ally";
 	public static readonly string TAG_LOADING_SCREEN 	= "LoadingScreen";
+	public static readonly string TAG_DIAMOND 			= "Diamond";
+	public static readonly string TAG_KIWANO_POWER_UP 	= "KiwanoPowerUp";
 }
