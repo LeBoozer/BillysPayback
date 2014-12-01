@@ -28,9 +28,6 @@ public class PlayerCamera : MonoBehaviour {
 	{
 		// init values
 		Vector3 obPos = m_object.transform.position;
-		m_distance = 15;
-		m_damping = 0.01f;
-		m_threshold = 0.0001f;
 		this.transform.position = new Vector3 (obPos.x, obPos.y, obPos.z - m_distance);
 	}
 	#endregion
