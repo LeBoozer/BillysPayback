@@ -11,13 +11,13 @@ using System.Collections;
 /*
  * Control of the camera at a target object
  */
-public class Camera : MonoBehaviour {
+public class PlayerCamera : MonoBehaviour {
 
 	#region Variable
 	public 	Transform 	m_object;
-	public  float		m_distance;
-	public  float		m_damping;
-	public  float		m_threshold;
+	public  float		m_distance = 15.0f;
+	public  float		m_damping = 0.01f;
+	public  float		m_threshold = 0.0001f;
 
 
 	#endregion
