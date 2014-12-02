@@ -25,6 +25,7 @@ public class FSM : MonoBehaviour
 		// Notify the current one
 		if(m_currentFSMState != null)
 		{
+			m_currentFSMState.onLeave();
 			m_currentFSMState.setEnabled(false);
 			m_currentFSMState = null;
 		}
@@ -34,7 +35,10 @@ public class FSM : MonoBehaviour
 		
 		// Notify new state
 		if(m_currentFSMState != null)
+		{
 			m_currentFSMState.setEnabled(true);
+			m_currentFSMState.onEnter();
+		}
 	}
 	
 	// Override: MonoBehaviour::Start()
