@@ -18,8 +18,8 @@ public class Player : MonoBehaviour {
 	#region Variable
 
 	const float 		MAX_SPEED 			= 5f;
-	const float 		JUMP_START_SPEED	= 5f;
-	const float 		GRAVITATION 		= 2.5f;
+	const float 		JUMP_START_SPEED	= 10f;
+	const float 		GRAVITATION 		= 9.81f;
 
 	private float 		m_speed;
 	private float 		m_fly;

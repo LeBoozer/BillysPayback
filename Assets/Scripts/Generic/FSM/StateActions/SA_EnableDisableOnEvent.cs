@@ -9,9 +9,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 /*
- * Represents the basic state-action for the FSM
+ * TODO
  */
-public abstract class SA_EnableDisableOnEvent : FSMStateAction
+public class SA_EnableDisableOnEvent : FSMStateAction
 {
 	// True to enable the target objects on entering the state. Otherwise the behaviour is the other way around.
 	public bool 			m_enableOnEnter = true;
@@ -37,7 +37,10 @@ public abstract class SA_EnableDisableOnEvent : FSMStateAction
 		
 		// Set
 		foreach(GameObject o in m_targetList)
-			o.SetActive(enable);
+		{
+			if(o != null)
+				o.SetActive(enable);
+		}
 	}
 	
 	// Override: FSMStateAction::onActionLeave()
@@ -52,6 +55,9 @@ public abstract class SA_EnableDisableOnEvent : FSMStateAction
 		
 		// Set
 		foreach(GameObject o in m_targetList)
-			o.SetActive(enable);
+		{
+			if(o != null)
+				o.SetActive(enable);
+		}
 	}
 }
