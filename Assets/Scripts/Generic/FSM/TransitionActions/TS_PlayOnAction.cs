@@ -21,7 +21,7 @@ public class TS_PlayOnAction : FSMAction
 	
 	// Override: FSMAction::OnAction()
 	override public void onAction()
-	{
+	{	
 		// Enable/disable
 		foreach(ParticleSystem ps in m_particleSystemList)
 		{
