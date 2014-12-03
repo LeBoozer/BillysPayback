@@ -85,11 +85,6 @@ public class Player : MonoBehaviour {
 			if(m_speed < 0.1f && m_speed > -0.1f)
 				m_speed = 0;
 		}
-		
-		if(jumpKeyDown == true)
-		{
-			Debug.Log("jump: " + m_jump);
-		}
 
 		// jump and fly
 		// movement high&down
@@ -103,20 +98,20 @@ public class Player : MonoBehaviour {
 			// flying
 			m_flyStart = true;
 			if(m_fly > 0)
-				m_fly -= Physics.gravity.y * Time.deltaTime;
+				m_fly += Physics.gravity.y * Time.deltaTime;
 			else
-				m_fly -= Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
+				m_fly += Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
 		} 
 		else if (m_flyStart && m_jump && jumpKey && m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_ORANGE)) 
 		{
 			if(m_fly > 0)
-				m_fly -= Physics.gravity.y * Time.deltaTime;
+				m_fly += Physics.gravity.y * Time.deltaTime;
 			else
-				m_fly -= Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
+				m_fly += Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
 		} 
 		else if (m_jump) 
 		{
-			m_fly -= Physics.gravity.y * Time.deltaTime;
+			m_fly += Physics.gravity.y * Time.deltaTime;
 		} 
 		// nothing?
 		else 
