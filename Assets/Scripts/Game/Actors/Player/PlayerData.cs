@@ -156,6 +156,11 @@ public class PlayerData
 		if(_type == PowerUpType.PUT_NONE || _type == PowerUpType.PUT_COUNT)
 			return;
 		m_powerUps[(int)_type].m_stockSize = _size;
+		if(m_powerUps[(int)_type].m_stockSize <= 0)
+		{
+			m_powerUps[(int)_type].m_stockSize = 0;
+			m_powerUps[(int)_type].m_available = false;
+		}
 	}
 	
 	// Increases the stock size of the specified power-up by the defined value
@@ -164,7 +169,8 @@ public class PlayerData
 		// Check type
 		if(_type == PowerUpType.PUT_NONE || _type == PowerUpType.PUT_COUNT)
 			return;
-		m_powerUps[(int)_type].m_stockSize += _v;	
+		m_powerUps[(int)_type].m_stockSize += _v;
+		m_powerUps[(int)_type].m_available = true;
 	}
 	
 	// Decreases the stock size of the specified power-up by the defined value
@@ -174,8 +180,11 @@ public class PlayerData
 		if(_type == PowerUpType.PUT_NONE || _type == PowerUpType.PUT_COUNT)
 			return;
 		m_powerUps[(int)_type].m_stockSize -= _v;
-		if(m_powerUps[(int)_type].m_stockSize < 0)
+		if(m_powerUps[(int)_type].m_stockSize <= 0)
+		{
 			m_powerUps[(int)_type].m_stockSize = 0;
+			m_powerUps[(int)_type].m_available = false;
+		}
 	}
 #endregion
 }
