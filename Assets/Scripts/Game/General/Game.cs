@@ -22,6 +22,9 @@ public class Game
 
 	// The GSM
 	private GameStateMaschine 	m_gsm;
+	
+	// The player data
+	private PlayerData			m_playerData = new PlayerData();
 
 	// Protected constructor
 	protected Game()
@@ -32,6 +35,13 @@ public class Game
 	{
 		get { return m_gsm; }
 		private set{}
+	}
+	
+	// Returns the player data
+	public PlayerData PlayerData
+	{
+		get { return m_playerData; }
+		private set {}
 	}
 
 	// Returns the singleton instance
