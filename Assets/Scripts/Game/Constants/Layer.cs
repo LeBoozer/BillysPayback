@@ -23,12 +23,12 @@ public abstract class Layer
 	// Converts the layer name to the corresponding layer ID
 	public static int getLayerIDByName(string _layerName)
 	{
-		LayerMask.NameToLayer(_layerName);
+		return LayerMask.NameToLayer(_layerName);
 	}
 	
 	// Converts the layer ID to the coressponding layer name
 	public static string getLayerNameByID(int _id)
 	{
-		LayerMask.LayerToName(_id);
+		return LayerMask.LayerToName(_id);
 	}
 }
