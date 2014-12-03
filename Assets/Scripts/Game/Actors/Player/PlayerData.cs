@@ -59,6 +59,56 @@ public class PlayerData
 #endregion
 
 #region (Attributes)
+
+	// Delegate function used for events on attributes: on change value
+	public delegate void Delegate_OnAttributeChanged(int _newValue);
+	
+	// Delegate function used for events on power-ups: on change power-up
+	public delegate void Delegate_OnPowerUpChanged(PowerUpType _type, bool _available, int _stockSize);	
+
+#region (Life-points)
+	// Life points of billy
+	private int	m_lifePoints = GameConfig.BILLY_LIFE_POINT;
+	
+	// OnChange-Event for: life-points
+	public event Delegate_OnAttributeChanged OnChangeLifePoints = delegate{};
+	
+	// Used to access the life-points
+	public int LifePoints
+	{
+		get { return m_lifePoints; }
+		set
+		{ 
+			m_lifePoints = value;
+			if(m_lifePoints < 0)
+				m_lifePoints = 0;
+			OnChangeLifePoints(m_lifePoints);
+		}
+	}	
+#endregion
+
+#region (Diamonds)
+	// Number of collected diamonds
+	private int m_collectedDiamonds	= 0;
+
+	// OnChange-Event for: collected diamonds
+	public event Delegate_OnAttributeChanged OnChangeCollectedDiamonds = delegate{};
+
+	// Used to access the collected diamonds
+	public int CollectedDiamonds
+	{
+		get { return m_collectedDiamonds; }
+		set
+		{ 
+			m_collectedDiamonds = value;
+			if(m_collectedDiamonds < 0)
+				m_collectedDiamonds = 0;
+			OnChangeCollectedDiamonds(m_collectedDiamonds);
+		}
+	}
+#endregion
+	
+#region (Power-Ups)
 	// Represents a power-up
 	private class PowerUp
 	{
@@ -68,7 +118,7 @@ public class PlayerData
 		// Number of units left for this power-up
 		public int 		m_stockSize 	= 0;
 	}
-
+	
 	// Represents a list with all supported power-ups
 	public enum PowerUpType
 	{
@@ -85,43 +135,22 @@ public class PlayerData
 		PUT_ORANGE      = 2,
 		
 		// Internal use only!
-		PUT_COUNT 		= 2
+		PUT_COUNT 		= 3
 	}
-
-	// Life points of billy
-	private int			m_lifePoints 	= GameConfig.BILLY_LIFE_POINT;
 	
 	// List of all power-ups
-	private PowerUp[] 	m_powerUps 		= new PowerUp[(int)PowerUpType.PUT_COUNT];
-
-	// Returns the number of remaining life points
-	public int getLifePoints()
+	private PowerUp[] m_powerUps = new PowerUp[(int)PowerUpType.PUT_COUNT];
+	
+	// OnChange-Event for: power-ups
+	public event Delegate_OnPowerUpChanged OnChangePowerUp = delegate{};
+	
+	// Notifies all listener, that the specified power-has been changed
+	private void onNotifyPowerUpChanged(PowerUpType _type)
 	{
-		return m_lifePoints;
+		PowerUp pu = m_powerUps[(int)_type];
+		OnChangePowerUp(_type, pu.m_available, pu.m_stockSize);
 	}
 	
-	// Sets a new number of life points
-	public void setLifePoints(int _num)
-	{
-		m_lifePoints = _num;
-	}
-	
-	// Increases the life points by the defined value
-	public void increaseLifePointsByValue(PowerUpType _type, int _v)
-	{
-		// Decrease
-		m_lifePoints += _v;	
-	}
-	
-	// Decreases the life points by the defined value
-	public void decreaseLifePointsByValue(PowerUpType _type, int _v)
-	{
-		// Decrease
-		m_lifePoints -= _v;
-		if(m_lifePoints < 0)
-			m_lifePoints = 0;
-	}	
-
 	// Returns whether the specified power-up is available
 	public bool isPowerUpAvailable(PowerUpType _type)
 	{
@@ -138,6 +167,7 @@ public class PlayerData
 		if(_type == PowerUpType.PUT_NONE || _type == PowerUpType.PUT_COUNT)
 			return;
 		m_powerUps[(int)_type].m_available = _t;
+		onNotifyPowerUpChanged(_type);
 	}
 	
 	// Returns the number of left units for the specified power-up
@@ -161,6 +191,7 @@ public class PlayerData
 			m_powerUps[(int)_type].m_stockSize = 0;
 			m_powerUps[(int)_type].m_available = false;
 		}
+		onNotifyPowerUpChanged(_type);
 	}
 	
 	// Increases the stock size of the specified power-up by the defined value
@@ -171,6 +202,7 @@ public class PlayerData
 			return;
 		m_powerUps[(int)_type].m_stockSize += _v;
 		m_powerUps[(int)_type].m_available = true;
+		onNotifyPowerUpChanged(_type);
 	}
 	
 	// Decreases the stock size of the specified power-up by the defined value
@@ -185,6 +217,10 @@ public class PlayerData
 			m_powerUps[(int)_type].m_stockSize = 0;
 			m_powerUps[(int)_type].m_available = false;
 		}
-	}
+		onNotifyPowerUpChanged(_type);
+	}	
+
+#endregion
+
 #endregion
 }

@@ -35,15 +35,12 @@ public class Enemy : MonoBehaviour {
 		m_playerData = Game.Instance.PlayerData;
 
 		// get controller
-		m_controller = GetComponent<CharacterController> ();
+		m_controller = GetComponent<CharacterController>();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		// get controller
-		CharacterController m_controller ;
-
 		// at ground and can jump?
 		if (m_canFly && m_controller.isGrounded)
 			m_fly = JUMP_START_SPEED;
@@ -88,7 +85,7 @@ public class Enemy : MonoBehaviour {
 				hit();
 			}
 			else
-				m_playerData.decreaseLifePointsByValue(1);
+				m_playerData.LifePoints--;
 		}
 	}
 
