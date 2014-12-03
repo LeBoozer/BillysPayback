@@ -11,7 +11,7 @@ using System.Collections;
 
 /*
  * Represent the player
- * Controll the Movement and so on
+ * Controll the Movement
  */
 public class Player : MonoBehaviour {
 
@@ -23,12 +23,9 @@ public class Player : MonoBehaviour {
 	const float 		GRAVITATION 				= 9.81f;
 	const float 		FLYING_FACTOR				= 0.25f;
 
-	public bool			m_helpJump			= false;
-	public bool			m_helpJumpDown		= false;
-
 	private float 		m_speed;
 	private float 		m_fly;
-	private bool 		m_jump;
+	public bool 		m_jump;
 	private bool 		m_flyStart;
 	
 	public  int			m_livepoints 		= 5;
@@ -64,9 +61,6 @@ public class Player : MonoBehaviour {
 		bool jumpKey 		= Input.GetButton 		(KeyMapping.KEY_ACTION_JUMP);
 		bool shoot 			= Input.GetButtonDown	(KeyMapping.KEY_ACTION_SHOOT);
 
-		m_helpJump = jumpKey;
-		m_helpJumpDown = jumpKeyDown;
-
 		// get controller
 		CharacterController controller = GetComponent<CharacterController> ();
 
@@ -100,7 +94,7 @@ public class Player : MonoBehaviour {
 
 		// jump and fly
 		// movement high&down
-		if (jumpKeyDown && !m_jump) 
+		if ((jumpKeyDown || jumpKey) && !m_jump) 
 		{
 			m_jump = true;
 			m_fly = JUMP_START_SPEED;
