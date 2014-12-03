@@ -20,6 +20,9 @@ public class Enemy : MonoBehaviour {
 	
 	public  int			m_lifepoints 		= 1;
 	public 	bool		m_canFly			= false;
+
+	private PlayerData			m_playerData;
+	private CharacterController m_controller;
 	#endregion
 
 	// Use this for initialization
@@ -27,29 +30,35 @@ public class Enemy : MonoBehaviour {
 	{
 		m_direction = 1;
 		m_fly = 0;
+
+		// Get player data
+		m_playerData = Game.Instance.PlayerData;
+
+		// get controller
+		m_controller = GetComponent<CharacterController> ();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
 		// get controller
-		CharacterController controller = GetComponent<CharacterController> ();
+		CharacterController m_controller ;
 
 		// at ground and can jump?
-		if (m_canFly && controller.isGrounded)
+		if (m_canFly && m_controller.isGrounded)
 			m_fly = JUMP_START_SPEED;
 
 		// save last x-coordination
 		float x = this.transform.position.x;
 
 		// 
-		if(!controller.isGrounded)
+		if(!m_controller.isGrounded)
 			m_fly -= GRAVITATION * Time.deltaTime;
 		else
 			m_fly = 0;
 
 		// set new position
-		controller.Move (new Vector3 (m_direction * MAX_SPEED, m_fly, 0) * Time.deltaTime);
+		m_controller.Move (new Vector3 (m_direction * MAX_SPEED, m_fly, 0) * Time.deltaTime);
 		
 		// x-coordination haven't change? -> running again some wall
 		if (x == this.transform.position.x)
@@ -73,13 +82,13 @@ public class Enemy : MonoBehaviour {
 				_p.jumpingFromAnEnemy ();
 				hit();
 			}
-			else if(_p.haveKiwanoPower())
+			else if(m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_KIWANO))
 			{
-				_p.reduceKiwanoPower();
+				m_playerData.decreaseStockSizeByValue(PlayerData.PowerUpType.PUT_KIWANO, 1);
 				hit();
 			}
 			else
-				_p.reduceLivePoint();
+				m_playerData.decreaseLifePointsByValue(1);
 		}
 	}
 

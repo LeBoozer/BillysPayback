@@ -2,7 +2,7 @@
  * Project:	Billy's Payback
  * File:	Player.cs
  * Authors:	Raik Dankworth
- * Editors:	-
+ * Editors:	Byron Worms
  */
 
 using UnityEngine;
@@ -11,31 +11,19 @@ using System.Collections;
 
 /*
  * Represent the player
- * Controll the Movement
+ * Controll the Movement and so on
  */
 public class Player : MonoBehaviour {
 
 	#region Variable
-
-	const float 		MAX_SPEED 					= 5f;
-	const float 		JUMP_START_SPEED			= 10f;
-	const float 		JUMP_START_SPEED_FROM_ENEMY	= 10f;
-	const float 		GRAVITATION 				= 9.81f;
-	const float 		FLYING_FACTOR				= 0.25f;
-
 	private float 		m_speed;
 	private float 		m_fly;
-	public bool 		m_jump;
+	private bool 		m_jump;
 	private bool 		m_flyStart;
+	private float 		m_oldPositionX 				= 0.0f;
 	
-	public  int			m_livepoints 		= 5;
-
-	// temporär public 
-	public  int			m_kiwanoPowerUp 	= 0;
-	public  int			m_RaspberryPowerUp 	= 0;
-	public  bool		m_canFlying 		= false;
-	public  bool		m_canUseKiwanos		= false;
-	public  bool		m_canUseRaspberry	= false;
+	private PlayerData			m_playerData;
+	private CharacterController m_controller;
 
 	#endregion
 
@@ -47,6 +35,12 @@ public class Player : MonoBehaviour {
 		m_fly 		= 0;
 		m_jump 		= false;
 		m_flyStart 	= false;
+		
+		// Get player data
+		m_playerData = Game.Instance.PlayerData;
+		
+		// Get character controller
+		m_controller = GetComponent<CharacterController> ();
 	}
 	#endregion
 
@@ -61,31 +55,27 @@ public class Player : MonoBehaviour {
 		bool jumpKey 		= Input.GetButton 		(KeyMapping.KEY_ACTION_JUMP);
 		bool shoot 			= Input.GetButtonDown	(KeyMapping.KEY_ACTION_SHOOT);
 
-		// get controller
-		CharacterController controller = GetComponent<CharacterController> ();
-
 		// falling?
-		if(!controller.isGrounded)
+		if(!m_controller.isGrounded)
 			m_jump = true;
-
 
 		// movement right&left
 		if (keyD)
 		{
-			m_speed += MAX_SPEED * 0.5f * Time.deltaTime;
-			if(m_speed > MAX_SPEED)
-				m_speed = MAX_SPEED;
+			m_speed += GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime;
+			if(m_speed > GameConfig.BILLY_MAX_SPEED)
+				m_speed = GameConfig.BILLY_MAX_SPEED;
 		} 
 		else if(keyA)
 		{
-			m_speed -= MAX_SPEED * 0.5f * Time.deltaTime;
-			if(m_speed <  -1 * MAX_SPEED)
-				m_speed = - 1* MAX_SPEED;
+			m_speed -= GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime;
+			if(m_speed <  -GameConfig.BILLY_MAX_SPEED)
+				m_speed = -GameConfig.BILLY_MAX_SPEED;
 		}
 		else
 		{
-			if(Mathf.Abs(m_speed - (m_speed * (1 - Time.deltaTime * 2))) > MAX_SPEED * 0.5f *Time.deltaTime)
-				m_speed -= MAX_SPEED * 0.5f * Time.deltaTime * (m_speed / Mathf.Abs(m_speed));
+			if(Mathf.Abs(m_speed - (m_speed * (1 - Time.deltaTime * 2))) > GameConfig.BILLY_MAX_SPEED * 0.5f *Time.deltaTime)
+				m_speed -= GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime * (m_speed / Mathf.Abs(m_speed));
 			else
 				m_speed *= (1 - Time.deltaTime * 2);
 			if(m_speed < 0.1f && m_speed > -0.1f)
@@ -97,49 +87,49 @@ public class Player : MonoBehaviour {
 		if ((jumpKeyDown || jumpKey) && !m_jump) 
 		{
 			m_jump = true;
-			m_fly = JUMP_START_SPEED;
+			m_fly = GameConfig.BILLY_JUMP_START_SPEED;
 		} 
 		else if (jumpKeyDown && m_jump) 
 		{
 			// flying
 			m_flyStart = true;
 			if(m_fly > 0)
-				m_fly -= GRAVITATION * Time.deltaTime;
+				m_fly += Physics.gravity.y * Time.deltaTime;
 			else
-				m_fly -= GRAVITATION * Time.deltaTime * FLYING_FACTOR;
+				m_fly += Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
 		} 
-		else if (m_flyStart && m_jump && jumpKey && m_canFlying) 
+		else if (m_flyStart && m_jump && jumpKey && m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_ORANGE)) 
 		{
 			if(m_fly > 0)
-				m_fly -= GRAVITATION * Time.deltaTime;
+				m_fly += Physics.gravity.y * Time.deltaTime;
 			else
-				m_fly -= GRAVITATION * Time.deltaTime * FLYING_FACTOR;
+				m_fly += Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
 		} 
 		else if (m_jump) 
 		{
-			m_fly -= GRAVITATION * Time.deltaTime;
+			m_fly += Physics.gravity.y * Time.deltaTime;
 		} 
 		// nothing?
 		else 
 		{
 		}
 
-		// save last x-coordination
-		float x = this.transform.position.x;
-
 		// set new position
-		controller.Move (new Vector3 (m_speed, m_fly, 0) * Time.deltaTime);
+		m_controller.Move (new Vector3 (m_speed, m_fly, 0) * Time.deltaTime);
 
-		// x-coordination haven't change? -> running again some wall
-		if (x == this.transform.position.x)
-			m_speed = 0;
+		// x-coord haven't changed?
+		if(m_oldPositionX == this.transform.position.x)
+			m_speed = 0.0f;
+		
+		// save last x-coordination
+		m_oldPositionX = this.transform.position.x;
 
 		// jump again something?
-		if ((controller.collisionFlags & CollisionFlags.Above) != 0 && m_fly > 0)
+		if ((m_controller.collisionFlags & CollisionFlags.Above) != 0 && m_fly > 0)
 			m_fly = 0;
 
 		// jump/fly finished?
-		if(controller.isGrounded)
+		if(m_controller.isGrounded)
 		{
 			m_jump = false;
 			m_flyStart = false;
@@ -150,83 +140,13 @@ public class Player : MonoBehaviour {
 	#endregion
 
 	#region public methoden
-
-	#region enable/disable Feature
-	/*
-	 * enable or disable flying feature
-	 */
-	public bool CanFlying
-	{
-		get { return m_canFlying; }
-		set { m_canFlying = value; }
-	}
-
-	/*
-	 * enable or disable kiwano feature
-	 */
-	public bool CanUseKiwano
-	{
-		get { return m_canUseKiwanos; }
-		set { m_canUseKiwanos = value; }
-	}
-	
-	/*
-	 * enable or disable kiwano feature
-	 */
-	public bool CanUseRaspberry
-	{
-		get { return m_canUseRaspberry; }
-		set { m_canUseRaspberry = value; }
-	}
-	
-	#endregion
-	
-	/*
-	 * return the current live points
-	 */
-	public int Livepoints
-	{
-		get {return m_livepoints; }
-	}
-
-	/*
-	 * decrease live point 
-	 * @return: player alive?
-	 */
-	public bool reduceLivePoint() 				{ --m_livepoints; return (0 >= m_livepoints); }
-	
-	/*
-	 * add one live point 
-	 */
-	public void addLivePoint()					{ ++m_livepoints; }
-
-	/*
-	 * add kiwano power
-	 */
-	public void addKiwanoPower(int _value)		{ if(m_canUseKiwanos) m_kiwanoPowerUp += _value; }
-
-	/*
-	 * @return: true if the player can use kiwanos
-	 */
-	public bool haveKiwanoPower()				{ return (!m_canUseKiwanos && m_kiwanoPowerUp > 0); }
-
-	/*
-	 * decrease the kiwano power
-	 */
-	public void reduceKiwanoPower()				{ m_kiwanoPowerUp = Mathf.Max (0, m_kiwanoPowerUp - 1); }
-
-	/*
-	 * add the raspberry power
-	 */
-	public void addRaspberryPower(int _value)	{ m_RaspberryPowerUp += _value; }
-
 	/*
 	 * after colliding with an enemy
 	 */
 	public void jumpingFromAnEnemy()
 	{
 		m_jump = true;
-		m_fly = JUMP_START_SPEED_FROM_ENEMY;
+		m_fly = GameConfig.BILLY_JUMP_START_SPEED_ENEMY;
 	}
 
 	#endregion
