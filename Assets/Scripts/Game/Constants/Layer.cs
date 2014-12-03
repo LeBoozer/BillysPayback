@@ -19,4 +19,16 @@ public abstract class Layer
 	public static readonly string LAYER_PROJECTILE_PLAYER	= "ProjectilePlayer";
 	public static readonly string LAYER_PROJECTILE_ENEMY	= "ProjectileEnemy";
 	public static readonly string LAYER_ENVIROMENT 			= "Enviroment";
+	
+	// Converts the layer name to the corresponding layer ID
+	public static int getLayerIDByName(string _layerName)
+	{
+		LayerMask.NameToLayer(_layerName);
+	}
+	
+	// Converts the layer ID to the coressponding layer name
+	public static string getLayerNameByID(int _id)
+	{
+		LayerMask.LayerToName(_id);
+	}
 }
