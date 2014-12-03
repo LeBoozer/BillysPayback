@@ -31,7 +31,8 @@ public class Player : MonoBehaviour {
 	private bool 		m_jump;
 	private bool 		m_flyStart;
 	
-	private PlayerData	m_playerData;
+	private PlayerData			m_playerData;
+	private CharacterController m_controller;
 
 	#endregion
 
@@ -46,6 +47,9 @@ public class Player : MonoBehaviour {
 		
 		// Get player data
 		m_playerData = Game.Instance.PlayerData;
+		
+		// Get character controller
+		m_controller = GetComponent<CharacterController> ();
 	}
 	#endregion
 
@@ -60,11 +64,8 @@ public class Player : MonoBehaviour {
 		bool jumpKey 		= Input.GetButton 		(KeyMapping.KEY_ACTION_JUMP);
 		bool shoot 			= Input.GetButtonDown	(KeyMapping.KEY_ACTION_SHOOT);
 
-		// get controller
-		CharacterController controller = GetComponent<CharacterController> ();
-
 		// falling?
-		if(!controller.isGrounded)
+		if(!m_controller.isGrounded)
 			m_jump = true;
 
 		// movement right&left
@@ -126,18 +127,18 @@ public class Player : MonoBehaviour {
 		float x = this.transform.position.x;
 
 		// set new position
-		controller.Move (new Vector3 (m_speed, m_fly, 0) * Time.deltaTime);
+		m_controller.Move (new Vector3 (m_speed, m_fly, 0) * Time.deltaTime);
 
 		// x-coordination haven't change? -> running again some wall
 		if (x == this.transform.position.x)
 			m_speed = 0;
 
 		// jump again something?
-		if ((controller.collisionFlags & CollisionFlags.Above) != 0 && m_fly > 0)
+		if ((m_controller.collisionFlags & CollisionFlags.Above) != 0 && m_fly > 0)
 			m_fly = 0;
 
 		// jump/fly finished?
-		if(controller.isGrounded)
+		if(m_controller.isGrounded)
 		{
 			m_jump = false;
 			m_flyStart = false;
