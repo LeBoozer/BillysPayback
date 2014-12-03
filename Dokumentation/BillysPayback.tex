@@ -1,0 +1,159 @@
+%#####################################################################################################################
+% Datei	: BillysPayback.tex
+% Autor	: Byron Worms
+%#####################################################################################################################
+% Dokumenteinstellungen
+\documentclass[bibliography=totoc,listof=totoc,version=first,a4paper,12pt,numbers=noendperiod,appendixprefix=true,
+twoside,headsepline,footsepline,openright]{scrbook}
+
+% Seitenränder festlegen
+\usepackage[top=2.5cm,bottom=3.0cm,left=3.0cm,right=2.0cm]{geometry}
+
+% Umlaute etc..
+\usepackage[latin1]{inputenc}						
+\usepackage[T1]{fontenc}
+
+% Bilder unterstützen
+\usepackage[]{graphicx}
+
+% Farben unterstützen
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{colortbl}
+
+% Bibliothek für das Quellenverzeichnisse
+\usepackage[style=numeric,backend=biber,sorting=none,defernumbers=true]{biblatex}
+\addbibresource{Bachelorarbeit.bib}
+\renewcommand{\bibfont}{\small}
+
+% Verweise auf Title
+\usepackage{titleref}
+
+% Sprachunterstützung (Letzte Sprache wird als Richtlinie genutzt!)
+\usepackage[english,ngerman]{babel} 
+\usepackage{csquotes}
+
+% Symbolunterstützung wie Â€
+\usepackage{textcomp}
+
+% Abkürzungsverzeichnis unterstützen
+\usepackage[printonlyused]{acronym}
+
+% Anhang unterstützen
+\usepackage[titletoc]{appendix}
+
+% Erweiterte Fußnoten unterstützen
+\usepackage[hang]{footmisc}
+\setlength{\footnotemargin}{1em}
+
+% Unterstützung mehrzeiliger Kommentare
+\usepackage{comment}
+
+% Folgende Objekte kapitelübergreifend nummieren: Tabelle, Abbildungen, Fußnoten
+\usepackage{chngcntr} 
+\counterwithout{footnote}{chapter}
+
+% Erweiterte Tabellen unterstützen
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage{longtable,tabu}
+\usepackage{array}
+\usepackage{multicol}
+
+% Mathematische Operationen in {} Ausdrücken erlauben (z.B. {\linewidth-4cm})
+\usepackage{calc}
+
+% "float" Positionierung unterstützen
+\usepackage{scrhack}
+\usepackage{float}
+
+% Erweiterte AufzÃ¤hlungen unterstützen
+\usepackage{enumitem}
+
+% Erweiterte Tabellenlinien unterstützen
+\usepackage{hhline,float}
+
+% Rotationen unterstützen
+\usepackage{rotating}
+
+% Erweiterte Symbole unterstützen
+\usepackage{bbding} 
+\usepackage{dingbat}
+\usepackage{wasysym}
+
+% Querformat unterstützen
+\usepackage{pdflscape}
+
+% Verweise in PDF-Datein aktivieren (muss das letzte importierte Package sein!)
+\usepackage[colorlinks=false]{hyperref}
+
+% Tabellen werden nicht von Latex neupositioniert
+\restylefloat{table}
+
+% Bilder werden nicht von Latex neupositioniert
+\restylefloat{figure}
+
+% PDF Version 1.6 erzwingen
+\pdfminorversion=6
+
+% Kompression ausschalten (hyperref setzt das Level auf 9!)
+\pdfcompresslevel=0
+
+% Verschiebungen und Formattierungen des Modus "twoside" aufheben
+\raggedbottom
+
+% Informationen zu dem Dokument
+\newcommand{\thetitle}{Billy's Payback: Rising of the Fruits}
+\newcommand{\theauthorr}{ToDo}
+\author{\theauthorr}
+\title{\thetitle}
+
+% Funktionen für das Ausblenden/Einblenden von nummerierten Ãœberschriften im Inhaltsverzeichnis.
+% Kapitel, Sektion, Untersektion
+\newcommand{\hideInContents}{\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}}
+\newcommand{\showInContents}{\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}}
+
+% Fake "Tabitem" erzeugen
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+% Diverse Hilfsfunktionen
+\newcommand{\bold}{\normalfont \bfseries}
+\newcommand{\boldtext}[1]{{\normalfont \bfseries {#1}}}
+
+% Funktion zum Löschen der Seite. Der Befehl unterscheidet automatisch zwischen einseitig und zweiseitig!
+\newcommand{\myclearpage}{\if@twoside \cleardoublepage \else \clearpage \fi }
+
+% Entfernt die Kopfzeile von automatisch generierten Leerseiten
+\makeatletter
+\def\cleardoublepage{\cleardoubleemptypage}
+\makeatother
+
+%---------------------------------------------------------------------------------------------------------------------
+% Einstiegspunkt
+%---------------------------------------------------------------------------------------------------------------------
+\begin{document}
+	\myclearpage
+	\begingroup
+		\renewcommand*{\chapterpagestyle}{empty}
+		\pagestyle{empty}
+		\include{Inhalt/Titel/Deckblatt}						% Titelseite einbinden
+		\cleardoubleemptypage
+		\pagenumbering{Roman}									% Römische Seiternummerierung	
+		\tableofcontents 										% Inhaltsverzeichnis generieren
+%		\include{Inhalt/ABK}									% Abkürzungsverzeichnis einbinden
+		\listoffigures{}										% Abbildungsverzeichnis generieren
+		\listoftables{}											% Tabellenverzeichnis generieren
+	\myclearpage
+	\endgroup
+	
+	\cleardoublepage  											
+	\pagenumbering{arabic}										% Arabische Seiternummerierung
+	
+%................................................................
+% Ab hier den eigentlichen Inhalt einfügen
+
+%................................................................
+	
+	\printbibliography[type=online,title={Literaturverzeichnis}]
+\end{document}
