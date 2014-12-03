@@ -23,8 +23,8 @@ public class Player : MonoBehaviour {
 	const float 		GRAVITATION 				= 9.81f;
 	const float 		FLYING_FACTOR				= 0.25f;
 
-	//public bool			m_helpJump			= false;
-	//public bool			m_helpJumpDown		= false;
+	public bool			m_helpJump			= false;
+	public bool			m_helpJumpDown		= false;
 
 	private float 		m_speed;
 	private float 		m_fly;
@@ -63,6 +63,9 @@ public class Player : MonoBehaviour {
 		bool jumpKeyDown 	= Input.GetButtonDown 	(KeyMapping.KEY_ACTION_JUMP);
 		bool jumpKey 		= Input.GetButton 		(KeyMapping.KEY_ACTION_JUMP);
 		bool shoot 			= Input.GetButtonDown	(KeyMapping.KEY_ACTION_SHOOT);
+
+		m_helpJump = jumpKey;
+		m_helpJumpDown = jumpKeyDown;
 
 		// get controller
 		CharacterController controller = GetComponent<CharacterController> ();
