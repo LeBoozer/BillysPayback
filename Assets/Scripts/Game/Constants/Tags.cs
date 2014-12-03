@@ -29,5 +29,5 @@ public abstract class Tags
 	public static readonly string TAG_ORANGEY_POWER_UP 		= "OrgangePowerUp";
 	public static readonly string TAG_RASPBERRY_POWER_UP 	= "RaspberryPowerUp";
 	public static readonly string TAG_PROJECTILE_PLAYER		= "ProjectilePlayer";
-	public static readonly string TAG_PROJECTILE_ENEMY		= "ProjectileEnemy
+	public static readonly string TAG_PROJECTILE_ENEMY		= "ProjectileEnemy";
 }
