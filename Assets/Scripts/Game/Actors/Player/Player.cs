@@ -17,12 +17,6 @@ public class Player : MonoBehaviour {
 
 	#region Variable
 
-	const float 		MAX_SPEED 					= 5f;
-	const float 		JUMP_START_SPEED			= 10f;
-	const float 		JUMP_START_SPEED_FROM_ENEMY	= 10f;
-	const float 		GRAVITATION 				= 9.81f;
-	const float 		FLYING_FACTOR				= 0.25f;
-
 	//public bool			m_helpJump			= false;
 	//public bool			m_helpJumpDown		= false;
 
@@ -72,20 +66,20 @@ public class Player : MonoBehaviour {
 		// movement right&left
 		if (keyD)
 		{
-			m_speed += MAX_SPEED * 0.5f * Time.deltaTime;
-			if(m_speed > MAX_SPEED)
-				m_speed = MAX_SPEED;
+			m_speed += GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime;
+			if(m_speed > GameConfig.BILLY_MAX_SPEED)
+				m_speed = GameConfig.BILLY_MAX_SPEED;
 		} 
 		else if(keyA)
 		{
-			m_speed -= MAX_SPEED * 0.5f * Time.deltaTime;
-			if(m_speed <  -1 * MAX_SPEED)
-				m_speed = - 1* MAX_SPEED;
+			m_speed -= GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime;
+			if(m_speed <  -1 * GameConfig.BILLY_MAX_SPEED)
+				m_speed = - 1* GameConfig.BILLY_MAX_SPEED;
 		}
 		else
 		{
-			if(Mathf.Abs(m_speed - (m_speed * (1 - Time.deltaTime * 2))) > MAX_SPEED * 0.5f *Time.deltaTime)
-				m_speed -= MAX_SPEED * 0.5f * Time.deltaTime * (m_speed / Mathf.Abs(m_speed));
+			if(Mathf.Abs(m_speed - (m_speed * (1 - Time.deltaTime * 2))) > GameConfig.BILLY_MAX_SPEED * 0.5f *Time.deltaTime)
+				m_speed -= GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime * (m_speed / Mathf.Abs(m_speed));
 			else
 				m_speed *= (1 - Time.deltaTime * 2);
 			if(m_speed < 0.1f && m_speed > -0.1f)
@@ -102,27 +96,27 @@ public class Player : MonoBehaviour {
 		if (jumpKeyDown && !m_jump) 
 		{
 			m_jump = true;
-			m_fly = JUMP_START_SPEED;
+			m_fly = GameConfig.BILLY_JUMP_START_SPEED;
 		} 
 		else if (jumpKeyDown && m_jump) 
 		{
 			// flying
 			m_flyStart = true;
 			if(m_fly > 0)
-				m_fly -= GRAVITATION * Time.deltaTime;
+				m_fly -= Physics.gravity.y * Time.deltaTime;
 			else
-				m_fly -= GRAVITATION * Time.deltaTime * FLYING_FACTOR;
+				m_fly -= Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
 		} 
 		else if (m_flyStart && m_jump && jumpKey && m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_ORANGE)) 
 		{
 			if(m_fly > 0)
-				m_fly -= GRAVITATION * Time.deltaTime;
+				m_fly -= Physics.gravity.y * Time.deltaTime;
 			else
-				m_fly -= GRAVITATION * Time.deltaTime * FLYING_FACTOR;
+				m_fly -= Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
 		} 
 		else if (m_jump) 
 		{
-			m_fly -= GRAVITATION * Time.deltaTime;
+			m_fly -= Physics.gravity.y * Time.deltaTime;
 		} 
 		// nothing?
 		else 
@@ -134,10 +128,7 @@ public class Player : MonoBehaviour {
 
 		// x-coord haven't changed?
 		if(m_oldPositionX == this.transform.position.x)
-		{
 			m_speed = 0.0f;
-			Debug.Log("HURE");
-		}
 		
 		// save last x-coordination
 		m_oldPositionX = this.transform.position.x;
@@ -164,7 +155,7 @@ public class Player : MonoBehaviour {
 	public void jumpingFromAnEnemy()
 	{
 		m_jump = true;
-		m_fly = JUMP_START_SPEED_FROM_ENEMY;
+		m_fly = GameConfig.BILLY_JUMP_START_SPEED_ENEMY;
 	}
 
 	#endregion

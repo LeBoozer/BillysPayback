@@ -18,5 +18,9 @@ public class GameConfig
 	public static readonly string 	LEVEL_ADDITIVE_ROOT_GO_NAME_RULE = "_Root_x";
 	
 	// Billy related values
-	public static readonly int 		BILLY_LIFE_POINT = 5;
+	public static readonly int 		BILLY_LIFE_POINT 				= 5;
+	public static readonly float 	BILLY_MAX_SPEED 				= 5.0f;
+	public static readonly float 	BILLY_FLYING_FACTOR				= 0.25f;
+	public static readonly float 	BILLY_JUMP_START_SPEED 			= 10.0f;
+	public static readonly float 	BILLY_JUMP_START_SPEED_ENEMY 	= 10.0f;
 }
