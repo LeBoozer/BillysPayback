@@ -2,7 +2,7 @@
  * Project:	Billy's Payback
  * File:	Player.cs
  * Authors:	Raik Dankworth
- * Editors:	-
+ * Editors:	Byron Worms
  */
 
 using UnityEngine;
@@ -31,14 +31,7 @@ public class Player : MonoBehaviour {
 	private bool 		m_jump;
 	private bool 		m_flyStart;
 	
-	public  int			m_livepoints 		= 5;
-
-	// temporär public 
-	public  int			m_kiwanoPowerUp 	= 0;
-	public  int			m_RaspberryPowerUp 	= 0;
-	public  bool		m_canFlying 		= false;
-	public  bool		m_canUseKiwanos		= false;
-	public  bool		m_canUseRaspberry	= false;
+	private PlayerData	m_playerData;
 
 	#endregion
 
@@ -50,6 +43,9 @@ public class Player : MonoBehaviour {
 		m_fly 		= 0;
 		m_jump 		= false;
 		m_flyStart 	= false;
+		
+		// Get player data
+		m_playerData = Game.Instance.PlayerData;
 	}
 	#endregion
 
@@ -70,7 +66,6 @@ public class Player : MonoBehaviour {
 		// falling?
 		if(!controller.isGrounded)
 			m_jump = true;
-
 
 		// movement right&left
 		if (keyD)
@@ -111,7 +106,7 @@ public class Player : MonoBehaviour {
 			else
 				m_fly -= GRAVITATION * Time.deltaTime * FLYING_FACTOR;
 		} 
-		else if (m_flyStart && m_jump && jumpKey && m_canFlying) 
+		else if (m_flyStart && m_jump && jumpKey && m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_ORANGE)) 
 		{
 			if(m_fly > 0)
 				m_fly -= GRAVITATION * Time.deltaTime;
@@ -153,76 +148,6 @@ public class Player : MonoBehaviour {
 	#endregion
 
 	#region public methoden
-
-	#region enable/disable Feature
-	/*
-	 * enable or disable flying feature
-	 */
-	public bool CanFlying
-	{
-		get { return m_canFlying; }
-		set { m_canFlying = value; }
-	}
-
-	/*
-	 * enable or disable kiwano feature
-	 */
-	public bool CanUseKiwano
-	{
-		get { return m_canUseKiwanos; }
-		set { m_canUseKiwanos = value; }
-	}
-	
-	/*
-	 * enable or disable kiwano feature
-	 */
-	public bool CanUseRaspberry
-	{
-		get { return m_canUseRaspberry; }
-		set { m_canUseRaspberry = value; }
-	}
-	
-	#endregion
-	
-	/*
-	 * return the current live points
-	 */
-	public int Livepoints
-	{
-		get {return m_livepoints; }
-	}
-
-	/*
-	 * decrease live point 
-	 * @return: player alive?
-	 */
-	public bool reduceLivePoint() 				{ --m_livepoints; return (0 >= m_livepoints); }
-	
-	/*
-	 * add one live point 
-	 */
-	public void addLivePoint()					{ ++m_livepoints; }
-
-	/*
-	 * add kiwano power
-	 */
-	public void addKiwanoPower(int _value)		{ if(m_canUseKiwanos) m_kiwanoPowerUp += _value; }
-
-	/*
-	 * @return: true if the player can use kiwanos
-	 */
-	public bool haveKiwanoPower()				{ return (!m_canUseKiwanos && m_kiwanoPowerUp > 0); }
-
-	/*
-	 * decrease the kiwano power
-	 */
-	public void reduceKiwanoPower()				{ m_kiwanoPowerUp = Mathf.Max (0, m_kiwanoPowerUp - 1); }
-
-	/*
-	 * add the raspberry power
-	 */
-	public void addRaspberryPower(int _value)	{ m_RaspberryPowerUp += _value; }
-
 	/*
 	 * after colliding with an enemy
 	 */

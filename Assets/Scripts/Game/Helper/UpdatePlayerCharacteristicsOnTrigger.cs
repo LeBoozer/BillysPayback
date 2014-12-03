@@ -51,13 +51,13 @@ public class UpdatePlayerCharacteristicsOnTrigger : MonoBehaviour
 			m_triggerObject.gameObject.SetActive(false);
 			
 		// Commit characteristics
-		pd.addPlayerCharacteristics((ushort)PlayerData.PlayerType.PT_COLLECTING, (short)m_collecting);
-		pd.addPlayerCharacteristics((ushort)PlayerData.PlayerType.PT_LIGHTNESS, (short)m_lightness);
-		pd.addPlayerCharacteristics((ushort)PlayerData.PlayerType.PT_CHALLENGE, (short)m_challenge);
-		pd.addPlayerCharacteristics((ushort)PlayerData.PlayerType.PT_COMPASSION, (short)m_compassion);
-		pd.addPlayerCharacteristics((ushort)PlayerData.PlayerType.PT_AUTONOMOUS, (short)m_autonomous);
-		pd.addPlayerCharacteristics((ushort)PlayerData.PlayerType.PT_PATIENCE, (short)m_patience);
-		pd.addPlayerCharacteristics((ushort)PlayerData.PlayerType.PT_ATTENTION, (short)m_attention);
+		pd.addPlayerCharacteristics(PlayerData.PlayerType.PT_COLLECTING, (short)m_collecting);
+		pd.addPlayerCharacteristics(PlayerData.PlayerType.PT_LIGHTNESS, (short)m_lightness);
+		pd.addPlayerCharacteristics(PlayerData.PlayerType.PT_CHALLENGE, (short)m_challenge);
+		pd.addPlayerCharacteristics(PlayerData.PlayerType.PT_COMPASSION, (short)m_compassion);
+		pd.addPlayerCharacteristics(PlayerData.PlayerType.PT_AUTONOMOUS, (short)m_autonomous);
+		pd.addPlayerCharacteristics(PlayerData.PlayerType.PT_PATIENCE, (short)m_patience);
+		pd.addPlayerCharacteristics(PlayerData.PlayerType.PT_ATTENTION, (short)m_attention);
 	}
 
 	// Override: MonoBehaviour::Awake()
