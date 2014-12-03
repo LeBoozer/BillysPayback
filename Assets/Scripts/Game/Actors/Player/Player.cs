@@ -30,6 +30,7 @@ public class Player : MonoBehaviour {
 	private float 		m_fly;
 	private bool 		m_jump;
 	private bool 		m_flyStart;
+	private float 		m_oldPositionX 				= 0.0f;
 	
 	private PlayerData			m_playerData;
 	private CharacterController m_controller;
@@ -90,6 +91,11 @@ public class Player : MonoBehaviour {
 			if(m_speed < 0.1f && m_speed > -0.1f)
 				m_speed = 0;
 		}
+		
+		if(jumpKeyDown == true)
+		{
+			Debug.Log("jump: " + m_jump);
+		}
 
 		// jump and fly
 		// movement high&down
@@ -123,15 +129,18 @@ public class Player : MonoBehaviour {
 		{
 		}
 
-		// save last x-coordination
-		float x = this.transform.position.x;
-
 		// set new position
 		m_controller.Move (new Vector3 (m_speed, m_fly, 0) * Time.deltaTime);
 
-		// x-coordination haven't change? -> running again some wall
-		if (x == this.transform.position.x)
-			m_speed = 0;
+		// x-coord haven't changed?
+		if(m_oldPositionX == this.transform.position.x)
+		{
+			m_speed = 0.0f;
+			Debug.Log("HURE");
+		}
+		
+		// save last x-coordination
+		m_oldPositionX = this.transform.position.x;
 
 		// jump again something?
 		if ((m_controller.collisionFlags & CollisionFlags.Above) != 0 && m_fly > 0)
