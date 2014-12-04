@@ -112,7 +112,7 @@ public class PlayerData : MonoBehaviour
 	// Represents a power-up
 	[System.Serializable]
 	public class PowerUp
-	{
+	{	
 		// True if this power-up is available
 		public bool 	m_available 	= false;
 		
