@@ -222,5 +222,13 @@ public class PlayerData
 
 #endregion
 
+	// Constructor
+	public PlayerData()
+	{
+		// Create power-ups
+		for(int i = 0; i < m_powerUps.Length; ++i)
+			m_powerUps[i] = new PowerUp();
+	}
+
 #endregion
 }
