@@ -10,7 +10,7 @@ using System.Collections;
 /*
  * Helper class holding all player relevant data 
  */
-public class PlayerData
+public class PlayerData : MonoBehaviour
 {	
 #region (Characteristics)
 	// Represents a list of all supported types of players
@@ -68,7 +68,7 @@ public class PlayerData
 
 #region (Life-points)
 	// Life points of billy
-	private int	m_lifePoints = GameConfig.BILLY_LIFE_POINT;
+	public int	m_lifePoints = GameConfig.BILLY_LIFE_POINT;
 	
 	// OnChange-Event for: life-points
 	public event Delegate_OnAttributeChanged OnChangeLifePoints = delegate{};
@@ -89,7 +89,7 @@ public class PlayerData
 
 #region (Diamonds)
 	// Number of collected diamonds
-	private int m_collectedDiamonds	= 0;
+	public int m_collectedDiamonds	= 0;
 
 	// OnChange-Event for: collected diamonds
 	public event Delegate_OnAttributeChanged OnChangeCollectedDiamonds = delegate{};
@@ -110,7 +110,8 @@ public class PlayerData
 	
 #region (Power-Ups)
 	// Represents a power-up
-	private class PowerUp
+	[System.Serializable]
+	public class PowerUp
 	{
 		// True if this power-up is available
 		public bool 	m_available 	= false;
@@ -139,7 +140,7 @@ public class PlayerData
 	}
 	
 	// List of all power-ups
-	private PowerUp[] m_powerUps = new PowerUp[(int)PowerUpType.PUT_COUNT];
+	public PowerUp[] m_powerUps = new PowerUp[(int)PowerUpType.PUT_COUNT];
 	
 	// OnChange-Event for: power-ups
 	public event Delegate_OnPowerUpChanged OnChangePowerUp = delegate{};
