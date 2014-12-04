@@ -83,13 +83,10 @@ public class Enemy : MonoBehaviour {
 			   && (controller.collisionFlags & CollisionFlags.Above) != 0)
 			{
 				_p.jumpingFromAnEnemy ();
-				hit();
+				hit(false);
 			}
 			else if(m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_KIWANO))
-			{
-				m_playerData.decreaseStockSizeByValue(PlayerData.PowerUpType.PUT_KIWANO, 1);
-				hit();
-			}
+				hit(true);
 			else
 				_p.hit ();
 		}
@@ -98,10 +95,13 @@ public class Enemy : MonoBehaviour {
 	/*
 	 * if the enemy get a hit
 	 */
-	private void hit ()
+	private void hit (bool _kiwanoHit)
 	{
 		if(m_lastHit + 1 < Time.time)
 		{
+			if(_kiwanoHit)
+				m_playerData.decreaseStockSizeByValue(PlayerData.PowerUpType.PUT_KIWANO, 1);
+
 			--m_lifepoints;
 			m_lastHit = Time.time;
 		}

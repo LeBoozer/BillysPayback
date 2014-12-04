@@ -157,7 +157,7 @@ public class Player : MonoBehaviour {
 	}
 
 	/*
-	 * if the enemy get a hit
+	 * if the play get a hit
 	 */
 	public void hit()
 	{
