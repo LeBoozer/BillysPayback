@@ -77,7 +77,7 @@ public class Enemy : MonoBehaviour {
 		//Debug.Log(_hit.collider.transform.tag.ToString());
 		
 		if (_hit.collider.transform.tag == Tags.TAG_PLAYER)
-		{
+		{		
 			Player _p = (Player) _hit.transform.GetComponent<Player>();
 			if((_hit.controller.collisionFlags & CollisionFlags.Below) != 0
 			   && (controller.collisionFlags & CollisionFlags.Above) != 0)

@@ -24,6 +24,7 @@ public class T_OnEnterTriggers : FSMTransition
 		public int 			m_hitsToTrigger 	= 0;
 		
 		// Number of hits between the collider and the trigger game-object
+		[HideInInspector]
 		public uint 		m_currentHitCount 	= 0;
 	}
 

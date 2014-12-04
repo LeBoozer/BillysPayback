@@ -24,7 +24,7 @@ public class Game
 	private GameStateMaschine 	m_gsm;
 	
 	// The player data
-	private PlayerData			m_playerData = new PlayerData();
+	private PlayerData			m_playerData;
 
 	// Protected constructor
 	protected Game()
@@ -70,7 +70,8 @@ public class Game
 			m_singletonInstance.m_singletonGameObject = obj;
 			
 			// Add components
-			m_singletonInstance.m_gsm = m_singletonInstance.m_singletonGameObject.AddComponent<GameStateMaschine>();
+			m_singletonInstance.m_gsm 			= m_singletonInstance.m_singletonGameObject.AddComponent<GameStateMaschine>();
+			m_singletonInstance.m_playerData 	= m_singletonInstance.m_singletonGameObject.AddComponent<PlayerData>();
 			
 			return m_singletonInstance;		
 		}
