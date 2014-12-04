@@ -1,9 +1,9 @@
 [0] Config.pm:320> INFO - This is Biber 1.9
 [0] Config.pm:323> INFO - Logfile is 'BillysPayback.blg'
-[49] biber-MSWIN:274> INFO - === %a %b %e, %Y, %H:%M:%S
-[50] Biber.pm:333> INFO - Reading 'BillysPayback.bcf'
-[149] Biber.pm:635> INFO - Found 0 citekeys in bib section 0
-[150] Utils.pm:144> WARN - The file 'BillysPayback.bcf' does not contain any citations!
-[198] bbl.pm:517> INFO - Writing 'BillysPayback.bbl' with encoding 'latin1'
-[198] bbl.pm:606> INFO - Output to BillysPayback.bbl
-[198] Biber.pm:106> INFO - WARNINGS: 1
+[57] biber-MSWIN:274> INFO - === %a %b %e, %Y, %H:%M:%S
+[57] Biber.pm:333> INFO - Reading 'BillysPayback.bcf'
+[154] Biber.pm:635> INFO - Found 0 citekeys in bib section 0
+[154] Utils.pm:144> WARN - The file 'BillysPayback.bcf' does not contain any citations!
+[234] bbl.pm:517> INFO - Writing 'BillysPayback.bbl' with encoding 'latin1'
+[234] bbl.pm:606> INFO - Output to BillysPayback.bbl
+[235] Biber.pm:106> INFO - WARNINGS: 1

@@ -2,6 +2,30 @@
 \defcounter {refsection}{0}\relax 
 \select@language {ngerman}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{III}{chapter*.2}
+\select@language {english}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{V}{chapter*.3}
+\select@language {ngerman}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{III}{chapter*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{V}{chapter*.5}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {ngerman}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\setcounter {tocdepth}{-1}
+\defcounter {refsection}{0}\relax 
+\setcounter {tocdepth}{2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Grundlagen}{3}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Konzeptionierung}{5}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Prototypische Umsetzung}{7}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Evaluierung}{9}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{11}{chapter.6}
