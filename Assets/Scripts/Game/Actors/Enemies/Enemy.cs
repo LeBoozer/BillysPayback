@@ -17,6 +17,9 @@ public class Enemy : MonoBehaviour {
 	
 	private float 		m_direction;
 	private float 		m_fly;
+	private float 		m_lastX;
+
+	private float		m_lastHit;
 	
 	public  int			m_lifepoints 		= 1;
 	public 	bool		m_canFly			= false;
@@ -36,6 +39,8 @@ public class Enemy : MonoBehaviour {
 
 		// get controller
 		m_controller = GetComponent<CharacterController>();
+		m_lastX = this.transform.position.x;
+		m_lastHit = Time.time;
 	}
 	
 	// Update is called once per frame
@@ -44,9 +49,6 @@ public class Enemy : MonoBehaviour {
 		// at ground and can jump?
 		if (m_canFly && m_controller.isGrounded)
 			m_fly = JUMP_START_SPEED;
-
-		// save last x-coordination
-		float x = this.transform.position.x;
 
 		// 
 		if(!m_controller.isGrounded)
@@ -58,8 +60,11 @@ public class Enemy : MonoBehaviour {
 		m_controller.Move (new Vector3 (m_direction * MAX_SPEED, m_fly, 0) * Time.deltaTime);
 		
 		// x-coordination haven't change? -> running again some wall
-		if (x == this.transform.position.x)
+		if (m_lastX == this.transform.position.x)
 			m_direction *= -1;
+
+		// save last x-coordination
+		m_lastX = this.transform.position.x;
 	}
 
 	/*
@@ -69,7 +74,8 @@ public class Enemy : MonoBehaviour {
 	{
 		// get controller
 		CharacterController controller = _hit.controller;
-
+		//Debug.Log(_hit.collider.transform.tag.ToString());
+		
 		if (_hit.collider.transform.tag == Tags.TAG_PLAYER)
 		{
 			Player _p = (Player) _hit.transform.GetComponent<Player>();
@@ -85,13 +91,21 @@ public class Enemy : MonoBehaviour {
 				hit();
 			}
 			else
-				m_playerData.LifePoints--;
+				_p.hit ();
 		}
 	}
 
-
+	/*
+	 * if the enemy get a hit
+	 */
 	private void hit ()
 	{
-		--m_lifepoints;
+		if(m_lastHit + 1 < Time.time)
+		{
+			--m_lifepoints;
+			m_lastHit = Time.time;
+		}
+		if (m_lifepoints == 0)
+			Destroy (this.gameObject);
 	}
 }

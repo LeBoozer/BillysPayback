@@ -20,7 +20,9 @@ public class Player : MonoBehaviour {
 	private float 		m_fly;
 	private bool 		m_jump;
 	private bool 		m_flyStart;
-	private float 		m_oldPositionX 				= 0.0f;
+	private float 		m_oldPositionX 			= 0.0f;
+	private float 		m_lastHit;
+	private	bool		m_gameOver;
 	
 	private PlayerData			m_playerData;
 	private CharacterController m_controller;
@@ -35,6 +37,8 @@ public class Player : MonoBehaviour {
 		m_fly 		= 0;
 		m_jump 		= false;
 		m_flyStart 	= false;
+		m_lastHit 	= Time.time - 2;
+		m_gameOver 	= false;
 		
 		// Get player data
 		m_playerData = Game.Instance.PlayerData;
@@ -48,6 +52,9 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		if (m_gameOver)
+			return;
+
 		// pressed keys
 		bool keyD 			= Input.GetButton 		(KeyMapping.KEY_ACTION_MOVE_RIGHT);
 		bool keyA 			= Input.GetButton 		(KeyMapping.KEY_ACTION_MOVE_LEFT);
@@ -149,6 +156,19 @@ public class Player : MonoBehaviour {
 		m_fly = GameConfig.BILLY_JUMP_START_SPEED_ENEMY;
 	}
 
+	/*
+	 * if the enemy get a hit
+	 */
+	public void hit()
+	{
+		if(m_lastHit + 2 < Time.time)
+		{
+			m_playerData.LifePoints--;
+			m_lastHit = Time.time;
+		}
+		if (m_playerData.LifePoints == 0)
+			m_gameOver = true;	//Destroy (this.gameObject);
+	}
 	#endregion
 
 
