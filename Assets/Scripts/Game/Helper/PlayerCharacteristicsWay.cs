@@ -1,6 +1,6 @@
 ﻿/*
  * Project:	Billy's Payback
- * File:	UpdatePlayerCharacteristicsOnTrigger.cs
+ * File:	PlayerCharacteristicsWay.cs
  * Authors:	Byron Worms
  * Editors:	-
  */
@@ -11,7 +11,7 @@ using System.Collections.Generic;
 /*
  * Updates the player characteristics on "ontriggerenter" events of the trigger the script is attached to
  */
-public class UpdatePlayerCharacteristicsOnTrigger : MonoBehaviour
+public class PlayerCharacteristicsWay : MonoBehaviour
 {
 	// The trigger objects
 	private Collider 		m_triggerObject = null;
