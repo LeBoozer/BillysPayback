@@ -13,7 +13,7 @@ using System.Collections;
 public class T_OnHostDone : FSMTransition
 {
 	// Override: FSMTransition::onHostStateDone
-	public override void onHostStateDone(Object _param)
+	public override void onHostStateDone(object _param)
 	{
 		// Change to target state
 		setTargetFSMState();

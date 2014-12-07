@@ -36,8 +36,8 @@ public class FSM : MonoBehaviour
 		// Notify new state
 		if(m_currentFSMState != null)
 		{
-			m_currentFSMState.setEnabled(true);
 			m_currentFSMState.onEnter();
+			m_currentFSMState.setEnabled(true);
 		}
 	}
 	
