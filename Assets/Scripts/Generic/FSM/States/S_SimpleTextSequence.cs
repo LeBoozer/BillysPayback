@@ -19,11 +19,11 @@ public class S_SimpleTextSequence : FSMState
 	private SimpleDialogue 	m_dialogue 		= null;
 
 	// Override: FSMState::Awake()
-	new void Awake()
+	protected override void Awake()
 	{
 		// Call parent
 		base.Awake();
-	
+		
 		// Text to display?
 		if(m_textSource == null)
 		{

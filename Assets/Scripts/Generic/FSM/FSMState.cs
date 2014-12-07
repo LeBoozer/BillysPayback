@@ -59,11 +59,13 @@ public abstract class FSMState : MonoBehaviour
 	}
 
 	// Override: MonoBehaviour::Awake()
-	protected void Awake()
+	protected virtual void Awake()
 	{
 		// Local variables
 		FSMTransition trans 	= null;
 		FSMStateAction action 	= null;
+	
+		Debug.Log("BASE");
 	
 		// Retrieve all transitions
 		foreach(Transform child in gameObject.transform)
@@ -84,7 +86,7 @@ public abstract class FSMState : MonoBehaviour
 	}
 	
 	// Override: MonoBehaviour::Start()
-	protected void Start()
+	protected virtual void Start()
 	{
 		// Retrieve FSM instance
 		m_fsm = gameObject.transform.parent.gameObject.GetComponent<FSM>();
