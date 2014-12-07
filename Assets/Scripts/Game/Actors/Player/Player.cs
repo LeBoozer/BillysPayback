@@ -4,7 +4,6 @@
  * Authors:	Raik Dankworth
  * Editors:	Byron Worms
  */
-
 using UnityEngine;
 using System.Collections;
 

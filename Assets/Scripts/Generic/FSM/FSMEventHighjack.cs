@@ -17,10 +17,13 @@ public class FSMEventHighjack : MonoBehaviour
 	public delegate void Delegate_OnTriggerStay(Collider _other);
 	public delegate void Delegate_OnTriggerLeave(Collider _other);
 	
+	public delegate void Delegate_OnDestroy();
+	
 	// List of all supported events
 	public event Delegate_OnTriggerEnter 	FSMOnTriggerEnter 	= delegate{};
 	public event Delegate_OnTriggerEnter 	FSMOnTriggerStay	= delegate{};
 	public event Delegate_OnTriggerEnter 	FSMOnTriggerLeave	= delegate{};
+	public event Delegate_OnDestroy 		FSMOnDestroy		= delegate{};
 	
 	// Override: MonoBehaviour::OnTriggerEnter
 	private void OnTriggerEnter(Collider _other)
@@ -41,5 +44,12 @@ public class FSMEventHighjack : MonoBehaviour
 	{
 		// Notify listener
 		FSMOnTriggerLeave(_other);
+	}
+	
+	// Override: MonoBehaviour::OnDestroy
+	private void OnDestroy()
+	{
+		// Notify listener
+		FSMOnDestroy();
 	}	
 }

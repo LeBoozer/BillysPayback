@@ -28,6 +28,14 @@ public abstract class FSMState : MonoBehaviour
 		return m_fsm;
 	}
 	
+	// Can be called to inform all attached transitions that the state's work has been done
+	protected void onNotifyDone(object _param)
+	{
+		// Inform transitions
+		foreach(FSMTransition t in m_transitions)
+			t.onHostStateDone(_param);
+	}
+	
 	// Enables/disables the state
 	public void setEnabled(bool _onOff)
 	{
@@ -51,11 +59,13 @@ public abstract class FSMState : MonoBehaviour
 	}
 
 	// Override: MonoBehaviour::Awake()
-	void Awake()
+	protected virtual void Awake()
 	{
 		// Local variables
 		FSMTransition trans 	= null;
 		FSMStateAction action 	= null;
+	
+		Debug.Log("BASE");
 	
 		// Retrieve all transitions
 		foreach(Transform child in gameObject.transform)
@@ -76,7 +86,7 @@ public abstract class FSMState : MonoBehaviour
 	}
 	
 	// Override: MonoBehaviour::Start()
-	void Start()
+	protected virtual void Start()
 	{
 		// Retrieve FSM instance
 		m_fsm = gameObject.transform.parent.gameObject.GetComponent<FSM>();
