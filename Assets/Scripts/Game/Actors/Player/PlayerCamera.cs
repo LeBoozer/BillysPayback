@@ -18,6 +18,7 @@ public class PlayerCamera : MonoBehaviour {
 	public  float		m_distance = 15.0f;
 	public  float		m_damping = 0.01f;
 	public  float		m_threshold = 0.0001f;
+	public  bool		m_lookAt = true;
 
 
 	#endregion
@@ -42,6 +43,8 @@ public class PlayerCamera : MonoBehaviour {
 		this.transform.position += new Vector3 (customize (m_object.transform.position.x, this.transform.position.x),
 			                                     customize (m_object.transform.position.y, this.transform.position.y),
 			                                     customize (m_object.transform.position.z, this.transform.position.z + m_distance));
+		if (m_lookAt)
+			this.transform.LookAt (m_object);
 	}
 
 	// Calculate the movement of the camera 
