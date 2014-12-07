@@ -28,6 +28,14 @@ public abstract class FSMState : MonoBehaviour
 		return m_fsm;
 	}
 	
+	// Can be called to inform all attached transitions that the state's work has been done
+	protected void onNotifyDone(Object _param)
+	{
+		// Inform transitions
+		foreach(FSMTransition t in m_transitions)
+			t.onHostStateDone(_param);
+	}
+	
 	// Enables/disables the state
 	public void setEnabled(bool _onOff)
 	{

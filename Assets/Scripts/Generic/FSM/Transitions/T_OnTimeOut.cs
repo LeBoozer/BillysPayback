@@ -17,16 +17,6 @@ public class T_OnTimeout : FSMTransition
 
 	// Time-out in seconds
 	public float 	m_timeOutInSeconds 	= 0.0f;
-
-	// Override: FSMTransition::OnEnable
-	void OnEnable()
-	{			
-	}
-	
-	// Override: FSMTransition::OnDisable
-	void OnDisable()
-	{
-	}
 	
 	// Override: FSMTransition::Update
 	void Update()
