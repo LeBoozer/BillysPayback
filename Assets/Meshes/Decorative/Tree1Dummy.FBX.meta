@@ -6,15 +6,25 @@ ModelImporter:
     100000: Blaetter
     100002: Stamm
     100004: //RootNode
+    100006: Treetop
+    100008: Trunk
     400000: Blaetter
     400002: Stamm
     400004: //RootNode
+    400006: Treetop
+    400008: Trunk
     2300000: Blaetter
     2300002: Stamm
+    2300004: Treetop
+    2300006: Trunk
     3300000: Blaetter
     3300002: Stamm
+    3300004: Treetop
+    3300006: Trunk
     4300000: Stamm
     4300002: Blaetter
+    4300004: Trunk
+    4300006: Treetop
     9500000: //RootNode
   materials:
     importMaterials: 0
