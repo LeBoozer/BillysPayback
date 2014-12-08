@@ -27,8 +27,8 @@ public class Player : MonoBehaviour {
 	private CharacterController 	m_controller;
 	private ArrayList	m_kiwanos;
 	
-	public  Transform	Kiwano = null;
-	public  Transform	Raspberry = null;
+	public  GameObject	Kiwano = null;
+	public  GameObject	Raspberry = null;
 	public	float		m_kiwanoDistance = 3;
 	public 	float		m_kiwanosRotationSpeed = 180;
 
@@ -45,6 +45,12 @@ public class Player : MonoBehaviour {
 		m_lastHit 	= Time.time - 2;
 		m_gameOver 	= false;
 		m_kiwanos 	= new ArrayList ();
+
+		if (Kiwano == null)
+			Kiwano = (GameObject) Resources.Load ("Items/KiwanoPowerUp");
+
+		if (Raspberry == null)
+			Raspberry = (GameObject) Resources.Load ("Raspberry");
 		
 		// Get player data
 		m_playerData = Game.Instance.PlayerData;
@@ -185,7 +191,7 @@ public class Player : MonoBehaviour {
 				// create new kiwanos
 				while(m_kiwanos.Count < newKiwanoNumber)
 				{
-					Transform newKiwano = Instantiate(Kiwano) as Transform;
+					Transform newKiwano = ((GameObject) Instantiate(Kiwano)).transform;
 					newKiwano.parent = this.transform;
 					newKiwano.localScale = new Vector3(2, 2, 2);
 					newKiwano.LookAt(this.transform);
@@ -254,7 +260,7 @@ public class Player : MonoBehaviour {
 			return;
 
 		// create projectile
-		Transform pro = Instantiate (Raspberry, this.transform.position, this.transform.rotation) as Transform;
+		GameObject pro = Instantiate (Raspberry, this.transform.position, this.transform.rotation) as GameObject;
 
 		// add force to projectile
 		Rigidbody rb = pro.GetComponent<Rigidbody> ();
