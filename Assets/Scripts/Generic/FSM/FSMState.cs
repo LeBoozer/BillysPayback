@@ -65,8 +65,6 @@ public abstract class FSMState : MonoBehaviour
 		FSMTransition trans 	= null;
 		FSMStateAction action 	= null;
 	
-		Debug.Log("BASE");
-	
 		// Retrieve all transitions
 		foreach(Transform child in gameObject.transform)
 		{

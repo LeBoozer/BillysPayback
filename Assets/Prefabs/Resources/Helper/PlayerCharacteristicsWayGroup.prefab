@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef382848d7af904a919a54d8d6dbc1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_autoloadPlayer: 1
   m_objectList: []
   m_collecting: 0
   m_lightness: 0
@@ -252,6 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef382848d7af904a919a54d8d6dbc1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_autoloadPlayer: 1
   m_objectList: []
   m_collecting: 0
   m_lightness: 0
@@ -274,9 +276,6 @@ MonoBehaviour:
   m_startTrigger: {fileID: 6500006}
   m_endTrigger: {fileID: 6500004}
   m_containerWays: {fileID: 100004}
-  m_player: {fileID: 0}
-  m_highJackStart: {fileID: 0}
-  m_highJackEnd: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7f842fe8ecf7c1e4082142f512b762d6
+guid: 8f4215caf60b45549af2f744f6ddcd38
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,7 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Weg_Mitte
+    4300000: Weg_Ende
     9500000: //RootNode
   materials:
     importMaterials: 0
