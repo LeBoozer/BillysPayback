@@ -40,6 +40,8 @@ public abstract class FSMState : MonoBehaviour
 	public void setEnabled(bool _onOff)
 	{
 		gameObject.SetActive(_onOff);
+        foreach (FSMTransition t in m_transitions)
+            t.setEnabled(_onOff);
 	}
 	
 	// Will be called as soon as the state is being entered
@@ -62,21 +64,21 @@ public abstract class FSMState : MonoBehaviour
 	protected virtual void Awake()
 	{
 		// Local variables
-		FSMTransition trans 	= null;
-		FSMStateAction action 	= null;
+		FSMTransition[] trans 	= null;
+		FSMStateAction[] action 	= null;
 	
 		// Retrieve all transitions
 		foreach(Transform child in gameObject.transform)
 		{
 			// Get transition component
-			trans = child.gameObject.GetComponent<FSMTransition>();
+			trans = child.gameObject.GetComponents<FSMTransition>();
 			if(trans != null)
-				m_transitions.Add(trans);
+				m_transitions.AddRange(trans);
 			
 			// Get action component
-			action = child.gameObject.GetComponent<FSMStateAction>();
+			action = child.gameObject.GetComponents<FSMStateAction>();
 			if(action != null)
-				m_actions.Add(action);
+				m_actions.AddRange(action);
 		}	
 	
 		// Disable this state with all its transitions

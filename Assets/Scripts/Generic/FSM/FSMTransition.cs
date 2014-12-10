@@ -36,6 +36,12 @@ public abstract class FSMTransition : MonoBehaviour
 		if(m_fsm != null)
 			m_fsm.setFSMState(m_targetState);
 	}
+
+    // Enables/disables the state
+    public void setEnabled(bool _onOff)
+    {
+        gameObject.SetActive(_onOff);
+    }
 	
 	// Will be called as soon as the host-state has finished its work (this call is not guaranteed and depends heavily on the host state!)
 	public virtual void onHostStateDone(object _param)
@@ -46,19 +52,22 @@ public abstract class FSMTransition : MonoBehaviour
 	void Awake()
 	{
 		// Local variables
-		FSMAction action = null;
+		FSMAction[] action = null;
 		
 		// Retrieve all actions
 		foreach(Transform child in gameObject.transform)
 		{
 			// Get component
-			action = child.gameObject.GetComponent<FSMAction>();
+			action = child.gameObject.GetComponents<FSMAction>();
 			if(action == null)
 				continue;
 			
 			// Add to list
-			m_actionsOnTransition.Add(action);
-		}		
+			m_actionsOnTransition.AddRange(action);
+		}
+
+        // Disable this transition
+        setEnabled(false);	
 	}
 	
 	// Override: MonoBehaviour::Start()
