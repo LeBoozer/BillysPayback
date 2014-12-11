@@ -13,16 +13,25 @@ using System.Collections;
 public class T_OnDialogAction : FSMTransition
 {
 	// The target descision
-	public SimpleDialogue.Action m_targetAction;
+	public SimpleDialogue.Action[] m_targetActions;
 
 	// Override: FSMTransition::onHostStateDone
 	public override void onHostStateDone(object _param)
 	{
+        // Dialog action?
+        if (m_targetActions != null || _param is SimpleDialogue.Action == false)
+            return;
+
 		// Right descision?
-		if(_param is SimpleDialogue.Action && m_targetAction.Equals(_param) == true)
+		foreach(SimpleDialogue.Action a in m_targetActions)
 		{
-			// Change to target state
-			setTargetFSMState();
+            // Compare
+            if (a.Equals(_param) == true)
+            {
+                // Change to target state
+                setTargetFSMState();
+                break;
+            }
 		}
 	}
 }

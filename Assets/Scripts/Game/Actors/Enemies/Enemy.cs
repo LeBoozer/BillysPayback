@@ -74,22 +74,31 @@ public class Enemy : MonoBehaviour {
 	{
 		// get controller
 		CharacterController controller = _hit.controller;
-		//Debug.Log(_hit.collider.transform.tag.ToString());
 		
-		if (_hit.collider.transform.tag == Tags.TAG_PLAYER)
-		{		
-			Player _p = (Player) _hit.transform.GetComponent<Player>();
-			if((_hit.controller.collisionFlags & CollisionFlags.Below) != 0
-			   && (controller.collisionFlags & CollisionFlags.Above) != 0)
-			{
-				_p.jumpingFromAnEnemy ();
-				hit(false);
-			}
-			else if(m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_KIWANO))
-				hit(true);
-			else
-				_p.hit ();
+		// collision with a projectile from the player
+		if (_hit.collider.transform.tag == Tags.TAG_PROJECTILE_PLAYER)
+		{
+			Destroy(_hit.collider.gameObject);
+			hit (false);
 		}
+
+		// no player?
+		if (_hit.collider.transform.tag != Tags.TAG_PLAYER)
+			return;
+		
+		// collision whit the player
+		Player _p = (Player) _hit.transform.GetComponent<Player>();
+		if((_hit.controller.collisionFlags & CollisionFlags.Below) != 0
+		   && (controller.collisionFlags & CollisionFlags.Above) != 0)
+		{
+			_p.jumpingFromAnEnemy ();
+			hit(false);
+		}
+		else if(m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_KIWANO))
+			hit(true);
+		else
+			_p.hit ();
+
 	}
 
 	/*
