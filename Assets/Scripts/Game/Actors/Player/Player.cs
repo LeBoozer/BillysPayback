@@ -15,22 +15,25 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
 	#region Variable
-	private float 		m_speed;
-	private float 		m_fly;
-	private bool 		m_jump;
-	private bool 		m_flyStart;
-	private float 		m_oldPositionX 			= 0.0f;
-	private float 		m_lastHit;
-	private	bool		m_gameOver;
-	
+	private float 					m_speed;
+	private float 					m_fly;
+	private bool 					m_jump;
+	private bool 					m_flyStart;
+	private float 					m_oldPositionX 			= 0.0f;
+	private float 					m_lastHit;
+	private	bool					m_gameOver;
+	private bool					m_allowToMove;
+	private float					m_startJumpTime;
+	public  float					m_jumpHeight 			= 5;
+
 	private PlayerData				m_playerData;
 	private CharacterController 	m_controller;
-	private ArrayList	m_kiwanos;
+	private ArrayList				m_kiwanos;
 	
-	public  GameObject	Kiwano = null;
-	public  GameObject	Raspberry = null;
-	public	float		m_kiwanoDistance = 3;
-	public 	float		m_kiwanosRotationSpeed = 180;
+	public  GameObject				Kiwano = null;
+	public  GameObject				Raspberry = null;
+	public	float					m_kiwanoDistance = 2;
+	public 	float					m_kiwanosRotationSpeed = 180;
 
 	#endregion
 
@@ -38,19 +41,21 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	private void Start () 
 	{
-		m_speed 	= 0;
-		m_fly 		= 0;
-		m_jump 		= false;
-		m_flyStart 	= false;
-		m_lastHit 	= Time.time - 2;
-		m_gameOver 	= false;
-		m_kiwanos 	= new ArrayList ();
+		m_speed 		= 0;
+		m_fly 			= 0;
+		m_jump 			= false;
+		m_flyStart 		= false;
+		m_lastHit 		= Time.time - 2;
+		m_gameOver 		= false;
+		m_kiwanos 		= new ArrayList ();
+		m_allowToMove 	= true;
+		m_startJumpTime = 0;
 
 		if (Kiwano == null)
-			Kiwano = (GameObject) Resources.Load ("Items/KiwanoPowerUp");
+			Kiwano 		= (GameObject) Resources.Load ("Items/KiwanoPowerUp");
 
 		if (Raspberry == null)
-			Raspberry = (GameObject) Resources.Load ("Raspberry");
+			Raspberry 	= (GameObject) Resources.Load ("Raspberry");
 		
 		// Get player data
 		m_playerData = Game.Instance.PlayerData;
@@ -58,6 +63,9 @@ public class Player : MonoBehaviour {
 		// Get character controller
 		m_controller = GetComponent<CharacterController> ();
 	}
+
+	
+
 	#endregion
 
 	#region Update
@@ -67,11 +75,13 @@ public class Player : MonoBehaviour {
 		if (m_gameOver)
 			return;
 
-		updateMovement ();
+		if(m_allowToMove)
+			updateMovement ();
 
 		updateKiwanos ();
 
-		shooting ();
+		if(m_allowToMove)
+			shooting ();
 	}
 
 	/**
@@ -90,34 +100,36 @@ public class Player : MonoBehaviour {
 			m_jump = true;
 		
 		// movement right&left
-		if (keyD)
-		{
-			m_speed += GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime;
-			if(m_speed > GameConfig.BILLY_MAX_SPEED)
-				m_speed = GameConfig.BILLY_MAX_SPEED;
-		} 
-		else if(keyA)
-		{
-			m_speed -= GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime;
-			if(m_speed <  -GameConfig.BILLY_MAX_SPEED)
-				m_speed = -GameConfig.BILLY_MAX_SPEED;
-		}
-		else
-		{
-			if(Mathf.Abs(m_speed - (m_speed * (1 - Time.deltaTime * 2))) > GameConfig.BILLY_MAX_SPEED * 0.5f *Time.deltaTime)
-				m_speed -= GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime * (m_speed / Mathf.Abs(m_speed));
+		#region vertical
+			if (keyD)
+			{
+				m_speed += GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime;
+				if(m_speed > GameConfig.BILLY_MAX_SPEED)
+					m_speed = GameConfig.BILLY_MAX_SPEED;
+			} 
+			else if(keyA)
+			{
+				m_speed -= GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime;
+				if(m_speed <  -GameConfig.BILLY_MAX_SPEED)
+					m_speed = -GameConfig.BILLY_MAX_SPEED;
+			}
 			else
-				m_speed *= (1 - Time.deltaTime * 2);
-			if(m_speed < 0.1f && m_speed > -0.1f)
-				m_speed = 0;
-		}
-		
+			{
+				if(Mathf.Abs(m_speed - (m_speed * (1 - Time.deltaTime * 2))) > GameConfig.BILLY_MAX_SPEED * 0.5f *Time.deltaTime)
+					m_speed -= GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime * (m_speed / Mathf.Abs(m_speed));
+				else
+					m_speed *= (1 - Time.deltaTime * 2);
+				if(m_speed < 0.1f && m_speed > -0.1f)
+					m_speed = 0;
+			}
+		#endregion
 		// jump and fly
 		// movement high&down
+		#region horizontal
 		if ((jumpKeyDown || jumpKey) && !m_jump) 
 		{
 			m_jump = true;
-			m_fly = GameConfig.BILLY_JUMP_START_SPEED;
+			m_fly = 2 * Mathf.Sqrt(m_jumpHeight * m_controller.height * Mathf.Abs(Physics.gravity.y));
 		} 
 		else if (jumpKeyDown && m_jump) 
 		{
@@ -143,9 +155,10 @@ public class Player : MonoBehaviour {
 		else 
 		{
 		}
-		
+		#endregion
 		// set new position
-		m_controller.Move (new Vector3 (m_speed, m_fly, 0) * Time.deltaTime);
+		m_controller.Move (new Vector3 (m_speed, m_fly + m_startJumpTime * Physics.gravity.y, 0) * Time.deltaTime);
+		m_startJumpTime += Time.deltaTime;
 		
 		// x-coord haven't changed?
 		if(m_oldPositionX == this.transform.position.x)
@@ -164,6 +177,7 @@ public class Player : MonoBehaviour {
 			m_jump = false;
 			m_flyStart = false;
 			m_fly = 0;
+			m_startJumpTime = 0;
 		}
 	}
 
@@ -210,7 +224,7 @@ public class Player : MonoBehaviour {
 				cos = Mathf.Cos(2 * Mathf.PI / m_kiwanos.Count);
 				sin = Mathf.Sin(2 * Mathf.PI / m_kiwanos.Count);
 
-				newPos = new Vector3(m_kiwanoDistance, 0, 0);
+				newPos = new Vector3(m_kiwanoDistance * m_controller.radius, 0, 0);
 				foreach(Transform kiwa in m_kiwanos)
 				{
 					kiwa.position = newPos + this.transform.position;
@@ -285,7 +299,8 @@ public class Player : MonoBehaviour {
 	public void jumpingFromAnEnemy()
 	{
 		m_jump = true;
-		m_fly = GameConfig.BILLY_JUMP_START_SPEED_ENEMY;
+		//m_fly = GameConfig.BILLY_JUMP_START_SPEED_ENEMY;
+		m_fly = Mathf.Sqrt(2 * m_jumpHeight * m_controller.height / Mathf.Abs(Physics.gravity.y));
 	}
 
 	/*
@@ -301,6 +316,15 @@ public class Player : MonoBehaviour {
 		if (m_playerData.LifePoints == 0)
 			m_gameOver = true;	//Destroy (this.gameObject);
 	}
+
+	/**
+	 * block the movement of the player
+	 */
+	public void blockMovement(bool _k)
+	{
+		m_allowToMove = !_k;
+	}
+
 	#endregion
 
 
