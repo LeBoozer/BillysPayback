@@ -68,7 +68,7 @@ public class Enemy : MonoBehaviour {
 	}
 
 	/*
-	 * 
+	 * processed the collisions of this object
 	 */
 	public void OnControllerColliderHit(ControllerColliderHit _hit)
 	{
