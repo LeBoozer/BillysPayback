@@ -15,8 +15,8 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
 	#region Variable
-	private float 					m_speed;
-	private float 					m_fly;
+	private float 					m_velocityX;
+	private float 					m_velocityY;
 	private bool 					m_jump;
 	private bool 					m_flyStart;
 	private float 					m_oldPositionX 			= 0.0f;
@@ -41,8 +41,8 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	private void Start () 
 	{
-		m_speed 		= 0;
-		m_fly 			= 0;
+		m_velocityX 		= 0;
+		m_velocityY 			= 0;
 		m_jump 			= false;
 		m_flyStart 		= false;
 		m_lastHit 		= Time.time - 2;
@@ -103,80 +103,87 @@ public class Player : MonoBehaviour {
 		#region vertical
 			if (keyD)
 			{
-				m_speed += GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime;
-				if(m_speed > GameConfig.BILLY_MAX_SPEED)
-					m_speed = GameConfig.BILLY_MAX_SPEED;
+				m_velocityX += GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime;
+				if(m_velocityX > GameConfig.BILLY_MAX_SPEED)
+					m_velocityX = GameConfig.BILLY_MAX_SPEED;
 			} 
 			else if(keyA)
 			{
-				m_speed -= GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime;
-				if(m_speed <  -GameConfig.BILLY_MAX_SPEED)
-					m_speed = -GameConfig.BILLY_MAX_SPEED;
+				m_velocityX -= GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime;
+				if(m_velocityX <  -GameConfig.BILLY_MAX_SPEED)
+					m_velocityX = -GameConfig.BILLY_MAX_SPEED;
 			}
 			else
 			{
-				if(Mathf.Abs(m_speed - (m_speed * (1 - Time.deltaTime * 2))) > GameConfig.BILLY_MAX_SPEED * 0.5f *Time.deltaTime)
-					m_speed -= GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime * (m_speed / Mathf.Abs(m_speed));
+				if(Mathf.Abs(m_velocityX - (m_velocityX * (1 - Time.deltaTime * 2))) > GameConfig.BILLY_MAX_SPEED * 0.5f *Time.deltaTime)
+					m_velocityX -= GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime * (m_velocityX / Mathf.Abs(m_velocityX));
 				else
-					m_speed *= (1 - Time.deltaTime * 2);
-				if(m_speed < 0.1f && m_speed > -0.1f)
-					m_speed = 0;
+					m_velocityX *= (1 - Time.deltaTime * 2);
+				if(m_velocityX < 0.1f && m_velocityX > -0.1f)
+					m_velocityX = 0;
 			}
 		#endregion
 		// jump and fly
 		// movement high&down
+		//float lastVeloY = m_velocityY;
 		#region horizontal
 		if ((jumpKeyDown || jumpKey) && !m_jump) 
 		{
 			m_jump = true;
-			m_fly = 2 * Mathf.Sqrt(m_jumpHeight * m_controller.height * Mathf.Abs(Physics.gravity.y));
+			//Debug.Log(m_controller.height);
+			//Debug.Log(m_jumpHeight * m_controller.height);
+			//Debug.Log("Starthöhe: " + transform.position.y);
+			m_velocityY = 2 * Mathf.Sqrt(m_jumpHeight * m_controller.height * Mathf.Abs(Physics.gravity.y));
+			m_startJumpTime = 0;
 		} 
 		else if (jumpKeyDown && m_jump) 
 		{
 			// flying
 			m_flyStart = true;
-			if(m_fly > 0)
-				m_fly += Physics.gravity.y * Time.deltaTime;
+			if(m_velocityY > 0)
+				m_velocityY += Physics.gravity.y * Time.deltaTime;
 			else
-				m_fly += Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
+				m_velocityY += Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
 		} 
 		else if (m_flyStart && m_jump && jumpKey && m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_ORANGE)) 
 		{
-			if(m_fly > 0)
-				m_fly += Physics.gravity.y * Time.deltaTime;
+			if(m_velocityY > 0)
+				m_velocityY += Physics.gravity.y * Time.deltaTime;
 			else
-				m_fly += Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
+				m_velocityY += Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
 		} 
 		else if (m_jump) 
 		{
-			m_fly += Physics.gravity.y * Time.deltaTime;
+			m_velocityY += Physics.gravity.y * Time.deltaTime;
 		} 
 		// nothing?
 		else 
 		{
 		}
+		//if(m_jump && (m_velocityY + m_startJumpTime * Physics.gravity.y) * (lastVeloY + (m_startJumpTime - Time.deltaTime) * Physics.gravity.y) < 0)
+		//	Debug.Log("Zenit: " + transform.position.y);
 		#endregion
 		// set new position
-		m_controller.Move (new Vector3 (m_speed, m_fly + m_startJumpTime * Physics.gravity.y, 0) * Time.deltaTime);
+		m_controller.Move (new Vector3 (m_velocityX, m_velocityY + m_startJumpTime * Physics.gravity.y, 0) * Time.deltaTime);
 		m_startJumpTime += Time.deltaTime;
 		
 		// x-coord haven't changed?
 		if(m_oldPositionX == this.transform.position.x)
-			m_speed = 0.0f;
+			m_velocityX = 0.0f;
 		
 		// save last x-coordination
 		m_oldPositionX = this.transform.position.x;
 		
 		// jump again something?
-		if ((m_controller.collisionFlags & CollisionFlags.Above) != 0 && m_fly > 0)
-			m_fly = 0;
+		if ((m_controller.collisionFlags & CollisionFlags.Above) != 0 && m_velocityY > 0)
+			m_velocityY = 0;
 		
 		// jump/fly finished?
 		if(m_controller.isGrounded)
 		{
 			m_jump = false;
 			m_flyStart = false;
-			m_fly = 0;
+			m_velocityY = 0;
 			m_startJumpTime = 0;
 		}
 	}
@@ -279,8 +286,8 @@ public class Player : MonoBehaviour {
 		// add force to projectile
 		Rigidbody rb = pro.GetComponent<Rigidbody> ();
 		rb.useGravity = false;
-		if(m_speed != 0)
-			rb.AddForce (m_speed / Mathf.Abs (m_speed) * new Vector3 (100, 0, 0));
+		if(m_velocityX != 0)
+			rb.AddForce (m_velocityX / Mathf.Abs (m_velocityX) * new Vector3 (100, 0, 0));
 		else 
 			rb.AddForce (new Vector3 (100, 0, 0));
 
@@ -300,21 +307,25 @@ public class Player : MonoBehaviour {
 	{
 		m_jump = true;
 		//m_fly = GameConfig.BILLY_JUMP_START_SPEED_ENEMY;
-		m_fly = Mathf.Sqrt(2 * m_jumpHeight * m_controller.height / Mathf.Abs(Physics.gravity.y));
+		m_velocityY = Mathf.Sqrt(2 * m_jumpHeight * m_controller.height / Mathf.Abs(Physics.gravity.y));
 	}
 
 	/*
 	 * if the play get a hit
 	 */
-	public void hit()
+	public bool hit()
 	{
+		bool taken = false;
 		if(m_lastHit + 2 < Time.time)
 		{
+			taken = true;
 			m_playerData.LifePoints--;
 			m_lastHit = Time.time;
 		}
 		if (m_playerData.LifePoints == 0)
 			m_gameOver = true;	//Destroy (this.gameObject);
+
+		return taken;
 	}
 
 	/**
@@ -324,6 +335,52 @@ public class Player : MonoBehaviour {
 	{
 		m_allowToMove = !_k;
 	}
+
+	/**
+	 * processed the collision with other GameObjects
+	 */
+	public void OnControllerColliderHit(ControllerColliderHit _hit)
+	{
+		// get controller
+		CharacterController controller = _hit.controller;
+		
+		// collision by the tag of the hit
+		string tag = _hit.collider.transform.tag;
+		//  Diamonds
+		if(tag.Equals(Tags.TAG_DIAMOND))
+		{
+			m_playerData.increaseStockSizeByValue(PlayerData.PowerUpType.PUT_COUNT, 1);
+			Destroy(_hit.gameObject);
+			return;
+		}
+
+		// kiwanos
+		if(tag.Equals(Tags.TAG_KIWANO_POWER_UP))
+		{
+			if(m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_KIWANO))
+				m_playerData.increaseStockSizeByValue(PlayerData.PowerUpType.PUT_KIWANO, 1);
+			Destroy(_hit.gameObject);
+			return;
+		}
+		// raspberry
+		if(tag.Equals(Tags.TAG_RASPBERRY_POWER_UP))
+		{
+			if(m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_RASPBERRY))
+				m_playerData.increaseStockSizeByValue(PlayerData.PowerUpType.PUT_RASPBERRY, 1);
+			Destroy(_hit.gameObject);
+			return;
+		}
+		// projectile
+		if(tag.Equals(Tags.TAG_PROJECTILE_ENEMY))
+		{
+			if(hit ())
+				Destroy(_hit.gameObject);
+			return;
+		}
+		// ignore other objects
+		
+	}
+
 
 	#endregion
 
