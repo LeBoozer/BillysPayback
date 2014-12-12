@@ -240,6 +240,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ceda2ca49ea1694184724d91d2a2f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_jumpHeight: 5
+  Kiwano: {fileID: 0}
+  Raspberry: {fileID: 0}
+  m_kiwanoDistance: 2
+  m_kiwanosRotationSpeed: 180
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
