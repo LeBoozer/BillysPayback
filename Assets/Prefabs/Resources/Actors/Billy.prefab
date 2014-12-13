@@ -27,9 +27,9 @@ GameObject:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400000}
   - 143: {fileID: 14300000}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Billy
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,6 +270,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_jumpHeight: 15
+  m_brakeFactor: 1
+  m_accelerationFactor: 1
   Kiwano: {fileID: 0}
   Raspberry: {fileID: 0}
   m_kiwanoDistance: 2
