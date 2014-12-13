@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 874ff4a7211f3c3448856db12167abc9
+guid: 74f2529e3db99f2409d28a14713804e4
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: Blaetter
-    100002: Stamm
-    100004: //RootNode
+    100002: //RootNode
+    100004: Stamm
     400000: Blaetter
-    400002: Stamm
-    400004: //RootNode
+    400002: //RootNode
+    400004: Stamm
     2300000: Blaetter
     2300002: Stamm
     3300000: Blaetter
