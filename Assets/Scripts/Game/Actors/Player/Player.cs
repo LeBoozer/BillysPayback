@@ -25,6 +25,8 @@ public class Player : MonoBehaviour {
 	private bool					m_allowToMove;
 	private float					m_startJumpTime;
 	public  float					m_jumpHeight 			= 5;
+	public  float					m_brakeFactor			= 1;
+	public  float					m_accelerationFactor	= 1;
 
 	private PlayerData				m_playerData;
 	private CharacterController 	m_controller;
@@ -41,8 +43,8 @@ public class Player : MonoBehaviour {
 	// Use this for initialization
 	private void Start () 
 	{
-		m_velocityX 		= 0;
-		m_velocityY 			= 0;
+		m_velocityX 	= 0;
+		m_velocityY 	= 0;
 		m_jump 			= false;
 		m_flyStart 		= false;
 		m_lastHit 		= Time.time - 2;
@@ -103,22 +105,23 @@ public class Player : MonoBehaviour {
 		#region vertical
 			if (keyD)
 			{
-				m_velocityX += GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime;
+				m_velocityX += GameConfig.BILLY_MAX_SPEED * m_accelerationFactor * Time.deltaTime;
 				if(m_velocityX > GameConfig.BILLY_MAX_SPEED)
 					m_velocityX = GameConfig.BILLY_MAX_SPEED;
 			} 
 			else if(keyA)
 			{
-				m_velocityX -= GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime;
+				m_velocityX -= GameConfig.BILLY_MAX_SPEED * m_accelerationFactor * Time.deltaTime;
 				if(m_velocityX <  -GameConfig.BILLY_MAX_SPEED)
 					m_velocityX = -GameConfig.BILLY_MAX_SPEED;
 			}
 			else
 			{
-				if(Mathf.Abs(m_velocityX - (m_velocityX * (1 - Time.deltaTime * 2))) > GameConfig.BILLY_MAX_SPEED * 0.5f *Time.deltaTime)
-					m_velocityX -= GameConfig.BILLY_MAX_SPEED * 0.5f * Time.deltaTime * (m_velocityX / Mathf.Abs(m_velocityX));
+				if(Mathf.Abs(m_velocityX - (m_velocityX * m_brakeFactor * Time.deltaTime)) > GameConfig.BILLY_MAX_SPEED * m_accelerationFactor * Time.deltaTime)
+						m_velocityX -= GameConfig.BILLY_MAX_SPEED * m_accelerationFactor* Time.deltaTime * (m_velocityX / Mathf.Abs(m_velocityX));
 				else
-					m_velocityX *= (1 - Time.deltaTime * 2);
+					m_velocityX *= m_brakeFactor * Time.deltaTime;
+
 				if(m_velocityX < 0.1f && m_velocityX > -0.1f)
 					m_velocityX = 0;
 			}
@@ -130,9 +133,6 @@ public class Player : MonoBehaviour {
 		if ((jumpKeyDown || jumpKey) && !m_jump) 
 		{
 			m_jump = true;
-			//Debug.Log(m_controller.height);
-			//Debug.Log(m_jumpHeight * m_controller.height);
-			//Debug.Log("Starthöhe: " + transform.position.y);
 			m_velocityY = 2 * Mathf.Sqrt(m_jumpHeight * m_controller.height * Mathf.Abs(Physics.gravity.y));
 			m_startJumpTime = 0;
 		} 
@@ -160,8 +160,6 @@ public class Player : MonoBehaviour {
 		else 
 		{
 		}
-		//if(m_jump && (m_velocityY + m_startJumpTime * Physics.gravity.y) * (lastVeloY + (m_startJumpTime - Time.deltaTime) * Physics.gravity.y) < 0)
-		//	Debug.Log("Zenit: " + transform.position.y);
 		#endregion
 		// set new position
 		m_controller.Move (new Vector3 (m_velocityX, m_velocityY + m_startJumpTime * Physics.gravity.y, 0) * Time.deltaTime);
@@ -377,8 +375,9 @@ public class Player : MonoBehaviour {
 				Destroy(_hit.gameObject);
 			return;
 		}
-		// ignore other objects
-		
+		// with other objects
+		_hit.gameObject.SendMessage ("PlayerCollision", this.transform, SendMessageOptions.DontRequireReceiver); 
+			
 	}
 
 
