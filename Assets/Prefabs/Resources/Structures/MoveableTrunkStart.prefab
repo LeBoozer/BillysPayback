@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 95: {fileID: 9500000}
   - 64: {fileID: 6400000}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: MoveableTrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
