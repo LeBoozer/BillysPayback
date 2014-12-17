@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Egg : MonoBehaviour {
 
-	public enum EggSort
+	public enum EggType
 	{
 		KIWANO,
 		RASPBERRY,
@@ -11,7 +11,7 @@ public class Egg : MonoBehaviour {
 		NOTHING
 	}
 	private CapsuleCollider 	m_capsule;
-	public  EggSort 			m_eggSort = EggSort.NOTHING;
+	public  EggType 			m_eggType = EggType.NOTHING;
 	private GameObject			m_nextPowerUp;
 
 
@@ -24,18 +24,18 @@ public class Egg : MonoBehaviour {
 
 		// load rigidbody
 		Object m_nextPowerUp1;
-		switch (m_eggSort) 
+		switch (m_eggType) 
 		{
-		case EggSort.DIAMOND:
+		case EggType.DIAMOND:
 			m_nextPowerUp1 = Resources.Load("Items/Diamond");
 			break;
-		case EggSort.KIWANO:
+		case EggType.KIWANO:
 			m_nextPowerUp1 = Resources.Load("Items/KiwanoPowerUp");
 			break;
-		case EggSort.RASPBERRY:
+		case EggType.RASPBERRY:
 			m_nextPowerUp1 = Resources.Load("Items/RaspberryPowerUp");
 			break;
-		case EggSort.NOTHING:
+		case EggType.NOTHING:
 			m_nextPowerUp1 = null;
 			break;
 		default:
