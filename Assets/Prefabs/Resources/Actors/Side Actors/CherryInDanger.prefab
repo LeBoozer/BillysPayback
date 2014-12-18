@@ -81,7 +81,7 @@ GameObject:
   - 4: {fileID: 400004}
   m_Layer: 10
   m_Name: CherryInDanger
-  m_TagString: Untagged
+  m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
