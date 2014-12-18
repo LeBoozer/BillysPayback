@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour {
 	public  int			m_lifepoints 		= 1;
 	public 	bool		m_canFly			= false;
 	public  bool		m_canFall			= false;
+	public  bool		m_allowToMove		= true;
 	private bool 		first;
 	private PlayerData			m_playerData;
 	private CharacterController m_controller;
@@ -53,6 +54,8 @@ public class Enemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		if (!m_allowToMove)
+			return;
 		if(first)
 		{
 			first = false;
