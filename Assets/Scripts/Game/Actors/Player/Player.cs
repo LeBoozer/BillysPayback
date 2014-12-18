@@ -27,6 +27,7 @@ public class Player : MonoBehaviour {
 	public  float					m_jumpHeight 			= 5;
 	public  float					m_brakeFactor			= 1;
 	public  float					m_accelerationFactor	= 1;
+	private Vector3 				m_startPosition;
 
 	private PlayerData				m_playerData;
 	private CharacterController 	m_controller;
@@ -54,16 +55,17 @@ public class Player : MonoBehaviour {
 		m_startJumpTime = 0;
 
 		if (Kiwano == null)
-			Kiwano 		= (GameObject) Resources.Load ("Items/KiwanoPowerUp");
+			Kiwano 		= Resources.Load<GameObject> ("Items/Kiwano");
 
 		if (Raspberry == null)
-			Raspberry 	= (GameObject) Resources.Load ("Raspberry");
+			Raspberry 	= Resources.Load<GameObject> ("Items/Raspberry");
 		
 		// Get player data
 		m_playerData = Game.Instance.PlayerData;
 		
 		// Get character controller
 		m_controller = GetComponent<CharacterController> ();
+		m_startPosition = this.transform.position;
 	}
 
 	
@@ -74,6 +76,8 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		if(this.transform.position.y < -50)
+			this.transform.position = m_startPosition;
 		if (m_gameOver)
 			return;
 
@@ -162,7 +166,7 @@ public class Player : MonoBehaviour {
 		}
 		#endregion
 		// set new position
-		m_controller.Move (new Vector3 (m_velocityX, m_velocityY + m_startJumpTime * Physics.gravity.y, 0) * Time.deltaTime);
+		m_controller.Move (new Vector3 (m_velocityX, m_velocityY + m_startJumpTime * Physics.gravity.y, -this.transform.position.z / Time.deltaTime) * Time.deltaTime);
 		m_startJumpTime += Time.deltaTime;
 		
 		// x-coord haven't changed?
@@ -194,7 +198,7 @@ public class Player : MonoBehaviour {
 		// can do anything?
 		if(Kiwano == null || !m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_KIWANO))
 			return;
-	
+		float height = m_controller.height / 2;
 		// have some kiwanos
 		if(m_playerData.getPowerUpStockSize(PlayerData.PowerUpType.PUT_KIWANO) > 0)
 		{
@@ -212,7 +216,6 @@ public class Player : MonoBehaviour {
 				{
 					Transform newKiwano = ((GameObject) Instantiate(Kiwano)).transform;
 					newKiwano.parent = this.transform;
-					newKiwano.localScale = new Vector3(2, 2, 2);
 					newKiwano.LookAt(this.transform);
 					m_kiwanos.Add(newKiwano);
 				}
@@ -229,12 +232,12 @@ public class Player : MonoBehaviour {
 				cos = Mathf.Cos(2 * Mathf.PI / m_kiwanos.Count);
 				sin = Mathf.Sin(2 * Mathf.PI / m_kiwanos.Count);
 
-				newPos = new Vector3(m_kiwanoDistance * m_controller.radius, 0, 0);
+				newPos = new Vector3(m_kiwanoDistance * m_controller.radius, height, 0);
 				foreach(Transform kiwa in m_kiwanos)
 				{
 					kiwa.position = newPos + this.transform.position;
 					newPos = new Vector3(cos * newPos.x - sin * newPos.z,
-					                     0, 
+					                     height, 
 					                     sin * newPos.x + cos * newPos.z);
 				}
 			}
@@ -247,7 +250,7 @@ public class Player : MonoBehaviour {
 			{
 				newPos = kiwa.position - this.transform.position;
 				newPos = new Vector3( cos * newPos.x - sin * newPos.z,
-			                       	  0, 
+				                     height, 
 				                      sin * newPos.x + cos * newPos.z);
 				kiwa.position = newPos + this.transform.position;
 			}
@@ -271,8 +274,8 @@ public class Player : MonoBehaviour {
 		if(Raspberry == null || !m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_RASPBERRY))
 			return;
 
-		bool shoot = Input.GetButtonDown	(KeyMapping.KEY_ACTION_SHOOT);
-		shoot &= m_playerData.getPowerUpStockSize (PlayerData.PowerUpType.PUT_RASPBERRY) > 0;
+		bool shoot = Input.GetButtonDown			(KeyMapping.KEY_ACTION_SHOOT);
+		shoot &= m_playerData.getPowerUpStockSize 	(PlayerData.PowerUpType.PUT_RASPBERRY) > 0;
 
 		// like and can shooting?
 		if (!shoot)
@@ -284,10 +287,10 @@ public class Player : MonoBehaviour {
 		// add force to projectile
 		Rigidbody rb = pro.GetComponent<Rigidbody> ();
 		rb.useGravity = false;
+		Vector3 force = new Vector3 (50 * GameConfig.BILLY_MAX_SPEED, 0, 0);
 		if(m_velocityX != 0)
-			rb.AddForce (m_velocityX / Mathf.Abs (m_velocityX) * new Vector3 (100, 0, 0));
-		else 
-			rb.AddForce (new Vector3 (100, 0, 0));
+			force *= m_velocityX / Mathf.Abs (m_velocityX);
+		rb.AddForce (force);
 
 		// decrease the raspberry power up
 		m_playerData.decreaseStockSizeByValue (PlayerData.PowerUpType.PUT_RASPBERRY, 1);
@@ -339,16 +342,25 @@ public class Player : MonoBehaviour {
 	 */
 	public void OnControllerColliderHit(ControllerColliderHit _hit)
 	{
+		//Debug.Log (_hit.collider.tag);
 		// get controller
 		CharacterController controller = _hit.controller;
 		
 		// collision by the tag of the hit
-		string tag = _hit.collider.transform.tag;
+		GameObject g = _hit.gameObject;
+		string tag = g.tag;
+		while (tag.Equals (Tags.TAG_UNTAGGED) && g.transform.parent != null)
+		{
+			tag = g.transform.parent.tag;
+			g = g.transform.parent.gameObject;
+		}
+
 		//  Diamonds
 		if(tag.Equals(Tags.TAG_DIAMOND))
 		{
+			Debug.Log("collision");
 			m_playerData.increaseStockSizeByValue(PlayerData.PowerUpType.PUT_COUNT, 1);
-			Destroy(_hit.gameObject);
+			Destroy(_hit.transform.parent.gameObject);
 			return;
 		}
 
@@ -357,17 +369,19 @@ public class Player : MonoBehaviour {
 		{
 			if(m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_KIWANO))
 				m_playerData.increaseStockSizeByValue(PlayerData.PowerUpType.PUT_KIWANO, 1);
-			Destroy(_hit.gameObject);
+			Destroy(_hit.transform.parent.gameObject);
 			return;
 		}
+
 		// raspberry
 		if(tag.Equals(Tags.TAG_RASPBERRY_POWER_UP))
 		{
 			if(m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_RASPBERRY))
 				m_playerData.increaseStockSizeByValue(PlayerData.PowerUpType.PUT_RASPBERRY, 1);
-			Destroy(_hit.gameObject);
+			Destroy(_hit.transform.parent.gameObject);
 			return;
 		}
+
 		// projectile
 		if(tag.Equals(Tags.TAG_PROJECTILE_ENEMY))
 		{
@@ -375,8 +389,11 @@ public class Player : MonoBehaviour {
 				Destroy(_hit.gameObject);
 			return;
 		}
-		// with other objects
-		_hit.gameObject.SendMessage ("PlayerCollision", this.transform, SendMessageOptions.DontRequireReceiver); 
+
+		// with other non-untagged objects
+		if(!tag.Equals(Tags.TAG_UNTAGGED))
+			g.SendMessage ("PlayerCollision", this.gameObject, SendMessageOptions.DontRequireReceiver); 
+
 			
 	}
 

@@ -10,7 +10,7 @@ public class Egg : MonoBehaviour {
 		DIAMOND,
 		NOTHING
 	}
-	private CapsuleCollider 	m_capsule;
+	private MeshCollider 		m_collider;
 	public  EggType 			m_eggType = EggType.NOTHING;
 	private GameObject			m_nextPowerUp;
 
@@ -20,7 +20,7 @@ public class Egg : MonoBehaviour {
 	void Start () 
 	{
 		// get needed components
-		m_capsule 		= GetComponent<CapsuleCollider> ();
+		m_collider 			= GetComponent<MeshCollider> ();
 
 		// load rigidbody
 		Object m_nextPowerUp1;
@@ -42,11 +42,12 @@ public class Egg : MonoBehaviour {
 			m_nextPowerUp1 = null;
 			break;
 		}
-
-		if ( m_nextPowerUp1 == null)
+		/*/ Debug
+		if ( m_nextPowerUp1 == null && m_eggType != EggType.NOTHING)
 			Debug.Log("Ladefehler");
-		else 
+		else if(m_eggType != EggType.NOTHING)
 			Debug.Log(m_nextPowerUp1);
+		*/
 		m_nextPowerUp = m_nextPowerUp1 as GameObject;
 	}
 	
@@ -64,14 +65,15 @@ public class Egg : MonoBehaviour {
 	public void PlayerCollision (Object _obj)
 	{
 		// Transform from player
-		Transform player = _obj as Transform;
+		GameObject player = _obj as GameObject;
+		CharacterController character = player.GetComponent<CharacterController> ();
 		
 		// useless message?
 		if (player == null)
 			return;
 		
 		// player under the box?
-		if(player.position.y < this.transform.position.y - m_capsule.height / 2)
+		if(player.transform.position.y + character.height < this.transform.position.y)
 		{
 			if(m_nextPowerUp != null)
 				Instantiate(m_nextPowerUp, this.transform.position, this.transform.rotation);
