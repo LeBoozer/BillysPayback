@@ -12150,6 +12150,7 @@ GameObject:
   - 223: {fileID: 306461364}
   - 114: {fileID: 306461363}
   - 114: {fileID: 306461362}
+  - 114: {fileID: 306461365}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -12232,6 +12233,26 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &306461365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 306461360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721a16f830eb52944a57d13e635c7254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_lifesCount: {fileID: 1636234373}
+  m_diamondCount: {fileID: 1494259992}
+  m_kiwanoCount: {fileID: 346957844}
+  m_raspberryCount: {fileID: 1437257708}
+  hearts:
+  - {fileID: 1049688940}
+  - {fileID: 406192932}
+  - {fileID: 755065550}
+  - {fileID: 801956549}
 --- !u!1001 &308967496
 Prefab:
   m_ObjectHideFlags: 0
@@ -13548,7 +13569,7 @@ GameObject:
   - 222: {fileID: 346957845}
   - 114: {fileID: 346957844}
   m_Layer: 5
-  m_Name: ComixLoudIconText
+  m_Name: IconTextKiwanoCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26973,6 +26994,10 @@ Prefab:
       propertyPath: m_Name
       value: Heart1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 03f78aaca8e20d24881ecf095bdc726b, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 03f78aaca8e20d24881ecf095bdc726b, type: 2}
   m_RootGameObject: {fileID: 1049688938}
@@ -36857,6 +36882,10 @@ Prefab:
       propertyPath: m_Text
       value: 0 x
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ec90229ad6099b49bb4d947a3e1090c, type: 2}
+      propertyPath: m_Name
+      value: IconTextDiamondCount
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ec90229ad6099b49bb4d947a3e1090c, type: 2}
   m_RootGameObject: {fileID: 61864947}
@@ -40237,6 +40266,10 @@ Prefab:
       propertyPath: m_Text
       value: 0 x
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ec90229ad6099b49bb4d947a3e1090c, type: 2}
+      propertyPath: m_Name
+      value: IconTextRaspberryCount
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ec90229ad6099b49bb4d947a3e1090c, type: 2}
   m_RootGameObject: {fileID: 1952411290}
@@ -41847,6 +41880,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 8ec90229ad6099b49bb4d947a3e1090c, type: 2}
       propertyPath: m_Text
       value: 0 x
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8ec90229ad6099b49bb4d947a3e1090c, type: 2}
+      propertyPath: m_Name
+      value: IconTextKiwanoCount
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ec90229ad6099b49bb4d947a3e1090c, type: 2}
@@ -55696,7 +55733,7 @@ GameObject:
   - 222: {fileID: 1437257709}
   - 114: {fileID: 1437257708}
   m_Layer: 5
-  m_Name: ComixLoudIconText
+  m_Name: IconTextRaspberryCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57913,7 +57950,7 @@ GameObject:
   - 222: {fileID: 1494259993}
   - 114: {fileID: 1494259992}
   m_Layer: 5
-  m_Name: ComixLoudIconText
+  m_Name: IconTextDiamondCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62986,7 +63023,7 @@ GameObject:
   - 222: {fileID: 1636234374}
   - 114: {fileID: 1636234373}
   m_Layer: 5
-  m_Name: ComixLoudIconText
+  m_Name: IconTextLiveCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63036,7 +63073,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x 5
+  m_Text: x 0
 --- !u!222 &1636234374
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -64107,7 +64144,11 @@ Prefab:
         type: 3}
     - target: {fileID: 11400000, guid: 89e3d0491c87ae049acd0752219a7cc3, type: 2}
       propertyPath: m_Text
-      value: x 5
+      value: x 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 89e3d0491c87ae049acd0752219a7cc3, type: 2}
+      propertyPath: m_Name
+      value: IconTextLiveCount
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 89e3d0491c87ae049acd0752219a7cc3, type: 2}
