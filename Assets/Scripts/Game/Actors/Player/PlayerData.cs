@@ -87,6 +87,27 @@ public class PlayerData : MonoBehaviour
 	}	
 #endregion
 
+#region (Life-Number)
+	//Number of lifes of Billy
+	public int m_LifeNumber = GameConfig.BILLY_LIFE_NUMBER;
+
+	// OnChange-Event for: life-number
+	public event Delegate_OnAttributeChanged OnChangeLifeNumber = delegate {};
+
+	// Used to access the life-number
+	public int LifeNumber {
+		get { return m_LifeNumber;}
+		set {
+			m_LifeNumber = value;
+
+			if (m_LifeNumber < 0)
+				m_LifeNumber = 0;
+
+			OnChangeLifeNumber(m_LifeNumber);
+		}
+	}
+#endregion
+
 #region (Diamonds)
 	// Number of collected diamonds
 	public int m_collectedDiamonds	= 0;
