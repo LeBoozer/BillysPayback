@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Project:	Billy's Payback
  * File:	Tags.cs
  * Authors:	Byron Worms
@@ -31,4 +31,6 @@ public abstract class Tags
 	public static readonly string TAG_PROJECTILE_PLAYER		= "ProjectilePlayer";
 	public static readonly string TAG_PROJECTILE_ENEMY		= "ProjectileEnemy";
 	public static readonly string TAG_TRIGGER 				= "Trigger";
+	public static readonly string TAG_EGG 					= "Egg";
+	public static readonly string Tag_DESTROYABLE_BOX		= "DestroyableBox";
 }

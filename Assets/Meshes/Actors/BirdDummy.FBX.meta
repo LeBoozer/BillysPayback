@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dd011504466f4f74f803d384b399e447
+guid: 853039dafd6fb244aaa2e2dceb3775b4
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -37,14 +37,14 @@ ModelImporter:
     3300010: Cylinder002
     3300012: Sphere001
     3300014: Sphere002
-    4300000: Sphere001
-    4300002: Sphere002
-    4300004: Cone001
+    4300000: Sphere002
+    4300002: Sphere001
+    4300004: Cylinder002
     4300006: Cylinder001
-    4300008: Cylinder002
-    4300010: Box001
+    4300008: Cone001
+    4300010: Box003
     4300012: Box002
-    4300014: Box003
+    4300014: Box001
     9500000: //RootNode
   materials:
     importMaterials: 0
