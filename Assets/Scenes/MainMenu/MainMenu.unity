@@ -103,9 +103,7 @@ RectTransform:
   m_Children:
   - {fileID: 961077147}
   - {fileID: 949616899}
-  - {fileID: 1753988606}
-  - {fileID: 1225291685}
-  - {fileID: 799525622}
+  - {fileID: 2073446017}
   m_Father: {fileID: 856311931}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
@@ -351,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1753988605}
   m_sendNavigationEvents: 1
   m_DragThreshold: 5
 --- !u!4 &611524294
@@ -425,8 +423,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 513126657}
-  m_Father: {fileID: 107614919}
-  m_RootOrder: 4
+  m_Father: {fileID: 2073446017}
+  m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: -50}
@@ -471,7 +469,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 799525624}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2073446018}
+        m_MethodName: CloseButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &799525624
@@ -692,9 +702,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 107614919}
   m_RootOrder: 1
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -448, y: -141}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 79, y: 75.5}
   m_SizeDelta: {x: 127, y: 124}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &949616900
@@ -729,8 +739,12 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 107614919}
+    m_TransformParent: {fileID: 2073446017}
     m_Modifications:
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -761,7 +775,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -811,6 +825,30 @@ Prefab:
       propertyPath: m_Text
       value: Optionen
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2073446018}
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OptionsButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7750813232af2c3429f8a42754765214, type: 2}
   m_RootGameObject: {fileID: 1225291684}
@@ -845,9 +883,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 107614919}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 432, y: 128}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -93, y: -85}
   m_SizeDelta: {x: 153, y: 141}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &961077148
@@ -907,8 +945,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1309047881}
-  m_Father: {fileID: 107614919}
-  m_RootOrder: 3
+  m_Father: {fileID: 2073446017}
+  m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 8}
@@ -953,7 +991,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1225291687}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2073446018}
+        m_MethodName: OptionsButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1225291687
@@ -1087,8 +1137,12 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 107614919}
+    m_TransformParent: {fileID: 2073446017}
     m_Modifications:
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1119,7 +1173,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -1169,6 +1223,30 @@ Prefab:
       propertyPath: m_Text
       value: Beenden
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2073446018}
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7750813232af2c3429f8a42754765214, type: 2}
   m_RootGameObject: {fileID: 799525621}
@@ -1185,6 +1263,7 @@ GameObject:
   - 222: {fileID: 1753988609}
   - 114: {fileID: 1753988608}
   - 114: {fileID: 1753988607}
+  - 114: {fileID: 1753988610}
   m_Layer: 0
   m_Name: StartButton
   m_TagString: Untagged
@@ -1204,8 +1283,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 914472771}
-  m_Father: {fileID: 107614919}
-  m_RootOrder: 2
+  m_Father: {fileID: 2073446017}
+  m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 65}
@@ -1250,7 +1329,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1753988608}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1753988610}
+        m_MethodName: StartButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1753988608
@@ -1282,13 +1373,75 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 2111413084}
   m_GameObject: {fileID: 1753988605}
+--- !u!114 &1753988610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1753988605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89eb1a75eee59de4caefa8d51835dac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2073446016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 2073446017}
+  - 114: {fileID: 2073446018}
+  m_Layer: 0
+  m_Name: Buttons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2073446017
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2073446016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1753988606}
+  - {fileID: 1225291685}
+  - {fileID: 799525622}
+  m_Father: {fileID: 107614919}
+  m_RootOrder: 2
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: .000181674957, y: 0}
+  m_SizeDelta: {x: 246, y: 263}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &2073446018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2073446016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a1edabf97d9b3e4caf031a099e858eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2111413084
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 107614919}
+    m_TransformParent: {fileID: 2073446017}
     m_Modifications:
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1319,7 +1472,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -1364,6 +1517,30 @@ Prefab:
     - target: {fileID: 100002, guid: 7750813232af2c3429f8a42754765214, type: 2}
       propertyPath: m_Name
       value: StartButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1753988610}
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7750813232af2c3429f8a42754765214, type: 2}
