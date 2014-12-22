@@ -13,6 +13,9 @@ using System.Collections.Generic;
  */
 public class AdvancedDialogue
 {
+    // Constant values
+    public static readonly string DIALOGUE_CANCELLED_EXIT_VALUE = "";
+
     // List with all conversations
     private Dictionary<int, Conversation> m_conversationList = new Dictionary<int,Conversation>();
 
@@ -36,6 +39,22 @@ public class AdvancedDialogue
 
         // Validate
         validate();
+    }
+
+    // Returns a conversation by its ID (can be null!)
+    public Conversation getConversationByID(int _id)
+    {
+        if (m_conversationList.ContainsKey(_id) == false)
+            return null;
+        return m_conversationList[_id];
+    }
+
+    // Returns a list with all keys of the conversations
+    public List<int> getConversationIDs()
+    {
+        // Local variables
+        List<int> keys = new List<int>(m_conversationList.Keys);
+        return keys;
     }
 
     // Validates the parsed dialogue
