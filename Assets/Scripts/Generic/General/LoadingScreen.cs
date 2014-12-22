@@ -24,6 +24,9 @@ public class LoadingScreen : MonoBehaviour
 	// The target game-state-controller
 	private GameStateController m_targetConroller = null;
 
+    // The default loading screen background
+    private Texture             m_defaultLoadingScreenBackground = null;
+
 	// (Re)-initializes the loading screen
 	public void reinitialize(GameState _targetState)
 	{
@@ -33,6 +36,13 @@ public class LoadingScreen : MonoBehaviour
 		// Copy
 		m_targetGameState = _targetState;
 		m_targetConroller = _targetState.getController();
+
+        // Load default loading screen background?
+        if(m_defaultLoadingScreenBackground == null && m_targetConroller.isCustomScreen() == false)
+        {
+            m_defaultLoadingScreenBackground = Resources.Load("Misc/loadingscreen") as Texture;
+            Debug.LogWarning("hannes: " + m_defaultLoadingScreenBackground);
+        }
 	}
 	
 	// Will be called as soon as the loading progress has been finished
@@ -52,7 +62,7 @@ public class LoadingScreen : MonoBehaviour
 
 	// Will be called as soon as the Gui is about to be drawn
 	void OnGUI ()
-	{	
+	{
 		// Loading?
 		if(m_isLoading == true || m_isWaitingForConroller == true)
 		{
@@ -65,8 +75,7 @@ public class LoadingScreen : MonoBehaviour
 			}
 			else
 			{
-				// Todo
-				//GUI.DrawTexture (new Rect(0,0,Screen.width,Screen.height), loadingTexture, ScaleMode.StretchToFill);
+				// TODO
 			}
 		}
 	}
@@ -76,7 +85,7 @@ public class LoadingScreen : MonoBehaviour
 	{
 		// Local variables
 		bool loading = Application.isLoadingLevel;
-	
+
 		// Skip unwanted combinations
 		if(m_isLoading == loading)
 			return;

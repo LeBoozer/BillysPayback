@@ -10,11 +10,14 @@ public class MainMenuButtonScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
 	}
 
-	public void StartButtonClicked() {
+	public void StartButtonClicked()
+    {
 		Debug.Log ("Startbutton was clicked!");
+
+        // Switch to game
+        Game.Instance.GSM.setGameState<GameGameState>();
 	}
 
 	public void OptionsButtonClicked() {
