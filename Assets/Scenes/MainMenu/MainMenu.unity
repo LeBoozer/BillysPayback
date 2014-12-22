@@ -1263,7 +1263,6 @@ GameObject:
   - 222: {fileID: 1753988609}
   - 114: {fileID: 1753988608}
   - 114: {fileID: 1753988607}
-  - 114: {fileID: 1753988610}
   m_Layer: 0
   m_Name: StartButton
   m_TagString: Untagged
@@ -1330,7 +1329,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1753988610}
+      - m_Target: {fileID: 2073446018}
         m_MethodName: StartButtonClicked
         m_Mode: 1
         m_Arguments:
@@ -1373,17 +1372,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 2111413084}
   m_GameObject: {fileID: 1753988605}
---- !u!114 &1753988610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1753988605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89eb1a75eee59de4caefa8d51835dac2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2073446016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1533,7 +1521,7 @@ Prefab:
     - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1753988610}
+      objectReference: {fileID: 2073446018}
     - target: {fileID: 11400002, guid: 7750813232af2c3429f8a42754765214, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartButtonClicked

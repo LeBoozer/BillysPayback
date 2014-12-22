@@ -24,6 +24,6 @@ public class MainMenuButtonScript : MonoBehaviour {
 	public void CloseButtonClicked() {
 		Debug.Log ("Closebutton was clicked!");
 
-		//Application.Quit ();
+		Application.Quit ();
 	}
 }
