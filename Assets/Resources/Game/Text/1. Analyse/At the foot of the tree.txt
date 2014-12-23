@@ -1,0 +1,15 @@
+<bw>
+	<conversation id="0" start="0">
+		<text id="0">
+			<part t="3" character="Antonio">Tutorial erwünscht?</part>
+
+			<choice id="0" nextText="1">Ja</choice>
+			<choice id="1" exit="no">Nein</choice>
+		</text>
+
+		<text id="1">
+			<part t="2">Text here</part>
+			<part t="1">Text here</part>
+		</text>
+	</conversation>
+</bw>
