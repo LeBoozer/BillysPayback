@@ -1776,7 +1776,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 49822506}
   - 114: {fileID: 49822507}
-  - 136: {fileID: 49822508}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -1810,20 +1809,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
---- !u!136 &49822508
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1941486600}
-  m_GameObject: {fileID: 49822505}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!1 &49912519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,7 +1956,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1866033775}
   m_GameObject: {fileID: 52569934}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -2256,6 +2241,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 56221955}
+  - 114: {fileID: 56221956}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -2276,6 +2262,18 @@ Transform:
   - {fileID: 1774576004}
   m_Father: {fileID: 1819322024}
   m_RootOrder: 2
+--- !u!114 &56221956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1596662931}
+  m_GameObject: {fileID: 56221954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &57227600
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,7 +2508,7 @@ MeshCollider:
   m_GameObject: {fileID: 58306822}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -4289,7 +4287,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 2122912256}
   m_GameObject: {fileID: 111255218}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -4640,6 +4638,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 117396712}
+  - 114: {fileID: 117396713}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -4660,6 +4659,18 @@ Transform:
   - {fileID: 1516713275}
   m_Father: {fileID: 366300793}
   m_RootOrder: 3
+--- !u!114 &117396713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2096019267}
+  m_GameObject: {fileID: 117396711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &117590093
 GameObject:
   m_ObjectHideFlags: 0
@@ -5128,7 +5139,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 135296042}
   - 114: {fileID: 135296044}
-  - 136: {fileID: 135296043}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -5149,20 +5159,6 @@ Transform:
   - {fileID: 1930235007}
   m_Father: {fileID: 1648281395}
   m_RootOrder: 3
---- !u!136 &135296043
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 673996469}
-  m_GameObject: {fileID: 135296041}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!114 &135296044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5215,7 +5211,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1228201957}
   m_GameObject: {fileID: 136625014}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -7634,7 +7630,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1572618339}
   m_GameObject: {fileID: 190103345}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -8545,6 +8541,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 215353717}
+  - 114: {fileID: 215353718}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -8565,6 +8562,18 @@ Transform:
   - {fileID: 363284283}
   m_Father: {fileID: 1296764462}
   m_RootOrder: 5
+--- !u!114 &215353718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 524511571}
+  m_GameObject: {fileID: 215353716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &216105128
 GameObject:
   m_ObjectHideFlags: 0
@@ -8664,7 +8673,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 216517395}
   - 114: {fileID: 216517397}
-  - 136: {fileID: 216517396}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -8685,20 +8693,6 @@ Transform:
   - {fileID: 379843792}
   m_Father: {fileID: 2005605045}
   m_RootOrder: 0
---- !u!136 &216517396
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1006383461}
-  m_GameObject: {fileID: 216517394}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!114 &216517397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8749,6 +8743,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 218572736}
+  - 114: {fileID: 218572737}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -8769,6 +8764,18 @@ Transform:
   - {fileID: 508592937}
   m_Father: {fileID: 366300793}
   m_RootOrder: 1
+--- !u!114 &218572737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 41338502}
+  m_GameObject: {fileID: 218572735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &218745227
 GameObject:
   m_ObjectHideFlags: 0
@@ -10099,7 +10106,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 252008448}
   - 114: {fileID: 252008449}
-  - 136: {fileID: 252008450}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -10133,20 +10139,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
---- !u!136 &252008450
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 677495526}
-  m_GameObject: {fileID: 252008447}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!1 &253183385
 GameObject:
   m_ObjectHideFlags: 0
@@ -12526,6 +12518,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 316096797}
+  - 114: {fileID: 316096798}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -12546,6 +12539,18 @@ Transform:
   - {fileID: 1991413861}
   m_Father: {fileID: 639863144}
   m_RootOrder: 2
+--- !u!114 &316096798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 875700951}
+  m_GameObject: {fileID: 316096796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &316516484
 Prefab:
   m_ObjectHideFlags: 0
@@ -13075,6 +13080,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 332454961}
+  - 114: {fileID: 332454962}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -13095,6 +13101,18 @@ Transform:
   - {fileID: 1848010163}
   m_Father: {fileID: 366300793}
   m_RootOrder: 4
+--- !u!114 &332454962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1159367242}
+  m_GameObject: {fileID: 332454960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &336270705
 GameObject:
   m_ObjectHideFlags: 0
@@ -14049,7 +14067,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 524511571}
   m_GameObject: {fileID: 363284282}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -14139,7 +14157,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1653438808}
   m_GameObject: {fileID: 364312427}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -14865,7 +14883,7 @@ MeshCollider:
   m_GameObject: {fileID: 379843791}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -16873,6 +16891,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 442866984}
+  - 114: {fileID: 442866985}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -16893,6 +16912,18 @@ Transform:
   - {fileID: 190103346}
   m_Father: {fileID: 1218364080}
   m_RootOrder: 0
+--- !u!114 &442866985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1572618339}
+  m_GameObject: {fileID: 442866983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &443272536
 Prefab:
   m_ObjectHideFlags: 0
@@ -17587,6 +17618,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 470406489}
+  - 114: {fileID: 470406490}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -17607,6 +17639,18 @@ Transform:
   - {fileID: 111255219}
   m_Father: {fileID: 1218364080}
   m_RootOrder: 3
+--- !u!114 &470406490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2122912256}
+  m_GameObject: {fileID: 470406488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &476419146
 GameObject:
   m_ObjectHideFlags: 0
@@ -17692,7 +17736,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1613607026}
   m_GameObject: {fileID: 476851589}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -18241,6 +18285,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 494982943}
+  - 114: {fileID: 494982944}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -18261,6 +18306,18 @@ Transform:
   - {fileID: 1549218683}
   m_Father: {fileID: 366300793}
   m_RootOrder: 15
+--- !u!114 &494982944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1086469992}
+  m_GameObject: {fileID: 494982942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &495613863
 GameObject:
   m_ObjectHideFlags: 0
@@ -18745,6 +18802,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 507621286}
+  - 114: {fileID: 507621287}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -18765,6 +18823,18 @@ Transform:
   - {fileID: 52569935}
   m_Father: {fileID: 639863144}
   m_RootOrder: 0
+--- !u!114 &507621287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1866033775}
+  m_GameObject: {fileID: 507621285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &508286017
 GameObject:
   m_ObjectHideFlags: 0
@@ -18880,7 +18950,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 41338502}
   m_GameObject: {fileID: 508592936}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -19644,7 +19714,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 2018121042}
   m_GameObject: {fileID: 526384195}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -19733,7 +19803,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 528090930}
   - 114: {fileID: 528090932}
-  - 136: {fileID: 528090931}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -19754,20 +19823,6 @@ Transform:
   - {fileID: 1250324829}
   m_Father: {fileID: 2005605045}
   m_RootOrder: 5
---- !u!136 &528090931
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1229963219}
-  m_GameObject: {fileID: 528090929}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!114 &528090932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20656,7 +20711,7 @@ MeshCollider:
   m_GameObject: {fileID: 545524613}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -20745,7 +20800,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 2026330490}
   m_GameObject: {fileID: 546199610}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -21077,6 +21132,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 552407626}
+  - 114: {fileID: 552407627}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -21097,6 +21153,18 @@ Transform:
   - {fileID: 1838967752}
   m_Father: {fileID: 1819322024}
   m_RootOrder: 0
+--- !u!114 &552407627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 290435582}
+  m_GameObject: {fileID: 552407625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &552501463
 GameObject:
   m_ObjectHideFlags: 0
@@ -22201,7 +22269,7 @@ MeshCollider:
   m_GameObject: {fileID: 577874937}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -22523,7 +22591,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 160162204}
   m_GameObject: {fileID: 583620078}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -22887,7 +22955,7 @@ MeshCollider:
   m_GameObject: {fileID: 589907972}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -23270,7 +23338,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1384550336}
   m_GameObject: {fileID: 600250773}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -23828,6 +23896,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 613638882}
+  - 114: {fileID: 613638883}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -23848,6 +23917,18 @@ Transform:
   - {fileID: 917951185}
   m_Father: {fileID: 639863144}
   m_RootOrder: 1
+--- !u!114 &613638883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 484770979}
+  m_GameObject: {fileID: 613638881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &614127669
 GameObject:
   m_ObjectHideFlags: 0
@@ -24016,7 +24097,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 58169813}
   m_GameObject: {fileID: 615667590}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -24294,7 +24375,7 @@ MeshCollider:
   m_GameObject: {fileID: 618699046}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -25013,6 +25094,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 640368605}
+  - 114: {fileID: 640368606}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -25033,6 +25115,18 @@ Transform:
   - {fileID: 1888118958}
   m_Father: {fileID: 2003047160}
   m_RootOrder: 2
+--- !u!114 &640368606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 401161427}
+  m_GameObject: {fileID: 640368604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &640907381
 GameObject:
   m_ObjectHideFlags: 0
@@ -26153,7 +26247,7 @@ MonoBehaviour:
   m_object: {fileID: 0}
   m_distance: 12
   m_YDistance: 3.5
-  m_damping: .00999999978
+  m_damping: .0109999999
   m_threshold: .00749999983
   m_lookAt: 1
 --- !u!1 &664602839
@@ -26330,7 +26424,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 665952093}
   - 114: {fileID: 665952094}
-  - 136: {fileID: 665952095}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -26364,20 +26457,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
---- !u!136 &665952095
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 2054976516}
-  m_GameObject: {fileID: 665952092}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!1001 &667050536
 Prefab:
   m_ObjectHideFlags: 0
@@ -26733,6 +26812,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 673810220}
+  - 114: {fileID: 673810221}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -26753,6 +26833,18 @@ Transform:
   - {fileID: 1878320454}
   m_Father: {fileID: 366300793}
   m_RootOrder: 16
+--- !u!114 &673810221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 684964080}
+  m_GameObject: {fileID: 673810219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &673996469
 Prefab:
   m_ObjectHideFlags: 0
@@ -29459,6 +29551,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 751651185}
+  - 114: {fileID: 751651186}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -29479,6 +29572,18 @@ Transform:
   - {fileID: 847900745}
   m_Father: {fileID: 366300793}
   m_RootOrder: 10
+--- !u!114 &751651186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1612331684}
+  m_GameObject: {fileID: 751651184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &752470506
 Prefab:
   m_ObjectHideFlags: 0
@@ -30259,6 +30364,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 777768396}
+  - 114: {fileID: 777768397}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -30279,6 +30385,18 @@ Transform:
   - {fileID: 858336109}
   m_Father: {fileID: 2003047160}
   m_RootOrder: 3
+--- !u!114 &777768397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1876370448}
+  m_GameObject: {fileID: 777768395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &779351986
 GameObject:
   m_ObjectHideFlags: 0
@@ -32355,7 +32473,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1767163974}
   m_GameObject: {fileID: 846863247}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -32445,7 +32563,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1612331684}
   m_GameObject: {fileID: 847900744}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -32862,7 +32980,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1876370448}
   m_GameObject: {fileID: 858336108}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -32979,6 +33097,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 861469869}
+  - 114: {fileID: 861469870}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -32999,6 +33118,18 @@ Transform:
   - {fileID: 476851590}
   m_Father: {fileID: 1819322024}
   m_RootOrder: 3
+--- !u!114 &861469870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1613607026}
+  m_GameObject: {fileID: 861469868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &862028095
 GameObject:
   m_ObjectHideFlags: 0
@@ -34142,7 +34273,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 645244942}
   m_GameObject: {fileID: 895584392}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -34273,6 +34404,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 904121917}
+  - 114: {fileID: 904121918}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -34293,6 +34425,18 @@ Transform:
   - {fileID: 895584393}
   m_Father: {fileID: 1218364080}
   m_RootOrder: 2
+--- !u!114 &904121918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 645244942}
+  m_GameObject: {fileID: 904121916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &906019398
 GameObject:
   m_ObjectHideFlags: 0
@@ -34432,6 +34576,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 907619132}
+  - 114: {fileID: 907619133}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -34452,6 +34597,18 @@ Transform:
   - {fileID: 1225353167}
   m_Father: {fileID: 639863144}
   m_RootOrder: 3
+--- !u!114 &907619133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 218906481}
+  m_GameObject: {fileID: 907619131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &907800804
 GameObject:
   m_ObjectHideFlags: 0
@@ -34973,7 +35130,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 484770979}
   m_GameObject: {fileID: 917951184}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -35517,6 +35674,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 930542320}
+  - 114: {fileID: 930542321}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -35537,6 +35695,18 @@ Transform:
   - {fileID: 600250774}
   m_Father: {fileID: 366300793}
   m_RootOrder: 14
+--- !u!114 &930542321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1384550336}
+  m_GameObject: {fileID: 930542319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &931010008
 GameObject:
   m_ObjectHideFlags: 0
@@ -35842,7 +36012,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1834153790}
   m_GameObject: {fileID: 940030745}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -36078,6 +36248,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 946078113}
+  - 114: {fileID: 946078114}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -36098,6 +36269,18 @@ Transform:
   - {fileID: 940030746}
   m_Father: {fileID: 366300793}
   m_RootOrder: 2
+--- !u!114 &946078114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1834153790}
+  m_GameObject: {fileID: 946078112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &946349071
 GameObject:
   m_ObjectHideFlags: 0
@@ -36237,6 +36420,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 950270875}
+  - 114: {fileID: 950270876}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -36257,6 +36441,18 @@ Transform:
   - {fileID: 846863248}
   m_Father: {fileID: 366300793}
   m_RootOrder: 9
+--- !u!114 &950270876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1767163974}
+  m_GameObject: {fileID: 950270874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &953882954
 Prefab:
   m_ObjectHideFlags: 0
@@ -40974,6 +41170,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1077063929}
+  - 114: {fileID: 1077063930}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -40994,6 +41191,18 @@ Transform:
   - {fileID: 1722356349}
   m_Father: {fileID: 366300793}
   m_RootOrder: 0
+--- !u!114 &1077063930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1840719973}
+  m_GameObject: {fileID: 1077063928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1077626765
 GameObject:
   m_ObjectHideFlags: 0
@@ -41167,6 +41376,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1079393002}
+  - 114: {fileID: 1079393003}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -41187,6 +41397,18 @@ Transform:
   - {fileID: 1387789943}
   m_Father: {fileID: 366300793}
   m_RootOrder: 11
+--- !u!114 &1079393003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 100949291}
+  m_GameObject: {fileID: 1079393001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1079822137
 Prefab:
   m_ObjectHideFlags: 0
@@ -41733,7 +41955,7 @@ MeshCollider:
   m_GameObject: {fileID: 1093701749}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -41980,7 +42202,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1097053207}
   - 114: {fileID: 1097053209}
-  - 136: {fileID: 1097053208}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -42001,20 +42222,6 @@ Transform:
   - {fileID: 589907973}
   m_Father: {fileID: 2005605045}
   m_RootOrder: 4
---- !u!136 &1097053208
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 913998231}
-  m_GameObject: {fileID: 1097053206}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!114 &1097053209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42409,7 +42616,7 @@ MeshCollider:
   m_GameObject: {fileID: 1109690495}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -43353,6 +43560,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1138926838}
+  - 114: {fileID: 1138926839}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -43373,6 +43581,18 @@ Transform:
   - {fileID: 546199611}
   m_Father: {fileID: 2003047160}
   m_RootOrder: 1
+--- !u!114 &1138926839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2026330490}
+  m_GameObject: {fileID: 1138926837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1139954497
 GameObject:
   m_ObjectHideFlags: 0
@@ -44405,7 +44625,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1853337880}
   m_GameObject: {fileID: 1175182311}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -46712,7 +46932,7 @@ MeshCollider:
   m_GameObject: {fileID: 1223885097}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -46801,7 +47021,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 218906481}
   m_GameObject: {fileID: 1225353166}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -48140,7 +48360,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 420975324}
   m_GameObject: {fileID: 1248282115}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -48214,7 +48434,7 @@ MeshCollider:
   m_GameObject: {fileID: 1250324828}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -49276,7 +49496,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1281825834}
   - 114: {fileID: 1281825835}
-  - 136: {fileID: 1281825836}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -49310,20 +49529,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
---- !u!136 &1281825836
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1163750140}
-  m_GameObject: {fileID: 1281825833}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!1 &1284753484
 GameObject:
   m_ObjectHideFlags: 0
@@ -49363,7 +49568,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1202669114}
   m_GameObject: {fileID: 1284753484}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -52386,7 +52591,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1362530408}
   - 114: {fileID: 1362530409}
-  - 136: {fileID: 1362530410}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -52420,20 +52624,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
---- !u!136 &1362530410
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1415113533}
-  m_GameObject: {fileID: 1362530407}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!1 &1362782806
 GameObject:
   m_ObjectHideFlags: 0
@@ -52920,6 +53110,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1381035804}
+  - 114: {fileID: 1381035805}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -52940,6 +53131,18 @@ Transform:
   - {fileID: 583620079}
   m_Father: {fileID: 2003047160}
   m_RootOrder: 0
+--- !u!114 &1381035805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 160162204}
+  m_GameObject: {fileID: 1381035803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1382648093
 GameObject:
   m_ObjectHideFlags: 0
@@ -53327,7 +53530,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 100949291}
   m_GameObject: {fileID: 1387789942}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -53472,6 +53675,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1391528762}
+  - 114: {fileID: 1391528763}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -53492,6 +53696,18 @@ Transform:
   - {fileID: 526384196}
   m_Father: {fileID: 366300793}
   m_RootOrder: 7
+--- !u!114 &1391528763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2018121042}
+  m_GameObject: {fileID: 1391528761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1397726810
 GameObject:
   m_ObjectHideFlags: 0
@@ -54529,6 +54745,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1423963867}
+  - 114: {fileID: 1423963868}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -54549,6 +54766,18 @@ Transform:
   - {fileID: 1175182312}
   m_Father: {fileID: 1296764462}
   m_RootOrder: 2
+--- !u!114 &1423963868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1853337880}
+  m_GameObject: {fileID: 1423963866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1425533153
 GameObject:
   m_ObjectHideFlags: 0
@@ -54950,7 +55179,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1613482061}
   m_GameObject: {fileID: 1433159273}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -56237,7 +56466,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1052741750}
   m_GameObject: {fileID: 1465471367}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -56443,6 +56672,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1470872999}
+  - 114: {fileID: 1470873000}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -56463,6 +56693,18 @@ Transform:
   - {fileID: 136625015}
   m_Father: {fileID: 366300793}
   m_RootOrder: 6
+--- !u!114 &1470873000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1228201957}
+  m_GameObject: {fileID: 1470872998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1470912961
 Prefab:
   m_ObjectHideFlags: 0
@@ -57942,7 +58184,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 2096019267}
   m_GameObject: {fileID: 1516713274}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -58166,6 +58408,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1525953023}
+  - 114: {fileID: 1525953024}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -58186,6 +58429,18 @@ Transform:
   - {fileID: 2079315651}
   m_Father: {fileID: 1819322024}
   m_RootOrder: 4
+--- !u!114 &1525953024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1796423878}
+  m_GameObject: {fileID: 1525953022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1527028175
 GameObject:
   m_ObjectHideFlags: 0
@@ -59217,7 +59472,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1086469992}
   m_GameObject: {fileID: 1549218682}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -59829,7 +60084,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 116209789}
   m_GameObject: {fileID: 1571718016}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -60581,6 +60836,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1591046411}
+  - 114: {fileID: 1591046412}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -60601,6 +60857,18 @@ Transform:
   - {fileID: 1284753485}
   m_Father: {fileID: 1296764462}
   m_RootOrder: 4
+--- !u!114 &1591046412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1202669114}
+  m_GameObject: {fileID: 1591046410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1592007892
 GameObject:
   m_ObjectHideFlags: 0
@@ -61342,7 +61610,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1609022086}
   - 114: {fileID: 1609022085}
-  - 136: {fileID: 1609022084}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -61350,20 +61617,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &1609022084
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1500019124}
-  m_GameObject: {fileID: 1609022083}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!114 &1609022085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62169,7 +62422,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 315307512}
   m_GameObject: {fileID: 1634499663}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -64177,7 +64430,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1794790516}
   m_GameObject: {fileID: 1671617941}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -65565,7 +65818,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1840719973}
   m_GameObject: {fileID: 1722356348}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -66337,7 +66590,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1736910075}
   - 114: {fileID: 1736910076}
-  - 136: {fileID: 1736910077}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -66371,20 +66623,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
---- !u!136 &1736910077
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1554840453}
-  m_GameObject: {fileID: 1736910074}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!1 &1737059558
 GameObject:
   m_ObjectHideFlags: 0
@@ -66393,6 +66631,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1737059559}
+  - 114: {fileID: 1737059560}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -66413,6 +66652,18 @@ Transform:
   - {fileID: 615667591}
   m_Father: {fileID: 1218364080}
   m_RootOrder: 1
+--- !u!114 &1737059560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 58169813}
+  m_GameObject: {fileID: 1737059558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1741083754
 GameObject:
   m_ObjectHideFlags: 0
@@ -66910,7 +67161,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1470912961}
   m_GameObject: {fileID: 1751720006}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -67284,6 +67535,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1757477233}
+  - 114: {fileID: 1757477234}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -67304,6 +67556,18 @@ Transform:
   - {fileID: 1433159274}
   m_Father: {fileID: 1819322024}
   m_RootOrder: 1
+--- !u!114 &1757477234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1613482061}
+  m_GameObject: {fileID: 1757477232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1759212664
 GameObject:
   m_ObjectHideFlags: 0
@@ -67972,7 +68236,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1596662931}
   m_GameObject: {fileID: 1774576003}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -71075,7 +71339,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 290435582}
   m_GameObject: {fileID: 1838967751}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -71733,7 +71997,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1159367242}
   m_GameObject: {fileID: 1848010162}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -72042,6 +72306,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1852431768}
+  - 114: {fileID: 1852431769}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -72062,6 +72327,18 @@ Transform:
   - {fileID: 364312428}
   m_Father: {fileID: 366300793}
   m_RootOrder: 13
+--- !u!114 &1852431769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1653438808}
+  m_GameObject: {fileID: 1852431767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1852667445
 GameObject:
   m_ObjectHideFlags: 0
@@ -73106,7 +73383,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 684964080}
   m_GameObject: {fileID: 1878320453}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -73265,6 +73542,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1880643301}
+  - 114: {fileID: 1880643302}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -73285,6 +73563,18 @@ Transform:
   - {fileID: 1751720007}
   m_Father: {fileID: 366300793}
   m_RootOrder: 12
+--- !u!114 &1880643302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1470912961}
+  m_GameObject: {fileID: 1880643300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1883394140
 GameObject:
   m_ObjectHideFlags: 0
@@ -73560,7 +73850,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 401161427}
   m_GameObject: {fileID: 1888118957}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -74247,6 +74537,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1913644155}
+  - 114: {fileID: 1913644156}
   m_Layer: 8
   m_Name: FirstDiamond
   m_TagString: Diamond
@@ -74267,6 +74558,18 @@ Transform:
   - {fileID: 1248282116}
   m_Father: {fileID: 2045007544}
   m_RootOrder: 0
+--- !u!114 &1913644156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 420975324}
+  m_GameObject: {fileID: 1913644154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1914331145
 GameObject:
   m_ObjectHideFlags: 0
@@ -75240,7 +75543,7 @@ MeshCollider:
   m_GameObject: {fileID: 1930235006}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -75579,7 +75882,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1543763708}
   m_GameObject: {fileID: 1945732975}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -75708,7 +76011,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1951020240}
   - 114: {fileID: 1951020241}
-  - 136: {fileID: 1951020242}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -75742,20 +76044,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
---- !u!136 &1951020242
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 378939956}
-  m_GameObject: {fileID: 1951020239}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!1 &1951243449
 GameObject:
   m_ObjectHideFlags: 0
@@ -77717,7 +78005,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 875700951}
   m_GameObject: {fileID: 1991413860}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -77925,7 +78213,7 @@ MeshCollider:
   m_GameObject: {fileID: 1993609295}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -78640,6 +78928,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2012505679}
+  - 114: {fileID: 2012505680}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -78660,6 +78949,18 @@ Transform:
   - {fileID: 1634499664}
   m_Father: {fileID: 1296764462}
   m_RootOrder: 0
+--- !u!114 &2012505680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 315307512}
+  m_GameObject: {fileID: 2012505678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2012906421
 GameObject:
   m_ObjectHideFlags: 0
@@ -79291,6 +79592,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2037198266}
+  - 114: {fileID: 2037198267}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -79311,6 +79613,18 @@ Transform:
   - {fileID: 1671617942}
   m_Father: {fileID: 1296764462}
   m_RootOrder: 1
+--- !u!114 &2037198267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1794790516}
+  m_GameObject: {fileID: 2037198265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2040562661
 GameObject:
   m_ObjectHideFlags: 0
@@ -79438,7 +79752,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2043369976}
   - 114: {fileID: 2043369978}
-  - 136: {fileID: 2043369977}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -79459,20 +79772,6 @@ Transform:
   - {fileID: 1993609296}
   m_Father: {fileID: 1648281395}
   m_RootOrder: 0
---- !u!136 &2043369977
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 612257273}
-  m_GameObject: {fileID: 2043369975}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!114 &2043369978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81074,6 +81373,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2078945381}
+  - 114: {fileID: 2078945382}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -81094,6 +81394,18 @@ Transform:
   - {fileID: 1945732976}
   m_Father: {fileID: 366300793}
   m_RootOrder: 8
+--- !u!114 &2078945382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1543763708}
+  m_GameObject: {fileID: 2078945380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2079315650
 GameObject:
   m_ObjectHideFlags: 0
@@ -81133,7 +81445,7 @@ MeshCollider:
   m_PrefabInternal: {fileID: 1796423878}
   m_GameObject: {fileID: 2079315650}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
@@ -82057,6 +82369,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2096285699}
+  - 114: {fileID: 2096285700}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -82077,6 +82390,18 @@ Transform:
   - {fileID: 1571718017}
   m_Father: {fileID: 366300793}
   m_RootOrder: 5
+--- !u!114 &2096285700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 116209789}
+  m_GameObject: {fileID: 2096285698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2098157019
 GameObject:
   m_ObjectHideFlags: 0
@@ -83019,7 +83344,7 @@ MeshCollider:
   m_GameObject: {fileID: 2121948059}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
@@ -83544,6 +83869,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2129292967}
+  - 114: {fileID: 2129292968}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -83564,6 +83890,18 @@ Transform:
   - {fileID: 1465471368}
   m_Father: {fileID: 1296764462}
   m_RootOrder: 3
+--- !u!114 &2129292968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1052741750}
+  m_GameObject: {fileID: 2129292966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2130668311
 Prefab:
   m_ObjectHideFlags: 0

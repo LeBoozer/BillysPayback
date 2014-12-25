@@ -358,8 +358,7 @@ public class Player : MonoBehaviour {
 		//  Diamonds
 		if(tag.Equals(Tags.TAG_DIAMOND))
 		{
-			Debug.Log("collision");
-			m_playerData.increaseStockSizeByValue(PlayerData.PowerUpType.PUT_COUNT, 1);
+            m_playerData.CollectedDiamonds++;
 			Destroy(_hit.transform.parent.gameObject);
 			return;
 		}

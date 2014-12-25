@@ -24,4 +24,7 @@ public class GameConfig
 	public static readonly float 	BILLY_FLYING_FACTOR				= 0.25f;
 	public static readonly float 	BILLY_JUMP_START_SPEED 			= 5.5f;
 	public static readonly float 	BILLY_JUMP_START_SPEED_ENEMY 	= 5.0f;
+
+    // Diamond related values
+    public static readonly float    DIAMONG_ROTATION_SPEED          = 55.0f;
 }
