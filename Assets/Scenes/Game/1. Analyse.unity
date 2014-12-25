@@ -1928,7 +1928,6 @@ GameObject:
   - 33: {fileID: 52569939}
   - 23: {fileID: 52569938}
   - 95: {fileID: 52569937}
-  - 64: {fileID: 52569936}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -1948,20 +1947,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 507621286}
   m_RootOrder: 0
---- !u!64 &52569936
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1866033775}
-  m_GameObject: {fileID: 52569934}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &52569937
 Animator:
   serializedVersion: 3
@@ -2242,6 +2227,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 56221955}
   - 114: {fileID: 56221956}
+  - 136: {fileID: 56221957}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -2257,7 +2243,7 @@ Transform:
   m_GameObject: {fileID: 56221954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .769999981, y: .0500000007, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1774576004}
   m_Father: {fileID: 1819322024}
@@ -2274,6 +2260,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &56221957
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1596662931}
+  m_GameObject: {fileID: 56221954}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &57227600
 GameObject:
   m_ObjectHideFlags: 0
@@ -4259,7 +4259,6 @@ GameObject:
   - 33: {fileID: 111255223}
   - 23: {fileID: 111255222}
   - 95: {fileID: 111255221}
-  - 64: {fileID: 111255220}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -4279,20 +4278,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 470406489}
   m_RootOrder: 0
---- !u!64 &111255220
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 2122912256}
-  m_GameObject: {fileID: 111255218}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &111255221
 Animator:
   serializedVersion: 3
@@ -4639,6 +4624,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 117396712}
   - 114: {fileID: 117396713}
+  - 136: {fileID: 117396714}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -4654,7 +4640,7 @@ Transform:
   m_GameObject: {fileID: 117396711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.06700003, y: .0500000007, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1516713275}
   m_Father: {fileID: 366300793}
@@ -4671,6 +4657,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &117396714
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2096019267}
+  m_GameObject: {fileID: 117396711}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &117590093
 GameObject:
   m_ObjectHideFlags: 0
@@ -5183,7 +5183,6 @@ GameObject:
   - 33: {fileID: 136625019}
   - 23: {fileID: 136625018}
   - 95: {fileID: 136625017}
-  - 64: {fileID: 136625016}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -5203,20 +5202,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1470872999}
   m_RootOrder: 0
---- !u!64 &136625016
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1228201957}
-  m_GameObject: {fileID: 136625014}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &136625017
 Animator:
   serializedVersion: 3
@@ -7602,7 +7587,6 @@ GameObject:
   - 33: {fileID: 190103350}
   - 23: {fileID: 190103349}
   - 95: {fileID: 190103348}
-  - 64: {fileID: 190103347}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -7622,20 +7606,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 442866984}
   m_RootOrder: 0
---- !u!64 &190103347
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1572618339}
-  m_GameObject: {fileID: 190103345}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &190103348
 Animator:
   serializedVersion: 3
@@ -8542,6 +8512,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 215353717}
   - 114: {fileID: 215353718}
+  - 136: {fileID: 215353719}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -8557,7 +8528,7 @@ Transform:
   m_GameObject: {fileID: 215353716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.76999998, y: 1.75999999, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 363284283}
   m_Father: {fileID: 1296764462}
@@ -8574,6 +8545,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &215353719
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 524511571}
+  m_GameObject: {fileID: 215353716}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &216105128
 GameObject:
   m_ObjectHideFlags: 0
@@ -8744,6 +8729,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 218572736}
   - 114: {fileID: 218572737}
+  - 136: {fileID: 218572738}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -8759,7 +8745,7 @@ Transform:
   m_GameObject: {fileID: 218572735}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .337000012, y: .0500000007, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 508592937}
   m_Father: {fileID: 366300793}
@@ -8776,6 +8762,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &218572738
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 41338502}
+  m_GameObject: {fileID: 218572735}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &218745227
 GameObject:
   m_ObjectHideFlags: 0
@@ -12184,7 +12184,7 @@ Canvas:
   m_GameObject: {fileID: 306461360}
   m_Enabled: 1
   serializedVersion: 2
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 664327159}
   m_PlaneDistance: 20
   m_PixelPerfect: 0
@@ -12519,6 +12519,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 316096797}
   - 114: {fileID: 316096798}
+  - 136: {fileID: 316096799}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -12534,7 +12535,7 @@ Transform:
   m_GameObject: {fileID: 316096796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .289999992, y: .379999995, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1991413861}
   m_Father: {fileID: 639863144}
@@ -12551,6 +12552,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &316096799
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 875700951}
+  m_GameObject: {fileID: 316096796}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1001 &316516484
 Prefab:
   m_ObjectHideFlags: 0
@@ -13081,6 +13096,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 332454961}
   - 114: {fileID: 332454962}
+  - 136: {fileID: 332454963}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -13096,7 +13112,7 @@ Transform:
   m_GameObject: {fileID: 332454960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.44000006, y: .0500000007, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1848010163}
   m_Father: {fileID: 366300793}
@@ -13113,6 +13129,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &332454963
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1159367242}
+  m_GameObject: {fileID: 332454960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &336270705
 GameObject:
   m_ObjectHideFlags: 0
@@ -14039,7 +14069,6 @@ GameObject:
   - 33: {fileID: 363284287}
   - 23: {fileID: 363284286}
   - 95: {fileID: 363284285}
-  - 64: {fileID: 363284284}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -14059,20 +14088,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 215353717}
   m_RootOrder: 0
---- !u!64 &363284284
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 524511571}
-  m_GameObject: {fileID: 363284282}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &363284285
 Animator:
   serializedVersion: 3
@@ -14129,7 +14144,6 @@ GameObject:
   - 33: {fileID: 364312432}
   - 23: {fileID: 364312431}
   - 95: {fileID: 364312430}
-  - 64: {fileID: 364312429}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -14149,20 +14163,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1852431768}
   m_RootOrder: 0
---- !u!64 &364312429
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1653438808}
-  m_GameObject: {fileID: 364312427}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &364312430
 Animator:
   serializedVersion: 3
@@ -16353,66 +16353,6 @@ Transform:
   - {fileID: 446132457}
   m_Father: {fileID: 1486467327}
   m_RootOrder: 2
---- !u!1001 &420975324
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2045007544}
-    m_Modifications:
-    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: .0500000007
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 100002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-      propertyPath: m_Name
-      value: FirstDiamond
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-  m_RootGameObject: {fileID: 1913644154}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &422149885
 GameObject:
   m_ObjectHideFlags: 0
@@ -16892,6 +16832,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 442866984}
   - 114: {fileID: 442866985}
+  - 136: {fileID: 442866986}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -16907,7 +16848,7 @@ Transform:
   m_GameObject: {fileID: 442866983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .0199999996, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 190103346}
   m_Father: {fileID: 1218364080}
@@ -16924,6 +16865,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &442866986
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1572618339}
+  m_GameObject: {fileID: 442866983}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1001 &443272536
 Prefab:
   m_ObjectHideFlags: 0
@@ -17619,6 +17574,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 470406489}
   - 114: {fileID: 470406490}
+  - 136: {fileID: 470406491}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -17634,7 +17590,7 @@ Transform:
   m_GameObject: {fileID: 470406488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.47000003, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 111255219}
   m_Father: {fileID: 1218364080}
@@ -17651,6 +17607,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &470406491
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2122912256}
+  m_GameObject: {fileID: 470406488}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &476419146
 GameObject:
   m_ObjectHideFlags: 0
@@ -17708,7 +17678,6 @@ GameObject:
   - 33: {fileID: 476851594}
   - 23: {fileID: 476851593}
   - 95: {fileID: 476851592}
-  - 64: {fileID: 476851591}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -17728,20 +17697,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 861469869}
   m_RootOrder: 0
---- !u!64 &476851591
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1613607026}
-  m_GameObject: {fileID: 476851589}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &476851592
 Animator:
   serializedVersion: 3
@@ -18286,6 +18241,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 494982943}
   - 114: {fileID: 494982944}
+  - 136: {fileID: 494982945}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -18301,7 +18257,7 @@ Transform:
   m_GameObject: {fileID: 494982942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.44000006, y: .980000019, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1549218683}
   m_Father: {fileID: 366300793}
@@ -18318,6 +18274,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &494982945
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1086469992}
+  m_GameObject: {fileID: 494982942}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &495613863
 GameObject:
   m_ObjectHideFlags: 0
@@ -18803,6 +18773,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 507621286}
   - 114: {fileID: 507621287}
+  - 136: {fileID: 507621288}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -18818,7 +18789,7 @@ Transform:
   m_GameObject: {fileID: 507621285}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .119999997, y: .0500000007, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 52569935}
   m_Father: {fileID: 639863144}
@@ -18835,6 +18806,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &507621288
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1866033775}
+  m_GameObject: {fileID: 507621285}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &508286017
 GameObject:
   m_ObjectHideFlags: 0
@@ -18922,7 +18907,6 @@ GameObject:
   - 33: {fileID: 508592941}
   - 23: {fileID: 508592940}
   - 95: {fileID: 508592939}
-  - 64: {fileID: 508592938}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -18942,20 +18926,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 218572736}
   m_RootOrder: 0
---- !u!64 &508592938
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 41338502}
-  m_GameObject: {fileID: 508592936}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &508592939
 Animator:
   serializedVersion: 3
@@ -19686,7 +19656,6 @@ GameObject:
   - 33: {fileID: 526384200}
   - 23: {fileID: 526384199}
   - 95: {fileID: 526384198}
-  - 64: {fileID: 526384197}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -19706,20 +19675,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1391528762}
   m_RootOrder: 0
---- !u!64 &526384197
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 2018121042}
-  m_GameObject: {fileID: 526384195}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &526384198
 Animator:
   serializedVersion: 3
@@ -20772,7 +20727,6 @@ GameObject:
   - 33: {fileID: 546199615}
   - 23: {fileID: 546199614}
   - 95: {fileID: 546199613}
-  - 64: {fileID: 546199612}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -20792,20 +20746,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1138926838}
   m_RootOrder: 0
---- !u!64 &546199612
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 2026330490}
-  m_GameObject: {fileID: 546199610}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &546199613
 Animator:
   serializedVersion: 3
@@ -21133,6 +21073,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 552407626}
   - 114: {fileID: 552407627}
+  - 136: {fileID: 552407628}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -21148,7 +21089,7 @@ Transform:
   m_GameObject: {fileID: 552407625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .0500000007, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1838967752}
   m_Father: {fileID: 1819322024}
@@ -21165,6 +21106,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &552407628
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 290435582}
+  m_GameObject: {fileID: 552407625}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &552501463
 GameObject:
   m_ObjectHideFlags: 0
@@ -22563,7 +22518,6 @@ GameObject:
   - 33: {fileID: 583620083}
   - 23: {fileID: 583620082}
   - 95: {fileID: 583620081}
-  - 64: {fileID: 583620080}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -22583,20 +22537,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1381035804}
   m_RootOrder: 0
---- !u!64 &583620080
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 160162204}
-  m_GameObject: {fileID: 583620078}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &583620081
 Animator:
   serializedVersion: 3
@@ -23310,7 +23250,6 @@ GameObject:
   - 33: {fileID: 600250778}
   - 23: {fileID: 600250777}
   - 95: {fileID: 600250776}
-  - 64: {fileID: 600250775}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -23330,20 +23269,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 930542320}
   m_RootOrder: 0
---- !u!64 &600250775
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1384550336}
-  m_GameObject: {fileID: 600250773}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &600250776
 Animator:
   serializedVersion: 3
@@ -23897,6 +23822,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 613638882}
   - 114: {fileID: 613638883}
+  - 136: {fileID: 613638884}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -23912,7 +23838,7 @@ Transform:
   m_GameObject: {fileID: 613638881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .289999992, y: .0500000007, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 917951185}
   m_Father: {fileID: 639863144}
@@ -23929,6 +23855,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &613638884
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 484770979}
+  m_GameObject: {fileID: 613638881}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &614127669
 GameObject:
   m_ObjectHideFlags: 0
@@ -24069,7 +24009,6 @@ GameObject:
   - 33: {fileID: 615667595}
   - 23: {fileID: 615667594}
   - 95: {fileID: 615667593}
-  - 64: {fileID: 615667592}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -24089,20 +24028,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1737059559}
   m_RootOrder: 0
---- !u!64 &615667592
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 58169813}
-  m_GameObject: {fileID: 615667590}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &615667593
 Animator:
   serializedVersion: 3
@@ -24666,6 +24591,54 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1926007019}
   m_GameObject: {fileID: 627792795}
   m_Mesh: {fileID: 4300014, guid: 853039dafd6fb244aaa2e2dceb3775b4, type: 3}
+--- !u!1001 &627861717
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2045007544}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
+      propertyPath: m_Name
+      value: FirstDiamond
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
+  m_RootGameObject: {fileID: 1913644154}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1001 &628677134
 Prefab:
   m_ObjectHideFlags: 0
@@ -25095,6 +25068,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 640368605}
   - 114: {fileID: 640368606}
+  - 136: {fileID: 640368607}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -25110,7 +25084,7 @@ Transform:
   m_GameObject: {fileID: 640368604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.1099997, y: .0500000007, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1888118958}
   m_Father: {fileID: 2003047160}
@@ -25127,6 +25101,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &640368607
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 401161427}
+  m_GameObject: {fileID: 640368604}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &640907381
 GameObject:
   m_ObjectHideFlags: 0
@@ -26813,6 +26801,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 673810220}
   - 114: {fileID: 673810221}
+  - 136: {fileID: 673810222}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -26828,7 +26817,7 @@ Transform:
   m_GameObject: {fileID: 673810219}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.801, y: .976000011, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1878320454}
   m_Father: {fileID: 366300793}
@@ -26845,6 +26834,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &673810222
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 684964080}
+  m_GameObject: {fileID: 673810219}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1001 &673996469
 Prefab:
   m_ObjectHideFlags: 0
@@ -29552,6 +29555,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 751651185}
   - 114: {fileID: 751651186}
+  - 136: {fileID: 751651187}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -29567,7 +29571,7 @@ Transform:
   m_GameObject: {fileID: 751651184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.06700003, y: .513000011, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 847900745}
   m_Father: {fileID: 366300793}
@@ -29584,6 +29588,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &751651187
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1612331684}
+  m_GameObject: {fileID: 751651184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1001 &752470506
 Prefab:
   m_ObjectHideFlags: 0
@@ -30365,6 +30383,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 777768396}
   - 114: {fileID: 777768397}
+  - 136: {fileID: 777768398}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -30380,7 +30399,7 @@ Transform:
   m_GameObject: {fileID: 777768395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.0600004, y: .0500000007, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 858336109}
   m_Father: {fileID: 2003047160}
@@ -30397,6 +30416,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &777768398
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1876370448}
+  m_GameObject: {fileID: 777768395}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &779351986
 GameObject:
   m_ObjectHideFlags: 0
@@ -32445,7 +32478,6 @@ GameObject:
   - 33: {fileID: 846863252}
   - 23: {fileID: 846863251}
   - 95: {fileID: 846863250}
-  - 64: {fileID: 846863249}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -32465,20 +32497,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 950270875}
   m_RootOrder: 0
---- !u!64 &846863249
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1767163974}
-  m_GameObject: {fileID: 846863247}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &846863250
 Animator:
   serializedVersion: 3
@@ -32535,7 +32553,6 @@ GameObject:
   - 33: {fileID: 847900749}
   - 23: {fileID: 847900748}
   - 95: {fileID: 847900747}
-  - 64: {fileID: 847900746}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -32555,20 +32572,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 751651185}
   m_RootOrder: 0
---- !u!64 &847900746
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1612331684}
-  m_GameObject: {fileID: 847900744}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &847900747
 Animator:
   serializedVersion: 3
@@ -32952,7 +32955,6 @@ GameObject:
   - 33: {fileID: 858336113}
   - 23: {fileID: 858336112}
   - 95: {fileID: 858336111}
-  - 64: {fileID: 858336110}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -32972,20 +32974,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 777768396}
   m_RootOrder: 0
---- !u!64 &858336110
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1876370448}
-  m_GameObject: {fileID: 858336108}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &858336111
 Animator:
   serializedVersion: 3
@@ -33098,6 +33086,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 861469869}
   - 114: {fileID: 861469870}
+  - 136: {fileID: 861469871}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -33113,7 +33102,7 @@ Transform:
   m_GameObject: {fileID: 861469868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.19000006, y: .370000005, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 476851590}
   m_Father: {fileID: 1819322024}
@@ -33130,6 +33119,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &861469871
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1613607026}
+  m_GameObject: {fileID: 861469868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &862028095
 GameObject:
   m_ObjectHideFlags: 0
@@ -34245,7 +34248,6 @@ GameObject:
   - 33: {fileID: 895584397}
   - 23: {fileID: 895584396}
   - 95: {fileID: 895584395}
-  - 64: {fileID: 895584394}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -34265,20 +34267,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 904121917}
   m_RootOrder: 0
---- !u!64 &895584394
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 645244942}
-  m_GameObject: {fileID: 895584392}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &895584395
 Animator:
   serializedVersion: 3
@@ -34405,6 +34393,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 904121917}
   - 114: {fileID: 904121918}
+  - 136: {fileID: 904121919}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -34420,7 +34409,7 @@ Transform:
   m_GameObject: {fileID: 904121916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .980000019, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 895584393}
   m_Father: {fileID: 1218364080}
@@ -34437,6 +34426,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &904121919
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 645244942}
+  m_GameObject: {fileID: 904121916}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &906019398
 GameObject:
   m_ObjectHideFlags: 0
@@ -34577,6 +34580,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 907619132}
   - 114: {fileID: 907619133}
+  - 136: {fileID: 907619134}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -34592,7 +34596,7 @@ Transform:
   m_GameObject: {fileID: 907619131}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .119999997, y: .379999995, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1225353167}
   m_Father: {fileID: 639863144}
@@ -34609,6 +34613,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &907619134
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 218906481}
+  m_GameObject: {fileID: 907619131}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &907800804
 GameObject:
   m_ObjectHideFlags: 0
@@ -35102,7 +35120,6 @@ GameObject:
   - 33: {fileID: 917951189}
   - 23: {fileID: 917951188}
   - 95: {fileID: 917951187}
-  - 64: {fileID: 917951186}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -35122,20 +35139,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 613638882}
   m_RootOrder: 0
---- !u!64 &917951186
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 484770979}
-  m_GameObject: {fileID: 917951184}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &917951187
 Animator:
   serializedVersion: 3
@@ -35675,6 +35678,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 930542320}
   - 114: {fileID: 930542321}
+  - 136: {fileID: 930542322}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -35690,7 +35694,7 @@ Transform:
   m_GameObject: {fileID: 930542319}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.06700003, y: .967000008, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 600250774}
   m_Father: {fileID: 366300793}
@@ -35707,6 +35711,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &930542322
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1384550336}
+  m_GameObject: {fileID: 930542319}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &931010008
 GameObject:
   m_ObjectHideFlags: 0
@@ -35984,7 +36002,6 @@ GameObject:
   - 33: {fileID: 940030750}
   - 23: {fileID: 940030749}
   - 95: {fileID: 940030748}
-  - 64: {fileID: 940030747}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -36004,20 +36021,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 946078113}
   m_RootOrder: 0
---- !u!64 &940030747
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1834153790}
-  m_GameObject: {fileID: 940030745}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &940030748
 Animator:
   serializedVersion: 3
@@ -36249,6 +36252,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 946078113}
   - 114: {fileID: 946078114}
+  - 136: {fileID: 946078115}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -36264,7 +36268,7 @@ Transform:
   m_GameObject: {fileID: 946078112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .702000022, y: .0500000007, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 940030746}
   m_Father: {fileID: 366300793}
@@ -36281,6 +36285,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &946078115
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1834153790}
+  m_GameObject: {fileID: 946078112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &946349071
 GameObject:
   m_ObjectHideFlags: 0
@@ -36421,6 +36439,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 950270875}
   - 114: {fileID: 950270876}
+  - 136: {fileID: 950270877}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -36436,7 +36455,7 @@ Transform:
   m_GameObject: {fileID: 950270874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .702000022, y: .52700001, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 846863248}
   m_Father: {fileID: 366300793}
@@ -36453,6 +36472,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &950270877
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1767163974}
+  m_GameObject: {fileID: 950270874}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1001 &953882954
 Prefab:
   m_ObjectHideFlags: 0
@@ -41171,6 +41204,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1077063929}
   - 114: {fileID: 1077063930}
+  - 136: {fileID: 1077063931}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -41186,7 +41220,7 @@ Transform:
   m_GameObject: {fileID: 1077063928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .0500000007, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1722356349}
   m_Father: {fileID: 366300793}
@@ -41203,6 +41237,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1077063931
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1840719973}
+  m_GameObject: {fileID: 1077063928}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &1077626765
 GameObject:
   m_ObjectHideFlags: 0
@@ -41377,6 +41425,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1079393002}
   - 114: {fileID: 1079393003}
+  - 136: {fileID: 1079393004}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -41392,7 +41441,7 @@ Transform:
   m_GameObject: {fileID: 1079393001}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.44000006, y: .508000016, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1387789943}
   m_Father: {fileID: 366300793}
@@ -41409,6 +41458,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1079393004
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 100949291}
+  m_GameObject: {fileID: 1079393001}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1001 &1079822137
 Prefab:
   m_ObjectHideFlags: 0
@@ -43561,6 +43624,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1138926838}
   - 114: {fileID: 1138926839}
+  - 136: {fileID: 1138926840}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -43576,7 +43640,7 @@ Transform:
   m_GameObject: {fileID: 1138926837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.2290001, y: .0500000045, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 546199611}
   m_Father: {fileID: 2003047160}
@@ -43593,6 +43657,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1138926840
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2026330490}
+  m_GameObject: {fileID: 1138926837}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &1139954497
 GameObject:
   m_ObjectHideFlags: 0
@@ -44597,7 +44675,6 @@ GameObject:
   - 33: {fileID: 1175182316}
   - 23: {fileID: 1175182315}
   - 95: {fileID: 1175182314}
-  - 64: {fileID: 1175182313}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -44617,20 +44694,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1423963867}
   m_RootOrder: 0
---- !u!64 &1175182313
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1853337880}
-  m_GameObject: {fileID: 1175182311}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1175182314
 Animator:
   serializedVersion: 3
@@ -46993,7 +47056,6 @@ GameObject:
   - 33: {fileID: 1225353171}
   - 23: {fileID: 1225353170}
   - 95: {fileID: 1225353169}
-  - 64: {fileID: 1225353168}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -47013,20 +47075,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 907619132}
   m_RootOrder: 0
---- !u!64 &1225353168
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 218906481}
-  m_GameObject: {fileID: 1225353166}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1225353169
 Animator:
   serializedVersion: 3
@@ -48280,14 +48328,13 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-  m_PrefabInternal: {fileID: 420975324}
+  m_PrefabInternal: {fileID: 627861717}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1248282116}
   - 33: {fileID: 1248282119}
   - 23: {fileID: 1248282118}
   - 95: {fileID: 1248282117}
-  - 64: {fileID: 1248282120}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -48299,7 +48346,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-  m_PrefabInternal: {fileID: 420975324}
+  m_PrefabInternal: {fileID: 627861717}
   m_GameObject: {fileID: 1248282115}
   m_LocalRotation: {x: .707106769, y: 0, z: -0, w: .707106888}
   m_LocalPosition: {x: 2.98023217e-10, y: 0, z: -1.86264511e-11}
@@ -48313,7 +48360,7 @@ Animator:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 9500000, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
-  m_PrefabInternal: {fileID: 420975324}
+  m_PrefabInternal: {fileID: 627861717}
   m_GameObject: {fileID: 1248282115}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
@@ -48328,7 +48375,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300000, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
-  m_PrefabInternal: {fileID: 420975324}
+  m_PrefabInternal: {fileID: 627861717}
   m_GameObject: {fileID: 1248282115}
   m_Enabled: 1
   m_CastShadows: 1
@@ -48349,22 +48396,8 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300000, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
-  m_PrefabInternal: {fileID: 420975324}
+  m_PrefabInternal: {fileID: 627861717}
   m_GameObject: {fileID: 1248282115}
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
---- !u!64 &1248282120
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 420975324}
-  m_GameObject: {fileID: 1248282115}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!1 &1249137298
 GameObject:
@@ -49540,7 +49573,6 @@ GameObject:
   - 33: {fileID: 1284753489}
   - 23: {fileID: 1284753488}
   - 95: {fileID: 1284753487}
-  - 64: {fileID: 1284753486}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -49560,20 +49592,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1591046411}
   m_RootOrder: 0
---- !u!64 &1284753486
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1202669114}
-  m_GameObject: {fileID: 1284753484}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1284753487
 Animator:
   serializedVersion: 3
@@ -53111,6 +53129,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1381035804}
   - 114: {fileID: 1381035805}
+  - 136: {fileID: 1381035806}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -53126,7 +53145,7 @@ Transform:
   m_GameObject: {fileID: 1381035803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.3199997, y: .0500000045, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 583620079}
   m_Father: {fileID: 2003047160}
@@ -53143,6 +53162,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1381035806
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 160162204}
+  m_GameObject: {fileID: 1381035803}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &1382648093
 GameObject:
   m_ObjectHideFlags: 0
@@ -53502,7 +53535,6 @@ GameObject:
   - 33: {fileID: 1387789947}
   - 23: {fileID: 1387789946}
   - 95: {fileID: 1387789945}
-  - 64: {fileID: 1387789944}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -53522,20 +53554,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1079393002}
   m_RootOrder: 0
---- !u!64 &1387789944
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 100949291}
-  m_GameObject: {fileID: 1387789942}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1387789945
 Animator:
   serializedVersion: 3
@@ -53676,6 +53694,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1391528762}
   - 114: {fileID: 1391528763}
+  - 136: {fileID: 1391528764}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -53691,7 +53710,7 @@ Transform:
   m_GameObject: {fileID: 1391528761}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.5769999, y: .0500000007, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 526384196}
   m_Father: {fileID: 366300793}
@@ -53708,6 +53727,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1391528764
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2018121042}
+  m_GameObject: {fileID: 1391528761}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &1397726810
 GameObject:
   m_ObjectHideFlags: 0
@@ -54746,6 +54779,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1423963867}
   - 114: {fileID: 1423963868}
+  - 136: {fileID: 1423963869}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -54761,7 +54795,7 @@ Transform:
   m_GameObject: {fileID: 1423963866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .910000026, y: .889999986, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1175182312}
   m_Father: {fileID: 1296764462}
@@ -54778,6 +54812,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1423963869
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1853337880}
+  m_GameObject: {fileID: 1423963866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &1425533153
 GameObject:
   m_ObjectHideFlags: 0
@@ -55151,7 +55199,6 @@ GameObject:
   - 33: {fileID: 1433159278}
   - 23: {fileID: 1433159277}
   - 95: {fileID: 1433159276}
-  - 64: {fileID: 1433159275}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -55171,20 +55218,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1757477233}
   m_RootOrder: 0
---- !u!64 &1433159275
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1613482061}
-  m_GameObject: {fileID: 1433159273}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1433159276
 Animator:
   serializedVersion: 3
@@ -56438,7 +56471,6 @@ GameObject:
   - 33: {fileID: 1465471372}
   - 23: {fileID: 1465471371}
   - 95: {fileID: 1465471370}
-  - 64: {fileID: 1465471369}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -56458,20 +56490,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2129292967}
   m_RootOrder: 0
---- !u!64 &1465471369
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1052741750}
-  m_GameObject: {fileID: 1465471367}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1465471370
 Animator:
   serializedVersion: 3
@@ -56673,6 +56691,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1470872999}
   - 114: {fileID: 1470873000}
+  - 136: {fileID: 1470873001}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -56688,7 +56707,7 @@ Transform:
   m_GameObject: {fileID: 1470872998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.18400002, y: .0500000007, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 136625015}
   m_Father: {fileID: 366300793}
@@ -56705,6 +56724,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1470873001
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1228201957}
+  m_GameObject: {fileID: 1470872998}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1001 &1470912961
 Prefab:
   m_ObjectHideFlags: 0
@@ -58156,7 +58189,6 @@ GameObject:
   - 33: {fileID: 1516713279}
   - 23: {fileID: 1516713278}
   - 95: {fileID: 1516713277}
-  - 64: {fileID: 1516713276}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -58176,20 +58208,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 117396712}
   m_RootOrder: 0
---- !u!64 &1516713276
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 2096019267}
-  m_GameObject: {fileID: 1516713274}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1516713277
 Animator:
   serializedVersion: 3
@@ -58409,6 +58427,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1525953023}
   - 114: {fileID: 1525953024}
+  - 136: {fileID: 1525953025}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -58424,7 +58443,7 @@ Transform:
   m_GameObject: {fileID: 1525953022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.62, y: .370000005, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 2079315651}
   m_Father: {fileID: 1819322024}
@@ -58441,6 +58460,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1525953025
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1796423878}
+  m_GameObject: {fileID: 1525953022}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &1527028175
 GameObject:
   m_ObjectHideFlags: 0
@@ -59444,7 +59477,6 @@ GameObject:
   - 33: {fileID: 1549218687}
   - 23: {fileID: 1549218686}
   - 95: {fileID: 1549218685}
-  - 64: {fileID: 1549218684}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -59464,20 +59496,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 494982943}
   m_RootOrder: 0
---- !u!64 &1549218684
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1086469992}
-  m_GameObject: {fileID: 1549218682}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1549218685
 Animator:
   serializedVersion: 3
@@ -60056,7 +60074,6 @@ GameObject:
   - 33: {fileID: 1571718021}
   - 23: {fileID: 1571718020}
   - 95: {fileID: 1571718019}
-  - 64: {fileID: 1571718018}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -60076,20 +60093,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2096285699}
   m_RootOrder: 0
---- !u!64 &1571718018
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 116209789}
-  m_GameObject: {fileID: 1571718016}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1571718019
 Animator:
   serializedVersion: 3
@@ -60837,6 +60840,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1591046411}
   - 114: {fileID: 1591046412}
+  - 136: {fileID: 1591046413}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -60852,7 +60856,7 @@ Transform:
   m_GameObject: {fileID: 1591046410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.48000002, y: 1.48000002, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1284753485}
   m_Father: {fileID: 1296764462}
@@ -60869,6 +60873,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1591046413
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1202669114}
+  m_GameObject: {fileID: 1591046410}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &1592007892
 GameObject:
   m_ObjectHideFlags: 0
@@ -62394,7 +62412,6 @@ GameObject:
   - 33: {fileID: 1634499668}
   - 23: {fileID: 1634499667}
   - 95: {fileID: 1634499666}
-  - 64: {fileID: 1634499665}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -62414,20 +62431,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2012505679}
   m_RootOrder: 0
---- !u!64 &1634499665
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 315307512}
-  m_GameObject: {fileID: 1634499663}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1634499666
 Animator:
   serializedVersion: 3
@@ -64402,7 +64405,6 @@ GameObject:
   - 33: {fileID: 1671617946}
   - 23: {fileID: 1671617945}
   - 95: {fileID: 1671617944}
-  - 64: {fileID: 1671617943}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -64422,20 +64424,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2037198266}
   m_RootOrder: 0
---- !u!64 &1671617943
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1794790516}
-  m_GameObject: {fileID: 1671617941}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1671617944
 Animator:
   serializedVersion: 3
@@ -65790,7 +65778,6 @@ GameObject:
   - 33: {fileID: 1722356353}
   - 23: {fileID: 1722356352}
   - 95: {fileID: 1722356351}
-  - 64: {fileID: 1722356350}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -65810,20 +65797,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1077063929}
   m_RootOrder: 0
---- !u!64 &1722356350
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1840719973}
-  m_GameObject: {fileID: 1722356348}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1722356351
 Animator:
   serializedVersion: 3
@@ -66632,6 +66605,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1737059559}
   - 114: {fileID: 1737059560}
+  - 136: {fileID: 1737059561}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -66647,7 +66621,7 @@ Transform:
   m_GameObject: {fileID: 1737059558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: .5, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 615667591}
   m_Father: {fileID: 1218364080}
@@ -66664,6 +66638,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1737059561
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 58169813}
+  m_GameObject: {fileID: 1737059558}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &1741083754
 GameObject:
   m_ObjectHideFlags: 0
@@ -67133,7 +67121,6 @@ GameObject:
   - 33: {fileID: 1751720011}
   - 23: {fileID: 1751720010}
   - 95: {fileID: 1751720009}
-  - 64: {fileID: 1751720008}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -67153,20 +67140,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1880643301}
   m_RootOrder: 0
---- !u!64 &1751720008
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1470912961}
-  m_GameObject: {fileID: 1751720006}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1751720009
 Animator:
   serializedVersion: 3
@@ -67536,6 +67509,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1757477233}
   - 114: {fileID: 1757477234}
+  - 136: {fileID: 1757477235}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -67551,7 +67525,7 @@ Transform:
   m_GameObject: {fileID: 1757477232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .379999995, y: .0500000007, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1433159274}
   m_Father: {fileID: 1819322024}
@@ -67568,6 +67542,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1757477235
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1613482061}
+  m_GameObject: {fileID: 1757477232}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &1759212664
 GameObject:
   m_ObjectHideFlags: 0
@@ -68208,7 +68196,6 @@ GameObject:
   - 33: {fileID: 1774576008}
   - 23: {fileID: 1774576007}
   - 95: {fileID: 1774576006}
-  - 64: {fileID: 1774576005}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -68228,20 +68215,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 56221955}
   m_RootOrder: 0
---- !u!64 &1774576005
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1596662931}
-  m_GameObject: {fileID: 1774576003}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1774576006
 Animator:
   serializedVersion: 3
@@ -71311,7 +71284,6 @@ GameObject:
   - 33: {fileID: 1838967756}
   - 23: {fileID: 1838967755}
   - 95: {fileID: 1838967754}
-  - 64: {fileID: 1838967753}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -71331,20 +71303,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 552407626}
   m_RootOrder: 0
---- !u!64 &1838967753
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 290435582}
-  m_GameObject: {fileID: 1838967751}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1838967754
 Animator:
   serializedVersion: 3
@@ -71969,7 +71927,6 @@ GameObject:
   - 33: {fileID: 1848010167}
   - 23: {fileID: 1848010166}
   - 95: {fileID: 1848010165}
-  - 64: {fileID: 1848010164}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -71989,20 +71946,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 332454961}
   m_RootOrder: 0
---- !u!64 &1848010164
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1159367242}
-  m_GameObject: {fileID: 1848010162}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1848010165
 Animator:
   serializedVersion: 3
@@ -72307,6 +72250,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1852431768}
   - 114: {fileID: 1852431769}
+  - 136: {fileID: 1852431770}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -72322,7 +72266,7 @@ Transform:
   m_GameObject: {fileID: 1852431767}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.18400002, y: .499000013, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 364312428}
   m_Father: {fileID: 366300793}
@@ -72339,6 +72283,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1852431770
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1653438808}
+  m_GameObject: {fileID: 1852431767}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &1852667445
 GameObject:
   m_ObjectHideFlags: 0
@@ -73355,7 +73313,6 @@ GameObject:
   - 33: {fileID: 1878320458}
   - 23: {fileID: 1878320457}
   - 95: {fileID: 1878320456}
-  - 64: {fileID: 1878320455}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -73375,20 +73332,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 673810220}
   m_RootOrder: 0
---- !u!64 &1878320455
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 684964080}
-  m_GameObject: {fileID: 1878320453}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1878320456
 Animator:
   serializedVersion: 3
@@ -73543,6 +73486,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1880643301}
   - 114: {fileID: 1880643302}
+  - 136: {fileID: 1880643303}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -73558,7 +73502,7 @@ Transform:
   m_GameObject: {fileID: 1880643300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.801, y: .508000016, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1751720007}
   m_Father: {fileID: 366300793}
@@ -73575,6 +73519,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1880643303
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1470912961}
+  m_GameObject: {fileID: 1880643300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &1883394140
 GameObject:
   m_ObjectHideFlags: 0
@@ -73822,7 +73780,6 @@ GameObject:
   - 33: {fileID: 1888118962}
   - 23: {fileID: 1888118961}
   - 95: {fileID: 1888118960}
-  - 64: {fileID: 1888118959}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -73842,20 +73799,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 640368605}
   m_RootOrder: 0
---- !u!64 &1888118959
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 401161427}
-  m_GameObject: {fileID: 1888118957}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1888118960
 Animator:
   serializedVersion: 3
@@ -74533,11 +74476,12 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-  m_PrefabInternal: {fileID: 420975324}
+  m_PrefabInternal: {fileID: 627861717}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1913644155}
   - 114: {fileID: 1913644156}
+  - 136: {fileID: 1913644157}
   m_Layer: 8
   m_Name: FirstDiamond
   m_TagString: Diamond
@@ -74549,7 +74493,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
-  m_PrefabInternal: {fileID: 420975324}
+  m_PrefabInternal: {fileID: 627861717}
   m_GameObject: {fileID: 1913644154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3, y: .0500000007, z: 0}
@@ -74563,13 +74507,27 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
-  m_PrefabInternal: {fileID: 420975324}
+  m_PrefabInternal: {fileID: 627861717}
   m_GameObject: {fileID: 1913644154}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1913644157
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 627861717}
+  m_GameObject: {fileID: 1913644154}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &1914331145
 GameObject:
   m_ObjectHideFlags: 0
@@ -75854,7 +75812,6 @@ GameObject:
   - 33: {fileID: 1945732980}
   - 23: {fileID: 1945732979}
   - 95: {fileID: 1945732978}
-  - 64: {fileID: 1945732977}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -75874,20 +75831,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2078945381}
   m_RootOrder: 0
---- !u!64 &1945732977
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1543763708}
-  m_GameObject: {fileID: 1945732975}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1945732978
 Animator:
   serializedVersion: 3
@@ -77977,7 +77920,6 @@ GameObject:
   - 33: {fileID: 1991413865}
   - 23: {fileID: 1991413864}
   - 95: {fileID: 1991413863}
-  - 64: {fileID: 1991413862}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -77997,20 +77939,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 316096797}
   m_RootOrder: 0
---- !u!64 &1991413862
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 875700951}
-  m_GameObject: {fileID: 1991413860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &1991413863
 Animator:
   serializedVersion: 3
@@ -78929,6 +78857,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2012505679}
   - 114: {fileID: 2012505680}
+  - 136: {fileID: 2012505681}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -78944,7 +78873,7 @@ Transform:
   m_GameObject: {fileID: 2012505678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .347000003, y: .337000012, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1634499664}
   m_Father: {fileID: 1296764462}
@@ -78961,6 +78890,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &2012505681
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 315307512}
+  m_GameObject: {fileID: 2012505678}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &2012906421
 GameObject:
   m_ObjectHideFlags: 0
@@ -79593,6 +79536,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2037198266}
   - 114: {fileID: 2037198267}
+  - 136: {fileID: 2037198268}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -79608,7 +79552,7 @@ Transform:
   m_GameObject: {fileID: 2037198265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .629999995, y: .610000014, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1671617942}
   m_Father: {fileID: 1296764462}
@@ -79625,6 +79569,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &2037198268
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1794790516}
+  m_GameObject: {fileID: 2037198265}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &2040562661
 GameObject:
   m_ObjectHideFlags: 0
@@ -81374,6 +81332,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2078945381}
   - 114: {fileID: 2078945382}
+  - 136: {fileID: 2078945383}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -81389,7 +81348,7 @@ Transform:
   m_GameObject: {fileID: 2078945380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.93799996, y: .0500000007, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1945732976}
   m_Father: {fileID: 366300793}
@@ -81406,6 +81365,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &2078945383
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1543763708}
+  m_GameObject: {fileID: 2078945380}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &2079315650
 GameObject:
   m_ObjectHideFlags: 0
@@ -81417,7 +81390,6 @@ GameObject:
   - 33: {fileID: 2079315655}
   - 23: {fileID: 2079315654}
   - 95: {fileID: 2079315653}
-  - 64: {fileID: 2079315652}
   m_Layer: 0
   m_Name: DiamondDummy
   m_TagString: Untagged
@@ -81437,20 +81409,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1525953023}
   m_RootOrder: 0
---- !u!64 &2079315652
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: 62a378e4ea19ce94fabe701dea178e0c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1796423878}
-  m_GameObject: {fileID: 2079315650}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c9e92aa1af1e91d48b683f8da4d393f2, type: 3}
 --- !u!95 &2079315653
 Animator:
   serializedVersion: 3
@@ -82370,6 +82328,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2096285699}
   - 114: {fileID: 2096285700}
+  - 136: {fileID: 2096285701}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -82385,7 +82344,7 @@ Transform:
   m_GameObject: {fileID: 2096285698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.801, y: .0500000007, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1571718017}
   m_Father: {fileID: 366300793}
@@ -82402,6 +82361,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &2096285701
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 116209789}
+  m_GameObject: {fileID: 2096285698}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1 &2098157019
 GameObject:
   m_ObjectHideFlags: 0
@@ -83870,6 +83843,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2129292967}
   - 114: {fileID: 2129292968}
+  - 136: {fileID: 2129292969}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -83885,7 +83859,7 @@ Transform:
   m_GameObject: {fileID: 2129292966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.20000005, y: 1.17999995, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 1465471368}
   m_Father: {fileID: 1296764462}
@@ -83902,6 +83876,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &2129292969
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13643568, guid: 62a378e4ea19ce94fabe701dea178e0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1052741750}
+  m_GameObject: {fileID: 2129292966}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0160000008
+  m_Height: .064000003
+  m_Direction: 1
+  m_Center: {x: 0, y: .0320000015, z: 0}
 --- !u!1001 &2130668311
 Prefab:
   m_ObjectHideFlags: 0

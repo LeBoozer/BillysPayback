@@ -355,14 +355,6 @@ public class Player : MonoBehaviour {
 			g = g.transform.parent.gameObject;
 		}
 
-		//  Diamonds
-		if(tag.Equals(Tags.TAG_DIAMOND))
-		{
-            m_playerData.CollectedDiamonds++;
-			Destroy(_hit.transform.parent.gameObject);
-			return;
-		}
-
 		// kiwanos
 		if(tag.Equals(Tags.TAG_KIWANO_POWER_UP))
 		{
@@ -396,8 +388,17 @@ public class Player : MonoBehaviour {
 			
 	}
 
+    // Override: MonoBehaviour::OnTriggerEnter()
+    void OnTriggerEnter(Collider _other)
+    {
+        //  Diamonds
+        if (_other.tag.Equals(Tags.TAG_DIAMOND))
+        {
+            m_playerData.CollectedDiamonds++;
+            Destroy(_other.gameObject);
+            return;
+        }
+    }
 
 	#endregion
-
-
 }
