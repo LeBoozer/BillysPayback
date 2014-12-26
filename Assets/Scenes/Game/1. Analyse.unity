@@ -1015,7 +1015,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &27233561
 Animator:
@@ -2035,7 +2035,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &54488375
 Animator:
@@ -2666,7 +2666,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &65860960
 Animator:
@@ -2828,7 +2828,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &66377693
 Renderer:
@@ -3559,7 +3559,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &88641074
 Animator:
@@ -6472,7 +6472,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &164836545
 Animator:
@@ -8602,7 +8602,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &216105131
 Animator:
@@ -8892,7 +8892,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &219175695
 Animator:
@@ -10293,6 +10293,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: 2b6ef568e744ce147b6a1453e289ed21, type: 2}
+      propertyPath: m_SmoothSphereCollisions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: 2b6ef568e744ce147b6a1453e289ed21, type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b6ef568e744ce147b6a1453e289ed21, type: 2}
   m_RootGameObject: {fileID: 2099626122}
@@ -11421,7 +11429,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &281706943
 Renderer:
@@ -12068,7 +12076,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &306045964
 Renderer:
@@ -12794,7 +12802,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &321641074
 Renderer:
@@ -13419,7 +13427,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &339530706
 Renderer:
@@ -14693,7 +14701,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &378022389
 Animator:
@@ -15262,7 +15270,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &397038905
 Animator:
@@ -15948,7 +15956,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &413240111
 Animator:
@@ -17078,7 +17086,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &447480192
 Renderer:
@@ -21030,6 +21038,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: 9bb04f1774f773945b6af5dd1457a3e7, type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9bb04f1774f773945b6af5dd1457a3e7, type: 2}
   m_RootGameObject: {fileID: 1251682003}
@@ -21191,7 +21203,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &552501466
 Renderer:
@@ -22003,7 +22015,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &569925726
 Animator:
@@ -25057,7 +25069,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &640020511
 Renderer:
@@ -27036,6 +27048,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
   m_RootGameObject: {fileID: 252008447}
@@ -28172,7 +28188,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &704049954
 Animator:
@@ -29394,7 +29410,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &746754022
 Animator:
@@ -31685,7 +31701,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &811026407
 Renderer:
@@ -33849,7 +33865,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &879270594
 Renderer:
@@ -34547,7 +34563,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &906019400
 Renderer:
@@ -35482,7 +35498,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &924770253
 Animator:
@@ -37269,7 +37285,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &972015624
 Renderer:
@@ -37475,7 +37491,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &978216855
 Renderer:
@@ -38251,7 +38267,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1001132903
 Renderer:
@@ -38634,7 +38650,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1013424407
 Renderer:
@@ -39563,7 +39579,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1041564712
 Renderer:
@@ -40657,7 +40673,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1056501563
 Animator:
@@ -40862,7 +40878,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1063928178
 Renderer:
@@ -41446,7 +41462,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1078607936
 Animator:
@@ -42685,7 +42701,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1106316605
 Renderer:
@@ -43538,7 +43554,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1133953848
 Renderer:
@@ -43612,7 +43628,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1135889030
 Animator:
@@ -44859,7 +44875,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1176280713
 Animator:
@@ -45864,7 +45880,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1200445658
 Animator:
@@ -46058,7 +46074,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1201749537
 Animator:
@@ -47267,7 +47283,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1227148151
 Renderer:
@@ -47782,7 +47798,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1234810840
 Animator:
@@ -48058,7 +48074,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1241265306
 Animator:
@@ -48341,7 +48357,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1245217022
 Renderer:
@@ -48864,7 +48880,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1253932629
 Animator:
@@ -49980,7 +49996,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1291782705
 Renderer:
@@ -51092,7 +51108,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1318641506
 Animator:
@@ -51378,7 +51394,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1322400161
 Animator:
@@ -51756,7 +51772,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1337200042
 Animator:
@@ -54797,7 +54813,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1423259618
 Renderer:
@@ -60387,7 +60403,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1576865283
 Animator:
@@ -62225,7 +62241,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1616871550
 Renderer:
@@ -62446,7 +62462,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1633068875
 Renderer:
@@ -62622,7 +62638,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1634661251
 Renderer:
@@ -63914,7 +63930,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1657828189
 Animator:
@@ -64258,6 +64274,10 @@ Prefab:
     - target: {fileID: 400002, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
@@ -64802,7 +64822,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1675914033
 Renderer:
@@ -66627,7 +66647,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1736843527
 Renderer:
@@ -71038,7 +71058,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1830342384
 Animator:
@@ -71547,7 +71567,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1839555874
 Animator:
@@ -71973,7 +71993,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1843704668
 Animator:
@@ -73189,7 +73209,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1868789924
 Renderer:
@@ -73813,7 +73833,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1887485036
 Renderer:
@@ -74501,7 +74521,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1902616766
 Animator:
@@ -75397,7 +75417,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1927535965
 Renderer:
@@ -76160,7 +76180,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &1951243452
 Renderer:
@@ -76532,7 +76552,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1954671797
 Animator:
@@ -76854,7 +76874,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1967878860
 Animator:
@@ -77920,7 +77940,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &1989770749
 Animator:
@@ -78800,7 +78820,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &2008276260
 Animator:
@@ -79917,7 +79937,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &2044528588
 Animator:
@@ -81142,7 +81162,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &2072871524
 Animator:
@@ -82198,7 +82218,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 7bbf6569f589e48438af2ca9fe9a4061, type: 3}
 --- !u!95 &2090286859
 Animator:
@@ -84632,7 +84652,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 645e69b8202030b43970e6291a50d6a8, type: 3}
 --- !u!23 &2142138651
 Renderer:
