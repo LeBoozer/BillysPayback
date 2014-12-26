@@ -383,9 +383,7 @@ public class Player : MonoBehaviour {
 
 		// with other non-untagged objects
 		if(!tag.Equals(Tags.TAG_UNTAGGED))
-			g.SendMessage ("PlayerCollision", this.gameObject, SendMessageOptions.DontRequireReceiver); 
-
-			
+			g.SendMessage ("PlayerCollision", this.gameObject, SendMessageOptions.DontRequireReceiver); 	
 	}
 
     // Override: MonoBehaviour::OnTriggerEnter()

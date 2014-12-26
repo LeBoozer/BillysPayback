@@ -8,7 +8,7 @@ using UnityEngine;
 using System.Collections;
 
 /*
- * ToDo
+ * Handles all diamong related behaviours
  */
 public class Diamond : MonoBehaviour
 {
