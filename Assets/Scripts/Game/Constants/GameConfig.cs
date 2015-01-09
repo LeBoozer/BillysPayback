@@ -27,4 +27,10 @@ public class GameConfig
 
     // Diamond related values
     public static readonly float    DIAMONG_ROTATION_SPEED          = 55.0f;
+
+    // Egg related values
+    public static readonly float    EGG_BENEATH_FACTOR              = 0.65f;
+
+    // Destroyable block related values
+    public static readonly float    DESTROYABLE_BOX_DEFAULT_LIFE_TIME_SEC = 5.0f;
 }

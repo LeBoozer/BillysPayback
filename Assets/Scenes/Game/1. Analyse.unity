@@ -1771,7 +1771,7 @@ BoxCollider:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-  m_PrefabInternal: {fileID: 1941486600}
+  m_PrefabInternal: {fileID: 1246981959}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 49822506}
@@ -1787,7 +1787,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-  m_PrefabInternal: {fileID: 1941486600}
+  m_PrefabInternal: {fileID: 1246981959}
   m_GameObject: {fileID: 49822505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1795,13 +1795,13 @@ Transform:
   m_Children:
   - {fileID: 1109690496}
   m_Father: {fileID: 1583299911}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &49822507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
     type: 2}
-  m_PrefabInternal: {fileID: 1941486600}
+  m_PrefabInternal: {fileID: 1246981959}
   m_GameObject: {fileID: 49822505}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -2226,8 +2226,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 56221955}
-  - 114: {fileID: 56221956}
   - 136: {fileID: 56221957}
+  - 114: {fileID: 56221956}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -2251,15 +2251,17 @@ Transform:
 --- !u!114 &56221956
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1596662931}
   m_GameObject: {fileID: 56221954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &56221957
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4623,8 +4625,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 117396712}
-  - 114: {fileID: 117396713}
   - 136: {fileID: 117396714}
+  - 114: {fileID: 117396713}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -4648,15 +4650,17 @@ Transform:
 --- !u!114 &117396713
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 2096019267}
   m_GameObject: {fileID: 117396711}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &117396714
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4823,6 +4827,50 @@ Transform:
   - {fileID: 279639014}
   m_Father: {fileID: 161345538}
   m_RootOrder: 1
+--- !u!1001 &121085977
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1583299911}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .324999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+  m_RootGameObject: {fileID: 1362530407}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &121459799
 GameObject:
   m_ObjectHideFlags: 0
@@ -5139,6 +5187,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 135296042}
   - 114: {fileID: 135296044}
+  - 54: {fileID: 135296043}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -5159,6 +5208,22 @@ Transform:
   - {fileID: 1930235007}
   m_Father: {fileID: 1648281395}
   m_RootOrder: 3
+--- !u!54 &135296043
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
+    type: 2}
+  m_PrefabInternal: {fileID: 673996469}
+  m_GameObject: {fileID: 135296041}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!114 &135296044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8511,8 +8576,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 215353717}
-  - 114: {fileID: 215353718}
   - 136: {fileID: 215353719}
+  - 114: {fileID: 215353718}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -8536,15 +8601,17 @@ Transform:
 --- !u!114 &215353718
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 524511571}
   m_GameObject: {fileID: 215353716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &215353719
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8658,6 +8725,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 216517395}
   - 114: {fileID: 216517397}
+  - 54: {fileID: 216517396}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -8678,6 +8746,22 @@ Transform:
   - {fileID: 379843792}
   m_Father: {fileID: 2005605045}
   m_RootOrder: 0
+--- !u!54 &216517396
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
+    type: 2}
+  m_PrefabInternal: {fileID: 1006383461}
+  m_GameObject: {fileID: 216517394}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!114 &216517397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8728,8 +8812,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 218572736}
-  - 114: {fileID: 218572737}
   - 136: {fileID: 218572738}
+  - 114: {fileID: 218572737}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -8753,15 +8837,17 @@ Transform:
 --- !u!114 &218572737
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 41338502}
   m_GameObject: {fileID: 218572735}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &218572738
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8967,6 +9053,64 @@ Transform:
   - {fileID: 1155557999}
   m_Father: {fileID: 1901728214}
   m_RootOrder: 0
+--- !u!1 &220012619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
+  m_PrefabInternal: {fileID: 762518963}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 220012622}
+  - 114: {fileID: 220012621}
+  - 136: {fileID: 220012620}
+  m_Layer: 8
+  m_Name: KiwanoPowerUp
+  m_TagString: KiwanoPowerUp
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!136 &220012620
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13676340, guid: da890fc79736a454d95e255c4ae44338,
+    type: 2}
+  m_PrefabInternal: {fileID: 762518963}
+  m_GameObject: {fileID: 220012619}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0500000007
+  m_Height: .150000006
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &220012621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11496652, guid: da890fc79736a454d95e255c4ae44338,
+    type: 2}
+  m_PrefabInternal: {fileID: 762518963}
+  m_GameObject: {fileID: 220012619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 0
+  m_isDiamond: 0
+--- !u!4 &220012622
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
+  m_PrefabInternal: {fileID: 762518963}
+  m_GameObject: {fileID: 220012619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.57700014, y: 1.28100002, z: -.563000023}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_Children:
+  - {fileID: 1558700420}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
 --- !u!1 &221408488
 GameObject:
   m_ObjectHideFlags: 0
@@ -10106,6 +10250,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 252008448}
   - 114: {fileID: 252008449}
+  - 54: {fileID: 252008450}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -10139,6 +10284,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
+--- !u!54 &252008450
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
+    type: 2}
+  m_PrefabInternal: {fileID: 677495526}
+  m_GameObject: {fileID: 252008447}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &253183385
 GameObject:
   m_ObjectHideFlags: 0
@@ -10912,7 +11073,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100006, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 272105798}
@@ -10929,7 +11090,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400006, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   m_GameObject: {fileID: 272105797}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: .76836133, y: .160820007, z: -.00211752532}
@@ -10942,7 +11103,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300002, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   m_GameObject: {fileID: 272105797}
   m_Enabled: 1
   m_CastShadows: 1
@@ -10963,7 +11124,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300002, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   m_GameObject: {fileID: 272105797}
   m_Mesh: {fileID: 4300000, guid: f15ed0d8976a75e42810ca2bf9b320ab, type: 3}
 --- !u!1 &273301833
@@ -12157,7 +12318,6 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -12526,8 +12686,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 316096797}
-  - 114: {fileID: 316096798}
   - 136: {fileID: 316096799}
+  - 114: {fileID: 316096798}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -12551,15 +12711,17 @@ Transform:
 --- !u!114 &316096798
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 875700951}
   m_GameObject: {fileID: 316096796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &316096799
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13103,8 +13265,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 332454961}
-  - 114: {fileID: 332454962}
   - 136: {fileID: 332454963}
+  - 114: {fileID: 332454962}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -13128,15 +13290,17 @@ Transform:
 --- !u!114 &332454962
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1159367242}
   m_GameObject: {fileID: 332454960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &332454963
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16839,8 +17003,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 442866984}
-  - 114: {fileID: 442866985}
   - 136: {fileID: 442866986}
+  - 114: {fileID: 442866985}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -16864,15 +17028,17 @@ Transform:
 --- !u!114 &442866985
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1572618339}
   m_GameObject: {fileID: 442866983}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &442866986
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17581,8 +17747,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 470406489}
-  - 114: {fileID: 470406490}
   - 136: {fileID: 470406491}
+  - 114: {fileID: 470406490}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -17606,15 +17772,17 @@ Transform:
 --- !u!114 &470406490
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 2122912256}
   m_GameObject: {fileID: 470406488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &470406491
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18248,8 +18416,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 494982943}
-  - 114: {fileID: 494982944}
   - 136: {fileID: 494982945}
+  - 114: {fileID: 494982944}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -18273,15 +18441,17 @@ Transform:
 --- !u!114 &494982944
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1086469992}
   m_GameObject: {fileID: 494982942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &494982945
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18780,8 +18950,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 507621286}
-  - 114: {fileID: 507621287}
   - 136: {fileID: 507621288}
+  - 114: {fileID: 507621287}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -18805,15 +18975,17 @@ Transform:
 --- !u!114 &507621287
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1866033775}
   m_GameObject: {fileID: 507621285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &507621288
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -19766,6 +19938,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 528090930}
   - 114: {fileID: 528090932}
+  - 54: {fileID: 528090931}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -19786,6 +19959,22 @@ Transform:
   - {fileID: 1250324829}
   m_Father: {fileID: 2005605045}
   m_RootOrder: 5
+--- !u!54 &528090931
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
+    type: 2}
+  m_PrefabInternal: {fileID: 1229963219}
+  m_GameObject: {fileID: 528090929}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!114 &528090932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20946,7 +21135,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 550180278}
@@ -20963,7 +21152,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   m_GameObject: {fileID: 550180277}
   m_LocalRotation: {x: 0, y: .0756936148, z: -0, w: .997131109}
   m_LocalPosition: {x: .0767846853, y: -.00424735481, z: .248259991}
@@ -20976,7 +21165,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300000, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   m_GameObject: {fileID: 550180277}
   m_Enabled: 1
   m_CastShadows: 1
@@ -20997,7 +21186,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300000, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   m_GameObject: {fileID: 550180277}
   m_Mesh: {fileID: 4300004, guid: f15ed0d8976a75e42810ca2bf9b320ab, type: 3}
 --- !u!1001 &550586277
@@ -21114,8 +21303,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 552407626}
-  - 114: {fileID: 552407627}
   - 136: {fileID: 552407628}
+  - 114: {fileID: 552407627}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -21139,15 +21328,17 @@ Transform:
 --- !u!114 &552407627
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 290435582}
   m_GameObject: {fileID: 552407625}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &552407628
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -22808,7 +22999,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &586719352
 GameObject:
   m_ObjectHideFlags: 0
@@ -23947,8 +24138,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 613638882}
-  - 114: {fileID: 613638883}
   - 136: {fileID: 613638884}
+  - 114: {fileID: 613638883}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -23972,15 +24163,17 @@ Transform:
 --- !u!114 &613638883
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 484770979}
   m_GameObject: {fileID: 613638881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &613638884
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -24390,7 +24583,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-  m_PrefabInternal: {fileID: 1415113533}
+  m_PrefabInternal: {fileID: 121085977}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 618699047}
@@ -24409,7 +24602,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-  m_PrefabInternal: {fileID: 1415113533}
+  m_PrefabInternal: {fileID: 121085977}
   m_GameObject: {fileID: 618699046}
   m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
   m_LocalPosition: {x: -0, y: 0, z: 0}
@@ -24422,7 +24615,7 @@ MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6400000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
     type: 2}
-  m_PrefabInternal: {fileID: 1415113533}
+  m_PrefabInternal: {fileID: 121085977}
   m_GameObject: {fileID: 618699046}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -24437,7 +24630,7 @@ Animator:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 9500000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
     type: 2}
-  m_PrefabInternal: {fileID: 1415113533}
+  m_PrefabInternal: {fileID: 121085977}
   m_GameObject: {fileID: 618699046}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
@@ -24452,7 +24645,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
     type: 2}
-  m_PrefabInternal: {fileID: 1415113533}
+  m_PrefabInternal: {fileID: 121085977}
   m_GameObject: {fileID: 618699046}
   m_Enabled: 1
   m_CastShadows: 1
@@ -24473,7 +24666,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
     type: 2}
-  m_PrefabInternal: {fileID: 1415113533}
+  m_PrefabInternal: {fileID: 121085977}
   m_GameObject: {fileID: 618699046}
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
 --- !u!1 &622909582
@@ -25193,8 +25386,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 640368605}
-  - 114: {fileID: 640368606}
   - 136: {fileID: 640368607}
+  - 114: {fileID: 640368606}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -25218,15 +25411,17 @@ Transform:
 --- !u!114 &640368606
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 401161427}
   m_GameObject: {fileID: 640368604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &640368607
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -26539,6 +26734,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 665952093}
   - 114: {fileID: 665952094}
+  - 54: {fileID: 665952095}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -26571,7 +26767,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8740894dbd1ea149ab78537a66ae02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_eggType: 3
+  m_eggType: 2
+--- !u!54 &665952095
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
+    type: 2}
+  m_PrefabInternal: {fileID: 2054976516}
+  m_GameObject: {fileID: 665952092}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &667050536
 Prefab:
   m_ObjectHideFlags: 0
@@ -26927,8 +27139,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 673810220}
-  - 114: {fileID: 673810221}
   - 136: {fileID: 673810222}
+  - 114: {fileID: 673810221}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -26952,15 +27164,17 @@ Transform:
 --- !u!114 &673810221
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 684964080}
   m_GameObject: {fileID: 673810219}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &673810222
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -29685,8 +29899,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 751651185}
-  - 114: {fileID: 751651186}
   - 136: {fileID: 751651187}
+  - 114: {fileID: 751651186}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -29710,15 +29924,17 @@ Transform:
 --- !u!114 &751651186
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1612331684}
   m_GameObject: {fileID: 751651184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &751651187
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -30114,6 +30330,50 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1926007019}
   m_GameObject: {fileID: 761082695}
   m_Mesh: {fileID: 4300004, guid: 853039dafd6fb244aaa2e2dceb3775b4, type: 3}
+--- !u!1001 &762518963
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.57700014
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.28100002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.563000023
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
+  m_RootGameObject: {fileID: 220012619}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &762634806
 GameObject:
   m_ObjectHideFlags: 0
@@ -30513,8 +30773,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 777768396}
-  - 114: {fileID: 777768397}
   - 136: {fileID: 777768398}
+  - 114: {fileID: 777768397}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -30538,15 +30798,17 @@ Transform:
 --- !u!114 &777768397
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1876370448}
   m_GameObject: {fileID: 777768395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &777768398
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -31570,7 +31832,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100008, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 802715127}
@@ -31587,7 +31849,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400008, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   m_GameObject: {fileID: 802715126}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -.000251190795, y: -.000311598182, z: .21299918}
@@ -31600,7 +31862,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300004, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   m_GameObject: {fileID: 802715126}
   m_Enabled: 1
   m_CastShadows: 1
@@ -31621,7 +31883,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300004, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   m_GameObject: {fileID: 802715126}
   m_Mesh: {fileID: 4300002, guid: f15ed0d8976a75e42810ca2bf9b320ab, type: 3}
 --- !u!1 &805299136
@@ -33216,8 +33478,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 861469869}
-  - 114: {fileID: 861469870}
   - 136: {fileID: 861469871}
+  - 114: {fileID: 861469870}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -33241,15 +33503,17 @@ Transform:
 --- !u!114 &861469870
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1613607026}
   m_GameObject: {fileID: 861469868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &861469871
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -34659,8 +34923,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 904121917}
-  - 114: {fileID: 904121918}
   - 136: {fileID: 904121919}
+  - 114: {fileID: 904121918}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -34684,15 +34948,17 @@ Transform:
 --- !u!114 &904121918
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 645244942}
   m_GameObject: {fileID: 904121916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &904121919
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -34846,8 +35112,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 907619132}
-  - 114: {fileID: 907619133}
   - 136: {fileID: 907619134}
+  - 114: {fileID: 907619133}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -34871,15 +35137,17 @@ Transform:
 --- !u!114 &907619133
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 218906481}
   m_GameObject: {fileID: 907619131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &907619134
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -35944,8 +36212,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 930542320}
-  - 114: {fileID: 930542321}
   - 136: {fileID: 930542322}
+  - 114: {fileID: 930542321}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -35969,15 +36237,17 @@ Transform:
 --- !u!114 &930542321
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1384550336}
   m_GameObject: {fileID: 930542319}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &930542322
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -36669,8 +36939,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 946078113}
-  - 114: {fileID: 946078114}
   - 136: {fileID: 946078115}
+  - 114: {fileID: 946078114}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -36694,15 +36964,17 @@ Transform:
 --- !u!114 &946078114
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1834153790}
   m_GameObject: {fileID: 946078112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &946078115
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -36856,8 +37128,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 950270875}
-  - 114: {fileID: 950270876}
   - 136: {fileID: 950270877}
+  - 114: {fileID: 950270876}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -36881,15 +37153,17 @@ Transform:
 --- !u!114 &950270876
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1767163974}
   m_GameObject: {fileID: 950270874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &950270877
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -41621,8 +41895,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1077063929}
-  - 114: {fileID: 1077063930}
   - 136: {fileID: 1077063931}
+  - 114: {fileID: 1077063930}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -41646,15 +41920,17 @@ Transform:
 --- !u!114 &1077063930
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1840719973}
   m_GameObject: {fileID: 1077063928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &1077063931
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -41842,8 +42118,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1079393002}
-  - 114: {fileID: 1079393003}
   - 136: {fileID: 1079393004}
+  - 114: {fileID: 1079393003}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -41867,15 +42143,17 @@ Transform:
 --- !u!114 &1079393003
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 100949291}
   m_GameObject: {fileID: 1079393001}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &1079393004
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -42683,6 +42961,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1097053207}
   - 114: {fileID: 1097053209}
+  - 54: {fileID: 1097053208}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -42703,6 +42982,22 @@ Transform:
   - {fileID: 589907973}
   m_Father: {fileID: 2005605045}
   m_RootOrder: 4
+--- !u!54 &1097053208
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
+    type: 2}
+  m_PrefabInternal: {fileID: 913998231}
+  m_GameObject: {fileID: 1097053206}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!114 &1097053209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43061,7 +43356,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-  m_PrefabInternal: {fileID: 1941486600}
+  m_PrefabInternal: {fileID: 1246981959}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1109690496}
@@ -43080,7 +43375,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-  m_PrefabInternal: {fileID: 1941486600}
+  m_PrefabInternal: {fileID: 1246981959}
   m_GameObject: {fileID: 1109690495}
   m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
   m_LocalPosition: {x: -0, y: 0, z: 0}
@@ -43093,7 +43388,7 @@ MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6400000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
     type: 2}
-  m_PrefabInternal: {fileID: 1941486600}
+  m_PrefabInternal: {fileID: 1246981959}
   m_GameObject: {fileID: 1109690495}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -43108,7 +43403,7 @@ Animator:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 9500000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
     type: 2}
-  m_PrefabInternal: {fileID: 1941486600}
+  m_PrefabInternal: {fileID: 1246981959}
   m_GameObject: {fileID: 1109690495}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
@@ -43123,7 +43418,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
     type: 2}
-  m_PrefabInternal: {fileID: 1941486600}
+  m_PrefabInternal: {fileID: 1246981959}
   m_GameObject: {fileID: 1109690495}
   m_Enabled: 1
   m_CastShadows: 1
@@ -43144,7 +43439,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
     type: 2}
-  m_PrefabInternal: {fileID: 1941486600}
+  m_PrefabInternal: {fileID: 1246981959}
   m_GameObject: {fileID: 1109690495}
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
 --- !u!1 &1113478739
@@ -44041,8 +44336,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1138926838}
-  - 114: {fileID: 1138926839}
   - 136: {fileID: 1138926840}
+  - 114: {fileID: 1138926839}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -44066,15 +44361,17 @@ Transform:
 --- !u!114 &1138926839
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 2026330490}
   m_GameObject: {fileID: 1138926837}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &1138926840
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -48806,6 +49103,51 @@ Transform:
   - {fileID: 1390143564}
   m_Father: {fileID: 727231579}
   m_RootOrder: 3
+--- !u!1001 &1246981959
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1583299911}
+    m_Modifications:
+    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+  m_RootGameObject: {fileID: 49822505}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1247316654
 GameObject:
   m_ObjectHideFlags: 0
@@ -50039,6 +50381,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1281825834}
   - 114: {fileID: 1281825835}
+  - 54: {fileID: 1281825836}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -50072,6 +50415,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
+--- !u!54 &1281825836
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
+    type: 2}
+  m_PrefabInternal: {fileID: 1163750140}
+  m_GameObject: {fileID: 1281825833}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1284753484
 GameObject:
   m_ObjectHideFlags: 0
@@ -53114,11 +53473,12 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-  m_PrefabInternal: {fileID: 1415113533}
+  m_PrefabInternal: {fileID: 121085977}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1362530408}
   - 114: {fileID: 1362530409}
+  - 54: {fileID: 1362530410}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -53130,21 +53490,21 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-  m_PrefabInternal: {fileID: 1415113533}
+  m_PrefabInternal: {fileID: 121085977}
   m_GameObject: {fileID: 1362530407}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .333000004, y: 0, z: 0}
+  m_LocalPosition: {x: .324999988, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 618699047}
   m_Father: {fileID: 1583299911}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!114 &1362530409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
     type: 2}
-  m_PrefabInternal: {fileID: 1415113533}
+  m_PrefabInternal: {fileID: 121085977}
   m_GameObject: {fileID: 1362530407}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -53152,6 +53512,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
+--- !u!54 &1362530410
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
+    type: 2}
+  m_PrefabInternal: {fileID: 121085977}
+  m_GameObject: {fileID: 1362530407}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1362782806
 GameObject:
   m_ObjectHideFlags: 0
@@ -53638,8 +54014,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1381035804}
-  - 114: {fileID: 1381035805}
   - 136: {fileID: 1381035806}
+  - 114: {fileID: 1381035805}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -53663,15 +54039,17 @@ Transform:
 --- !u!114 &1381035805
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 160162204}
   m_GameObject: {fileID: 1381035803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &1381035806
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -54203,8 +54581,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1391528762}
-  - 114: {fileID: 1391528763}
   - 136: {fileID: 1391528764}
+  - 114: {fileID: 1391528763}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -54228,15 +54606,17 @@ Transform:
 --- !u!114 &1391528763
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 2018121042}
   m_GameObject: {fileID: 1391528761}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &1391528764
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -54525,6 +54905,50 @@ Transform:
   - {fileID: 1634661249}
   m_Father: {fileID: 1785624476}
   m_RootOrder: 1
+--- !u!1001 &1403960520
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1980607810}
+    m_Modifications:
+    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 23.1100006
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+  m_RootGameObject: {fileID: 2067125881}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1405700926
 GameObject:
   m_ObjectHideFlags: 0
@@ -54880,98 +55304,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 168702462}
   m_GameObject: {fileID: 1413550353}
   m_Mesh: {fileID: 4300004, guid: eac70a064339b694c9463d6d2dcf8bd7, type: 3}
---- !u!1001 &1413840758
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1980607810}
-    m_Modifications:
-    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_jumpHeight
-      value: 18
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_RootGameObject: {fileID: 2067125881}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
---- !u!1001 &1415113533
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1583299911}
-    m_Modifications:
-    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: .333000004
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-  m_RootGameObject: {fileID: 1362530407}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1418012032
 GameObject:
   m_ObjectHideFlags: 0
@@ -55288,8 +55620,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1423963867}
-  - 114: {fileID: 1423963868}
   - 136: {fileID: 1423963869}
+  - 114: {fileID: 1423963868}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -55313,15 +55645,17 @@ Transform:
 --- !u!114 &1423963868
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1853337880}
   m_GameObject: {fileID: 1423963866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &1423963869
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -57200,8 +57534,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1470872999}
-  - 114: {fileID: 1470873000}
   - 136: {fileID: 1470873001}
+  - 114: {fileID: 1470873000}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -57225,15 +57559,17 @@ Transform:
 --- !u!114 &1470873000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1228201957}
   m_GameObject: {fileID: 1470872998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &1470873001
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -58936,8 +59272,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1525953023}
-  - 114: {fileID: 1525953024}
   - 136: {fileID: 1525953025}
+  - 114: {fileID: 1525953024}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -58961,15 +59297,17 @@ Transform:
 --- !u!114 &1525953024
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1796423878}
   m_GameObject: {fileID: 1525953022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &1525953025
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -60254,6 +60592,64 @@ Transform:
   - {fileID: 1783810093}
   m_Father: {fileID: 15189978}
   m_RootOrder: 0
+--- !u!1 &1558700419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: da890fc79736a454d95e255c4ae44338, type: 2}
+  m_PrefabInternal: {fileID: 762518963}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1558700420}
+  - 33: {fileID: 1558700422}
+  - 23: {fileID: 1558700421}
+  m_Layer: 8
+  m_Name: Model
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1558700420
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: da890fc79736a454d95e255c4ae44338, type: 2}
+  m_PrefabInternal: {fileID: 762518963}
+  m_GameObject: {fileID: 1558700419}
+  m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1.8217386}
+  m_Children: []
+  m_Father: {fileID: 220012622}
+  m_RootOrder: 0
+--- !u!23 &1558700421
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: da890fc79736a454d95e255c4ae44338,
+    type: 2}
+  m_PrefabInternal: {fileID: 762518963}
+  m_GameObject: {fileID: 1558700419}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1558700422
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: da890fc79736a454d95e255c4ae44338,
+    type: 2}
+  m_PrefabInternal: {fileID: 762518963}
+  m_GameObject: {fileID: 1558700419}
+  m_Mesh: {fileID: 4300000, guid: 4af964fb8be78d547956acc19f32f4ff, type: 3}
 --- !u!1 &1559761334
 GameObject:
   m_ObjectHideFlags: 0
@@ -61083,8 +61479,8 @@ Transform:
   m_LocalPosition: {x: 23.1100006, y: .600000024, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 49822506}
   - {fileID: 1362530408}
+  - {fileID: 49822506}
   - {fileID: 665952093}
   - {fileID: 1736910075}
   - {fileID: 1951020240}
@@ -61349,8 +61745,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1591046411}
-  - 114: {fileID: 1591046412}
   - 136: {fileID: 1591046413}
+  - 114: {fileID: 1591046412}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -61374,15 +61770,17 @@ Transform:
 --- !u!114 &1591046412
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1202669114}
   m_GameObject: {fileID: 1591046410}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &1591046413
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -62138,6 +62536,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1609022086}
   - 114: {fileID: 1609022085}
+  - 54: {fileID: 1609022084}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -62145,6 +62544,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!54 &1609022084
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
+    type: 2}
+  m_PrefabInternal: {fileID: 1500019124}
+  m_GameObject: {fileID: 1609022083}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!114 &1609022085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67077,6 +67492,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1736910075}
   - 114: {fileID: 1736910076}
+  - 54: {fileID: 1736910077}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -67110,6 +67526,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
+--- !u!54 &1736910077
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
+    type: 2}
+  m_PrefabInternal: {fileID: 1554840453}
+  m_GameObject: {fileID: 1736910074}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1737059558
 GameObject:
   m_ObjectHideFlags: 0
@@ -67118,8 +67550,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1737059559}
-  - 114: {fileID: 1737059560}
   - 136: {fileID: 1737059561}
+  - 114: {fileID: 1737059560}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -67143,15 +67575,17 @@ Transform:
 --- !u!114 &1737059560
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 58169813}
   m_GameObject: {fileID: 1737059558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &1737059561
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -67375,12 +67809,11 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100004, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1747372107}
   - 95: {fileID: 1747372109}
-  - 64: {fileID: 1747372108}
   m_Layer: 0
   m_Name: BillyDummy
   m_TagString: Untagged
@@ -67392,7 +67825,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400004, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   m_GameObject: {fileID: 1747372106}
   m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
   m_LocalPosition: {x: 1.49011609e-10, y: 0, z: -5.96046434e-10}
@@ -67403,27 +67836,13 @@ Transform:
   - {fileID: 272105798}
   m_Father: {fileID: 2067125882}
   m_RootOrder: 0
---- !u!64 &1747372108
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6400000, guid: e713489ace1cc6a48a81a92cf8ed42a7,
-    type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
-  m_GameObject: {fileID: 1747372106}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 0}
 --- !u!95 &1747372109
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 9500000, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   m_GameObject: {fileID: 1747372106}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f15ed0d8976a75e42810ca2bf9b320ab, type: 3}
@@ -68022,8 +68441,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1757477233}
-  - 114: {fileID: 1757477234}
   - 136: {fileID: 1757477235}
+  - 114: {fileID: 1757477234}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -68047,15 +68466,17 @@ Transform:
 --- !u!114 &1757477234
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1613482061}
   m_GameObject: {fileID: 1757477232}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &1757477235
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -72763,8 +73184,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1852431768}
-  - 114: {fileID: 1852431769}
   - 136: {fileID: 1852431770}
+  - 114: {fileID: 1852431769}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -72788,15 +73209,17 @@ Transform:
 --- !u!114 &1852431769
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1653438808}
   m_GameObject: {fileID: 1852431767}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &1852431770
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -73999,8 +74422,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1880643301}
-  - 114: {fileID: 1880643302}
   - 136: {fileID: 1880643303}
+  - 114: {fileID: 1880643302}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -74024,15 +74447,17 @@ Transform:
 --- !u!114 &1880643302
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1470912961}
   m_GameObject: {fileID: 1880643300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &1880643303
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -74994,8 +75419,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1913644155}
-  - 114: {fileID: 1913644156}
   - 136: {fileID: 1913644157}
+  - 114: {fileID: 1913644156}
   m_Layer: 8
   m_Name: FirstDiamond
   m_TagString: Diamond
@@ -75019,15 +75444,17 @@ Transform:
 --- !u!114 &1913644156
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 627861717}
   m_GameObject: {fileID: 1913644154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &1913644157
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -76178,54 +76605,6 @@ Transform:
   - {fileID: 306045962}
   m_Father: {fileID: 833807556}
   m_RootOrder: 1
---- !u!1001 &1941486600
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1583299911}
-    m_Modifications:
-    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-      propertyPath: m_eggSort
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
-  m_RootGameObject: {fileID: 49822505}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1943559344
 GameObject:
   m_ObjectHideFlags: 0
@@ -76495,6 +76874,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1951020240}
   - 114: {fileID: 1951020241}
+  - 54: {fileID: 1951020242}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -76528,6 +76908,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
+--- !u!54 &1951020242
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
+    type: 2}
+  m_PrefabInternal: {fileID: 378939956}
+  m_GameObject: {fileID: 1951020239}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1951243449
 GameObject:
   m_ObjectHideFlags: 0
@@ -79397,8 +79793,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2012505679}
-  - 114: {fileID: 2012505680}
   - 136: {fileID: 2012505681}
+  - 114: {fileID: 2012505680}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -79422,15 +79818,17 @@ Transform:
 --- !u!114 &2012505680
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 315307512}
   m_GameObject: {fileID: 2012505678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &2012505681
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -80086,7 +80484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2035644711
 RectTransform:
   m_ObjectHideFlags: 0
@@ -80116,7 +80514,6 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -80186,8 +80583,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2037198266}
-  - 114: {fileID: 2037198267}
   - 136: {fileID: 2037198268}
+  - 114: {fileID: 2037198267}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -80211,15 +80608,17 @@ Transform:
 --- !u!114 &2037198267
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1794790516}
   m_GameObject: {fileID: 2037198265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &2037198268
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -80361,6 +80760,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2043369976}
   - 114: {fileID: 2043369978}
+  - 54: {fileID: 2043369977}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -80381,6 +80781,22 @@ Transform:
   - {fileID: 1993609296}
   m_Father: {fileID: 1648281395}
   m_RootOrder: 0
+--- !u!54 &2043369977
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
+    type: 2}
+  m_PrefabInternal: {fileID: 612257273}
+  m_GameObject: {fileID: 2043369975}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!114 &2043369978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80960,6 +81376,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+      propertyPath: m_eggType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
   m_RootGameObject: {fileID: 665952092}
@@ -81456,7 +81876,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2067125882}
@@ -81474,10 +81894,10 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   m_GameObject: {fileID: 2067125881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 23.1100006, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1747372107}
@@ -81488,7 +81908,7 @@ CharacterController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 14300000, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   m_GameObject: {fileID: 2067125881}
   serializedVersion: 2
   m_Height: .400000006
@@ -81503,7 +81923,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   m_GameObject: {fileID: 2067125881}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -81522,7 +81942,7 @@ CapsuleCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 13600000, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1413840758}
+  m_PrefabInternal: {fileID: 1403960520}
   m_GameObject: {fileID: 2067125881}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -81982,8 +82402,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2078945381}
-  - 114: {fileID: 2078945382}
   - 136: {fileID: 2078945383}
+  - 114: {fileID: 2078945382}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -82007,15 +82427,17 @@ Transform:
 --- !u!114 &2078945382
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1543763708}
   m_GameObject: {fileID: 2078945380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &2078945383
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -82978,8 +83400,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2096285699}
-  - 114: {fileID: 2096285700}
   - 136: {fileID: 2096285701}
+  - 114: {fileID: 2096285700}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -83003,15 +83425,17 @@ Transform:
 --- !u!114 &2096285700
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 116209789}
   m_GameObject: {fileID: 2096285698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &2096285701
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -84493,8 +84917,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2129292967}
-  - 114: {fileID: 2129292968}
   - 136: {fileID: 2129292969}
+  - 114: {fileID: 2129292968}
   m_Layer: 8
   m_Name: Diamond
   m_TagString: Diamond
@@ -84518,15 +84942,17 @@ Transform:
 --- !u!114 &2129292968
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11406512, guid: 62a378e4ea19ce94fabe701dea178e0c,
+  m_PrefabParentObject: {fileID: 11400902, guid: 62a378e4ea19ce94fabe701dea178e0c,
     type: 2}
   m_PrefabInternal: {fileID: 1052741750}
   m_GameObject: {fileID: 2129292966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41368b0cf00bcd14492b3a4a5479094e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_type: -1
+  m_isDiamond: 1
 --- !u!136 &2129292969
 CapsuleCollider:
   m_ObjectHideFlags: 0

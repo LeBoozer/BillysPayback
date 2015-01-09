@@ -342,16 +342,32 @@ public class Player : MonoBehaviour {
 	 */
 	public void OnControllerColliderHit(ControllerColliderHit _hit)
 	{
-        // Send notification
-        _hit.gameObject.SendMessageUpwards("OnCharacterControllerHit", _hit, SendMessageOptions.DontRequireReceiver);
-		
-		/*/ projectile
-        if (tag.Equals(Tags.TAG_PROJECTILE_ENEMY))
-        {
-            if (hit())
-                Destroy(_hit.gameObject);
-            return;
-        }*/
+		//Debug.Log (_hit.collider.tag);
+		// get controller
+		CharacterController controller = _hit.controller;
+
+        Debug.Log("");
+
+		// collision by the tag of the hit
+		GameObject g = _hit.gameObject;
+		string tag = g.tag;
+		while (tag.Equals (Tags.TAG_UNTAGGED) && g.transform.parent != null)
+		{
+			tag = g.transform.parent.tag;
+			g = g.transform.parent.gameObject;
+		}
+
+		// projectile
+		if(tag.Equals(Tags.TAG_PROJECTILE_ENEMY))
+		{
+			if(hit ())
+				Destroy(_hit.gameObject);
+			return;
+		}
+
+		// with other non-untagged objects
+		//if(!tag.Equals(Tags.TAG_UNTAGGED))
+		//	g.SendMessage ("PlayerCollision", this.gameObject, SendMessageOptions.DontRequireReceiver); 	
 	}
 
 	#endregion

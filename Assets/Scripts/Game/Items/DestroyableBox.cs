@@ -13,9 +13,9 @@ using System.Collections;
  */
 public class DestroyableBox : MonoBehaviour 
 {
+    public float m_maxLifetime = GameConfig.DESTROYABLE_BOX_DEFAULT_LIFE_TIME_SEC;
 
-	public 	float MAX_LIFE_TIME = 5; // in second
-	public  float m_currentLifetime;
+	private float m_currentLifetime;
 	private MeshRenderer 	m_mesh;
 	private float 			m_lastFlipp;
 	//private bool  m_stayPlayer = false;
@@ -35,20 +35,8 @@ public class DestroyableBox : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		// dont do anything if the life time under 0.01f 
-		if (m_currentLifetime < 0.01f)
-				return;
-
 		// placeholder for future optical effects
 		flashingEffect ();
-
-		// alive?
-		if (m_currentLifetime < MAX_LIFE_TIME)
-				return;
-
-		// destroy the gameobject
-		// TO DO: create partical effekt
-		Destroy (this.gameObject);
 	}
 
 	/**
@@ -62,7 +50,7 @@ public class DestroyableBox : MonoBehaviour
 			m_mesh.enabled = true;
 			m_lastFlipp = Time.time;
 		}
-		else if(m_mesh.enabled && Time.time - m_lastFlipp > (MAX_LIFE_TIME - m_currentLifetime) )
+        else if (m_mesh.enabled && Time.time - m_lastFlipp > (m_maxLifetime - m_currentLifetime))
 		{
 			m_mesh.enabled = false;
 			m_lastFlipp = Time.time;
@@ -87,5 +75,22 @@ public class DestroyableBox : MonoBehaviour
 			m_currentLifetime += Time.deltaTime;
 	}
 
+    // Override: MonoBehaviour::OnTriggerStay()
+    void OnTriggerStay(Collider _other)
+    {
+        // Player?
+        if (_other.gameObject.tag.Equals(Tags.TAG_PLAYER) == true)
+        {
+            // Update time
+            m_currentLifetime += Time.deltaTime;
 
+            // Still alive
+            if (m_currentLifetime <= m_maxLifetime)
+                return;
+
+            // Kill block
+            // TO DO: create partical effect
+            Destroy(gameObject);
+        }
+    }
 }
