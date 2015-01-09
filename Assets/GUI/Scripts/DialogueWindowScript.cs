@@ -9,10 +9,21 @@ public class DialogueWindowScript : MonoBehaviour {
 	//prefabs needed for the dialog window
 	public Transform m_dialogWindowPrefab;
 	public Transform m_dialogTextPrefab;
+	public Transform m_spokenTextPrefab;
 
 	//the position on which the dialog window is placed
 	public Vector3 m_windowPosition;
 	public Vector3 m_firstTextPosition;
+
+	//the preferred length of a spoken text display
+	public int m_spokenTextLength;
+
+	//currently shown answer
+	private Transform m_spokenText;
+
+	public Transform SpokenText {
+		get { return m_spokenText; }
+	}
 
 	//dialog window already open?
 	private bool m_windowIsOpen;
@@ -53,11 +64,102 @@ public class DialogueWindowScript : MonoBehaviour {
 		openDialogWindow ();
 
 		addAnswers (testTexts);
+
+		GameObject billy = GameObject.Find ("Billy");
+
+		showAnswer(answers[3].text, billy);
+
+		//dropSpokenAnswer ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	//deletes currently shown answer
+	public bool dropSpokenAnswer() {
+		if (m_spokenText != null) {
+			Destroy(m_spokenText.gameObject);
+
+			return true;
+		}
+
+		Debug.Log ("No answer is currently shown!");
+
+		return false;
+	}
+
+	//shows the given answer text above the head of the give game object --> returns the shown answer text
+	public void showAnswer(string text, GameObject person) {
+		//gets the position of the given person
+		Vector3 personPosition = person.transform.position;
+
+		//gets the height of the given person
+		CapsuleCollider personCollider = person.GetComponent<CapsuleCollider> ();
+		float personHeight = personCollider.center.y + personCollider.height;
+
+		//calculates the corresponding height of the spoken text
+		Vector3 textPosition = new Vector3 (personPosition.x, personPosition.y + personHeight, personPosition.z);
+
+		//Problem: the dialog gui in the editor is x times bigger than the level; becaue we don't know the real ratio (we have no
+		//object to compare) we have to code it hard for nor
+		textPosition = textPosition * 160;
+
+		//m_spokenText = createNewSpokenText (text, textPosition);
+
+		int charCount = 0;						//counts the number of chars walked through
+		int currentStringBegin = 0;				//position in given text from which on the current spoken text is shown
+		Transform currentSpokenText = null;		//currently displayed spoken text
+		SimpleTimer timer = new SimpleTimer ();
+
+		//divides the given text in multiple text parts which are shown seperately to save space on the screen
+		for (int i = 0; i < text.Length; i++) {
+			charCount++;
+
+			//checks if the current substring is long enough to be splitted and/or shown
+			if (charCount >= m_spokenTextLength || i == text.Length - 1) {
+				//makes sure that single words are not splitted
+				if (text[i] == ' ' || i == text.Length - 1) {
+					//destroys old spoken text
+					if (currentSpokenText != null) {
+						Destroy(currentSpokenText.gameObject);
+					}
+
+					//creates new spoken text
+					currentSpokenText = createNewSpokenText(text.Substring(currentStringBegin, i-currentStringBegin + 1), textPosition);
+
+					//resets counter
+					charCount = 0;
+
+					//updates substring begin
+					if ( i < text.Length -1) {
+						currentStringBegin = i + 1;
+					}
+
+					//timer.restart(10 * 1000);
+
+					/*while (!timer.Done)
+					{
+						Debug.Log("Warten");
+					}*/
+				}
+			}
+		}
+	}
+
+	public Transform createNewSpokenText(string text, Vector3 position) {
+		//creates text object
+		Transform spokenText = Instantiate (m_spokenTextPrefab, position, Quaternion.identity) as Transform;
+		
+		//assigns the correct parent
+		spokenText.SetParent (this.gameObject.transform, false);
+
+		//assigns given text to text object
+		Text spokenTextContent = spokenText.gameObject.GetComponent<Text> ();
+		spokenTextContent.text = text;
+		
+		return spokenText;
 	}
 
 	//removes all answers from the current dialog window --> returns if successful or not
@@ -93,9 +195,6 @@ public class DialogueWindowScript : MonoBehaviour {
 		//initializes the answer array
 		answers = new Text[texts.Length];
 
-		//needed to get the scale and height later (can't get this from prefabs)
-		Transform firstTextObject = null;
-
 		//float overallHeightText = 0;
 
 		//creates the new answers and adds them to the dialog window
@@ -110,8 +209,6 @@ public class DialogueWindowScript : MonoBehaviour {
 				//gets scale and height of the dialog text prefab
 				textScaleY = ((RectTransform)newAnswer).localScale.y;
 				textHeight = ((RectTransform)newAnswer).rect.height * textScaleY;
-
-				Debug.Log ("Text height: " + textHeight); 
 				
 				//calculates the position of the current answer
 				currentPos = m_firstTextPosition - i * (new Vector3(0, textHeight, 0));
