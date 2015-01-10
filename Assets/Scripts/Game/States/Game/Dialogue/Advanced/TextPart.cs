@@ -13,8 +13,8 @@ using System.Collections;
 public class TextPart
 {
     // The display time for this text part (in seconds)
-    private int m_displayTime;
-    public int DisplayTime
+    private double m_displayTime;
+    public double DisplayTime
     {
         get { return m_displayTime; }
         private set { }
@@ -37,7 +37,7 @@ public class TextPart
     }
 
     // Constructor
-    public TextPart(int _displayTime, string _character, string _text)
+    public TextPart(double _displayTime, string _character, string _text)
     {
         m_displayTime = _displayTime;
         m_character = _character;

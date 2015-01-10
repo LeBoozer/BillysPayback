@@ -1,0 +1,8 @@
+<bw>
+	<conversation id="0" start="0">
+		<text id="0">
+			<part t="2.5" character="Antonio">Außerdem kannst du mit „Leertaste“ springen, um höhere Hindernisse zu überwinden.</part>
+			<part t="2.5" character="Antonio">Versuch es doch einmal bei dem Baumstamm dort vorne.</part>
+		</text>
+	</conversation>
+</bw>

@@ -21,6 +21,32 @@ public class T_OnDialogueExit : FSMTransition
     // True to repsond to the event: dialogue has no choices for the user
     public bool m_considerNoChoiceExits = false;
 
+    // True to close the dialog window on leave
+    public bool m_closeDialogWindowOnLeave = false;
+
+    // Override: FSMTransition::setTargetFSMState
+    protected override void setTargetFSMState()
+    {
+        // Local variables
+        DialogueWindowScript window = null;
+
+        // Close window?
+        if (m_closeDialogWindowOnLeave == true)
+        {
+            // Get window handle
+            window = GameObject.Find("Dialog").GetComponent<DialogueWindowScript>();
+            if(window == null)
+            {
+                Debug.LogError("Dialog window has not been found!");
+                return;
+            }
+            window.closeDialogWindow();
+        }
+
+        // Call parent
+        base.setTargetFSMState();
+    }
+
     // Override: FSMTransition::onHostStateDone
     public override void onHostStateDone(object _param)
     {

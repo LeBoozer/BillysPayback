@@ -17,11 +17,14 @@ public class T_OnEnterTriggers : FSMTransition
 	[System.Serializable]
 	public class Trigger
 	{
-		// The trigger game-object
-		public GameObject	m_triggerObject 	= null;
+		// The trigger collider
+		public Collider	    m_triggerCollider 	= null;
 		
 		// Number of hits of the assigned collider with this trigger game-object before the transition will be kicked-off (value < 1 -> value = 1)
 		public int 			m_hitsToTrigger 	= 0;
+
+        // True to delete the trigger object on transition
+        public bool         m_deleteObject      = false;
 		
 		// Number of hits between the collider and the trigger game-object
 		[HideInInspector]
@@ -48,16 +51,16 @@ public class T_OnEnterTriggers : FSMTransition
 		foreach(Trigger t in m_triggerObjects)
 		{
 			// Check
-			if(t == null || t.m_triggerObject == null)
+			if(t == null || t.m_triggerCollider == null)
 				continue;
-		
+
 			// Adjust
 			t.m_currentHitCount = 0;
 			if(t.m_hitsToTrigger < 1)
 				t.m_hitsToTrigger = 1;
 		
 			// Inject script
-			hj = t.m_triggerObject.AddComponent<FSMEventHighjack>();
+			hj = t.m_triggerCollider.gameObject.AddComponent<FSMEventHighjack>();
 			hj.FSMOnTriggerEnter += (Collider _other) => 
 			{
 				// Collider hits one of the triggers?
@@ -69,6 +72,16 @@ public class T_OnEnterTriggers : FSMTransition
 					// Change state
 					if(t.m_currentHitCount >= t.m_hitsToTrigger)
 					{
+                        // Delete trigger object?
+                        if (t.m_deleteObject == true)
+                        {
+                            // Delete from list
+                            m_triggerObjects.Remove(t);
+
+                            // Delete object
+                            GameObject.Destroy(t.m_triggerCollider);
+                        }
+                           
 						// Set state
 						setTargetFSMState();
 					}
@@ -87,11 +100,11 @@ public class T_OnEnterTriggers : FSMTransition
 		foreach(Trigger t in m_triggerObjects)
 		{
 			// Check
-			if(t == null || t.m_triggerObject == null)
+			if(t == null || t.m_triggerCollider == null)
 				continue;
 				
 			// Remove
-			hj = t.m_triggerObject.GetComponent<FSMEventHighjack>();
+			hj = t.m_triggerCollider.gameObject.GetComponent<FSMEventHighjack>();
 			if(hj != null)
 				Component.Destroy(hj);
 		}

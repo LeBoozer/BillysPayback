@@ -43,40 +43,37 @@ public class Player : Hitable
 	#endregion
 
 	#region Start
-	// Use this for initialization
-	private void Start () 
-	{
-		m_velocityX 	= 0;
-		m_velocityY 	= 0;
-		m_jump 			= false;
-		m_flyStart 		= false;
-		m_lastHit 		= Time.time - 2;
-		m_gameOver 		= false;
-		m_kiwanos 		= new ArrayList ();
-		m_allowToMove 	= true;
-		m_startJumpTime = 0;
+    private void Awake()
+    {
+        m_velocityX = 0;
+        m_velocityY = 0;
+        m_jump = false;
+        m_flyStart = false;
+        m_lastHit = Time.time - 2;
+        m_gameOver = false;
+        m_kiwanos = new ArrayList();
+        m_allowToMove = true;
+        m_startJumpTime = 0;
 
-		if (Kiwano == null)
-			Kiwano 		= Resources.Load<GameObject> ("Items/Kiwano");
+        // Get character controller
+        m_controller = GetComponent<CharacterController>();
+        m_startPosition = this.transform.position;
 
-		if (Raspberry == null)
-			Raspberry 	= Resources.Load<GameObject> ("Items/Raspberry");
-		
-		// Get player data
-		m_playerData = Game.Instance.PlayerData;
-		
-		// Get character controller
-		m_controller = GetComponent<CharacterController> ();
-		m_startPosition = this.transform.position;
+        if (Kiwano == null)
+            Kiwano = Resources.Load<GameObject>("Items/Kiwano");
+
+        if (Raspberry == null)
+            Raspberry = Resources.Load<GameObject>("Items/Raspberry");
 
         // Calculate world scale
         m_worldScale = HelperFunctions.getWorldScale(gameObject);
 
-        Game.Instance.PlayerData.setPowerUpAvailable(PlayerData.PowerUpType.PUT_RASPBERRY, true);
-        Game.Instance.PlayerData.setPowerUpStockSize(PlayerData.PowerUpType.PUT_RASPBERRY, 10000);
-	}
+        // Get player data
+        m_playerData = Game.Instance.PlayerData;
 
-	
+        // Set player instance in game class
+        Game.Instance.Player = this;
+    }
 
 	#endregion
 

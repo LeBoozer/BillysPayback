@@ -20,11 +20,11 @@ public class S_Dialogue : FSMState
     // The conversation ID (-1 to use the first found conversation)
     public int                  m_conversationID = -1;
 
-    // True to clear the added choices on leave
-    public bool                 m_clearChoicesOnLeave = true;
+    // True to block the player movement
+    public bool                 m_blockPlayerMovement = true;
 
     // True to close the dialog window on leave
-    public bool                 m_closeDialogWindowOnLeave = true;
+    public bool                 m_closeDialogWindowOnLeave = false;
 
     // The parsed dialogue
     private AdvancedDialogue    m_dialogue = null;
@@ -81,14 +81,6 @@ public class S_Dialogue : FSMState
             Debug.LogError("Invalid text FSM-state (" + gameObject.name + "). Specified conversation has not been found!");
             return;
         }
-
-        // Get start text, text-part
-        m_text = m_conversation.getTextByID(m_conversation.StartTextID);
-        if(m_text == null)
-        {
-            Debug.LogError("Invalid text FSM-state (" + gameObject.name + "). Specified text has not been found!");
-            return;
-        }
     }
 
     // Override: MonoBehaviour::Start()
@@ -123,11 +115,15 @@ public class S_Dialogue : FSMState
             return;
         }
 
+        // Block player?
+        if (m_blockPlayerMovement == true)
+            Game.Instance.Player.blockMovement(true);
+
         // Open window
         m_window.openDialogWindow();
 
-        // Start with the first text-part
-        onNextTextPart();
+        // Set text
+        setTextByID(m_conversation.StartTextID);
     }
 
     // Override: FSMState::onLeave()
@@ -153,13 +149,39 @@ public class S_Dialogue : FSMState
         // Unregister event callback
         DialogTextScript.AnswerClicked -= onChoiceClicked;
 
-        // Delete choices?
-        if (m_clearChoicesOnLeave == true && m_window != null)
+        // Delete choices
+        if (m_window != null)
             m_window.removeAnswers();
 
         // Close window?
         if (m_closeDialogWindowOnLeave == true && m_window != null)
             m_window.closeDialogWindow();
+
+        // Unblock the player movement?
+        if (m_blockPlayerMovement == true)
+            Game.Instance.Player.blockMovement(false);
+    }
+
+    /**
+     * Set the active text instance
+     */
+    private void setTextByID(int _id)
+    {
+        // Get start text, text-part
+        m_currentTextPartIndex = -1;
+        m_text = m_conversation.getTextByID(_id);
+        if (m_text == null)
+        {
+            Debug.LogError("Invalid text FSM-state (" + gameObject.name + "). Specified text has not been found!");
+            return;
+        }
+
+        // Delete choices
+        if (m_window != null)
+            m_window.removeAnswers();
+
+        // Update text on next update run
+        m_isHandleNextTextPart = true;
     }
 
     /**
@@ -258,6 +280,8 @@ public class S_Dialogue : FSMState
                 // Exit conversation?
                 if (choice.Type == Choice.ChoiceType.CHOICE_EXIT)
                     onConversationExit(choice.ExitValue);
+                else
+                    setTextByID(choice.NextTextID);
                 return;
             }
         }

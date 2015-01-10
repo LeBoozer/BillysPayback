@@ -167,9 +167,11 @@ public class DialogueWindowScript : MonoBehaviour {
 			Debug.Log("No answers exist which could be removed!");
 
 			return false;
-		} else {
+		} 
+        else 
+        {
 			//walks through the answers in the dialog window and destroys them
-			for (int i = 0; i < m_dialogWindow.childCount; i++) {
+			for (int i = 0; m_dialogWindow != null && i < m_dialogWindow.childCount; i++) {
 				Destroy(m_dialogWindow.GetChild(i).gameObject);
 			}
 

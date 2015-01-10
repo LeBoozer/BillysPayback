@@ -1,0 +1,9 @@
+<bw>
+	<conversation id="0" start="0">
+		<text id="0">
+			<part t="2.5" character="Antonio">Sehr gut. Nun lauf auf den Diamanten dort vorne zu.</part>
+			<part t="2.5" character="Antonio">Sie sind sehr wertvoll, wenn du genug von ihnen gesammelt hast,</part>
+			<part t="2.5" character="Antonio">bekommst du ein Leben geschenkt!</part>
+		</text>
+	</conversation>
+</bw>

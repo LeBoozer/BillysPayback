@@ -26,7 +26,7 @@ public abstract class FSMTransition : MonoBehaviour
 	public List<FSMAction>	m_actionsOnTransition = new List<FSMAction>();
 	
 	// Sets the target FSM-state 
-	protected void setTargetFSMState()
+	protected virtual void setTargetFSMState()
 	{
 		// Trigger actions
 		foreach(FSMAction a in m_actionsOnTransition)

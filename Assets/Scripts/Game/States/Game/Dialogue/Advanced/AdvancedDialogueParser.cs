@@ -203,7 +203,7 @@ public abstract class AdvancedDialogueParser
         // Local variables
         string text = "";
         string character = "";
-        int timeInSec = -1;
+        double timeInSec = -1;
         TextPart part = null;
         XmlNode xmlNodeAtt = null;
 
@@ -214,7 +214,7 @@ public abstract class AdvancedDialogueParser
             Debug.LogError("Text-parts need a defined display time (in seconds)!");
             return null;
         }
-        timeInSec = int.Parse(xmlNodeAtt.Value);
+        timeInSec = double.Parse(xmlNodeAtt.Value);
 
         // Get attribute: character
         xmlNodeAtt = _node.Attributes.GetNamedItem("character");

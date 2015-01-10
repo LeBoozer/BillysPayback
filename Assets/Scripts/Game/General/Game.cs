@@ -26,6 +26,9 @@ public class Game
 	// The player data
 	private PlayerData			m_playerData;
 
+    // The player
+    private Player              m_player;
+
 	// Protected constructor
 	protected Game()
 	{}
@@ -43,6 +46,13 @@ public class Game
 		get { return m_playerData; }
 		private set {}
 	}
+
+    // Returns/sets the player instance
+    public Player Player
+    {
+        get { return m_player; }
+        set { m_player = value; }
+    }
 
 	// Returns the singleton instance
 	public static Game	Instance
