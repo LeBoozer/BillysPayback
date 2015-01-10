@@ -31,7 +31,7 @@ public abstract class FSMTransition : MonoBehaviour
 		// Trigger actions
 		foreach(FSMAction a in m_actionsOnTransition)
 			a.onAction();
-	
+
 		// Set state
 		if(m_fsm != null)
 			m_fsm.setFSMState(m_targetState);
@@ -53,28 +53,17 @@ public abstract class FSMTransition : MonoBehaviour
 	{
 		// Local variables
 		FSMAction[] action = null;
-		
-		// Retrieve all actions
-		foreach(Transform child in gameObject.transform)
-		{
-			// Get component
-			action = child.gameObject.GetComponents<FSMAction>();
-			if(action == null)
-				continue;
-			
-			// Add to list
-			m_actionsOnTransition.AddRange(action);
-		}
 
-        // Disable this transition
-        setEnabled(false);	
+        // Retrieve all actions
+        action = gameObject.GetComponentsInChildren<FSMAction>();
+        m_actionsOnTransition.AddRange(action);		
 	}
 	
 	// Override: MonoBehaviour::Start()
 	void Start()
-	{	
+	{
 		// Retrieve FSM instance
-		m_fsm = gameObject.transform.parent.gameObject.transform.parent.gameObject.GetComponent<FSM>();	
+        m_fsm = gameObject.GetComponentInParent<FSM>();	
 		
 		// Retrieve host FSM-state
 		m_hostState = gameObject.transform.parent.gameObject.GetComponent<FSMState>();

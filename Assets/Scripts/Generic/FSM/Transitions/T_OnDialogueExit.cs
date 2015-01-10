@@ -15,8 +15,11 @@ public class T_OnDialogueExit : FSMTransition
     // Array with accepted dialogue exit values
     public string[] m_dialogueExitValues = null;
 
-    // True to responde to the event: dialogue has been cancelled by the user
+    // True to respond to the event: dialogue has been cancelled by the user
     public bool m_considerDialogueCancellation = false;
+
+    // True to repsond to the event: dialogue has no choices for the user
+    public bool m_considerNoChoiceExits = false;
 
     // Override: FSMTransition::onHostStateDone
     public override void onHostStateDone(object _param)
@@ -26,7 +29,8 @@ public class T_OnDialogueExit : FSMTransition
             return;
 
         // Cancellation event?
-        if (m_considerDialogueCancellation == true && _param.Equals(AdvancedDialogue.DIALOGUE_CANCELLED_EXIT_VALUE) == true)
+        if (m_considerDialogueCancellation == true && _param.Equals(AdvancedDialogue.DIALOGUE_CANCELLED_EXIT_VALUE) == true ||
+            m_considerNoChoiceExits == true && _param.Equals(AdvancedDialogue.DIALOGUE_NO_CHOICE_EXIT_VALUE) == true)
         {
             // Change to target state
             setTargetFSMState();
@@ -34,7 +38,7 @@ public class T_OnDialogueExit : FSMTransition
         }
 
         // Exit values defined?
-        if (m_dialogueExitValues != null)
+        if (m_dialogueExitValues == null)
             return;
 
         // Right descision?

@@ -43,23 +43,21 @@ public class DialogueWindowScript : MonoBehaviour {
 		get { return answers; }
 	}
 
+    void Awake()
+    {
+        m_dialogWindow = null;
+        m_windowIsOpen = false;
+
+        //sets the current game object as the parent for coming dialog objects
+        m_parentGameObject = this.transform;
+
+        // searches the current hud
+        m_currentHUD = GameObject.Find("HUD");
+    }
+
 	// Use this for initialization
-	void Start () {
-		m_dialogWindow = null;
-		m_windowIsOpen = false;
-
-		//sets the current game object as the parent for coming dialog objects
-		m_parentGameObject = this.transform;
-
-		//searches the current hud
-		m_currentHUD = GameObject.Find("HUD");
-
-		string[] testTexts = {"Wozu braucht ihr diese Pflanzen denn?", 
-			"Können wir euch irgendwie helfen?", 
-			"Wir könnten versuchen euch die Kurbel wiederzubringen, wenn ihr uns anschließen auf unserem Weg in Black Sparrows Nest helft. Seid ihr dabei?", 
-			"Da müsst ihr aber ganz schön sauer auf Black Sparrow und seine Gefolgschaft sein was? Wir sind gerade auf dem Weg zu ihnen, um diesen Federviechern eine Lektion zu erteilen. Wärt ihr dabei?", 
-			"Warum holt ihr sie euch nicht einfach zurück?",
-			"Klingt … interessant … wir gehen dann mal."};
+	void Start () 
+    {
 
 		/*openDialogWindow ();
 

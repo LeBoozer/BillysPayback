@@ -20,6 +20,12 @@ public class S_Dialogue : FSMState
     // The conversation ID (-1 to use the first found conversation)
     public int                  m_conversationID = -1;
 
+    // True to clear the added choices on leave
+    public bool                 m_clearChoicesOnLeave = true;
+
+    // True to close the dialog window on leave
+    public bool                 m_closeDialogWindowOnLeave = true;
+
     // The parsed dialogue
     private AdvancedDialogue    m_dialogue = null;
 
@@ -40,9 +46,6 @@ public class S_Dialogue : FSMState
 
     // The dialog window instance
     private DialogueWindowScript m_window = null;
-
-    // The script handling the click-event on choices
-    private DialogTextScript     m_eventScript = null;
 
     // The timer object
     private Timer                m_timer = null;
@@ -93,20 +96,30 @@ public class S_Dialogue : FSMState
     {
         // Call parent
         base.Start();
+    }
+
+    // Override: MonoBehaviour::Update()
+    void Update()
+    {
+        // Next text-part?
+        if(m_isHandleNextTextPart == true)
+        {
+            onNextTextPart();
+            m_isHandleNextTextPart = false;
+        }
+    }
+
+    // Override: FSMState::onEnter()
+    public override void onEnter()
+    {
+        // Call parent
+ 	    base.onEnter();
 
         // Get instance of the dialog window
         m_window = GameObject.Find("Dialog").GetComponent<DialogueWindowScript>();
         if (m_window == null)
         {
             Debug.LogError("Dialog window has not been found!");
-            return;
-        }
-
-        // Get event script of the dialogue
-        m_eventScript = m_window.GetComponentInChildren<DialogTextScript>();
-        if (m_eventScript == null)
-        {
-            Debug.LogError("Event script for the dialogue has not been found!");
             return;
         }
 
@@ -117,25 +130,12 @@ public class S_Dialogue : FSMState
         onNextTextPart();
     }
 
-    // Override: MonoBehaviour::Update()
-    void Update()
+    // Override: FSMState::onLeave()
+    public override void onLeave()
     {
-        // Next text-part?
-        if(m_isHandleNextTextPart == true)
-        {
-            m_isHandleNextTextPart = false;
-            onNextTextPart();
-        }
-    }
+        // Call parent
+        base.onLeave();
 
-    // Override: FSMState::OnEnable()
-    void OnEnable()
-    {
-    }
-
-    // Override: FSMState::OnDisable()
-    void OnDisable()
-    {
         // Kill timer
         if (m_timer != null)
         {
@@ -143,8 +143,22 @@ public class S_Dialogue : FSMState
             m_timer = null;
         }
 
-        // Hide window
-        if (m_window != null)
+        // Delete on-screen text
+        if (m_currentOnScreenTextObject != null)
+        {
+            GameObject.Destroy(m_currentOnScreenTextObject.gameObject);
+            m_currentOnScreenTextObject = null;
+        }
+
+        // Unregister event callback
+        DialogTextScript.AnswerClicked -= onChoiceClicked;
+
+        // Delete choices?
+        if (m_clearChoicesOnLeave == true && m_window != null)
+            m_window.removeAnswers();
+
+        // Close window?
+        if (m_closeDialogWindowOnLeave == true && m_window != null)
             m_window.closeDialogWindow();
     }
 
@@ -160,7 +174,7 @@ public class S_Dialogue : FSMState
         ++m_currentTextPartIndex;
 
         // Reached?
-        if (m_currentTextPartIndex >= m_text.TextPartCount)
+        if (m_currentTextPartIndex >= m_text.TextPartCount && m_isHandleNextTextPart == true)
         {
             // Display choices
             if(!onDisplayChoices())
@@ -190,6 +204,7 @@ public class S_Dialogue : FSMState
         }
         m_timer = new Timer(part.DisplayTime * 1000);
         m_timer.Enabled = true;
+        m_timer.AutoReset = false;
         m_timer.Elapsed += (object _s, ElapsedEventArgs _e) => { m_isHandleNextTextPart = true; };
     }
 
@@ -228,6 +243,24 @@ public class S_Dialogue : FSMState
      */
     private void onChoiceClicked(UnityEngine.UI.Text _choiceText)
     {
+        // Local variables
+        Choice choice = null;
+        List<int> choiceIDs = null;
+
+        // Compare answer with all choices
+        choiceIDs = m_text.getChoicesIDs();
+        foreach (int id in choiceIDs)
+        {
+            // Get choice and compare
+            choice = m_text.getChoiceByID(id);
+            if(choice.Text.Equals(_choiceText.text) == true)
+            {
+                // Exit conversation?
+                if (choice.Type == Choice.ChoiceType.CHOICE_EXIT)
+                    onConversationExit(choice.ExitValue);
+                return;
+            }
+        }
     }
 
     /*

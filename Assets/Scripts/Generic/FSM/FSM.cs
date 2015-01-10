@@ -21,12 +21,12 @@ public class FSM : MonoBehaviour
 	
 	// Changes the FSM-state
 	public void setFSMState(FSMState _nextState)
-	{	
+	{
 		// Notify the current one
 		if(m_currentFSMState != null)
 		{
+            m_currentFSMState.setEnabled(false);
 			m_currentFSMState.onLeave();
-			m_currentFSMState.setEnabled(false);
 			m_currentFSMState = null;
 		}
 		
@@ -36,14 +36,25 @@ public class FSM : MonoBehaviour
 		// Notify new state
 		if(m_currentFSMState != null)
 		{
+            m_currentFSMState.setEnabled(true);
 			m_currentFSMState.onEnter();
-			m_currentFSMState.setEnabled(true);
 		}
 	}
 	
 	// Override: MonoBehaviour::Start()
 	public void Start()
-	{	
+	{
+        // Local variables
+        FSMState[] states = null;
+
+        // Retrieve all states
+        states = gameObject.GetComponentsInChildren<FSMState>();
+        foreach (FSMState s in states)
+        {
+            // Disable states
+            s.setEnabled(false);
+        }
+
 		// Start state defined?
 		if(m_startState != null)
 			setFSMState(m_startState);

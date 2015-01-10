@@ -45,7 +45,7 @@ public abstract class FSMState : MonoBehaviour
 	}
 	
 	// Will be called as soon as the state is being entered
-	public void onEnter()
+	public virtual void onEnter()
 	{
 		// Notify actions
 		foreach(FSMStateAction a in m_actions)
@@ -53,7 +53,7 @@ public abstract class FSMState : MonoBehaviour
 	}
 	
 	// Will be called as soon as the state is being entered
-	public void onLeave()
+	public virtual void onLeave()
 	{
 		// Notify actions
 		foreach(FSMStateAction a in m_actions)
@@ -65,30 +65,21 @@ public abstract class FSMState : MonoBehaviour
 	{
 		// Local variables
 		FSMTransition[] trans 	= null;
-		FSMStateAction[] action 	= null;
-	
+		FSMStateAction[] action = null;
+
 		// Retrieve all transitions
-		foreach(Transform child in gameObject.transform)
-		{
-			// Get transition component
-			trans = child.gameObject.GetComponents<FSMTransition>();
-			if(trans != null)
-				m_transitions.AddRange(trans);
-			
-			// Get action component
-			action = child.gameObject.GetComponents<FSMStateAction>();
-			if(action != null)
-				m_actions.AddRange(action);
-		}	
-	
-		// Disable this state with all its transitions
-		setEnabled(false);		
+        trans = gameObject.GetComponentsInChildren<FSMTransition>();
+        m_transitions.AddRange(trans);
+
+        // Retrieve all actions
+        action = gameObject.GetComponentsInChildren<FSMStateAction>();
+        m_actions.AddRange(action);		
 	}
 	
 	// Override: MonoBehaviour::Start()
 	protected virtual void Start()
 	{
 		// Retrieve FSM instance
-		m_fsm = gameObject.transform.parent.gameObject.GetComponent<FSM>();
+        m_fsm = gameObject.GetComponentInParent<FSM>();
 	}
 }
