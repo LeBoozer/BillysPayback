@@ -239,6 +239,7 @@ public abstract class AdvancedDialogueParser
     private static Choice parseChoice(XmlNode _node)
     {
         // Local variables
+        string text = "";
         int choiceID = -1;
         int nextTextID = -1;
         string exitValue = "";
@@ -264,8 +265,16 @@ public abstract class AdvancedDialogueParser
         if (xmlNodeAtt != null)
             exitValue = xmlNodeAtt.Value;
 
+        // Get text
+        text = _node.InnerText;
+        if (text == null || text.Length == 0)
+        {
+            Debug.LogError("Choices need text!");
+            return null;
+        }
+
         // Create choice
-        choice = new Choice(choiceID, nextTextID, exitValue);
+        choice = new Choice(choiceID, text, nextTextID, exitValue);
 
         return choice;
     }

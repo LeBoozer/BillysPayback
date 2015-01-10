@@ -104,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.1100006, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -259,8 +259,6 @@ MonoBehaviour:
   m_jumpHeight: 18
   m_brakeFactor: 1
   m_accelerationFactor: 1
-  Kiwano: {fileID: 0}
-  Raspberry: {fileID: 0}
   m_kiwanoDistance: 2
   m_kiwanosRotationSpeed: 180
 --- !u!136 &13600000

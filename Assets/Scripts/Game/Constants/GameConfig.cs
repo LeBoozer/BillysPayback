@@ -33,4 +33,7 @@ public class GameConfig
 
     // Destroyable block related values
     public static readonly float    DESTROYABLE_BOX_DEFAULT_LIFE_TIME_SEC = 5.0f;
+
+    // Enemy related values
+    public static readonly float    ENEMY_PLAYER_ABOVE_FACTOR       = 0.5f;
 }

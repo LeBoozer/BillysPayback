@@ -57,7 +57,11 @@ public class Egg : MonoBehaviour {
         {
             // Create power up
             if (m_nextPowerUp != null)
-                Instantiate(m_nextPowerUp, this.transform.position, this.transform.rotation);
+            {
+                GameObject obj = Instantiate(m_nextPowerUp, this.transform.position, this.transform.rotation) as GameObject;
+                obj.transform.parent = transform.parent;
+                obj.transform.localScale = m_nextPowerUp.transform.localScale;
+            }
 
             // Destroy
             GameObject.Destroy(gameObject);

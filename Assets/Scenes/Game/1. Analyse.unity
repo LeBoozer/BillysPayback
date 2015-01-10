@@ -2480,7 +2480,6 @@ GameObject:
   - 4: {fileID: 58306823}
   - 33: {fileID: 58306827}
   - 23: {fileID: 58306826}
-  - 95: {fileID: 58306825}
   - 64: {fileID: 58306824}
   m_Layer: 8
   m_Name: EggDummy
@@ -2515,22 +2514,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &58306825
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1500019124}
-  m_GameObject: {fileID: 58306822}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &58306826
 Renderer:
   m_ObjectHideFlags: 0
@@ -5187,7 +5170,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 135296042}
   - 114: {fileID: 135296044}
-  - 54: {fileID: 135296043}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -5208,22 +5190,6 @@ Transform:
   - {fileID: 1930235007}
   m_Father: {fileID: 1648281395}
   m_RootOrder: 3
---- !u!54 &135296043
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 673996469}
-  m_GameObject: {fileID: 135296041}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!114 &135296044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7398,7 +7364,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 179626206}
   - 114: {fileID: 179626208}
-  - 136: {fileID: 179626207}
   m_Layer: 8
   m_Name: ShiningDestroyableEgg
   m_TagString: Egg
@@ -7419,20 +7384,6 @@ Transform:
   - {fileID: 1709692611}
   m_Father: {fileID: 2005605045}
   m_RootOrder: 1
---- !u!136 &179626207
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: be3015d91869ee542aadc50a18dc0ed8,
-    type: 2}
-  m_PrefabInternal: {fileID: 784459896}
-  m_GameObject: {fileID: 179626205}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!114 &179626208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8725,7 +8676,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 216517395}
   - 114: {fileID: 216517397}
-  - 54: {fileID: 216517396}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -8746,22 +8696,6 @@ Transform:
   - {fileID: 379843792}
   m_Father: {fileID: 2005605045}
   m_RootOrder: 0
---- !u!54 &216517396
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1006383461}
-  m_GameObject: {fileID: 216517394}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!114 &216517397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9053,64 +8987,6 @@ Transform:
   - {fileID: 1155557999}
   m_Father: {fileID: 1901728214}
   m_RootOrder: 0
---- !u!1 &220012619
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
-  m_PrefabInternal: {fileID: 762518963}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 220012622}
-  - 114: {fileID: 220012621}
-  - 136: {fileID: 220012620}
-  m_Layer: 8
-  m_Name: KiwanoPowerUp
-  m_TagString: KiwanoPowerUp
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!136 &220012620
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13676340, guid: da890fc79736a454d95e255c4ae44338,
-    type: 2}
-  m_PrefabInternal: {fileID: 762518963}
-  m_GameObject: {fileID: 220012619}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .150000006
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &220012621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11496652, guid: da890fc79736a454d95e255c4ae44338,
-    type: 2}
-  m_PrefabInternal: {fileID: 762518963}
-  m_GameObject: {fileID: 220012619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0517e393c04c2954ba8fd060bce83a8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_type: 0
-  m_isDiamond: 0
---- !u!4 &220012622
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
-  m_PrefabInternal: {fileID: 762518963}
-  m_GameObject: {fileID: 220012619}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.57700014, y: 1.28100002, z: -.563000023}
-  m_LocalScale: {x: 4, y: 4, z: 4}
-  m_Children:
-  - {fileID: 1558700420}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
 --- !u!1 &221408488
 GameObject:
   m_ObjectHideFlags: 0
@@ -10250,7 +10126,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 252008448}
   - 114: {fileID: 252008449}
-  - 54: {fileID: 252008450}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -10284,22 +10159,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
---- !u!54 &252008450
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 677495526}
-  m_GameObject: {fileID: 252008447}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &253183385
 GameObject:
   m_ObjectHideFlags: 0
@@ -11073,7 +10932,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100006, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 272105798}
@@ -11090,7 +10949,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400006, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   m_GameObject: {fileID: 272105797}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: .76836133, y: .160820007, z: -.00211752532}
@@ -11103,7 +10962,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300002, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   m_GameObject: {fileID: 272105797}
   m_Enabled: 1
   m_CastShadows: 1
@@ -11124,7 +10983,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300002, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   m_GameObject: {fileID: 272105797}
   m_Mesh: {fileID: 4300000, guid: f15ed0d8976a75e42810ca2bf9b320ab, type: 3}
 --- !u!1 &273301833
@@ -15025,7 +14884,6 @@ GameObject:
   - 4: {fileID: 379843792}
   - 33: {fileID: 379843796}
   - 23: {fileID: 379843795}
-  - 95: {fileID: 379843794}
   - 64: {fileID: 379843793}
   m_Layer: 8
   m_Name: EggDummy
@@ -15060,22 +14918,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &379843794
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1006383461}
-  m_GameObject: {fileID: 379843791}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &379843795
 Renderer:
   m_ObjectHideFlags: 0
@@ -19938,7 +19780,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 528090930}
   - 114: {fileID: 528090932}
-  - 54: {fileID: 528090931}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -19959,22 +19800,6 @@ Transform:
   - {fileID: 1250324829}
   m_Father: {fileID: 2005605045}
   m_RootOrder: 5
---- !u!54 &528090931
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1229963219}
-  m_GameObject: {fileID: 528090929}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!114 &528090932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20863,7 +20688,6 @@ GameObject:
   - 4: {fileID: 545524614}
   - 33: {fileID: 545524618}
   - 23: {fileID: 545524617}
-  - 95: {fileID: 545524616}
   - 64: {fileID: 545524615}
   m_Layer: 8
   m_Name: EggDummy
@@ -20898,22 +20722,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &545524616
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1554840453}
-  m_GameObject: {fileID: 545524613}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &545524617
 Renderer:
   m_ObjectHideFlags: 0
@@ -21027,7 +20835,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 546541602}
   - 114: {fileID: 546541604}
-  - 136: {fileID: 546541603}
   m_Layer: 8
   m_Name: ShiningDestroyableEgg
   m_TagString: Egg
@@ -21048,20 +20855,6 @@ Transform:
   - {fileID: 1650667703}
   m_Father: {fileID: 1648281395}
   m_RootOrder: 1
---- !u!136 &546541603
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: be3015d91869ee542aadc50a18dc0ed8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1736746709}
-  m_GameObject: {fileID: 546541601}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!114 &546541604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21135,7 +20928,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 550180278}
@@ -21152,7 +20945,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   m_GameObject: {fileID: 550180277}
   m_LocalRotation: {x: 0, y: .0756936148, z: -0, w: .997131109}
   m_LocalPosition: {x: .0767846853, y: -.00424735481, z: .248259991}
@@ -21165,7 +20958,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300000, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   m_GameObject: {fileID: 550180277}
   m_Enabled: 1
   m_CastShadows: 1
@@ -21186,7 +20979,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300000, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   m_GameObject: {fileID: 550180277}
   m_Mesh: {fileID: 4300004, guid: f15ed0d8976a75e42810ca2bf9b320ab, type: 3}
 --- !u!1001 &550586277
@@ -22333,6 +22126,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 37f14805348ff2844a4709b8acedb4fb, type: 2}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37f14805348ff2844a4709b8acedb4fb, type: 2}
   m_RootGameObject: {fileID: 936967583}
@@ -22511,7 +22308,6 @@ GameObject:
   - 4: {fileID: 577874938}
   - 33: {fileID: 577874942}
   - 23: {fileID: 577874941}
-  - 95: {fileID: 577874940}
   - 64: {fileID: 577874939}
   m_Layer: 8
   m_Name: EggDummy
@@ -22546,22 +22342,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &577874940
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 677495526}
-  m_GameObject: {fileID: 577874937}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &577874941
 Renderer:
   m_ObjectHideFlags: 0
@@ -22999,7 +22779,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &586719352
 GameObject:
   m_ObjectHideFlags: 0
@@ -23182,7 +22962,6 @@ GameObject:
   - 4: {fileID: 589907973}
   - 33: {fileID: 589907977}
   - 23: {fileID: 589907976}
-  - 95: {fileID: 589907975}
   - 64: {fileID: 589907974}
   m_Layer: 8
   m_Name: EggDummy
@@ -23217,22 +22996,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &589907975
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 913998231}
-  m_GameObject: {fileID: 589907972}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &589907976
 Renderer:
   m_ObjectHideFlags: 0
@@ -24443,7 +24206,6 @@ GameObject:
   - 4: {fileID: 616283193}
   - 33: {fileID: 616283197}
   - 23: {fileID: 616283196}
-  - 95: {fileID: 616283195}
   - 64: {fileID: 616283194}
   m_Layer: 8
   m_Name: EggDummy
@@ -24473,27 +24235,11 @@ MeshCollider:
   m_GameObject: {fileID: 616283192}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &616283195
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: be3015d91869ee542aadc50a18dc0ed8,
-    type: 2}
-  m_PrefabInternal: {fileID: 308967496}
-  m_GameObject: {fileID: 616283192}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &616283196
 Renderer:
   m_ObjectHideFlags: 0
@@ -24589,7 +24335,6 @@ GameObject:
   - 4: {fileID: 618699047}
   - 33: {fileID: 618699051}
   - 23: {fileID: 618699050}
-  - 95: {fileID: 618699049}
   - 64: {fileID: 618699048}
   m_Layer: 8
   m_Name: EggDummy
@@ -24624,22 +24369,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &618699049
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 121085977}
-  m_GameObject: {fileID: 618699046}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &618699050
 Renderer:
   m_ObjectHideFlags: 0
@@ -26734,7 +26463,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 665952093}
   - 114: {fileID: 665952094}
-  - 54: {fileID: 665952095}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -26767,23 +26495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8740894dbd1ea149ab78537a66ae02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_eggType: 2
---- !u!54 &665952095
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 2054976516}
-  m_GameObject: {fileID: 665952092}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
+  m_eggType: 0
 --- !u!1001 &667050536
 Prefab:
   m_ObjectHideFlags: 0
@@ -27395,7 +27107,6 @@ GameObject:
   - 4: {fileID: 678230655}
   - 33: {fileID: 678230659}
   - 23: {fileID: 678230658}
-  - 95: {fileID: 678230657}
   - 64: {fileID: 678230656}
   m_Layer: 8
   m_Name: EggDummy
@@ -27425,27 +27136,11 @@ MeshCollider:
   m_GameObject: {fileID: 678230654}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &678230657
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: be3015d91869ee542aadc50a18dc0ed8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1590262833}
-  m_GameObject: {fileID: 678230654}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &678230658
 Renderer:
   m_ObjectHideFlags: 0
@@ -30330,50 +30025,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1926007019}
   m_GameObject: {fileID: 761082695}
   m_Mesh: {fileID: 4300004, guid: 853039dafd6fb244aaa2e2dceb3775b4, type: 3}
---- !u!1001 &762518963
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 4.57700014
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.28100002
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -.563000023
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: da890fc79736a454d95e255c4ae44338, type: 2}
-  m_RootGameObject: {fileID: 220012619}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &762634806
 GameObject:
   m_ObjectHideFlags: 0
@@ -31832,7 +31483,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100008, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 802715127}
@@ -31849,7 +31500,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400008, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   m_GameObject: {fileID: 802715126}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -.000251190795, y: -.000311598182, z: .21299918}
@@ -31862,7 +31513,7 @@ Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 2300004, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   m_GameObject: {fileID: 802715126}
   m_Enabled: 1
   m_CastShadows: 1
@@ -31883,7 +31534,7 @@ MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 3300004, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   m_GameObject: {fileID: 802715126}
   m_Mesh: {fileID: 4300002, guid: f15ed0d8976a75e42810ca2bf9b320ab, type: 3}
 --- !u!1 &805299136
@@ -33996,7 +33647,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 876543891}
   - 114: {fileID: 876543893}
-  - 136: {fileID: 876543892}
   m_Layer: 8
   m_Name: ShiningDestroyableEgg
   m_TagString: Egg
@@ -34017,20 +33667,6 @@ Transform:
   - {fileID: 1852667446}
   m_Father: {fileID: 1648281395}
   m_RootOrder: 2
---- !u!136 &876543892
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: be3015d91869ee542aadc50a18dc0ed8,
-    type: 2}
-  m_PrefabInternal: {fileID: 2064576903}
-  m_GameObject: {fileID: 876543890}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!114 &876543893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34761,7 +34397,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: ef6099eeb695e384ea580c076f5313a1, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ef6099eeb695e384ea580c076f5313a1, type: 2}
@@ -36671,7 +36307,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Answer No. 1
+  m_Text: 
 --- !u!222 &936967588
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -42684,7 +42320,6 @@ GameObject:
   - 4: {fileID: 1093701750}
   - 33: {fileID: 1093701754}
   - 23: {fileID: 1093701753}
-  - 95: {fileID: 1093701752}
   - 64: {fileID: 1093701751}
   m_Layer: 8
   m_Name: EggDummy
@@ -42719,22 +42354,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &1093701752
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1163750140}
-  m_GameObject: {fileID: 1093701749}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1093701753
 Renderer:
   m_ObjectHideFlags: 0
@@ -42961,7 +42580,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1097053207}
   - 114: {fileID: 1097053209}
-  - 54: {fileID: 1097053208}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -42982,22 +42600,6 @@ Transform:
   - {fileID: 589907973}
   m_Father: {fileID: 2005605045}
   m_RootOrder: 4
---- !u!54 &1097053208
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 913998231}
-  m_GameObject: {fileID: 1097053206}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!114 &1097053209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43362,7 +42964,6 @@ GameObject:
   - 4: {fileID: 1109690496}
   - 33: {fileID: 1109690500}
   - 23: {fileID: 1109690499}
-  - 95: {fileID: 1109690498}
   - 64: {fileID: 1109690497}
   m_Layer: 8
   m_Name: EggDummy
@@ -43397,22 +42998,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &1109690498
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1246981959}
-  m_GameObject: {fileID: 1109690495}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1109690499
 Renderer:
   m_ObjectHideFlags: 0
@@ -45180,7 +44765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1166211224
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45822,7 +45407,7 @@ MonoBehaviour:
   m_lifepoints: 1
   m_canFly: 0
   m_canFall: 0
-  m_allowToMove: 0
+  m_allowToMove: 1
 --- !u!136 &1179640895
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -47745,7 +47330,6 @@ GameObject:
   - 4: {fileID: 1223885098}
   - 33: {fileID: 1223885102}
   - 23: {fileID: 1223885101}
-  - 95: {fileID: 1223885100}
   - 64: {fileID: 1223885099}
   m_Layer: 8
   m_Name: EggDummy
@@ -47780,22 +47364,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &1223885100
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 2054976516}
-  m_GameObject: {fileID: 1223885097}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1223885101
 Renderer:
   m_ObjectHideFlags: 0
@@ -49143,7 +48711,7 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
   m_RootGameObject: {fileID: 49822505}
   m_IsPrefabParent: 0
@@ -49289,7 +48857,6 @@ GameObject:
   - 4: {fileID: 1250324829}
   - 33: {fileID: 1250324833}
   - 23: {fileID: 1250324832}
-  - 95: {fileID: 1250324831}
   - 64: {fileID: 1250324830}
   m_Layer: 8
   m_Name: EggDummy
@@ -49324,22 +48891,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &1250324831
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1229963219}
-  m_GameObject: {fileID: 1250324828}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1250324832
 Renderer:
   m_ObjectHideFlags: 0
@@ -50381,7 +49932,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1281825834}
   - 114: {fileID: 1281825835}
-  - 54: {fileID: 1281825836}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -50415,22 +49965,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
---- !u!54 &1281825836
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1163750140}
-  m_GameObject: {fileID: 1281825833}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &1284753484
 GameObject:
   m_ObjectHideFlags: 0
@@ -51976,7 +51510,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1318765780}
   - 114: {fileID: 1318765782}
-  - 136: {fileID: 1318765781}
   m_Layer: 8
   m_Name: ShiningDestroyableEgg
   m_TagString: Egg
@@ -51997,20 +51530,6 @@ Transform:
   - {fileID: 616283193}
   m_Father: {fileID: 2005605045}
   m_RootOrder: 3
---- !u!136 &1318765781
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: be3015d91869ee542aadc50a18dc0ed8,
-    type: 2}
-  m_PrefabInternal: {fileID: 308967496}
-  m_GameObject: {fileID: 1318765779}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!114 &1318765782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53478,7 +52997,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1362530408}
   - 114: {fileID: 1362530409}
-  - 54: {fileID: 1362530410}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -53512,22 +53030,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
---- !u!54 &1362530410
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 121085977}
-  m_GameObject: {fileID: 1362530407}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &1362782806
 GameObject:
   m_ObjectHideFlags: 0
@@ -54905,50 +54407,6 @@ Transform:
   - {fileID: 1634661249}
   m_Father: {fileID: 1785624476}
   m_RootOrder: 1
---- !u!1001 &1403960520
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1980607810}
-    m_Modifications:
-    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 23.1100006
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_RootGameObject: {fileID: 2067125881}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1405700926
 GameObject:
   m_ObjectHideFlags: 0
@@ -58172,7 +57630,7 @@ MonoBehaviour:
   m_lifepoints: 1
   m_canFly: 0
   m_canFall: 0
-  m_allowToMove: 0
+  m_allowToMove: 1
 --- !u!136 &1486124342
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -60592,64 +60050,6 @@ Transform:
   - {fileID: 1783810093}
   m_Father: {fileID: 15189978}
   m_RootOrder: 0
---- !u!1 &1558700419
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100002, guid: da890fc79736a454d95e255c4ae44338, type: 2}
-  m_PrefabInternal: {fileID: 762518963}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1558700420}
-  - 33: {fileID: 1558700422}
-  - 23: {fileID: 1558700421}
-  m_Layer: 8
-  m_Name: Model
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1558700420
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400002, guid: da890fc79736a454d95e255c4ae44338, type: 2}
-  m_PrefabInternal: {fileID: 762518963}
-  m_GameObject: {fileID: 1558700419}
-  m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1.8217386}
-  m_Children: []
-  m_Father: {fileID: 220012622}
-  m_RootOrder: 0
---- !u!23 &1558700421
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: da890fc79736a454d95e255c4ae44338,
-    type: 2}
-  m_PrefabInternal: {fileID: 762518963}
-  m_GameObject: {fileID: 1558700419}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &1558700422
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: da890fc79736a454d95e255c4ae44338,
-    type: 2}
-  m_PrefabInternal: {fileID: 762518963}
-  m_GameObject: {fileID: 1558700419}
-  m_Mesh: {fileID: 4300000, guid: 4af964fb8be78d547956acc19f32f4ff, type: 3}
 --- !u!1 &1559761334
 GameObject:
   m_ObjectHideFlags: 0
@@ -61279,6 +60679,14 @@ Prefab:
       propertyPath: m_Name
       value: Birdy
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_allowToMove
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14300000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_SlopeLimit
+      value: 45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
   m_RootGameObject: {fileID: 1592779857}
@@ -61448,6 +60856,10 @@ Prefab:
     - target: {fileID: 100018, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
       propertyPath: m_Name
       value: BirdyStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_allowToMove
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
@@ -61897,7 +61309,7 @@ MonoBehaviour:
   m_lifepoints: 1
   m_canFly: 0
   m_canFall: 0
-  m_allowToMove: 0
+  m_allowToMove: 1
 --- !u!136 &1592779860
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -62536,7 +61948,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1609022086}
   - 114: {fileID: 1609022085}
-  - 54: {fileID: 1609022084}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -62544,22 +61955,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &1609022084
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1500019124}
-  m_GameObject: {fileID: 1609022083}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!114 &1609022085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64101,7 +63496,6 @@ GameObject:
   - 4: {fileID: 1650667703}
   - 33: {fileID: 1650667707}
   - 23: {fileID: 1650667706}
-  - 95: {fileID: 1650667705}
   - 64: {fileID: 1650667704}
   m_Layer: 8
   m_Name: EggDummy
@@ -64131,27 +63525,11 @@ MeshCollider:
   m_GameObject: {fileID: 1650667702}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &1650667705
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: be3015d91869ee542aadc50a18dc0ed8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1736746709}
-  m_GameObject: {fileID: 1650667702}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1650667706
 Renderer:
   m_ObjectHideFlags: 0
@@ -66379,7 +65757,6 @@ GameObject:
   - 4: {fileID: 1709692611}
   - 33: {fileID: 1709692615}
   - 23: {fileID: 1709692614}
-  - 95: {fileID: 1709692613}
   - 64: {fileID: 1709692612}
   m_Layer: 8
   m_Name: EggDummy
@@ -66409,27 +65786,11 @@ MeshCollider:
   m_GameObject: {fileID: 1709692610}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &1709692613
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: be3015d91869ee542aadc50a18dc0ed8,
-    type: 2}
-  m_PrefabInternal: {fileID: 784459896}
-  m_GameObject: {fileID: 1709692610}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1709692614
 Renderer:
   m_ObjectHideFlags: 0
@@ -67492,7 +66853,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1736910075}
   - 114: {fileID: 1736910076}
-  - 54: {fileID: 1736910077}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -67526,22 +66886,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
---- !u!54 &1736910077
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 1554840453}
-  m_GameObject: {fileID: 1736910074}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &1737059558
 GameObject:
   m_ObjectHideFlags: 0
@@ -67809,7 +67153,7 @@ Transform:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100004, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1747372107}
@@ -67825,7 +67169,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400004, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   m_GameObject: {fileID: 1747372106}
   m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
   m_LocalPosition: {x: 1.49011609e-10, y: 0, z: -5.96046434e-10}
@@ -67842,7 +67186,7 @@ Animator:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 9500000, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   m_GameObject: {fileID: 1747372106}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: f15ed0d8976a75e42810ca2bf9b320ab, type: 3}
@@ -73244,7 +72588,6 @@ GameObject:
   - 4: {fileID: 1852667446}
   - 33: {fileID: 1852667450}
   - 23: {fileID: 1852667449}
-  - 95: {fileID: 1852667448}
   - 64: {fileID: 1852667447}
   m_Layer: 8
   m_Name: EggDummy
@@ -73274,27 +72617,11 @@ MeshCollider:
   m_GameObject: {fileID: 1852667445}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &1852667448
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: be3015d91869ee542aadc50a18dc0ed8,
-    type: 2}
-  m_PrefabInternal: {fileID: 2064576903}
-  m_GameObject: {fileID: 1852667445}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1852667449
 Renderer:
   m_ObjectHideFlags: 0
@@ -73699,7 +73026,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1862369329}
   - 114: {fileID: 1862369331}
-  - 136: {fileID: 1862369330}
   m_Layer: 8
   m_Name: ShiningDestroyableEgg
   m_TagString: Egg
@@ -73720,20 +73046,6 @@ Transform:
   - {fileID: 678230655}
   m_Father: {fileID: 2005605045}
   m_RootOrder: 6
---- !u!136 &1862369330
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: be3015d91869ee542aadc50a18dc0ed8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1590262833}
-  m_GameObject: {fileID: 1862369328}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0500000007
-  m_Height: .100000001
-  m_Direction: 1
-  m_Center: {x: 0, y: .0500000007, z: 0}
 --- !u!114 &1862369331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74841,6 +74153,50 @@ MeshFilter:
   m_PrefabInternal: {fileID: 227258968}
   m_GameObject: {fileID: 1888601708}
   m_Mesh: {fileID: 4300008, guid: eac70a064339b694c9463d6d2dcf8bd7, type: 3}
+--- !u!1001 &1889897570
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1980607810}
+    m_Modifications:
+    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .00400000019
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
+  m_RootGameObject: {fileID: 2067125881}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1890331838
 GameObject:
   m_ObjectHideFlags: 0
@@ -75021,7 +74377,7 @@ MonoBehaviour:
   m_lifepoints: 1
   m_canFly: 0
   m_canFall: 0
-  m_allowToMove: 0
+  m_allowToMove: 1
 --- !u!136 &1892117587
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -76070,6 +75426,14 @@ Prefab:
       propertyPath: m_Name
       value: Birdy
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_allowToMove
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14300000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_SlopeLimit
+      value: 45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
   m_RootGameObject: {fileID: 1892117584}
@@ -76439,7 +75803,6 @@ GameObject:
   - 4: {fileID: 1930235007}
   - 33: {fileID: 1930235011}
   - 23: {fileID: 1930235010}
-  - 95: {fileID: 1930235009}
   - 64: {fileID: 1930235008}
   m_Layer: 8
   m_Name: EggDummy
@@ -76474,22 +75837,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &1930235009
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 673996469}
-  m_GameObject: {fileID: 1930235006}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1930235010
 Renderer:
   m_ObjectHideFlags: 0
@@ -76874,7 +76221,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1951020240}
   - 114: {fileID: 1951020241}
-  - 54: {fileID: 1951020242}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -76908,22 +76254,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_eggType: 3
---- !u!54 &1951020242
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 378939956}
-  m_GameObject: {fileID: 1951020239}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &1951243449
 GameObject:
   m_ObjectHideFlags: 0
@@ -78141,6 +77471,14 @@ Prefab:
       propertyPath: m_Name
       value: Birdy
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_allowToMove
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14300000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_SlopeLimit
+      value: 45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
   m_RootGameObject: {fileID: 2112769612}
@@ -78188,6 +77526,14 @@ Prefab:
     - target: {fileID: 100018, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
       propertyPath: m_Name
       value: Birdy
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_allowToMove
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14300000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_SlopeLimit
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
@@ -79048,7 +78394,6 @@ GameObject:
   - 4: {fileID: 1993609296}
   - 33: {fileID: 1993609300}
   - 23: {fileID: 1993609299}
-  - 95: {fileID: 1993609298}
   - 64: {fileID: 1993609297}
   m_Layer: 8
   m_Name: EggDummy
@@ -79083,22 +78428,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &1993609298
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 612257273}
-  m_GameObject: {fileID: 1993609295}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1993609299
 Renderer:
   m_ObjectHideFlags: 0
@@ -80484,7 +79813,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2035644711
 RectTransform:
   m_ObjectHideFlags: 0
@@ -80760,7 +80089,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2043369976}
   - 114: {fileID: 2043369978}
-  - 54: {fileID: 2043369977}
   m_Layer: 8
   m_Name: DestroyableEgg
   m_TagString: Egg
@@ -80781,22 +80109,6 @@ Transform:
   - {fileID: 1993609296}
   m_Father: {fileID: 1648281395}
   m_RootOrder: 0
---- !u!54 &2043369977
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5486402, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 612257273}
-  m_GameObject: {fileID: 2043369975}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!114 &2043369978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81378,7 +80690,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
       propertyPath: m_eggType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
@@ -81876,7 +81188,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2067125882}
@@ -81894,10 +81206,10 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   m_GameObject: {fileID: 2067125881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.1100006, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: .00400000019, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1747372107}
@@ -81908,7 +81220,7 @@ CharacterController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 14300000, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   m_GameObject: {fileID: 2067125881}
   serializedVersion: 2
   m_Height: .400000006
@@ -81923,7 +81235,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   m_GameObject: {fileID: 2067125881}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -81933,8 +81245,6 @@ MonoBehaviour:
   m_jumpHeight: 18
   m_brakeFactor: 1
   m_accelerationFactor: 1
-  Kiwano: {fileID: 0}
-  Raspberry: {fileID: 0}
   m_kiwanoDistance: 2
   m_kiwanosRotationSpeed: 180
 --- !u!136 &2067125885
@@ -81942,7 +81252,7 @@ CapsuleCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 13600000, guid: e713489ace1cc6a48a81a92cf8ed42a7,
     type: 2}
-  m_PrefabInternal: {fileID: 1403960520}
+  m_PrefabInternal: {fileID: 1889897570}
   m_GameObject: {fileID: 2067125881}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -84057,7 +83367,7 @@ MonoBehaviour:
   m_lifepoints: 1
   m_canFly: 0
   m_canFall: 0
-  m_allowToMove: 0
+  m_allowToMove: 1
 --- !u!136 &2112769615
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -84362,7 +83672,6 @@ GameObject:
   - 4: {fileID: 2121948060}
   - 33: {fileID: 2121948064}
   - 23: {fileID: 2121948063}
-  - 95: {fileID: 2121948062}
   - 64: {fileID: 2121948061}
   m_Layer: 8
   m_Name: EggDummy
@@ -84397,22 +83706,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
---- !u!95 &2121948062
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 56d5ab75169c7eb42b5054b7df7a0ece,
-    type: 2}
-  m_PrefabInternal: {fileID: 378939956}
-  m_GameObject: {fileID: 2121948059}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 2ecb677cd93948745a9b76a45f4603a0, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &2121948063
 Renderer:
   m_ObjectHideFlags: 0

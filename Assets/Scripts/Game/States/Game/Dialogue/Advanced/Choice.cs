@@ -38,6 +38,14 @@ public class Choice
         private set { }
     }
 
+    // The text of this choice
+    private string m_text;
+    public string Text
+    {
+        get { return m_text; }
+        private set { m_text = value; }
+    }
+
     // ID of the next text
     private int m_nextTextID;
     public int NextTextID
@@ -55,10 +63,11 @@ public class Choice
     }
 
     // Constructor
-    public Choice(int _id, int _nextTextID, string _exitValue)
+    public Choice(int _id, string _text, int _nextTextID, string _exitValue)
     {
         // Copy
         m_choiceID = _id;
+        m_text = _text;
         m_nextTextID = _nextTextID;
         m_exitValue = _exitValue;
 

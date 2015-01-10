@@ -209,10 +209,7 @@ public class PlayerData : MonoBehaviour
 			return;
 		m_powerUps[(int)_type].m_stockSize = _size;
 		if(m_powerUps[(int)_type].m_stockSize <= 0)
-		{
 			m_powerUps[(int)_type].m_stockSize = 0;
-			m_powerUps[(int)_type].m_available = false;
-		}
 		onNotifyPowerUpChanged(_type);
 	}
 	
@@ -223,7 +220,6 @@ public class PlayerData : MonoBehaviour
 		if(_type == PowerUpType.PUT_NONE || _type == PowerUpType.PUT_COUNT)
 			return;
 		m_powerUps[(int)_type].m_stockSize += _v;
-		m_powerUps[(int)_type].m_available = true;
 		onNotifyPowerUpChanged(_type);
 	}
 	
@@ -235,10 +231,7 @@ public class PlayerData : MonoBehaviour
 			return;
 		m_powerUps[(int)_type].m_stockSize -= _v;
 		if(m_powerUps[(int)_type].m_stockSize <= 0)
-		{
 			m_powerUps[(int)_type].m_stockSize = 0;
-			m_powerUps[(int)_type].m_available = false;
-		}
 		onNotifyPowerUpChanged(_type);
 	}	
 

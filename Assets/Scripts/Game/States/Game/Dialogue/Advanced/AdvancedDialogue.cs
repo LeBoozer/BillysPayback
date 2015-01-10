@@ -14,7 +14,8 @@ using System.Collections.Generic;
 public class AdvancedDialogue
 {
     // Constant values
-    public static readonly string DIALOGUE_CANCELLED_EXIT_VALUE = "";
+    public static readonly string DIALOGUE_CANCELLED_EXIT_VALUE = "_cancel_";
+    public static readonly string DIALOGUE_NO_CHOICE_EXIT_VALUE = "_done_";
 
     // List with all conversations
     private Dictionary<int, Conversation> m_conversationList = new Dictionary<int,Conversation>();

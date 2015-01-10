@@ -61,7 +61,7 @@ public class DialogueWindowScript : MonoBehaviour {
 			"Warum holt ihr sie euch nicht einfach zurück?",
 			"Klingt … interessant … wir gehen dann mal."};
 
-		openDialogWindow ();
+		/*openDialogWindow ();
 
 		addAnswers (testTexts);
 
@@ -69,7 +69,7 @@ public class DialogueWindowScript : MonoBehaviour {
 
 		showAnswer(answers[3].text, billy);
 
-		//dropSpokenAnswer ();
+		dropSpokenAnswer ();*/
 	}
 	
 	// Update is called once per frame
@@ -164,7 +164,8 @@ public class DialogueWindowScript : MonoBehaviour {
 
 	//removes all answers from the current dialog window --> returns if successful or not
 	public bool removeAnswers() {
-		if (answers.Length <= 0) {
+        if (answers == null || answers.Length <= 0)
+        {
 			Debug.Log("No answers exist which could be removed!");
 
 			return false;

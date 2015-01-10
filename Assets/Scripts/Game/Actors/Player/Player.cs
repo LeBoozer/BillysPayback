@@ -12,7 +12,8 @@ using System.Collections;
  * Represent the player
  * Controll the Movement and so on
  */
-public class Player : MonoBehaviour {
+public class Player : Hitable
+{
 
 	#region Variable
 	private float 					m_velocityX;
@@ -31,10 +32,11 @@ public class Player : MonoBehaviour {
 
 	private PlayerData				m_playerData;
 	private CharacterController 	m_controller;
+    private Vector3                 m_worldScale = Vector3.zero;
 	private ArrayList				m_kiwanos;
-	
-	public  GameObject				Kiwano = null;
-	public  GameObject				Raspberry = null;
+
+    private GameObject              Kiwano = null;
+	private  GameObject				Raspberry = null;
 	public	float					m_kiwanoDistance = 2;
 	public 	float					m_kiwanosRotationSpeed = 180;
 
@@ -66,6 +68,12 @@ public class Player : MonoBehaviour {
 		// Get character controller
 		m_controller = GetComponent<CharacterController> ();
 		m_startPosition = this.transform.position;
+
+        // Calculate world scale
+        m_worldScale = HelperFunctions.getWorldScale(gameObject);
+
+        Game.Instance.PlayerData.setPowerUpAvailable(PlayerData.PowerUpType.PUT_RASPBERRY, true);
+        Game.Instance.PlayerData.setPowerUpStockSize(PlayerData.PowerUpType.PUT_RASPBERRY, 10000);
 	}
 
 	
@@ -282,7 +290,7 @@ public class Player : MonoBehaviour {
 			return;
 
 		// create projectile
-		GameObject pro = Instantiate (Raspberry, this.transform.position, this.transform.rotation) as GameObject;
+        GameObject pro = Instantiate(Raspberry, this.transform.position + Vector3.up * 0.5f * m_controller.height * m_worldScale.y, this.transform.rotation) as GameObject;
 
 		// add force to projectile
 		Rigidbody rb = pro.GetComponent<Rigidbody> ();
@@ -311,24 +319,6 @@ public class Player : MonoBehaviour {
 		m_velocityY = Mathf.Sqrt(2 * m_jumpHeight * m_controller.height / Mathf.Abs(Physics.gravity.y));
 	}
 
-	/*
-	 * if the play get a hit
-	 */
-	public bool hit()
-	{
-		bool taken = false;
-		if(m_lastHit + 2 < Time.time)
-		{
-			taken = true;
-			m_playerData.LifePoints--;
-			m_lastHit = Time.time;
-		}
-		if (m_playerData.LifePoints == 0)
-			m_gameOver = true;	//Destroy (this.gameObject);
-
-		return taken;
-	}
-
 	/**
 	 * block the movement of the player
 	 */
@@ -337,21 +327,24 @@ public class Player : MonoBehaviour {
 		m_allowToMove = !_k;
 	}
 
-	/**
-	 * processed the collision with other GameObjects
-	 */
+    // Override: Hitable::onHit()
+    public override void onHit(Hitable _source)
+    {
+        // Take a hit
+        if (m_lastHit + 2 < Time.time)
+        {
+            m_playerData.LifePoints--;
+            m_lastHit = Time.time;
+        }
+        if (m_playerData.LifePoints == 0)
+            m_gameOver = true;	//Destroy (this.gameObject);
+    }
+
+    // Override: Monobehaviour::OnControllerColliderHit()
 	public void OnControllerColliderHit(ControllerColliderHit _hit)
 	{
         // Send notification
         _hit.gameObject.SendMessageUpwards("OnCharacterControllerHit", _hit, SendMessageOptions.DontRequireReceiver);
-		
-		/*/ projectile
-        if (tag.Equals(Tags.TAG_PROJECTILE_ENEMY))
-        {
-            if (hit())
-                Destroy(_hit.gameObject);
-            return;
-        }*/
 	}
 
 	#endregion
