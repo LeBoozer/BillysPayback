@@ -1,0 +1,10 @@
+﻿<bw>
+	<conversation id="0" start="0">
+		<text id="0">
+			<part t="2.5" character="Antonio">Sieh mal, da vorne sind einige Eier,</part>
+			<part t="2.5" character="Antonio">die die Vögel hier zurückgelassen haben müssen.</part>
+			<part t="2.5" character="Antonio">Lass sie uns zerbrechen, vielleicht befindet sich etwas Nützliches in ihnen.</part>
+			<part t="2.5" character="Antonio">Du kannst sie durch dagegen springen zerstören.</part>
+		</text> 
+	</conversation>
+</bw>

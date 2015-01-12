@@ -28,7 +28,6 @@ public class Enemy : Hitable
 	public  bool		m_canFall			= false;
 	public  bool		m_allowToMove		= false;
 	private bool 		first;
-	private PlayerData			m_playerData;
 	private CharacterController m_controller;
 
     private Vector3     m_worldScale = Vector3.zero;
@@ -40,8 +39,6 @@ public class Enemy : Hitable
 		m_direction = (this.transform.localRotation.eulerAngles.y == 180) ? 1: -1;
 		m_fly = 0;
 		m_startJumpTime = 0;
-		// Get player data
-		m_playerData = Game.Instance.PlayerData;
 
 		// get controller
 		m_controller = GetComponent<CharacterController>();

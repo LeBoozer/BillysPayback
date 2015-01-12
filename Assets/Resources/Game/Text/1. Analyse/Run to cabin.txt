@@ -1,0 +1,9 @@
+﻿<bw>
+	<conversation id="0" start="0">
+		<text id="0">
+			<part t="2.5" character="Antonio">So, ich denke jetzt haben wir deinem Gedächtnis </part>
+			<part t="2.5" character="Antonio">genug auf die Sprünge geholfen. Es ist jetzt auch nicht</part>
+			<part t="2.5" character="Antonio">mehr weit bis zu deiner Hütte.</part>
+		</text> 
+	</conversation>
+</bw>

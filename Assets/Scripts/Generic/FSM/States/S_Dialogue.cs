@@ -96,8 +96,7 @@ public class S_Dialogue : FSMState
         // Next text-part?
         if(m_isHandleNextTextPart == true)
         {
-            onNextTextPart();
-            m_isHandleNextTextPart = false;
+            m_isHandleNextTextPart = onNextTextPart();
         }
     }
 
@@ -187,9 +186,10 @@ public class S_Dialogue : FSMState
     }
 
     /**
-     * Handles the timing and displaying of the text-parts
+     * Handles the timing and displaying of the text-parts.
+     * Returns true to indicate new text is available to be handled, otherwise false
      */
-    private void onNextTextPart()
+    private bool onNextTextPart()
     {
         // Local variables
         TextPart part = null;
@@ -211,17 +211,19 @@ public class S_Dialogue : FSMState
                         onConversationExit(m_text.ExitValue);
                     else
                     {
-                        if(!setTextByID(m_text.NextTextID))
+                        if (!setTextByID(m_text.NextTextID))
                             onConversationExit(AdvancedDialogue.DIALOGUE_NO_CHOICE_EXIT_VALUE);
+                        else
+                            return true;
                     }
 
-                    return;
+                    return false;
                 }
 
                 // No choices available!
                 onConversationExit(AdvancedDialogue.DIALOGUE_NO_CHOICE_EXIT_VALUE);
             }
-            return;
+            return false;
         }
 
         // Get text part
@@ -245,6 +247,8 @@ public class S_Dialogue : FSMState
         m_timer.Enabled = true;
         m_timer.AutoReset = false;
         m_timer.Elapsed += (object _s, ElapsedEventArgs _e) => { m_isHandleNextTextPart = true; };
+
+        return false;
     }
 
     /**

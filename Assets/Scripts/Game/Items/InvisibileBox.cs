@@ -11,7 +11,7 @@ public class InvisibileBox : MonoBehaviour
     void Start()
     {
         foreach (Transform t in transform)
-            t.active = false;
+            t.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,7 +48,7 @@ public class InvisibileBox : MonoBehaviour
         {
             // active the model
             foreach (Transform t in transform)
-                t.active = true;
+                t.gameObject.SetActive(true);
         }
     }
 

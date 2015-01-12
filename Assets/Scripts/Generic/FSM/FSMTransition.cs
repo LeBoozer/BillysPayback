@@ -46,6 +46,8 @@ public abstract class FSMTransition : MonoBehaviour
 	// Will be called as soon as the host-state has finished its work (this call is not guaranteed and depends heavily on the host state!)
 	public virtual void onHostStateDone(object _param)
 	{
+        // Set target state
+        setTargetFSMState();
 	}
 	
 	// Override: MonoBehaviour::Awake()
