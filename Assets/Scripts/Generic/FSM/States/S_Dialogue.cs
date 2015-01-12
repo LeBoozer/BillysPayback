@@ -165,7 +165,7 @@ public class S_Dialogue : FSMState
     /**
      * Set the active text instance
      */
-    private void setTextByID(int _id)
+    private bool setTextByID(int _id)
     {
         // Get start text, text-part
         m_currentTextPartIndex = -1;
@@ -173,7 +173,7 @@ public class S_Dialogue : FSMState
         if (m_text == null)
         {
             Debug.LogError("Invalid text FSM-state (" + gameObject.name + "). Specified text has not been found!");
-            return;
+            return false;
         }
 
         // Delete choices
@@ -182,6 +182,8 @@ public class S_Dialogue : FSMState
 
         // Update text on next update run
         m_isHandleNextTextPart = true;
+
+        return true;
     }
 
     /**
@@ -199,8 +201,23 @@ public class S_Dialogue : FSMState
         if (m_currentTextPartIndex >= m_text.TextPartCount && m_isHandleNextTextPart == true)
         {
             // Display choices
-            if(!onDisplayChoices())
+            if(onDisplayChoices() == false)
             {
+                // Auto generated/executed choice available
+                if(m_text.AutoChoiceType != DialogueText.ChoiceType.CHOICE_NONE)
+                {
+                    // Exit?
+                    if (m_text.AutoChoiceType == DialogueText.ChoiceType.CHOICE_EXIT)
+                        onConversationExit(m_text.ExitValue);
+                    else
+                    {
+                        if(!setTextByID(m_text.NextTextID))
+                            onConversationExit(AdvancedDialogue.DIALOGUE_NO_CHOICE_EXIT_VALUE);
+                    }
+
+                    return;
+                }
+
                 // No choices available!
                 onConversationExit(AdvancedDialogue.DIALOGUE_NO_CHOICE_EXIT_VALUE);
             }

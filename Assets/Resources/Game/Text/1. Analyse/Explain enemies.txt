@@ -1,0 +1,12 @@
+﻿<bw>
+	<conversation id="0" start="0">
+		<text id="0">
+			<part t="2.5" character="Antonio">Verdammt. Nimm dich bloß vor den Vögeln in Acht.</part>
+			<part t="2.5" character="Antonio">Es sind immer noch welche hier.</part>
+			<part t="2.5" character="Antonio">Wenn du mit ihnen in Berührung kommst, verlierst du Lebenspunkte</part>
+			<part t="2.5" character="Antonio">und falls diese aufgebraucht sind, sogar ein ganzes Leben!</part>
+			<part t="2.5" character="Antonio">Du kannst diese Biester nur durch einen gezielten Sprung</part>
+			<part t="2.5" character="Antonio">auf ihren Kopf außer Gefecht setzen.</part>
+		</text>
+	</conversation>
+</bw>
