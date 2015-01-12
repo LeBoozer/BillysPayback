@@ -130,6 +130,8 @@ public abstract class AdvancedDialogueParser
     {
         // Local variables
         int textID = -1;
+        int nextTextID = -1;
+        string exitValue = "";
         DialogueText text = null;
         XmlNode xmlNode = null;
         XmlNode xmlNodeAtt = null;
@@ -146,6 +148,16 @@ public abstract class AdvancedDialogueParser
             return null;
         }
         textID = int.Parse(xmlNodeAtt.Value);
+
+        // Get attribute: next text ID
+        xmlNodeAtt = _node.Attributes.GetNamedItem("nextText");
+        if (xmlNodeAtt != null)
+            nextTextID = int.Parse(xmlNodeAtt.Value);
+
+        // Get attribute: exit value
+        xmlNodeAtt = _node.Attributes.GetNamedItem("exit");
+        if (xmlNodeAtt != null)
+            exitValue = xmlNodeAtt.Value;
 
         // Find first text/choice node
         xmlNode = _node.FirstChild;
@@ -192,7 +204,7 @@ public abstract class AdvancedDialogueParser
         while (xmlNode != null);
 
         // Create text
-        text = new DialogueText(textID, choiceList, partList);
+        text = new DialogueText(textID, nextTextID, exitValue, choiceList, partList);
 
         return text;
     }
