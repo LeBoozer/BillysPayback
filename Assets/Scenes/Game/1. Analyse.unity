@@ -12367,6 +12367,7 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -45026,7 +45027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e799077c9a74b244f84af1f3cf62c485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_startState: {fileID: 691640319}
+  m_startState: {fileID: 1402203454}
 --- !u!1001 &1172672628
 Prefab:
   m_ObjectHideFlags: 0
@@ -80309,6 +80310,7 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
