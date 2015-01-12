@@ -16,27 +16,40 @@ public class Player : Hitable
 {
 
 	#region Variable
-	private float 					m_velocityX;
-	private float 					m_velocityY;
-	private bool 					m_jump;
-	private bool 					m_flyStart;
-	private float 					m_oldPositionX 			= 0.0f;
-	private float 					m_lastHit;
-	private	bool					m_gameOver;
+    // Movement
 	private bool					m_allowToMove;
-	private float					m_startJumpTime;
-	public  float					m_jumpHeight 			= 5;
+    // vertical
+	private float 					m_velocityX;
+	private float 					m_oldPositionX 			= 0.0f;
 	public  float					m_brakeFactor			= 1;
 	public  float					m_accelerationFactor	= 1;
-	private Vector3 				m_startPosition;
 
+    // horizontal
+	private float 					m_velocityY;
+	private bool 					m_jump;
+	private float					m_startJumpTime;
+    private float                   m_jumpImpulse;
+    private float                   m_maximalJumpTime;
+    public  float                   m_minJumpHeight         = 1;
+	public  float					m_maxJumpHeight 		= 6;
+
+    // hit control
+	private float 					m_lastHit;
+	private	bool					m_gameOver;
+	private	bool					m_loseLife;
+    public  bool                    IGNORE_CHECK_POINTS     = false;
+	private Vector3 				m_lastCheckPoint;
+
+    // external variables
 	private PlayerData				m_playerData;
+    private GameObject              m_playerCamera;
 	private CharacterController 	m_controller;
     private Vector3                 m_worldScale = Vector3.zero;
-	private ArrayList				m_kiwanos;
 
+    // power up variables
+	private ArrayList				m_kiwanos;
     private GameObject              Kiwano = null;
-	private  GameObject				Raspberry = null;
+	private GameObject				Raspberry = null;
 	public	float					m_kiwanoDistance = 2;
 	public 	float					m_kiwanosRotationSpeed = 180;
 
@@ -48,7 +61,6 @@ public class Player : Hitable
         m_velocityX = 0;
         m_velocityY = 0;
         m_jump = false;
-        m_flyStart = false;
         m_lastHit = Time.time - 2;
         m_gameOver = false;
         m_kiwanos = new ArrayList();
@@ -57,7 +69,7 @@ public class Player : Hitable
 
         // Get character controller
         m_controller = GetComponent<CharacterController>();
-        m_startPosition = this.transform.position;
+        m_lastCheckPoint = this.transform.position;
 
         if (Kiwano == null)
             Kiwano = Resources.Load<GameObject>("Items/Kiwano");
@@ -71,8 +83,15 @@ public class Player : Hitable
         // Get player data
         m_playerData = Game.Instance.PlayerData;
 
+        // Get Player Camera
+        m_playerCamera = GameObject.FindGameObjectWithTag(Tags.TAG_MAIN_CAMERA);
+
         // Set player instance in game class
         Game.Instance.Player = this;
+
+        // calculate jumpValues
+        m_jumpImpulse = 2 * Mathf.Sqrt(m_maxJumpHeight * m_worldScale.y * m_controller.height * transform.localScale.y * Mathf.Abs(Physics.gravity.y));
+        m_maximalJumpTime = (m_worldScale.y * m_controller.height * transform.localScale.y * (m_maxJumpHeight - m_minJumpHeight)) / (m_jumpImpulse);
     }
 
 	#endregion
@@ -81,10 +100,8 @@ public class Player : Hitable
 	// Update is called once per frame
 	void Update () 
 	{
-		if(this.transform.position.y < -50)
-			this.transform.position = m_startPosition;
-		if (m_gameOver)
-			return;
+        if (!alive())
+            return;
 
 		if(m_allowToMove)
 			updateMovement ();
@@ -94,6 +111,47 @@ public class Player : Hitable
 		if(m_allowToMove)
 			shooting ();
 	}
+
+    private bool alive()
+    {
+        // game over?
+        if (m_gameOver)
+            return false;
+
+        // get a hit or is under the map?
+        if(this.transform.position.y < -50 || m_loseLife)
+        {
+            // reduce the life points
+            --m_playerData.m_lifePoints;
+            m_loseLife = false;
+
+            // game over?
+            if (m_playerData.m_lifePoints == 0)
+            {
+                --m_playerData.m_LifeNumber;
+                this.transform.position = Vector3.zero;
+                m_gameOver = true;
+                return false;
+            }
+
+            if (this.transform.position.y > -50 && IGNORE_CHECK_POINTS)
+                return true;
+
+            // move player to the last check point
+			this.transform.position = m_lastCheckPoint;
+            
+            PlayerCamera camera = m_playerCamera.GetComponent<PlayerCamera>();
+
+            // player is the target object in the camera script?
+            if (camera != null && camera.m_object.Equals(transform))
+                // set the camera to a new position
+                m_playerCamera.transform.position = new Vector3(m_lastCheckPoint.x,
+                                                                    m_lastCheckPoint.y + camera.m_YDistance,
+                                                                    m_lastCheckPoint.z - camera.m_distance);
+        }
+
+        return true;
+    }
 
 	/**
 	 * update the movement of the player
@@ -139,39 +197,32 @@ public class Player : Hitable
 		// movement high&down
 		//float lastVeloY = m_velocityY;
 		#region horizontal
+        // start to jump
 		if ((jumpKeyDown || jumpKey) && !m_jump) 
 		{
 			m_jump = true;
-			m_velocityY = 2 * Mathf.Sqrt(m_jumpHeight * m_controller.height * Mathf.Abs(Physics.gravity.y));
+			m_velocityY = m_jumpImpulse;
 			m_startJumpTime = 0;
-		} 
-		else if (jumpKeyDown && m_jump) 
-		{
-			// flying
-			m_flyStart = true;
-			if(m_velocityY > 0)
-				m_velocityY += Physics.gravity.y * Time.deltaTime;
-			else
-				m_velocityY += Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
-		} 
-		else if (m_flyStart && m_jump && jumpKey && m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_ORANGE)) 
-		{
-			if(m_velocityY > 0)
-				m_velocityY += Physics.gravity.y * Time.deltaTime;
-			else
-				m_velocityY += Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
-		} 
-		else if (m_jump) 
-		{
-			m_velocityY += Physics.gravity.y * Time.deltaTime;
-		} 
-		// nothing?
-		else 
-		{
 		}
+        else if (m_velocityY > 0)
+        {
+            // update 
+            m_velocityY += Physics.gravity.y * Time.deltaTime;
+
+            // like to jump higher?
+            if (false && jumpKey && m_startJumpTime < m_maximalJumpTime)
+                m_velocityY = m_jumpImpulse;
+        }
+        // like start to fly?
+        else if ((jumpKeyDown || jumpKey) && m_jump && m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_ORANGE))
+            m_velocityY += Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
+        // falling
+        else
+            m_velocityY += Physics.gravity.y * Time.deltaTime;
 		#endregion
 		// set new position
-		m_controller.Move (new Vector3 (m_velocityX, m_velocityY + m_startJumpTime * Physics.gravity.y, -this.transform.position.z / Time.deltaTime) * Time.deltaTime);
+        float y = m_velocityY + ((m_velocityY == m_jumpImpulse) ? 0 : m_startJumpTime * Physics.gravity.y);
+		m_controller.Move (new Vector3 (m_velocityX, y, -this.transform.position.z / Time.deltaTime) * Time.deltaTime);
 		m_startJumpTime += Time.deltaTime;
 		
 		// x-coord haven't changed?
@@ -189,7 +240,6 @@ public class Player : Hitable
 		if(m_controller.isGrounded)
 		{
 			m_jump = false;
-			m_flyStart = false;
 			m_velocityY = 0;
 			m_startJumpTime = 0;
 		}
@@ -203,7 +253,7 @@ public class Player : Hitable
 		// can do anything?
 		if(Kiwano == null || !m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_KIWANO))
 			return;
-		float height = m_controller.height / 2;
+		float height = m_controller.height / 2 * m_worldScale.y;
 		// have some kiwanos
 		if(m_playerData.getPowerUpStockSize(PlayerData.PowerUpType.PUT_KIWANO) > 0)
 		{
@@ -220,6 +270,9 @@ public class Player : Hitable
 				while(m_kiwanos.Count < newKiwanoNumber)
 				{
 					Transform newKiwano = ((GameObject) Instantiate(Kiwano)).transform;
+                    newKiwano.localScale = new Vector3(newKiwano.localScale.x * m_worldScale.x,
+                                                        newKiwano.localScale.y * m_worldScale.y,
+                                                        newKiwano.localScale.z * m_worldScale.z);
 					newKiwano.parent = this.transform;
 					newKiwano.LookAt(this.transform);
 					m_kiwanos.Add(newKiwano);
@@ -237,7 +290,7 @@ public class Player : Hitable
 				cos = Mathf.Cos(2 * Mathf.PI / m_kiwanos.Count);
 				sin = Mathf.Sin(2 * Mathf.PI / m_kiwanos.Count);
 
-				newPos = new Vector3(m_kiwanoDistance * m_controller.radius, height, 0);
+				newPos = new Vector3(m_kiwanoDistance * m_controller.radius * m_worldScale.x, height, 0);
 				foreach(Transform kiwa in m_kiwanos)
 				{
 					kiwa.position = newPos + this.transform.position;
@@ -288,7 +341,9 @@ public class Player : Hitable
 
 		// create projectile
         GameObject pro = Instantiate(Raspberry, this.transform.position + Vector3.up * 0.5f * m_controller.height * m_worldScale.y, this.transform.rotation) as GameObject;
-
+        pro.transform.localScale = new Vector3(pro.transform.localScale.x * m_worldScale.x,
+                                                        pro.transform.localScale.y * m_worldScale.y,
+                                                        pro.transform.localScale.z * m_worldScale.z);
 		// add force to projectile
 		Rigidbody rb = pro.GetComponent<Rigidbody> ();
 		rb.useGravity = false;
@@ -313,7 +368,7 @@ public class Player : Hitable
 	{
 		m_jump = true;
 		//m_fly = GameConfig.BILLY_JUMP_START_SPEED_ENEMY;
-		m_velocityY = Mathf.Sqrt(2 * m_jumpHeight * m_controller.height / Mathf.Abs(Physics.gravity.y));
+		m_velocityY = Mathf.Sqrt(2 * m_maxJumpHeight * m_controller.height / Mathf.Abs(Physics.gravity.y));
 	}
 
 	/**
@@ -327,14 +382,20 @@ public class Player : Hitable
     // Override: Hitable::onHit()
     public override void onHit(Hitable _source)
     {
+        // distribute a hit
+        if (m_playerData.getPowerUpStockSize(PlayerData.PowerUpType.PUT_KIWANO) > 0)
+        {
+            _source.onHit(this);
+            m_playerData.decreaseStockSizeByValue(PlayerData.PowerUpType.PUT_KIWANO, 1);
+            return;
+        }
+
         // Take a hit
         if (m_lastHit + 2 < Time.time)
         {
-            m_playerData.LifePoints--;
             m_lastHit = Time.time;
+            m_loseLife = true;
         }
-        if (m_playerData.LifePoints == 0)
-            m_gameOver = true;	//Destroy (this.gameObject);
     }
 
     // Override: Monobehaviour::OnControllerColliderHit()
@@ -343,6 +404,15 @@ public class Player : Hitable
         // Send notification
         _hit.gameObject.SendMessageUpwards("OnCharacterControllerHit", _hit, SendMessageOptions.DontRequireReceiver);
 	}
+
+
+    /**
+     * set a new CheckPoint
+     */
+    public void setChechPoint(Vector3 _newCheckPoint)
+    {
+        m_lastCheckPoint = _newCheckPoint;
+    }
 
 	#endregion
 }
