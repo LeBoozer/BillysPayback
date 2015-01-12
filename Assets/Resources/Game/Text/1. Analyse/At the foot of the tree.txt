@@ -1,10 +1,10 @@
-<bw>
+ï»¿<bw>
 	<conversation id="0" start="0">
 		<text id="0">
 			<part t="2.5" character="Antonio">Billy! Geht es dir gut?</part>
-			<part t="2.5" character="Billy">Ähm, ich glaube ja, aber sie haben Cherry entführt!</part>
-			<part t="2.5" character="Antonio">Ich weiß, aber wir müssen hier erst einmal weg. Hier ist es nicht sicher.</part>
-			<part t="2.5" character="Antonio">Wenn wir bei dir sind können wir weiter überlegen.</part>
+			<part t="2.5" character="Billy">Ã„hm, ich glaube ja, aber sie haben Cherry entfÃ¼hrt!</part>
+			<part t="2.5" character="Antonio">Ich weiÃŸ, aber wir mÃ¼ssen hier erst einmal weg. Hier ist es nicht sicher.</part>
+			<part t="2.5" character="Antonio">Wenn wir bei dir sind kÃ¶nnen wir weiter Ã¼berlegen.</part>
 			<part t="2.5" character="Antonio">Erinnerst du dich noch, was du zu tun hast?</part>
 
 			<choice id="0" nextText="1">Ich denke schon. Lass uns gehen.</choice>

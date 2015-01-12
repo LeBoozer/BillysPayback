@@ -34,13 +34,13 @@ public class FSMEventHighjack : MonoBehaviour
 	
 	// Override: MonoBehaviour::OnTriggerStay
 	private void OnTriggerStay(Collider _other)
-	{
+    {
 		// Notify listener
 		FSMOnTriggerStay(_other);
-	}	
-	
-	// Override: MonoBehaviour::OnTriggerLeave
-	private void OnTriggerLeave(Collider _other)
+	}
+
+    // Override: MonoBehaviour::OnTriggerExit 
+    private void OnTriggerExit(Collider _other)
 	{
 		// Notify listener
 		FSMOnTriggerLeave(_other);

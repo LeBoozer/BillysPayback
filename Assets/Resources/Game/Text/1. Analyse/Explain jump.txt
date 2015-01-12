@@ -1,7 +1,7 @@
-<bw>
+ï»¿<bw>
 	<conversation id="0" start="0">
 		<text id="0">
-			<part t="2.5" character="Antonio">Außerdem kannst du mit „Leertaste“ springen, um höhere Hindernisse zu überwinden.</part>
+			<part t="2.5" character="Antonio">AuÃŸerdem kannst du mit â€Leertasteâ€œ springen, um hÃ¶here Hindernisse zu Ã¼berwinden.</part>
 			<part t="2.5" character="Antonio">Versuch es doch einmal bei dem Baumstamm dort vorne.</part>
 		</text>
 	</conversation>

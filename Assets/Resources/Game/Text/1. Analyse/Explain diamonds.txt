@@ -1,4 +1,4 @@
-<bw>
+﻿<bw>
 	<conversation id="0" start="0">
 		<text id="0">
 			<part t="2.5" character="Antonio">Sehr gut. Nun lauf auf den Diamanten dort vorne zu.</part>

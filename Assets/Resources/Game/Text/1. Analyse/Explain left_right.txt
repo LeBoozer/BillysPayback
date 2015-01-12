@@ -1,8 +1,8 @@
-<bw>
+ï»¿<bw>
 	<conversation id="0" start="0">
 		<text id="0">
 			<part t="2.5" character="Antonio">Bei dem Sturz hat dein Kopf wohl was abbekommen was?</part>
-			<part t="2.5" character="Antonio">Also gut. Mit „A“ und „D“ kannst du dich vorwärts bzw. rückwärts bewegen.</part>
+			<part t="2.5" character="Antonio">Also gut. Mit â€Aâ€œ und â€Dâ€œ kannst du dich vorwÃ¤rts bzw. rÃ¼ckwÃ¤rts bewegen.</part>
 			<part t="2" character="Antonio">Versuch es einmal...</part>
 		</text>
 	</conversation>
