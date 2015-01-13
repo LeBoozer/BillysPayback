@@ -109,7 +109,7 @@ public class DialogueWindowScript : MonoBehaviour {
 		int charCount = 0;						//counts the number of chars walked through
 		int currentStringBegin = 0;				//position in given text from which on the current spoken text is shown
 		Transform currentSpokenText = null;		//currently displayed spoken text
-		SimpleTimer timer = new SimpleTimer ();
+		//SimpleTimer timer = new SimpleTimer ();
 
 		//divides the given text in multiple text parts which are shown seperately to save space on the screen
 		for (int i = 0; i < text.Length; i++) {

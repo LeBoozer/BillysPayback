@@ -19,7 +19,7 @@ public class CheckPoint : MonoBehaviour
             return;
 
         m_player.setChechPoint(transform.position);
-        this.active = false;
+        this.gameObject.SetActive(false);
     }
 
 

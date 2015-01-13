@@ -165,6 +165,10 @@ public class AdvancedDialogue
             }
         }
 
+        // Auto generated/executed choice available?
+        if (_t.AutoChoiceType != DialogueText.ChoiceType.CHOICE_NONE && choiceIDs.Count > 0)
+            Debug.LogWarning("Auto generated/executed choice in text (" + _t.TextID + ") will be overwritten by choices");
+
         return true;
     }
 }
