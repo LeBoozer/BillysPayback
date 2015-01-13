@@ -15,7 +15,7 @@ public class DestroyableBox : MonoBehaviour
 {
     public float m_maxLifetime = GameConfig.DESTROYABLE_BOX_DEFAULT_LIFE_TIME_SEC;
 
-	private float m_currentLifetime;
+	private float           m_currentLifetime;
 	private MeshRenderer 	m_mesh;
 	private float 			m_lastFlipp;
 	//private bool  m_stayPlayer = false;
@@ -35,6 +35,8 @@ public class DestroyableBox : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+        if (m_currentLifetime < 0.001f)
+            return;
 		// placeholder for future optical effects
 		flashingEffect ();
 	}
@@ -78,6 +80,7 @@ public class DestroyableBox : MonoBehaviour
     // Override: MonoBehaviour::OnTriggerStay()
     void OnTriggerStay(Collider _other)
     {
+        Debug.Log(_other.gameObject);
         // Player?
         if (_other.gameObject.tag.Equals(Tags.TAG_PLAYER) == true)
         {
