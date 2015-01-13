@@ -32,6 +32,7 @@ public class Player : Hitable
     private float                   m_maximalJumpTime;
     public  float                   m_minJumpHeight         = 1;
 	public  float					m_maxJumpHeight 		= 6;
+    private float                   m_maxFallingVelocity;
 
     // hit control
 	private float 					m_lastHit;
@@ -92,6 +93,10 @@ public class Player : Hitable
         // calculate jumpValues
         m_jumpImpulse = 2 * Mathf.Sqrt(m_maxJumpHeight * m_worldScale.y * m_controller.height * transform.localScale.y * Mathf.Abs(Physics.gravity.y));
         m_maximalJumpTime = (m_worldScale.y * m_controller.height * transform.localScale.y * (m_maxJumpHeight - m_minJumpHeight)) / (m_jumpImpulse);
+
+        // calculate maximal falling velocity 
+        // if higher -> player die!
+        m_maxFallingVelocity = -Mathf.Sqrt(Mathf.Abs(Physics.gravity.y) * 50);
     }
 
 	#endregion
@@ -119,7 +124,7 @@ public class Player : Hitable
             return false;
 
         // get a hit or is under the map?
-        if(this.transform.position.y < -50 || m_loseLife)
+        if (m_loseLife || (m_velocityY < m_maxFallingVelocity && !Physics.Raycast(this.transform.position, Vector3.down)))
         {
             // reduce the life points
             --m_playerData.m_lifePoints;
