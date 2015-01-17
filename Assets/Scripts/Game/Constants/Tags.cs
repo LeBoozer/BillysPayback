@@ -32,5 +32,6 @@ public abstract class Tags
 	public static readonly string TAG_PROJECTILE_ENEMY		= "ProjectileEnemy";
 	public static readonly string TAG_TRIGGER 				= "Trigger";
 	public static readonly string TAG_EGG 					= "Egg";
-	public static readonly string Tag_DESTROYABLE_BOX		= "DestroyableBox";
+	public static readonly string TAG_DESTROYABLE_BOX		= "DestroyableBox";
+    public static readonly string TAG_UPPER_PLANE           = "UpperPlane";
 }
