@@ -18,6 +18,10 @@ public class DialogueWindowScript : MonoBehaviour {
 	//the preferred length of a spoken text display
 	public int m_spokenTextLength;
 
+	//Problem: the dialog gui in the editor is x times bigger than the level; becaue we don't know the real ratio (we have no
+	//object to compare) we have to code it hard for now
+	public float m_GUIScaleOffset;
+
 	//currently shown answer
 	private Transform m_spokenText;
 
@@ -101,8 +105,8 @@ public class DialogueWindowScript : MonoBehaviour {
 		Vector3 textPosition = new Vector3 (personPosition.x, personPosition.y + personHeight, personPosition.z);
 
 		//Problem: the dialog gui in the editor is x times bigger than the level; becaue we don't know the real ratio (we have no
-		//object to compare) we have to code it hard for nor
-		textPosition = textPosition * 160;
+		//object to compare) we have to code it hard for now
+		textPosition = textPosition * m_GUIScaleOffset;
 
 		//m_spokenText = createNewSpokenText (text, textPosition);
 
