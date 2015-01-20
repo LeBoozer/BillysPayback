@@ -59,7 +59,7 @@ public class AttachDetachOnTrigger : MonoBehaviour
 	    // Auto detect player?
         if(m_autoDetectBilly == true)
         {
-            obj = GameObject.Find("Billy");
+            obj = GameObject.FindGameObjectWithTag(Tags.TAG_PLAYER);
             if (obj != null)
             {
                 // Create holder

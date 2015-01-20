@@ -21,6 +21,7 @@ public abstract class KeyMapping
 	public static readonly string KEY_ACTION_MOVE_DOWN 		= "Down";
 	public static readonly string KEY_ACTION_JUMP 			= "Jump";
 	public static readonly string KEY_ACTION_SHOOT 			= "Shoot";
+    public static readonly string KEY_ACTION_INTERACTION    = "Interaction";
     public static readonly string KEY_ACTION_SUBMIT         = "Submit";
     public static readonly string KEY_ACTION_CANCEL         = "Cancel";
 }

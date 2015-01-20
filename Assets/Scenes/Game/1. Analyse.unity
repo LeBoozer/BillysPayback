@@ -80860,6 +80860,7 @@ MonoBehaviour:
   m_windowPosition: {x: 0, y: 0, z: 0}
   m_firstTextPosition: {x: 0, y: 0, z: 0}
   m_spokenTextLength: 30
+  m_GUIScaleOffset: 0
 --- !u!1 &2037198265
 GameObject:
   m_ObjectHideFlags: 0
