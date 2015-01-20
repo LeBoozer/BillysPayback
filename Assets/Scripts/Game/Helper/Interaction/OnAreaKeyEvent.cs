@@ -10,7 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 /*
- * 
+ * Triggers an event if one target-object in within the bounds of the trigger object and the specified button is pressed
  */
 public class OnAreaKeyEvent : MonoBehaviour
 {
@@ -50,8 +50,8 @@ public class OnAreaKeyEvent : MonoBehaviour
         // Local variables
         Collider col = null;
 
-	    // Check for colliders in parental game object
-        col = this.transform.parent.GetComponent<Collider>();
+	    // Check for colliders in game object
+        col = this.GetComponent<Collider>();
         if(col == null || col.isTrigger == false)
         {
             Debug.LogError("Parent game-object has to contain at least one collider declared as trigger!");
