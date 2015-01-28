@@ -128,13 +128,17 @@ public abstract class AdvancedDialogueParser
         // Parse all texts
         do
         {
-            // Parse
-            text = parseText(xmlNodeText);
-            if (text == null)
-                return null;
+            // Skipable?
+            if (isNodeSkipable(xmlNodeText) == false)
+            {
+                // Parse
+                text = parseText(xmlNodeText);
+                if (text == null)
+                    return null;
 
-            // Add to list
-            textList.Add(text);
+                // Add to list
+                textList.Add(text);
+            }
 
             // Next sibling
             xmlNodeText = xmlNodeText.NextSibling;
@@ -192,33 +196,37 @@ public abstract class AdvancedDialogueParser
         // Parse all text-parts/choices
         do
         {
-            // Text-part?
-            if (xmlNode.Name.Equals("part") == true)
+            // Skipable?
+            if (isNodeSkipable(xmlNode) == false)
             {
-                // Parse
-                part = parseTextPart(xmlNode);
-                if (part == null)
-                    return null;
+                // Text-part?
+                if (xmlNode.Name.Equals("part") == true)
+                {
+                    // Parse
+                    part = parseTextPart(xmlNode);
+                    if (part == null)
+                        return null;
 
-                // Add to list
-                partList.Add(part);
+                    // Add to list
+                    partList.Add(part);
+                }
+
+                // Choice?
+                else if (xmlNode.Name.Equals("choice") == true)
+                {
+                    // Parse
+                    choice = parseChoice(xmlNode);
+                    if (choice == null)
+                        return null;
+
+                    // Add to list
+                    choiceList.Add(choice);
+                }
+
+                // Unknown (exclude known standard strings)
+                else
+                    Debug.LogWarning("Unknown XML node with a text (" + xmlNode.Name + ")");
             }
-
-            // Choice?
-            else if (xmlNode.Name.Equals("choice") == true)
-            {
-                // Parse
-                choice = parseChoice(xmlNode);
-                if (choice == null)
-                    return null;
-
-                // Add to list
-                choiceList.Add(choice);
-            }
-
-            // Unknown (exclude known standard strings)
-            else if(xmlNode.Name.Equals("#comment") == false)
-                Debug.LogWarning("Unknown XML node with a text (" + xmlNode.Name + ")");
 
             // Next sibling
             xmlNode = xmlNode.NextSibling;
