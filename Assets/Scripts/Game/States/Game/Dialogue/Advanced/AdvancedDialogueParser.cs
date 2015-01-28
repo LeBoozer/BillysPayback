@@ -14,6 +14,24 @@ using System.Xml;
  */
 public abstract class AdvancedDialogueParser
 {
+    // Determines whether a certain XML node can be skipped (e.g. comments)
+    public static bool isNodeSkipable(XmlNode _node)
+    {
+        // Validate parameter
+        if (_node == null)
+            return true;
+
+        // Name?
+        if(_node.Name != null)
+        {
+            // Comment?
+            if (_node.Name.Equals("#comment") == true)
+                return true;
+        }
+
+        return false;
+    }
+
     // Parses an input stream in form of a string
     public static AdvancedDialogue parseDialog(string _text)
     {
@@ -46,13 +64,17 @@ public abstract class AdvancedDialogueParser
         // Parse all conversations
         do
         {
-            // Parse
-            conv = parseConversation(xmlNodeConv);
-            if (conv == null)
-                return null;
+            // Skipable?
+            if (isNodeSkipable(xmlNodeConv) == false)
+            {
+                // Parse
+                conv = parseConversation(xmlNodeConv);
+                if (conv == null)
+                    return null;
 
-            // Add to list
-            convList.Add(conv);
+                // Add to list
+                convList.Add(conv);
+            }
 
             // Next sibling
             xmlNodeConv = xmlNodeConv.NextSibling;
@@ -194,9 +216,9 @@ public abstract class AdvancedDialogueParser
                 choiceList.Add(choice);
             }
 
-            // Unknown
-            else
-                Debug.LogWarning("Unknown XML node with a text");
+            // Unknown (exclude known standard strings)
+            else if(xmlNode.Name.Equals("#comment") == false)
+                Debug.LogWarning("Unknown XML node with a text (" + xmlNode.Name + ")");
 
             // Next sibling
             xmlNode = xmlNode.NextSibling;
