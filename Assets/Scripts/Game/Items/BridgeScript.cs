@@ -23,6 +23,8 @@ public class BridgeScript : MonoBehaviour {
 		//checks if billy is under the bridge by now (make the bridge not solid again)
 		if (m_billy.position.y < this.transform.position.y) {
 			setTrigger(true);
+		} else if (m_billy.position.y > this.transform.position.y) { //makes bridge solid if Billy was above the bridge all the time
+			setTrigger (false);
 		}
 	
 	}
