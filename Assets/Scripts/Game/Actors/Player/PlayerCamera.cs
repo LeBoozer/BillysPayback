@@ -66,22 +66,22 @@ public class PlayerCamera : MonoBehaviour {
 		}
 
 		// Calculate the new position of the camera
-		this.transform.position += new Vector3 (customize (m_object.transform.position.x, this.transform.position.x),
-			                                     customize (m_object.transform.position.y, this.transform.position.y - m_YDistance),
-			                                     customize (m_object.transform.position.z, this.transform.position.z + m_distance));
+		this.transform.position += new Vector3 (customize (m_object.transform.position.x, this.transform.position.x, 1),
+			                                     customize (m_object.transform.position.y, this.transform.position.y - m_YDistance, 2),
+			                                     customize (m_object.transform.position.z, this.transform.position.z + m_distance, 1));
 		if (m_lookAt)
 			this.transform.LookAt (m_object);
 	}
 
 	// Calculate the movement of the camera 
-	private float customize(float _obPos, float _ownPos)
+	private float customize(float _obPos, float _ownPos, float _localDamping)
 	{
 		// under the threshold? -> set at the some position in this dimension
-		if (Mathf.Abs(m_damping * (_obPos - _ownPos)) < m_threshold)
+        if (Mathf.Abs( 1 / _localDamping *  m_damping * (_obPos - _ownPos)) < m_threshold)
 			return _obPos - _ownPos;
 
 		// damped motion
-		return m_damping * (_obPos - _ownPos);
+        return m_damping * (_obPos - _ownPos);
 	}
 
 	#endregion
