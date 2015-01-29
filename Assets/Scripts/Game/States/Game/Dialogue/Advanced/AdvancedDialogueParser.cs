@@ -14,6 +14,24 @@ using System.Xml;
  */
 public abstract class AdvancedDialogueParser
 {
+    // Determines whether a certain XML node can be skipped (e.g. comments)
+    public static bool isNodeSkipable(XmlNode _node)
+    {
+        // Validate parameter
+        if (_node == null)
+            return true;
+
+        // Name?
+        if(_node.Name != null)
+        {
+            // Comment?
+            if (_node.Name.Equals("#comment") == true)
+                return true;
+        }
+
+        return false;
+    }
+
     // Parses an input stream in form of a string
     public static AdvancedDialogue parseDialog(string _text)
     {
@@ -46,13 +64,17 @@ public abstract class AdvancedDialogueParser
         // Parse all conversations
         do
         {
-            // Parse
-            conv = parseConversation(xmlNodeConv);
-            if (conv == null)
-                return null;
+            // Skipable?
+            if (isNodeSkipable(xmlNodeConv) == false)
+            {
+                // Parse
+                conv = parseConversation(xmlNodeConv);
+                if (conv == null)
+                    return null;
 
-            // Add to list
-            convList.Add(conv);
+                // Add to list
+                convList.Add(conv);
+            }
 
             // Next sibling
             xmlNodeConv = xmlNodeConv.NextSibling;
@@ -106,13 +128,17 @@ public abstract class AdvancedDialogueParser
         // Parse all texts
         do
         {
-            // Parse
-            text = parseText(xmlNodeText);
-            if (text == null)
-                return null;
+            // Skipable?
+            if (isNodeSkipable(xmlNodeText) == false)
+            {
+                // Parse
+                text = parseText(xmlNodeText);
+                if (text == null)
+                    return null;
 
-            // Add to list
-            textList.Add(text);
+                // Add to list
+                textList.Add(text);
+            }
 
             // Next sibling
             xmlNodeText = xmlNodeText.NextSibling;
@@ -170,33 +196,37 @@ public abstract class AdvancedDialogueParser
         // Parse all text-parts/choices
         do
         {
-            // Text-part?
-            if (xmlNode.Name.Equals("part") == true)
+            // Skipable?
+            if (isNodeSkipable(xmlNode) == false)
             {
-                // Parse
-                part = parseTextPart(xmlNode);
-                if (part == null)
-                    return null;
+                // Text-part?
+                if (xmlNode.Name.Equals("part") == true)
+                {
+                    // Parse
+                    part = parseTextPart(xmlNode);
+                    if (part == null)
+                        return null;
 
-                // Add to list
-                partList.Add(part);
+                    // Add to list
+                    partList.Add(part);
+                }
+
+                // Choice?
+                else if (xmlNode.Name.Equals("choice") == true)
+                {
+                    // Parse
+                    choice = parseChoice(xmlNode);
+                    if (choice == null)
+                        return null;
+
+                    // Add to list
+                    choiceList.Add(choice);
+                }
+
+                // Unknown (exclude known standard strings)
+                else
+                    Debug.LogWarning("Unknown XML node with a text (" + xmlNode.Name + ")");
             }
-
-            // Choice?
-            else if (xmlNode.Name.Equals("choice") == true)
-            {
-                // Parse
-                choice = parseChoice(xmlNode);
-                if (choice == null)
-                    return null;
-
-                // Add to list
-                choiceList.Add(choice);
-            }
-
-            // Unknown
-            else
-                Debug.LogWarning("Unknown XML node with a text");
 
             // Next sibling
             xmlNode = xmlNode.NextSibling;

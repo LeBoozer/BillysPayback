@@ -13,14 +13,17 @@ using System.Collections;
 public class T_OnAreaKeyEvent : FSMTransition
 {
     // The area-key-event object
-    public OnAreaKeyEvent m_areaKeyEvent = null;
+    public OnAreaKeyEvent m_areaKeyEvent;
 
     // Override: FSMTransition::OnEnable
     void OnEnable()
     {
         // Check area object
         if (m_areaKeyEvent == null)
+        {
             Debug.LogWarning("Transition's area-key-event must not be null!");
+            return;
+        }
 
         // Add event
         m_areaKeyEvent.OnKeyEventTriggered += () =>
