@@ -28,23 +28,7 @@ public class PlayerCamera : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		// no object select --> seek Billy
-		if (m_object == null)
-		{
-			GameObject h = GameObject.FindWithTag(Tags.TAG_PLAYER);
-
-			if(h != null)
-				m_object = h.transform;
-			else
-			{
-				Debug.Log ("Kein Objekt gesetzt für die Kamera");
-				return;
-			}
-		}
-		// init values
-		Vector3 obPos = m_object.transform.position;
-		this.transform.position = new Vector3 (obPos.x, obPos.y + m_YDistance, obPos.z - m_distance);
-
+        setTheCamera();
 	}
 	#endregion
 
@@ -83,6 +67,26 @@ public class PlayerCamera : MonoBehaviour {
 		// damped motion
         return m_damping * (_obPos - _ownPos);
 	}
+
+    public void setTheCamera()
+    {
+        // no object select --> seek Billy
+        if (m_object == null)
+        {
+            GameObject h = GameObject.FindWithTag(Tags.TAG_PLAYER);
+
+            if (h != null)
+                m_object = h.transform;
+            else
+            {
+                Debug.Log("Kein Objekt gesetzt für die Kamera");
+                return;
+            }
+        }
+        // init values
+        Vector3 obPos = m_object.transform.position;
+        this.transform.position = new Vector3(obPos.x, obPos.y + m_YDistance, obPos.z - m_distance);
+    }
 
 	#endregion
 }

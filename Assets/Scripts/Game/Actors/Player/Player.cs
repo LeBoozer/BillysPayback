@@ -110,7 +110,9 @@ public class Player : Hitable
 	#endregion
 
 	#region Update
-	// Update is called once per frame
+	/**
+     * Update is called once per frame
+     */
 	void Update () 
 	{
         if (!alive())
@@ -125,45 +127,69 @@ public class Player : Hitable
 			shooting ();
 	}
 
+    /**
+     * calculate whether the player lose lifepoints/lifenumbers
+     * return whether the player is alive
+     */
     private bool alive()
     {
         // game over?
         if (m_gameOver)
             return false;
 
+
+        bool underTheMap = m_velocityY < m_maxFallingVelocity && !Physics.Raycast(this.transform.position, Vector3.down);
         // get a hit or is under the map?
-        if (m_loseLife || (m_velocityY < m_maxFallingVelocity && !Physics.Raycast(this.transform.position, Vector3.down)))
+        if (m_loseLife || underTheMap)
         {
             // reduce the life points
             --m_playerData.m_lifePoints;
             m_loseLife = false;
 
-            // game over?
+            // no lifepoints left?
             if (m_playerData.m_lifePoints == 0)
             {
                 --m_playerData.m_LifeNumber;
-                this.transform.position = Vector3.zero;
-                m_gameOver = true;
-                return false;
+
+                // game over?
+                if (m_playerData.m_LifeNumber == 0)
+                {
+                    m_lastCheckPoint = Vector3.zero;
+                    setToCheckpoint();
+                    m_gameOver = true;
+                    return false;
+                }
+
+                // reset lifepoints
+                m_playerData.m_lifePoints = GameConfig.BILLY_LIFE_POINT;
+
+                // not under the map and ignore check points
+                if (underTheMap || !IGNORE_CHECK_POINTS)
+                    setToCheckpoint();
             }
-
-            if (this.transform.position.y > -50 && IGNORE_CHECK_POINTS)
-                return true;
-
-            // move player to the last check point
-			this.transform.position = m_lastCheckPoint;
-            
-            PlayerCamera camera = m_playerCamera.GetComponent<PlayerCamera>();
-
-            // player is the target object in the camera script?
-            if (camera != null && camera.m_object.Equals(transform))
-                // set the camera to a new position
-                m_playerCamera.transform.position = new Vector3(m_lastCheckPoint.x,
-                                                                    m_lastCheckPoint.y + camera.m_YDistance,
-                                                                    m_lastCheckPoint.z - camera.m_distance);
+            // don't decrease the lifenumbers but under the map?
+            else if (underTheMap)
+                setToCheckpoint();
         }
 
         return true;
+    }
+
+    /**
+     * set the player back to the last checkpoint
+     * if the camera have the player as target, set the camera 
+     */
+    private void setToCheckpoint()
+    {
+        // move player to the last check point
+        this.transform.position = m_lastCheckPoint;
+
+        PlayerCamera camera = m_playerCamera.GetComponent<PlayerCamera>();
+
+        // player is the target object in the camera script?
+        if (camera != null && camera.m_object.Equals(transform))
+            // set the camera to a new position
+            camera.setTheCamera();
     }
 
 	/**
@@ -176,7 +202,6 @@ public class Player : Hitable
 		bool keyA 			= Input.GetButton 		(KeyMapping.KEY_ACTION_MOVE_LEFT);
 		bool jumpKeyDown 	= Input.GetButtonDown 	(KeyMapping.KEY_ACTION_JUMP);
 		bool jumpKey 		= Input.GetButton 		(KeyMapping.KEY_ACTION_JUMP);
-        float y = 0;
 		
 		// falling?
 		if(!m_controller.isGrounded)
@@ -266,6 +291,9 @@ public class Player : Hitable
 		}
 	}
 
+    /**
+     * calculate the jump impulse for a target height for the player
+     */
     private float calculateJumpImpulse(float _jumpHeight)
     {
         return 2 * Mathf.Sqrt(_jumpHeight * m_realPlayerHeight * Mathf.Abs(Physics.gravity.y));
