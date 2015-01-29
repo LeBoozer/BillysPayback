@@ -13,27 +13,29 @@ using System.Collections;
 public class GameConfig
 {
 	// Constant values
-	public static readonly float 	INTRO_SHOW_TIME_SEC = 3.0f;
+	public static readonly float 	INTRO_SHOW_TIME_SEC                         = 3.0f;
 	
-	public static readonly string 	LEVEL_ADDITIVE_ROOT_GO_NAME_RULE = "_Root_x";
+	public static readonly string 	LEVEL_ADDITIVE_ROOT_GO_NAME_RULE            = "_Root_x";
 	
 	// Billy related values
-	public static readonly int 		BILLY_LIFE_POINT 				= 4;
-	public static readonly int		BILLY_LIFE_NUMBER				= 5;
-	public static readonly float 	BILLY_MAX_SPEED 				= 10.0f;
-	public static readonly float 	BILLY_FLYING_FACTOR				= 0.25f;
-	public static readonly float 	BILLY_JUMP_START_SPEED 			= 5.5f;
-	public static readonly float 	BILLY_JUMP_START_SPEED_ENEMY 	= 5.0f;
+	public static readonly int 		BILLY_LIFE_POINT 				            = 4;
+	public static readonly int		BILLY_LIFE_NUMBER				            = 5;
+	public static readonly float 	BILLY_MAX_SPEED 				            = 10.0f;
+	public static readonly float 	BILLY_FLYING_FACTOR				            = 0.25f;
+	public static readonly float 	BILLY_JUMP_START_SPEED 			            = 5.5f;
+	public static readonly float 	BILLY_JUMP_START_SPEED_ENEMY 	            = 5.0f;
+    public static readonly float    BILLY_MINIMAL_KEYPRESS_TIME_FOR_JUMPING     = 0.1f;
+    public static readonly float    BILLY_MAXIMAL_KEYPRESS_TIME_FOR_JUMPING     = 0.5f;
 
     // Diamond related values
-    public static readonly float    DIAMONG_ROTATION_SPEED          = 55.0f;
+    public static readonly float    DIAMONG_ROTATION_SPEED                      = 55.0f;
 
     // Egg related values
-    public static readonly float    EGG_BENEATH_FACTOR              = 0.65f;
+    public static readonly float    EGG_BENEATH_FACTOR                          = 0.65f;
 
     // Destroyable block related values
-    public static readonly float    DESTROYABLE_BOX_DEFAULT_LIFE_TIME_SEC = 5.0f;
+    public static readonly float    DESTROYABLE_BOX_DEFAULT_LIFE_TIME_SEC       = 5.0f;
 
     // Enemy related values
-    public static readonly float    ENEMY_PLAYER_ABOVE_FACTOR       = 0.5f;
+    public static readonly float    ENEMY_PLAYER_ABOVE_FACTOR                   = 0.5f;
 }

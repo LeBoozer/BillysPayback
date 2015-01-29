@@ -34,6 +34,12 @@ public class Player : Hitable
 	public  float					m_maxJumpHeight 		= 6;
     private float                   m_maxFallingVelocity;
 
+    // addional
+    private float                   m_realPlayerHeight;
+    private float                   m_startJumpHeight;
+    private bool                    m_jumpKeyPressed;
+
+
     // hit control
 	private float 					m_lastHit;
 	private	bool					m_gameOver;
@@ -90,13 +96,15 @@ public class Player : Hitable
         // Set player instance in game class
         Game.Instance.Player = this;
 
-        // calculate jumpValues
-        m_jumpImpulse = 2 * Mathf.Sqrt(m_maxJumpHeight * m_worldScale.y * m_controller.height * transform.localScale.y * Mathf.Abs(Physics.gravity.y));
-        m_maximalJumpTime = (m_worldScale.y * m_controller.height * transform.localScale.y * (m_maxJumpHeight - m_minJumpHeight)) / (m_jumpImpulse);
+        // init jump values
+        m_realPlayerHeight = m_worldScale.y * m_controller.height * transform.localScale.y;
+        m_startJumpHeight = 0;
+        m_jumpKeyPressed = false;
 
         // calculate maximal falling velocity 
         // if higher -> player die!
         m_maxFallingVelocity = -Mathf.Sqrt(Mathf.Abs(Physics.gravity.y) * 50);
+
     }
 
 	#endregion
@@ -168,6 +176,7 @@ public class Player : Hitable
 		bool keyA 			= Input.GetButton 		(KeyMapping.KEY_ACTION_MOVE_LEFT);
 		bool jumpKeyDown 	= Input.GetButtonDown 	(KeyMapping.KEY_ACTION_JUMP);
 		bool jumpKey 		= Input.GetButton 		(KeyMapping.KEY_ACTION_JUMP);
+        float y = 0;
 		
 		// falling?
 		if(!m_controller.isGrounded)
@@ -199,35 +208,42 @@ public class Player : Hitable
 			}
 		#endregion
 		// jump and fly
-		// movement high&down
-		//float lastVeloY = m_velocityY;
-		#region horizontal
-        // start to jump
-		if ((jumpKeyDown || jumpKey) && !m_jump) 
-		{
-			m_jump = true;
-			m_velocityY = m_jumpImpulse;
-			m_startJumpTime = 0;
-		}
-        else if (m_velocityY > 0)
+        // movement high&down
+        #region horizontal
+        // jump key still pressed first time?
+        m_jumpKeyPressed &= jumpKey;
+        // start to jump ?
+        if (!m_jump && (jumpKeyDown || jumpKey))
         {
-            // update 
-            m_velocityY += Physics.gravity.y * Time.deltaTime;
+            m_jump = true;
+            m_jumpKeyPressed = true;
+            m_velocityY = calculateJumpImpulse(m_minJumpHeight);
+            m_startJumpHeight = this.transform.position.y;
+        }
+        // like to jump heigher?
+        else if (m_jumpKeyPressed && m_startJumpTime > GameConfig.BILLY_MINIMAL_KEYPRESS_TIME_FOR_JUMPING && m_startJumpTime < GameConfig.BILLY_MAXIMAL_KEYPRESS_TIME_FOR_JUMPING)
+        {
+            // calculate the target height with the keypress time of the jump key
+            float nextHeight = m_minJumpHeight
+                                + (m_startJumpTime - GameConfig.BILLY_MINIMAL_KEYPRESS_TIME_FOR_JUMPING)
+                                    / (GameConfig.BILLY_MAXIMAL_KEYPRESS_TIME_FOR_JUMPING - GameConfig.BILLY_MINIMAL_KEYPRESS_TIME_FOR_JUMPING) 
+                                    * (m_maxJumpHeight - m_minJumpHeight);
+            // reduce the target height with the until now jumped height
+            nextHeight -= (this.transform.position.y - m_startJumpHeight) / m_realPlayerHeight;
 
-            // like to jump higher?
-            if (false && jumpKey && m_startJumpTime < m_maximalJumpTime)
-                m_velocityY = m_jumpImpulse;
+            // calcualte the jump impulse for the new target height
+            m_velocityY = calculateJumpImpulse(nextHeight);
         }
         // like start to fly?
-        else if ((jumpKeyDown || jumpKey) && m_jump && m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_ORANGE))
-            m_velocityY += Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
+        else if ((m_velocityY < 0) && (jumpKeyDown || jumpKey) && m_jump && m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_ORANGE))
+            m_velocityY += 2 * Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
         // falling
         else
-            m_velocityY += Physics.gravity.y * Time.deltaTime;
-		#endregion
-		// set new position
-        float y = m_velocityY + ((m_velocityY == m_jumpImpulse) ? 0 : m_startJumpTime * Physics.gravity.y);
-		m_controller.Move (new Vector3 (m_velocityX, y, -this.transform.position.z / Time.deltaTime) * Time.deltaTime);
+            m_velocityY += 2 * Physics.gravity.y * Time.deltaTime;
+        #endregion
+
+        // set new position
+        m_controller.Move(new Vector3(m_velocityX, m_velocityY, -this.transform.position.z / Time.deltaTime) * Time.deltaTime);
 		m_startJumpTime += Time.deltaTime;
 		
 		// x-coord haven't changed?
@@ -249,6 +265,11 @@ public class Player : Hitable
 			m_startJumpTime = 0;
 		}
 	}
+
+    private float calculateJumpImpulse(float _jumpHeight)
+    {
+        return 2 * Mathf.Sqrt(_jumpHeight * m_realPlayerHeight * Mathf.Abs(Physics.gravity.y));
+    }
 
 	/**
 	 * update the rotated kiwanos
