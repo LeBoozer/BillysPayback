@@ -21,6 +21,9 @@ public abstract class FSMTransition : MonoBehaviour
 	
 	// The target FSM-state
 	public FSMState 		m_targetState = null;
+
+    // True to delete this transition as soon as this transition has been used
+    public bool             m_deleteOnUse = false;
 	
 	// List of actions which will be activated as soon as the transition is being activated
 	public List<FSMAction>	m_actionsOnTransition = new List<FSMAction>();

@@ -1,0 +1,11 @@
+﻿<bw>
+	<conversation id="0" start="0">
+		<text id="0">
+			<part t="2.5" character="Vater">Dankeschön, dass du diese Vögel in die Flucht geschlagen hast.</part>
+			<part t="2.5" character="Vater">Ohne deine Hilfe wären wir hier nicht lebend rausgekommen!</part>
+			<part t="2.5" character="Vater">Hier, nimm diese Diamanten. Es sind zwar nicht viele,</part>
+			<part t="2.5" character="Vater">aber vielleicht sind sie dir eine Hilfe.</part>
+			<part t="2.5" character="Antonio">Puh. Das war echt mutig. Aber jetzt los, lass uns weiter.</part>
+		</text>
+	</conversation>
+</bw>
