@@ -28,6 +28,10 @@ public class GameConfig
     public static readonly float    BILLY_MINIMAL_KEYPRESS_TIME_FOR_JUMPING     = 0.1f;
     public static readonly float    BILLY_MAXIMAL_KEYPRESS_TIME_FOR_JUMPING     = 0.5f;
 
+    // Antonio related values
+    public static readonly float    ANTONIO_DISTANCE_MEAN_VALUE                 = 3f;
+    public static readonly float    ANTONIO_DISTANCE_VARIANCE                   = 3f;
+
     // Diamond related values
     public static readonly float    DIAMONG_ROTATION_SPEED                      = 55.0f;
 
