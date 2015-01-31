@@ -30,8 +30,6 @@ public class Player : Hitable
 	private float					m_startJumpTime;
     private float                   m_jumpImpulse;
     private float                   m_maximalJumpTime;
-    public  float                   m_minJumpHeight         = 1;
-	public  float					m_maxJumpHeight 		= 6;
     private float                   m_maxFallingVelocity;
 
     // addional
@@ -104,7 +102,6 @@ public class Player : Hitable
         // calculate maximal falling velocity 
         // if higher -> player die!
         m_maxFallingVelocity = -Mathf.Sqrt(Mathf.Abs(Physics.gravity.y) * 50);
-
     }
 
 	#endregion
@@ -242,17 +239,17 @@ public class Player : Hitable
         {
             m_jump = true;
             m_jumpKeyPressed = true;
-            m_velocityY = calculateJumpImpulse(m_minJumpHeight);
+            m_velocityY = calculateJumpImpulse(GameConfig.BILLY_JUMP_MINIMAL_HEIGHT);
             m_startJumpHeight = this.transform.position.y;
         }
         // like to jump heigher?
         else if (m_jumpKeyPressed && m_startJumpTime > GameConfig.BILLY_MINIMAL_KEYPRESS_TIME_FOR_JUMPING && m_startJumpTime < GameConfig.BILLY_MAXIMAL_KEYPRESS_TIME_FOR_JUMPING)
         {
             // calculate the target height with the keypress time of the jump key
-            float nextHeight = m_minJumpHeight
+            float nextHeight = GameConfig.BILLY_JUMP_MINIMAL_HEIGHT
                                 + (m_startJumpTime - GameConfig.BILLY_MINIMAL_KEYPRESS_TIME_FOR_JUMPING)
-                                    / (GameConfig.BILLY_MAXIMAL_KEYPRESS_TIME_FOR_JUMPING - GameConfig.BILLY_MINIMAL_KEYPRESS_TIME_FOR_JUMPING) 
-                                    * (m_maxJumpHeight - m_minJumpHeight);
+                                    / (GameConfig.BILLY_MAXIMAL_KEYPRESS_TIME_FOR_JUMPING - GameConfig.BILLY_MINIMAL_KEYPRESS_TIME_FOR_JUMPING)
+                                    * (GameConfig.BILLY_JUMP_MAXIMAL_HEIGHT - GameConfig.BILLY_JUMP_MINIMAL_HEIGHT);
             // reduce the target height with the until now jumped height
             nextHeight -= (this.transform.position.y - m_startJumpHeight) / m_realPlayerHeight;
 
@@ -421,8 +418,7 @@ public class Player : Hitable
 	public void jumpingFromAnEnemy()
 	{
 		m_jump = true;
-		//m_fly = GameConfig.BILLY_JUMP_START_SPEED_ENEMY;
-		m_velocityY = Mathf.Sqrt(2 * m_maxJumpHeight * m_controller.height / Mathf.Abs(Physics.gravity.y));
+        m_velocityY = calculateJumpImpulse(GameConfig.BILLY_JUMP_HEIGHT_FROM_ENEMY);
 	}
 
 	/**

@@ -22,8 +22,9 @@ public class GameConfig
 	public static readonly int		BILLY_LIFE_NUMBER				            = 5;
 	public static readonly float 	BILLY_MAX_SPEED 				            = 10.0f;
 	public static readonly float 	BILLY_FLYING_FACTOR				            = 0.25f;
-	public static readonly float 	BILLY_JUMP_START_SPEED 			            = 5.5f;
-	public static readonly float 	BILLY_JUMP_START_SPEED_ENEMY 	            = 5.0f;
+	public static readonly float 	BILLY_JUMP_MINIMAL_HEIGHT 			        = 1f;
+	public static readonly float 	BILLY_JUMP_MAXIMAL_HEIGHT 			        = 4f;
+	public static readonly float 	BILLY_JUMP_HEIGHT_FROM_ENEMY 	            = 2f;
     public static readonly float    BILLY_MINIMAL_KEYPRESS_TIME_FOR_JUMPING     = 0.1f;
     public static readonly float    BILLY_MAXIMAL_KEYPRESS_TIME_FOR_JUMPING     = 0.5f;
 
@@ -38,4 +39,6 @@ public class GameConfig
 
     // Enemy related values
     public static readonly float    ENEMY_PLAYER_ABOVE_FACTOR                   = 0.5f;
+    public static readonly float    ENEMY_MAX_SPEED                             = 3f;
+    public static readonly float    ENEMY_JUMP_HEIGHT                       = 0.5f;
 }
