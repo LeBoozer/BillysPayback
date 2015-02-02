@@ -41,9 +41,31 @@ public class AdvancedDialogue
         private set { m_isValid = value; }
     }
     
-    // Constructor
-    public AdvancedDialogue(List<DynamicCode> _dynamicCodeList, List<Conversation> _conversationList)
+    // Override the start conversation ID
+    private int m_overrideStartID = -1;
+    public int OverrideStartID
     {
+        get { return m_overrideStartID; }
+        private set { m_overrideStartID = value; }
+    }
+
+    // The compiled function for overriding the start conversation ID
+    private AdvancedDialogue.CompiledDynamicCode m_overrideStartIDFunc;
+    public AdvancedDialogue.CompiledDynamicCode OverrideStartIDFunc
+    {
+        get { return m_overrideStartIDFunc; }
+        set { m_overrideStartIDFunc = value; }
+    }
+
+    // Constructor
+    public AdvancedDialogue(List<DynamicCode> _dynamicCodeList, List<Conversation> _conversationList, int _overrideStartID)
+    {
+        // Local variables
+        CompiledDynamicCode code = null;
+
+        // Copy
+        m_overrideStartID = _overrideStartID;
+
         // Compile dynamic codes
         if (_dynamicCodeList != null && _dynamicCodeList.Count > 0)
             compileDynamicCodes(_dynamicCodeList);
@@ -55,8 +77,39 @@ public class AdvancedDialogue
                 m_conversationList.Add(c.ConversationID, c);
         }
 
+        // Get override start ID
+        if (m_overrideStartID != -1)
+        {
+            // Try to get compiled function
+            if (m_dynamicCodeList.ContainsKey(m_overrideStartID) == true)
+            {
+                code = m_dynamicCodeList[m_overrideStartID];
+                if (code.m_entryPoint.ReturnType != typeof(int))
+                {
+                    Debug.LogError("Dialogue's override-start-id-functions need a integer return type!");
+                    return;
+                }
+                if (code.m_entryPoint.GetParameters().Length != 0)
+                {
+                    Debug.LogError("Dialogue's override-start-id-functions does not support parameters yet!");
+                    return;
+                }
+                m_overrideStartIDFunc = code;
+            }
+        }
+
         // Validate
         validate();
+    }
+
+    // Returns the override start ID.
+    // In cases of defined functions, the function will be evaluated before!
+    public int getOverrideStartConversationID()
+    {
+        if (m_overrideStartIDFunc == null)
+            return m_overrideStartID;
+
+        return (int)m_overrideStartIDFunc.m_entryPoint.Invoke(m_overrideStartIDFunc.m_classInstance, null);
     }
 
     // Returns a conversation by its ID (can be null!)

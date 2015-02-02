@@ -41,6 +41,7 @@ public abstract class AdvancedDialogueParser
         XmlNode xmlNode = null;
         XmlNode xmlNodeAtt = null;
         int importStandardAssets = 0;
+        int overrideStartID = -1;
         Conversation conv = null;
         DynamicCode dyncode = null;
         List<Conversation> convList = new List<Conversation>();
@@ -69,6 +70,11 @@ public abstract class AdvancedDialogueParser
         xmlNodeAtt = xmlNode.Attributes.GetNamedItem("importStandardAssets");
         if (xmlNodeAtt != null)
             importStandardAssets = int.Parse(xmlNodeAtt.Value);
+
+        // Override start conversation ID?
+        xmlNodeAtt = xmlNode.Attributes.GetNamedItem("overrideStartID");
+        if (xmlNodeAtt != null)
+            overrideStartID = int.Parse(xmlNodeAtt.Value);
 
         // Find first conversation or dynamic code node
         xmlNode = xmlNode.FirstChild;
@@ -115,7 +121,7 @@ public abstract class AdvancedDialogueParser
         while (xmlNode != null);
 
         // Create dialogue
-        dialogue = new AdvancedDialogue(dyncodeList, convList);
+        dialogue = new AdvancedDialogue(dyncodeList, convList, overrideStartID);
 
         return dialogue;
     }

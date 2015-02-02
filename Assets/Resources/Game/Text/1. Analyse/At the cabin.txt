@@ -1,4 +1,13 @@
-﻿<bw>
+﻿<bw overrideStartID="5">
+	<dyncode id="5" class="Hello" entry="test">
+		using System;
+		class Hello
+		{
+			public int test()
+			{ return 1; }
+		};
+	</dyncode>
+
 	<!-- Standard -->
 	<conversation id="0" start="0">
 		<!-- 1 -->
@@ -8,15 +17,6 @@
 			<part t="2.5" character="Antonio">Wir müssen sie dort schnellstens rausholen.</part>
 			<part t="2.5" character="Antonio">Wer weiß, was dort mit ihr geschieht.</part>
 			<part t="2.5" character="Antonio">Hoffentlich haben diese gefräßigen Vögel sie noch nicht verspeist!</part>
-
-			<!-- 1. -->
-			<choice id="0" nextText="1">Du hast Recht. Wir sollten sofort aufbrechen.</choice>
-
-			<!-- 2. -->
-			<choice id="1" exit="no">Du hast Recht, aber schaffen wir das überhaupt alleine?</choice>
-
-			<!-- 3. -->
-			<choice id="2" exit="no">Du hast Recht, aber das werden wir nicht alleine schaffen. Ich denke wir sollten unter den anderen Früchten nach Verbündeten suchen, da gibt es sicher einige, die einen Grund hätten sich an Black Sparrow und seinen Handlangern zu rächen...</choice>
 		</text>
 	</conversation>
 
@@ -26,12 +26,6 @@
 		<text id="0">
 			<part t="2.5" character="Antonio">Puh. Endlich in Sicherheit!</part>
 			<part t="2.5" character="Antonio">Was machen wir nun? Sie haben Cherry bestimmt in ihr Nest gebracht ...</part>
-
-			<!-- 1. -->
-			<choice id="0" nextText="1">Wir sollten sie da so schnell wie möglich rausholen. Ich hoffe dafür ist es noch nicht zu spät. Wir sollten sofort aufbrechen.</choice>
-
-			<!-- 2. -->
-			<choice id="1" exit="no">Wir müssen sie da rausholen, aber das werden wir nicht alleine schaffen. Ich denke wir sollten unter den anderen Früchten nach Verbündeten suchen, da gibt es sicher einige, die einen Grund hätten sich an Black Sparrow und seinen Handlangern zu rächen...</choice>
 		</text>	
 	</conversation>
 </bw>
