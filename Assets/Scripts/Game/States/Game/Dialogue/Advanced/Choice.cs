@@ -62,14 +62,23 @@ public class Choice
         private set { }
     }
 
+    // ID for attribute: enabled_func
+    private string m_enabledFunc;
+    public string EnabledFunc
+    {
+        get { return m_enabledFunc; }
+        private set { m_enabledFunc = value; }
+    }
+
     // Constructor
-    public Choice(int _id, string _text, int _nextTextID, string _exitValue)
+    public Choice(int _id, string _text, int _nextTextID, string _exitValue, string _enabledFunc)
     {
         // Copy
         m_choiceID = _id;
         m_text = _text;
         m_nextTextID = _nextTextID;
         m_exitValue = _exitValue;
+        m_enabledFunc = _enabledFunc;
 
         // Set type
         if (m_exitValue == null || m_exitValue.Length == 0)
