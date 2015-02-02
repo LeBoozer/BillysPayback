@@ -130,7 +130,7 @@ public class AdvancedDialogue
 
             // Add to list
             compiledCode = new CompiledDynamicCode();
-            compiledCode.m_classInstance = entryPoint;
+            compiledCode.m_classInstance = classInstance;
             compiledCode.m_entryPoint = entryPoint;
             m_dynamicCodeList.Add(c.CodeID, compiledCode);
         }
@@ -245,12 +245,12 @@ public class AdvancedDialogue
             }
 
             // Target for "enabled_func" available?
-            if (choice.EnabledFunc != null && choice.EnabledFunc.Length > 0)
+            if (choice.EnabledFuncID != null && choice.EnabledFuncID.Length > 0)
             {
                 // Try to parse
                 try
                 {
-                    tempInt = int.Parse(choice.EnabledFunc);
+                    tempInt = int.Parse(choice.EnabledFuncID);
                 }
                 catch (System.FormatException _e)
                 {
@@ -280,6 +280,9 @@ public class AdvancedDialogue
                     Debug.LogError("Choice's enabled_func target does not support parameters yet!");
                     return false;
                 }
+
+                // Set code
+                choice.EnabledFunc = code;
             }
         }
 

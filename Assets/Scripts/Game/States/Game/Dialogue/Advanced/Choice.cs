@@ -63,27 +63,46 @@ public class Choice
     }
 
     // ID for attribute: enabled_func
-    private string m_enabledFunc;
-    public string EnabledFunc
+    private string m_enabledFuncID;
+    public string EnabledFuncID
     {
-        get { return m_enabledFunc; }
-        private set { m_enabledFunc = value; }
+        get { return m_enabledFuncID; }
+        private set { m_enabledFuncID = value; }
     }
 
+    // The compiled function for: enabled_func
+    private AdvancedDialogue.CompiledDynamicCode m_enabledFunc;
+    public AdvancedDialogue.CompiledDynamicCode EnabledFunc
+    {
+        get { return m_enabledFunc; }
+        set { m_enabledFunc = value; }
+    }
+    
     // Constructor
-    public Choice(int _id, string _text, int _nextTextID, string _exitValue, string _enabledFunc)
+    public Choice(int _id, string _text, int _nextTextID, string _exitValue, string _enabledFuncID)
     {
         // Copy
         m_choiceID = _id;
         m_text = _text;
         m_nextTextID = _nextTextID;
         m_exitValue = _exitValue;
-        m_enabledFunc = _enabledFunc;
+        m_enabledFuncID = _enabledFuncID;
 
         // Set type
         if (m_exitValue == null || m_exitValue.Length == 0)
             m_choiceType = ChoiceType.CHOICE_NEXT_TEXT;
         else
             m_choiceType = ChoiceType.CHOICE_EXIT;
+    }
+
+    // Returns true if this choice is enabled, otherwise false
+    public bool isEnabled()
+    {
+        // Check parameter
+        if (m_enabledFunc == null)
+            return true;
+
+        // Execute
+        return (bool)m_enabledFunc.m_entryPoint.Invoke(m_enabledFunc.m_classInstance, null);
     }
 }

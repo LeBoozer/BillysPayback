@@ -259,6 +259,7 @@ public class S_Dialogue : FSMState
         // Local variables
         List<string> choiceTexts = new List<string>();
         List<int> choiceIDs = null;
+        Choice choice = null;
 
         // Choices available?
         if (m_text.ChoiceCount <= 0)
@@ -268,9 +269,18 @@ public class S_Dialogue : FSMState
         choiceIDs = m_text.getChoicesIDs();
         foreach (int id in choiceIDs)
         {
+            // Get choice
+            choice = m_text.getChoiceByID(id);
+
+            // Enabled?
+            if (choice.isEnabled() == false)
+                continue;
+
             // Add text
             choiceTexts.Add(m_text.getChoiceByID(id).Text);
         }
+        if (choiceTexts.Count == 0)
+            return false;
 
         // Register event callback
         DialogTextScript.AnswerClicked += onChoiceClicked;

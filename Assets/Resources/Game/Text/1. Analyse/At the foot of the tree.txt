@@ -4,7 +4,7 @@
 		class Hello
 		{
 			public bool test()
-			{ return true; }
+			{ return false; }
 		};
 	</dyncode>
 
