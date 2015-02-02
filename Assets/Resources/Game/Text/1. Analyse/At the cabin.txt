@@ -1,10 +1,12 @@
-﻿<bw overrideStartID="5">
-	<dyncode id="5" class="Hello" entry="test">
-		using System;
-		class Hello
+﻿<bw overrideStartID="99">
+	<dyncode id="99" class="Inline" entry="getIdOnPlayerIsAutonomous">
+		class Inline
 		{
-			public int test()
-			{ return 1; }
+			public int getIdOnPlayerIsAutonomous()
+			{ 
+				short val = Game.Instance.PlayerData.getPlayerCharacteristics(PlayerData.PlayerType.PT_AUTONOMOUS);
+				return val != 0 ? 1 : 0;
+			}
 		};
 	</dyncode>
 
