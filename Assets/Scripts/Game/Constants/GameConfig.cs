@@ -29,7 +29,7 @@ public class GameConfig
     public static readonly float    BILLY_MAXIMAL_KEYPRESS_TIME_FOR_JUMPING     = 0.5f;
 
     // Antonio related values
-    public static readonly float    ANTONIO_DISTANCE_MEAN_VALUE                 = 3f;
+    public static readonly float    ANTONIO_DISTANCE_MEAN_VALUE                 = 6f;
     public static readonly float    ANTONIO_DISTANCE_VARIANCE                   = 3f;
 
     // Diamond related values
@@ -44,5 +44,5 @@ public class GameConfig
     // Enemy related values
     public static readonly float    ENEMY_PLAYER_ABOVE_FACTOR                   = 0.5f;
     public static readonly float    ENEMY_MAX_SPEED                             = 3f;
-    public static readonly float    ENEMY_JUMP_HEIGHT                       = 0.5f;
+    public static readonly float    ENEMY_JUMP_HEIGHT                           = 0.5f;
 }

@@ -27,15 +27,14 @@ public class Player : Hitable
     // horizontal
 	private float 					m_velocityY;
 	private bool 					m_jump;
+    private bool                    m_jumpKeyPressed;
+    private bool                    m_jumpFromEnenmy;
 	private float					m_startJumpTime;
     private float                   m_jumpImpulse;
     private float                   m_maximalJumpTime;
     private float                   m_maxFallingVelocity;
-
-    // addional
-    private float                   m_realPlayerHeight;
     private float                   m_startJumpHeight;
-    private bool                    m_jumpKeyPressed;
+    private float                   m_realPlayerHeight;
 
 
     // hit control
@@ -66,6 +65,7 @@ public class Player : Hitable
         m_velocityX = 0;
         m_velocityY = 0;
         m_jump = false;
+        m_jumpFromEnenmy = false;
         m_lastHit = Time.time - 2;
         m_gameOver = false;
         m_kiwanos = new ArrayList();
@@ -280,12 +280,14 @@ public class Player : Hitable
 			m_velocityY = 0;
 		
 		// jump/fly finished?
-		if(m_controller.isGrounded)
-		{
-			m_jump = false;
-			m_velocityY = 0;
-			m_startJumpTime = 0;
-		}
+        if (m_controller.isGrounded && m_jumpFromEnenmy)
+            m_jumpFromEnenmy = false;
+        else if (m_controller.isGrounded)
+        {
+            m_jump = false;
+            m_velocityY = 0;
+            m_startJumpTime = 0;
+        }
 	}
 
     /**
@@ -417,6 +419,7 @@ public class Player : Hitable
 	 */
 	public void jumpingFromAnEnemy()
 	{
+        m_jumpFromEnenmy = true;
 		m_jump = true;
         m_velocityY = calculateJumpImpulse(GameConfig.BILLY_JUMP_HEIGHT_FROM_ENEMY);
 	}

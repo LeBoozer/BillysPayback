@@ -88,7 +88,10 @@ public class Enemy : Hitable
         rayDir = Vector3.down;
 
         // Execute raycast
-        int ignoreLayerMask = ~LayerMask.NameToLayer(Layer.LAYER_COLLECTABLE);
+        int ignoreLayerMask = ~(1 << LayerMask.NameToLayer(Layer.LAYER_COLLECTABLE)
+                                    | 1 << LayerMask.NameToLayer(Layer.LAYER_ENEMY)
+                                    | 1 << LayerMask.NameToLayer(Layer.LAYER_PROJECTILE_ENEMY)
+                                    | 1 << LayerMask.NameToLayer(Layer.LAYER_PROJECTILE_PLAYER));
         isHit = Physics.Raycast(rayOrigin, rayDir, out hit, rayDist);
         // ignore layer detected?
         if(isHit)
