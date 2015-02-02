@@ -19,6 +19,44 @@
 			<part t="2.5" character="Antonio">Wir müssen sie dort schnellstens rausholen.</part>
 			<part t="2.5" character="Antonio">Wer weiß, was dort mit ihr geschieht.</part>
 			<part t="2.5" character="Antonio">Hoffentlich haben diese gefräßigen Vögel sie noch nicht verspeist!</part>
+
+			<choice id="0" nextText="1">Du hast Recht. Wir sollten sofort aufbrechen.</choice>
+			<choice id="1" nextText="2">Du hast Recht, aber schaffen wir das überhaupt alleine?</choice>
+			<choice id="2" nextText="3">Du hast Recht, aber das werden wir nicht alleine schaffen. Ich denke wir sollten unter den anderen Früchten nach Verbündeten suchen, da gibt es sicher einige, die einen Grund hätten sich an Black Sparrow und seinen Handlangern zu rächen...</choice>
+		</text>
+
+		<!-- 1.1 -->
+		<text id="1">
+			<part t="2.5" character="Antonio">Warte, was hältst du davon, wenn wir versuchen würden</part>
+			<part t="2.5" character="Antonio">die anderen Früchte auf dem Weg zu Black Sparrows</part>
+			<part t="2.5" character="Antonio">Nest gegen ihn aufzuwiegeln?</part>
+			<part t="2.5" character="Antonio">Die haben sicher auch einige Gründe sich an ihm und seinen</part>
+			<part t="2.5" character="Antonio">Handlangern zu rächen.</part>
+			<part t="2.5" character="Antonio">Außerdem würde uns das bei Cherry’s Rettung helfen.</part>
+
+			<choice id="0" exit="_done_">Das hört sich gut an. Machen wir uns auf den Weg.</choice>
+		</text>
+
+		<!-- 2.1 -->
+		<text id="2">
+			<part t="2.5" character="Antonio">Darüber habe ich auch schon nachgedacht. Was hältst du davon,</part>
+			<part t="2.5" character="Antonio">wenn wir versuchen würden die anderen Früchte auf dem Weg</part>
+			<part t="2.5" character="Antonio">zu Black Sparrows Nest gegen ihn aufzuwiegeln?</part>
+			<part t="2.5" character="Antonio">Die haben sicher auch einige Gründe sich an ihm und seinen</part>
+			<part t="2.5" character="Antonio">Handlangern zu rächen und es würde uns helfen Cherry zu retten.</part>
+
+			<choice id="0" exit="_done_">Das ist eine gute Idee. Machen wir uns auf den Weg.</choice>
+			<choice id="1" nextText="4">Hmm...wenn ich es mir recht überlege, versuchen wir es lieber doch alleine, dann sind wir schneller.</choice>
+		</text>
+
+		<!-- 3.1 -->
+		<text id="3">
+			<part t="2.5" character="Antonio">Das ist eine sehr gute Idee. Na dann machen wir uns mal an die Arbeit.</part>
+		</text>
+
+		<!-- 2.2.1 -->
+		<text id="4">
+			<part t="2.5" character="Antonio">Vielleicht hast du Recht. Lass es uns versuchen.</part>
 		</text>
 	</conversation>
 
@@ -28,6 +66,25 @@
 		<text id="0">
 			<part t="2.5" character="Antonio">Puh. Endlich in Sicherheit!</part>
 			<part t="2.5" character="Antonio">Was machen wir nun? Sie haben Cherry bestimmt in ihr Nest gebracht ...</part>
+
+			<choice id="0" nextText="1">Wir sollten sie da so schnell wie möglich rausholen. Ich hoffe dafür ist es noch nicht zu spät. Wir sollten sofort aufbrechen.</choice>
+			<choice id="1" nextText="2">Wir müssen sie da rausholen, aber das werden wir nicht alleine schaffen. Ich denke wir sollten unter den anderen Früchten nach Verbündeten suchen, da gibt es sicher einige, die einen Grund hätten sich an Black Sparrow und seinen Handlangern zu rächen...</choice>
 		</text>	
+
+		<!-- 1.1 -->
+		<text id="1">
+			<part t="2.5" character="Antonio">Warte, was hältst du davon, wenn wir versuchen würden die anderen Früchte</part>
+			<part t="2.5" character="Antonio">auf dem Weg zu Black Sparrows Nest gegen ihn aufzuwiegeln?</part>
+			<part t="2.5" character="Antonio">Die haben sicher auch einige Gründe sich an ihm und seinen</part>
+			<part t="2.5" character="Antonio">Handlangern zu rächen und es würde uns helfen Cherry zu retten</part>
+
+			<choice id="0" exit="_done_">Das hört sich gut an. Machen wir uns auf den Weg.</choice>
+			<choice id="1" exit="_done_">Ach was, wir brauchen keine Hilfe, wir schaffen das sicher auch alleine. Los, machen wir uns auf den Weg.</choice>
+		</text>
+
+		<!-- 2.1 -->
+		<text id="2">
+			<part t="2.5" character="Antonio">Das ist eine sehr gute Idee. Na dann machen wir uns mal an die Arbeit.</part>
+		</text>
 	</conversation>
 </bw>
