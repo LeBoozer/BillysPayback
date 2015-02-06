@@ -74,6 +74,15 @@ public class ScriptEngineHolder : MonoBehaviour
         // Add globals
         m_scriptEngine.SetGlobalValue("Game", typeof(Game));
 
+        // Helper functions for system logging
+        m_scriptEngine.SetGlobalFunction("DebugLog", new System.Action<string>(DebugLog));
+        m_scriptEngine.SetGlobalFunction("DebugWarning", new System.Action<string>(DebugWarning));
+        m_scriptEngine.SetGlobalFunction("DebugError", new System.Action<string>(DebugError));
+
+        // Helper functions for global variable support
+        m_scriptEngine.SetGlobalFunction("AddGlobalVar", new System.Action<string, object>(AddGlobalVar));
+        m_scriptEngine.SetGlobalFunction("GetGlobalVar", new System.Func<string, object>(GetGlobalVar));
+
         // Add custom functions (player data)
         m_scriptEngine.SetGlobalFunction("Player_GetNumLifePoints", new System.Func<int>(Player_GetNumLifePoints));
         m_scriptEngine.SetGlobalFunction("Player_GetNumLifes", new System.Func<int>(Player_GetNumLifes));
@@ -85,6 +94,38 @@ public class ScriptEngineHolder : MonoBehaviour
         m_scriptEngine.SetGlobalFunction("Player_GetCharacteristicLightness", new System.Func<int>(Player_GetCharacteristicLightness));
         m_scriptEngine.SetGlobalFunction("Player_GetCharacteristicPatience", new System.Func<int>(Player_GetCharacteristicPatience));
     }
+
+    #region Helper
+    #region Log
+    public void DebugLog(string _entry)
+    {
+        // Write to log
+        Debug.Log(_entry);
+    }
+    public void DebugWarning(string _entry)
+    {
+        // Write to log
+        Debug.LogWarning(_entry);
+    }
+    public void DebugError(string _entry)
+    {
+        // Write to log
+        Debug.LogError(_entry);
+    }
+    #endregion Log
+    #region Global variables
+    public void AddGlobalVar(string _name, object _data)
+    {
+        // Add data
+        m_scriptEngine.SetGlobalValue(_name, _data);
+    }
+    public object GetGlobalVar(string _name)
+    {
+        // Get data
+        return m_scriptEngine.GetGlobalValue(_name);
+    }
+    #endregion Global variables
+    #endregion Helper
 
     #region Player data
     public int Player_GetNumLifePoints()
