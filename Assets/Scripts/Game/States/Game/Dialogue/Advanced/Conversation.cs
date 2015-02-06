@@ -21,12 +21,15 @@ public class Conversation
         private set { }
     }
 
-    // The ID of the starting text
-    private int m_startTextID;
+    // Value of the func: enabled
+    private string m_funcValueStartTextID;
+
+    // True if this choice is enabled 
+    private System.Func<int> m_funcGetStartTextID;
     public int StartTextID
     {
-        get { return m_startTextID; }
-        private set { m_startTextID = value; }
+        get { if (m_funcGetStartTextID == null) return -1; return m_funcGetStartTextID(); }
+        private set { }
     }
 
     // List with all texts
@@ -38,11 +41,11 @@ public class Conversation
     }
 
     // Constructor
-    public Conversation(int _id, int _startTextID, List<DialogueText> _textList)
+    public Conversation(int _id, string _funcValueStartTextID, List<DialogueText> _textList)
     {
         // Copy
         m_conversationID = _id;
-        m_startTextID = _startTextID;
+        m_funcValueStartTextID = _funcValueStartTextID;
 
         // Add texts to list
         if (_textList != null)
@@ -66,5 +69,30 @@ public class Conversation
         // Local variables
         List<int> keys = new List<int>(m_textList.Keys);
         return keys;
+    }
+
+    // Initializes the conversation
+    // Returns true on success
+    public bool initialize(AdvancedDialogue _dialog)
+    {
+        // Local variables
+        DynamicScript script = null;
+        int id = 0;
+
+        // Define function: enabled
+        if (m_funcValueStartTextID == null || m_funcValueStartTextID.Length == 0)
+            m_funcGetStartTextID = null;
+        else if (System.Int32.TryParse(m_funcValueStartTextID, out id) == true)
+            m_funcGetStartTextID = new System.Func<int>(() => { return id; });
+        else
+        {
+            // Try to get script
+            if (_dialog.DynamicScripts.ContainsKey(m_funcValueStartTextID) == false)
+                return false;
+            script = _dialog.DynamicScripts[m_funcValueStartTextID];
+            m_funcGetStartTextID = new System.Func<int>(() => { object v = null; Game.Instance.ScriptEngine.executeScript(script, ref v); return (System.Int32)v; });
+        }
+
+        return true;
     }
 }

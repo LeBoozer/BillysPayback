@@ -111,11 +111,9 @@ public class S_Dialogue : FSMState
             Game.Instance.Player.blockMovement(true);
 
         // Get specified conversation
-        startConvID = m_dialogue.getOverrideStartConversationID();
+        startConvID = m_dialogue.GetOverrideStartConversationID;
         if (startConvID != -1)
-        {
             m_conversation = m_dialogue.getConversationByID(startConvID);
-        }
         else
         {
             if (m_conversationID == -1)
@@ -283,8 +281,8 @@ public class S_Dialogue : FSMState
             // Get choice
             choice = m_text.getChoiceByID(id);
 
-            // Enabled?
-            if (choice.isEnabled() == false)
+            // Enabled
+            if (choice.IsEnabled == false)
                 continue;
 
             // Add text

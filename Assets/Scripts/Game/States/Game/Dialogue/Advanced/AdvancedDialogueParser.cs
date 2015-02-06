@@ -5,6 +5,7 @@
  * Editors:	-
  */
 using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
@@ -40,12 +41,11 @@ public abstract class AdvancedDialogueParser
         XmlDocument xmlDoc = null;
         XmlNode xmlNode = null;
         XmlNode xmlNodeAtt = null;
-        int importStandardAssets = 0;
-        int overrideStartID = -1;
+        string overrideStartConversationID = "";
         Conversation conv = null;
-        DynamicCode dyncode = null;
+        DynamicScript dynscript = null;
         List<Conversation> convList = new List<Conversation>();
-        List<DynamicCode> dyncodeList = new List<DynamicCode>();
+        List<DynamicScript> dynscriptList = new List<DynamicScript>();
 
         // Check parameter
         if(_text == null || _text.Length == 0)
@@ -66,21 +66,16 @@ public abstract class AdvancedDialogueParser
             return null;
         }
 
-        // Import standard assets?
-        xmlNodeAtt = xmlNode.Attributes.GetNamedItem("importStandardAssets");
+        // Get attribute: override start conversation ID 
+        xmlNodeAtt = xmlNode.Attributes.GetNamedItem("overrideStartConversationID");
         if (xmlNodeAtt != null)
-            importStandardAssets = int.Parse(xmlNodeAtt.Value);
-
-        // Override start conversation ID?
-        xmlNodeAtt = xmlNode.Attributes.GetNamedItem("overrideStartID");
-        if (xmlNodeAtt != null)
-            overrideStartID = int.Parse(xmlNodeAtt.Value);
+            overrideStartConversationID = xmlNodeAtt.Value;
 
         // Find first conversation or dynamic code node
         xmlNode = xmlNode.FirstChild;
         if (xmlNode == null)
         {
-            Debug.LogError("No conversations or dynamic codes has been found!");
+            Debug.LogError("No conversations or dynamic scripts has been found!");
             return null;
         }
 
@@ -90,16 +85,16 @@ public abstract class AdvancedDialogueParser
             // Skipable?
             if (isNodeSkipable(xmlNode) == false)
             {
-                // Dynamic code?
-                if (xmlNode.Name.Equals("dyncode") == true)
+                // Dynamic scripts?
+                if (xmlNode.Name.Equals("dynscript") == true)
                 {
                     // Parse
-                    dyncode = parseDynamicCode(xmlNode);
-                    if (dyncode == null)
+                    dynscript = parseDynamicScript(xmlNode);
+                    if (dynscript == null)
                         return null;
 
                     // Add to list
-                    dyncodeList.Add(dyncode);
+                    dynscriptList.Add(dynscript);
                 }
 
                 // Conversation?
@@ -121,61 +116,51 @@ public abstract class AdvancedDialogueParser
         while (xmlNode != null);
 
         // Create dialogue
-        dialogue = new AdvancedDialogue(dyncodeList, convList, overrideStartID);
+        dialogue = new AdvancedDialogue(dynscriptList, convList, overrideStartConversationID);
 
         return dialogue;
     }
 
-    // Parses a dynamic code
-    private static DynamicCode parseDynamicCode(XmlNode _node)
+    // Parses a dynamic script
+    private static DynamicScript parseDynamicScript(XmlNode _node)
     {
         // Local variables
-        int codeID = -1;
-        string classPath = "";
-        string entryPoint = "";
+        string scriptName = "";
+        string resultName = "";
+        string resultType = "";
         string code = "";
-        DynamicCode dyncode = null;
+        DynamicScript dynscript = null;
         XmlNode xmlNodeAtt = null;
 
-        // Get attribute: id
-        xmlNodeAtt = _node.Attributes.GetNamedItem("id");
+        // Get attribute: name
+        xmlNodeAtt = _node.Attributes.GetNamedItem("name");
         if (xmlNodeAtt == null)
         {
-            Debug.LogError("Dynamic codes need IDs!");
+            Debug.LogError("Dynamic scripts need unique names!");
             return null;
         }
-        codeID = int.Parse(xmlNodeAtt.Value);
+        scriptName = xmlNodeAtt.Value;
 
-        // Get attribute: class path
-        xmlNodeAtt = _node.Attributes.GetNamedItem("class");
-        if (xmlNodeAtt == null)
-        {
-            Debug.LogError("Dynamic codes need class path definitions!");
-            return null;
-        }
-        classPath = xmlNodeAtt.Value;
+        // Get attribute: result
+        xmlNodeAtt = _node.Attributes.GetNamedItem("result");
+            resultName = xmlNodeAtt.Value;
 
-        // Get attribute: entry point
-        xmlNodeAtt = _node.Attributes.GetNamedItem("entry");
-        if (xmlNodeAtt == null)
-        {
-            Debug.LogError("Dynamic codes need entry point definitions!");
-            return null;
-        }
-        entryPoint = xmlNodeAtt.Value;
+        // Get attribute: type
+        xmlNodeAtt = _node.Attributes.GetNamedItem("type");
+            resultType = xmlNodeAtt.Value;
 
         // Get text
         code = _node.InnerText;
         if (code == null || code.Length == 0)
         {
-            Debug.LogError("Dynamic codes need text!");
+            Debug.LogError("Dynamic scripts need text!");
             return null;
         }
 
         // Create choice
-        dyncode = new DynamicCode(codeID, classPath, entryPoint, code);
+        dynscript = new DynamicScript(scriptName, resultName, resultType, code);
 
-        return dyncode;
+        return dynscript;
     }
 
     // Parses a conversation
@@ -183,7 +168,7 @@ public abstract class AdvancedDialogueParser
     {
         // Local variables
         int conversationID = -1;
-        int conversationStartID = -1;
+        string conversationStartID = "";
         Conversation conversation = null;
         XmlNode xmlNodeText = null;
         XmlNode xmlNodeAtt = null;
@@ -206,7 +191,7 @@ public abstract class AdvancedDialogueParser
             Debug.LogError("Conversations need a start text ID!");
             return null;
         }
-        conversationStartID = int.Parse(xmlNodeAtt.Value);
+        conversationStartID = xmlNodeAtt.Value;
 
         // Find first text node
         xmlNodeText = _node.SelectSingleNode("text");
@@ -374,9 +359,9 @@ public abstract class AdvancedDialogueParser
         // Local variables
         string text = "";
         int choiceID = -1;
-        int nextTextID = -1;
+        string nextTextID = "";
         string exitValue = "";
-        string enabledFunc = "";
+        string enabledValue = "";
         Choice choice = null;
         XmlNode xmlNodeAtt = null;
 
@@ -392,17 +377,17 @@ public abstract class AdvancedDialogueParser
         // Get attribute: next text ID
         xmlNodeAtt = _node.Attributes.GetNamedItem("nextText");
         if (xmlNodeAtt != null)
-            nextTextID = int.Parse(xmlNodeAtt.Value);
+            nextTextID = xmlNodeAtt.Value;
 
         // Get attribute: exit value
         xmlNodeAtt = _node.Attributes.GetNamedItem("exit");
         if (xmlNodeAtt != null)
             exitValue = xmlNodeAtt.Value;
 
-        // Get attribute: enabled_func
-        xmlNodeAtt = _node.Attributes.GetNamedItem("enabled_func");
+        // Get attribute: enabled
+        xmlNodeAtt = _node.Attributes.GetNamedItem("enabled");
         if (xmlNodeAtt != null)
-            enabledFunc = xmlNodeAtt.Value;
+            enabledValue = xmlNodeAtt.Value;
 
         // Get text
         text = _node.InnerText;
@@ -413,7 +398,7 @@ public abstract class AdvancedDialogueParser
         }
 
         // Create choice
-        choice = new Choice(choiceID, text, nextTextID, exitValue, enabledFunc);
+        choice = new Choice(choiceID, text, nextTextID, exitValue, enabledValue);
 
         return choice;
     }
