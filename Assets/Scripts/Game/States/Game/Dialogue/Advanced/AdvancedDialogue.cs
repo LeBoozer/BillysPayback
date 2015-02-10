@@ -90,6 +90,21 @@ public class AdvancedDialogue
         return keys;
     }
 
+    // Executes all scripts from a given run-type
+    public void executeScriptFromRunType(DynamicScript.RunType _type)
+    {
+        // Local variables
+        object nullObj = null;
+
+        // Loop through all scripts
+        foreach(var pair in m_dynamicScriptList)
+        {
+            // Type?
+            if(pair.Value.ScriptRunType.Equals(_type) == true)
+                Game.Instance.ScriptEngine.executeScript(pair.Value, ref nullObj);
+        }
+    }
+
     // Initializes the dialogue
     private void initialize()
     {

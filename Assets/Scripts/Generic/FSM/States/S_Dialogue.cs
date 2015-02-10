@@ -127,6 +127,9 @@ public class S_Dialogue : FSMState
             return;
         }
 
+        // Execute all scripts with a run-type: awake
+        m_dialogue.executeScriptFromRunType(DynamicScript.RunType.RUN_AWAKE);
+
         // Set text
         setTextByID(m_conversation.StartTextID);
     }

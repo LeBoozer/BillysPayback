@@ -126,6 +126,7 @@ public abstract class AdvancedDialogueParser
     {
         // Local variables
         string scriptName = "";
+        string runType = "";
         string resultName = "";
         string resultType = "";
         string code = "";
@@ -141,12 +142,19 @@ public abstract class AdvancedDialogueParser
         }
         scriptName = xmlNodeAtt.Value;
 
+        // Get attribute: run-type
+        xmlNodeAtt = _node.Attributes.GetNamedItem("run");
+        if (xmlNodeAtt != null)
+            runType = xmlNodeAtt.Value;
+
         // Get attribute: result
         xmlNodeAtt = _node.Attributes.GetNamedItem("result");
+        if (xmlNodeAtt != null)
             resultName = xmlNodeAtt.Value;
 
         // Get attribute: type
         xmlNodeAtt = _node.Attributes.GetNamedItem("type");
+        if (xmlNodeAtt != null)
             resultType = xmlNodeAtt.Value;
 
         // Get text
@@ -158,7 +166,7 @@ public abstract class AdvancedDialogueParser
         }
 
         // Create choice
-        dynscript = new DynamicScript(scriptName, resultName, resultType, code);
+        dynscript = new DynamicScript(scriptName, runType, resultName, resultType, code);
 
         return dynscript;
     }
