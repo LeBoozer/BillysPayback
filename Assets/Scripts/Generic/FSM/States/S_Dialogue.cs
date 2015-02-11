@@ -70,17 +70,6 @@ public class S_Dialogue : FSMState
             Debug.LogError("Invalid text FSM-state (" + gameObject.name + "). Text data is invalid!");
             return;
         }
-
-        // Get specified conversation
-        if (m_conversationID == -1)
-            m_conversation = m_dialogue.getConversationByID(m_dialogue.getConversationIDs()[0]);
-        else
-            m_conversation = m_dialogue.getConversationByID(m_conversationID);
-        if(m_conversation == null)
-        {
-            Debug.LogError("Invalid text FSM-state (" + gameObject.name + "). Specified conversation has not been found!");
-            return;
-        }
     }
 
     // Override: MonoBehaviour::Start()
@@ -103,6 +92,9 @@ public class S_Dialogue : FSMState
     // Override: FSMState::onEnter()
     public override void onEnter()
     {
+        // Local variables
+        int startConvID = -1;
+
         // Call parent
  	    base.onEnter();
 
@@ -118,8 +110,25 @@ public class S_Dialogue : FSMState
         if (m_blockPlayerMovement == true)
             Game.Instance.Player.blockMovement(true);
 
-        // Open window
-        m_window.openDialogWindow();
+        // Get specified conversation
+        startConvID = m_dialogue.GetOverrideStartConversationID;
+        if (startConvID != -1)
+            m_conversation = m_dialogue.getConversationByID(startConvID);
+        else
+        {
+            if (m_conversationID == -1)
+                m_conversation = m_dialogue.getConversationByID(m_dialogue.getConversationIDs()[0]);
+            else
+                m_conversation = m_dialogue.getConversationByID(m_conversationID);
+        }
+        if (m_conversation == null)
+        {
+            Debug.LogError("Invalid text FSM-state (" + gameObject.name + "). Specified conversation has not been found!");
+            return;
+        }
+
+        // Execute all scripts with a run-type: awake
+        m_dialogue.executeScriptFromRunType(DynamicScript.RunType.RUN_AWAKE);
 
         // Set text
         setTextByID(m_conversation.StartTextID);
@@ -175,9 +184,12 @@ public class S_Dialogue : FSMState
             return false;
         }
 
-        // Delete choices
+        // Delete choices and close window
         if (m_window != null)
+        {
             m_window.removeAnswers();
+            m_window.closeDialogWindow();
+        }
 
         // Update text on next update run
         m_isHandleNextTextPart = true;
@@ -272,8 +284,8 @@ public class S_Dialogue : FSMState
             // Get choice
             choice = m_text.getChoiceByID(id);
 
-            // Enabled?
-            if (choice.isEnabled() == false)
+            // Enabled
+            if (choice.IsEnabled == false)
                 continue;
 
             // Add text
@@ -284,6 +296,9 @@ public class S_Dialogue : FSMState
 
         // Register event callback
         DialogTextScript.AnswerClicked += onChoiceClicked;
+
+        // Open window
+        m_window.openDialogWindow();
 
         // Add choices to window
         m_window.addAnswers(choiceTexts.ToArray());

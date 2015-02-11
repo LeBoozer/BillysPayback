@@ -29,6 +29,9 @@ public class Game
     // The player
     private Player              m_player;
 
+    // The script engine instance
+    private ScriptEngineHolder  m_scriptEngine;
+
 	// Protected constructor
 	protected Game()
 	{}
@@ -52,6 +55,13 @@ public class Game
     {
         get { return m_player; }
         set { m_player = value; }
+    }
+
+    // Returns the script engine instance
+    public ScriptEngineHolder ScriptEngine
+    {
+        get { return m_scriptEngine; }
+        private set { m_scriptEngine = value; }
     }
 
 	// Returns the singleton instance
@@ -82,7 +92,8 @@ public class Game
 			// Add components
 			m_singletonInstance.m_gsm 			= m_singletonInstance.m_singletonGameObject.AddComponent<GameStateMaschine>();
 			m_singletonInstance.m_playerData 	= m_singletonInstance.m_singletonGameObject.AddComponent<PlayerData>();
-			
+			m_singletonInstance.m_scriptEngine  = m_singletonInstance.m_singletonGameObject.AddComponent<ScriptEngineHolder>();            
+
 			return m_singletonInstance;		
 		}
 	}

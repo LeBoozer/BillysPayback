@@ -20,18 +20,27 @@ public class AdvancedDialogue
     public static readonly string DIALOGUE_CANCELLED_EXIT_VALUE = "_cancel_";
     public static readonly string DIALOGUE_NO_CHOICE_EXIT_VALUE = "_done_";
 
-    // Stores information about compiled dynamic codes
-    public class CompiledDynamicCode
+    // List with all dynamic scripts
+    private Dictionary<string, DynamicScript> m_dynamicScriptList = new Dictionary<string, DynamicScript>();
+    public Dictionary<string, DynamicScript> DynamicScripts
     {
-        public object       m_classInstance = null;
-        public MethodInfo   m_entryPoint = null;
+        get { return m_dynamicScriptList; }
+        private set { }
     }
-
-    // List with all dynamic codes
-    private Dictionary<int, CompiledDynamicCode> m_dynamicCodeList = new Dictionary<int, CompiledDynamicCode>();
 
     // List with all conversations
     private Dictionary<int, Conversation> m_conversationList = new Dictionary<int,Conversation>();
+
+    // Value of the func: override start conversation ID
+    private string m_funcValueOverrideStartConvID;
+
+    // Returns the ID of the overwritten start conversion ID or -1 if not used
+    private System.Func<int> m_funcOverrideStartConvID;
+    public int GetOverrideStartConversationID
+    {
+        get { if (m_funcOverrideStartConvID == null) return -1; return m_funcOverrideStartConvID(); }
+        private set { }
+    }
 
     // Indicates whether the dialogue is valid
     private bool m_isValid = false;
@@ -40,13 +49,16 @@ public class AdvancedDialogue
         get { return m_isValid; }
         private set { m_isValid = value; }
     }
-    
+  
     // Constructor
-    public AdvancedDialogue(List<DynamicCode> _dynamicCodeList, List<Conversation> _conversationList)
+    public AdvancedDialogue(List<DynamicScript> _dynamicScriptList, List<Conversation> _conversationList, string _funcValueOverrideStartConvID)
     {
-        // Compile dynamic codes
-        if (_dynamicCodeList != null && _dynamicCodeList.Count > 0)
-            compileDynamicCodes(_dynamicCodeList);
+        // Copy parameter
+        m_funcValueOverrideStartConvID = _funcValueOverrideStartConvID;
+
+        // Copy scripts
+        foreach (DynamicScript s in _dynamicScriptList)
+            m_dynamicScriptList.Add(s.ScriptName, s);
 
         // Add conversations to list
         if (_conversationList != null)
@@ -57,6 +69,9 @@ public class AdvancedDialogue
 
         // Validate
         validate();
+
+        // Initializes the dialogue
+        initialize();
     }
 
     // Returns a conversation by its ID (can be null!)
@@ -75,64 +90,40 @@ public class AdvancedDialogue
         return keys;
     }
 
-    // Compiles the dynamic codes
-    private void compileDynamicCodes(List<DynamicCode> _codeList)
+    // Executes all scripts from a given run-type
+    public void executeScriptFromRunType(DynamicScript.RunType _type)
     {
         // Local variables
-        CSharpCodeProvider provider = new CSharpCodeProvider(new Dictionary<string, string> { { "CompilerVersion", "v3.5" } });
-        CompilerParameters compilerParams = null;
-        CompilerResults cResult = null;
-        object classInstance = null;
-        MethodInfo entryPoint = null;
-        CompiledDynamicCode compiledCode = null;
+        object nullObj = null;
 
-        // Create params
-        // Add assemblies: Unity, Game
-        compilerParams = new CompilerParameters();
-        compilerParams.CompilerOptions = "/target:library /optimize /warn:0";
-        compilerParams.GenerateExecutable = false;
-        compilerParams.GenerateInMemory = true;
-        compilerParams.IncludeDebugInformation = false;
-        compilerParams.ReferencedAssemblies.Add(typeof(Transform).Assembly.Location);
-        compilerParams.ReferencedAssemblies.Add("System.dll");
-        compilerParams.ReferencedAssemblies.Add("System.Core.dll");
-        compilerParams.ReferencedAssemblies.Add(typeof(Game).Assembly.Location);
-
-        // Loop through all codes
-        foreach(DynamicCode c in _codeList)
+        // Loop through all scripts
+        foreach(var pair in m_dynamicScriptList)
         {
-            // Compile
-            cResult = provider.CompileAssemblyFromSource(compilerParams, @c.Code);
+            // Type?
+            if(pair.Value.ScriptRunType.Equals(_type) == true)
+                Game.Instance.ScriptEngine.executeScript(pair.Value, ref nullObj);
+        }
+    }
 
-            // Print errors
-            if (cResult.Errors.Count != 0)
-            {
-                for (int i = 0; i < cResult.Errors.Count; ++i)
-                    Debug.LogError("Compile dynamic code (" + c.CodeID + "): " + cResult.Errors[i].ErrorText);
-                continue;
-            }
+    // Initializes the dialogue
+    private void initialize()
+    {
+        // Local variables
+        DynamicScript script = null;
+        int id = 0;
 
-            // Create class instance
-            classInstance = cResult.CompiledAssembly.CreateInstance(c.ClassPath);
-            if(classInstance == null)
-            {
-                Debug.LogError("Compile dynamic code (" + c.CodeID + "): class creation failed!");
-                continue;
-            }
-
-            // Get entry point
-            entryPoint = classInstance.GetType().GetMethod(c.EntryPoint);
-            if(entryPoint == null)
-            {
-                Debug.LogError("Compile dynamic code (" + c.CodeID + "): entry point not found!");
-                continue;
-            }
-
-            // Add to list
-            compiledCode = new CompiledDynamicCode();
-            compiledCode.m_classInstance = classInstance;
-            compiledCode.m_entryPoint = entryPoint;
-            m_dynamicCodeList.Add(c.CodeID, compiledCode);
+        // Define function: override start conversation ID
+        if (m_funcValueOverrideStartConvID == null || m_funcValueOverrideStartConvID.Length == 0)
+            m_funcOverrideStartConvID = null;
+        else if (System.Int32.TryParse(m_funcValueOverrideStartConvID, out id) == true)
+            m_funcOverrideStartConvID = new System.Func<int>(() => { return id; });
+        else
+        {
+            // Try to get script
+            if (m_dynamicScriptList.ContainsKey(m_funcValueOverrideStartConvID) == false)
+                return;
+            script = m_dynamicScriptList[m_funcValueOverrideStartConvID];
+            m_funcOverrideStartConvID = new System.Func<int>(() => { object v = null; Game.Instance.ScriptEngine.executeScript(script, ref v); return (System.Int32)v; });
         }
     }
 
@@ -146,7 +137,7 @@ public class AdvancedDialogue
         // Validate conversations
         foreach (KeyValuePair<int, Conversation> c in m_conversationList)
         {
-            if (validateConversation(c.Value) == false)
+            if (c.Value.initialize(this) == false || validateConversation(c.Value) == false)
                 return;
         }
 
@@ -189,8 +180,6 @@ public class AdvancedDialogue
         List<int> choiceIDs = null;
         TextPart part = null;
         Choice choice = null;
-        int tempInt = -1;
-        CompiledDynamicCode code = null;
 
         // Check parameter
         if (_t == null)
@@ -234,8 +223,8 @@ public class AdvancedDialogue
                 return false;
             }
 
-            // Next target available?
-            else if (choice.NextTextID != -1)
+            // Next target available (only if not script generated)?
+            else if (choice.IsNextTextIDFunctionGenerated == false && choice.NextTextID != -1)
             {
                 if (_c.getTextByID(choice.NextTextID) == null)
                 {
@@ -244,45 +233,11 @@ public class AdvancedDialogue
                 }
             }
 
-            // Target for "enabled_func" available?
-            if (choice.EnabledFuncID != null && choice.EnabledFuncID.Length > 0)
+            // Initialize choice
+            if(choice.initialize(this) == false)
             {
-                // Try to parse
-                try
-                {
-                    tempInt = int.Parse(choice.EnabledFuncID);
-                }
-                catch (System.FormatException _e)
-                {
-                    tempInt = -1;
-                }
-
-                // Invalid ID? Try standard assets
-                if(tempInt == -1)
-                {
-
-                }
-
-                // Dynamic code available?
-                if(m_dynamicCodeList.ContainsKey(tempInt) == false)
-                {
-                    Debug.LogError("Choice's enabled_func target has not been found!");
-                    return false;
-                }
-                code = m_dynamicCodeList[tempInt];
-                if(code.m_entryPoint.ReturnType != typeof(bool))
-                {
-                    Debug.LogError("Choice's enabled_func target need a boolean return type!");
-                    return false;
-                }
-                if(code.m_entryPoint.GetParameters().Length != 0)
-                {
-                    Debug.LogError("Choice's enabled_func target does not support parameters yet!");
-                    return false;
-                }
-
-                // Set code
-                choice.EnabledFunc = code;
+                Debug.LogError("Choice initialization failed!");
+                return false;
             }
         }
 

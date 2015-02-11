@@ -1,13 +1,4 @@
 ﻿<bw>
-	<dyncode id="0" class="Hello" entry="test">
-		using System;
-		class Hello
-		{
-			public bool test()
-			{ return true; }
-		};
-	</dyncode>
-
 	<conversation id="0" start="0">
 		<text id="0">
 			<part t="2.5" character="Antonio">Billy! Geht es dir gut?</part>
@@ -16,7 +7,7 @@
 			<part t="2.5" character="Antonio">Wenn wir bei dir sind können wir weiter überlegen.</part>
 			<part t="2.5" character="Antonio">Erinnerst du dich noch, was du zu tun hast?</part>
 
-			<choice id="0" nextText="1" enabled_func="0">Ich denke schon. Lass uns gehen.</choice>
+			<choice id="0" nextText="1">Ich denke schon. Lass uns gehen.</choice>
 			<choice id="1" exit="no">Ich bin nicht ganz sicher.</choice>
 		</text>
 			
