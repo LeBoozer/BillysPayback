@@ -157,7 +157,10 @@ public class PlayerData : MonoBehaviour
 		PUT_ORANGE      = 2,
 		
 		// Internal use only!
-		PUT_COUNT 		= 3
+		PUT_COUNT 		= 3,
+
+        // The cherry get a life back
+        PUT_LIFE        = 4
 	}
 	
 	// List of all power-ups

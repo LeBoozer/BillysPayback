@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Antonio : MonoBehaviour
 {
@@ -8,32 +9,49 @@ public class Antonio : MonoBehaviour
     enum MovementDirection
     {
         eNothing    = 0,
-        eRight      = (1 << 1),
-        eLeft       = (1 << 2)
+        eRight      = (1 << 0),
+        eLeft       = (1 << 1)
+    }
+    
+    struct PlayerValues
+    {
+        public int     m_lifePoints;
+        public int     m_lifeNumbers;
+        public bool    m_kiwanos;
+        public bool    m_raspberry;
+        public bool    m_orange;
     }
 
     // variables
-    public bool                         m_chase = true;
+    public bool                         m_simpleMovement            = true;
+    public bool                         m_chase                     = true;
     private GameObject                  m_way;
     private float                       m_realAntonioHeight;
     private bool                        m_waiting;
     private int                         m_ignoreLayerMask;
-    GameObject                          m_sphere = null;
+    GameObject                          m_sphere                    = null;
 
     // movement
     private float                       m_velocityX;
     private Vector3                     m_oldPosition;
     private float                       m_velocityY;
-    private float                       m_brakeFactor           = 1;
-    private float                       m_accelerationFactor    = 1;
-
+    private float                       m_brakeFactor               = 1;
+    private float                       m_accelerationFactor        = 1;
 
     // chase variables
     private int                         m_iteration;
-    private int                         m_samplingRate          = 10;
+    private int                         m_samplingRate              = 10;
     private float                       m_targetDistance;
     private Vector3                     m_nextWayPoint;
     
+    // throw variable
+    private PlayerValues                m_lastPlayerValues;
+    private Queue<double>               m_playerHitTimeStamp;
+    private double                      m_lastGiftTimeStamp;
+    private GameObject                  Kiwano                      = null;
+    private GameObject                  Raspberry                   = null;
+    private GameObject                  Life                        = null;
+
     // external objects
     private GameObject                  m_player;
 	private PlayerData		            m_playerData;
@@ -41,7 +59,12 @@ public class Antonio : MonoBehaviour
     private Vector3                     m_worldScale;
 
     // constants
-    private const string                GAME_OBJECT_WAY_NAME    = "Way";
+    private const string                GAME_OBJECT_WAY_NAME        = "Way";
+    private const double                IGNORE_HIT_TIME_DIFFERENCE  = 2;
+    private const int                   NUMBER_OF_NEEDED_HITS       = 2;
+    private const double                MIN_GIFT_TIME_DIFFERENCE    = 2;
+    private const double                GIFT_TIME_DIFFERENCE        = 10;
+    private const int                   MAXIMAL_POWER_UPS_NUMBER    = 3;
     #endregion
 
     // Use this for initialization
@@ -83,10 +106,25 @@ public class Antonio : MonoBehaviour
         // get player data
         m_playerData = Game.Instance.PlayerData;
 
+        // throw values
+        m_lastPlayerValues = new PlayerValues();
+        m_lastPlayerValues.m_lifePoints     = m_playerData.LifePoints;
+        m_lastPlayerValues.m_lifeNumbers    = m_playerData.LifeNumber;
+        m_lastPlayerValues.m_kiwanos        = m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_KIWANO);
+        m_lastPlayerValues.m_raspberry      = m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_RASPBERRY);
+        m_playerHitTimeStamp = new Queue<double>();
+        m_lastGiftTimeStamp = Time.time - GIFT_TIME_DIFFERENCE;
+
+        // load prefabs 
+        if (Kiwano == null)
+            Kiwano      = Resources.Load<GameObject>("Items/KiwanoPowerUp");
+        if (Raspberry == null)
+            Raspberry   = Resources.Load<GameObject>("Items/RaspberryPowerUp");
+        if (Life == null)
+            Life        = Resources.Load<GameObject>("Items/LifePowerUp");
+
         // Get character controller
         m_controller = GetComponent<CharacterController>();
-
-
 
         // get or create the way
         m_way = getWay();
@@ -123,12 +161,21 @@ public class Antonio : MonoBehaviour
                 return;
             }
         }
+        
         // update antonio
-        if (m_chase)
+        if (m_simpleMovement)
+            this.transform.position = m_player.transform.position + new Vector3(-m_controller.radius * 2 * m_worldScale.x * transform.localScale.x, 0, m_controller.radius * 2 * m_worldScale.z * transform.localScale.z);
+        else if (m_chase)
             chaseUpdate();
-        else 
+        else
             runAheadUpdate();
+
+        // threw power ups
+        throwPowerUps();
+
 	}
+
+    #region Complex Movement
 
     /**
      * antonio chase billy
@@ -144,12 +191,13 @@ public class Antonio : MonoBehaviour
         float height = m_controller.height * m_worldScale.y * transform.localScale.y;
 
         bool newWayPoint = (m_nextWayPoint == Vector3.zero                                                  // default way point?
-                            || (m_nextWayPoint - transform.position).magnitude < height * height        // way point achieved?
-                            || !usefulWayPoint());                                                       // generally now an useless way point?
+                            || (m_nextWayPoint - transform.position).magnitude < height * height            // way point achieved?
+                            || !usefulWayPoint());                                                          // generally now an useless way point?
         Vector3 lastWayPoint = m_nextWayPoint;
         // check the usefulness of the current way point
         if (newWayPoint)
         {
+            //Debug.Log("calculate new way point");
             // fetch the next way point
             getNextWayPoint();
 
@@ -166,10 +214,10 @@ public class Antonio : MonoBehaviour
         // find not an usefull way point -> dont move
         if (m_nextWayPoint == Vector3.zero || (newWayPoint && lastWayPoint == m_nextWayPoint))
         {
+            Debug.Log("return: " + (!usefulWayPoint()) + "\t" + (m_nextWayPoint == Vector3.zero));
             move(MovementDirection.eNothing, 0);
             return;
         }
-
         // movement in the chase state
         MovementDirection nextMovement = MovementDirection.eNothing;
         float jumpHeight = 0; // GameConfig.BILLY_JUMP_MAXIMAL_HEIGHT;
@@ -181,6 +229,7 @@ public class Antonio : MonoBehaviour
         // dont waiting?
         if (!m_waiting)
         {
+
             // make a raycast downward in front of Antonio
             RaycastHit hitInfo;
             Vector3 rayOrigin, rayDirection;
@@ -213,10 +262,12 @@ public class Antonio : MonoBehaviour
                 nextMovement = MovementDirection.eLeft;
             else
                 nextMovement = MovementDirection.eRight;
+            Debug.Log(nextMovement + "\t" + jumpHeight);
         }
+        else
+            Debug.Log("waiting: " + nextMovement + "\t" + jumpHeight);
 
         // move
-        //Debug.Log(nextMovement + "\t" + jumpHeight);
         move(nextMovement, jumpHeight);
     }
 
@@ -405,10 +456,122 @@ public class Antonio : MonoBehaviour
      */
     private bool usefulWayPoint()
     {
-        Vector3 playerPos = m_player.transform.position;
-        Vector3 ownPos = transform.position - new Vector3(0, m_realAntonioHeight / 2, 0);
+        float dir = Mathf.Sign(m_player.transform.position.y - transform.position.y);
+        Vector3 playerPos = m_player.transform.position + dir * new Vector3(0, m_controller.stepOffset, 0);
+        Vector3 ownPos = transform.position - dir * new Vector3(0, m_controller.stepOffset , 0);
         return (Mathf.Min(ownPos.x, playerPos.x) <= m_nextWayPoint.x && Mathf.Max(ownPos.x, playerPos.x) >= m_nextWayPoint.x)               // for x-value?
                         && (Mathf.Min(ownPos.y, playerPos.y) <= m_nextWayPoint.y && Mathf.Max(ownPos.y, playerPos.y) >= m_nextWayPoint.y);  // for y -value?
     }
+
+    #endregion
+
+    /**
+     * let Anwtonio throw power ups for the player if necessary
+     */ 
+    private void throwPowerUps()
+    {
+        // useless time hits?
+        while (m_playerHitTimeStamp.Count > 0 && m_playerHitTimeStamp.Peek() + IGNORE_HIT_TIME_DIFFERENCE < Time.time)
+            m_playerHitTimeStamp.Dequeue();
+
+        // in last tick a hit by player?
+        if (m_playerData.LifePoints < m_lastPlayerValues.m_lifePoints)
+            m_playerHitTimeStamp.Enqueue(Time.time);
+
+        // a lot of hits in last time?
+        if (m_playerHitTimeStamp.Count > NUMBER_OF_NEEDED_HITS && m_lastGiftTimeStamp + MIN_GIFT_TIME_DIFFERENCE < Time.time)
+        {
+            if (Random.value < 0.5)
+                createGift(Raspberry);
+            else
+                createGift(Kiwano);
+        }
+
+        // create sometimes a gift is possible to need
+        if (m_lastGiftTimeStamp + GIFT_TIME_DIFFERENCE < Time.time)
+        { 
+            // create a gift with a probability 5%
+            float randomValue = Random.value * 20 ;
+            if (randomValue < 1)
+            {
+                float probabilityLife, probabilityKiwano, probabilityRasp;
+
+                calcualteProbability(out probabilityLife, out probabilityKiwano, out probabilityRasp);
+
+                if (randomValue < probabilityLife)
+                    createGift(Life);
+                else if (randomValue < probabilityKiwano)
+                    createGift(Kiwano);
+                else if (randomValue < probabilityRasp)
+                    createGift(Raspberry);
+            }
+
+        }
+
+        // save current life points/ -numbers
+        m_lastPlayerValues.m_lifePoints = m_playerData.LifePoints;
+        m_lastPlayerValues.m_lifeNumbers = m_playerData.LifeNumber;
+    }
+
+    /**
+     * calcualte the probability to throw the power up
+     */ 
+    private void calcualteProbability(out float _probabilityLife, out float _probabilityKiwano, out float _probabilityRasp)
+    {
+        // life
+        _probabilityLife = 0;
+        if (m_playerData.LifePoints == 1)
+            _probabilityLife = 1;
+        else if (m_playerData.LifePoints < GameConfig.BILLY_LIFE_POINT)
+            _probabilityLife = 0.5f;
+        int kiw = 1, rasp = 1;
+
+        // precalculations
+        //kiwano
+        if (!m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_KIWANO) || m_playerData.getPowerUpStockSize(PlayerData.PowerUpType.PUT_KIWANO) >= MAXIMAL_POWER_UPS_NUMBER)
+            kiw = 0;
+        else if (m_playerData.getPowerUpStockSize(PlayerData.PowerUpType.PUT_KIWANO) < MAXIMAL_POWER_UPS_NUMBER)
+            kiw += MAXIMAL_POWER_UPS_NUMBER - m_playerData.getPowerUpStockSize(PlayerData.PowerUpType.PUT_KIWANO);
+
+        // raspberry
+        if (!m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_RASPBERRY) || m_playerData.getPowerUpStockSize(PlayerData.PowerUpType.PUT_RASPBERRY) >= MAXIMAL_POWER_UPS_NUMBER)
+            rasp = 0;
+        else if (m_playerData.getPowerUpStockSize(PlayerData.PowerUpType.PUT_RASPBERRY) < MAXIMAL_POWER_UPS_NUMBER)
+            rasp += MAXIMAL_POWER_UPS_NUMBER - m_playerData.getPowerUpStockSize(PlayerData.PowerUpType.PUT_RASPBERRY);
+
+
+        _probabilityKiwano = _probabilityLife;
+        _probabilityRasp = _probabilityKiwano;
+
+        // no more power up needed?
+        if (rasp == 0 && kiw == 0)
+            return;
+
+        _probabilityKiwano += (1 - _probabilityLife) * kiw / (rasp + kiw);
+        _probabilityRasp = 1;
+    }
+
+    /**
+     * create a gift for the player
+     */
+    private void createGift(GameObject _prefab)
+    {
+        // create the instance
+        GameObject instance = (GameObject) Instantiate(_prefab);
+        instance.transform.position = transform.position;
+        instance.transform.parent = transform.parent;
+        instance.transform.localScale = _prefab.transform.localScale;
+
+        // let move to the player
+        PowerUps p = instance.GetComponent<PowerUps>();
+        if (p != null)
+            p.m_moveToPlayer = true;
+        else
+            Debug.LogError(_prefab + " is not a Power Up!");
+
+        // save the last gift time
+        m_lastGiftTimeStamp = Time.time;
+    }
+
 
 }
