@@ -163,8 +163,11 @@ public class Antonio : MonoBehaviour
         }
         
         // update antonio
-        if (m_simpleMovement)
+        if (m_simpleMovement && m_chase)
             this.transform.position = m_player.transform.position + new Vector3(-m_controller.radius * 2 * m_worldScale.x * transform.localScale.x, 0, m_controller.radius * 2 * m_worldScale.z * transform.localScale.z);
+        else if (m_simpleMovement)
+            runAheadUpdateSimple();
+        // complex movement
         else if (m_chase)
             chaseUpdate();
         else
@@ -174,6 +177,53 @@ public class Antonio : MonoBehaviour
         throwPowerUps();
 
 	}
+
+    /**
+     * let antonio run ahead 
+     */
+    private void runAheadUpdateSimple()
+    {
+        // get the next way point if necessary
+        float height = m_controller.stepOffset;
+        bool newWayPoint = m_nextWayPoint == Vector3.zero                                                  // default way point?
+                            || (m_nextWayPoint - transform.position).sqrMagnitude < height * height;           // way point achieved?
+
+        // fetch the next way point
+        Debug.Log(newWayPoint);
+        if (newWayPoint)
+            getNextWayPointSimple();    
+
+        // waiting?
+        if (m_nextWayPoint == Vector3.zero
+             || (transform.position - m_player.transform.position).sqrMagnitude > m_targetDistance * m_targetDistance)
+            return;
+
+        // calcualte distance between position and way point
+        float distance = (m_nextWayPoint - transform.position).magnitude;
+        if(distance > GameConfig.BILLY_MAX_SPEED * Time.deltaTime)
+            distance = GameConfig.BILLY_MAX_SPEED * Time.deltaTime / distance;
+        else
+            distance = 1;
+
+        // move Antonio
+        m_controller.Move( distance * (m_nextWayPoint - transform.position));
+    }
+
+    /**
+     * pull the next way point for Antonio
+     */
+    private void getNextWayPointSimple()
+    {
+        // if way points found
+        if (0 != m_way.transform.childCount)
+        {
+            // set the next possible way point
+            m_nextWayPoint = m_way.transform.GetChild(0).transform.position;
+            GameObject.Destroy(m_way.transform.GetChild(0).gameObject);
+        }
+        else
+            m_nextWayPoint = Vector3.zero;
+    }
 
     #region Complex Movement
 

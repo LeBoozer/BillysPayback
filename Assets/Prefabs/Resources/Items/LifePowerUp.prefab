@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Heart3D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 135: {fileID: 13500000}
   - 114: {fileID: 11400000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LifePowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,6 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: 4
   m_isDiamond: 0
+  m_moveToPlayer: 0
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
