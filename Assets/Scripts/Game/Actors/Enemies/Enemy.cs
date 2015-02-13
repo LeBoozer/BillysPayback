@@ -12,24 +12,24 @@ public class Enemy : Hitable
 {
 
 	#region Variable
-	const float 		        m_jumpHeight		= 2f;
+	const float 		            m_jumpHeight		= 2f;
 	
-	private float 		        m_direction;
-	private float 		        m_fly;
-	private float		        m_groundFlyValue;
-	private float		        m_lastHit;
-    private float               m_deathValue;
+	protected float 		        m_direction;
+    protected float                 m_fly;
+	private float		            m_groundFlyValue;
+	private float		            m_lastHit;
+    private float                   m_deathValue;
 	
-	public  int			        m_lifepoints 		= 1;
-	public 	bool		        m_canFly			= false;
-	public  bool		        m_canFall			= false;
-	public  bool		        m_allowToMove		= false;
-	private bool 		        first;
-	private CharacterController m_controller;
+	public  int			            m_lifepoints 		= 1;
+	public 	bool		            m_canFly			= false;
+	public  bool		            m_canFall			= false;
+	public  bool		            m_allowToMove		= false;
+	private bool 		            first;
+    protected CharacterController   m_controller;
 
-    private Vector3             m_worldScale = Vector3.zero;
+    protected Vector3               m_worldScale = Vector3.zero;
 
-    private  string              m_transmitter = "";
+    public string                m_transmitter = "";
 	#endregion
 
     /**
@@ -42,7 +42,7 @@ public class Enemy : Hitable
     }
 
 	// Use this for initialization
-	void Start ()
+	internal void Start ()
     {
         m_direction = (this.transform.rotation.eulerAngles.y < 181 && this.transform.rotation.eulerAngles.y > 179) ? 1 : -1;
 		m_fly = 0;
@@ -53,6 +53,7 @@ public class Enemy : Hitable
 		// get controller
 		m_controller = GetComponent<CharacterController>();
         m_groundFlyValue = (!m_canFly) ? -0.001f : 2 * Mathf.Sqrt(GameConfig.ENEMY_JUMP_HEIGHT * m_controller.height * m_worldScale.y * this.transform.localScale.y * Mathf.Abs(Physics.gravity.y));
+        debug("FlyValue: " + m_groundFlyValue);
 		m_lastHit = Time.time;
 		first = true;
 
@@ -61,7 +62,7 @@ public class Enemy : Hitable
 	}
 
     // Override: Monobehaviour::FixedUpdate()
-    void FixedUpdate()
+    internal void FixedUpdate()
     {
         // Local variables
         RaycastHit hit;
@@ -93,9 +94,6 @@ public class Enemy : Hitable
                                     | 1 << LayerMask.NameToLayer(Layer.LAYER_PROJECTILE_ENEMY)
                                     | 1 << LayerMask.NameToLayer(Layer.LAYER_PROJECTILE_PLAYER));
         isHit = Physics.Raycast(rayOrigin, rayDir, out hit, rayDist);
-        // ignore layer detected?
-        if(isHit)
-            isHit = (ignoreLayerMask & hit.transform.gameObject.layer) != 0;
 
         // nothing hit and not allowed to fall or fly?
         if (isHit == false && !m_canFall && !m_canFly)
@@ -106,10 +104,12 @@ public class Enemy : Hitable
         // in the air and allowed to fall/fly
         else
             m_fly += 2 * Physics.gravity.y * Time.deltaTime;
+
+        debug("fixedUpdate: " + m_fly + "\t" + m_groundFlyValue);
     }
 	
 	// Update is called once per frame
-	void Update () 
+	internal void Update () 
 	{
 		if (!m_allowToMove)
 			return;
@@ -125,7 +125,7 @@ public class Enemy : Hitable
 	}
 
 
-	private void turnAround()
+	internal void turnAround()
 	{
 		m_direction *= -1;
 		this.transform.Rotate(new Vector3(0, 1, 0), 180);
@@ -211,4 +211,5 @@ public class Enemy : Hitable
         // Notify
         hitable.onHit(this);
     }
+
 }

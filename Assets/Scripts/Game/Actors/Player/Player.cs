@@ -400,9 +400,7 @@ public class Player : Hitable
 		// add force to projectile
 		Rigidbody rb = pro.GetComponent<Rigidbody> ();
 		rb.useGravity = false;
-		Vector3 force = new Vector3 (50 * GameConfig.BILLY_MAX_SPEED, 0, 0);
-		if(m_velocityX != 0)
-			force *= m_velocityX / Mathf.Abs (m_velocityX);
+		Vector3 force = new Vector3 (Mathf.Sign(m_velocityX) * 50 * GameConfig.BILLY_MAX_SPEED * m_worldScale.x, 0, 0);
 		rb.AddForce (force);
 
 		// decrease the raspberry power up

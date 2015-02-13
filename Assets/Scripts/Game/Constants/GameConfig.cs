@@ -31,6 +31,7 @@ public class GameConfig
     // Antonio related values
     public static readonly float    ANTONIO_DISTANCE_MEAN_VALUE                 = 6f;
     public static readonly float    ANTONIO_DISTANCE_VARIANCE                   = 3f;
+    public static readonly string   ANTONIO_GAME_OBJECT_NAME                    = "Antonio";
 
     // Diamond related values
     public static readonly float    DIAMONG_ROTATION_SPEED                      = 55.0f;
@@ -45,4 +46,10 @@ public class GameConfig
     public static readonly float    ENEMY_PLAYER_ABOVE_FACTOR                   = 0.5f;
     public static readonly float    ENEMY_MAX_SPEED                             = 3f;
     public static readonly float    ENEMY_JUMP_HEIGHT                           = 0.5f;
+
+    // Boss values
+    public static readonly int      HIGGINS_LIFE_POINTS                         = 25;
+    public static readonly float    HIGGINS_THROW_DIFFENRENCE                   = 2f;
+    public static readonly float    HIGGINS_IMPACT_TIME                         = 5f;
+
 }

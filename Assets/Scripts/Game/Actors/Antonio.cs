@@ -1,7 +1,17 @@
-﻿using UnityEngine;
+﻿/*
+ * Project:	Billy's Payback
+ * File:	Antonio.cs
+ * Authors:	Raik Dankworth
+ */
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+
+/*
+ * Represent the Antonio
+ * Controll the Movement and so on
+ */
 public class Antonio : MonoBehaviour
 {
     #region 
