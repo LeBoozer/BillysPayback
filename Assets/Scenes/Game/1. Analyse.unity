@@ -2591,6 +2591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &56221957
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5120,6 +5121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &117396714
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9273,6 +9275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &215353719
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9492,6 +9495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &218572738
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13410,6 +13414,7 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -13843,6 +13848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &316096799
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14451,6 +14457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &332454963
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18531,6 +18538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &442866986
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -19289,6 +19297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &470406491
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -19978,6 +19987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &494982945
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -20570,6 +20580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &507621288
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -20631,6 +20642,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
+  m_transmitter: 
 --- !u!136 &508286020
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -22811,6 +22823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &552407628
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -25641,6 +25654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &613638884
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -26935,6 +26949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &640368607
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -28875,6 +28890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &673810222
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -31742,6 +31758,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
+  m_transmitter: 
 --- !u!136 &748529720
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -31815,6 +31832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &751651187
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -32820,6 +32838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &777768398
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -35849,6 +35868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &861469871
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -37374,6 +37394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &904121919
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -37563,6 +37584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &907619134
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -38654,6 +38676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &930542322
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -39244,6 +39267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &946078115
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -39447,6 +39471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &950270877
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -41470,6 +41495,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
+  m_transmitter: 
 --- !u!136 &1005114138
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -44660,6 +44686,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &1077063931
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -44883,6 +44910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &1079393004
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -47359,6 +47387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &1138926840
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -48859,6 +48888,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
+  m_transmitter: 
 --- !u!136 &1179640895
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -50560,7 +50590,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d95bdb1e4fac0f543a9f5a0304cefcad, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: .707106829
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d95bdb1e4fac0f543a9f5a0304cefcad, type: 2}
       propertyPath: m_LocalRotation.z
@@ -50568,7 +50598,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d95bdb1e4fac0f543a9f5a0304cefcad, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: .707106829
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d95bdb1e4fac0f543a9f5a0304cefcad, type: 2}
       propertyPath: m_RootOrder
@@ -53433,6 +53463,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
+  m_transmitter: 
 --- !u!136 &1273147850
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -57529,6 +57560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &1381035806
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -58211,6 +58243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &1391528764
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -59480,6 +59513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &1423963869
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -61456,6 +61490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &1470873001
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -62130,6 +62165,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
+  m_transmitter: 
 --- !u!136 &1486124342
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -63527,6 +63563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &1525953025
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -66117,6 +66154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &1591046413
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -66234,6 +66272,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
+  m_transmitter: 
 --- !u!136 &1592779860
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -67950,6 +67989,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1642144209}
+  - 143: {fileID: 1642144211}
+  - 114: {fileID: 1642144210}
   m_Layer: 0
   m_Name: Antonio
   m_TagString: Untagged
@@ -67963,13 +68004,42 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: d95bdb1e4fac0f543a9f5a0304cefcad, type: 2}
   m_PrefabInternal: {fileID: 1218952054}
   m_GameObject: {fileID: 1642144208}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
   m_LocalPosition: {x: .769999981, y: .129999995, z: .237000003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1920422498}
   m_Father: {fileID: 1980607810}
   m_RootOrder: 1
+--- !u!114 &1642144210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: d95bdb1e4fac0f543a9f5a0304cefcad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1218952054}
+  m_GameObject: {fileID: 1642144208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b3c2d39a07dec47a4479c29ff54c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_simpleMovement: 1
+  m_chase: 1
+--- !u!143 &1642144211
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14300000, guid: d95bdb1e4fac0f543a9f5a0304cefcad,
+    type: 2}
+  m_PrefabInternal: {fileID: 1218952054}
+  m_GameObject: {fileID: 1642144208}
+  serializedVersion: 2
+  m_Height: .340000004
+  m_Radius: .109999999
+  m_SlopeLimit: 45
+  m_StepOffset: .300000012
+  m_SkinWidth: .0799999982
+  m_MinMoveDistance: 0
+  m_Center: {x: 0, y: .170000002, z: 0}
 --- !u!1 &1642214851
 GameObject:
   m_ObjectHideFlags: 0
@@ -72443,6 +72513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &1737059561
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -73393,6 +73464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &1757477235
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -76369,6 +76441,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
+  m_transmitter: 
 --- !u!136 &1816130794
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -78488,6 +78561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &1852431770
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -79738,6 +79812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &1880643303
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -80250,6 +80325,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
+  m_transmitter: 
 --- !u!136 &1890331841
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -80413,6 +80489,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
+  m_transmitter: 
 --- !u!136 &1892117587
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -80636,6 +80713,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
+  m_transmitter: 
 --- !u!136 &1899570422
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -80889,6 +80967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &1913644157
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -85491,6 +85570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &2012505681
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -86152,6 +86232,7 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Priority: 3
   ignoreReversedGraphics: 1
   blockingObjects: 0
   m_BlockingMask:
@@ -86258,6 +86339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &2037198268
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -87520,6 +87602,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
+  m_transmitter: 
 --- !u!136 &2066525795
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -87667,8 +87750,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_brakeFactor: 1
   m_accelerationFactor: 1
-  m_minJumpHeight: 1
-  m_maxJumpHeight: 4
   IGNORE_CHECK_POINTS: 1
   m_kiwanoDistance: 2
   m_kiwanosRotationSpeed: 180
@@ -88173,6 +88254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &2078945383
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -89199,6 +89281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &2096285701
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -90107,6 +90190,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
+  m_transmitter: 
 --- !u!136 &2112769615
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -90999,6 +91083,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
 --- !u!136 &2129292969
 CapsuleCollider:
   m_ObjectHideFlags: 0
