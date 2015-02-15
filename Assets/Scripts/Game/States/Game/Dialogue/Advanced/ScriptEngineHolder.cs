@@ -82,6 +82,7 @@ public class ScriptEngineHolder : MonoBehaviour
         // Helper functions for global variable support
         m_scriptEngine.SetGlobalFunction("AddGlobalVar", new System.Action<string, object>(AddGlobalVar));
         m_scriptEngine.SetGlobalFunction("GetGlobalVar", new System.Func<string, object>(GetGlobalVar));
+        m_scriptEngine.SetGlobalFunction("IsGlobalVar", new System.Func<string, System.Boolean>(IsGlobalVar));
 
         // Add custom functions (player data)
         m_scriptEngine.SetGlobalFunction("Player_GetNumLifePoints", new System.Func<int>(Player_GetNumLifePoints));
@@ -123,6 +124,11 @@ public class ScriptEngineHolder : MonoBehaviour
     {
         // Get data
         return m_scriptEngine.GetGlobalValue(_name);
+    }
+    public System.Boolean IsGlobalVar(string _name)
+    {
+        // Get data
+        return m_scriptEngine.HasGlobalValue(_name);
     }
     #endregion Global variables
     #endregion Helper

@@ -1,9 +1,15 @@
 ﻿<bw overrideStartConversationID="getStartConvID">
 	<dynscript name="getStartConvID" result="result" type="System.Int32">
 		if(Player_GetCharacteristicCompassion() > 0)
+		{
 			result = 1;	// Compassion
+			DebugLog("Conversation::Bob::Compassion");
+		}
 		else
+		{
 			result = 0;	// Standard
+			DebugLog("Conversation::Bob::Standard");
+		}
 	</dynscript>
 
 	<!-- Standard -->
