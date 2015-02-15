@@ -1,9 +1,9 @@
 ﻿<bw overrideStartConversationID="getStartConvID">
 	<dynscript name="getStartConvID" result="result" type="System.Int32">
-		if(Player_GetCharacteristicCompassion() > 0)
+		if(Player_GetCharacteristicChallenge() > 0)
 		{
-			result = 1;	// Compassion
-			DebugLog("Conversation::Bob::Compassion");
+			result = 1;	// Challenge
+			DebugLog("Conversation::Bob::Challenge");
 		}
 		else
 		{
