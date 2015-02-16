@@ -44,6 +44,11 @@ public class Player : Hitable
     public  bool                    IGNORE_CHECK_POINTS     = false;
 	private Vector3 				m_lastCheckPoint;
 
+    // impediments values
+    private bool                    m_blockJumping;
+    private float                   m_velocityFactor;
+    private Vector2                 m_slipDirection;
+
     // external variables
 	private PlayerData				m_playerData;
     private GameObject              m_playerCamera;
@@ -102,6 +107,11 @@ public class Player : Hitable
         // calculate maximal falling velocity 
         // if higher -> player die!
         m_maxFallingVelocity = -Mathf.Sqrt(Mathf.Abs(Physics.gravity.y) * 50);
+
+        // impediments
+        m_blockJumping = false;
+        m_velocityFactor = 1f;
+        m_slipDirection = Vector3.zero;
     }
 
 	#endregion
@@ -206,28 +216,31 @@ public class Player : Hitable
 		
 		// movement right&left
 		#region vertical
-			if (keyD)
-			{
-				m_velocityX += GameConfig.BILLY_MAX_SPEED * m_accelerationFactor * Time.deltaTime;
-				if(m_velocityX > GameConfig.BILLY_MAX_SPEED)
-					m_velocityX = GameConfig.BILLY_MAX_SPEED;
-			} 
-			else if(keyA)
-			{
-				m_velocityX -= GameConfig.BILLY_MAX_SPEED * m_accelerationFactor * Time.deltaTime;
-				if(m_velocityX <  -GameConfig.BILLY_MAX_SPEED)
-					m_velocityX = -GameConfig.BILLY_MAX_SPEED;
-			}
+		if (keyD)
+		{
+			m_velocityX += GameConfig.BILLY_MAX_SPEED * m_accelerationFactor * Time.deltaTime;
+			if(m_velocityX > GameConfig.BILLY_MAX_SPEED)
+				m_velocityX = GameConfig.BILLY_MAX_SPEED;
+		} 
+		else if(keyA)
+		{
+			m_velocityX -= GameConfig.BILLY_MAX_SPEED * m_accelerationFactor * Time.deltaTime;
+			if(m_velocityX <  -GameConfig.BILLY_MAX_SPEED)
+				m_velocityX = -GameConfig.BILLY_MAX_SPEED;
+		}
+		else
+		{
+			if(Mathf.Abs(m_velocityX - (m_velocityX * m_brakeFactor * Time.deltaTime)) > GameConfig.BILLY_MAX_SPEED * m_accelerationFactor * Time.deltaTime)
+					m_velocityX -= GameConfig.BILLY_MAX_SPEED * m_accelerationFactor* Time.deltaTime * (m_velocityX / Mathf.Abs(m_velocityX));
 			else
-			{
-				if(Mathf.Abs(m_velocityX - (m_velocityX * m_brakeFactor * Time.deltaTime)) > GameConfig.BILLY_MAX_SPEED * m_accelerationFactor * Time.deltaTime)
-						m_velocityX -= GameConfig.BILLY_MAX_SPEED * m_accelerationFactor* Time.deltaTime * (m_velocityX / Mathf.Abs(m_velocityX));
-				else
-					m_velocityX *= m_brakeFactor * Time.deltaTime;
+				m_velocityX *= m_brakeFactor * Time.deltaTime;
 
-				if(m_velocityX < 0.1f && m_velocityX > -0.1f)
-					m_velocityX = 0;
-			}
+			if(m_velocityX < 0.1f && m_velocityX > -0.1f)
+				m_velocityX = 0;
+		}
+        m_velocityX += m_slipDirection.x /* Time.deltaTime*/;
+        if (Mathf.Abs(m_velocityX) > GameConfig.BILLY_MAX_SPEED * 2)
+            m_velocityX = Mathf.Sign(m_velocityX) * GameConfig.BILLY_MAX_SPEED * 2;
 		#endregion
 		// jump and fly
         // movement high&down
@@ -235,7 +248,7 @@ public class Player : Hitable
         // jump key still pressed first time?
         m_jumpKeyPressed &= jumpKey;
         // start to jump ?
-        if (!m_jump && (jumpKeyDown || jumpKey))
+        if (!m_jump && (jumpKeyDown || jumpKey) && !m_blockJumping)
         {
             m_jump = true;
             m_jumpKeyPressed = true;
@@ -262,10 +275,11 @@ public class Player : Hitable
         // falling
         else
             m_velocityY += 2 * Physics.gravity.y * Time.deltaTime;
+        m_velocityY += m_slipDirection.y /* Time.deltaTime*/;
         #endregion
 
         // set new position
-        m_controller.Move(new Vector3(m_velocityX, m_velocityY, -this.transform.position.z / Time.deltaTime) * Time.deltaTime);
+        m_controller.Move(new Vector3(m_velocityX, m_velocityY, -this.transform.position.z / Time.deltaTime) * Time.deltaTime * m_velocityFactor);
 		m_startJumpTime += Time.deltaTime;
 		
 		// x-coord haven't changed?
@@ -464,6 +478,31 @@ public class Player : Hitable
     {
         m_lastCheckPoint = _newCheckPoint;
     }
+
+    /**
+     * block the jumping if necessary
+     */
+    public void setImpedimentJumping(bool _notAllowToJump)
+    {
+        m_blockJumping = _notAllowToJump;
+    }
+
+    /**
+     * set a velocity factor for slower or faster movement
+     */
+    public void setImpedimentVelocity(float _factor)
+    {
+        m_velocityFactor = _factor;
+    }
+
+    /**
+     * set a direction for the slip
+     */
+    public void setImpedimentSlip(Vector2 _direction)
+    {
+        m_slipDirection = new Vector3(GameConfig.BILLY_MAX_SPEED * _direction.x, -Physics.gravity.y * _direction.y, 0);
+    }
+
 
 	#endregion
 }
