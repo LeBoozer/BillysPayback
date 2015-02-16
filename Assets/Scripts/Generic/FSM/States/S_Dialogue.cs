@@ -323,6 +323,9 @@ public class S_Dialogue : FSMState
             choice = m_text.getChoiceByID(id);
             if(choice.Text.Equals(_choiceText.text) == true)
             {
+                // Notify choice
+                choice.OnClick();
+
                 // Exit conversation?
                 if (choice.Type == Choice.ChoiceType.CHOICE_EXIT)
                     onConversationExit(choice.ExitValue);

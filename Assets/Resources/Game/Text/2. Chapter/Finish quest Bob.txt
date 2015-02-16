@@ -36,7 +36,6 @@
 		}
 	</dynscript>
 
-
 	<!-- Zusage der Kiwanos erfolgte vorher -->
 	<conversation id="0" start="1">
 		<!-- 1 -->
