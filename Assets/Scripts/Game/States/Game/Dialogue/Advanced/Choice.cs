@@ -6,9 +6,11 @@
  */
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 /*
  * Represents a single choice
+ * Supported run-times for script references: onClick
  */
 public class Choice 
 {
@@ -84,9 +86,12 @@ public class Choice
         private set { }
     }
     
+    // List with script references according to their run-time
+    private List<DynamicScriptRef> m_scriptReferences = null;
+    private List<DynamicScript> m_scriptListOnClick = new List<DynamicScript>();
 
     // Constructor
-    public Choice(int _id, string _text, string _funcValueNextTextID, string _exitValue, string _funcValueEnabled)
+    public Choice(int _id, string _text, string _funcValueNextTextID, string _exitValue, string _funcValueEnabled, List<DynamicScriptRef> _scriptRefs)
     {
         // Copy
         m_choiceID = _id;
@@ -94,6 +99,7 @@ public class Choice
         m_exitValue = _exitValue;
         m_funcValueEnabled = _funcValueEnabled;
         m_funcValueNextTextID = _funcValueNextTextID;
+        m_scriptReferences = _scriptRefs;
 
         // Set type
         if (m_exitValue == null || m_exitValue.Length == 0)
@@ -150,6 +156,47 @@ public class Choice
             }
         }
 
+        // Resolve script references
+        if (m_scriptReferences != null && m_scriptReferences.Count > 0)
+        {
+            // Loop through references
+            foreach(DynamicScriptRef r in m_scriptReferences)
+            {
+                // Get script
+                if(_dialog.DynamicScripts.ContainsKey(r.ScriptName) == false)
+                {
+                    Debug.LogError("Referenced script(" + r.ScriptName + ") is not available!");
+                    continue;
+                }
+                script = _dialog.DynamicScripts[r.ScriptName];
+
+                // Choose run-time
+                if (r.Runtime.Equals("onClick") == true)
+                    m_scriptListOnClick.Add(script);
+                else
+                {
+                    Debug.LogError("Unsupported run-time(" + r.Runtime + ") for the script reference in a choice!");
+                    continue;
+                }
+            }
+        }
+
         return true;
+    }
+
+    // Will be called if the choice has been clicked or chosen
+    public void OnClick()
+    {
+        // Local variables
+        object result = null;
+
+        // Execute all attached scripts
+        foreach (DynamicScript s in m_scriptListOnClick)
+        {
+            if(Game.Instance.ScriptEngine.executeScript(s, ref result) == false)
+            {
+                Debug.LogError("Script(" + s.ScriptName + ") attached to choice failed while executing!");
+            }
+        }
     }
 }

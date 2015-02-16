@@ -14,11 +14,12 @@ using System.Collections.Generic;
  */
 public class OnAreaKeyEvent : MonoBehaviour
 {
-    // Delegate function for the notification event
-    public delegate void Delegate_OnKeyEventTriggered();
+    // Delegate function for the notification events
+    public delegate void Delegate_OnKeyEvent();
 
-    // The event for the notification
-    public event Delegate_OnKeyEventTriggered OnKeyEventTriggered = delegate { };
+    // The events for the notifications
+    public event Delegate_OnKeyEvent OnKeyEventPressed = delegate { };
+    public event Delegate_OnKeyEvent OnKeyEventReleased = delegate { };
 
     // True to auto-detect the player (billy) as target object
     public bool                     m_autoDetectPlayer = true;
@@ -40,6 +41,9 @@ public class OnAreaKeyEvent : MonoBehaviour
 
     // Greater than 0 if the key event can be triggered
     private int                     m_canBeTriggered = 0;
+
+    // True if the key was pressed in the previous frame
+    private bool                    m_oldWasPressed = false;
 
     // The text for displaying the help text
     private Text                    m_simpleTextDisplay = null;
@@ -156,15 +160,23 @@ public class OnAreaKeyEvent : MonoBehaviour
             return;
 
         // Key event fired?
-        if(wasPressed == true)
+        if (wasPressed == true && m_oldWasPressed == false)
         {
             // Notify event
-            OnKeyEventTriggered();
+            OnKeyEventPressed();
 
             // Re-use?
             if (m_reuseArea == false)
                 m_canBeTriggered = 0;
         }
+        else if(wasPressed == false && m_oldWasPressed == true)
+        {
+            // Notify eventy
+            OnKeyEventReleased();
+        }
+
+        // Copy key state
+        m_oldWasPressed = wasPressed;
     }
 
     // Returns whether the requested game object is enlisted

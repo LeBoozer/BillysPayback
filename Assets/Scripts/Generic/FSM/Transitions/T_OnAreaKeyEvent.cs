@@ -26,7 +26,7 @@ public class T_OnAreaKeyEvent : FSMTransition
         }
 
         // Add event
-        m_areaKeyEvent.OnKeyEventTriggered += () =>
+        m_areaKeyEvent.OnKeyEventPressed += () =>
         {
             // Set target game-state
             setTargetFSMState();

@@ -21,6 +21,9 @@ public class Portal : MonoBehaviour
     // The second entry
     private OnAreaKeyEvent  m_entry1;
 
+    // True if the portal can be triggered/used by the player
+    private bool            m_canBeTriggered = true;
+
     // Will be called as soon as one key-event is being triggered
     private void onEnter(OnAreaKeyEvent _src, OnAreaKeyEvent _dst)
     {
@@ -59,15 +62,33 @@ public class Portal : MonoBehaviour
         m_entry1 = entries[1];
 
         // Add event: first entry
-        m_entry0.OnKeyEventTriggered += () =>
+        m_entry0.OnKeyEventPressed += () =>
         {
+            // Clear flag and trigger
+            if (m_canBeTriggered == false)
+                return;
+            m_canBeTriggered = false;
             onEnter(m_entry0, m_entry1);
+        };
+        m_entry0.OnKeyEventReleased += () =>
+        {
+            // Set flag
+            m_canBeTriggered = true;
         };
 
         // Add event: second entry
-        m_entry1.OnKeyEventTriggered += () =>
+        m_entry1.OnKeyEventPressed += () =>
         {
+            // Clear flag and trigger
+            if (m_canBeTriggered == false)
+                return;
+            m_canBeTriggered = false;
             onEnter(m_entry1, m_entry0);
+        };
+        m_entry1.OnKeyEventReleased += () =>
+        {
+            // Set flag
+            m_canBeTriggered = true;
         };
 	}
 }

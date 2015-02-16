@@ -28,6 +28,10 @@ public abstract class AdvancedDialogueParser
             // Comment?
             if (_node.Name.Equals("#comment") == true)
                 return true;
+
+            // Plain text?
+            if (_node.Name.Equals("#text") == true)
+                return true;
         }
 
         return false;
@@ -169,6 +173,39 @@ public abstract class AdvancedDialogueParser
         dynscript = new DynamicScript(scriptName, runType, resultName, resultType, code);
 
         return dynscript;
+    }
+
+    // Parses a dynamic script reference
+    private static DynamicScriptRef parseDynamicScriptReference(XmlNode _node)
+    {
+        // Local variables
+        string scriptName = "";
+        string runtime = "";
+        DynamicScriptRef scriptRef = null;
+        XmlNode xmlNodeAtt = null;
+
+        // Get attribute: script name
+        xmlNodeAtt = _node.Attributes.GetNamedItem("ref");
+        if (xmlNodeAtt == null)
+        {
+            Debug.LogError("Dynamic script references need a script name!");
+            return null;
+        }
+        scriptName = xmlNodeAtt.Value;
+
+        // Get attribute: run-time
+        xmlNodeAtt = _node.Attributes.GetNamedItem("runtime");
+        if (xmlNodeAtt == null)
+        {
+            Debug.LogError("Dynamic script references need a run-time parameter!");
+            return null;
+        }
+        runtime = xmlNodeAtt.Value;
+
+        // Create reference
+        scriptRef = new DynamicScriptRef(scriptName, runtime);
+
+        return scriptRef;
     }
 
     // Parses a conversation
@@ -370,7 +407,10 @@ public abstract class AdvancedDialogueParser
         string nextTextID = "";
         string exitValue = "";
         string enabledValue = "";
+        DynamicScriptRef scriptRef = null;
+        List<DynamicScriptRef> scriptRefs = new List<DynamicScriptRef>();
         Choice choice = null;
+        XmlNode xmlNode = null;
         XmlNode xmlNodeAtt = null;
 
         // Get attribute: id
@@ -397,8 +437,49 @@ public abstract class AdvancedDialogueParser
         if (xmlNodeAtt != null)
             enabledValue = xmlNodeAtt.Value;
 
+        // Find first text/choice node
+        xmlNode = _node.FirstChild;
+        if (xmlNode != null)
+        {
+            // Parse all data, script references
+            do
+            {
+                // Skipable?
+                if (isNodeSkipable(xmlNode) == false)
+                {
+                    // Data?
+                    if (xmlNode.Name.Equals("data") == true)
+                    {
+                        // Get text
+                        text = xmlNode.InnerText;
+                    }
+
+                    // Script reference?
+                    else if (xmlNode.Name.Equals("refscript") == true)
+                    {
+                        // Parse
+                        scriptRef = parseDynamicScriptReference(xmlNode);
+                        if (scriptRef == null)
+                            return null;
+
+                        // Add to list
+                        scriptRefs.Add(scriptRef);
+                    }
+
+                    // Unknown (exclude known standard strings)
+                    else
+                        Debug.LogWarning("Unknown XML node with a text (" + xmlNode.Name + ")");
+                }
+
+                // Next sibling
+                xmlNode = xmlNode.NextSibling;
+            }
+            while (xmlNode != null);
+        }
+
         // Get text
-        text = _node.InnerText;
+        if(text == null || text.Length == 0)
+            text = _node.InnerText;
         if (text == null || text.Length == 0)
         {
             Debug.LogError("Choices need text!");
@@ -406,7 +487,7 @@ public abstract class AdvancedDialogueParser
         }
 
         // Create choice
-        choice = new Choice(choiceID, text, nextTextID, exitValue, enabledValue);
+        choice = new Choice(choiceID, text, nextTextID, exitValue, enabledValue, scriptRefs);
 
         return choice;
     }
