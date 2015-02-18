@@ -14,6 +14,12 @@ public class Egg : MonoBehaviour {
 	public  EggType 			m_eggType = EggType.NOTHING;
 	private GameObject			m_nextPowerUp;
 
+    // The audio clip
+    public AudioClip    m_audioClip = null;
+
+    // The volume scale
+    public float        m_volumeScale = 1.0f;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -65,6 +71,10 @@ public class Egg : MonoBehaviour {
 
             // Destroy
             GameObject.Destroy(gameObject);
+
+            // Play sound?
+            if (m_audioClip != null)
+                AudioSource.PlayClipAtPoint(m_audioClip, transform.position, m_volumeScale);
         }
     }
 }

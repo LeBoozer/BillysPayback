@@ -22,8 +22,6 @@ public class DialogTextScript : MonoBehaviour {
 	}
 
 	public void onAnswerClicked(BaseEventData data) {
-		Debug.Log ("Clicked text: " + this.gameObject.GetComponent<Text>().text);
-
 		//calls the answerClicked Event if a corresponding function was assigned
 		if (AnswerClicked != null) {
 			AnswerClicked(this.gameObject.GetComponent<Text>());

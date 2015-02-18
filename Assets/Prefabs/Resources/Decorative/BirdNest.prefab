@@ -26,6 +26,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400002}
+  - 114: {fileID: 11436114}
+  - 114: {fileID: 11436116}
+  - 65: {fileID: 6529224}
   m_Layer: 0
   m_Name: BirdNest
   m_TagString: Untagged
@@ -40,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: .286000013, y: .0489999987, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
@@ -85,6 +88,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Mesh: {fileID: 4300000, guid: ffb842385390c3544bac65c236f4cb26, type: 3}
+--- !u!65 &6529224
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .25, y: .300000012, z: .25}
+  m_Center: {x: .287999988, y: .189999998, z: -0}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 3
@@ -100,6 +115,37 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11436114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6165c93930883c44b5646cad2e3921d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_areaKeyEvent: {fileID: 11436116}
+  m_objectToSpawn: {fileID: 0}
+  m_worldOffset: {x: 0, y: .0500000007, z: 0}
+--- !u!114 &11436116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b1e236993fe6f4a9ac8ba26c7c79ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_autoDetectPlayer: 1
+  m_reuseArea: 0
+  m_buttonName: Interaction
+  m_helpText: Press "e" to invest...
+  m_targetObjects: []
+  m_isActivated: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

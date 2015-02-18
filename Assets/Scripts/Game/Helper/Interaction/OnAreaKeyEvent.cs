@@ -12,7 +12,7 @@ using System.Collections.Generic;
 /*
  * Triggers an event if one target-object in within the bounds of the trigger object and the specified button is pressed
  */
-public class OnAreaKeyEvent : MonoBehaviour
+public class OnAreaKeyEvent : MonoBehaviour, DeActivatable
 {
     // Delegate function for the notification events
     public delegate void Delegate_OnKeyEvent();
@@ -35,6 +35,9 @@ public class OnAreaKeyEvent : MonoBehaviour
 
     // List with all target objects
     public GameObject[]             m_targetObjects = null;
+
+    // True if the transition is activated
+    public bool                     m_isActivated = true;
 
     // List with the information about the target objects
     private List<GameObject>        m_holders = new List<GameObject>();
@@ -116,9 +119,21 @@ public class OnAreaKeyEvent : MonoBehaviour
         m_targetObjects = null;
     }
 
+    // Override: MonoBehaviour::OnDestroy
+    void OnDestroy()
+    {
+        // Hide help text
+        if (m_simpleTextDisplay != null)
+            m_simpleTextDisplay.text = "";
+    }
+
     // Override: MonoBehaviour::OnTriggerEnter
     void OnTriggerEnter(Collider _other)
     {
+        // Activated?
+        if (m_isActivated == false)
+            return;
+
         // Enlisted?
         if (isObjectEnlisted(_other.gameObject) == true)
         {
@@ -155,6 +170,10 @@ public class OnAreaKeyEvent : MonoBehaviour
         // Local variables
         bool wasPressed = Input.GetButton(m_buttonName);
 
+        // Activated?
+        if (m_isActivated == false)
+            return;
+
         // Trigger can be used?
         if (m_canBeTriggered <= 0)
             return;
@@ -177,6 +196,37 @@ public class OnAreaKeyEvent : MonoBehaviour
 
         // Copy key state
         m_oldWasPressed = wasPressed;
+    }
+
+    // Override: DeActivatable::isActivated()
+    public bool isActivated()
+    {
+        return m_isActivated;
+    }
+
+    // Override: DeActivatable::onActivate()
+    public void onActivate()
+    {
+        // Set flag
+        m_isActivated = true;
+
+        // Show help text
+        if (m_canBeTriggered > 0)
+        {
+            if (m_simpleTextDisplay != null)
+                m_simpleTextDisplay.text = m_helpText;
+        }
+    }
+
+    // Override: DeActivatable::onDeactivate()
+    public void onDeactivate()
+    {
+        // Clear flag
+        m_isActivated = false;
+
+        // Hide help text
+        if (m_simpleTextDisplay != null)
+            m_simpleTextDisplay.text = "";
     }
 
     // Returns whether the requested game object is enlisted

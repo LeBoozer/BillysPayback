@@ -30,14 +30,10 @@ public class BridgeScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		Debug.Log (other.gameObject.name + " entered the bridge!");
-
 		m_playerEntered = true;
 	}
 
 	void OnTriggerExit(Collider other) {
-		Debug.Log (other.gameObject.name + " exited the bridge!");
-
 		setTrigger (false);
 
 		m_playerEntered = false;

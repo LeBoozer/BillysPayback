@@ -17,11 +17,13 @@
 		<!-- 1 -->
 		<text id="1">
 			<part t="2.5" character="Billy">Was ist hier geschehen?</part>
-			<part t="2.5" character="Bob">Diese völlig unentspannten Vögel haben bei ihrem letzten Überfall</part>
+			<!-- <part t="2.5" character="Bob">Diese völlig unentspannten Vögel haben bei ihrem letzten Überfall</part>
 			<part t="2.5" character="Bob">unseren Brunnen beschädigt und dessen Kurbel gestohlen.</part>
 			<part t="2.5" character="Bob">Ohne die kommen wir nicht mehr an das Wasser ran,</part>
-			<part t="2.5" character="Bob">um unsere Plantagen zu bewässern.</part>
+			<part t="2.5" character="Bob">um unsere Plantagen zu bewässern.</part> -->
 			
+			<choice id="9090" exit="yes">_yes_</choice>
+
 			<choice id="0" nextText="111">Wozu braucht ihr diese Pflanzen denn?</choice>
 			<choice id="1" nextText="121">Können wir euch irgendwie helfen?</choice>   
 			<choice id="2" nextText="131">Wir könnten versuchen euch die Kurbel wiederzubringen, wenn ihr uns anschließen auf unserem Weg in Black Sparrows Nest helft. Seid ihr dabei?</choice>   

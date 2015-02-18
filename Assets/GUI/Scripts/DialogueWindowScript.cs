@@ -168,8 +168,6 @@ public class DialogueWindowScript : MonoBehaviour {
 	public bool removeAnswers() {
         if (answers == null || answers.Length <= 0)
         {
-			Debug.Log("No answers exist which could be removed!");
-
 			return false;
 		} 
         else 
@@ -284,8 +282,6 @@ public class DialogueWindowScript : MonoBehaviour {
 	//closes the current dialog --> returns if closing was successfull or not
 	public bool closeDialogWindow() {
 		if (!m_windowIsOpen) {
-			Debug.Log("No dialog window open!");
-			
 			return false;
 		} else {
 			//destroys the current dialog window

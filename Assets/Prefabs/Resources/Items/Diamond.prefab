@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .0500000007, z: 0}
+  m_LocalPosition: {x: -.319999993, y: 2.55999994, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 400000}
@@ -115,6 +115,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_type: -1
   m_isDiamond: 1
+  m_moveToPlayer: 0
+  m_audioClip: {fileID: 8300000, guid: 411a1f25450079444973e331618806bb, type: 3}
+  m_volumeScale: 1
 --- !u!136 &13643568
 CapsuleCollider:
   m_ObjectHideFlags: 1

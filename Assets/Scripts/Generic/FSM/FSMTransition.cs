@@ -11,8 +11,11 @@ using System.Collections.Generic;
 /*
  * Represents the basic transition for the FSM
  */
-public abstract class FSMTransition : MonoBehaviour
+public abstract class FSMTransition : MonoBehaviour, DeActivatable
 {	    
+    // True if the transition is activated
+    public bool             m_isActivated = true;
+
 	// The host FSM-state
 	protected FSMState 		m_hostState = null;
 	
@@ -31,6 +34,10 @@ public abstract class FSMTransition : MonoBehaviour
 	// Sets the target FSM-state 
 	protected virtual void setTargetFSMState()
 	{
+        // Deactivated?
+        if (m_isActivated == false)
+            return;
+
 		// Trigger actions
 		foreach(FSMAction a in m_actionsOnTransition)
 			a.onAction();
@@ -61,7 +68,7 @@ public abstract class FSMTransition : MonoBehaviour
 
         // Retrieve all actions
         action = gameObject.GetComponentsInChildren<FSMAction>();
-        m_actionsOnTransition.AddRange(action);		
+        m_actionsOnTransition.AddRange(action);
 	}
 	
 	// Override: MonoBehaviour::Start()
@@ -73,4 +80,24 @@ public abstract class FSMTransition : MonoBehaviour
 		// Retrieve host FSM-state
 		m_hostState = gameObject.transform.parent.gameObject.GetComponent<FSMState>();
 	}
+
+    // Override: DeActivatable::isActivated()
+    public bool isActivated()
+    {
+        return m_isActivated;
+    }
+
+    // Override: DeActivatable::Start()
+    public void onActivate()
+    {
+        // Set flag
+        m_isActivated = true;
+    }
+
+    // Override: DeActivatable::Start()
+    public void onDeactivate()
+    {
+        // Clear flag
+        m_isActivated = false;
+    }
 }
