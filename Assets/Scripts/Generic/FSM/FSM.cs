@@ -22,6 +22,13 @@ public class FSM : MonoBehaviour
 	// Changes the FSM-state
 	public void setFSMState(FSMState _nextState)
 	{
+        // Same state?
+        if(m_currentFSMState != null && _nextState != null)
+        {
+            if (m_currentFSMState.Equals(_nextState) == true)
+                return;
+        }
+
 		// Notify the current one
 		if(m_currentFSMState != null)
 		{

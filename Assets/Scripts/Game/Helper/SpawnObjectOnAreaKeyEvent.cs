@@ -95,8 +95,6 @@ public class SpawnObjectOnAreaKeyEvent : MonoBehaviour, DeActivatable
     // Override: DeActivatable::onActivate()
     public void onActivate()
     {
-        Debug.Log("hure");
-
         // Set flag
         m_isActivated = true;
     }

@@ -1,0 +1,10 @@
+﻿<bw>
+	<conversation id="0" start="0">
+		<!-- 1 -->
+		<text id="0" exit="_done_">
+			<part t="2.5" character="Antonio">Puh, das war echt knapp.</part>
+			<part t="2.5" character="Antonio">Los, lass uns das verdammte Ding schnell zu Bob bringen.</part>
+			<part t="2.5" character="Antonio">Wer weiß wie viele von den Biestern sich hier noch irgendwo verstecken.</part>  
+		</text>
+	</conversation>
+</bw>
