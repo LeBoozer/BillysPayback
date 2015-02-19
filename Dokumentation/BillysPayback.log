@@ -1,7 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.3)  4 DEC 2014 20:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.5)  20 FEB 2015 00:47
 entering extended mode
 **BillysPayback.tex
-(E:\Programming\Unity\BillysPayback\Dokumentation\BillysPayback.tex
+
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\BillysPayback.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,32 +15,27 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrbook.cls
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrbook.cls"
 Document Class: scrbook 2013/12/19 v3.12 KOMA-Script document class (book)
-
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrkbase.st
-y
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrkbase.sty"
 Package: scrkbase 2013/12/19 v3.12 KOMA-Script package (KOMA-Script-dependent b
 asics and keyval usage)
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrbase.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrbase.sty"
 Package: scrbase 2013/12/19 v3.12 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
+
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrlfile.st
-y
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrlfile.sty"
 Package: scrlfile 2013/12/19 v3.12 KOMA-Script package (loading files)
 
 Package scrlfile, 2013/12/19 v3.12 KOMA-Script package (loading files)
                   Copyright (C) Markus Kohm
 
-)))
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\tocbasic.st
-y
+))) ("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\tocbasic.sty"
 Package: tocbasic 2013/12/19 v3.12 KOMA-Script package (handling toc-files)
 )
 Package tocbasic Info: omitting babel extension for `toc'
@@ -74,13 +71,11 @@ Class scrbook Info: You've used standard option `openright'.
 Class scrbook Info: File `scrsize12pt.clo' used to setup font sizes on input li
 ne 1655.
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrsize12pt
-.clo
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrsize12pt.clo"
 File: scrsize12pt.clo 2013/12/19 v3.12 KOMA-Script font size class option (12pt
 )
 )
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\typearea.st
-y
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\typearea.sty"
 Package: typearea 2013/12/19 v3.12 KOMA-Script package (type area)
 
 Package typearea, 2013/12/19 v3.12 KOMA-Script package (type area)
@@ -202,7 +197,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen111
 \Gin@req@width=\dimen112
 )
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
@@ -219,7 +214,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\colortbl\colortbl.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
@@ -233,14 +228,14 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \everycr=\toks19
 \minrowclearance=\skip50
 )
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.sty"
 Package: biblatex 2014/06/25 v2.9a programmable bibliographies (PK/JW/AB)
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex2.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex2.sty"
 Package: biblatex2 2014/06/25 v2.9a programmable bibliographies (biber) (PK/JW/
 AB)
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\etoolbox\etoolbox.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
 Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\misc\etex.sty"
@@ -267,17 +262,17 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\logreq\logreq.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.sty"
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count95
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\logreq\logreq.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\logreq\logreq.def"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -335,7 +330,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\blx-dm.def)
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-dm.def")
 Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
@@ -415,12 +410,13 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\blx-compat.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\blx-compat.def"
 File: blx-compat.def 2014/06/25 v2.9a biblatex compatibility (PK/JW/AB)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.def
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.def"
 File: biblatex.def 
 \c@textcitecount=\count203
 \c@textcitetotal=\count204
@@ -433,14 +429,12 @@ File: biblatex.def
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\bbx\numeric.bb
-x
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\bbx\numeric.bbx"
 File: numeric.bbx 2014/06/25 v2.9a biblatex bibliography style (PK/JW/AB)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\bbx\standard.b
-bx
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\bbx\standard.bbx"
 File: standard.bbx 2014/06/25 v2.9a biblatex bibliography style (PK/JW/AB)
 \c@bbx:relatedcount=\count210
 \c@bbx:relatedtotal=\count211
@@ -448,8 +442,7 @@ File: standard.bbx 2014/06/25 v2.9a biblatex bibliography style (PK/JW/AB)
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\cbx\numeric.cb
-x
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\cbx\numeric.cbx"
 File: numeric.cbx 2014/06/25 v2.9a biblatex citation style (PK/JW/AB)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
@@ -466,12 +459,13 @@ Package biblatex Info: Redefining '\smartcites'.
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\biblatex.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\biblatex.cfg"
 File: biblatex.cfg 
-))) (C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\titleref\titleref.s
-ty
+)))
+("C:\Program Files\MiKTeX 2.9\tex\latex\titleref\titleref.sty"
 Package: titleref 2001/04/05 v3.1  Cross-references with titles.
-) ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
 *************************************
@@ -497,7 +491,7 @@ Language: ngermanb 2008/07/06 v2.6n new German support from the babel system
 \l@naustrian = a dialect from \language\l@ngerman 
 Package babel Info: Making " an active character on input line 92.
 ))
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\csquotes\csquotes.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\csquotes\csquotes.sty"
 Package: csquotes 2011/10/22 v5.1d context-sensitive quotations
 \csq@reset=\count213
 \csq@gtype=\count214
@@ -507,15 +501,16 @@ Package: csquotes 2011/10/22 v5.1d context-sensitive quotations
 \csq@tshold=\count218
 \csq@ltx@everypar=\toks20
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\csquotes\csquotes.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\csquotes\csquotes.def"
 File: csquotes.def 2011/10/22 v5.1d csquotes generic definitions
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\csquotes\csquotes.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\csquotes\csquotes.cfg"
 File: csquotes.cfg 
-)) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
 Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -596,14 +591,14 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
 )
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\acronym\acronym.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\acronym\acronym.sty"
 Package: acronym 2012/10/29 v1.38 Support for acronyms (Tobias Oetiker)
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\bigfoot\suffix.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\bigfoot\suffix.sty"
 Package: suffix 2006/07/15 1.5 Variant command support
 )
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\xstring\xstring.sty
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\generic\xstring\xstring.tex
+("C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
 \@xs@message=\write4
 \integerpart=\count219
 \decimalpart=\count220
@@ -611,12 +606,14 @@ Package: suffix 2006/07/15 1.5 Variant command support
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
 \AC@clearlist=\toks21
-) (C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\appendix\appendix.sty
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\appendix\appendix.sty"
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \c@@pps=\count221
 \c@@ppsavesec=\count222
 \c@@ppsaveapp=\count223
-) (C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\footmisc\footmisc.sty
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\footmisc\footmisc.sty"
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks22
 \footnotemargin=\dimen116
@@ -629,14 +626,15 @@ Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
 Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
-) (C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\comment\comment.sty
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\comment\comment.sty"
 \CommentStream=\write5
 
 Excluding comment 'comment')
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\chngcntr\chngcntr.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\chngcntr\chngcntr.sty"
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\booktabs\booktabs.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen117
 \lightrulewidth=\dimen118
@@ -666,7 +664,7 @@ Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@cols=\count229
 \TX@ftn=\toks23
 )
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\tabulary\tabulary.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\tabulary\tabulary.sty"
 Package: tabulary 2014/06/11 v0.10 tabulary package (DPC)
 \TY@count=\count230
 \TY@linewidth=\dimen135
@@ -695,7 +693,7 @@ Normal \count register pool exhausted, switching to extended pool.
 )
 Class scrbook Info: longtable captions redefined on input line 61.
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\tabu\tabu.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\tabu\tabu.sty"
 Package: tabu 2011/02/26 v2.8 - flexible LaTeX tabulars (FC)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
@@ -789,9 +787,10 @@ LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count297
 \calc@Cskip=\skip74
 )
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\scrhack.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrhack.sty"
 Package: scrhack 2013/12/19 v3.12 KOMA-Script package 
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count298
 \float@exts=\toks27
@@ -801,13 +800,13 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 )
 Package scrhack Info: loading float hack on input line 70.
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\koma-script\float.hak
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\float.hak"
 File: float.hak 2013/12/19 v3.12 KOMA-Script package (hacking package float)
 Package scrhack Info: redefining \newfloat on input line 161.
 Package scrhack Info: redefining \listof on input line 161.
 Package scrhack Info: undefining \float@addtolists on input line 161.
 )
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\enumitem\enumitem.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip75
 \enit@outerparindent=\dimen161
@@ -818,7 +817,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\hhline.sty"
 Package: hhline 1994/05/23 v2.03 Table rule package (DPC)
 )
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\rotating\rotating.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 \c@r@tfl@t=\count300
 \rotFPtop=\skip76
@@ -826,13 +825,13 @@ Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 \rot@float@box=\box65
 \rot@mess@toks=\toks30
 )
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\bbding\bbding.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\bbding\bbding.sty"
 Package: bbding 1999/04/15 v1.01 Dingbats symbols
 )
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\dingbat\dingbat.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\dingbat\dingbat.sty"
 Package: dingbat 2001/04/27 v1.00 Hands and other dingbats
 )
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\wasysym\wasysym.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\wasysym\wasysym.sty"
 Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
 \symwasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
@@ -952,43 +951,45 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\lbx\ngerman.lb
-x
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\ngerman.lbx"
 File: ngerman.lbx 2014/06/25 v2.9a biblatex localization (PK/JW/AB)
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\lbx\german.lbx
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\german.lbx"
 File: german.lbx 2014/06/25 v2.9a biblatex localization (PK/JW/AB)
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
- (E:\Programming\Unity\BillysPayback\Dokumentation\BillysPayback.aux
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Titel/Deckblatt.aux)
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Kurzfassung/Abstrakt.a
-ux
+
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\BillysPayback.aux"
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Titel/Deckblatt.aux")
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Kurzfassung/Abstrakt.aux"
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\lbx\english.lb
-x
+("C:\Program Files\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx"
 File: english.lbx 2014/06/25 v2.9a biblatex localization (PK/JW/AB)
 ))
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Einleitung/Einleitung.
-aux)
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Grundlagen/Grundlagen.
-aux)
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/VerwandteArbeiten/Verw
-andteArbeiten.aux)
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Konzept/Konzept.aux)
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Implementierung/Implem
-entierung.aux)
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Evaluierung/Evaluierun
-g.aux)
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Zusammenfassung/Zusamm
-enfassung.aux))
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Einleitung/Einleitung.aux")
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Grundlagen/Grundlagen.aux")
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/VerwandteArbeiten/VerwandteArbeiten.aux")
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Konzept/Konzept.aux")
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Implementierung/Implementierung.aux")
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Evaluierung/Evaluierung.aux")
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Zusammenfassung/Zusammenfassung.aux"))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
 LaTeX Font Info:    ... okay on input line 135.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
@@ -1004,7 +1005,8 @@ LaTeX Font Info:    ... okay on input line 135.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 135.
 
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 135.
@@ -1045,7 +1047,7 @@ LaTeX Font Info:    ... okay on input line 135.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(C:\Users\LeBoozer\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count311
 \scratchdimen=\dimen166
@@ -1064,7 +1066,9 @@ Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'latin1'.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'BillysPayback.bbl' found.
- (E:\Programming\Unity\BillysPayback\Dokumentation\BillysPayback.bbl)
+
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\BillysPayback.bbl")
 Package biblatex Info: Reference section=0 on input line 135.
 Package biblatex Info: Reference segment=0 on input line 135.
 \AtBeginShipoutBox=\box67
@@ -1082,25 +1086,27 @@ LaTeX Info: Redefining \ref on input line 135.
 LaTeX Info: Redefining \pageref on input line 135.
 LaTeX Info: Redefining \nameref on input line 135.
 
-(E:\Programming\Unity\BillysPayback\Dokumentation\BillysPayback.out)
-(E:\Programming\Unity\BillysPayback\Dokumentation\BillysPayback.out)
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\BillysPayback.out")
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\BillysPayback.out")
 \@outlinefile=\write6
 
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Titel/Deckblatt.tex)
-[1
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Titel/Deckblatt.tex") [1
 
 
 
-{C:/Users/LeBoozer/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-[2
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
 
 
 
 ]
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Kurzfassung/Abstrakt.t
-ex
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Kurzfassung/Abstrakt.tex"
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 6.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )) [3
 
@@ -1109,31 +1115,44 @@ File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 
 
 ]
-(E:\Programming\Unity\BillysPayback\Dokumentation\BillysPayback.toc)
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\BillysPayback.toc"
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 25.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 25.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 25.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 25.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\wasysym\uwasy.fd"
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+))
 \tf@toc=\write7
  [1
 
 
+] [2
+
+
 ]
-[2
-
-
-] (E:\Programming\Unity\BillysPayback\Dokumentation\BillysPayback.lof)
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\BillysPayback.lof")
 \tf@lof=\write8
+ [3] [4
 
-[3] [4
 
-
-] (E:\Programming\Unity\BillysPayback\Dokumentation\BillysPayback.lot)
+]
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\BillysPayback.lot")
 \tf@lot=\write9
-
-[5] [6
+ [5] [6
 
 
 
 ]
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Einleitung/Einleitung.
-tex
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Einleitung/Einleitung.tex"
 Kapitel 1.
 )pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
  been already used, duplicate ignored
@@ -1146,9 +1165,10 @@ l.157 	\include{Inhalt/Einleitung/Einleitung}
 
 
 ]
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Grundlagen/Grundlagen.
-texpdfTeX warning (ext4): destination with the same identifier (name{page.2}) h
-as been already used, duplicate ignored
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Grundlagen/Grundlagen.tex"pdfTeX warning (ext4): destination 
+with the same identifier (name{page.2}) has been already used, duplicate ignore
+d
 <to be read again> 
                    \relax 
 l.5 \chapter
@@ -1166,9 +1186,10 @@ Kapitel 2.
 l.158 	\include{Inhalt/Grundlagen/Grundlagen}
                                              						% Grundlagen einbinden
 [3]
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/VerwandteArbeiten/Verw
-andteArbeiten.texpdfTeX warning (ext4): destination with the same identifier (n
-ame{page.4}) has been already used, duplicate ignored
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/VerwandteArbeiten/VerwandteArbeiten.tex"pdfTeX warning (ext4)
+: destination with the same identifier (name{page.4}) has been already used, du
+plicate ignored
 <to be read again> 
                    \relax 
 l.5 \chapter
@@ -1179,88 +1200,151 @@ l.5 \chapter
 
 ]
 Kapitel 3.
-) [5]
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Konzept/Konzept.tex
-[6
+
+LaTeX Warning: Citation 'SiewNareyekPlayerManipulation' on page 5 undefined on 
+input line 20.
+
+
+LaTeX Warning: Citation 'PsychoTricksPCGames' on page 5 undefined on input line
+ 41.
+
+
+Overfull \hbox (34.29875pt too wide) in paragraph at lines 41--42
+\T1/cmr/m/n/12 Bei \T1/cmr/m/it/12 Die Psycho-Tricks der Spiele-Designer: Das S
+piel in dei-nem Kopf\T1/cmr/m/n/12 [[]
+ []
+
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
+
+LaTeX Warning: Citation 'SpielStanleyParable' on page 7 undefined on input line
+ 75.
+
+[7]
+
+LaTeX Warning: Citation 'VideoEthanCarter' on page 8 undefined on input line 85
+.
+
+
+LaTeX Warning: Citation 'TestEthanCarterGameStar' on page 8 undefined on input 
+line 85.
+
+
+LaTeX Warning: Citation 'KZieroldComputerspielanalyse' on page 8 undefined on i
+nput line 93.
+
+
+LaTeX Warning: Citation 'DieVersuchungAdventureTreffKritik' on page 8 undefined
+ on input line 102.
+
+
+LaTeX Warning: Citation 'DieVersuchungAftermathmedia' on page 8 undefined on in
+put line 102.
+
+[8]) [9]
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Konzept/Konzept.tex" [10
 
 
 
 
 ]
 Kapitel 4.
-) [7]
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Implementierung/Implem
-entierung.tex [8
+) [11]
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Implementierung/Implementierung.tex" [12
 
 
 
 
 ]
 Kapitel 5.
-) [9]
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Evaluierung/Evaluierun
-g.tex [10
+) [13]
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Evaluierung/Evaluierung.tex" [14
 
 
 
 
 ]
 Kapitel 6.
-) [11]
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Zusammenfassung/Zusamm
-enfassung.tex [12
+) [15]
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Zusammenfassung/Zusammenfassung.tex" [16
 
 
 
 
 ]
 Kapitel 7.
-) [13]
+) [17]
 
 LaTeX Warning: Empty bibliography on input line 166.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
-(E:\Programming\Unity\BillysPayback\Dokumentation\BillysPayback.aux
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Titel/Deckblatt.aux)
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Kurzfassung/Abstrakt.a
-ux)
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Einleitung/Einleitung.
-aux)
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Grundlagen/Grundlagen.
-aux)
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/VerwandteArbeiten/Verw
-andteArbeiten.aux)
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Konzept/Konzept.aux)
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Implementierung/Implem
-entierung.aux)
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Evaluierung/Evaluierun
-g.aux)
-(E:\Programming\Unity\BillysPayback\Dokumentation\Inhalt/Zusammenfassung/Zusamm
-enfassung.aux))
+
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\BillysPayback.aux"
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Titel/Deckblatt.aux")
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Kurzfassung/Abstrakt.aux")
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Einleitung/Einleitung.aux")
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Grundlagen/Grundlagen.aux")
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/VerwandteArbeiten/VerwandteArbeiten.aux")
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Konzept/Konzept.aux")
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Implementierung/Implementierung.aux")
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Evaluierung/Evaluierung.aux")
+("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
+umentation\Inhalt/Zusammenfassung/Zusammenfassung.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
 Package rerunfilecheck Info: File `BillysPayback.out' has not changed.
-(rerunfilecheck)             Checksum: 3E71DF9E1A02A49C00EF62B0B191E109;482.
+(rerunfilecheck)             Checksum: C9DB9B0464B262694D43A543AF6C6B32;1418.
+
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                BillysPayback
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'BillysPayback.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 16861 strings out of 493921
- 274937 string characters out of 3147274
- 796016 words of memory out of 3000000
- 19773 multiletter control sequences out of 15000+200000
- 9323 words of font info for 22 fonts, out of 3000000 for 9000
+ 17096 strings out of 493921
+ 280229 string characters out of 3147271
+ 801995 words of memory out of 3000000
+ 19967 multiletter control sequences out of 15000+200000
+ 15792 words of font info for 38 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 56i,7n,55p,902b,3162s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\LeBoozer\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
-00\ecsx1200.pk> <C:\Users\LeBoozer\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
-appen\ec\dpi600\ecsx2488.pk> <C:\Users\LeBoozer\AppData\Local\MiKTeX\2.9\fonts\
-pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\LeBoozer\AppData\Local\MiKT
-eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728.pk> <C:\Users\LeBoozer\AppDa
-ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk>
-Output written on BillysPayback.pdf (23 pages, 179898 bytes).
+ 56i,8n,55p,1563b,3162s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
+600\ecsl1200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
+knappen\ec\dpi600\tcrm1200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Dominique\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Dominique\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk> <C:\Us
+ers\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1
+200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
+c\dpi600\ecsx2488.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.
+9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728.pk> <C:\Users\Dominique\AppData\L
+ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk>
+Output written on BillysPayback.pdf (27 pages, 381538 bytes).
 PDF statistics:
- 321 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 643 PDF objects out of 1000 (max. 8388607)
+ 55 named destinations out of 1000 (max. 500000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 
