@@ -32,7 +32,7 @@ public abstract class FSMTransition : MonoBehaviour, DeActivatable
 	public List<FSMAction>	m_actionsOnTransition = new List<FSMAction>();
 	
 	// Sets the target FSM-state 
-	protected virtual void setTargetFSMState()
+	public virtual void setTargetFSMState()
 	{
         // Deactivated?
         if (m_isActivated == false)

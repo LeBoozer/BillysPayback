@@ -21,7 +21,7 @@ public class T_OnAreaKeyEvent : FSMTransition
         // Check area object
         if (m_areaKeyEvent == null)
         {
-            Debug.LogWarning("Transition's area-key-event must not be null!");
+            Debug.LogWarning("Transition's area-key-event must not be null (" + gameObject.name + ")!");
             return;
         }
 

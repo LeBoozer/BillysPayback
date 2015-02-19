@@ -25,7 +25,7 @@ public class T_OnDialogueExit : FSMTransition
     public bool m_closeDialogWindowOnLeave = false;
 
     // Override: FSMTransition::setTargetFSMState
-    protected override void setTargetFSMState()
+    public override void setTargetFSMState()
     {
         // Local variables
         DialogueWindowScript window = null;
