@@ -79,7 +79,7 @@ public class Antonio : MonoBehaviour
     private Camera                      m_mainCamera;
 
     // constants
-    public readonly string              GAME_OBJECT_WAY_NAME        = "Way";
+    public static readonly string       GAME_OBJECT_WAY_NAME        = "Way";
     private const double                IGNORE_HIT_TIME_DIFFERENCE  = 2;
     private const int                   NUMBER_OF_NEEDED_HITS       = 2;
     private const double                MIN_GIFT_TIME_DIFFERENCE    = 2;
@@ -699,7 +699,7 @@ public class Antonio : MonoBehaviour
         if (m_lastSpeakingTimeStamp + MAXIMAL_SPEAKING_TIME > Time.time)
         {
             if(m_mainCamera != null)
-                m_currentSpokenText.position = m_mainCamera.WorldToScreenPoint(this.transform.position);
+                m_currentSpokenText.position = m_mainCamera.WorldToScreenPoint(this.transform.position + new Vector3(0, m_realAntonioHeight, 0));
             return;
         }
 
