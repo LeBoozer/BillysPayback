@@ -448,10 +448,11 @@ public class Player : Hitable
     public override void onHit(Hitable _source)
     {
         // distribute a hit
-        if (m_playerData.getPowerUpStockSize(PlayerData.PowerUpType.PUT_KIWANO) > 0)
+        if (m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_KIWANO) && m_playerData.getPowerUpStockSize(PlayerData.PowerUpType.PUT_KIWANO) > 0)
         {
             _source.onHit(this);
             m_playerData.decreaseStockSizeByValue(PlayerData.PowerUpType.PUT_KIWANO, 1);
+            m_lastHit = Time.time;
             return;
         }
 

@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 451764}
   - 33: {fileID: 3351764}
   - 23: {fileID: 2351764}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 451766}
   - 33: {fileID: 3351766}
   - 23: {fileID: 2351766}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 451768}
   - 33: {fileID: 3351768}
   - 23: {fileID: 2351768}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - 4: {fileID: 451770}
   - 33: {fileID: 3351770}
   - 23: {fileID: 2351770}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - 4: {fileID: 451772}
   - 33: {fileID: 3351772}
   - 23: {fileID: 2351772}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cone001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - 4: {fileID: 451774}
   - 33: {fileID: 3351774}
   - 23: {fileID: 2351774}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - 4: {fileID: 451776}
   - 33: {fileID: 3351776}
   - 23: {fileID: 2351776}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - 4: {fileID: 451778}
   - 33: {fileID: 3351778}
   - 23: {fileID: 2351778}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - 4: {fileID: 451780}
   - 33: {fileID: 3351780}
   - 23: {fileID: 2351780}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - 4: {fileID: 451782}
   - 33: {fileID: 3351782}
   - 23: {fileID: 2351782}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451784}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Vogel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451786}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lanze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 451788}
   - 95: {fileID: 9551764}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WacheDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,9 +224,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 451790}
-  m_Layer: 0
+  - 143: {fileID: 14300000}
+  - 136: {fileID: 13600000}
+  - 114: {fileID: 11400000}
+  m_Layer: 9
   m_Name: Guard
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -406,7 +409,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 151790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 17, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 451788}
@@ -697,6 +700,49 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9cca261d43979b4e80eee94f6893bb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_lifepoints: 2
+  m_canFly: 0
+  m_canFall: 0
+  m_allowToMove: 0
+  m_transmitter: 
+--- !u!136 &13600000
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151790}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .0700000003
+  m_Height: .219999999
+  m_Direction: 1
+  m_Center: {x: -.00999999978, y: .109999999, z: 0}
+--- !u!143 &14300000
+CharacterController:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151790}
+  serializedVersion: 2
+  m_Height: .219999999
+  m_Radius: .0700000003
+  m_SlopeLimit: 45
+  m_StepOffset: .300000012
+  m_SkinWidth: .0799999982
+  m_MinMoveDistance: 0
+  m_Center: {x: -.00999999978, y: .109999999, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

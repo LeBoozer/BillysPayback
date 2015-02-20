@@ -6,6 +6,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 
 /*
@@ -14,7 +15,7 @@ using System.Collections.Generic;
  */
 public class Antonio : MonoBehaviour
 {
-    #region 
+    #region Structs
 
     enum MovementDirection
     {
@@ -32,6 +33,10 @@ public class Antonio : MonoBehaviour
         public bool    m_orange;
     }
 
+    #endregion
+
+    #region Variables
+
     // variables
     public bool                         m_simpleMovement            = true;
     public bool                         m_chase                     = true;
@@ -39,7 +44,10 @@ public class Antonio : MonoBehaviour
     private float                       m_realAntonioHeight;
     private bool                        m_waiting;
     private int                         m_ignoreLayerMask;
-    GameObject                          m_sphere                    = null;
+    private GameObject                  m_sphere                    = null;
+    private float                       m_lastSpeakingTimeStamp;
+    private Queue<string>               m_speakingQueue;
+    private Transform                   m_currentSpokenText;
 
     // movement
     private float                       m_velocityX;
@@ -67,14 +75,23 @@ public class Antonio : MonoBehaviour
 	private PlayerData		            m_playerData;
     private CharacterController         m_controller;
     private Vector3                     m_worldScale;
+    private DialogueWindowScript        m_textDisplayScript;
+    private Camera                      m_mainCamera;
 
     // constants
-    private const string                GAME_OBJECT_WAY_NAME        = "Way";
+    public readonly string              GAME_OBJECT_WAY_NAME        = "Way";
     private const double                IGNORE_HIT_TIME_DIFFERENCE  = 2;
     private const int                   NUMBER_OF_NEEDED_HITS       = 2;
     private const double                MIN_GIFT_TIME_DIFFERENCE    = 2;
     private const double                GIFT_TIME_DIFFERENCE        = 10;
     private const int                   MAXIMAL_POWER_UPS_NUMBER    = 3;
+    private const float                 MAXIMAL_SPEAKING_TIME       = 2;
+
+    private readonly string[]           ANTONIO_GIFT_SENTENCES = { "Halt durch!",
+                                                                     "Hier bitte sehr!",
+                                                                     "Ich hoffe, das hilft dir!",
+                                                                     "Pass auf dich auf!"
+                                                                 };
     #endregion
 
     // Use this for initialization
@@ -153,6 +170,29 @@ public class Antonio : MonoBehaviour
         // save last position
         m_oldPosition = transform.position;
 
+        
+        // The text for displaying the help text
+        GameObject tempGO = GameObject.Find("Dialog");
+        if (tempGO == null)
+            Debug.LogWarning("Antonio: GameObject SimpleTextDisplay not found!");
+        else
+        {
+            // get component text
+            m_textDisplayScript = tempGO.GetComponent<DialogueWindowScript>();
+            if (m_textDisplayScript == null)
+                Debug.LogWarning("Antonio: Speaking Text Display not found!");
+        }
+
+        // init speaking queue
+        m_speakingQueue = new Queue<string>();
+        m_currentSpokenText = null;
+
+        // get camera
+        tempGO = GameObject.FindGameObjectWithTag(Tags.TAG_MAIN_CAMERA);
+        if (tempGO == null)
+            Debug.LogWarning("Antonio: Main camera dont found!");
+        else
+            m_mainCamera = tempGO.GetComponent<Camera>();
 	}
 	
 	// Update is called once per frame
@@ -186,6 +226,8 @@ public class Antonio : MonoBehaviour
         // threw power ups
         throwPowerUps();
 
+        // speak
+        updateSpeaking();
 	}
 
     /**
@@ -631,7 +673,50 @@ public class Antonio : MonoBehaviour
 
         // save the last gift time
         m_lastGiftTimeStamp = Time.time;
+
+        // speak something
+        speak(ANTONIO_GIFT_SENTENCES[Random.Range(0, ANTONIO_GIFT_SENTENCES.Length)]);
     }
 
+    /**
+     * let Antonio speak
+     */
+    public void speak(string _text)
+    {
+        m_speakingQueue.Enqueue(_text);
+    }
+
+    /**
+     * update the speaking function
+     */
+    private void updateSpeaking()
+    {
+        // nothing to speak or cannot speak?
+        if((m_currentSpokenText == null && m_speakingQueue.Count == 0) || m_textDisplayScript == null)
+            return;
+        
+        // update the position from the current 
+        if (m_lastSpeakingTimeStamp + MAXIMAL_SPEAKING_TIME > Time.time)
+        {
+            if(m_mainCamera != null)
+                m_currentSpokenText.position = m_mainCamera.WorldToScreenPoint(this.transform.position);
+            return;
+        }
+
+        // destroy the current spoken text if necessary?
+        if (m_currentSpokenText != null)
+        {
+            Destroy(m_currentSpokenText.gameObject);
+            m_currentSpokenText = null;
+        }
+
+        // must speak something?
+        if (m_speakingQueue.Count != 0)
+        {
+            m_currentSpokenText = m_textDisplayScript.createNewSpokenText(m_speakingQueue.Dequeue(), this.transform.position);
+            m_lastSpeakingTimeStamp = Time.time;
+        }
+
+    }
 
 }

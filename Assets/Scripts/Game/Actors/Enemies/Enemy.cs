@@ -8,12 +8,13 @@
 using UnityEngine;
 using System.Collections;
 
+/**
+ * Script to move and controll the enemys
+ */
 public class Enemy : Hitable
 {
 
-	#region Variable
-	const float 		            m_jumpHeight		= 2f;
-	
+	#region Variable	
 	protected float 		        m_direction;
     protected float                 m_fly;
 	private float		            m_groundFlyValue;
@@ -29,7 +30,7 @@ public class Enemy : Hitable
 
     protected Vector3               m_worldScale = Vector3.zero;
 
-    public string                m_transmitter = "";
+    public string                   m_transmitter = "";
 	#endregion
 
     /**
@@ -53,7 +54,6 @@ public class Enemy : Hitable
 		// get controller
 		m_controller = GetComponent<CharacterController>();
         m_groundFlyValue = (!m_canFly) ? -0.001f : 2 * Mathf.Sqrt(GameConfig.ENEMY_JUMP_HEIGHT * m_controller.height * m_worldScale.y * this.transform.localScale.y * Mathf.Abs(Physics.gravity.y));
-        debug("FlyValue: " + m_groundFlyValue);
 		m_lastHit = Time.time;
 		first = true;
 

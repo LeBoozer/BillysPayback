@@ -1,6 +1,15 @@
-﻿using UnityEngine;
+﻿/*
+ * Project:	Billy's Payback
+ * File:	SlipperyUnderground.cs
+ * Authors:	Raik Dankworth
+ * Editors:	-
+ */
+using UnityEngine;
 using System.Collections;
 
+/**
+ * Let the player slip over a model
+ */
 public class SlipperyUnderground : MonoBehaviour {
 
     // Variables

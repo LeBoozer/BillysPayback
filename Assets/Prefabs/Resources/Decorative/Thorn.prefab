@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3337340}
   - 23: {fileID: 2337340}
   - 95: {fileID: 9537340}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ThornDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,9 +26,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 437342}
-  m_Layer: 0
+  - 114: {fileID: 11400000}
+  - 65: {fileID: 6500000}
+  m_Layer: 13
   m_Name: Thorn
-  m_TagString: Untagged
+  m_TagString: Trigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 37.75, y: 4.5, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 437340}
@@ -85,6 +87,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137340}
   m_Mesh: {fileID: 4300000, guid: 1329e12a60e55a4429ac9d8912391804, type: 3}
+--- !u!65 &6500000
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137342}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .170000002, y: .109999999, z: .109999999}
+  m_Center: {x: .00999999978, y: .0549999997, z: 0}
 --- !u!95 &9537340
 Animator:
   serializedVersion: 3
@@ -100,6 +114,17 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5349772563ba0444bf660668a4bee45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

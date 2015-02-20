@@ -8,9 +8,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 463800}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BlackSparrow
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,7 +24,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 463802}
   - 95: {fileID: 9563808}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BlackSparrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - 4: {fileID: 463804}
   - 33: {fileID: 3363804}
   - 23: {fileID: 2363804}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - 4: {fileID: 463806}
   - 33: {fileID: 3363806}
   - 23: {fileID: 2363806}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lower_Beak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - 4: {fileID: 463808}
   - 33: {fileID: 3363808}
   - 23: {fileID: 2363808}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Upper_Beak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
