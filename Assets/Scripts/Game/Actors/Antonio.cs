@@ -241,7 +241,6 @@ public class Antonio : MonoBehaviour
                             || (m_nextWayPoint - transform.position).sqrMagnitude < height * height;           // way point achieved?
 
         // fetch the next way point
-        Debug.Log(newWayPoint);
         if (newWayPoint)
             getNextWayPointSimple();    
 

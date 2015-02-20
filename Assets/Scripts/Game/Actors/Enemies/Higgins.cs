@@ -40,7 +40,7 @@ public class Higgins : Enemy
         foreach(GameObject g in _a)
             if (g.name.Equals(GameConfig.ANTONIO_GAME_OBJECT_NAME))
             {
-                m_antonioKI = g.GetComponent<Antonio>();
+                m_antonioKI = g.GetComponentInChildren<Antonio>();
                 if (m_antonioKI != null)
                     m_antonioStartChaseValue = m_antonioKI.m_chase;
                 break;
@@ -94,6 +94,9 @@ public class Higgins : Enemy
         if (m_lastEggThrow + GameConfig.HIGGINS_THROW_DIFFENRENCE < Time.time)
         { 
             // throw egg
+            //ThrownEgg = Resources.Load<GameObject>("Items/ThrownEgg");
+            //if (ThrownEgg == null)
+                //return;
             GameObject g = Instantiate(ThrownEgg) as GameObject;
             Rigidbody r = g.GetComponent<Rigidbody>();
             if (r == null)

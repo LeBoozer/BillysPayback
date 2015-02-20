@@ -12,10 +12,20 @@ using System.Collections;
  */
 public class Projectile : Hitable
 {
-    private bool m_alive = true;
+    private bool            m_alive = true;
+    private float           m_birthTime;
+    private readonly float  MAXIMAL_LIFETIME = 10f;
+
     // Override: MonoBehaviour::OnStart()
-    void OnStart()
+    void Start()
     {
+        m_birthTime = Time.time;
+    }
+
+    void Update()
+    {
+        if (m_birthTime + MAXIMAL_LIFETIME < Time.time)
+            Destroy(this.gameObject);
     }
 
     // Override: MonoBehaviour::OnCollisionEnter()
@@ -55,4 +65,5 @@ public class Projectile : Hitable
         // Destroy game-object
         GameObject.Destroy(gameObject);
     }
+
 }
