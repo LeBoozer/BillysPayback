@@ -1,0 +1,36 @@
+﻿<!--
+	Benutze globale Variablen:
+		- level_3_quest_object_hat
+		- level_3_quest_object_shoes
+		- level_3_quest_object_watch
+-->
+
+<bw overrideStartConversationID="getStartConvID">
+	<dynscript name="getStartConvID" result="result" type="System.Int32">
+		<![CDATA[
+			if(IsGlobalVar("level_3_quest_object_hat") == true && IsGlobalVar("level_3_quest_object_shoes") == true && IsGlobalVar("level_3_quest_object_watch") == true)
+				result = 1;		// Alle sachen gesammelt
+			else
+				result = 0;		// Nicht alle Sachen gesammelt
+		]]>
+	</dynscript>
+
+	<!-- Nicht alle Sachen gesammelt -->
+	<conversation id="0" start="0">
+		<text id="0" exit="_cancel_">
+			<part t="2.5" character="Manfred">Komm wieder, wenn du alle Sachen gefunden hast...</part>
+		</text>
+	</conversation>
+
+	<!-- Alle Sachen gesammelt -->
+	<conversation id="1" start="0">
+		<text id="0">
+			<part t="2.5" character="Manfred">Vielen Dank, dass ihr mir mein Zeug wiedergebracht habt.</part>
+			<part t="2.5" character="Manfred">Jetzt muss ich nur noch irgendwie aus diesem verdammten Wald herausfinden.</part>
+			<part t="2.5" character="Manfred">Vielen Dank, dass ihr mir mein Zeug wiedergebracht habt.</part>
+			<part t="2.5" character="Manfred">Hier ist eure Belohnung.</part>
+			<part t="2.5" character="Manfred">Ich wünsche euch noch viel Erfolg auf eurer Reise.</part>
+			<part t="2.5" character="Billy">Danke und pass diesmal besser auf dich auf!</part>
+		</text>
+	</conversation>
+</bw>
