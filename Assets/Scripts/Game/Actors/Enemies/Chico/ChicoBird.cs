@@ -22,7 +22,7 @@ public class ChicoBird : Enemy
 
         // base.start()
         base.Start();
-        m_groundFlyValue *= 1.4142f;
+        m_groundFlyValue *= 2f;
 	}
 
     void FixedUpdate()

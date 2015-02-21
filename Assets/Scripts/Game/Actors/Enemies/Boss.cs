@@ -1,10 +1,18 @@
-﻿using UnityEngine;
+﻿/*
+ * Project:	Billy's Payback
+ * File:	Boss.cs
+ * Authors:	Raik Dankworth
+ * Editors:	-
+ */
+using UnityEngine;
 using System.Collections;
 using System;
 
 
 
-
+/**
+ * Describe the inferface for all boss
+ */
 public interface Boss 
 {
 	// let the boss fight start

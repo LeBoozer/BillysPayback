@@ -22,6 +22,7 @@ public class Higgins : Enemy, Boss
     private float                   m_startX;
     private Antonio                 m_antonioKI;
     public  bool                    m_antonioStartChaseValue;
+    private float                   m_sqrActivateRadius;
 
     private bool                    m_active;
     private LinkedList<Action>      m_deathEvent;
@@ -66,6 +67,9 @@ public class Higgins : Enemy, Boss
 
         // higgins not active at start
         m_active = false;
+
+        // calculate the radius to activate Higgins
+        m_sqrActivateRadius = Mathf.Pow(m_controller.radius * m_worldScale.x * 5, 2);
 	}
 
     void FixedUpdate()
@@ -134,15 +138,17 @@ public class Higgins : Enemy, Boss
 
 
     // let the boss fight start
-    void StartBossFight()
-    { m_active = true; }
+    public void StartBossFight()
+    { 
+        m_active = true; 
+    }
 
-    void BreakBossFight()
+    public void BreakBossFight()
     {
         m_active = false;
     }
 
-    void EndBossFight(Action _event)
+    public void EndBossFight(Action _event)
     {
         m_deathEvent.AddLast(_event);
     }

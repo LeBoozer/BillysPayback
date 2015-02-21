@@ -11,7 +11,7 @@ using System.Collections.Generic;
 
 
 /**
- * Controll the Boss Chico
+ * Controll the boss Chico
  */
 public class Chico : Enemy, Boss
 {
@@ -68,7 +68,12 @@ public class Chico : Enemy, Boss
         m_isAlive = true;
         m_deathEvent = new LinkedList<Action>();
 	}
-	
+
+    void FixedUpdate()
+    {
+        //base.FixedUpdate();
+    }
+
 	// Update is called once per frame
 	void Update () 
     {
@@ -102,16 +107,19 @@ public class Chico : Enemy, Boss
             m_lastSpawnTime = SPAWING_TIME_DIFFERENCE;
 
             // let jump 
-            //m_fly = 2 * Mathf.Sqrt(GameConfig.ENEMY_JUMP_HEIGHT * m_controller.height * m_worldScale.y * this.transform.localScale.y * Mathf.Abs(Physics.gravity.y));
+            m_fly = Mathf.Sqrt(GameConfig.ENEMY_JUMP_HEIGHT * m_controller.height * m_worldScale.y * this.transform.localScale.y * Mathf.Abs(Physics.gravity.y));
         }
         else if (m_allowToSpawn && m_lastSpawnTime > 0)
+        {
             m_lastSpawnTime -= Time.deltaTime;
+            m_fly += Physics.gravity.y * 2 * Time.deltaTime;
+        }
 
         base.Update();
 	}
 
     // override turnAround
-    internal void turnAround() { }
+    internal override void turnAround() { }
 
 
     /**

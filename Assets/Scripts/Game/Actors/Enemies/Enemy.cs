@@ -125,7 +125,7 @@ public class Enemy : Hitable
 	}
 
 
-	internal void turnAround()
+	internal virtual void turnAround()
 	{
 		m_direction *= -1;
 		this.transform.Rotate(new Vector3(0, 1, 0), 180);
