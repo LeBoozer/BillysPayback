@@ -1,0 +1,94 @@
+﻿<bw>
+	<conversation id="0" start="0">
+		<text id="0">
+			<part t="2.5" character="Manfred">Hey, du da. Kannst du mir vielleicht helfen?</part>
+
+			<choice id="1" nextText="11">Klar, worum geht’s denn?</choice>
+			<choice id="2" nextText="12">Kommt darauf an, wobei wir dir helfen sollen?</choice>
+			<choice id="3" nextText="13">Ich hab leider gerade keine Zeit.</choice>
+		</text>
+
+		<!-- 1.1 -->
+		<text id="11">
+			<part t="2.5" character="Manfred">Diese miesen Vögel haben mir all meine Sachen geklaut,</part>
+			<part t="2.5" character="Manfred">die sie jetzt über den gesamten verdammten Wald verteilt haben!</part>
+			<part t="2.5" character="Manfred">Ich würde sie ja selbst suchen,</part>
+			<part t="2.5" character="Manfred">aber ich bin bei ihrem Angriff verletzt worden und würde</part>
+			<part t="2.5" character="Manfred">mich einem weiteren Übergriff nicht gewachsen fühlen.</part>
+			<part t="2.5" character="Manfred">Könntet ihr vielleicht für mich nach meinem Hut,</part>
+			<part t="2.5" character="Manfred">meiner Uhr und Schuhen Ausschau halten?</part>
+			<part t="2.5" character="Manfred">Ihr sollt auch eine Belohnung dafür bekommen.</part>
+   
+   			<choice id="111" nextText="1111">Das klingt übel. Wir werden versuchen deine Sachen zu finden.</choice>
+			<choice id="112" nextText="1121">Was wäre denn diese Belohnung?</choice>
+		</text>
+
+		<!-- 1.2 -->
+		<text id="12">
+			<part t="2.5" character="Manfred">Diese miesen Vögel haben mir all meine Sachen geklaut,</part>
+			<part t="2.5" character="Manfred">die sie jetzt über den gesamten verdammten Wald verteilt haben!</part>
+			<part t="2.5" character="Manfred">Ich würde sie ja selbst suchen,</part>
+			<part t="2.5" character="Manfred">aber ich bin bei ihrem Angriff verletzt worden und würde</part>
+			<part t="2.5" character="Manfred">mich einem weiteren Übergriff nicht gewachsen fühlen.</part>
+			<part t="2.5" character="Manfred">Könntet ihr vielleicht für mich nach meinem Hut,</part>
+			<part t="2.5" character="Manfred">meiner Uhr und Schuhen Ausschau halten?</part>
+			<part t="2.5" character="Manfred">Ihr sollt auch eine Belohnung dafür bekommen.</part>
+
+   			<choice id="121" nextText="1111">Das klingt übel. Wir werden versuchen deine Sachen zu finden.</choice>
+			<choice id="122" nextText="1221">Was wäre denn diese Belohnung?</choice>
+			<choice id="123" nextText="1331">Unsere Reise ist schon gefährlich genug. Da können wir nicht noch mehr riskante Umwege machen, tut uns Leid.</choice>
+		</text>
+
+		<!-- 1.3 -->
+		<text id="13">
+			<part t="2.5" character="Manfred">Wollt ihr denn nicht zu Black Sparrow?</part>
+			<part t="2.5" character="Manfred">Dann läge mein Anliegen auf eurem Weg...</part>
+
+   			<choice id="131" nextText="11">Na gut, wir helfen dir. Worum geht es denn?</choice>
+			<choice id="132" nextText="12">Was ist denn dein Anliegen?</choice>
+			<choice id="133" nextText="1331">Unsere Reise ist schon gefährlich genug. Da können wir nicht noch mehr riskante Umwege machen, tut uns Leid.</choice>
+		</text>
+
+		<!-- 1.1.1.1 -->
+		<text id="1111" exit="yes">
+			<part t="2.5" character="Manfred">Ich danke euch.</part>
+		</text>
+
+		<!-- 1.1.2.1 -->
+		<text id="1121">
+			<part t="2.5" character="Manfred">Ich habe noch ein paar Diamanten bei mir. Die könnte ich euch geben.</part>
+
+			<choice id="11211" nextText="1111">Klingt fair. Wir machen uns auf die Suche.</choice>
+			<choice id="11212" nextText="991">Das ist ziemlich wenig. Habt ihr nicht mehr?</choice>
+			<choice id="11213" nextText="1331">Ähm, wir haben es uns anders überlegt. Bis dann.</choice>
+		</text>
+
+		<!-- 1.2.1.1 -->
+		<text id="1211">
+			<part t="2.5" character="Manfred">Tut mir leid, aber mehr kann ich euch leider nicht geben.</part>	
+			<part t="2.5" character="Manfred">Würdet ihr es trotzdem tun?</part>	
+		</text>
+
+		<!-- 1.2.2.1 -->
+		<text id="1221">
+			<part t="2.5" character="Manfred">Ich habe noch ein paar Diamanten bei mir. Die könnte ich euch geben.</part>
+
+			<choice id="12211" nextText="1111">Klingt fair. Wir machen uns auf die Suche.</choice>
+			<choice id="12212" nextText="991">Das ist ziemlich wenig. Habt ihr nicht mehr?</choice>
+			<choice id="12213" nextText="1331">Das reicht uns nicht. Bis dann.</choice>	
+		</text>
+
+		<!-- 1.3.3.1 -->
+		<text id="1331" exit="_cancel_">
+			<part t="2.5" character="Manfred">Und ich dachte wir Kirschen helfen uns untereinander...</part>
+		</text>
+
+		<!-- 1.2.2.1.2.1 => 991 -->
+		<text id="991">
+			<part t="2.5" character="Manfred">Tut mir leid, aber mehr kann ich euch leider nicht geben. Würdet ihr es trotzdem tun?</part>
+
+			<choice id="9911" nextText="1111">Na gut, wir werden versuchen eure Sachen zu finden.</choice>
+			<choice id="9912" nextText="1331">Tut uns leid, aber das reicht uns nicht. Bis dann.</choice>
+		</text>
+	</conversation>
+</bw>

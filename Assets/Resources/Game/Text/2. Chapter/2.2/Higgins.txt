@@ -1,0 +1,46 @@
+﻿<bw overrideStartConversationID="getStartConvID">
+	<dynscript name="getStartConvID" result="result" type="System.Int32">
+		<![CDATA[
+			if(IsGlobalVar("level_2_bob_received_shield") == true)
+			{
+				result = 2;	// Schild bekommen
+			}
+			else if(Player_GetCharacteristicChallenge() > 0)
+			{
+				result = 1;	// Herausforderung suchend
+			}
+			else
+			{
+				result = 0; // Standard
+			}
+		]]>
+	</dynscript>
+
+	<!-- Schild bekommen -->
+	<conversation id="2" start="1">
+		<text id="1">
+			<part t="2.5" character="Billy">Was ist das denn für ein Ungetüm.</part>
+			<part t="2.5" character="Billy">Ich glaub, so einfach wird der uns nicht Platz machen.</part>
+			<part t="2.5" character="Billy">Dann müssen wir uns den Weg halt freikämpfen</part>
+			<part t="2.5" character="Antonio">Billy, denk an das Schild.</part>
+			<part t="2.5" character="Antonio">Jetzt können wir gleich mal testen, wie nützlich es ist</part>
+		</text>
+	</conversation>
+
+	<!-- Herausforderung suchend -->
+	<conversation id="1" start="1">
+		<text id="1">
+			<part t="2.5" character="Billy">Ja, wen haben wir denn da.</part>
+			<part t="2.5" character="Billy">Stören wir etwa? Dich machen wir platt!</part>
+		</text>
+	</conversation>
+
+	<!-- Standard -->
+	<conversation id="0" start="1">
+		<text id="1">
+			<part t="2.5" character="Billy">Was ist das denn für ein Ungetüm.</part>
+			<part t="2.5" character="Billy">Ich glaub, so einfach wird der uns nicht Platz machen.</part>
+			<part t="2.5" character="Billy">Dann müssen wir uns den Weg halt freikämpfen</part>
+		</text>
+	</conversation>
+</bw>

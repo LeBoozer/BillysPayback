@@ -198,6 +198,13 @@ public class OnAreaKeyEvent : MonoBehaviour, DeActivatable
         m_oldWasPressed = wasPressed;
     }
 
+    // Clears the help text forcefully
+    public void forceClearText()
+    {
+        if (m_simpleTextDisplay != null)
+            m_simpleTextDisplay.text = "";
+    }
+
     // Override: DeActivatable::isActivated()
     public bool isActivated()
     {

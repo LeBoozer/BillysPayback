@@ -42,15 +42,20 @@ public abstract class FSMTransition : MonoBehaviour, DeActivatable
 		foreach(FSMAction a in m_actionsOnTransition)
 			a.onAction();
 
-		// Set state
-		if(m_fsm != null)
-			m_fsm.setFSMState(m_targetState);
+        // Set state
+        if (m_fsm != null)
+            m_fsm.setFSMState(m_targetState);
+
+        // Kill itself?
+        if (m_deleteOnUse == true)
+            GameObject.Destroy(gameObject);
 	}
 
     // Enables/disables the state
     public void setEnabled(bool _onOff)
     {
-        gameObject.SetActive(_onOff);
+        if (gameObject != null)
+            gameObject.SetActive(_onOff);
     }
 	
 	// Will be called as soon as the host-state has finished its work (this call is not guaranteed and depends heavily on the host state!)

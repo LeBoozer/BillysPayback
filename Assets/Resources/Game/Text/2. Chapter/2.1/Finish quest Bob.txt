@@ -53,7 +53,7 @@
 		</text>
 
 		<!-- 1.1.1 -->
-		<text id="111">
+		<text id="111" exit="shield">
 			<part t="2.5" character="Bob">Tschüss Jungs. Passt auf euch auf.</part>	
 		</text>
 	</conversation>
@@ -119,7 +119,7 @@
 		</text>
 
 		<!-- 2.1.1.1.1, 2.1.3.1.1, 2.1.4.1.1 => 991 -->
-		<text id="991">
+		<text id="991" exit="shield">
 			<part t="2.5" character="Bob">Tschüss Jungs. Passt auf euch auf und denkt daran</part>
 			<part t="2.5" character="Bob">dass das Schild nach der Verwendung erst wieder aufgeladen werden muss.</part>
 		</text>
@@ -142,7 +142,7 @@
 		</text>
 
 		<!-- 9921.1 -->
-		<text id="99211">
+		<text id="99211" exit="shield">
 			<part t="2.5" character="Bob">Tschüss Jungs. Passt auf euch auf und denkt daran</part>
 			<part t="2.5" character="Bob">dass das Schild nach der Verwendung</part>	
 			<part t="2.5" character="Bob">erst wieder aufgeladen werden muss.</part>	

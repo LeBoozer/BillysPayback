@@ -1,0 +1,77 @@
+﻿<!--
+	Benutze globale Variablen:
+		- level_3_quest_object_hat
+		- level_3_quest_object_shoes
+		- level_3_quest_object_watch
+-->
+
+<bw overrideStartConversationID="getStartConvID">
+	<dynscript name="getStartConvID" result="result" type="System.Int32">
+		<![CDATA[
+			if(IsGlobalVar("level_3_quest_object_hat") == false && IsGlobalVar("level_3_quest_object_shoes") == false)
+				result = 1;
+			else if(IsGlobalVar("level_3_quest_object_hat") == false && IsGlobalVar("level_3_quest_object_watch") == false)
+				result = 2;
+			else if(IsGlobalVar("level_3_quest_object_watch") == false && IsGlobalVar("level_3_quest_object_shoes") == false)
+				result = 3;
+			else if(IsGlobalVar("level_3_quest_object_watch") == false)
+				result = 4;
+			else if(IsGlobalVar("level_3_quest_object_hat") == false)
+				result = 5;
+			else if(IsGlobalVar("level_3_quest_object_shoes") == false)
+				result = 6;
+			else
+				result = 7;
+		]]>
+	</dynscript>
+
+	<!-- Hut und Schuhe ausstehend -->
+	<conversation id="1" start="0">
+		<text id="0">
+			<part t="2.5" character="Antonio">Super, jetzt fehlen nur noch der Hut und die Schuhe.</part>
+		</text>
+	</conversation>
+
+	<!-- Hut und Uhr ausstehend -->
+	<conversation id="2" start="0">
+		<text id="0">
+			<part t="2.5" character="Antonio">Super, jetzt fehlen nur noch der Hut und die Uhr.</part>
+		</text>
+	</conversation>
+
+	<!-- Schuhe und Uhr ausstehend -->
+	<conversation id="3" start="0">
+		<text id="0">
+			<part t="2.5" character="Antonio">Super, jetzt fehlen nur noch die Schuhe und die Uhr.</part>
+		</text>
+	</conversation>
+
+	<!-- Uhr ausstehend -->
+	<conversation id="4" start="0">
+		<text id="0">
+			<part t="2.5" character="Antonio">Super, jetzt fehlt nur noch die Uhr.</part>
+		</text>
+	</conversation>
+
+	<!-- Hut ausstehend -->
+	<conversation id="5" start="0">
+		<text id="0">
+			<part t="2.5" character="Antonio">Super, jetzt fehlt nur noch der Hut.</part>
+		</text>
+	</conversation>
+
+	<!-- Schuhe ausstehend -->
+	<conversation id="6" start="0">
+		<text id="0">
+			<part t="2.5" character="Antonio">Super, jetzt fehlen nur noch die Schuhe.</part>
+		</text>
+	</conversation>
+
+	<!-- Alles gefunden -->
+	<conversation id="7" start="0">
+		<text id="0">
+			<part t="2.5" character="Antonio">Wir haben alles gefunden!</part>
+			<part t="2.5" character="Antonio">Auf zu Manfred und die Sachen abgeben...</part>
+		</text>
+	</conversation>
+</bw>

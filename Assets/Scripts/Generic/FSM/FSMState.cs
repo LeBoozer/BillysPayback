@@ -41,7 +41,10 @@ public abstract class FSMState : MonoBehaviour
 	{
 		gameObject.SetActive(_onOff);
         foreach (FSMTransition t in m_transitions)
-            t.setEnabled(_onOff);
+        {
+            if (t != null)
+                t.setEnabled(_onOff);
+        }
 	}
 	
 	// Will be called as soon as the state is being entered

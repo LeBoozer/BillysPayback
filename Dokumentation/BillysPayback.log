@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.5)  20 FEB 2015 00:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.5)  20 FEB 2015 23:53
 entering extended mode
 **BillysPayback.tex
 
@@ -1171,7 +1171,7 @@ with the same identifier (name{page.2}) has been already used, duplicate ignore
 d
 <to be read again> 
                    \relax 
-l.5 \chapter
+l.6 \chapter
             {Grundlagen} [2
 
 
@@ -1179,21 +1179,53 @@ l.5 \chapter
 
 ]
 Kapitel 2.
-)pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
- been already used, duplicate ignored
+
+LaTeX Warning: Citation 'RSachseManipulationSelbsttaeuschung' on page 3 undefin
+ed on input line 21.
+
+
+Overfull \hbox (113.07542pt too wide) in paragraph at lines 21--22
+\T1/cmr/m/n/12 schie-de-ne Art und Wei-sen sei-ne Ab-sicht in ei-ne Hand-lung u
+msetzen[[]
+ []
+
+
+LaTeX Warning: Citation 'RSachseManipulationSelbsttaeuschung' on page 3 undefin
+ed on input line 30.
+
+
+LaTeX Warning: Citation 'RSachseManipulationSelbsttaeuschung' on page 3 undefin
+ed on input line 34.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.158 	\include{Inhalt/Grundlagen/Grundlagen}
-                                             						% Grundlagen einbinden
-[3]
+l.35 
+      [3]
+
+LaTeX Warning: Citation 'RSachseManipulationSelbsttaeuschung' on page 4 undefin
+ed on input line 39.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.59 
+      [4]
+
+LaTeX Warning: Citation 'RSachseManipulationSelbsttaeuschung' on page 5 undefin
+ed on input line 63.
+
+
+Overfull \hbox (30.01509pt too wide) in paragraph at lines 63--64
+\T1/cmr/m/n/12 In sei-nem Buch \T1/cmr/m/it/12 Ma-ni-pu-la-ti-on und Selbst-t�u
+-schung\T1/cmr/m/n/12 [[]
+ []
+
+) [5]
 ("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
-umentation\Inhalt/VerwandteArbeiten/VerwandteArbeiten.tex"pdfTeX warning (ext4)
-: destination with the same identifier (name{page.4}) has been already used, du
-plicate ignored
-<to be read again> 
-                   \relax 
-l.5 \chapter
-            {Verwandte Arbeiten} [4
+umentation\Inhalt/VerwandteArbeiten/VerwandteArbeiten.tex" [6
 
 
 
@@ -1201,11 +1233,11 @@ l.5 \chapter
 ]
 Kapitel 3.
 
-LaTeX Warning: Citation 'SiewNareyekPlayerManipulation' on page 5 undefined on 
+LaTeX Warning: Citation 'SiewNareyekPlayerManipulation' on page 7 undefined on 
 input line 20.
 
 
-LaTeX Warning: Citation 'PsychoTricksPCGames' on page 5 undefined on input line
+LaTeX Warning: Citation 'PsychoTricksPCGames' on page 7 undefined on input line
  41.
 
 
@@ -1214,73 +1246,73 @@ Overfull \hbox (34.29875pt too wide) in paragraph at lines 41--42
 piel in dei-nem Kopf\T1/cmr/m/n/12 [[]
  []
 
-[5] [6]
+[7] [8]
 Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
 
-LaTeX Warning: Citation 'SpielStanleyParable' on page 7 undefined on input line
+LaTeX Warning: Citation 'SpielStanleyParable' on page 9 undefined on input line
  75.
 
-[7]
+[9]
 
-LaTeX Warning: Citation 'VideoEthanCarter' on page 8 undefined on input line 85
-.
-
-
-LaTeX Warning: Citation 'TestEthanCarterGameStar' on page 8 undefined on input 
-line 85.
+LaTeX Warning: Citation 'VideoEthanCarter' on page 10 undefined on input line 8
+5.
 
 
-LaTeX Warning: Citation 'KZieroldComputerspielanalyse' on page 8 undefined on i
-nput line 93.
+LaTeX Warning: Citation 'TestEthanCarterGameStar' on page 10 undefined on input
+ line 85.
 
 
-LaTeX Warning: Citation 'DieVersuchungAdventureTreffKritik' on page 8 undefined
- on input line 102.
+LaTeX Warning: Citation 'KZieroldComputerspielanalyse' on page 10 undefined on 
+input line 93.
 
 
-LaTeX Warning: Citation 'DieVersuchungAftermathmedia' on page 8 undefined on in
-put line 102.
+LaTeX Warning: Citation 'DieVersuchungAdventureTreffKritik' on page 10 undefine
+d on input line 102.
 
-[8]) [9]
+
+LaTeX Warning: Citation 'DieVersuchungAftermathmedia' on page 10 undefined on i
+nput line 102.
+
+[10]) [11]
 ("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
-umentation\Inhalt/Konzept/Konzept.tex" [10
+umentation\Inhalt/Konzept/Konzept.tex" [12
 
 
 
 
 ]
 Kapitel 4.
-) [11]
+) [13]
 ("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
-umentation\Inhalt/Implementierung/Implementierung.tex" [12
+umentation\Inhalt/Implementierung/Implementierung.tex" [14
 
 
 
 
 ]
 Kapitel 5.
-) [13]
+) [15]
 ("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
-umentation\Inhalt/Evaluierung/Evaluierung.tex" [14
+umentation\Inhalt/Evaluierung/Evaluierung.tex" [16
 
 
 
 
 ]
 Kapitel 6.
-) [15]
+) [17]
 ("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
-umentation\Inhalt/Zusammenfassung/Zusammenfassung.tex" [16
+umentation\Inhalt/Zusammenfassung/Zusammenfassung.tex" [18
 
 
 
 
 ]
 Kapitel 7.
-) [17]
+) [19]
 
 LaTeX Warning: Empty bibliography on input line 166.
 
@@ -1310,7 +1342,7 @@ umentation\Inhalt/Zusammenfassung/Zusammenfassung.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
 Package rerunfilecheck Info: File `BillysPayback.out' has not changed.
-(rerunfilecheck)             Checksum: C9DB9B0464B262694D43A543AF6C6B32;1418.
+(rerunfilecheck)             Checksum: 7F1D4E1D90A9D9388098397736EAB6C1;1849.
 
 
 LaTeX Warning: There were undefined references.
@@ -1323,16 +1355,16 @@ Package biblatex Warning: Please (re)run Biber on the file:
 Package logreq Info: Writing requests to 'BillysPayback.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 17096 strings out of 493921
- 280229 string characters out of 3147271
- 801995 words of memory out of 3000000
- 19967 multiletter control sequences out of 15000+200000
+ 17138 strings out of 493921
+ 281016 string characters out of 3147271
+ 802344 words of memory out of 3000000
+ 19997 multiletter control sequences out of 15000+200000
  15792 words of font info for 38 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  56i,8n,55p,1563b,3162s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
-600\ecsl1200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
-knappen\ec\dpi600\tcrm1200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fon
+600\tcrm1200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
+knappen\ec\dpi600\ecsl1200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fon
 ts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Dominique\AppData\Local\
 MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Dominique\
 AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk> <C:\Us
@@ -1342,9 +1374,9 @@ c\dpi600\ecsx2488.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
 our\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.
 9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728.pk> <C:\Users\Dominique\AppData\L
 ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk>
-Output written on BillysPayback.pdf (27 pages, 381538 bytes).
+Output written on BillysPayback.pdf (29 pages, 417763 bytes).
 PDF statistics:
- 643 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 500000)
- 177 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 706 PDF objects out of 1000 (max. 8388607)
+ 67 named destinations out of 1000 (max. 500000)
+ 225 words of extra memory for PDF output out of 10000 (max. 10000000)
 
