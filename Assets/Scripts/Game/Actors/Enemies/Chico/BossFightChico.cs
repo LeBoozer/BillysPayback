@@ -44,6 +44,8 @@ public class BossFightChico : MonoBehaviour
             b.StartBossFight();
             b.EndBossFight(trigger);
         }
+
+        Destroy(this.gameObject);
     }
 
 }
