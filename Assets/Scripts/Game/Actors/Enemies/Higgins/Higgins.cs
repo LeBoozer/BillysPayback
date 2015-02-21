@@ -6,21 +6,26 @@
  */
 using UnityEngine;
 using System.Collections;
+using System;
+using System.Collections.Generic;
 
 /*
  * Represent the Boss Higgins
  * Let him jump and throw eggs
  */
-public class Higgins : Enemy
+public class Higgins : Enemy, Boss
 {
 
-    private Transform   m_player;
-    private float       m_sqrActivateRadius;
-    private float       m_lastEggThrow;
-    private GameObject  ThrownEgg;
-    private float       m_startX;
-    private Antonio     m_antonioKI;
-    public  bool        m_antonioStartChaseValue;
+    private Transform               m_player;
+    private float                   m_lastEggThrow;
+    private GameObject              ThrownEgg;
+    private float                   m_startX;
+    private Antonio                 m_antonioKI;
+    public  bool                    m_antonioStartChaseValue;
+
+    private bool                    m_active;
+    private LinkedList<Action>      m_deathEvent;
+
 	// Use this for initialization
     void Start () 
     {
@@ -59,8 +64,8 @@ public class Higgins : Enemy
         m_canFly = true;
         base.Start();
 
-        // calculate the radius to activate Higgins
-        m_sqrActivateRadius = Mathf.Pow(m_controller.radius * m_worldScale.x * 5, 2);
+        // higgins not active at start
+        m_active = false;
 	}
 
     void FixedUpdate()
@@ -74,12 +79,8 @@ public class Higgins : Enemy
 	void Update ()
     {
         // not usefull to update?
-        if (m_player == null || (m_player.position - this.transform.position).sqrMagnitude > m_sqrActivateRadius)
-        {
-            if (m_antonioKI != null)
-                m_antonioKI.m_chase = m_antonioStartChaseValue;
+        if (m_player == null || !m_active)
             return;
-        }
 
         // let Antonio wait
         if (m_antonioKI != null)
@@ -131,4 +132,25 @@ public class Higgins : Enemy
         
 	}
 
+
+    // let the boss fight start
+    void StartBossFight()
+    { m_active = true; }
+
+    void BreakBossFight()
+    {
+        m_active = false;
+    }
+
+    void EndBossFight(Action _event)
+    {
+        m_deathEvent.AddLast(_event);
+    }
+
+    internal override void die()
+    {
+        foreach (Action _a in m_deathEvent)
+            _a();
+        base.die();
+    }
 }
