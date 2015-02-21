@@ -125,9 +125,7 @@ public class Player : Hitable
         if (!alive())
             return;
 
-		if(m_allowToMove)
-			updateMovement ();
-
+	    updateMovement ();
 		updateKiwanos ();
 
 		if(m_allowToMove)
@@ -205,10 +203,10 @@ public class Player : Hitable
 	private void updateMovement ()
 	{
 		// pressed keys
-		bool keyD 			= Input.GetButton 		(KeyMapping.KEY_ACTION_MOVE_RIGHT);
-		bool keyA 			= Input.GetButton 		(KeyMapping.KEY_ACTION_MOVE_LEFT);
-		bool jumpKeyDown 	= Input.GetButtonDown 	(KeyMapping.KEY_ACTION_JUMP);
-		bool jumpKey 		= Input.GetButton 		(KeyMapping.KEY_ACTION_JUMP);
+		bool keyD 			= Input.GetButton 		(KeyMapping.KEY_ACTION_MOVE_RIGHT) && m_allowToMove;
+		bool keyA 			= Input.GetButton 		(KeyMapping.KEY_ACTION_MOVE_LEFT) && m_allowToMove;
+		bool jumpKeyDown 	= Input.GetButtonDown 	(KeyMapping.KEY_ACTION_JUMP) && m_allowToMove;
+		bool jumpKey 		= Input.GetButton 		(KeyMapping.KEY_ACTION_JUMP) && m_allowToMove;
 		
 		// falling?
 		if(!m_controller.isGrounded)
@@ -221,8 +219,8 @@ public class Player : Hitable
 			m_velocityX += GameConfig.BILLY_MAX_SPEED * m_accelerationFactor * Time.deltaTime;
 			if(m_velocityX > GameConfig.BILLY_MAX_SPEED)
 				m_velocityX = GameConfig.BILLY_MAX_SPEED;
-		} 
-		else if(keyA)
+		}
+        else if (keyA)
 		{
 			m_velocityX -= GameConfig.BILLY_MAX_SPEED * m_accelerationFactor * Time.deltaTime;
 			if(m_velocityX <  -GameConfig.BILLY_MAX_SPEED)

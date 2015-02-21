@@ -25,10 +25,10 @@ public class Higgins : Enemy, Boss
     private float                   m_sqrActivateRadius;
 
     private bool                    m_active;
-    private LinkedList<Action>      m_deathEvent;
+    private LinkedList<Action>      m_deathEvent = new LinkedList<Action>();
 
 	// Use this for initialization
-    void Start () 
+    void Awake () 
     {
         // set lifepoints
         m_lifepoints = GameConfig.HIGGINS_LIFE_POINTS;

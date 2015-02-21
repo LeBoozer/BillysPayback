@@ -1,0 +1,11 @@
+﻿<bw>
+	<conversation id="0" start="0">
+		<!-- 1 -->
+		<text id="0">
+			<part t="2.5" character="Antonio">Was wollen wir machen?</part>
+
+			<choice id="0" exit="_cancel_">Weiterhin hier verweilen.</choice>
+			<choice id="1" exit="move">Auf in den Kampf!</choice>
+		</text>
+	</conversation>
+</bw>

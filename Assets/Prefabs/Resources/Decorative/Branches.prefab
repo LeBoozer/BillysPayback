@@ -501,7 +501,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 448684}
-  - 95: {fileID: 9548626}
+  - 33: {fileID: 3376564}
   m_Layer: 0
   m_Name: BranchesDummy
   m_TagString: Untagged
@@ -1709,21 +1709,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148682}
   m_Mesh: {fileID: 4300002, guid: cd05f03f9ca17fb4b96998523505fab2, type: 3}
---- !u!95 &9548626
-Animator:
-  serializedVersion: 3
+--- !u!33 &3376564
+MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148684}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: cd05f03f9ca17fb4b96998523505fab2, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_Mesh: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
