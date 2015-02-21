@@ -80,7 +80,6 @@ public class DestroyableBox : MonoBehaviour
     // Override: MonoBehaviour::OnTriggerStay()
     void OnTriggerStay(Collider _other)
     {
-        Debug.Log(_other.gameObject);
         // Player?
         if (_other.gameObject.tag.Equals(Tags.TAG_PLAYER) == true)
         {

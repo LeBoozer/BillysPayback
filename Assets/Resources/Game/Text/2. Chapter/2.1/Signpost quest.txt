@@ -1,0 +1,8 @@
+﻿<bw>
+	<conversation id="0" start="0">
+		<!-- 1 -->
+		<text id="0" exit="_done_">
+			<part t="2.5" character="Antonio">Wir sollen die Kurbel für Bob suchen...</part> 
+		</text>
+	</conversation>
+</bw>
