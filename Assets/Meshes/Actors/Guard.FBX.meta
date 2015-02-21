@@ -1,71 +1,73 @@
 fileFormatVersion: 2
-guid: cc0318587236f0642adaecdb5dd2d19b
+guid: 20023533084c0ab4dae0f9cee3d32cd9
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: Beak
-    100002: //RootNode
+    100002: Bird
     100004: Body
     100006: Eyeball
     100008: Eyeball001
-    100010: EyePatch
-    100012: Feather001
-    100014: Feather002
-    100016: Feather003
-    100018: LeftEye
-    100020: LeftLeg
-    100022: LeftWing
-    100024: Legs
-    100026: LowerBeak
-    100028: Patch
-    100030: Pupil
-    100032: Pupil001
-    100034: RightEye
-    100036: RightLeg
-    100038: RightWing
-    100040: Strap
-    100042: Tail
-    100044: UpperBeak
-    100046: Wings
+    100010: Feather001
+    100012: Feather002
+    100014: Feather003
+    100016: //RootNode
+    100018: Handle
+    100020: LeftEye
+    100022: LeftLeg
+    100024: LeftWing
+    100026: Legs
+    100028: LowerBeak
+    100030: Peak
+    100032: Pupil
+    100034: Pupil001
+    100036: RightEye
+    100038: RightLeg
+    100040: RightWing
+    100042: Spear
+    100044: Tail
+    100046: UpperBeak
+    100048: Wings
     400000: Beak
-    400002: //RootNode
+    400002: Bird
     400004: Body
     400006: Eyeball
     400008: Eyeball001
-    400010: EyePatch
-    400012: Feather001
-    400014: Feather002
-    400016: Feather003
-    400018: LeftEye
-    400020: LeftLeg
-    400022: LeftWing
-    400024: Legs
-    400026: LowerBeak
-    400028: Patch
-    400030: Pupil
-    400032: Pupil001
-    400034: RightEye
-    400036: RightLeg
-    400038: RightWing
-    400040: Strap
-    400042: Tail
-    400044: UpperBeak
-    400046: Wings
+    400010: Feather001
+    400012: Feather002
+    400014: Feather003
+    400016: //RootNode
+    400018: Handle
+    400020: LeftEye
+    400022: LeftLeg
+    400024: LeftWing
+    400026: Legs
+    400028: LowerBeak
+    400030: Peak
+    400032: Pupil
+    400034: Pupil001
+    400036: RightEye
+    400038: RightLeg
+    400040: RightWing
+    400042: Spear
+    400044: Tail
+    400046: UpperBeak
+    400048: Wings
     2300000: Body
     2300002: Eyeball
     2300004: Eyeball001
     2300006: Feather001
     2300008: Feather002
     2300010: Feather003
-    2300012: LeftLeg
-    2300014: LeftWing
-    2300016: LowerBeak
-    2300018: Patch
-    2300020: Pupil
-    2300022: Pupil001
-    2300024: RightLeg
-    2300026: RightWing
-    2300028: Strap
+    2300012: Handle
+    2300014: LeftLeg
+    2300016: LeftWing
+    2300018: LowerBeak
+    2300020: Peak
+    2300022: Pupil
+    2300024: Pupil001
+    2300026: RightLeg
+    2300028: RightWing
     2300030: UpperBeak
     3300000: Body
     3300002: Eyeball
@@ -73,32 +75,32 @@ ModelImporter:
     3300006: Feather001
     3300008: Feather002
     3300010: Feather003
-    3300012: LeftLeg
-    3300014: LeftWing
-    3300016: LowerBeak
-    3300018: Patch
-    3300020: Pupil
-    3300022: Pupil001
-    3300024: RightLeg
-    3300026: RightWing
-    3300028: Strap
+    3300012: Handle
+    3300014: LeftLeg
+    3300016: LeftWing
+    3300018: LowerBeak
+    3300020: Peak
+    3300022: Pupil
+    3300024: Pupil001
+    3300026: RightLeg
+    3300028: RightWing
     3300030: UpperBeak
-    4300000: RightWing
-    4300002: LeftWing
-    4300004: Feather001
-    4300006: Feather002
-    4300008: Feather003
-    4300010: Pupil001
-    4300012: Eyeball001
-    4300014: LeftLeg
-    4300016: RightLeg
-    4300018: Pupil
-    4300020: Eyeball
-    4300022: Strap
-    4300024: Patch
-    4300026: Body
-    4300028: UpperBeak
-    4300030: LowerBeak
+    4300000: Peak
+    4300002: Handle
+    4300004: Pupil001
+    4300006: Eyeball001
+    4300008: UpperBeak
+    4300010: LowerBeak
+    4300012: Body
+    4300014: Pupil
+    4300016: Eyeball
+    4300018: LeftLeg
+    4300020: RightLeg
+    4300022: Feather001
+    4300024: Feather002
+    4300026: Feather003
+    4300028: RightWing
+    4300030: LeftWing
     9500000: //RootNode
   materials:
     importMaterials: 0
