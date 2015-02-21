@@ -238,9 +238,10 @@ public class Player : Hitable
 			if(m_velocityX < 0.1f && m_velocityX > -0.1f)
 				m_velocityX = 0;
 		}
-        m_velocityX += m_slipDirection.x /* Time.deltaTime*/;
-        if (Mathf.Abs(m_velocityX) > GameConfig.BILLY_MAX_SPEED * 2)
-            m_velocityX = Mathf.Sign(m_velocityX) * GameConfig.BILLY_MAX_SPEED * 2;
+        float factor = 1 + Mathf.Abs(m_slipDirection.x);
+        m_velocityX += GameConfig.BILLY_MAX_SPEED * m_slipDirection.x /* Time.deltaTime*/;
+        if (Mathf.Abs(m_velocityX) > GameConfig.BILLY_MAX_SPEED * factor)
+            m_velocityX = Mathf.Sign(m_velocityX) * GameConfig.BILLY_MAX_SPEED * factor;
 		#endregion
 		// jump and fly
         // movement high&down
@@ -275,7 +276,7 @@ public class Player : Hitable
         // falling
         else
             m_velocityY += 2 * Physics.gravity.y * Time.deltaTime;
-        m_velocityY += m_slipDirection.y /* Time.deltaTime*/;
+        m_velocityY -= Physics.gravity.y * m_slipDirection.y /* Time.deltaTime*/;
         #endregion
 
         // set new position
@@ -501,7 +502,7 @@ public class Player : Hitable
      */
     public void setImpedimentSlip(Vector2 _direction)
     {
-        m_slipDirection = new Vector3(GameConfig.BILLY_MAX_SPEED * _direction.x, -Physics.gravity.y * _direction.y, 0);
+        m_slipDirection = new Vector3(_direction.x, _direction.y, 0);
     }
 
 

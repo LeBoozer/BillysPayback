@@ -17,7 +17,7 @@ public class Enemy : Hitable
 	#region Variable	
 	protected float 		        m_direction;
     protected float                 m_fly;
-	private float		            m_groundFlyValue;
+	protected float		            m_groundFlyValue;
 	private float		            m_lastHit;
     private float                   m_deathValue;
 	
@@ -145,7 +145,12 @@ public class Enemy : Hitable
             m_lastHit = Time.time;
         }
         if (m_lifepoints == 0)
-            Destroy(this.gameObject);
+            die();
+    }
+
+    internal virtual void die()
+    {
+        Destroy(this.gameObject);
     }
 
     /**

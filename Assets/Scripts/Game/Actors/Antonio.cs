@@ -697,7 +697,7 @@ public class Antonio : MonoBehaviour
         // update the position from the current 
         if (m_lastSpeakingTimeStamp + MAXIMAL_SPEAKING_TIME > Time.time)
         {
-            if(m_mainCamera != null)
+            if(m_mainCamera != null && m_currentSpokenText != null)
                 m_currentSpokenText.position = m_mainCamera.WorldToScreenPoint(this.transform.position + new Vector3(0, m_realAntonioHeight, 0));
             return;
         }
