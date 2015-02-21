@@ -1,0 +1,58 @@
+﻿<bw overrideStartConversationID="getStartConvID">
+	<dynscript name="getStartConvID" result="result" type="System.Int32">
+		<![CDATA[
+			if(Player_GetCharacteristicChallenge() > 0 || Player_GetCharacteristicAutonomous() > 0)
+			{
+				result = 1;	// Herausforderung suchend / Autonom
+			}
+			else if(Player_GetCharacteristicAttention() > 0 || Player_GetCharacteristicCollecting() > 0)
+			{
+				result = 2;	// Aufmerksamkeit / Sammler
+			}
+			else if(Player_GetCharacteristicCompassion() > 0)
+			{
+				result = 3;	// Mitleid
+			}
+			else
+			{
+				result = 4; // Geduld
+			}
+		]]>
+	</dynscript>
+
+	<!-- Herausforderung suchend / Autonom -->
+	<conversation id="1" start="1">
+		<!-- 1 -->
+		<text id="1">
+			<part t="2.5" character="Antonio">Hey, die kann ich nicht allein platt machen,</part>
+			<part t="2.5" character="Antonio">du musst mir helfen!</part>
+		</text>
+	</conversation>
+
+	<!-- Aufmerksamkeit / Sammler -->
+	<conversation id="2" start="1">
+		<!-- 1 -->
+		<text id="1">
+			<part t="2.5" character="Antonio">Wo willst du denn hin? Ich brauche dich hier. </part>
+			<part t="2.5" character="Antonio">Da vorn ist noch mehr von dem glitzernden Zeug.</part>
+		</text>
+	</conversation>
+
+	<!-- Mitleid -->
+	<conversation id="3" start="1">
+		<!-- 1 -->
+		<text id="1">
+			<part t="2.5" character="Antonio">Was machst du denn?! Ich glaub, da braucht</part>
+			<part t="2.5" character="Antonio">jemand unsere Hilfe. Hier entlang!</part>
+		</text>
+	</conversation>
+
+	<!-- Geduld -->
+	<conversation id="4" start="1">
+		<!-- 1 -->
+		<text id="1">
+			<part t="2.5" character="Antonio">Das ist der falsche Weg.</part>
+			<part t="2.5" character="Antonio">Cherry muss sich am Ende von diesem Weg befinden!</part>
+		</text>
+	</conversation>
+</bw>

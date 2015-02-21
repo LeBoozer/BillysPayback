@@ -15,3 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game/1. Analyse.unity
   - enabled: 1
     path: Assets/Scenes/Game/2.1 Der kaputte Brunnen.unity
+  - enabled: 1
+    path: Assets/Scenes/Game/2.2 Higgins.unity
+  - enabled: 1
+    path: Assets/Scenes/Game/3.1 Weg zum Nest.unity
+  - enabled: 1
+    path: Assets/Scenes/Game/3.2 Black Sparrow.unity

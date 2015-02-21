@@ -1,0 +1,164 @@
+﻿<!--
+	Benutze globale Variablen:
+		- level_2_bob_confirmation_kiwanos
+		- level_2_bob_refuse_violence
+-->
+
+<bw overrideStartConversationID="getStartConvID">
+	<dynscript name="getStartConvID" result="result" type="System.Int32">
+		if(GetGlobalVar("level_2_bob_confirmation_kiwanos") == true)
+			result = 1;					// Zusage nicht vorher
+		else
+			result = 0;					// Zusage vorher
+	</dynscript>
+	<dynscript name="getNextTextIDForAnswer21" result="result" type="System.Int32">
+		if(Player_GetCharacteristicChallenge() > 0)
+		{
+			if(IsGlobalVar("level_2_bob_refuse_violence") == true)
+			{
+				result = 212;
+			}
+			else
+			{
+				result = 214;
+			}
+		}
+		else
+		{
+			if(IsGlobalVar("level_2_bob_refuse_violence") == true)
+			{
+				result = 211;
+			}
+			else
+			{
+				result = 213;
+			}
+		}
+	</dynscript>
+
+	<!-- Zusage der Kiwanos erfolgte vorher -->
+	<conversation id="0" start="1">
+		<!-- 1 -->
+		<text id="1">
+			<part t="2.5" character="Bob">Das war echt voll korrekt von euch Jungs.</part>
+			<part t="2.5" character="Bob">Unser Dorf ist euch sehr dankbar.</part>
+			<part t="2.5" character="Bob">Nun können wir endlich wieder unsere Plantagen bewässern.</part>
+			<part t="2.5" character="Bob">Hier habt ihr die Diamanten und das Schild.</part>
+			<part t="2.5" character="Bob">Es eignet sich wunderbar, wenn man in von dem</part>
+			<part t="2.5" character="Bob">ganzen Stress mal eine Auszeit braucht!</part>
+			<part t="2.5" character="Bob">Aber denkt daran, dass es nach der Verwendung</part>
+			<part t="2.5" character="Bob">erst wieder aufgeladen werden muss.</part>
+
+			<choice id="0" nextText="111">Freut uns, dass wir euch helfen konnten und danke für eure Unterstützung. Leider müssen wir jetzt schnellstens weiter. Auf Wiedersehen!</choice>
+		</text>
+
+		<!-- 1.1.1 -->
+		<text id="111" exit="shield">
+			<part t="2.5" character="Bob">Tschüss Jungs. Passt auf euch auf.</part>	
+		</text>
+	</conversation>
+
+	<!-- Zusage der Kiwanos erfolgte nicht vorher -->
+	<conversation id="1" start="2">
+		<!-- 2 -->
+		<text id="2">
+			<part t="2.5" character="Bob">Das war echt voll korrekt von euch Jungs.</part>
+			<part t="2.5" character="Bob">Unser Dorf ist euch sehr dankbar.</part>
+			<part t="2.5" character="Bob">Nun können wir endlich wieder unsere Plantagen bewässern.</part>
+
+			<choice id="21" nextText="getNextTextIDForAnswer21">Freut uns, dass wir euch helfen konnten. Könnten wir euch im Gegenzug noch um einen Gefallen bitten? Wir sind gerade auf dem Weg zu Black Sparrows Nest, um ihm endlich eine Lektion zu erteilen und wir könnten noch Unterstützung brauchen...</choice>
+			<choice id="22" nextText="221">Freut uns, dass wir euch helfen konnten und danke für eure Unterstützung. Leider müssen wir jetzt schnellstens weiter. Auf Wiedersehen!</choice>
+		</text>
+
+		<!-- 2.1.1 -->
+		<text id="211">
+			<part t="2.5" character="Bob">Wie ich bereits sagte, lehnen wir hier</part>
+			<part t="2.5" character="Bob">direkte körperliche Gewalt ab.</part>	
+			<part t="2.5" character="Bob">Aber ich besitze ein Schild, das euch schützt und zugleich</part>	
+			<part t="2.5" character="Bob">dem Angreifer Schaden zufügt.</part>	
+			<part t="2.5" character="Bob">Ihr könnt es haben. Das dürfte euch euren Weg leichter machen.</part>	
+
+			<choice id="2111" nextText="991">Ich denke das geht auch. Dankeschön. Wir müssen uns jetzt wieder auf den Weg machen. Auf Wiedersehen!</choice>
+			<choice id="2112" nextText="992">Das klingt ganz nett, aber wir würden es vorziehen, wenn ihr uns anschließen würdet. Zusammen wären wir sicher stärker.</choice>
+			<choice id="2113" nextText="993">Nein danke.</choice>
+		</text>
+
+		<!-- 2.1.2 -->
+		<text id="212">
+			<part t="2.5" character="Bob">Wie ich bereits sagte, lehnen wir hier</part>
+			<part t="2.5" character="Bob">direkte körperliche Gewalt ab.</part>	
+			<part t="2.5" character="Bob">Aber ich besitze ein Schild, das euch schützt und zugleich</part>	
+			<part t="2.5" character="Bob">dem Angreifer Schaden zufügt.</part>	
+			<part t="2.5" character="Bob">Ihr könnt es haben. Das dürfte euch stärker machen.</part>	 
+		</text>
+
+		<!-- 2.1.3 -->
+		<text id="213">
+			<part t="2.5" character="Bob">Also wir lehnen hier direkte körperliche Gewalt ab.</part>
+			<part t="2.5" character="Bob">Zu viel Stress, versteht ihr?</part>	
+			<part t="2.5" character="Bob">Aber ich besitze ein Schild, das euch schützt und zugleich</part>	
+			<part t="2.5" character="Bob">dem Angreifer Schaden zufügt.</part>	
+			<part t="2.5" character="Bob">Ihr könnt es haben. Das dürfte euch euren Weg leichter machen.</part>
+
+			<choice id="2131" nextText="991">Ich denke das geht auch. Dankeschön. Wir müssen uns jetzt wieder auf den Weg machen. Auf Wiedersehen!</choice>
+			<choice id="2132" nextText="992">Das klingt ganz nett, aber wir würden es vorziehen, wenn ihr uns anschließen würdet. Zusammen wären wir sicher stärker.</choice>
+			<choice id="2133" nextText="993">Nein danke.</choice>
+		</text>
+
+		<!-- 2.1.4 -->
+		<text id="214">
+			<part t="2.5" character="Bob">Also wir lehnen hier direkte körperliche Gewalt ab.</part>
+			<part t="2.5" character="Bob">Zu viel Stress, versteht ihr?</part>	
+			<part t="2.5" character="Bob">Aber ich besitze ein Schild, das euch schützt und zugleich</part>	
+			<part t="2.5" character="Bob">dem Angreifer Schaden zufügt.</part>	
+			<part t="2.5" character="Bob">Ihr könnt es haben. Das dürfte euch stärker machen.</part>
+
+			<choice id="2141" nextText="991">Ich denke das geht auch. Dankeschön. Wir müssen uns jetzt wieder auf den Weg machen. Auf Wiedersehen!</choice>
+			<choice id="2142" nextText="992">Das klingt ganz nett, aber wir würden es vorziehen, wenn ihr uns anschließen würdet. Zusammen wären wir sicher stärker.</choice>
+			<choice id="2143" nextText="993">Nein danke.</choice>
+		</text>
+
+		<!-- 2.1.1.1.1, 2.1.3.1.1, 2.1.4.1.1 => 991 -->
+		<text id="991" exit="shield">
+			<part t="2.5" character="Bob">Tschüss Jungs. Passt auf euch auf und denkt daran</part>
+			<part t="2.5" character="Bob">dass das Schild nach der Verwendung erst wieder aufgeladen werden muss.</part>
+		</text>
+
+		<!-- 2.1.1.1.2, 2.1.3.1.2, 2.1.4.1.2 => 992 -->
+		<text id="992">
+			<part t="2.5" character="Bob">Ne Jungs, das ist leider nicht unser Ding.</part>
+			<part t="2.5" character="Bob">Ich kann euch nur das Schild anbieten.</part>
+
+			<choice id="9921" nextText="99211">Schade. Dann dankeschön für das Schild. Wir machen uns dann mal auf den Weg. Auf Wiedersehen!</choice>
+			<choice id="9922" nextText="99221">Schade, aber das Schild brauchen wir nicht.</choice>
+		</text>
+
+		<!-- 2.1.1.1.3, 2.1.3.1.3, 2.1.4.1.3 => 993 -->
+		<text id="993">
+			<part t="2.5" character="Bob">Oh ... okay, wie ihr wollt Jungs.</part>
+			<part t="2.5" character="Bob">Dann noch viel Glück auf eurem Weg.</part>
+
+			<choice id="9931" exit="_done_">Dankeschön. Auf Wiedersehen!</choice>
+		</text>
+
+		<!-- 9921.1 -->
+		<text id="99211" exit="shield">
+			<part t="2.5" character="Bob">Tschüss Jungs. Passt auf euch auf und denkt daran</part>
+			<part t="2.5" character="Bob">dass das Schild nach der Verwendung</part>	
+			<part t="2.5" character="Bob">erst wieder aufgeladen werden muss.</part>	
+		</text>
+
+		<!-- 9922.1 -->
+		<text id="99221">
+			<part t="2.5" character="Bob">Oh … okay, wie ihr wollt Jungs.</part>
+			<part t="2.5" character="Bob">Dann noch viel Glück auf eurem Weg.</part>
+			
+			<choice id="992211" exit="_done_">Dankeschön. Auf Wiedersehen!</choice>		
+		</text>
+
+		<!-- 2.2.1 -->
+		<text id="221">
+			<part t="2.5" character="Bob">Tschüss Jungs. Passt auf euch auf.</part>	
+		</text>
+	</conversation>
+</bw>

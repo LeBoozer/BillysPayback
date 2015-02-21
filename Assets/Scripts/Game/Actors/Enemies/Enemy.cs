@@ -169,7 +169,6 @@ public class Enemy : Hitable
         // Hit from above?
         if (Vector3.Dot(hitInfo.normal, Vector3.up) >= GameConfig.ENEMY_PLAYER_ABOVE_FACTOR)
         {
-
             // Player?
             if (hitable is Player)
                 (hitable as Player).jumpingFromAnEnemy();

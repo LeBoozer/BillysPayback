@@ -11,7 +11,7 @@ using System.Collections.Generic;
 /*
  * Moves the reference object along a certain path. All child game-objects will be used as path nodes!
  */
-public class MoveAlongPath : MonoBehaviour
+public class MoveAlongPath : MonoBehaviour, DeActivatable
 {
     // Represents a list with all possible end-rules
     public enum EndRule
@@ -25,6 +25,9 @@ public class MoveAlongPath : MonoBehaviour
         // Move the path in the opposite direction
         Return
     };
+
+    // True if activated
+    public bool m_isActivated = true;
 
     // The reference object
     public Transform m_reference = null;
@@ -88,6 +91,10 @@ public class MoveAlongPath : MonoBehaviour
         // Local variables
         float currentPathPosition = m_currentPathPosition;
 
+        // Activated?
+        if (m_isActivated == false)
+            return;
+
         // Valid?
         if (!m_validPath || m_isMovementStopped)
             return;
@@ -120,4 +127,24 @@ public class MoveAlongPath : MonoBehaviour
         // Copy position
         m_currentPathPosition = currentPathPosition;
 	}
+
+    // Override: DeActivatable::isActivated()
+    public bool isActivated()
+    {
+        return m_isActivated;
+    }
+
+    // Override: DeActivatable::Start()
+    public void onActivate()
+    {
+        // Set flag
+        m_isActivated = true;
+    }
+
+    // Override: DeActivatable::Start()
+    public void onDeactivate()
+    {
+        // Clear flag
+        m_isActivated = false;
+    }
 }
