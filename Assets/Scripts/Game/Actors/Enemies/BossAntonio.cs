@@ -76,10 +76,14 @@ public class BossAntonio : Hitable, Boss
         m_currentMovementDirection = 1;
         m_neededDistanceToPlayerForJumping = Mathf.Abs( m_groundedStartFlyValue / (4 * Physics.gravity.y) * GameConfig.ANTONIO_MAX_SPEED);
         m_velocityX = 0;
+
+        // init tag and layer
+        this.gameObject.tag = Tags.TAG_ENEMY;
+        this.gameObject.layer = Layer.getLayerIDByName(Layer.LAYER_ENEMY);
     }
 
 	// Use this for initialization
-	void Start () 
+	void Start ()
     {
         // seek player
         m_player = GameObject.FindGameObjectWithTag(Tags.TAG_PLAYER);
@@ -138,8 +142,11 @@ public class BossAntonio : Hitable, Boss
     #region Update 
 
 	// Update is called once per frame
-	void Update () 
+	void Update ()
     {
+        if (!m_active)
+            return;
+
 	    if(m_kiwanos != null)
             updateKiwano();
 

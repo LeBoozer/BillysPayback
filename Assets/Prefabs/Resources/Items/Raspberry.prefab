@@ -28,9 +28,9 @@ GameObject:
   - 4: {fileID: 400002}
   - 54: {fileID: 5400002}
   - 114: {fileID: 11445586}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Raspberry
-  m_TagString: ProjectilePlayer
+  m_TagString: ProjectileEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
