@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: 9c34da258daada049ac63455739f94c9
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bewak
+    100002: Body
+    100004: //RootNode
+    100006: Eyeball
+    100008: Eyeball001
+    100010: Feather001
+    100012: Feather002
+    100014: Feather003
+    100016: LeftEye
+    100018: LeftLeg
+    100020: LeftWing
+    100022: Legs
+    100024: LowerBeak
+    100026: Pupil
+    100028: Pupil001
+    100030: RightEye
+    100032: RightLeg
+    100034: RightWing
+    100036: Tail
+    100038: UpperBeak
+    100040: Wings
+    400000: Bewak
+    400002: Body
+    400004: //RootNode
+    400006: Eyeball
+    400008: Eyeball001
+    400010: Feather001
+    400012: Feather002
+    400014: Feather003
+    400016: LeftEye
+    400018: LeftLeg
+    400020: LeftWing
+    400022: Legs
+    400024: LowerBeak
+    400026: Pupil
+    400028: Pupil001
+    400030: RightEye
+    400032: RightLeg
+    400034: RightWing
+    400036: Tail
+    400038: UpperBeak
+    400040: Wings
+    2300000: Body
+    2300002: Eyeball
+    2300004: Eyeball001
+    2300006: Feather001
+    2300008: Feather002
+    2300010: Feather003
+    2300012: LeftLeg
+    2300014: LeftWing
+    2300016: LowerBeak
+    2300018: Pupil
+    2300020: Pupil001
+    2300022: RightLeg
+    2300024: RightWing
+    2300026: UpperBeak
+    3300000: Body
+    3300002: Eyeball
+    3300004: Eyeball001
+    3300006: Feather001
+    3300008: Feather002
+    3300010: Feather003
+    3300012: LeftLeg
+    3300014: LeftWing
+    3300016: LowerBeak
+    3300018: Pupil
+    3300020: Pupil001
+    3300022: RightLeg
+    3300024: RightWing
+    3300026: UpperBeak
+    4300000: UpperBeak
+    4300002: LowerBeak
+    4300004: Body
+    4300006: Pupil
+    4300008: Eyeball
+    4300010: LeftLeg
+    4300012: RightLeg
+    4300014: Pupil001
+    4300016: Eyeball001
+    4300018: Feather001
+    4300020: Feather002
+    4300022: Feather003
+    4300024: RightWing
+    4300026: LeftWing
+    9500000: //RootNode
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
