@@ -59,10 +59,16 @@ public class GameConfig
     public static readonly int      CHICO_LIFE_POINTS                           = 15;
     public static readonly float    CHICO_SPAWING_TIME_DIFFERENCE               = 5f;
     public static readonly int      CHICO_MAXIMALE_NUMBER_OF_LITTLE_BIRD        = 15;
+
     // Black Sparrow
     public static readonly int      BS_LIFE_POINTS                              = 15;
     public static readonly float    BS_THROW_DIFFENRENCE                        = 2f;
     public static readonly float    BS_FEATHER_VELOCITY                         = 1000f;
+
+    // Antonio
+    public static readonly int      ANTONIO_LIFE_POINTS                         = 10;
+    public static readonly float    ANTONIO_MAX_SPEED                           = 8f;
+    public static readonly float    ANTONIO_JUMP_HEIGHT                         = 4f;
 
 
 }

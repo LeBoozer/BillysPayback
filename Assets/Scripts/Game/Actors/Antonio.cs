@@ -59,7 +59,7 @@ public class Antonio : MonoBehaviour
     // chase variables
     private int                         m_iteration;
     private int                         m_samplingRate              = 10;
-    public float                       m_targetDistance;
+    public float                        m_targetDistance;
     private Vector3                     m_nextWayPoint;
     
     // throw variable
