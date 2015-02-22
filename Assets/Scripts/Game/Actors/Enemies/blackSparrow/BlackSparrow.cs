@@ -58,7 +58,7 @@ public class BlackSparrow : Enemy, Boss
 
     // death handling
     private bool                m_isActive;
-    private LinkedList<Action>  m_deathEvent;
+    private LinkedList<Action>  m_deathEvent = new LinkedList<Action>();
     private LinkedList<Feather>  m_flyingFeather;
 
     // external Objects
@@ -68,10 +68,10 @@ public class BlackSparrow : Enemy, Boss
     #endregion
 
     // Use this for initialization
-	void Start () 
+	void Awake () 
     {
         // init values
-        m_isActive = true;
+        m_isActive = false;
         m_deathEvent = new LinkedList<Action>();
         m_flyingFeather = new LinkedList<Feather>();
         m_allowToMove = false;
@@ -92,7 +92,7 @@ public class BlackSparrow : Enemy, Boss
             m_player = _obj.transform;
 
         // call base start
-        base.Start();
+        base.Awake();
 	}
 
     void FixedUpdate()
@@ -136,7 +136,6 @@ public class BlackSparrow : Enemy, Boss
             node = nextNode;
         }
         while (node != null);
-
     }
 
     /**
@@ -150,7 +149,6 @@ public class BlackSparrow : Enemy, Boss
         // cannot throw feather?
         if (m_nextFeatherThrow > 0)
             return;
-
 
         createFeather(new Vector3(m_direction * m_controller.radius * m_worldScale.x, m_controller.height / 2 * m_worldScale.y, 0));
         createFeather(new Vector3(0, m_controller.height / 2 * m_worldScale.y, m_controller.radius * m_worldScale.z));
@@ -190,8 +188,6 @@ public class BlackSparrow : Enemy, Boss
             m_flyingFeather.AddLast(f);
         }
     }
-
-
 
     #region Boss
 

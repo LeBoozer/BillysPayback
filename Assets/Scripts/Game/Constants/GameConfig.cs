@@ -58,7 +58,7 @@ public class GameConfig
     // Chico
     public static readonly int      CHICO_LIFE_POINTS                           = 15;
     public static readonly float    CHICO_SPAWING_TIME_DIFFERENCE               = 5f;
-    public static readonly int      CHICO_MAXIMALE_NUMBER_OF_LITTLE_BIRD        = 15;
+    public static readonly int      CHICO_MAXIMALE_NUMBER_OF_LITTLE_BIRD        = 3;
     // Black Sparrow
     public static readonly int      BS_LIFE_POINTS                              = 15;
     public static readonly float    BS_THROW_DIFFENRENCE                        = 2f;

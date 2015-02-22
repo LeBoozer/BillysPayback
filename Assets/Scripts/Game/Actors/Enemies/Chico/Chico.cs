@@ -25,7 +25,7 @@ public class Chico : Enemy, Boss
 
     // death handling
     private bool                        m_isAlive;
-    private LinkedList<Action>          m_deathEvent;
+    private LinkedList<Action>          m_deathEvent = new LinkedList<Action>();
 
 
     #endregion
@@ -39,7 +39,7 @@ public class Chico : Enemy, Boss
         m_canFall = false;
 
         // base start
-        base.Start();
+        base.Awake();
 
         // set some important values
         m_direction = 0;
