@@ -43,7 +43,7 @@ public class Enemy : Hitable
     }
 
 	// Use this for initialization
-	internal void Start ()
+	internal void Awake ()
     {
         m_direction = (this.transform.rotation.eulerAngles.y < 181 && this.transform.rotation.eulerAngles.y > 179) ? 1 : -1;
 		m_fly = 0;

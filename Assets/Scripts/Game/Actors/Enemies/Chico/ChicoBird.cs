@@ -21,7 +21,7 @@ public class ChicoBird : Enemy
             m_player = _p.transform;
 
         // base.start()
-        base.Start();
+        base.Awake();
         m_groundFlyValue *= 2f;
 	}
 

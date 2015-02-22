@@ -63,7 +63,7 @@ public class Higgins : Enemy, Boss
 
         // let call the method of the base
         m_canFly = true;
-        base.Start();
+        base.Awake();
 
         // higgins not active at start
         m_active = false;

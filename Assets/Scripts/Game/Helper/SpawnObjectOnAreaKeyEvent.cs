@@ -24,9 +24,6 @@ public class SpawnObjectOnAreaKeyEvent : MonoBehaviour, DeActivatable
     // The world offset for the spawned object
     public Vector3          m_worldOffset = Vector3.zero;
 
-    // The world scale
-    private Vector3         m_worldScale;
-
     // Override: MonoBehaviour::Awake
     void Awake()
     {
@@ -50,9 +47,6 @@ public class SpawnObjectOnAreaKeyEvent : MonoBehaviour, DeActivatable
                 m_areaKeyEvent = null;
             }
         };
-
-        // Calculate world scale
-        m_worldScale = HelperFunctions.getWorldScale(gameObject);
     }
 
     // Override: MonoBehaviour::OnDestroy
