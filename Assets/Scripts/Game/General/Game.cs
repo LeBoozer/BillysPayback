@@ -65,7 +65,7 @@ public class Game
     }
 
 	// Returns the singleton instance
-	public static Game	Instance
+	public static Game Instance
 	{
 		get
 		{
@@ -92,7 +92,7 @@ public class Game
 			// Add components
 			m_singletonInstance.m_gsm 			= m_singletonInstance.m_singletonGameObject.AddComponent<GameStateMaschine>();
 			m_singletonInstance.m_playerData 	= m_singletonInstance.m_singletonGameObject.AddComponent<PlayerData>();
-			m_singletonInstance.m_scriptEngine  = m_singletonInstance.m_singletonGameObject.AddComponent<ScriptEngineHolder>();            
+			m_singletonInstance.m_scriptEngine  = m_singletonInstance.m_singletonGameObject.AddComponent<ScriptEngineHolder>();
 
 			return m_singletonInstance;		
 		}

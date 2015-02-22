@@ -46,5 +46,6 @@ public class TA_ChangeAntonio : FSMAction
 
         // Set attributes
         ant.m_chase = m_followPlayer;
+        ant.m_targetDistance = float.MaxValue;
 	}
 }

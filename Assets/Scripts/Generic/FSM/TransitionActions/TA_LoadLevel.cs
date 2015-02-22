@@ -20,6 +20,6 @@ public class TA_LoadLevel : FSMAction
     {
         // Load level
         if (m_levelName != null && m_levelName.Length > 0)
-            Application.LoadLevel(m_levelName);
+              Application.LoadLevel(m_levelName);
     }
 }
