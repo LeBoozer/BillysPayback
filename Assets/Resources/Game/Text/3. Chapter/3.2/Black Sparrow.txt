@@ -1,0 +1,8 @@
+﻿<bw>
+	<conversation id="0" start="0">
+		<text id="0">
+			<part t="2.5" character="Black Sparrow">Ich hätte nicht erwartet, dass du es bis hierhin schaffst.</part>
+			<part t="2.5" character="Black Sparrow"> Nun ist es an der Zeit für dich zu sterben!"</part>
+		</text>
+	</conversation>
+</bw>

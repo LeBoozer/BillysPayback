@@ -1,0 +1,10 @@
+﻿<bw>
+	<conversation id="0" start="0">
+		<text id="0">
+			<part t="2.5" character="Billy">Was ist das?</part>
+			<part t="2.5" character="Antonio">Das ist ja interessant. Sieht aus wie ein Teil von einem Schlüssel.</part>
+			<part t="2.5" character="Antonio">Die Vögel müssen es verloren haben. Lass es uns aufheben,</part>
+			<part t="2.5" character="Antonio">wer weiß, für was wir es noch gebrauchen können.</part>
+		</text>
+	</conversation>
+</bw>
