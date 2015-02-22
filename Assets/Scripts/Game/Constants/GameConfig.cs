@@ -48,8 +48,19 @@ public class GameConfig
     public static readonly float    ENEMY_JUMP_HEIGHT                           = 0.5f;
 
     // Boss values
+    // Higgins
     public static readonly int      HIGGINS_LIFE_POINTS                         = 25;
     public static readonly float    HIGGINS_THROW_DIFFENRENCE                   = 2f;
     public static readonly float    HIGGINS_IMPACT_TIME                         = 5f;
+
+    // Chico
+    public static readonly int      CHICO_LIFE_POINTS                           = 15;
+    public static readonly float    CHICO_SPAWING_TIME_DIFFERENCE               = 5f;
+    public static readonly int      CHICO_MAXIMALE_NUMBER_OF_LITTLE_BIRD        = 15;
+    // Black Sparrow
+    public static readonly int      BS_LIFE_POINTS                              = 15;
+    public static readonly float    BS_THROW_DIFFENRENCE                        = 2f;
+    public static readonly float    BS_FEATHER_VELOCITY                         = 1000f;
+
 
 }

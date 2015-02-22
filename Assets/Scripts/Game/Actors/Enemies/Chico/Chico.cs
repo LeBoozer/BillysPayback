@@ -27,9 +27,6 @@ public class Chico : Enemy, Boss
     private bool                        m_isAlive;
     private LinkedList<Action>          m_deathEvent;
 
-    // const
-    private readonly float  SPAWING_TIME_DIFFERENCE = 5f;
-    private readonly int    MAXIMALE_NUMBER_OF_LITTLE_BIRD = 15;
 
     #endregion
 
@@ -46,7 +43,7 @@ public class Chico : Enemy, Boss
 
         // set some important values
         m_direction = 0;
-        m_lifepoints = 15;
+        m_lifepoints = GameConfig.CHICO_LIFE_POINTS;
 
         // last spawn time for the chico birds
         m_allowToSpawn = false;
@@ -84,7 +81,7 @@ public class Chico : Enemy, Boss
         }
 
         //
-        if (m_allowToSpawn && m_lastSpawnTime <= 0 && m_chicosActiveCrew.transform.childCount + m_spawningCrewPrefab.transform.childCount <= MAXIMALE_NUMBER_OF_LITTLE_BIRD)
+        if (m_allowToSpawn && m_lastSpawnTime <= 0 && m_chicosActiveCrew.transform.childCount + m_spawningCrewPrefab.transform.childCount <= GameConfig.CHICO_MAXIMALE_NUMBER_OF_LITTLE_BIRD)
         {
             // create new crew
             GameObject newCrew = Instantiate(m_spawningCrewPrefab) as GameObject;
@@ -104,7 +101,7 @@ public class Chico : Enemy, Boss
             Destroy(newCrew);
             
             // save time
-            m_lastSpawnTime = SPAWING_TIME_DIFFERENCE;
+            m_lastSpawnTime = GameConfig.CHICO_SPAWING_TIME_DIFFERENCE;
 
             // let jump 
             m_fly = Mathf.Sqrt(GameConfig.ENEMY_JUMP_HEIGHT * m_controller.height * m_worldScale.y * this.transform.localScale.y * Mathf.Abs(Physics.gravity.y));

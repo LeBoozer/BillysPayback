@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 437256}
   - 33: {fileID: 3337256}
   - 23: {fileID: 2337256}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GeoSphere001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 437258}
   - 33: {fileID: 3337258}
   - 23: {fileID: 2337258}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cone001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 437260}
   - 95: {fileID: 9537256}
-  m_Layer: 0
+  - 64: {fileID: 6400000}
+  m_Layer: 12
   m_Name: FeatherDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,9 +59,11 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 437262}
-  m_Layer: 0
+  - 114: {fileID: 11400000}
+  - 54: {fileID: 5400000}
+  m_Layer: 12
   m_Name: Feather
-  m_TagString: Untagged
+  m_TagString: ProjectileEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,6 +173,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137258}
   m_Mesh: {fileID: 4300002, guid: c0e7e7b4d15b7c04195a6aa4029258a6, type: 3}
+--- !u!54 &5400000
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137262}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!64 &6400000
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137260}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300004, guid: b59f872d687a8a049849aac98e648cd0, type: 3}
 --- !u!95 &9537256
 Animator:
   serializedVersion: 3
@@ -185,6 +216,17 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bbbb14baadc18b4bad24826ca2ccdad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
