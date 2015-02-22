@@ -283,6 +283,7 @@ public class Player : Hitable
             m_velocityY = 0;
             Debug.Log("Player: y is NaN");
         }
+        m_velocityX += 0.0001f;
         m_controller.Move(new Vector3(m_velocityX, m_velocityY, -this.transform.position.z / Time.deltaTime) * Time.deltaTime * m_velocityFactor);
 		m_startJumpTime += Time.deltaTime;
 		

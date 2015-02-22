@@ -52,6 +52,8 @@ public class GameConfig
     public static readonly int      HIGGINS_LIFE_POINTS                         = 25;
     public static readonly float    HIGGINS_THROW_DIFFENRENCE                   = 2f;
     public static readonly float    HIGGINS_IMPACT_TIME                         = 5f;
+    public static readonly float    HIGGINS_VELOCITY_OF_THE_EGGS                = 1000f;
+
 
     // Chico
     public static readonly int      CHICO_LIFE_POINTS                           = 15;

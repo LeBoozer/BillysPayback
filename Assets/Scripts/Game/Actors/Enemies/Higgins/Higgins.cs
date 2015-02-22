@@ -26,9 +26,9 @@ public class Higgins : Enemy, Boss
 
     private bool                    m_active;
     private LinkedList<Action>      m_deathEvent = new LinkedList<Action>();
-
+    
 	// Use this for initialization
-    void Awake () 
+    void Start () 
     {
         // set lifepoints
         m_lifepoints = GameConfig.HIGGINS_LIFE_POINTS;
@@ -70,6 +70,10 @@ public class Higgins : Enemy, Boss
 
         // calculate the radius to activate Higgins
         m_sqrActivateRadius = Mathf.Pow(m_controller.radius * m_worldScale.x * 5, 2);
+
+        //turnAround();
+        m_direction *= -1;
+        this.m_groundFlyValue /= 4;
 	}
 
     void FixedUpdate()
@@ -99,29 +103,23 @@ public class Higgins : Enemy, Boss
         if (m_lastEggThrow + GameConfig.HIGGINS_THROW_DIFFENRENCE < Time.time)
         { 
             // throw egg
-            //ThrownEgg = Resources.Load<GameObject>("Items/ThrownEgg");
-            //if (ThrownEgg == null)
-                //return;
             GameObject g = Instantiate(ThrownEgg) as GameObject;
             Rigidbody r = g.GetComponent<Rigidbody>();
             if (r == null)
                 Debug.LogError("no Rigidbody");
             else
             {
-                r.transform.position = this.transform.position + new Vector3(0, m_controller.height / 2 * transform.localScale.y * m_worldScale.y
-                                                                                , -m_controller.radius * transform.localScale.z * m_worldScale.z);
                 // big eggs for higgins
                 r.transform.parent = transform.parent;
+                r.transform.position = this.transform.position + new Vector3(0, m_controller.height / 2 * m_worldScale.y
+                                                                                , -m_controller.radius * m_worldScale.z);
                 r.transform.localScale *= 2;
                 r.useGravity = false;
 
-                //Debug.Log("Player: " + m_player.position.x + "\tr: " + r.transform.position.x);
                 // calculate force to throw this egg
-                Vector3 impact = new Vector3((m_player.position.x - r.transform.position.x) / GameConfig.HIGGINS_IMPACT_TIME * m_worldScale.x ,
-                                                ((m_player.position.y - r.transform.position.y) * m_worldScale.y / GameConfig.HIGGINS_IMPACT_TIME - m_worldScale.y * Physics.gravity.y / 2 * GameConfig.HIGGINS_IMPACT_TIME),
-                                                (m_player.position.z - r.transform.position.z) / GameConfig.HIGGINS_IMPACT_TIME * m_worldScale.z);
-                impact = m_player.position - r.transform.position;
-                impact *= 100;
+                Vector3 impact = m_player.position - r.transform.position;
+                impact.Normalize();
+                impact *= GameConfig.HIGGINS_VELOCITY_OF_THE_EGGS;
                 
                 r.AddForce(impact, ForceMode.Force);
             }

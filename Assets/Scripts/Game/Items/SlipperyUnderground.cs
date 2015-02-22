@@ -38,7 +38,6 @@ public class SlipperyUnderground : MonoBehaviour {
         _p.setImpedimentJumping(m_blockJumping);
         _p.setImpedimentVelocity(m_velocityFactor);
         _p.setImpedimentSlip(m_slipDirection);
-        Debug.Log("Enter");
     }
 
     /**
@@ -61,8 +60,6 @@ public class SlipperyUnderground : MonoBehaviour {
         _p.setImpedimentJumping(false);
         _p.setImpedimentVelocity(1f);
         _p.setImpedimentSlip(Vector2.zero);
-
-        Debug.Log("Exit");
     }
 
 }
