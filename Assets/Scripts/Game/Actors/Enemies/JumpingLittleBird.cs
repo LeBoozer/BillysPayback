@@ -14,6 +14,7 @@ using System.Collections;
  */
 public class JumpingLittleBird : Hitable
 {
+
     #region Variable
     private float                       m_fly;
     private float                       m_groundFlyValue;
