@@ -25,6 +25,7 @@ public class Enemy : Hitable
 	public 	bool		            m_canFly			= false;
 	public  bool		            m_canFall			= false;
 	public  bool		            m_allowToMove		= false;
+    public  bool                    m_needTurnAround    = false;
 	private bool 		            first;
     protected CharacterController   m_controller;
 
@@ -60,7 +61,7 @@ public class Enemy : Hitable
         // calculate death value
         m_deathValue = -Mathf.Sqrt(Mathf.Abs(Physics.gravity.y) * 50 * m_worldScale.y * this.transform.localScale.y);
 	}
-
+   
     // Override: Monobehaviour::FixedUpdate()
     internal void FixedUpdate()
     {
@@ -70,6 +71,14 @@ public class Enemy : Hitable
         Vector3 rayDir = Vector3.zero;
         float rayDist = m_controller.stepOffset;
         bool isHit = false;
+
+        // Turn around
+        if (m_needTurnAround) 
+        {
+            m_controller.Move(Vector3.right * -m_direction * m_worldScale.x * 0.05f);
+            turnAround();
+            m_needTurnAround = false;
+        }
 
         // Allow to move
         if (!m_allowToMove)
@@ -87,6 +96,8 @@ public class Enemy : Hitable
         // Calculate ray
         rayOrigin = transform.position + Vector3.left * -m_direction * m_controller.radius * m_worldScale.x;
         rayDir = Vector3.down;
+
+        Debug.DrawRay(rayOrigin, rayDir, Color.red);
 
         // Execute raycast
         int ignoreLayerMask = ~(1 << LayerMask.NameToLayer(Layer.LAYER_COLLECTABLE)
@@ -194,8 +205,9 @@ public class Enemy : Hitable
         // Collided sidewards?
         if ((m_controller.collisionFlags & CollisionFlags.CollidedSides) != 0 && hitable is Projectile == false)
         {
-            m_controller.Move(Vector3.right * -m_direction * m_worldScale.x * 0.01f);
-            turnAround();
+            m_needTurnAround = true;
+            //m_controller.Move(Vector3.right * -m_direction * m_worldScale.x * 0.05f);
+            //turnAround();
         }
 
         // Hitable?
