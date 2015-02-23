@@ -112,6 +112,9 @@ public class PlayerData : MonoBehaviour
 	// Number of collected diamonds
 	public int m_collectedDiamonds	= 0;
 
+    // Level for the 
+    private int m_diamondsLevel = 1;
+
 	// OnChange-Event for: collected diamonds
 	public event Delegate_OnAttributeChanged OnChangeCollectedDiamonds = delegate{};
 
@@ -124,6 +127,14 @@ public class PlayerData : MonoBehaviour
 			m_collectedDiamonds = value;
 			if(m_collectedDiamonds < 0)
 				m_collectedDiamonds = 0;
+
+            if (m_collectedDiamonds == GameConfig.BILLY_NEEDED_DIAMONDS_FOR_NEW_LIFE * m_diamondsLevel)
+            {
+                m_collectedDiamonds = 0;
+                ++m_diamondsLevel;
+                ++LifeNumber;
+            }
+
 			OnChangeCollectedDiamonds(m_collectedDiamonds);
 		}
 	}

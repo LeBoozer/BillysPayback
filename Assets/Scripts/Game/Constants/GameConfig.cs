@@ -27,6 +27,7 @@ public class GameConfig
 	public static readonly float 	BILLY_JUMP_HEIGHT_FROM_ENEMY 	            = 2f;
     public static readonly float    BILLY_MINIMAL_KEYPRESS_TIME_FOR_JUMPING     = 0.1f;
     public static readonly float    BILLY_MAXIMAL_KEYPRESS_TIME_FOR_JUMPING     = 0.5f;
+    public static readonly int      BILLY_NEEDED_DIAMONDS_FOR_NEW_LIFE          = 10;
 
     // Antonio related values
     public static readonly float    ANTONIO_DISTANCE_MEAN_VALUE                 = 6f;
