@@ -26,14 +26,8 @@ public class PowerUps : MonoBehaviour
 
     public bool                     m_moveToPlayer  = false;
 
-    // The audio clip
-    public AudioClip                m_audioClip     = null;
-
-    // The volume scale
-    public float                    m_volumeScale   = 1.0f;
-
-    // The particle system for the on-collect effect
-    private ParticleSystem          m_particleOnCollect = null;
+    // Helper class for on destroy/collect effects
+    private PowerUpsOnDestroy       m_onDestroyHelper = null;
 
     // Override: MonoBehaviour::Awake()
     void Awake()
@@ -45,8 +39,8 @@ public class PowerUps : MonoBehaviour
         // Randomly rotate
         transform.Rotate(Vector3.up * Random.value * 100 * GameConfig.DIAMONG_ROTATION_SPEED);
 
-        // Try to get the particle effect "on collect"
-        m_particleOnCollect = GetComponentInChildren<ParticleSystem>();
+        // Try to get on destroy helper
+        m_onDestroyHelper = GetComponentInChildren<PowerUpsOnDestroy>();
     }
 
     // Override: MonoBehaviour::Start()
@@ -90,21 +84,18 @@ public class PowerUps : MonoBehaviour
             else
                 m_playerData.increaseStockSizeByValue(m_type, 1);
 
-            // On collect particle system available?
-            if(m_particleOnCollect != null)
+            // On destroy/collect helper available?
+            if (m_onDestroyHelper != null)
             {
                 // Change parent
-                m_particleOnCollect.transform.parent = transform.parent;
-                Object.Destroy(m_particleOnCollect.gameObject, m_particleOnCollect.duration);
-                m_particleOnCollect.Play();
+                m_onDestroyHelper.transform.parent = transform.parent;
+
+                // Play
+                m_onDestroyHelper.onAction();
             }
 
             // Destory object
             GameObject.Destroy(gameObject);
-
-            // Play sound?
-            if (m_audioClip != null)
-                AudioSource.PlayClipAtPoint(m_audioClip, transform.position, m_volumeScale);
         }
     }
 }
