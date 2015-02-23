@@ -25,7 +25,7 @@ public class Enemy : Hitable
 	public 	bool		            m_canFly			= false;
 	public  bool		            m_canFall			= false;
 	public  bool		            m_allowToMove		= false;
-    public  bool                    m_needTurnAround    = false;
+    private  bool                   m_needTurnAround    = false;
 	private bool 		            first;
     protected CharacterController   m_controller;
 
@@ -96,8 +96,6 @@ public class Enemy : Hitable
         // Calculate ray
         rayOrigin = transform.position + Vector3.left * -m_direction * m_controller.radius * m_worldScale.x;
         rayDir = Vector3.down;
-
-        Debug.DrawRay(rayOrigin, rayDir, Color.red);
 
         // Execute raycast
         int ignoreLayerMask = ~(1 << LayerMask.NameToLayer(Layer.LAYER_COLLECTABLE)
