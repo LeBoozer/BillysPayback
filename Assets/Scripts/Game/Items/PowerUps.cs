@@ -32,6 +32,9 @@ public class PowerUps : MonoBehaviour
     // The volume scale
     public float                    m_volumeScale   = 1.0f;
 
+    // The particle system for the on-collect effect
+    private ParticleSystem          m_particleOnCollect = null;
+
     // Override: MonoBehaviour::Awake()
     void Awake()
     {
@@ -41,6 +44,9 @@ public class PowerUps : MonoBehaviour
 
         // Randomly rotate
         transform.Rotate(Vector3.up * Random.value * 100 * GameConfig.DIAMONG_ROTATION_SPEED);
+
+        // Try to get the particle effect "on collect"
+        m_particleOnCollect = GetComponentInChildren<ParticleSystem>();
     }
 
     // Override: MonoBehaviour::Start()
@@ -83,6 +89,15 @@ public class PowerUps : MonoBehaviour
                 ++m_playerData.m_lifePoints;
             else
                 m_playerData.increaseStockSizeByValue(m_type, 1);
+
+            // On collect particle system available?
+            if(m_particleOnCollect != null)
+            {
+                // Change parent
+                m_particleOnCollect.transform.parent = transform.parent;
+                Object.Destroy(m_particleOnCollect.gameObject, m_particleOnCollect.duration);
+                m_particleOnCollect.Play();
+            }
 
             // Destory object
             GameObject.Destroy(gameObject);
