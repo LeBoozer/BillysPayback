@@ -14,11 +14,8 @@ public class Egg : MonoBehaviour {
 	public  EggType 			m_eggType = EggType.NOTHING;
 	private GameObject			m_nextPowerUp;
 
-    // The audio clip
-    public AudioClip    m_audioClip = null;
-
-    // The volume scale
-    public float        m_volumeScale = 1.0f;
+    // Helper class for on destroy/collect effects
+    private PowerUpsOnDestroy m_onDestroyHelper = null;
 
 	// Use this for initialization
 	void Start () 
@@ -44,6 +41,9 @@ public class Egg : MonoBehaviour {
 			break;
 		}
 		m_nextPowerUp = m_nextPowerUp1 as GameObject;
+
+        // Try to get on destroy helper
+        m_onDestroyHelper = GetComponentInChildren<PowerUpsOnDestroy>();
 	}
 
     /**
@@ -69,12 +69,18 @@ public class Egg : MonoBehaviour {
                 obj.transform.localScale = m_nextPowerUp.transform.localScale;
             }
 
+            // On destroy/collect helper available?
+            if (m_onDestroyHelper != null)
+            {
+                // Change parent
+                m_onDestroyHelper.transform.parent = transform.parent;
+
+                // Play
+                m_onDestroyHelper.onAction();
+            }
+
             // Destroy
             GameObject.Destroy(gameObject);
-
-            // Play sound?
-            if (m_audioClip != null)
-                AudioSource.PlayClipAtPoint(m_audioClip, transform.position, m_volumeScale);
         }
     }
 }

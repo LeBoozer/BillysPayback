@@ -24,15 +24,14 @@ public class Enemy : Hitable
 	public  int			            m_lifepoints 		= 1;
 	public 	bool		            m_canFly			= false;
 	public  bool		            m_canFall			= false;
-	public  bool		            m_allowToMove		= true;
+	public  bool		            m_allowToMove		= false;
+    public  bool                    m_needTurnAround    = false;
 	private bool 		            first;
     protected CharacterController   m_controller;
 
     protected Vector3               m_worldScale = Vector3.zero;
 
     public string                   m_transmitter = "";
-
-    Object                          _obj;
 	#endregion
 
     /**
@@ -61,20 +60,25 @@ public class Enemy : Hitable
 
         // calculate death value
         m_deathValue = -Mathf.Sqrt(Mathf.Abs(Physics.gravity.y) * 50 * m_worldScale.y * this.transform.localScale.y);
-
-        _obj = new Object();
 	}
-
+   
     // Override: Monobehaviour::FixedUpdate()
     internal void FixedUpdate()
     {
-        debug("FixedUpdate Start");
         // Local variables
         RaycastHit hit;
         Vector3 rayOrigin = Vector3.zero;
         Vector3 rayDir = Vector3.zero;
         float rayDist = m_controller.stepOffset;
         bool isHit = false;
+
+        // Turn around
+        if (m_needTurnAround) 
+        {
+            m_controller.Move(Vector3.right * -m_direction * m_worldScale.x * 0.05f);
+            turnAround();
+            m_needTurnAround = false;
+        }
 
         // Allow to move
         if (!m_allowToMove)
@@ -92,6 +96,8 @@ public class Enemy : Hitable
         // Calculate ray
         rayOrigin = transform.position + Vector3.left * -m_direction * m_controller.radius * m_worldScale.x;
         rayDir = Vector3.down;
+
+        Debug.DrawRay(rayOrigin, rayDir, Color.red);
 
         // Execute raycast
         int ignoreLayerMask = ~(1 << LayerMask.NameToLayer(Layer.LAYER_COLLECTABLE)
@@ -114,9 +120,8 @@ public class Enemy : Hitable
     }
 	
 	// Update is called once per frame
-	internal void Update ()
-    {
-        debug("Update Start");
+	internal void Update () 
+	{
 		if (!m_allowToMove)
 			return;
 
@@ -125,13 +130,9 @@ public class Enemy : Hitable
             Destroy(this.gameObject);
 
 		// set new position
-        lock (_obj)
-        {
-            m_controller.Move(Time.deltaTime * new Vector3(m_direction * GameConfig.ENEMY_MAX_SPEED, 							// x-direction
-                                                                m_fly, 	// fly/falling value
-                                                                -this.transform.position.z / Time.deltaTime)); // move object to z = 0
-        }
-        debug("Update End");
+		m_controller.Move (Time.deltaTime * new Vector3 (m_direction * GameConfig.ENEMY_MAX_SPEED, 							// x-direction
+		                   	             					m_fly, 	// fly/falling value
+		                                					-this.transform.position.z / Time.deltaTime) ); // move object to z = 0
 	}
 
 
@@ -204,11 +205,9 @@ public class Enemy : Hitable
         // Collided sidewards?
         if ((m_controller.collisionFlags & CollisionFlags.CollidedSides) != 0 && hitable is Projectile == false)
         {
-            lock (_obj)
-            {
-                m_controller.Move(Vector3.right * -m_direction * m_worldScale.x * 0.01f);
-                turnAround();
-            }
+            m_needTurnAround = true;
+            //m_controller.Move(Vector3.right * -m_direction * m_worldScale.x * 0.05f);
+            //turnAround();
         }
 
         // Hitable?
