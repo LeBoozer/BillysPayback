@@ -21,11 +21,17 @@ public class DestroyEntry : MonoBehaviour, DeActivatable
     // Delay in seconds for the second sound
     public float m_source1Delay = 0.0f;
 
+    // Delay in seconds for the third sound
+    public float m_source2Delay = 0.0f;
+
     // The first audio source
     private AudioSource m_source0 = null;
 
     // The second audio source
     private AudioSource m_source1 = null;
+
+    // The third audio source
+    private AudioSource m_source2 = null;
 
     // The particle system
     private ParticleSystem m_ps = null;
@@ -46,13 +52,14 @@ public class DestroyEntry : MonoBehaviour, DeActivatable
 
         // Get audio sources
         sources = GetComponents<AudioSource>();
-        if(sources == null || sources.Length != 2)
+        if(sources == null || sources.Length != 3)
         {
-            Debug.LogError("The object is supposed to have to two audio sources!");
+            Debug.LogError("The object is supposed to have to three audio sources!");
             return;
         }
         m_source0 = sources[0];
         m_source1 = sources[1];
+        m_source2 = sources[2];
 
         // Disable all child object
         foreach (Transform child in transform)
@@ -81,6 +88,7 @@ public class DestroyEntry : MonoBehaviour, DeActivatable
         // Play sounds
         m_source0.PlayDelayed(m_source0Delay);
         m_source1.PlayDelayed(m_source1Delay);
+        m_source2.PlayDelayed(m_source2Delay);
     }
 
     // Override: DeActivatable::onDeactivate()
