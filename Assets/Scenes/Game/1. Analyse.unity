@@ -1270,7 +1270,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2129,7 +2129,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 49822506}
   - 114: {fileID: 49822507}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -2162,7 +2162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8740894dbd1ea149ab78537a66ae02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_eggType: 3
+  m_eggType: 2
 --- !u!1 &49912519
 GameObject:
   m_ObjectHideFlags: 0
@@ -2418,7 +2418,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 8249003540741a74eaa71f16b9de7877, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2836,7 +2836,7 @@ GameObject:
   - 33: {fileID: 58306827}
   - 23: {fileID: 58306826}
   - 64: {fileID: 58306824}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3109,7 +3109,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: b542c7d5f62bcb04f848ebea9c004012, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -5163,7 +5163,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: c1374cf43cd9389418f8ce153c1a2cf3, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -7961,7 +7961,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 135296042}
   - 114: {fileID: 135296044}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -7994,7 +7994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8740894dbd1ea149ab78537a66ae02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_eggType: 3
+  m_eggType: 2
 --- !u!1 &136625014
 GameObject:
   m_ObjectHideFlags: 0
@@ -9341,7 +9341,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 8249003540741a74eaa71f16b9de7877, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -9911,6 +9911,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 4.68328619
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8249003540741a74eaa71f16b9de7877, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 1798729689}
@@ -10225,7 +10229,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 179626206}
   - 114: {fileID: 179626208}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: ShiningDestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -12704,7 +12708,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: d3eae5d2bc1dcbd48a864b77419390ca, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -12729,7 +12733,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 216517395}
   - 114: {fileID: 216517397}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -12762,7 +12766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8740894dbd1ea149ab78537a66ae02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_eggType: 3
+  m_eggType: 2
 --- !u!1 &218197171
 GameObject:
   m_ObjectHideFlags: 0
@@ -13000,7 +13004,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -14454,7 +14458,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 252008448}
   - 114: {fileID: 252008449}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -14487,7 +14491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8740894dbd1ea149ab78537a66ae02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_eggType: 3
+  m_eggType: 2
 --- !u!1 &253183385
 GameObject:
   m_ObjectHideFlags: 0
@@ -19142,6 +19146,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 4.61792421
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3932d7bbc00a50b49a9aac69827522cc, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 1145375796}
@@ -19777,6 +19785,10 @@ Prefab:
       propertyPath: m_Name
       value: FirstStep
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8249003540741a74eaa71f16b9de7877, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 1499142047}
@@ -20693,7 +20705,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 347022218}
   - 114: {fileID: 347022219}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22253,6 +22265,10 @@ Prefab:
       propertyPath: m_Name
       value: NarrowPathTile
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d3eae5d2bc1dcbd48a864b77419390ca, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
   m_RootGameObject: {fileID: 851675059}
@@ -22519,7 +22535,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 364770877}
   - 114: {fileID: 364770878}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23783,6 +23799,10 @@ Prefab:
       propertyPath: m_Name
       value: FirstStep
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3932d7bbc00a50b49a9aac69827522cc, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 1615191853}
@@ -24054,7 +24074,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 8249003540741a74eaa71f16b9de7877, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -24183,7 +24203,7 @@ GameObject:
   - 33: {fileID: 379843796}
   - 23: {fileID: 379843795}
   - 64: {fileID: 379843793}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24498,6 +24518,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 164.239334
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b542c7d5f62bcb04f848ebea9c004012, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
   m_RootGameObject: {fileID: 247472860}
@@ -24726,7 +24750,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 6ba4be0ee8fca084ba66df0f7bca3554, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -24967,6 +24991,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 857624897}
@@ -25441,7 +25469,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 8249003540741a74eaa71f16b9de7877, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -26432,6 +26460,10 @@ Prefab:
       propertyPath: m_Name
       value: FourthStep
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3932d7bbc00a50b49a9aac69827522cc, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 979930764}
@@ -28916,6 +28948,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 11.5312061
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8249003540741a74eaa71f16b9de7877, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
   m_RootGameObject: {fileID: 734012789}
@@ -31720,7 +31756,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 528090930}
   - 114: {fileID: 528090932}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -31753,7 +31789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8740894dbd1ea149ab78537a66ae02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_eggType: 3
+  m_eggType: 2
 --- !u!1 &528501407
 GameObject:
   m_ObjectHideFlags: 0
@@ -32555,7 +32591,7 @@ GameObject:
   - 33: {fileID: 545524618}
   - 23: {fileID: 545524617}
   - 64: {fileID: 545524615}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32701,7 +32737,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 546541602}
   - 114: {fileID: 546541604}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: ShiningDestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -34921,7 +34957,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -35215,7 +35251,7 @@ GameObject:
   - 33: {fileID: 577874942}
   - 23: {fileID: 577874941}
   - 64: {fileID: 577874939}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35518,7 +35554,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 582251765}
   - 114: {fileID: 582251766}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35953,7 +35989,7 @@ GameObject:
   - 33: {fileID: 589907977}
   - 23: {fileID: 589907976}
   - 64: {fileID: 589907974}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37278,7 +37314,7 @@ GameObject:
   - 33: {fileID: 616283197}
   - 23: {fileID: 616283196}
   - 64: {fileID: 616283194}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37465,7 +37501,7 @@ GameObject:
   - 33: {fileID: 618699051}
   - 23: {fileID: 618699050}
   - 64: {fileID: 618699048}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38357,6 +38393,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 15.6000004
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 1337561921}
@@ -38771,6 +38811,10 @@ Prefab:
       propertyPath: m_Name
       value: PathLittyCherry
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dafa429a72e68c44892ccd5a73e84e47, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
   m_RootGameObject: {fileID: 1146151657}
@@ -38996,6 +39040,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 11.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba4be0ee8fca084ba66df0f7bca3554, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 1346496143}
@@ -39668,7 +39716,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 665952093}
   - 114: {fileID: 665952094}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -39749,6 +39797,10 @@ Prefab:
       propertyPath: m_Name
       value: PathAfterAbyss
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b542c7d5f62bcb04f848ebea9c004012, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
   m_RootGameObject: {fileID: 1106039585}
@@ -40368,6 +40420,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 6.76876116
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 121459799}
@@ -40460,7 +40516,7 @@ GameObject:
   - 33: {fileID: 678230659}
   - 23: {fileID: 678230658}
   - 64: {fileID: 678230656}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40831,6 +40887,10 @@ Prefab:
       propertyPath: m_Name
       value: StartingPlane
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b542c7d5f62bcb04f848ebea9c004012, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
   m_RootGameObject: {fileID: 816538556}
@@ -43393,7 +43453,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 694276016}
   - 114: {fileID: 694276017}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43886,7 +43946,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: b542c7d5f62bcb04f848ebea9c004012, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -45206,7 +45266,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -47435,6 +47495,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 2.8499999
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8249003540741a74eaa71f16b9de7877, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 240011465}
@@ -52157,7 +52221,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 876543891}
   - 114: {fileID: 876543893}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: ShiningDestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -54049,6 +54113,10 @@ Prefab:
       propertyPath: m_Name
       value: FifthStep
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3932d7bbc00a50b49a9aac69827522cc, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 5095316}
@@ -54214,7 +54282,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 3932d7bbc00a50b49a9aac69827522cc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -56681,6 +56749,10 @@ Prefab:
       propertyPath: m_Name
       value: NarrowPathTile
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d3eae5d2bc1dcbd48a864b77419390ca, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
   m_RootGameObject: {fileID: 291495944}
@@ -56955,6 +57027,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 1948144981}
@@ -59913,7 +59989,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1017174361}
   - 114: {fileID: 1017174362}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60393,6 +60469,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 5.68125772
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8249003540741a74eaa71f16b9de7877, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 547597724}
@@ -60915,6 +60995,10 @@ Prefab:
       propertyPath: m_Name
       value: StartingPlane
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c1374cf43cd9389418f8ce153c1a2cf3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
   m_RootGameObject: {fileID: 1878944105}
@@ -63836,6 +63920,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 4.2956233
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8249003540741a74eaa71f16b9de7877, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 1787621265}
@@ -65229,7 +65317,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 3932d7bbc00a50b49a9aac69827522cc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -67266,7 +67354,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -69057,7 +69145,7 @@ GameObject:
   - 33: {fileID: 1093701754}
   - 23: {fileID: 1093701753}
   - 64: {fileID: 1093701751}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69316,7 +69404,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1097053207}
   - 114: {fileID: 1097053209}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -69349,7 +69437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8740894dbd1ea149ab78537a66ae02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_eggType: 3
+  m_eggType: 2
 --- !u!1001 &1097972320
 Prefab:
   m_ObjectHideFlags: 0
@@ -69940,7 +70028,7 @@ GameObject:
   - 33: {fileID: 1109690500}
   - 23: {fileID: 1109690499}
   - 64: {fileID: 1109690497}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70852,7 +70940,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: d3eae5d2bc1dcbd48a864b77419390ca, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -71058,7 +71146,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1144987595}
   - 114: {fileID: 1144987596}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74298,6 +74386,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 993840149}
@@ -74452,7 +74544,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 3932d7bbc00a50b49a9aac69827522cc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -76620,7 +76712,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -76814,7 +76906,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 8249003540741a74eaa71f16b9de7877, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -77383,6 +77475,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 27.8248711
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8249003540741a74eaa71f16b9de7877, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
   m_RootGameObject: {fileID: 677613176}
@@ -77744,6 +77840,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 22.9956989
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b542c7d5f62bcb04f848ebea9c004012, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
   m_RootGameObject: {fileID: 1114570347}
@@ -77760,7 +77860,7 @@ GameObject:
   - 33: {fileID: 1223885102}
   - 23: {fileID: 1223885101}
   - 64: {fileID: 1223885099}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79707,7 +79807,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 6ba4be0ee8fca084ba66df0f7bca3554, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -79941,7 +80041,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 3932d7bbc00a50b49a9aac69827522cc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -80471,7 +80571,7 @@ GameObject:
   - 33: {fileID: 1250324833}
   - 23: {fileID: 1250324832}
   - 64: {fileID: 1250324830}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80779,7 +80879,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -81677,7 +81777,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1281825834}
   - 114: {fileID: 1281825835}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -81710,7 +81810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8740894dbd1ea149ab78537a66ae02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_eggType: 3
+  m_eggType: 2
 --- !u!1 &1283651288
 GameObject:
   m_ObjectHideFlags: 0
@@ -85455,7 +85555,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 8249003540741a74eaa71f16b9de7877, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -85543,7 +85643,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1318765780}
   - 114: {fileID: 1318765782}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: ShiningDestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -85753,7 +85853,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 8249003540741a74eaa71f16b9de7877, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -87346,7 +87446,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: b542c7d5f62bcb04f848ebea9c004012, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -87607,6 +87707,10 @@ Prefab:
       propertyPath: m_Name
       value: SecondStep
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3932d7bbc00a50b49a9aac69827522cc, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 2144966562}
@@ -88271,7 +88375,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1362530408}
   - 114: {fileID: 1362530409}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -88304,7 +88408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8740894dbd1ea149ab78537a66ae02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_eggType: 3
+  m_eggType: 2
 --- !u!1 &1362782806
 GameObject:
   m_ObjectHideFlags: 0
@@ -89590,7 +89694,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1394065578}
   - 114: {fileID: 1394065579}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91602,7 +91706,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1438263864}
   - 114: {fileID: 1438263865}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92251,6 +92355,10 @@ Prefab:
       propertyPath: m_Name
       value: SixthStep
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3932d7bbc00a50b49a9aac69827522cc, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 674543644}
@@ -97102,6 +97210,10 @@ Prefab:
       propertyPath: m_Name
       value: ThirthStep
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3932d7bbc00a50b49a9aac69827522cc, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 1912089525}
@@ -103607,7 +103719,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: dafa429a72e68c44892ccd5a73e84e47, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -104587,6 +104699,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 2.32499981
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8249003540741a74eaa71f16b9de7877, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 1098318095}
@@ -104776,7 +104892,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1602502812}
   - 114: {fileID: 1602502813}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105112,7 +105228,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1609022086}
   - 114: {fileID: 1609022085}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -105131,7 +105247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8740894dbd1ea149ab78537a66ae02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_eggType: 3
+  m_eggType: 2
 --- !u!4 &1609022086
 Transform:
   m_ObjectHideFlags: 0
@@ -107786,7 +107902,7 @@ GameObject:
   - 33: {fileID: 1650667707}
   - 23: {fileID: 1650667706}
   - 64: {fileID: 1650667704}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108545,7 +108661,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: d3eae5d2bc1dcbd48a864b77419390ca, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -108877,6 +108993,10 @@ Prefab:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 588785913}
@@ -110421,7 +110541,7 @@ GameObject:
   - 33: {fileID: 1709692615}
   - 23: {fileID: 1709692614}
   - 64: {fileID: 1709692612}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111721,7 +111841,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1736910075}
   - 114: {fileID: 1736910076}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -111754,7 +111874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8740894dbd1ea149ab78537a66ae02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_eggType: 3
+  m_eggType: 2
 --- !u!1 &1737059558
 GameObject:
   m_ObjectHideFlags: 0
@@ -113532,7 +113652,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1774692747}
   - 114: {fileID: 1774692748}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113573,7 +113693,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1775384241}
   - 114: {fileID: 1775384242}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116578,7 +116698,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -116774,6 +116894,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 6.76876163
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 1658794369}
@@ -117074,6 +117198,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 13.9942408
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba4be0ee8fca084ba66df0f7bca3554, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
   m_RootGameObject: {fileID: 1973585386}
@@ -117153,7 +117281,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 8249003540741a74eaa71f16b9de7877, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -118729,7 +118857,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: d3eae5d2bc1dcbd48a864b77419390ca, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -120258,7 +120386,7 @@ GameObject:
   - 33: {fileID: 1852667450}
   - 23: {fileID: 1852667449}
   - 64: {fileID: 1852667447}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120534,6 +120662,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 2008951712}
@@ -120736,7 +120868,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1862369329}
   - 114: {fileID: 1862369331}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: ShiningDestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -122631,7 +122763,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 3932d7bbc00a50b49a9aac69827522cc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -122713,7 +122845,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1912707993}
   - 114: {fileID: 1912707994}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124794,6 +124926,10 @@ Prefab:
       propertyPath: m_Name
       value: NarrowPathTile
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d3eae5d2bc1dcbd48a864b77419390ca, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
   m_RootGameObject: {fileID: 1835021285}
@@ -124940,7 +125076,7 @@ GameObject:
   - 33: {fileID: 1930235011}
   - 23: {fileID: 1930235010}
   - 64: {fileID: 1930235008}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126683,7 +126819,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1951020240}
   - 114: {fileID: 1951020241}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -126716,7 +126852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8740894dbd1ea149ab78537a66ae02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_eggType: 3
+  m_eggType: 2
 --- !u!1 &1951243449
 GameObject:
   m_ObjectHideFlags: 0
@@ -127132,7 +127268,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 3932d7bbc00a50b49a9aac69827522cc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -127458,7 +127594,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: b542c7d5f62bcb04f848ebea9c004012, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -128634,7 +128770,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 6ba4be0ee8fca084ba66df0f7bca3554, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -128896,7 +129032,7 @@ GameObject:
   - 33: {fileID: 1993609300}
   - 23: {fileID: 1993609299}
   - 64: {fileID: 1993609297}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130553,7 +130689,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 3932d7bbc00a50b49a9aac69827522cc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -131267,6 +131403,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 656256239}
@@ -132748,7 +132888,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2043369976}
   - 114: {fileID: 2043369978}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -132781,7 +132921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8740894dbd1ea149ab78537a66ae02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_eggType: 3
+  m_eggType: 2
 --- !u!1 &2044528585
 GameObject:
   m_ObjectHideFlags: 0
@@ -132856,7 +132996,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 3932d7bbc00a50b49a9aac69827522cc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -134224,7 +134364,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: c1374cf43cd9389418f8ce153c1a2cf3, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -134311,6 +134451,10 @@ Prefab:
       propertyPath: m_Name
       value: NarrowPathTile
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d3eae5d2bc1dcbd48a864b77419390ca, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
   m_RootGameObject: {fileID: 1120517705}
@@ -135151,6 +135295,10 @@ Prefab:
       propertyPath: m_Name
       value: FirstCeiling
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ba4be0ee8fca084ba66df0f7bca3554, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 1267363728}
@@ -135340,7 +135488,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: cda19dd10ca982440ac3f7d4fcd2e7e2, type: 2}
+  - {fileID: 2100000, guid: 44ddcd090ce794b42b32603a0cddbe6e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -136862,7 +137010,7 @@ GameObject:
   - 33: {fileID: 2121948064}
   - 23: {fileID: 2121948063}
   - 64: {fileID: 2121948061}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137284,6 +137432,10 @@ Prefab:
       propertyPath: m_Name
       value: SeventhStep
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3932d7bbc00a50b49a9aac69827522cc, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b728f8381235a9f42922fa923e2ddc70, type: 2}
   m_RootGameObject: {fileID: 1247316654}
@@ -137695,6 +137847,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 64.3552094
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c1374cf43cd9389418f8ce153c1a2cf3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b844b78ffc5a58a48ac8137a586c46b8, type: 2}
   m_RootGameObject: {fileID: 922744576}
@@ -138247,7 +138403,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2147146203}
   - 114: {fileID: 2147146204}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

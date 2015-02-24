@@ -572,7 +572,8 @@ public class Antonio : MonoBehaviour
     private void throwPowerUps()
     {
         // useless time hits?
-        Debug.Log("Queue: " + m_playerHitTimeStamp);
+        if (m_playerHitTimeStamp == null)
+            Debug.Log("Queue: " + m_playerHitTimeStamp);
         if(m_playerHitTimeStamp.Count > 0)
             Debug.Log("peek: " + m_playerHitTimeStamp.Peek());
         while (m_playerHitTimeStamp.Count > 0 && m_playerHitTimeStamp.Peek() + IGNORE_HIT_TIME_DIFFERENCE < Time.time)
