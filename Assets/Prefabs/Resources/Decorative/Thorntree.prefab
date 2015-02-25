@@ -11,7 +11,8 @@ GameObject:
   - 33: {fileID: 3361416}
   - 23: {fileID: 2361416}
   - 95: {fileID: 9561416}
-  m_Layer: 0
+  - 64: {fileID: 6400000}
+  m_Layer: 13
   m_Name: ThorntreeDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +27,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 461418}
-  m_Layer: 0
+  - 136: {fileID: 13600000}
+  - 114: {fileID: 11400000}
+  m_Layer: 13
   m_Name: Thorntree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 77, y: -3, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 461416}
@@ -85,6 +88,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161416}
   m_Mesh: {fileID: 4300000, guid: 91d7b8b96a7e1a54cacb83273ea4cb0e, type: 3}
+--- !u!64 &6400000
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 91d7b8b96a7e1a54cacb83273ea4cb0e, type: 3}
 --- !u!95 &9561416
 Animator:
   serializedVersion: 3
@@ -100,6 +116,30 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5349772563ba0444bf660668a4bee45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &13600000
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161418}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0399999991
+  m_Height: .180000007
+  m_Direction: 1
+  m_Center: {x: 0, y: .0759999976, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
