@@ -66,13 +66,13 @@ public class Chico : Enemy, Boss
         m_deathEvent = new LinkedList<Action>();
 	}
 
-    void FixedUpdate()
+    new void FixedUpdate()
     {
         //base.FixedUpdate();
     }
 
 	// Update is called once per frame
-	void Update () 
+    new void Update() 
     {
         if (!m_isAlive && m_chicosActiveCrew.transform.childCount == 0)
         {

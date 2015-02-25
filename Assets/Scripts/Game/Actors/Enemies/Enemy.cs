@@ -25,6 +25,7 @@ public class Enemy : Hitable
 	public 	bool		            m_canFly			= false;
 	public  bool		            m_canFall			= false;
 	public  bool		            m_allowToMove		= false;
+    public  bool                    m_disableRaycast    = false;
     private  bool                   m_needTurnAround    = false;
 	private bool 		            first;
     protected CharacterController   m_controller;
@@ -70,7 +71,7 @@ public class Enemy : Hitable
         Vector3 rayOrigin = Vector3.zero;
         Vector3 rayDir = Vector3.zero;
         float rayDist = m_controller.stepOffset;
-        bool isHit = false;
+        bool isHit = true;
 
         // Turn around
         if (m_needTurnAround) 
@@ -93,16 +94,20 @@ public class Enemy : Hitable
             return;
         }
 
-        // Calculate ray
-        rayOrigin = transform.position + Vector3.left * -m_direction * m_controller.radius * m_worldScale.x;
-        rayDir = Vector3.down;
+        // Ignore raycast
+        if (m_disableRaycast == false)
+        {
+            // Calculate ray
+            rayOrigin = transform.position + Vector3.left * -m_direction * m_controller.radius * m_worldScale.x;
+            rayDir = Vector3.down;
 
-        // Execute raycast
-        int ignoreLayerMask = ~(1 << LayerMask.NameToLayer(Layer.LAYER_COLLECTABLE)
-                                    | 1 << LayerMask.NameToLayer(Layer.LAYER_ENEMY)
-                                    | 1 << LayerMask.NameToLayer(Layer.LAYER_PROJECTILE_ENEMY)
-                                    | 1 << LayerMask.NameToLayer(Layer.LAYER_PROJECTILE_PLAYER));
-        isHit = Physics.Raycast(rayOrigin, rayDir, out hit, rayDist);
+            // Execute raycast
+            int ignoreLayerMask = ~(1 << LayerMask.NameToLayer(Layer.LAYER_COLLECTABLE)
+                                        | 1 << LayerMask.NameToLayer(Layer.LAYER_ENEMY)
+                                        | 1 << LayerMask.NameToLayer(Layer.LAYER_PROJECTILE_ENEMY)
+                                        | 1 << LayerMask.NameToLayer(Layer.LAYER_PROJECTILE_PLAYER));
+            isHit = Physics.Raycast(rayOrigin, rayDir, out hit, rayDist);
+        }
 
         // nothing hit and not allowed to fall or fly?
         if (isHit == false && !m_canFall && !m_canFly)
