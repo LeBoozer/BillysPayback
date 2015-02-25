@@ -45386,7 +45386,7 @@ MonoBehaviour:
   m_lifepoints: 1
   m_canFly: 0
   m_canFall: 0
-  m_allowToMove: 0
+  m_allowToMove: 1
   m_transmitter: 
 --- !u!136 &748529720
 CapsuleCollider:
@@ -137537,6 +137537,10 @@ Prefab:
     - target: {fileID: 400018, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_allowToMove
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
