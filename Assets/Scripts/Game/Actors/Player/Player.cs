@@ -71,7 +71,7 @@ public class Player : Hitable
         m_velocityY = 0;
         m_jump = false;
         m_jumpFromEnenmy = false;
-        m_lastHit = Time.time - 2;
+        m_lastHit = Time.time - GameConfig.BILLY_TIME_BETWEEN_TWO_ACCEPT_HITS;
         m_gameOver = false;
         m_kiwanos = new ArrayList();
         m_allowToMove = true;
@@ -106,7 +106,7 @@ public class Player : Hitable
 
         // calculate maximal falling velocity 
         // if higher -> player die!
-        m_maxFallingVelocity = -Mathf.Sqrt(Mathf.Abs(Physics.gravity.y) * 50);
+        m_maxFallingVelocity = -Mathf.Sqrt(Mathf.Abs(Physics.gravity.y) * 10 * m_realPlayerHeight);
 
         // impediments
         m_blockJumping = false;
@@ -195,6 +195,11 @@ public class Player : Hitable
         if (camera != null && camera.m_object.Equals(transform))
             // set the camera to a new position
             camera.setTheCamera();
+
+        // remove impediments if available
+        setImpedimentJumping(false);
+        setImpedimentSlip(Vector2.zero);
+        setImpedimentVelocity(1f);
     }
 
 	/**
@@ -462,7 +467,7 @@ public class Player : Hitable
         }
 
         // Take a hit
-        if (m_lastHit + 2 < Time.time)
+        if (m_lastHit + GameConfig.BILLY_TIME_BETWEEN_TWO_ACCEPT_HITS <= Time.time)
         {
             m_lastHit = Time.time;
             m_loseLife = true;
@@ -509,6 +514,13 @@ public class Player : Hitable
         m_slipDirection = new Vector3(_direction.x, _direction.y, 0);
     }
 
+    /**
+     * 
+     */
+    public void letAcceptNextHit()
+    {
+        m_lastHit = Time.time - GameConfig.BILLY_TIME_BETWEEN_TWO_ACCEPT_HITS;
+    }
 
 	#endregion
 }

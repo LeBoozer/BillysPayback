@@ -28,6 +28,7 @@ public class GameConfig
     public static readonly float    BILLY_MINIMAL_KEYPRESS_TIME_FOR_JUMPING     = 0.1f;
     public static readonly float    BILLY_MAXIMAL_KEYPRESS_TIME_FOR_JUMPING     = 0.5f;
     public static readonly int      BILLY_NEEDED_DIAMONDS_FOR_NEW_LIFE          = 10;
+    public static readonly float    BILLY_TIME_BETWEEN_TWO_ACCEPT_HITS          = 2f;
 
     // Antonio related values
     public static readonly float    ANTONIO_DISTANCE_MEAN_VALUE                 = 6f;
@@ -47,6 +48,8 @@ public class GameConfig
     public static readonly float    ENEMY_PLAYER_ABOVE_FACTOR                   = 0.5f;
     public static readonly float    ENEMY_MAX_SPEED                             = 3f;
     public static readonly float    ENEMY_JUMP_HEIGHT                           = 0.5f;
+
+    public static readonly float    HUNTING_ENEMY_VELOCITY                      = BILLY_MAX_SPEED;
 
     // Boss values
     // Higgins
