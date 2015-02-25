@@ -25,13 +25,13 @@ public class ChicoBird : Enemy
         m_groundFlyValue *= 2f;
 	}
 
-    void FixedUpdate()
+    new void FixedUpdate()
     {
         base.FixedUpdate();
     }
 
 	// Update is called once per frame
-	void Update () 
+    new void Update() 
     {
         if (m_player != null && m_direction != Mathf.Sign(-this.transform.position.x + m_player.position.x))
                 turnAround();

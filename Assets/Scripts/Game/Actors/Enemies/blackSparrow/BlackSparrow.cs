@@ -68,7 +68,7 @@ public class BlackSparrow : Enemy, Boss
     #endregion
 
     // Use this for initialization
-	void Awake () 
+    new void Awake() 
     {
         // init values
         m_isActive = false;
@@ -95,7 +95,7 @@ public class BlackSparrow : Enemy, Boss
         base.Awake();
 	}
 
-    void FixedUpdate()
+    new void FixedUpdate()
     {
         // is active?
         if (!m_isActive)
@@ -105,7 +105,7 @@ public class BlackSparrow : Enemy, Boss
     }
 
 	// Update is called once per frame
-	void Update () 
+    new void Update() 
     {
         // is active?
         if (!m_isActive)

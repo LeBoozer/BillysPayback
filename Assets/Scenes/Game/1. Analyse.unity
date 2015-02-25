@@ -29714,6 +29714,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 1
+  m_disableRaycast: 0
   m_transmitter: 
 --- !u!136 &508286020
 CapsuleCollider:
@@ -39749,7 +39750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8740894dbd1ea149ab78537a66ae02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_eggType: 0
+  m_eggType: 3
 --- !u!1001 &667050536
 Prefab:
   m_ObjectHideFlags: 0
@@ -45387,6 +45388,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 1
+  m_disableRaycast: 1
   m_transmitter: 
 --- !u!136 &748529720
 CapsuleCollider:
@@ -58480,6 +58482,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 1
+  m_disableRaycast: 0
   m_transmitter: 
 --- !u!136 &1005114138
 CapsuleCollider:
@@ -74759,6 +74762,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
+  m_disableRaycast: 0
   m_transmitter: 
 --- !u!136 &1179640895
 CapsuleCollider:
@@ -81536,6 +81540,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
+  m_disableRaycast: 0
   m_transmitter: 
 --- !u!136 &1273147850
 CapsuleCollider:
@@ -95992,6 +95997,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 1
+  m_disableRaycast: 0
   m_transmitter: 
 --- !u!136 &1486124342
 CapsuleCollider:
@@ -104487,6 +104493,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 1
+  m_disableRaycast: 0
   m_transmitter: 
 --- !u!136 &1592779860
 CapsuleCollider:
@@ -115980,6 +115987,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 1
+  m_disableRaycast: 0
   m_transmitter: 
 --- !u!136 &1816130794
 CapsuleCollider:
@@ -122238,6 +122246,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 1
+  m_disableRaycast: 0
   m_transmitter: 
 --- !u!136 &1890331841
 CapsuleCollider:
@@ -122402,6 +122411,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 1
+  m_disableRaycast: 0
   m_transmitter: 
 --- !u!136 &1892117587
 CapsuleCollider:
@@ -122626,6 +122636,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
+  m_disableRaycast: 0
   m_transmitter: 
 --- !u!136 &1899570422
 CapsuleCollider:
@@ -133547,7 +133558,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
       propertyPath: m_eggType
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 56d5ab75169c7eb42b5054b7df7a0ece, type: 2}
@@ -134037,6 +134048,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 1
+  m_disableRaycast: 0
   m_transmitter: 
 --- !u!136 &2066525795
 CapsuleCollider:
@@ -136690,6 +136702,7 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 1
+  m_disableRaycast: 0
   m_transmitter: 
 --- !u!136 &2112769615
 CapsuleCollider:
@@ -137540,6 +137553,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
       propertyPath: m_allowToMove
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_disableRaycast
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

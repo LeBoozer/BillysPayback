@@ -76,7 +76,7 @@ public class Higgins : Enemy, Boss
         this.m_groundFlyValue /= 4;
 	}
 
-    void FixedUpdate()
+    new void FixedUpdate()
     {
         m_canFly = true;
         m_allowToMove = true;
@@ -84,7 +84,7 @@ public class Higgins : Enemy, Boss
     }
 	
 	// Update is called once per frame
-	void Update ()
+    new void Update()
     {
         // not usefull to update?
         if (m_player == null || !m_active)

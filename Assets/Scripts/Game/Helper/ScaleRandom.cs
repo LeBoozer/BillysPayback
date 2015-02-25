@@ -34,9 +34,9 @@ public class ScaleRandom : MonoBehaviour
     void Start()
     {
         // Local variables
-        float x = transform.localScale.x * Random.RandomRange(m_minScalerX, m_maxScalerX);
-        float y = transform.localScale.y * Random.RandomRange(m_minScalerY, m_maxScalerY);
-        float z = transform.localScale.z * Random.RandomRange(m_minScalerZ, m_maxScalerZ);
+        float x = transform.localScale.x * Random.Range(m_minScalerX, m_maxScalerX);
+        float y = transform.localScale.y * Random.Range(m_minScalerY, m_maxScalerY);
+        float z = transform.localScale.z * Random.Range(m_minScalerZ, m_maxScalerZ);
 
         // Set new scale
         transform.localScale = new Vector3(x, y, z);

@@ -21,7 +21,7 @@ public class ControlMultipleLevelPlanes : MonoBehaviour {
 		//m_upperPlaneObjects = GameObject.FindGameObjectsWithTag ("UpperPlaneObject");
 
 		//gets Billy
-		m_billy = GameObject.Find ("Billy");
+        m_billy = GameObject.FindGameObjectWithTag(Tags.TAG_PLAYER);
 		m_billyHeight = m_billy.transform.position.y;
 	}
 
@@ -33,7 +33,7 @@ public class ControlMultipleLevelPlanes : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		//checks if a control of the upper planes is neccessary
 		if (m_billyHeight != m_billy.transform.position.y && m_isOn) {
 			//updates the saved height of billy
@@ -48,16 +48,32 @@ public class ControlMultipleLevelPlanes : MonoBehaviour {
 	//upper plane is wrapped
 	private void controlUpperPlanes() {
 		string upperPlaneName = "";
+        MeshRenderer[] renderers = null;
+        bool isHidden = false;
 
 		//checks if there is a upper plane
 		if (m_upperPlanes.Length > 0) {
 			for (int i = 0; i < m_upperPlanes.Length; i++) {
+
+                // Get renderers
+                renderers = m_upperPlanes[i].GetComponentsInChildren<MeshRenderer>();
+                if (renderers == null || renderers.Length == 0)
+                    continue;
+
+                // Check Billy's position against the current plane
+                isHidden = m_billy.transform.position.y < (getMinYPosition(m_upperPlanes[i].transform) - m_minYOffset);
+
+                // Hidden? Disable shadows
+                foreach (MeshRenderer r in renderers)
+                    r.enabled = !isHidden;
+
 				//checks if Billy is below the current upper plane (so it can be hidden)
-				if (m_billy.transform.position.y < getMinYPosition(m_upperPlanes[i].transform) - m_minYOffset) {
+                /*if (isHidden)
+                {
 					upperPlaneName = m_upperPlanes[i].name;
 
 					//deactivates the current upper plane
-					m_upperPlanes[i].SetActive(false);
+					m_upperPlanes[i].SetActive(false);*/
 
 					//checks for objects on the current upper plane
 					/*for (int j = 0; j < m_upperPlaneObjects.Length; j++) {
@@ -68,9 +84,9 @@ public class ControlMultipleLevelPlanes : MonoBehaviour {
 							Debug.Log (m_upperPlaneObjects[j].name + " is deactivated.");
 						}
 					}*/
-				} else { //displays current upper plane if Billy is above it
+				/*} else { //displays current upper plane if Billy is above it
 					//activates the current upper plane
-					m_upperPlanes[i].SetActive(true);
+					m_upperPlanes[i].SetActive(true);*/
 
 					//checks for objects on the current upper plane
 					/*for (int j = 0; j < m_upperPlaneObjects.Length; j++) {
@@ -81,7 +97,7 @@ public class ControlMultipleLevelPlanes : MonoBehaviour {
 							Debug.Log (m_upperPlaneObjects[j].name + " is activated.");
 						}
 					}*/
-				}
+				//}
 			}
 		}
 	}
