@@ -206,7 +206,10 @@ public class BlackSparrow : Enemy, Boss
     // let the boss fight break
     public void BreakBossFight() 
     { 
-        m_isActive = false; 
+        m_isActive = false;
+
+        foreach (Feather f in m_flyingFeather)
+            Destroy(f.m_feather.gameObject);
     }
 
     internal override void die()

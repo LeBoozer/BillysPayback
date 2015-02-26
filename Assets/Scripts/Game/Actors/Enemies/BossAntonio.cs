@@ -246,7 +246,8 @@ public class BossAntonio : Hitable, Boss
     }
 
     public void BreakBossFight()
-    { 
+    {
+        m_active = false;
     }
 
     #endregion

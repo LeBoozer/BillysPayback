@@ -144,6 +144,13 @@ public class Higgins : Enemy, Boss
     public void BreakBossFight()
     {
         m_active = false;
+
+        // destroy the eggs
+        Transform parent = this.transform.parent;
+
+        for (int i = parent.childCount; i > 0; )
+            if (parent.GetChild(i).gameObject != this.gameObject)
+                Destroy(parent.GetChild(i).gameObject);
     }
 
     public void EndBossFight(Action _event)

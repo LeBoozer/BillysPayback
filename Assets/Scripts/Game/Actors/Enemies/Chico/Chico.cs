@@ -137,6 +137,11 @@ public class Chico : Enemy, Boss
     public void BreakBossFight()
     {
         m_allowToSpawn = false;
+
+        // destroy the active crew
+        for (int i = m_chicosActiveCrew.transform.childCount; --i >= 0; )
+            Destroy(m_chicosActiveCrew.transform.GetChild(i).gameObject);
+
     }
 
     internal override void die()
