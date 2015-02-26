@@ -1950,14 +1950,19 @@
     <bcf:citekey order="3">RSachseManipulationSelbsttaeuschung</bcf:citekey>
     <bcf:citekey order="4">RSachseManipulationSelbsttaeuschung</bcf:citekey>
     <bcf:citekey order="5">RSachseManipulationSelbsttaeuschung</bcf:citekey>
-    <bcf:citekey order="6">SiewNareyekPlayerManipulation</bcf:citekey>
-    <bcf:citekey order="7">PsychoTricksPCGames</bcf:citekey>
-    <bcf:citekey order="8">SpielStanleyParable</bcf:citekey>
-    <bcf:citekey order="9">VideoEthanCarter</bcf:citekey>
-    <bcf:citekey order="10">TestEthanCarterGameStar</bcf:citekey>
-    <bcf:citekey order="11">KZieroldComputerspielanalyse</bcf:citekey>
-    <bcf:citekey order="12">DieVersuchungAdventureTreffKritik</bcf:citekey>
-    <bcf:citekey order="12">DieVersuchungAftermathmedia</bcf:citekey>
+    <bcf:citekey order="6">RSachseManipulationSelbsttaeuschung</bcf:citekey>
+    <bcf:citekey order="7">RSachseManipulationSelbsttaeuschung</bcf:citekey>
+    <bcf:citekey order="8">RSachseManipulationSelbsttaeuschung</bcf:citekey>
+    <bcf:citekey order="9">RSachseManipulationSelbsttaeuschung</bcf:citekey>
+    <bcf:citekey order="10">RSachseManipulationSelbsttaeuschung</bcf:citekey>
+    <bcf:citekey order="11">SiewNareyekPlayerManipulation</bcf:citekey>
+    <bcf:citekey order="12">PsychoTricksPCGames</bcf:citekey>
+    <bcf:citekey order="13">SpielStanleyParable</bcf:citekey>
+    <bcf:citekey order="14">VideoEthanCarter</bcf:citekey>
+    <bcf:citekey order="15">TestEthanCarterGameStar</bcf:citekey>
+    <bcf:citekey order="16">KZieroldComputerspielanalyse</bcf:citekey>
+    <bcf:citekey order="17">DieVersuchungAdventureTreffKritik</bcf:citekey>
+    <bcf:citekey order="17">DieVersuchungAftermathmedia</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="none" type="entry" sortscheme="none">
   <bcf:sorting>
