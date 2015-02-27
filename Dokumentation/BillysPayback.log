@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.4)  26 FEB 2015 22:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.4)  27 FEB 2015 18:29
 entering extended mode
 **BillysPayback.tex
 
@@ -1230,24 +1230,25 @@ LaTeX Warning: Citation 'RSachseManipulationSelbsttaeuschung' on page 6 undefin
 ed on input line 94.
 
 
-Overfull \hbox (101.56715pt too wide) in paragraph at lines 94--95
-\T1/cmr/m/n/12 te ge-mä-ÿig-te Do-sie-rung von Ma-ni-pu-la-tio-nen ein-ge-hal-t
-en werden.[[]
- []
-
-
-LaTeX Warning: Citation 'RSachseManipulationSelbsttaeuschung' on page 6 undefin
-ed on input line 99.
-
-
-Overfull \hbox (57.75136pt too wide) in paragraph at lines 99--100
+Overfull \hbox (57.75136pt too wide) in paragraph at lines 94--95
 \T1/cmr/m/n/12 In \T1/cmr/m/it/12 Ma-ni-pu-la-ti-on und Selbst-täu-schung \T1/c
 mr/m/n/12 von Rai-ner Sachse[[]
  []
 
-[6]) [7]
+[6] [7]
+
+LaTeX Warning: Citation 'RSachseManipulationSelbsttaeuschung' on page 8 undefin
+ed on input line 157.
+
+
+Overfull \hbox (84.99059pt too wide) in paragraph at lines 157--158
+\T1/cmr/m/n/12 lig-keit ver-rin-gern. Im Fol-gen-den sol-len die-se er-läu-tert
+ werden.[[]
+ []
+
+) [8] [9]
 ("D:\Dokumente\9. Semester\Advanced Game Development\Projekt\BillysPayback\Doku
-mentation\Inhalt/VerwandteArbeiten/VerwandteArbeiten.tex" [8
+mentation\Inhalt/VerwandteArbeiten/VerwandteArbeiten.tex" [10
 
 
 
@@ -1255,12 +1256,12 @@ mentation\Inhalt/VerwandteArbeiten/VerwandteArbeiten.tex" [8
 ]
 Kapitel 3.
 
-LaTeX Warning: Citation 'SiewNareyekPlayerManipulation' on page 9 undefined on 
-input line 20.
+LaTeX Warning: Citation 'SiewNareyekPlayerManipulation' on page 11 undefined on
+ input line 20.
 
 
-LaTeX Warning: Citation 'PsychoTricksPCGames' on page 9 undefined on input line
- 41.
+LaTeX Warning: Citation 'PsychoTricksPCGames' on page 11 undefined on input lin
+e 41.
 
 
 Overfull \hbox (34.29875pt too wide) in paragraph at lines 41--42
@@ -1268,73 +1269,73 @@ Overfull \hbox (34.29875pt too wide) in paragraph at lines 41--42
 piel in dei-nem Kopf\T1/cmr/m/n/12 [[]
  []
 
-[9] [10]
+[11] [12]
 Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
 
-LaTeX Warning: Citation 'SpielStanleyParable' on page 11 undefined on input lin
+LaTeX Warning: Citation 'SpielStanleyParable' on page 13 undefined on input lin
 e 75.
 
-[11]
+[13]
 
-LaTeX Warning: Citation 'VideoEthanCarter' on page 12 undefined on input line 8
+LaTeX Warning: Citation 'VideoEthanCarter' on page 14 undefined on input line 8
 5.
 
 
-LaTeX Warning: Citation 'TestEthanCarterGameStar' on page 12 undefined on input
+LaTeX Warning: Citation 'TestEthanCarterGameStar' on page 14 undefined on input
  line 85.
 
 
-LaTeX Warning: Citation 'KZieroldComputerspielanalyse' on page 12 undefined on 
+LaTeX Warning: Citation 'KZieroldComputerspielanalyse' on page 14 undefined on 
 input line 93.
 
 
-LaTeX Warning: Citation 'DieVersuchungAdventureTreffKritik' on page 12 undefine
+LaTeX Warning: Citation 'DieVersuchungAdventureTreffKritik' on page 14 undefine
 d on input line 102.
 
 
-LaTeX Warning: Citation 'DieVersuchungAftermathmedia' on page 12 undefined on i
+LaTeX Warning: Citation 'DieVersuchungAftermathmedia' on page 14 undefined on i
 nput line 102.
 
-[12]) [13]
+[14]) [15]
 ("D:\Dokumente\9. Semester\Advanced Game Development\Projekt\BillysPayback\Doku
-mentation\Inhalt/Konzept/Konzept.tex" [14
+mentation\Inhalt/Konzept/Konzept.tex" [16
 
 
 
 
 ]
 Kapitel 4.
-) [15]
+) [17]
 ("D:\Dokumente\9. Semester\Advanced Game Development\Projekt\BillysPayback\Doku
-mentation\Inhalt/Implementierung/Implementierung.tex" [16
+mentation\Inhalt/Implementierung/Implementierung.tex" [18
 
 
 
 
 ]
 Kapitel 5.
-) [17]
+) [19]
 ("D:\Dokumente\9. Semester\Advanced Game Development\Projekt\BillysPayback\Doku
-mentation\Inhalt/Evaluierung/Evaluierung.tex" [18
+mentation\Inhalt/Evaluierung/Evaluierung.tex" [20
 
 
 
 
 ]
 Kapitel 6.
-) [19]
+) [21]
 ("D:\Dokumente\9. Semester\Advanced Game Development\Projekt\BillysPayback\Doku
-mentation\Inhalt/Zusammenfassung/Zusammenfassung.tex" [20
+mentation\Inhalt/Zusammenfassung/Zusammenfassung.tex" [22
 
 
 
 
 ]
 Kapitel 7.
-) [21]
+) [23]
 
 LaTeX Warning: Empty bibliography on input line 166.
 
@@ -1364,7 +1365,7 @@ mentation\Inhalt/Zusammenfassung/Zusammenfassung.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
 Package rerunfilecheck Info: File `BillysPayback.out' has not changed.
-(rerunfilecheck)             Checksum: 2A79F07ADE67FF88D73D2C754F171793;1947.
+(rerunfilecheck)             Checksum: 150F2200530587C031B9F094A8AECA2B;1960.
 
 
 LaTeX Warning: There were undefined references.
@@ -1377,9 +1378,9 @@ Package biblatex Warning: Please (re)run Biber on the file:
 Package logreq Info: Writing requests to 'BillysPayback.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 17153 strings out of 493921
- 276759 string characters out of 3154489
- 802423 words of memory out of 3000000
+ 17157 strings out of 493921
+ 276829 string characters out of 3154489
+ 802436 words of memory out of 3000000
  20000 multiletter control sequences out of 15000+200000
  15792 words of font info for 38 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
@@ -1396,9 +1397,9 @@ c\dpi600\ecsx2488.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
 our\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.
 9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728.pk> <C:\Users\Dominique\AppData\L
 ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk>
-Output written on BillysPayback.pdf (31 pages, 449758 bytes).
+Output written on BillysPayback.pdf (33 pages, 466511 bytes).
 PDF statistics:
- 754 PDF objects out of 1000 (max. 8388607)
- 79 named destinations out of 1000 (max. 500000)
+ 772 PDF objects out of 1000 (max. 8388607)
+ 83 named destinations out of 1000 (max. 500000)
  233 words of extra memory for PDF output out of 10000 (max. 10000000)
 
