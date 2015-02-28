@@ -46,23 +46,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.1.5}Dosierung von Manipulationen}{6}{subsection.2.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.6}Interaktionsspiele}{6}{subsection.2.1.6}
+\contentsline {subsection}{\numberline {2.1.6}Einfluss pers\"onlicher Faktoren auf den Manipulationserfolg}{6}{subsection.2.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Attraktivit\"atsspiele}{6}{section*.12}
+\contentsline {subsubsection}{\nonumberline Anf\"alligkeit reduzierende Faktoren}{6}{section*.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Arme-Schweine-Spiele}{7}{section*.13}
+\contentsline {subsubsection}{\nonumberline Anf\"alligkeit verst\"arkende Faktoren}{7}{section*.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Opfer-Spiele}{7}{section*.14}
+\contentsline {subsection}{\numberline {2.1.7}Interaktionsspiele}{7}{subsection.2.1.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Regel-Setzer-Spiele}{8}{section*.15}
+\contentsline {subsubsection}{\nonumberline Attraktivit\"atsspiele}{7}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Bl\"od-Spiele}{8}{section*.16}
+\contentsline {subsubsection}{\nonumberline Arme-Schweine-Spiele}{8}{section*.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.7}Einfluss pers\"onlicher Faktoren auf den Manipulationserfolg}{8}{subsection.2.1.7}
+\contentsline {subsubsection}{\nonumberline Opfer-Spiele}{8}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Anf\"alligkeit verst\"arkende Faktoren}{9}{section*.17}
+\contentsline {subsubsection}{\nonumberline Regel-Setzer-Spiele}{9}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Anf\"alligkeit reduzierende Faktoren}{9}{section*.18}
+\contentsline {subsubsection}{\nonumberline Bl\"od-Spiele}{9}{section*.18}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}Zusammenfassung}{9}{section.2.2}
 \defcounter {refsection}{0}\relax 
