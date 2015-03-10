@@ -35,6 +35,7 @@ public class Player : Hitable
     private float                   m_maxFallingVelocity;
     private float                   m_startJumpHeight;
     private float                   m_realPlayerHeight;
+    public  float                   m_gravityMultiply       = 1;
 
 
     // hit control
@@ -106,7 +107,7 @@ public class Player : Hitable
 
         // calculate maximal falling velocity 
         // if higher -> player die!
-        m_maxFallingVelocity = -Mathf.Sqrt(Mathf.Abs(Physics.gravity.y) * 10 * m_realPlayerHeight);
+        m_maxFallingVelocity = -Mathf.Sqrt(2 * Mathf.Abs(Physics.gravity.y) * m_gravityMultiply * GameConfig.BILLY_JUMP_MAXIMAL_HEIGHT * 4 * m_realPlayerHeight);
 
         // impediments
         m_blockJumping = false;
@@ -142,8 +143,8 @@ public class Player : Hitable
         if (m_gameOver)
             return false;
 
-
         bool underTheMap = m_velocityY < m_maxFallingVelocity && !Physics.Raycast(this.transform.position, Vector3.down);
+        
         // get a hit or is under the map?
         if (m_loseLife || underTheMap)
         {
@@ -245,7 +246,11 @@ public class Player : Hitable
         m_velocityX += GameConfig.BILLY_MAX_SPEED * m_slipDirection.x /* Time.deltaTime*/;
         if (Mathf.Abs(m_velocityX) > GameConfig.BILLY_MAX_SPEED * factor)
             m_velocityX = Mathf.Sign(m_velocityX) * GameConfig.BILLY_MAX_SPEED * factor;
+
+        // move the player mimimum -> trigger event standing up
+        m_velocityX += 0.0001f;
 		#endregion
+
 		// jump and fly
         // movement high&down
         #region horizontal
@@ -275,21 +280,21 @@ public class Player : Hitable
         }
         // like start to fly?
         else if ((m_velocityY < 0) && (jumpKeyDown || jumpKey) && m_jump && m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_ORANGE))
-            m_velocityY += 2 * Physics.gravity.y * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
+            m_velocityY += 2 * Physics.gravity.y * m_gravityMultiply * Time.deltaTime * GameConfig.BILLY_FLYING_FACTOR;
         // falling
         else
-            m_velocityY += 2 * Physics.gravity.y * Time.deltaTime;
-        m_velocityY -= Physics.gravity.y * m_slipDirection.y /* Time.deltaTime*/;
+            m_velocityY += 2 * Physics.gravity.y * m_gravityMultiply * Time.deltaTime;
+        m_velocityY -= Physics.gravity.y * m_gravityMultiply * m_slipDirection.y /* Time.deltaTime*/;
+
+        // intercept and correct error in the velocity calculation
+        if (float.IsNaN(m_velocityY))
+            m_velocityY = 0;
         #endregion
 
         // set new position
-        if (float.IsNaN(m_velocityY))
-        {
-            m_velocityY = 0;
-            Debug.Log("Player: y is NaN");
-        }
-        m_velocityX += 0.0001f;
         m_controller.Move(new Vector3(m_velocityX, m_velocityY, -this.transform.position.z / Time.deltaTime) * Time.deltaTime * m_velocityFactor);
+
+        // update the start jump time  
 		m_startJumpTime += Time.deltaTime;
 		
 		// x-coord haven't changed?
@@ -319,7 +324,7 @@ public class Player : Hitable
      */
     private float calculateJumpImpulse(float _jumpHeight)
     {
-        return 2 * Mathf.Sqrt(_jumpHeight * m_realPlayerHeight * Mathf.Abs(Physics.gravity.y));
+        return 2 * Mathf.Sqrt(_jumpHeight * m_realPlayerHeight * Mathf.Abs(Physics.gravity.y) * m_gravityMultiply);
     }
 
 	/**

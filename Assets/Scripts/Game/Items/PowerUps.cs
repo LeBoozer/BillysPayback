@@ -2,7 +2,7 @@
  * Project:	Billy's Payback
  * File:	PowerUps.cs
  * Authors:	Byron Worms
- * Editors:	-
+ * Editors:	Raik Dankworth
  */
 using UnityEngine;
 using System.Collections;
@@ -24,7 +24,12 @@ public class PowerUps : MonoBehaviour
     // True if this power-up is a diamond
     public bool                     m_isDiamond     = false;
 
+    // set from extern
+    // True if the power-up must fly to the player
     public bool                     m_moveToPlayer  = false;
+
+    // Offset for flying to the player
+    private Vector3                 m_offset        = Vector3.zero;
 
     // Helper class for on destroy/collect effects
     private PowerUpsOnDestroy       m_onDestroyHelper = null;
@@ -51,6 +56,28 @@ public class PowerUps : MonoBehaviour
 
         // Get player
         m_player = GameObject.FindGameObjectWithTag(Tags.TAG_PLAYER);
+
+        // Player dont find?
+        if (m_player == null)
+            return;
+
+        // Get the character controller from the player
+        CharacterController controller = m_player.GetComponent<CharacterController>();
+
+        // Character controller find?
+        if (controller == null)
+            return;
+
+        // Get the center of the controller
+        m_offset = controller.center;
+
+        // Get the scale of the player 
+        Vector3 playerWorldScale = HelperFunctions.getWorldScale(m_player);
+
+        // Calculate the scale of the player to the offset
+        m_offset = new Vector3(m_offset.x * playerWorldScale.x,
+                                m_offset.y * playerWorldScale.y,
+                                m_offset.z * playerWorldScale.z);
     }
 
     // Override: MonoBehaviour::Update()
@@ -58,7 +85,7 @@ public class PowerUps : MonoBehaviour
     {
         // like to move to player?
         if (m_moveToPlayer && m_player != null)
-            this.transform.position += (m_player.transform.position - this.transform.position) * Time.deltaTime;
+            this.transform.position += (m_player.transform.position + m_offset - this.transform.position).normalized * GameConfig.BILLY_MAX_SPEED * 1.5f * Time.deltaTime;
 
         // dont rotate the heart
         if (m_type == PlayerData.PowerUpType.PUT_LIFE)
