@@ -3,11 +3,9 @@ using System.Collections;
 
 public class BridgeScript : MonoBehaviour {
 
-	private bool m_playerEntered;
 	private Transform m_billy;
 
 	void Awake() {
-		m_playerEntered = false;
 
 		//gets the player
 		m_billy = GameObject.Find("Billy").gameObject.transform;
@@ -30,13 +28,10 @@ public class BridgeScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		m_playerEntered = true;
 	}
 
 	void OnTriggerExit(Collider other) {
 		setTrigger (false);
-
-		m_playerEntered = false;
 	}
 
 	//sets the bridge to solid (false) or not solid (true)
