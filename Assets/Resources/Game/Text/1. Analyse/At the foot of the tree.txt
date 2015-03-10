@@ -7,12 +7,7 @@
 			<part t="2.5" character="Antonio">Wenn wir bei dir sind können wir weiter überlegen.</part>
 			<part t="2.5" character="Antonio">Erinnerst du dich noch, was du zu tun hast?</part>
 
-			<choice id="0" nextText="1">Ich denke schon. Lass uns gehen.</choice>
 			<choice id="1" exit="no">Ich bin nicht ganz sicher.</choice>
-		</text>
-			
-		<text id="1">
-			<part t="2" character="Antonio">Okay, dann los!</part>
 		</text>
 	</conversation>
 </bw>

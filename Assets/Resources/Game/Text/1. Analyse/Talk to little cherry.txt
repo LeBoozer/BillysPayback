@@ -1,4 +1,16 @@
-﻿<bw>
+﻿<!--
+	Benutze globale Variablen:
+		- level_1_quest_little_cherry_done
+-->
+
+<bw overrideStartConversationID="getStartConvID">
+	<dynscript name="getStartConvID" result="result" type="System.Int32">
+		if(IsGlobalVar("level_1_quest_little_cherry_done") == true)
+			result = 1;					// Quest bereits erfüllt
+		else
+			result = 0;					// Quest noch nicht erfüllt
+	</dynscript>
+
 	<conversation id="0" start="0">
 		<text id="0">
 			<part t="2.5" character="Billy">Du scheinst Hilfe zu brauchen. Was ist passiert?</part>
@@ -27,6 +39,12 @@
 
 		<text id="3" exit="yes">
 			<part t="2.5" character="Kirsche">Ohh ich danke dir! Bitte pass auf dich auf!</part>
+		</text>
+	</conversation>
+
+	<conversation id="1" start="0">
+		<text id="0" exit="_done_">
+			<part t="2.5" character="Kirsche">Hey, dankeschön, dass du mir geholfen hast!</part>
 		</text>
 	</conversation>
 </bw>

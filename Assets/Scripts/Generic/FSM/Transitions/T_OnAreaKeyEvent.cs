@@ -36,7 +36,8 @@ public class T_OnAreaKeyEvent : FSMTransition
     // Override: FSMTransition::OnDisable
     void OnDisable()
     {
-        // Remove event
-        m_areaKeyEvent = null;
+        // Kill text
+        if (m_areaKeyEvent != null)
+            m_areaKeyEvent.forceClearText();
     }
 }
