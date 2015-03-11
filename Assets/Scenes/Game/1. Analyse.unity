@@ -73,7 +73,6 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
-    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1 &4652399
 GameObject:
@@ -18924,8 +18923,9 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  m_Priority: 3
+  ignoreReversedGraphics: 1
+  blockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -25145,6 +25145,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1865349073}
   - {fileID: 575357815}
   m_Father: {fileID: 1473938319}
   m_RootOrder: 0
@@ -35159,7 +35160,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 407082124}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &575357816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39492,11 +39493,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_object: {fileID: 0}
-  m_distance: 16
-  m_YDistance: 3.5
+  m_distance_Z: 15
+  m_distance_Y: 3.5
   m_damping: .0109999999
   m_threshold: .00749999983
   m_lookAt: 1
+  m_secondVersion: 0
 --- !u!1 &664602839
 GameObject:
   m_ObjectHideFlags: 0
@@ -121033,6 +121035,45 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300002, guid: f15ed0d8976a75e42810ca2bf9b320ab, type: 3}
+--- !u!1 &1865349072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1865349073}
+  - 114: {fileID: 1865349074}
+  m_Layer: 0
+  m_Name: Save Characterists
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1865349073
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865349072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 407082124}
+  m_RootOrder: 0
+--- !u!114 &1865349074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865349072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d960c72b835ab784bbc3f68fedc57720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1866010008
 GameObject:
   m_ObjectHideFlags: 0
@@ -131549,8 +131590,9 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  m_Priority: 3
+  ignoreReversedGraphics: 1
+  blockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -134229,6 +134271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_brakeFactor: 1
   m_accelerationFactor: 1
+  m_gravityMultiply: 1
   IGNORE_CHECK_POINTS: 1
   m_kiwanoDistance: 2
   m_kiwanosRotationSpeed: 180
