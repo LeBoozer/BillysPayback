@@ -121,10 +121,10 @@ public class ChangeCameraDistanceOnTrigger : MonoBehaviour
                 {
                     // Save current distance
                     if (t.m_onEnter.m_saveRestore == true)
-                        t.m_onEnter.m_oldDistance = m_playerCamera.m_distance;
+                        t.m_onEnter.m_oldDistance = m_playerCamera.m_distance_Z;
 
                     // Set new distance
-                    m_playerCamera.m_distance = t.m_onEnter.m_newDistance;
+                    m_playerCamera.m_distance_Z = t.m_onEnter.m_newDistance;
                 }
             };
             hj.FSMOnTriggerLeave += (Collider _other) =>
@@ -134,9 +134,9 @@ public class ChangeCameraDistanceOnTrigger : MonoBehaviour
                 {
                     // Restore distance?
                     if (t.m_onEnter.m_saveRestore == true && t.m_onLeave.m_saveRestore == true)
-                        m_playerCamera.m_distance = t.m_onEnter.m_oldDistance;
+                        m_playerCamera.m_distance_Z = t.m_onEnter.m_oldDistance;
                     else
-                        m_playerCamera.m_distance = t.m_onLeave.m_newDistance;
+                        m_playerCamera.m_distance_Z = t.m_onLeave.m_newDistance;
                 }
             };
         }

@@ -1,0 +1,8 @@
+﻿<bw>
+	<conversation id="0" start="0">
+		<text id="0">
+			<part t="2.5" character="Kirsche">Danke, dass ihr mich gerettet habt.</part>
+			<part t="2.5" character="Kirsche">Wärt ihr einen Moment später gekommen, hätten sie mich aufgefressen!</part> 
+		</text> 
+	</conversation>
+</bw>
