@@ -1,0 +1,8 @@
+﻿<bw>
+	<conversation id="0" start="0">
+		<text id="0">
+			<part t="2.5" character="Kiwano">Danke, dass du mich gerettet hast, Bro.</part>
+			<part t="2.5" character="Kiwano">Das wäre sonst sicher bald ganz schön unangenehm für mich geworden.</part> 
+		</text> 
+	</conversation>
+</bw>
