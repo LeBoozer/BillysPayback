@@ -247,7 +247,7 @@ public class S_Dialogue : FSMState
             GameObject.Destroy(m_currentOnScreenTextObject.gameObject);
             m_currentOnScreenTextObject = null;
         }
-        m_currentOnScreenTextObject = m_window.createNewSpokenText(part.Character + ": " + part.Text, Vector3.zero);
+        m_currentOnScreenTextObject = m_window.createNewSpokenText("<size=18><color=silver><b>" + part.Character + ":</b></color></size> " + part.Text, Vector3.zero);
 
         // Create timer
         if (m_timer != null)
