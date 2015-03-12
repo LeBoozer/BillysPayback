@@ -6,6 +6,7 @@
  */
 using UnityEngine;
 using System.Collections;
+using System;
 
 
 /*
@@ -44,6 +45,7 @@ public class Player : Hitable
 	private	bool					m_loseLife;
     public  bool                    IGNORE_CHECK_POINTS     = false;
 	private Vector3 				m_lastCheckPoint;
+    private Action                  m_checkPointAction      = null;
 
     // impediments values
     private bool                    m_blockJumping;
@@ -201,6 +203,13 @@ public class Player : Hitable
         setImpedimentJumping(false);
         setImpedimentSlip(Vector2.zero);
         setImpedimentVelocity(1f);
+
+        // haven't a check point action?
+        if (m_checkPointAction == null)
+            return;
+
+        // process the checkpoint action
+        m_checkPointAction();
     }
 
 	/**
@@ -490,9 +499,10 @@ public class Player : Hitable
     /**
      * set a new CheckPoint
      */
-    public void setChechPoint(Vector3 _newCheckPoint)
+    public void setCheckPoint(Vector3 _newCheckPoint, Action _checkPointAction)
     {
         m_lastCheckPoint = _newCheckPoint;
+        m_checkPointAction = _checkPointAction;
     }
 
     /**

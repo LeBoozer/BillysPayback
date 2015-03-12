@@ -67,7 +67,7 @@ public class HuntingEnemy : Hitable
             // init values 
             float cos, sin;
             
-            // set new start position for the kiwanos
+            // set new start position for the models
             cos = Mathf.Cos(2 * Mathf.PI / m_numberOfModels);
             sin = Mathf.Sin(2 * Mathf.PI / m_numberOfModels);
 
@@ -80,7 +80,7 @@ public class HuntingEnemy : Hitable
         }
 
         
-
+        // remove all useless components from all rotated models
         foreach (GameObject inst in m_rotatedModels)
         {
 
@@ -158,6 +158,7 @@ public class HuntingEnemy : Hitable
 
     public void resetPosition()
     { 
+        // reset the position
         transform.position = m_startPosition;
     }
 }
