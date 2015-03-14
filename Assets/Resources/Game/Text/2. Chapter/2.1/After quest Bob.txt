@@ -36,7 +36,7 @@
 			<part t="2.5" character="Bob">Aber denkt daran, dass es nach der Verwendung</part>
 			<part t="2.5" character="Bob">erst wieder aufgeladen werden muss.</part> 
 
-			<choice id="1" exit="_done_">Dankeschön. Wir sind dann mal wieder weg.</choice>
+			<choice id="1" exit="shield">Dankeschön. Wir sind dann mal wieder weg.</choice>
 		</text>
 
 		<!-- 2.1 -->
