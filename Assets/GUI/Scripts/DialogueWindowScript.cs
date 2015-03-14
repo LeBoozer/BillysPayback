@@ -22,13 +22,6 @@ public class DialogueWindowScript : MonoBehaviour {
 	//object to compare) we have to code it hard for now
 	public float m_GUIScaleOffset;
 
-	//currently shown answer
-	private Transform m_spokenText;
-
-	public Transform SpokenText {
-		get { return m_spokenText; }
-	}
-
 	//dialog window already open?
 	private bool m_windowIsOpen;
 
@@ -81,14 +74,6 @@ public class DialogueWindowScript : MonoBehaviour {
 
 	//deletes currently shown answer
 	public bool dropSpokenAnswer() {
-		if (m_spokenText != null) {
-			Destroy(m_spokenText.gameObject);
-
-			return true;
-		}
-
-		Debug.Log ("No answer is currently shown!");
-
 		return false;
 	}
 

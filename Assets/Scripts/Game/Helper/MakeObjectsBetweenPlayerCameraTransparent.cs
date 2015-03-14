@@ -16,9 +16,6 @@ public class MakeObjectsBetweenPlayerCameraTransparent : MonoBehaviour
     // True if valid
     private bool m_isValid = false;
 
-    // The player's world scale
-    private Vector3 m_playerWorldScale = Vector3.zero;
-
     // The player instance
     public Player m_player = null;
 
@@ -49,9 +46,6 @@ public class MakeObjectsBetweenPlayerCameraTransparent : MonoBehaviour
             Debug.LogError("No player object has been defined!");
             return;
         }
-
-        // Get player's world scale
-        m_playerWorldScale = HelperFunctions.getWorldScale(obj);
 
         // Set flag
         m_isValid = true;

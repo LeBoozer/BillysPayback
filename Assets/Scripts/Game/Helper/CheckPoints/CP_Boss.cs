@@ -16,7 +16,7 @@ public class CP_Boss : CheckPoint
     public GameObject m_boss = null;
 
     // Use this for initialization
-    void Start()
+    new void Start()
     {
         // constructor of the checkpoints
         base.Start();

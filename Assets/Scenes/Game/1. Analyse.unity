@@ -73,7 +73,60 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
+    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
+--- !u!1001 &2463415
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 668644171}
+    m_Modifications:
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 171.289993
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 26.0300007
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_Name
+      value: Hill with abyss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_Size.y
+      value: 30
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e178359544816f04d927894dfca72358, type: 2}
+  m_RootGameObject: {fileID: 1229549666}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &4652399
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +193,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 5095317}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: FifthStep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,7 +618,7 @@ Transform:
   m_GameObject: {fileID: 17671946}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.180000305, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.02238965, y: 1.0223887, z: 1.0223887}
   m_Children:
   - {fileID: 1897825040}
   m_Father: {fileID: 2118409768}
@@ -1209,7 +1262,7 @@ GameObject:
   - 23: {fileID: 27233562}
   - 95: {fileID: 27233561}
   - 64: {fileID: 27233560}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1683,7 +1736,7 @@ GameObject:
   - 23: {fileID: 35868562}
   - 95: {fileID: 35868561}
   - 64: {fileID: 35868560}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2130,7 +2183,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 49822506}
   - 114: {fileID: 49822507}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -2357,7 +2410,7 @@ GameObject:
   - 23: {fileID: 54488376}
   - 95: {fileID: 54488375}
   - 64: {fileID: 54488374}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2837,7 +2890,7 @@ GameObject:
   - 33: {fileID: 58306827}
   - 23: {fileID: 58306826}
   - 64: {fileID: 58306824}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3048,7 +3101,7 @@ GameObject:
   - 23: {fileID: 65860961}
   - 95: {fileID: 65860960}
   - 64: {fileID: 65860959}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3240,7 +3293,7 @@ GameObject:
   - 23: {fileID: 66131619}
   - 95: {fileID: 66131618}
   - 64: {fileID: 66131617}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3329,7 +3382,7 @@ GameObject:
   - 33: {fileID: 66377694}
   - 23: {fileID: 66377693}
   - 64: {fileID: 66377692}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5102,7 +5155,7 @@ GameObject:
   - 23: {fileID: 88641075}
   - 95: {fileID: 88641074}
   - 64: {fileID: 88641073}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6164,7 +6217,7 @@ GameObject:
   - 23: {fileID: 117056288}
   - 95: {fileID: 117056287}
   - 64: {fileID: 117056286}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6536,7 +6589,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 121459800}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileLong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7732,7 +7785,7 @@ GameObject:
   - 23: {fileID: 124717501}
   - 95: {fileID: 124717500}
   - 64: {fileID: 124717499}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7933,7 +7986,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 133991714}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7962,7 +8015,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 135296042}
   - 114: {fileID: 135296044}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -8083,7 +8136,7 @@ GameObject:
   - 23: {fileID: 139609557}
   - 95: {fileID: 139609556}
   - 64: {fileID: 139609555}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9280,7 +9333,7 @@ GameObject:
   - 23: {fileID: 164836546}
   - 95: {fileID: 164836545}
   - 64: {fileID: 164836544}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10337,7 +10390,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 185592519}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentreSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12446,7 +12499,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 212215849}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentreSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12655,7 +12708,7 @@ GameObject:
   - 23: {fileID: 216105132}
   - 95: {fileID: 216105131}
   - 64: {fileID: 216105130}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12742,7 +12795,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 216517395}
   - 114: {fileID: 216517397}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -12951,7 +13004,7 @@ GameObject:
   - 23: {fileID: 219175696}
   - 95: {fileID: 219175695}
   - 64: {fileID: 219175694}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14060,7 +14113,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 240011466}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: SecondStep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14247,7 +14300,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 247472861}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathAfterPit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14469,7 +14522,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 252008448}
   - 114: {fileID: 252008449}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -14877,7 +14930,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 266176728}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16725,7 +16778,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 279049296}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStartSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17019,7 +17072,7 @@ GameObject:
   - 33: {fileID: 281706944}
   - 23: {fileID: 281706943}
   - 64: {fileID: 281706942}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17353,7 +17406,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 291495945}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: NarrowPathTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18811,7 +18864,7 @@ GameObject:
   - 33: {fileID: 306045965}
   - 23: {fileID: 306045964}
   - 64: {fileID: 306045963}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18923,9 +18976,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -19126,7 +19178,7 @@ GameObject:
   - 23: {fileID: 312522694}
   - 95: {fileID: 312522693}
   - 64: {fileID: 312522692}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19212,7 +19264,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 314519693}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentreSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19576,7 +19628,7 @@ GameObject:
   - 33: {fileID: 321641075}
   - 23: {fileID: 321641074}
   - 64: {fileID: 321641073}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20148,7 +20200,7 @@ GameObject:
   - 23: {fileID: 337170060}
   - 95: {fileID: 337170059}
   - 64: {fileID: 337170058}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20340,7 +20392,7 @@ GameObject:
   - 33: {fileID: 339530707}
   - 23: {fileID: 339530706}
   - 64: {fileID: 339530705}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20566,7 +20618,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 345814718}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: MoveableTrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20664,7 +20716,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 347022218}
   - 114: {fileID: 347022219}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22494,7 +22546,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 364770877}
   - 114: {fileID: 364770878}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23971,7 +24023,7 @@ GameObject:
   - 23: {fileID: 378022390}
   - 95: {fileID: 378022389}
   - 64: {fileID: 378022388}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24162,7 +24214,7 @@ GameObject:
   - 33: {fileID: 379843796}
   - 23: {fileID: 379843795}
   - 64: {fileID: 379843793}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24647,7 +24699,7 @@ GameObject:
   - 23: {fileID: 397038906}
   - 95: {fileID: 397038905}
   - 64: {fileID: 397038904}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24847,7 +24899,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 399244321}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25041,7 +25093,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 404961302}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: NarrowTrunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25367,7 +25419,7 @@ GameObject:
   - 23: {fileID: 413240112}
   - 95: {fileID: 413240111}
   - 64: {fileID: 413240110}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26377,6 +26429,62 @@ Prefab:
   m_RootGameObject: {fileID: 719306774}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1001 &441296338
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 668644171}
+    m_Modifications:
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 104.809998
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 13.1999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_Name
+      value: Quest little cherry
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_Size.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_isActived
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e178359544816f04d927894dfca72358, type: 2}
+  m_RootGameObject: {fileID: 2017649236}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1001 &442277904
 Prefab:
   m_ObjectHideFlags: 0
@@ -26659,7 +26767,7 @@ GameObject:
   - 33: {fileID: 447480193}
   - 23: {fileID: 447480192}
   - 64: {fileID: 447480191}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29048,7 +29156,7 @@ GameObject:
   - 23: {fileID: 495613867}
   - 95: {fileID: 495613866}
   - 64: {fileID: 495613865}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29907,7 +30015,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 511099182}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31717,7 +31825,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 528090930}
   - 114: {fileID: 528090932}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -32552,7 +32660,7 @@ GameObject:
   - 33: {fileID: 545524618}
   - 23: {fileID: 545524617}
   - 64: {fileID: 545524615}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32767,7 +32875,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 547597725}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: FourthStep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32975,7 +33083,7 @@ GameObject:
   - 33: {fileID: 552501467}
   - 23: {fileID: 552501466}
   - 64: {fileID: 552501465}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34856,7 +34964,7 @@ GameObject:
   - 23: {fileID: 569925727}
   - 95: {fileID: 569925726}
   - 64: {fileID: 569925725}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35212,7 +35320,7 @@ GameObject:
   - 33: {fileID: 577874942}
   - 23: {fileID: 577874941}
   - 64: {fileID: 577874939}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35515,7 +35623,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 582251765}
   - 114: {fileID: 582251766}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35919,7 +36027,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 588785914}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileLong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35950,7 +36058,7 @@ GameObject:
   - 33: {fileID: 589907977}
   - 23: {fileID: 589907976}
   - 64: {fileID: 589907974}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36576,6 +36684,7 @@ GameObject:
   - 4: {fileID: 607120994}
   - 33: {fileID: 607120996}
   - 23: {fileID: 607120995}
+  - 64: {fileID: 607120998}
   - 64: {fileID: 607120997}
   m_Layer: 13
   m_Name: Roof
@@ -36637,6 +36746,20 @@ MeshCollider:
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
+  m_Mesh: {fileID: 4300002, guid: 70c18896efe6a4f4fa6b82b01ad16a8f, type: 3}
+--- !u!64 &607120998
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6483116, guid: c7373ef6ac309be4285b20464eafb85a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1042916455}
+  m_GameObject: {fileID: 607120993}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 1
+  m_Convex: 1
   m_Mesh: {fileID: 4300002, guid: 70c18896efe6a4f4fa6b82b01ad16a8f, type: 3}
 --- !u!1 &608463343
 GameObject:
@@ -37503,7 +37626,7 @@ GameObject:
   - 33: {fileID: 618699051}
   - 23: {fileID: 618699050}
   - 64: {fileID: 618699048}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38009,7 +38132,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 638170034}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStartSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38171,7 +38294,7 @@ GameObject:
   - 33: {fileID: 640020512}
   - 23: {fileID: 640020511}
   - 64: {fileID: 640020510}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38616,7 +38739,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 642807721}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38644,7 +38767,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 643354655}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: NarrowTrunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38975,7 +39098,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 651325519}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentreSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39086,7 +39209,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 656256240}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileLong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39176,6 +39299,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 484114522}
+  - {fileID: 1864089145}
   m_Father: {fileID: 336530734}
   m_RootOrder: 3
 --- !u!1001 &659919281
@@ -39719,7 +39843,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 665952093}
   - 114: {fileID: 665952094}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -39821,7 +39945,7 @@ GameObject:
   - 23: {fileID: 667967504}
   - 95: {fileID: 667967503}
   - 64: {fileID: 667967502}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39899,6 +40023,36 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2078397196}
   m_GameObject: {fileID: 667967500}
   m_Mesh: {fileID: 4300000, guid: f056c6ced1815fc40b25fa38ab5f695a, type: 3}
+--- !u!1 &668644170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 668644171}
+  m_Layer: 0
+  m_Name: Checkpoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &668644171
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 668644170}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2017649237}
+  - {fileID: 1229549667}
+  - {fileID: 1699073338}
+  m_Father: {fileID: 695517769}
+  m_RootOrder: 2
 --- !u!1 &669401668
 GameObject:
   m_ObjectHideFlags: 0
@@ -40360,7 +40514,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 674543645}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: SixthStep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40488,7 +40642,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 677613177}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Underground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40868,7 +41022,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2075507700}
   m_Father: {fileID: 1032171617}
   m_RootOrder: 7
 --- !u!114 &682069572
@@ -41046,7 +41201,7 @@ GameObject:
   - 23: {fileID: 686958372}
   - 95: {fileID: 686958371}
   - 64: {fileID: 686958370}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43310,7 +43465,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 687785084}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: MoveableTrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43501,7 +43656,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 694276016}
   - 114: {fileID: 694276017}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43560,6 +43715,7 @@ Transform:
   m_Children:
   - {fileID: 1171527141}
   - {fileID: 326240847}
+  - {fileID: 668644171}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!1 &696174783
@@ -43932,7 +44088,7 @@ GameObject:
   - 23: {fileID: 704049955}
   - 95: {fileID: 704049954}
   - 64: {fileID: 704049953}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44831,7 +44987,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 734012790}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Underground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45252,7 +45408,7 @@ GameObject:
   - 23: {fileID: 746754023}
   - 95: {fileID: 746754022}
   - 64: {fileID: 746754021}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47903,7 +48059,7 @@ GameObject:
   - 33: {fileID: 811026408}
   - 23: {fileID: 811026407}
   - 64: {fileID: 811026406}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48140,7 +48296,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 816538557}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: StartingPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50329,7 +50485,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 851675060}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: NarrowPathTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50442,7 +50598,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 857624898}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileLong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50780,7 +50936,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 864775688}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEndSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50866,7 +51022,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 869507561}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52039,7 +52195,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 873425528}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: NarrowTrunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52198,7 +52354,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 875469301}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52428,7 +52584,7 @@ GameObject:
   - 33: {fileID: 879270595}
   - 23: {fileID: 879270594}
   - 64: {fileID: 879270593}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52498,7 +52654,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 882317670}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEndSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52826,7 +52982,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 888183654}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53315,7 +53471,7 @@ GameObject:
   - 33: {fileID: 906019401}
   - 23: {fileID: 906019400}
   - 64: {fileID: 906019399}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53608,7 +53764,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 908515276}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54237,7 +54393,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 922744577}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Underground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54269,7 +54425,7 @@ GameObject:
   - 23: {fileID: 924770254}
   - 95: {fileID: 924770253}
   - 64: {fileID: 924770252}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54885,7 +55041,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 935909301}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStartSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56226,7 +56382,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 945703645}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: NarrowTrunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57326,7 +57482,7 @@ GameObject:
   - 33: {fileID: 972015625}
   - 23: {fileID: 972015624}
   - 64: {fileID: 972015623}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57530,7 +57686,7 @@ GameObject:
   - 33: {fileID: 978216856}
   - 23: {fileID: 978216855}
   - 64: {fileID: 978216854}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57600,7 +57756,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 979930765}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: FourthStep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58045,6 +58201,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959b3f9dbb7e1fe49b1327bf350b3129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &990454466
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 668644171}
+    m_Modifications:
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 358.600006
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 14.6999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_Size.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e178359544816f04d927894dfca72358, type: 2}
+      propertyPath: m_Name
+      value: After big abyss
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e178359544816f04d927894dfca72358, type: 2}
+  m_RootGameObject: {fileID: 1699073337}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &991386847
 GameObject:
   m_ObjectHideFlags: 0
@@ -58230,7 +58438,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 993840150}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileLong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58363,7 +58571,7 @@ GameObject:
   - 33: {fileID: 1001132904}
   - 23: {fileID: 1001132903}
   - 64: {fileID: 1001132902}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59837,7 +60045,7 @@ GameObject:
   - 33: {fileID: 1013424408}
   - 23: {fileID: 1013424407}
   - 64: {fileID: 1013424406}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60039,7 +60247,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1017174361}
   - 114: {fileID: 1017174362}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60594,7 +60802,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1034475746}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEndSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60626,7 +60834,7 @@ GameObject:
   - 23: {fileID: 1035006232}
   - 95: {fileID: 1035006231}
   - 64: {fileID: 1035006230}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60981,7 +61189,7 @@ GameObject:
   - 33: {fileID: 1041564713}
   - 23: {fileID: 1041564712}
   - 64: {fileID: 1041564711}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61228,7 +61436,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1043497432}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStartSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61260,7 +61468,7 @@ GameObject:
   - 23: {fileID: 1043791533}
   - 95: {fileID: 1043791532}
   - 64: {fileID: 1043791531}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65350,7 +65558,7 @@ GameObject:
   - 23: {fileID: 1056501564}
   - 95: {fileID: 1056501563}
   - 64: {fileID: 1056501562}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66644,7 +66852,7 @@ GameObject:
   - 33: {fileID: 1063928179}
   - 23: {fileID: 1063928178}
   - 64: {fileID: 1063928177}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66717,7 +66925,7 @@ GameObject:
   - 33: {fileID: 1064618346}
   - 23: {fileID: 1064618345}
   - 64: {fileID: 1064618344}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67387,7 +67595,7 @@ GameObject:
   - 23: {fileID: 1078607937}
   - 95: {fileID: 1078607936}
   - 64: {fileID: 1078607935}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69240,7 +69448,7 @@ GameObject:
   - 33: {fileID: 1093701754}
   - 23: {fileID: 1093701753}
   - 64: {fileID: 1093701751}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69470,7 +69678,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1096404061}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69499,7 +69707,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1097053207}
   - 114: {fileID: 1097053209}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -69593,7 +69801,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1098318096}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: FifthStep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69961,7 +70169,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1106039586}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathAfterAbyss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69992,7 +70200,7 @@ GameObject:
   - 33: {fileID: 1106316606}
   - 23: {fileID: 1106316605}
   - 64: {fileID: 1106316604}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70123,7 +70331,7 @@ GameObject:
   - 33: {fileID: 1109690500}
   - 23: {fileID: 1109690499}
   - 64: {fileID: 1109690497}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70381,7 +70589,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1114570348}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: MuddyPath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70568,7 +70776,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1117446258}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70683,7 +70891,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1120517706}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: NarrowPathTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70973,7 +71181,7 @@ GameObject:
   - 23: {fileID: 1135889031}
   - 95: {fileID: 1135889030}
   - 64: {fileID: 1135889029}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71241,7 +71449,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1144987595}
   - 114: {fileID: 1144987596}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71281,7 +71489,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1145375797}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: SeventhStep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71309,7 +71517,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1146151658}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathLittyCherry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72677,7 +72885,7 @@ GameObject:
   - 23: {fileID: 1153493703}
   - 95: {fileID: 1153493702}
   - 64: {fileID: 1153493701}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74577,7 +74785,7 @@ GameObject:
   - 23: {fileID: 1176280714}
   - 95: {fileID: 1176280713}
   - 64: {fileID: 1176280712}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75036,7 +75244,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1184674547}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76746,7 +76954,7 @@ GameObject:
   - 23: {fileID: 1200445659}
   - 95: {fileID: 1200445658}
   - 64: {fileID: 1200445657}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76940,7 +77148,7 @@ GameObject:
   - 23: {fileID: 1201749538}
   - 95: {fileID: 1201749537}
   - 64: {fileID: 1201749536}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77691,7 +77899,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1219492594}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentreSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77956,7 +78164,7 @@ GameObject:
   - 33: {fileID: 1223885102}
   - 23: {fileID: 1223885101}
   - 64: {fileID: 1223885099}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78179,7 +78387,7 @@ GameObject:
   - 33: {fileID: 1227148152}
   - 23: {fileID: 1227148151}
   - 64: {fileID: 1227148150}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78442,6 +78650,61 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1229549666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: e178359544816f04d927894dfca72358, type: 2}
+  m_PrefabInternal: {fileID: 2463415}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1229549667}
+  - 114: {fileID: 1229549669}
+  - 65: {fileID: 1229549668}
+  m_Layer: 0
+  m_Name: Hill with abyss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1229549667
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+  m_PrefabInternal: {fileID: 2463415}
+  m_GameObject: {fileID: 1229549666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 171.289993, y: 26.0300007, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 668644171}
+  m_RootOrder: 1
+--- !u!65 &1229549668
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: e178359544816f04d927894dfca72358,
+    type: 2}
+  m_PrefabInternal: {fileID: 2463415}
+  m_GameObject: {fileID: 1229549666}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .100000001, y: 30, z: 100}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1229549669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: e178359544816f04d927894dfca72358,
+    type: 2}
+  m_PrefabInternal: {fileID: 2463415}
+  m_GameObject: {fileID: 1229549666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e43c6a6ac78cb40a7c8b8103551da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_isActived: 1
 --- !u!1001 &1229963219
 Prefab:
   m_ObjectHideFlags: 0
@@ -79841,7 +80104,7 @@ GameObject:
   - 23: {fileID: 1234810841}
   - 95: {fileID: 1234810840}
   - 64: {fileID: 1234810839}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80075,7 +80338,7 @@ GameObject:
   - 23: {fileID: 1241265307}
   - 95: {fileID: 1241265306}
   - 64: {fileID: 1241265305}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80343,7 +80606,7 @@ GameObject:
   - 33: {fileID: 1245217023}
   - 23: {fileID: 1245217022}
   - 64: {fileID: 1245217021}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80486,7 +80749,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1247316655}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: SeventhStep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80620,7 +80883,7 @@ GameObject:
   - 33: {fileID: 1250324833}
   - 23: {fileID: 1250324832}
   - 64: {fileID: 1250324830}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80866,7 +81129,7 @@ GameObject:
   - 23: {fileID: 1253932630}
   - 95: {fileID: 1253932629}
   - 64: {fileID: 1253932628}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81360,7 +81623,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1267363729}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: FirstCeiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81827,7 +82090,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1281825834}
   - 114: {fileID: 1281825835}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -83319,7 +83582,7 @@ GameObject:
   - 33: {fileID: 1291782706}
   - 23: {fileID: 1291782705}
   - 64: {fileID: 1291782704}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83668,7 +83931,7 @@ GameObject:
   - 23: {fileID: 1301862067}
   - 95: {fileID: 1301862066}
   - 64: {fileID: 1301862065}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84093,7 +84356,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1308494324}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84224,7 +84487,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1311549804}
   - 65: {fileID: 1311549805}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: AttachDetachCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85543,7 +85806,7 @@ GameObject:
   - 23: {fileID: 1318641507}
   - 95: {fileID: 1318641506}
   - 64: {fileID: 1318641505}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85841,7 +86104,7 @@ GameObject:
   - 23: {fileID: 1322400162}
   - 95: {fileID: 1322400161}
   - 64: {fileID: 1322400160}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87436,7 +87699,7 @@ GameObject:
   - 23: {fileID: 1337200043}
   - 95: {fileID: 1337200042}
   - 64: {fileID: 1337200041}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87522,7 +87785,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1337561922}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileLong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87784,7 +88047,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1346496144}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: SecondCeiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88387,7 +88650,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1362530408}
   - 114: {fileID: 1362530409}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -88487,7 +88750,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1363299658}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ModelData
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89523,7 +89786,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1388987774}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89706,7 +89969,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1394065578}
   - 114: {fileID: 1394065579}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90044,7 +90307,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1402578259}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90516,7 +90779,7 @@ GameObject:
   - 23: {fileID: 1413315815}
   - 95: {fileID: 1413315814}
   - 64: {fileID: 1413315813}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90689,7 +90952,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1415599517}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: MoveableTrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90894,7 +91157,7 @@ GameObject:
   - 33: {fileID: 1423259619}
   - 23: {fileID: 1423259618}
   - 64: {fileID: 1423259617}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91717,7 +91980,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1438263864}
   - 114: {fileID: 1438263865}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92217,7 +92480,7 @@ GameObject:
   - 23: {fileID: 1447891787}
   - 95: {fileID: 1447891786}
   - 64: {fileID: 1447891785}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92672,7 +92935,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1452909026}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStartSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92758,7 +93021,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1459129760}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEndSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94022,7 +94285,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1467453728}
   - 114: {fileID: 1467453729}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Way
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95936,7 +96199,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1485670502}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96392,7 +96655,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1499142048}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: FirstStep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96464,7 +96727,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1500680351}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: NarrowTrunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96778,7 +97041,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1510800762}
   - 114: {fileID: 1510800763}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ShortMoveablePlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96968,7 +97231,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1515440703}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98636,7 +98899,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1530386387}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99386,6 +99649,48 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1546408976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1546408977}
+  - 114: {fileID: 1546408978}
+  m_Layer: 0
+  m_Name: Action 'DeActivate checkpoints'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1546408977
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1546408976}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1584130670}
+  m_RootOrder: 0
+--- !u!114 &1546408978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1546408976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294f2d3386928134f88f0dc11816b2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_entries:
+  - m_gameObject: {fileID: 2017649236}
+    m_enable: 1
 --- !u!1 &1547382510
 GameObject:
   m_ObjectHideFlags: 0
@@ -103669,7 +103974,7 @@ GameObject:
   - 23: {fileID: 1576865284}
   - 95: {fileID: 1576865283}
   - 64: {fileID: 1576865282}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104021,7 +104326,7 @@ GameObject:
   - 23: {fileID: 1583682567}
   - 95: {fileID: 1583682566}
   - 64: {fileID: 1583682565}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104124,7 +104429,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1546408977}
   m_Father: {fileID: 691640318}
   m_RootOrder: 1
 --- !u!114 &1584130671
@@ -104905,7 +105211,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1602502812}
   - 114: {fileID: 1602502813}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105094,7 +105400,7 @@ GameObject:
   - 23: {fileID: 1608215584}
   - 95: {fileID: 1608215583}
   - 64: {fileID: 1608215582}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105241,7 +105547,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1609022086}
   - 114: {fileID: 1609022085}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -105605,7 +105911,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1615191854}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: FirstStep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105636,7 +105942,7 @@ GameObject:
   - 33: {fileID: 1616871551}
   - 23: {fileID: 1616871550}
   - 64: {fileID: 1616871549}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105768,7 +106074,7 @@ GameObject:
   - 23: {fileID: 1630020054}
   - 95: {fileID: 1630020053}
   - 64: {fileID: 1630020052}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106946,7 +107252,7 @@ GameObject:
   - 33: {fileID: 1633068876}
   - 23: {fileID: 1633068875}
   - 64: {fileID: 1633068874}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107122,7 +107428,7 @@ GameObject:
   - 33: {fileID: 1634661252}
   - 23: {fileID: 1634661251}
   - 64: {fileID: 1634661250}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107265,7 +107571,7 @@ GameObject:
   - 23: {fileID: 1638773215}
   - 95: {fileID: 1638773214}
   - 64: {fileID: 1638773213}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108612,7 +108918,7 @@ GameObject:
   - 23: {fileID: 1657828190}
   - 95: {fileID: 1657828189}
   - 64: {fileID: 1657828188}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108698,7 +109004,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1658794370}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileLong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109566,7 +109872,7 @@ GameObject:
   - 33: {fileID: 1675914034}
   - 23: {fileID: 1675914033}
   - 64: {fileID: 1675914032}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110141,6 +110447,61 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1660146765}
   m_GameObject: {fileID: 1696767132}
   m_Mesh: {fileID: 4300000, guid: cb8166f0460bebd4f97cdfd6033b166d, type: 3}
+--- !u!1 &1699073337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: e178359544816f04d927894dfca72358, type: 2}
+  m_PrefabInternal: {fileID: 990454466}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1699073338}
+  - 114: {fileID: 1699073340}
+  - 65: {fileID: 1699073339}
+  m_Layer: 0
+  m_Name: After big abyss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1699073338
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+  m_PrefabInternal: {fileID: 990454466}
+  m_GameObject: {fileID: 1699073337}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 358.600006, y: 14.6999998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 668644171}
+  m_RootOrder: 2
+--- !u!65 &1699073339
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: e178359544816f04d927894dfca72358,
+    type: 2}
+  m_PrefabInternal: {fileID: 990454466}
+  m_GameObject: {fileID: 1699073337}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .100000001, y: 30, z: 100}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1699073340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: e178359544816f04d927894dfca72358,
+    type: 2}
+  m_PrefabInternal: {fileID: 990454466}
+  m_GameObject: {fileID: 1699073337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e43c6a6ac78cb40a7c8b8103551da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_isActived: 1
 --- !u!1 &1699360380
 GameObject:
   m_ObjectHideFlags: 0
@@ -110479,7 +110840,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1708709640}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEndSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110995,7 +111356,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1722546455}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111783,7 +112144,7 @@ GameObject:
   - 33: {fileID: 1736843528}
   - 23: {fileID: 1736843527}
   - 64: {fileID: 1736843526}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111854,7 +112215,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1736910075}
   - 114: {fileID: 1736910076}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -113129,7 +113490,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1762680429}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStartSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113230,7 +113591,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1764193939}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113436,7 +113797,7 @@ GameObject:
   - 23: {fileID: 1769274488}
   - 95: {fileID: 1769274487}
   - 64: {fileID: 1769274486}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113712,7 +114073,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1774692747}
   - 114: {fileID: 1774692748}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113753,7 +114114,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1775384241}
   - 114: {fileID: 1775384242}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114136,7 +114497,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1781358103}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114292,7 +114653,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1784236992}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEndSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114481,7 +114842,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1787621266}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: ThirthStep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115005,7 +115366,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1798729690}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: SixthStep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116697,7 +117058,7 @@ GameObject:
   - 23: {fileID: 1830342385}
   - 95: {fileID: 1830342384}
   - 64: {fileID: 1830342383}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116783,7 +117144,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1830829733}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117117,7 +117478,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1835021286}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: NarrowPathTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117280,7 +117641,7 @@ GameObject:
   - 23: {fileID: 1839555875}
   - 95: {fileID: 1839555874}
   - 64: {fileID: 1839555873}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118856,7 +119217,7 @@ GameObject:
   - 23: {fileID: 1843704669}
   - 95: {fileID: 1843704668}
   - 64: {fileID: 1843704667}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121035,6 +121396,102 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300002, guid: f15ed0d8976a75e42810ca2bf9b320ab, type: 3}
+--- !u!1 &1864089144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1864089145}
+  - 82: {fileID: 1864089146}
+  m_Layer: 10
+  m_Name: HelpSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1864089145
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1864089144}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 659710021}
+  m_RootOrder: 1
+--- !u!82 &1864089146
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1864089144}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: df320c7197ec2aa409f2962792677928, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 10
+  MaxDistance: 75
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: .13333334
+      value: 1
+      inSlope: -7.50300169
+      outSlope: -7.50300169
+      tangentMode: 0
+    - time: .266666681
+      value: .5
+      inSlope: -1.87575042
+      outSlope: -1.87575042
+      tangentMode: 0
+    - time: .504301131
+      value: .163419902
+      inSlope: -.702372849
+      outSlope: -.702372849
+      tangentMode: 0
+    - time: .987096786
+      value: .0121212155
+      inSlope: -.133386567
+      outSlope: -.133386567
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1865349072
 GameObject:
   m_ObjectHideFlags: 0
@@ -121329,7 +121786,7 @@ GameObject:
   - 33: {fileID: 1868789925}
   - 23: {fileID: 1868789924}
   - 64: {fileID: 1868789923}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121687,7 +122144,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1878944106}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: StartingPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121759,7 +122216,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1879884460}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: NarrowTrunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121878,7 +122335,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1883394141}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentreSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122015,7 +122472,7 @@ GameObject:
   - 33: {fileID: 1887485037}
   - 23: {fileID: 1887485036}
   - 64: {fileID: 1887485035}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122804,7 +123261,7 @@ GameObject:
   - 23: {fileID: 1902616767}
   - 95: {fileID: 1902616766}
   - 64: {fileID: 1902616765}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122919,7 +123376,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1912089526}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: ThirthStep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122948,7 +123405,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1912707993}
   - 114: {fileID: 1912707994}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123049,7 +123506,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1914331146}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentreSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123197,7 +123654,7 @@ GameObject:
   - 23: {fileID: 1917422023}
   - 95: {fileID: 1917422022}
   - 64: {fileID: 1917422021}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124699,7 +125156,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1924669075}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124876,7 +125333,7 @@ GameObject:
   - 33: {fileID: 1927535966}
   - 23: {fileID: 1927535965}
   - 64: {fileID: 1927535964}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125048,6 +125505,7 @@ GameObject:
   - 4: {fileID: 1928609712}
   - 33: {fileID: 1928609714}
   - 23: {fileID: 1928609713}
+  - 64: {fileID: 1928609716}
   - 64: {fileID: 1928609715}
   m_Layer: 13
   m_Name: Wall
@@ -125109,6 +125567,20 @@ MeshCollider:
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
   m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 70c18896efe6a4f4fa6b82b01ad16a8f, type: 3}
+--- !u!64 &1928609716
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6483118, guid: c7373ef6ac309be4285b20464eafb85a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1042916455}
+  m_GameObject: {fileID: 1928609711}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 1
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: 70c18896efe6a4f4fa6b82b01ad16a8f, type: 3}
 --- !u!1 &1928960233
 GameObject:
@@ -125179,7 +125651,7 @@ GameObject:
   - 33: {fileID: 1930235011}
   - 23: {fileID: 1930235010}
   - 64: {fileID: 1930235008}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125544,7 +126016,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1937377991}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126852,7 +127324,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1948144982}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileLong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126922,7 +127394,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1951020240}
   - 114: {fileID: 1951020241}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -126967,7 +127439,7 @@ GameObject:
   - 33: {fileID: 1951243453}
   - 23: {fileID: 1951243452}
   - 64: {fileID: 1951243451}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127309,7 +127781,7 @@ GameObject:
   - 23: {fileID: 1954671798}
   - 95: {fileID: 1954671797}
   - 64: {fileID: 1954671796}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127527,7 +127999,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1964557968}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127555,7 +128027,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1967113077}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStartSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127635,7 +128107,7 @@ GameObject:
   - 23: {fileID: 1967878861}
   - 95: {fileID: 1967878860}
   - 64: {fileID: 1967878859}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127982,7 +128454,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1973585387}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathAfterBigAbyss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128749,7 +129221,7 @@ GameObject:
   - 23: {fileID: 1989770750}
   - 95: {fileID: 1989770749}
   - 64: {fileID: 1989770748}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129073,7 +129545,7 @@ GameObject:
   - 33: {fileID: 1993609300}
   - 23: {fileID: 1993609299}
   - 64: {fileID: 1993609297}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129339,7 +129811,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1997052243}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130484,7 +130956,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2002379214}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130668,7 +131140,7 @@ GameObject:
   - 23: {fileID: 2008276261}
   - 95: {fileID: 2008276260}
   - 64: {fileID: 2008276259}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130754,7 +131226,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2008951713}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileLong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130968,6 +131440,61 @@ Transform:
   - {fileID: 942867053}
   m_Father: {fileID: 1319001872}
   m_RootOrder: 2
+--- !u!1 &2017649236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: e178359544816f04d927894dfca72358, type: 2}
+  m_PrefabInternal: {fileID: 441296338}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2017649237}
+  - 114: {fileID: 2017649239}
+  - 65: {fileID: 2017649238}
+  m_Layer: 0
+  m_Name: Quest little cherry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2017649237
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: e178359544816f04d927894dfca72358, type: 2}
+  m_PrefabInternal: {fileID: 441296338}
+  m_GameObject: {fileID: 2017649236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 104.809998, y: 13.1999998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 668644171}
+  m_RootOrder: 0
+--- !u!65 &2017649238
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6500000, guid: e178359544816f04d927894dfca72358,
+    type: 2}
+  m_PrefabInternal: {fileID: 441296338}
+  m_GameObject: {fileID: 2017649236}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .100000001, y: 30, z: 100}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2017649239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: e178359544816f04d927894dfca72358,
+    type: 2}
+  m_PrefabInternal: {fileID: 441296338}
+  m_GameObject: {fileID: 2017649236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11e43c6a6ac78cb40a7c8b8103551da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_isActived: 0
 --- !u!1001 &2018121042
 Prefab:
   m_ObjectHideFlags: 0
@@ -131020,7 +131547,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2024482929}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131465,7 +131992,7 @@ GameObject:
   - 23: {fileID: 2033461023}
   - 95: {fileID: 2033461022}
   - 64: {fileID: 2033461021}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131590,9 +132117,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -132843,7 +133369,7 @@ GameObject:
   - 23: {fileID: 2042101645}
   - 95: {fileID: 2042101644}
   - 64: {fileID: 2042101643}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132930,7 +133456,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2043369976}
   - 114: {fileID: 2043369978}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: DestroyableEgg
   m_TagString: Egg
   m_Icon: {fileID: 0}
@@ -132976,7 +133502,7 @@ GameObject:
   - 23: {fileID: 2044528589}
   - 95: {fileID: 2044528588}
   - 64: {fileID: 2044528587}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134389,7 +134915,7 @@ GameObject:
   - 23: {fileID: 2072871525}
   - 95: {fileID: 2072871524}
   - 64: {fileID: 2072871523}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134475,7 +135001,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2072947313}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentreSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134547,6 +135073,47 @@ Prefab:
   m_RootGameObject: {fileID: 1120517705}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &2075507699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2075507700}
+  - 114: {fileID: 2075507701}
+  m_Layer: 0
+  m_Name: Action 'Delete help screem'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2075507700
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2075507699}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 682069571}
+  m_RootOrder: 0
+--- !u!114 &2075507701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2075507699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed088c43a85f5f04da193eb48730bd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_objects:
+  - {fileID: 1864089144}
 --- !u!1 &2075529652
 GameObject:
   m_ObjectHideFlags: 0
@@ -135257,7 +135824,7 @@ GameObject:
   - 23: {fileID: 2088902603}
   - 95: {fileID: 2088902602}
   - 64: {fileID: 2088902601}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135513,7 +136080,7 @@ GameObject:
   - 23: {fileID: 2090286860}
   - 95: {fileID: 2090286859}
   - 64: {fileID: 2090286858}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: PathTileDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135984,7 +136551,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2099398716}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentreSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136098,7 +136665,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2102556750}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136860,7 +137427,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2115647230}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkCentreSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136945,7 +137512,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2117624800}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEndSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137098,7 +137665,7 @@ GameObject:
   - 33: {fileID: 2121948064}
   - 23: {fileID: 2121948063}
   - 64: {fileID: 2121948061}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: EggDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137312,7 +137879,7 @@ GameObject:
   - 23: {fileID: 2127172386}
   - 95: {fileID: 2127172385}
   - 64: {fileID: 2127172384}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138284,7 +138851,7 @@ GameObject:
   - 33: {fileID: 2142138652}
   - 23: {fileID: 2142138651}
   - 64: {fileID: 2142138650}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138470,7 +139037,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2144966563}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: SecondStep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138499,7 +139066,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2147146203}
   - 114: {fileID: 2147146204}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: OnDestroy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

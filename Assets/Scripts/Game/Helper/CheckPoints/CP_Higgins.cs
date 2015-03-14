@@ -17,7 +17,7 @@ public class CP_Higgins : CheckPoint
     public GameObject m_higgins = null;
 
 	// Use this for initialization
-	void Start () 
+	new void Start () 
     {
         // constructor of the checkpoints
         base.Start();
