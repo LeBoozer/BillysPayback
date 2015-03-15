@@ -20,7 +20,7 @@ public class CheckPoint : MonoBehaviour, DeActivatable
     public      bool        m_isActived = true;
 
 	// Use this for initialization
-	protected void Start () 
+	protected void Awake () 
     {
         m_player = GameObject.FindGameObjectWithTag(Tags.TAG_PLAYER).GetComponent<Player>();
         m_checkPointAction = null;

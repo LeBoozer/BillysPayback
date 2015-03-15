@@ -12,13 +12,14 @@ using System.Collections.Generic;
 /**
  * 
  */
-public class HuntingEnemy : Hitable 
+public class HuntingEnemy : Hitable, DeActivatable
 {
 
     public int                      m_numberOfModels = 1;
     public GameObject               m_model;
     public float                    m_modelScale = 1f;
     public float                    m_huntingVelocityFactor = 1f;
+    public bool                     m_isActived = true;
 
     private GameObject              m_player;
     private Vector3                 m_startPosition;
@@ -102,6 +103,10 @@ public class HuntingEnemy : Hitable
 	// Update is called once per frame
 	void Update () 
     {
+        // Activated?
+        if (m_isActived == false)
+            return;
+
         if (m_numberOfModels != 1)
         {
             float angle = 1;
@@ -125,6 +130,10 @@ public class HuntingEnemy : Hitable
 
     void OnTriggerEnter(Collider _other)
     {
+        // Activated?
+        if (m_isActived == false)
+            return;
+
         // ignore all except the player
         if (_other.tag != Tags.TAG_PLAYER || m_player == null)
             return;
@@ -160,5 +169,20 @@ public class HuntingEnemy : Hitable
     { 
         // reset the position
         transform.position = m_startPosition;
+    }
+
+    public bool isActivated()
+    {
+        return m_isActived;
+    }
+
+    public void onActivate()
+    {
+        m_isActived = true;
+    }
+
+    public void onDeactivate()
+    {
+        m_isActived = false;
     }
 }
