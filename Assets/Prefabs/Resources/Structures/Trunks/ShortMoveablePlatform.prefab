@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2362152}
   - 95: {fileID: 9562152}
   - 64: {fileID: 6462152}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 462154}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: MoveableTrunkEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - 33: {fileID: 3362154}
   - 23: {fileID: 2362154}
   - 64: {fileID: 6462154}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 462158}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: MoveableTrunkCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   - 23: {fileID: 2362156}
   - 95: {fileID: 9562154}
   - 64: {fileID: 6462156}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: TrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 462162}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: MoveableTrunkStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 462164}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 462166}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 462168}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ModelData
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 462170}
   - 65: {fileID: 6562152}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: AttachDetachCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 462172}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 462174}
   - 114: {fileID: 11462154}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Way
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 462176}
   - 114: {fileID: 11462152}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ShortMoveablePlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,6 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3946760c9815fd4a88152db6305342a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_isActivated: 1
   m_reference: {fileID: 462172}
   m_easingType: 1
   m_endRule: 2

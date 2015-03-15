@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 415506}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,7 +23,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 415508}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 415510}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ModelData
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 415512}
   - 65: {fileID: 6515506}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: AttachDetachCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 415514}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 415516}
   - 114: {fileID: 11415508}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Way
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 415518}
   - 114: {fileID: 11415506}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: EmptyMoveablePlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,6 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3946760c9815fd4a88152db6305342a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_isActivated: 1
   m_reference: {fileID: 415514}
   m_easingType: 1
   m_endRule: 2

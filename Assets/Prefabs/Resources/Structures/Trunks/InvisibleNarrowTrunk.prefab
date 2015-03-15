@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
   - 64: {fileID: 6400000}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400000}
   - 65: {fileID: 6500000}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: InvisibleNarrowTrunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}

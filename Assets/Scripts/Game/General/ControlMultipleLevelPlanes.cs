@@ -47,7 +47,6 @@ public class ControlMultipleLevelPlanes : MonoBehaviour {
 	//ATTENTION! To a upper plane belonging objects have to be wrapped in a game object named the same than the game object in which the
 	//upper plane is wrapped
 	private void controlUpperPlanes() {
-		string upperPlaneName = "";
         MeshRenderer[] renderers = null;
         bool isHidden = false;
 

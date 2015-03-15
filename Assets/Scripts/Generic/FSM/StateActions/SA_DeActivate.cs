@@ -71,7 +71,7 @@ public class SA_DeActivate : FSMStateAction
             comps = e.m_gameObject.GetComponents(typeof(DeActivatable));
             if (comps == null || comps.Length == 0)
             {
-                Debug.LogError("Only game object with script inherting from 'DeActivatable' can be (de)-activated!");
+                Debug.LogError("Only game object with script inherting from 'DeActivatable' can be (de)-activated! (" + e.m_gameObject.name +  ")");
                 continue;
             }
 
