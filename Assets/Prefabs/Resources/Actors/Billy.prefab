@@ -256,9 +256,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ceda2ca49ea1694184724d91d2a2f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_jumpHeight: 18
-  m_brakeFactor: 1
-  m_accelerationFactor: 1
+  m_brakeFactor: .5
+  m_accelerationFactor: 5
+  m_gravityMultiply: 2
+  IGNORE_CHECK_POINTS: 0
   m_kiwanoDistance: 2
   m_kiwanosRotationSpeed: 180
 --- !u!136 &13600000
