@@ -8,7 +8,7 @@ using UnityEngine;
 using System.Collections;
 
 /*
- * The transition will set attributes to antonio
+ * The transition action will set attributes to antonio
  */
 public class TA_ChangeAntonio : FSMAction
 {

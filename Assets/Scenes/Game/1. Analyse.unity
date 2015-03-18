@@ -73,6 +73,7 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
+    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1001 &2463415
 Prefab:
@@ -19073,9 +19074,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -20904,6 +20904,68 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1645947637}
   m_GameObject: {fileID: 348325517}
   m_Mesh: {fileID: 4300000, guid: 1792ddd71c2e7884ebdeda85fae3d574, type: 3}
+--- !u!1 &350362820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 350362821}
+  - 114: {fileID: 350362823}
+  - 65: {fileID: 350362822}
+  m_Layer: 0
+  m_Name: Transition to 'Unguided movment' (start bird movement)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &350362821
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 350362820}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 378.660004, y: 4.94999981, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 738227671}
+  m_Father: {fileID: 1032171617}
+  m_RootOrder: 7
+--- !u!65 &350362822
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 350362820}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 10, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &350362823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 350362820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ebac73cf9961364596a014a6291d821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_isActivated: 1
+  m_targetState: {fileID: 1032171618}
+  m_deleteOnUse: 1
+  m_actionsOnTransition: []
+  m_collider: {fileID: 2067125881}
+  m_triggerObjects:
+  - m_triggerCollider: {fileID: 350362822}
+    m_hitsToTrigger: 0
+    m_deleteObject: 0
 --- !u!1 &351293546
 GameObject:
   m_ObjectHideFlags: 0
@@ -30072,6 +30134,7 @@ MonoBehaviour:
   m_canFall: 0
   m_allowToMove: 1
   m_disableRaycast: 0
+  m_speedMultiplier: 1
   m_transmitter: 
 --- !u!136 &508286020
 CapsuleCollider:
@@ -40614,6 +40677,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_disableRaycast
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_speedMultiplier
+      value: .449999988
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
   m_RootGameObject: {fileID: 1273147847}
@@ -41358,7 +41429,7 @@ Transform:
   m_Children:
   - {fileID: 2075507700}
   m_Father: {fileID: 1032171617}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!114 &682069572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44049,6 +44120,7 @@ Transform:
   - {fileID: 1171527141}
   - {fileID: 326240847}
   - {fileID: 668644171}
+  - {fileID: 2036671590}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!1 &696174783
@@ -45398,6 +45470,54 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1293924348}
   m_GameObject: {fileID: 737188085}
   m_Mesh: {fileID: 4300000, guid: 0e3098722eef03c46957ab4b5ff2588f, type: 3}
+--- !u!1 &738227670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 738227671}
+  - 114: {fileID: 738227672}
+  m_Layer: 0
+  m_Name: Action 'Start bird movement'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &738227671
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 738227670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 350362821}
+  m_RootOrder: 0
+--- !u!114 &738227672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 738227670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2504b606315e8f446ace507ce34abaf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_enemies:
+  - m_enemy: {fileID: 1273147849}
+    m_canMove:
+      m_use: 1
+      m_value: 1
+  - m_enemy: {fileID: 1899570421}
+    m_canMove:
+      m_use: 1
+      m_value: 1
 --- !u!1001 &738254654
 Prefab:
   m_ObjectHideFlags: 0
@@ -45925,6 +46045,7 @@ MonoBehaviour:
   m_canFall: 0
   m_allowToMove: 1
   m_disableRaycast: 1
+  m_speedMultiplier: 1
   m_transmitter: 
 --- !u!136 &748529720
 CapsuleCollider:
@@ -58804,7 +58925,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1032171617}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!65 &991386849
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59295,6 +59416,7 @@ MonoBehaviour:
   m_canFall: 0
   m_allowToMove: 1
   m_disableRaycast: 0
+  m_speedMultiplier: 1
   m_transmitter: 
 --- !u!136 &1005114138
 CapsuleCollider:
@@ -61249,6 +61371,7 @@ Transform:
   - {fileID: 1936777872}
   - {fileID: 665212410}
   - {fileID: 279161106}
+  - {fileID: 350362821}
   - {fileID: 682069571}
   - {fileID: 991386848}
   m_Father: {fileID: 1171527141}
@@ -75704,6 +75827,7 @@ MonoBehaviour:
   m_canFall: 0
   m_allowToMove: 0
   m_disableRaycast: 0
+  m_speedMultiplier: 1
   m_transmitter: 
 --- !u!136 &1179640895
 CapsuleCollider:
@@ -82489,7 +82613,8 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
-  m_disableRaycast: 0
+  m_disableRaycast: 1
+  m_speedMultiplier: .449999988
   m_transmitter: 
 --- !u!136 &1273147850
 CapsuleCollider:
@@ -96981,6 +97106,7 @@ MonoBehaviour:
   m_canFall: 0
   m_allowToMove: 1
   m_disableRaycast: 0
+  m_speedMultiplier: 1
   m_transmitter: 
 --- !u!136 &1486124342
 CapsuleCollider:
@@ -97011,6 +97137,46 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: 0
   m_Center: {x: -.0149999997, y: .0900000036, z: 0}
+--- !u!1 &1486378369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1486378370}
+  - 65: {fileID: 1486378371}
+  m_Layer: 14
+  m_Name: Blocker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1486378370
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1486378369}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 381.149994, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2036671590}
+  m_RootOrder: 0
+--- !u!65 &1486378371
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1486378369}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 6, z: 4}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1486467326
 GameObject:
   m_ObjectHideFlags: 0
@@ -105608,6 +105774,7 @@ MonoBehaviour:
   m_canFall: 0
   m_allowToMove: 1
   m_disableRaycast: 0
+  m_speedMultiplier: 1
   m_transmitter: 
 --- !u!136 &1592779860
 CapsuleCollider:
@@ -111277,6 +111444,46 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1660146765}
   m_GameObject: {fileID: 1696767132}
   m_Mesh: {fileID: 4300000, guid: cb8166f0460bebd4f97cdfd6033b166d, type: 3}
+--- !u!1 &1697914375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1697914376}
+  - 65: {fileID: 1697914377}
+  m_Layer: 14
+  m_Name: Blocker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1697914376
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1697914375}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 409.769989, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2036671590}
+  m_RootOrder: 1
+--- !u!65 &1697914377
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1697914375}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 6, z: 4}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1699073337
 GameObject:
   m_ObjectHideFlags: 0
@@ -112010,6 +112217,14 @@ Prefab:
     - target: {fileID: 400018, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_disableRaycast
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_speedMultiplier
+      value: .449999988
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
@@ -117232,6 +117447,7 @@ MonoBehaviour:
   m_canFall: 0
   m_allowToMove: 1
   m_disableRaycast: 0
+  m_speedMultiplier: 1
   m_transmitter: 
 --- !u!136 &1816130794
 CapsuleCollider:
@@ -123655,6 +123871,7 @@ MonoBehaviour:
   m_canFall: 0
   m_allowToMove: 1
   m_disableRaycast: 0
+  m_speedMultiplier: 1
   m_transmitter: 
 --- !u!136 &1890331841
 CapsuleCollider:
@@ -123820,6 +124037,7 @@ MonoBehaviour:
   m_canFall: 0
   m_allowToMove: 1
   m_disableRaycast: 0
+  m_speedMultiplier: 1
   m_transmitter: 
 --- !u!136 &1892117587
 CapsuleCollider:
@@ -124044,7 +124262,8 @@ MonoBehaviour:
   m_canFly: 0
   m_canFall: 0
   m_allowToMove: 0
-  m_disableRaycast: 0
+  m_disableRaycast: 1
+  m_speedMultiplier: .449999988
   m_transmitter: 
 --- !u!136 &1899570422
 CapsuleCollider:
@@ -133049,9 +133268,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Priority: 3
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -133112,6 +133330,35 @@ MonoBehaviour:
   m_firstTextPosition: {x: 0, y: 0, z: 0}
   m_spokenTextLength: 30
   m_GUIScaleOffset: 0
+--- !u!1 &2036671589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2036671590}
+  m_Layer: 0
+  m_Name: EnemyBlocker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2036671590
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2036671589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1486378370}
+  - {fileID: 1697914376}
+  m_Father: {fileID: 695517769}
+  m_RootOrder: 3
 --- !u!1 &2037198265
 GameObject:
   m_ObjectHideFlags: 0
@@ -135582,6 +135829,7 @@ MonoBehaviour:
   m_canFall: 0
   m_allowToMove: 1
   m_disableRaycast: 0
+  m_speedMultiplier: 1
   m_transmitter: 
 --- !u!136 &2066525795
 CapsuleCollider:
@@ -138422,6 +138670,7 @@ MonoBehaviour:
   m_canFall: 0
   m_allowToMove: 1
   m_disableRaycast: 0
+  m_speedMultiplier: 1
   m_transmitter: 
 --- !u!136 &2112769615
 CapsuleCollider:

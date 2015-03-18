@@ -39,6 +39,10 @@ public class T_OnInvalidDistance : FSMTransition
     // Override: FSMTransition::OnEnable
     void OnEnable()
     {
+        // Start has been called?
+        if (wasStartCalled() == false)
+            return;
+
         // Validate reference
         if(m_reference == null)
         {
