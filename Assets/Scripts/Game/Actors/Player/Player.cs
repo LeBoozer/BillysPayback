@@ -42,6 +42,8 @@ public class Player : Hitable
     // hit control
 	private float 					m_lastHit;
 	private	bool					m_gameOver;
+    private float                   m_gameOverTime;
+    private GameObject              m_gameOverGUI;
 	private	bool					m_loseLife;
     public  bool                    IGNORE_CHECK_POINTS     = false;
 	private Vector3 				m_lastCheckPoint;
@@ -76,6 +78,7 @@ public class Player : Hitable
         m_jumpFromEnenmy = false;
         m_lastHit = Time.time - GameConfig.BILLY_TIME_BETWEEN_TWO_ACCEPT_HITS;
         m_gameOver = false;
+        m_gameOverTime = 0;
         m_kiwanos = new ArrayList();
         m_allowToMove = true;
         m_startJumpTime = 0;
@@ -117,6 +120,37 @@ public class Player : Hitable
         m_slipDirection = Vector3.zero;
     }
 
+
+    void Start()
+    {
+        // Load Prefabs
+        GameObject GameOverGUI = Resources.Load<GameObject>("GUI/GameOver");
+        if (GameOverGUI == null)
+        {
+            Debug.LogWarning("Player: GameOver Game Object not found!");
+            return;
+        }
+
+        // instantiate the prefab
+        m_gameOverGUI = Instantiate(GameOverGUI) as GameObject;
+        m_gameOverGUI.name = GameOverGUI.name;
+        m_gameOverGUI.SetActive(false);
+        
+        // find GUI game object
+        GameObject GUI = GameObject.Find("GUI");
+
+        if (GUI == null)
+        { 
+            Debug.LogWarning("Player: GUI not found!");
+            return;
+        }
+
+        // set the new parent
+        m_gameOverGUI.transform.SetParent(GUI.transform);
+        m_gameOverGUI.transform.localScale  = GameOverGUI.transform.localScale;
+        m_gameOverGUI.transform.position    = GameOverGUI.transform.position;
+
+    }
 	#endregion
 
 	#region Update
@@ -142,8 +176,19 @@ public class Player : Hitable
     private bool alive()
     {
         // game over?
-        if (m_gameOver)
+        if (m_gameOver && m_gameOverTime > 0)
+        {
+            m_gameOverTime -= Time.deltaTime;
             return false;
+        }
+        else if (m_gameOver)
+        {
+            m_allowToMove = true;
+            m_gameOver = false;
+            m_gameOverGUI.SetActive(false);
+            m_playerData.LifeNumber = GameConfig.BILLY_LIFE_NUMBER;
+            m_playerData.LifePoints = GameConfig.BILLY_LIFE_POINT;
+        }
 
         bool underTheMap = m_velocityY < m_maxFallingVelocity && !Physics.Raycast(this.transform.position, Vector3.down);
         
@@ -162,9 +207,11 @@ public class Player : Hitable
                 // game over?
                 if (m_playerData.m_LifeNumber == 0)
                 {
-                    m_lastCheckPoint = Vector3.zero;
                     setToCheckpoint();
                     m_gameOver = true;
+                    m_gameOverGUI.SetActive(true);
+                    m_gameOverTime = GameConfig.GAME_OVER_SHOW_TIME_SEC;
+                    m_allowToMove = false;
                     return false;
                 }
 
