@@ -1,4 +1,4 @@
-﻿<bw>
+﻿<bw overrideStartConversationID="1">
 	<conversation id="0" start="0">
 		<text id="0" exit="_done_">
 			<part t="2.5" character="Phil">Los, Black Sparrow will, dass wir noch vor Sonnenuntergang</part>
@@ -9,6 +9,12 @@
 			<part t="2.5" character="Phil">Verdammt Jim, kommt jetzt, dein Appetit </part>
 			<part t="2.5" character="Phil">kostet uns irgendwann noch unseren Kopf!</part>
 			<part t="2.5" character="Jim">(Stöhnt) Ist ja gut, ich komme ja schon. Immer dieser Stress...</part> 
+		</text>
+	</conversation>
+
+	<conversation id="1" start="0">
+		<text id="0" exit="_done_">
+			<part t="0.5" character="Phil">Los, Black Sparrow will, dass wir noch vor Sonnenuntergang</part>
 		</text>
 	</conversation>
 </bw>
