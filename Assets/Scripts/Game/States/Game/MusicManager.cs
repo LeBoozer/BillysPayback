@@ -14,153 +14,342 @@ using System.Collections.Generic;
 [RequireComponent(typeof(AudioSource))]
 public class MusicManager : MonoBehaviour 
 {
-    // True if valid
-    private bool        m_isValid = false;
+    private static readonly float PLAY_UPDATE_INTERVAL_SEC = 0.1f;
+    private static readonly float WAIT_UPDATE_INTERVAL_SEC = 0.1f;
+    private static readonly float DEFAULT_FADE_INTERVAL_SEC = 0.1f;
 
-    // The update interval for checking if the music is still playing (in seconds)
-    private float       m_updateCheckInterval = 0.1f;
+    // All possible result values for the playing managment
+    private enum Result
+    {
+        eWAIT,
+        ePLAY,
+        eFADE
+    }
 
-    // Current playing audio clip (index)
-    private int         m_currentAudioClip = 0;
+    // Class to store informations about the fading for an audio source
+    [System.Serializable]
+    public class SourceFade
+    {
+        public bool     m_enabled = false;
+        public float    m_fadeSpeedSec = 0.1f;
+        public float    m_fadeValue = 0.5f;
+    }
 
-    // The currently used volume
-    private float       m_currentVolume = 0.0f;
-
-    // True if fading in, otherwise false
-    private bool        m_isFadeIn = true;
+    // Class to store informations about an audio clip
+	[System.Serializable]
+	public class Source
+	{
+        public string       m_uniqueID = "";
+        public bool         m_enabled = true;
+        public bool         m_loop = false;
+        public bool         m_removeAfterPlay = false;
+        public float        m_targetVolume = 1.0f;
+        public AudioClip    m_clip = null;
+        public SourceFade   m_fadeIn = new SourceFade();
+        public SourceFade   m_fadeOut = new SourceFade();
+    }
 
     // True if the music manager is enabled
-    public bool         m_isEnabled = true;
+    public bool                         m_isEnabled = true;
 
-    // The target volume
-    public float        m_targetVolume = 1.0f;
+    // List with all registered audio clips (background music)
+    public Source[]                     m_backgroundClips = null;
 
-    // The fading speed (in seconds)
-    public float        m_fadeSpeed = 0.1f;
+    // List of the background sources
+    private Dictionary<string, Source>  m_sources = new Dictionary<string,Source>();
 
-    // The fading value
-    public float        m_fadeValue = 0.1f;
+    // Queue of all source IDs (queueing is not supported bei the diectionary!)
+    private Queue<string>               m_idQueue = new Queue<string>();
 
-    // List with audio clips (will be played sequentially)
-    public AudioClip[]  m_audioClips = null;
+    // The currently active source
+    private Source                      m_currentSource = null;
+
+    // The next active source
+    private Source                      m_nextSource = null;
+
+    // The current volume
+    private float                       m_currentVolume = 0.0f;
+
+    // True if this is the first fade-in run
+    private bool                        m_isFirstRunFadeIn = true;
 
     // Override: MonoBehaviour::Awake()
-	void Awake() 
+    void Awake()
     {
-	    // Audio clips registered?
-        if(m_audioClips == null || m_audioClips.Length == 0)
+        // Disabled?
+        if (m_isEnabled == false)
             return;
 
-        // Check audio clips
-        foreach(var clip in m_audioClips)
+        // Loop through all registered sources
+        foreach(var src in m_backgroundClips)
         {
-            // Empty or 3D sound?
-            if(clip == null)
+            // Validate source
+            if(src == null || src.m_clip == null || src.m_uniqueID.Equals("") == true)
             {
-                Debug.LogError("Invalid audio clip in music manager");
+                Debug.LogError("Music manager: Invalid background clips registered!");
                 return;
             }
+
+            // Add to list
+            m_sources.Add(src.m_uniqueID, src);
+            m_idQueue.Enqueue(src.m_uniqueID);
         }
 
-        // Set volume
-        audio.volume = m_currentVolume;
-
-        // Set flag
-        m_isValid = true;
-
-        // Start first audio clip
-        if (m_isEnabled == true)
-            StartCoroutine("proc_fade");
+        // Kick off the playing
+        StartCoroutine("proc_play");
 	}
 
-    // Override: MonoBehaviour::FixedUpdate()
-	void FixedUpdate () 
-    {
-	    // Valid and enabled?
-        if (m_isValid == false || m_isEnabled == false)
-            return;
-
-        // Still playing?
-        if (audio.isPlaying == true)
-            return;
-
-        // Change audio clip
-        audio.clip = m_audioClips[(m_currentAudioClip++) % m_audioClips.Length];
-        audio.Play();
-	}
-
-    // Fades the audio clip in/out
-    // Return: True to terminate coroutine
-    private bool fade()
+    // Returns a source by its ID
+    public Source getSourceByID(string _id)
     {
         // Local variables
-        bool done = false;
+        Source res = null;
 
-        // Fading in?
-        if (m_isFadeIn == true)
+        // Check parameter
+        if (_id == null || _id.Equals("") == true)
+            return null;
+
+        // Try to find
+        m_sources.TryGetValue(_id, out res);
+
+        return res;
+    }
+
+    // Returns the next available audio source
+    private Source getNextAudioSource()
+    {
+        // Local variables
+        string id = "";
+        Source src = null;
+
+        // Check registered audio sources
+        for (int i = 0; i < m_idQueue.Count; ++i)
         {
-            // Increase volume
-            m_currentVolume += m_fadeValue;
-            if (m_currentVolume > m_targetVolume)
+            // Get source's ID
+            id = m_idQueue.Dequeue();
+            if (id == null || id.Equals("") == true)
+                continue;
+
+            // Get source
+            if (m_sources.TryGetValue(id, out src) == false)
+                continue;
+
+            // Remove?
+            if (src.m_removeAfterPlay == false)
+                m_idQueue.Enqueue(id);
+
+            // Active?
+            if (src.m_enabled == false)
+                continue;
+
+            return src;
+        }
+
+        return null;
+    }
+
+    // Sets the next audio source forcefully
+    public void setNextSourceByID(string _id)
+    {
+        // Local variables
+        Source src = null;
+
+        // Check parameter
+        if (_id == null || _id.Equals("") == true)
+            return;
+
+        // Try to get source
+        if (m_sources.TryGetValue(_id, out src) == false)
+            return;
+
+        // Set 
+        m_nextSource = src;
+    }
+
+    // Sets the next audio source randomly but forcefully
+    public void setNextSourceRandomly()
+    {
+        // Get next source
+        m_nextSource = getNextAudioSource();
+    }
+
+    // Manages the play of the background music
+    private Result play()
+    {
+        // Current/next source null?
+        if (m_currentSource == null && m_nextSource == null)
+        {
+            // Try to get the next available source
+            m_nextSource = getNextAudioSource();
+            if (m_nextSource == null)
+                return Result.eWAIT;
+
+            // Fade-in not required?
+            if (m_nextSource.m_fadeIn == null || m_nextSource.m_fadeIn.m_enabled == false)
             {
-                m_currentVolume = m_targetVolume;
-                done = true;
+                // Set as current and start
+                m_currentSource = m_nextSource;
+                m_nextSource = null;
+                audio.volume = m_currentSource.m_targetVolume;
+                audio.clip = m_currentSource.m_clip;
+                audio.Play();
+                return Result.ePLAY;
+            }
+
+            return Result.eFADE;
+        }
+
+        // Next source set?
+        else if (m_nextSource != null)
+        {
+            // Fade-out required?
+            if (m_currentSource != null && m_currentSource.m_fadeOut != null && m_currentSource.m_fadeOut.m_enabled == true)
+                return Result.eFADE;
+
+            // Fade-in not required?
+            if (m_nextSource.m_fadeIn != null && m_nextSource.m_fadeIn.m_enabled == true)
+                return Result.eFADE;
+
+            // Set next song as current
+            m_currentSource = m_nextSource;
+            m_nextSource = null;
+            audio.volume = m_currentSource.m_targetVolume;
+            audio.clip = m_currentSource.m_clip;
+            audio.Play();
+            return Result.ePLAY;
+        }
+
+        // Still playing?
+        if(audio.isPlaying == false)
+        {
+            // Loop?
+            if (m_currentSource.m_loop == true)
+            {
+                // Restart
+                audio.Play();
+            }
+            else
+            {
+                // Kill current
+                m_currentSource = null;
             }
         }
-        else
+
+        return Result.ePLAY;
+    }
+
+    // Manages the fading process
+    // Return: Time for the next check interval. < 0.0f if fading is done
+    private float fade()
+    {
+        // Local variables
+        float nextCheckSec = DEFAULT_FADE_INTERVAL_SEC;
+
+        // Get current volume
+        m_currentVolume = audio.volume;
+
+        // Fade-out required?
+        if (m_currentSource != null && m_currentSource.m_fadeOut != null && m_currentSource.m_fadeOut.m_enabled == true)
         {
             // Decrease volume
-            m_currentVolume -= m_fadeValue;
-            if (m_currentVolume < 0.0f)
+            m_currentVolume -= m_currentSource.m_fadeOut.m_fadeValue;
+            if (m_currentVolume <= 0.0f)
+            {
+                // Fade-out is done!
+                m_currentVolume = 0.0f;
+                m_currentSource = null;
+
+                // Start next audio source
+                audio.clip = m_nextSource.m_clip;
+                audio.Play();
+            }
+            else
+                nextCheckSec = m_currentSource.m_fadeOut.m_fadeSpeedSec;
+        }
+
+        // Fade-in required?
+        else if(m_nextSource != null)
+        {
+            // First run?
+            if (m_isFirstRunFadeIn == true)
             {
                 m_currentVolume = 0.0f;
-                done = true;
+                m_isFirstRunFadeIn = false;
             }
+
+            // Increase volume
+            m_currentVolume += m_nextSource.m_fadeIn.m_fadeValue;
+            if (m_currentVolume >= m_nextSource.m_targetVolume)
+            {
+                // Fade-in is done!
+                m_currentVolume = m_nextSource.m_targetVolume;
+                m_currentSource = m_nextSource;
+                m_nextSource = null;
+                nextCheckSec = -1.0f;
+
+                // Start next audio source
+                if (audio.isPlaying == false)
+                {
+                    audio.clip = m_currentSource.m_clip;
+                    audio.Play();
+                }
+            }
+            else
+                nextCheckSec = m_nextSource.m_fadeIn.m_fadeSpeedSec;
         }
 
         // Set volume
         audio.volume = m_currentVolume;
 
-        // Done?
-        return done;
-    }
-
-    // Plays the audio clip
-    private void play()
-    {
-        // Still playing?
-        if (audio.isPlaying == true)
-            return;
-
-        // Change audio clip
-        audio.clip = m_audioClips[(++m_currentAudioClip) % m_audioClips.Length];
-        audio.Play();
-    }
-
-    // Coroutine for the music fading
-    private IEnumerator proc_fade()
-    {
-        // Loop endless
-        while (true)
-        {
-            if (fade() == true)
-            {
-                StartCoroutine("proc_play");
-                yield break;
-            }
-            else
-                yield return new WaitForSeconds(m_fadeSpeed);
-        }
+        return nextCheckSec;
     }
 
     // Coroutine for the music playing
     private IEnumerator proc_play()
     {
+        // Local variables
+        Result r = Result.ePLAY;
+
         // Loop endless
         while (true)
         {
-            play();
-            yield return new WaitForSeconds(m_updateCheckInterval);
+            // Play
+            r = play();
+            if(r == Result.eFADE)
+            {
+                // Start fade process
+                m_isFirstRunFadeIn = true;
+                StartCoroutine("proc_fade");
+
+                // Terminate itself
+                yield break;
+            }
+            else
+                yield return new WaitForSeconds(r == Result.ePLAY ? PLAY_UPDATE_INTERVAL_SEC : WAIT_UPDATE_INTERVAL_SEC);
+        }
+    }
+
+    // Coroutine for the fading
+    private IEnumerator proc_fade()
+    {
+        // Local variables
+        float r = 0.0f;
+
+        // Loop endless
+        while (true)
+        {
+            // Fade
+            r = fade();
+            if (r < 0.0f)
+            {
+                // Start play process
+                StartCoroutine("proc_play");
+
+                // Terminate itself
+                yield break;
+            }
+            else
+                yield return new WaitForSeconds(r);
         }
     }
 }
