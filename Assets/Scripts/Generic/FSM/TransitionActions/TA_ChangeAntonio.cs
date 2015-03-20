@@ -40,8 +40,12 @@ public class TA_ChangeAntonio : FSMAction
         ant = m_antonio.GetComponent<Antonio>();
         if(ant == null)
         {
-            Debug.LogError("Game-object of antonio is invalid!");
-            return;
+            ant = m_antonio.GetComponentInChildren<Antonio>();
+            if (ant == null)
+            {
+                Debug.LogError("Game-object of antonio is invalid!");
+                return;
+            }
         }
 
         // Set attributes

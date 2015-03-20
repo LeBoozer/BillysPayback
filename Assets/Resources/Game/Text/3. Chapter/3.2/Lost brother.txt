@@ -44,45 +44,45 @@
 		</text>
 
 		<!-- 4.1 -->
-		<text id="41" exit="_done">
-			<part t="2.5" character="Antonio">Gut, ich folge dem Weg nach unten.</part>
-			<part t="2.5" character="Antonio">u suchst oben nach deinem kleinen Bruder.</part>
-			<part t="2.5" character="Antonio">Wir treffen uns später wieder.</part>
+		<text id="41" exit="_done_">
+			<part t="2.5" character="Billy">Gut, ich folge dem Weg nach unten.</part>
+			<part t="2.5" character="Billy">Du suchst oben nach deinem kleinen Bruder.</part>
+			<part t="2.5" character="Billy">Wir treffen uns später wieder.</part>
 		</text>
 
 		<!-- 1.1.1.1 -->
-		<text id="1111" exit="_done">
+		<text id="1111" exit="_done_">
 			<part t="2.5" character="Antonio">Danke Billy, du bist ein wahrer Freund.</part>
 		</text>
 
 		<!-- 1.1.2.1 -->
-		<text id="1121" exit="_done">
+		<text id="1121" exit="_done_">
 			<part t="2.5" character="Antonio">Das verstehe ich, dann trennen sich hier unsere Wege.</part>
 		</text>
 
 		<!-- 2.1.1.1 -->
-		<text id="2111" exit="_done">
+		<text id="2111" exit="_done_">
 			<part t="2.5" character="Antonio">Danke Billy, du bist ein wahrer Freund.</part>
 		</text>
 
 		<!-- 2.1.2.1 -->
-		<text id="2121" exit="_done">
+		<text id="2121" exit="_done_">
 			<part t="2.5" character="Antonio">Okay, dann wird es Zeit, sich hier zu trennen.</part>
 			<part t="2.5" character="Antonio">Ich suche alleine nach meinem Bruder.</part>
 		</text>
 
 		<!-- 2.1.3.1 -->
-		<text id="2131" exit="_done">
+		<text id="2131" exit="_done_">
 			<part t="2.5" character="Antonio">Gute Idee. Pass auf dich auf.</part>
 		</text>
 
 		<!-- 3.1.1.1 -->
-		<text id="3111" exit="_done">
+		<text id="3111" exit="_done_">
 			<part t="2.5" character="Antonio">Dann los!</part>
 		</text>
 
 		<!-- 3.1.2.1 -->
-		<text id="3121" exit="_done">
+		<text id="3121" exit="_done_">
 			<part t="2.5" character="Antonio">Ich muss jetzt zu meinem Bruder.</part>
 			<part t="2.5" character="Antonio">Dann musst du halt mitkommen.</part>
 		</text>
