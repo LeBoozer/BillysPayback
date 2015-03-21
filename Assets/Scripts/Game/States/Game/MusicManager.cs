@@ -43,10 +43,13 @@ public class MusicManager : MonoBehaviour
         public bool         m_enabled = true;
         public bool         m_loop = false;
         public bool         m_removeAfterPlay = false;
+        public bool         m_restorePosition = false;
         public float        m_targetVolume = 1.0f;
         public AudioClip    m_clip = null;
         public SourceFade   m_fadeIn = new SourceFade();
         public SourceFade   m_fadeOut = new SourceFade();
+        [HideInInspector]
+        public float        m_floatPosSec = 0.0f;
     }
 
     // True if the music manager is enabled
@@ -192,6 +195,8 @@ public class MusicManager : MonoBehaviour
                 m_nextSource = null;
                 audio.volume = m_currentSource.m_targetVolume;
                 audio.clip = m_currentSource.m_clip;
+                if (m_currentSource.m_restorePosition == true)
+                    audio.time = m_currentSource.m_floatPosSec;
                 audio.Play();
                 return Result.ePLAY;
             }
@@ -202,6 +207,10 @@ public class MusicManager : MonoBehaviour
         // Next source set?
         else if (m_nextSource != null)
         {
+            // Save current position
+            if (m_currentSource.m_restorePosition == true)
+                m_currentSource.m_floatPosSec = audio.time;
+
             // Fade-out required?
             if (m_currentSource != null && m_currentSource.m_fadeOut != null && m_currentSource.m_fadeOut.m_enabled == true)
                 return Result.eFADE;
@@ -215,6 +224,8 @@ public class MusicManager : MonoBehaviour
             m_nextSource = null;
             audio.volume = m_currentSource.m_targetVolume;
             audio.clip = m_currentSource.m_clip;
+            if (m_currentSource.m_restorePosition == true)
+                audio.time = m_currentSource.m_floatPosSec;
             audio.Play();
             return Result.ePLAY;
         }
@@ -222,6 +233,9 @@ public class MusicManager : MonoBehaviour
         // Still playing?
         if(audio.isPlaying == false)
         {
+            // Reset position
+            m_currentSource.m_floatPosSec = 0.0f;
+
             // Loop?
             if (m_currentSource.m_loop == true)
             {
@@ -261,6 +275,8 @@ public class MusicManager : MonoBehaviour
 
                 // Start next audio source
                 audio.clip = m_nextSource.m_clip;
+                if (m_nextSource.m_restorePosition == true)
+                    audio.time = m_nextSource.m_floatPosSec;
                 audio.Play();
             }
             else
@@ -291,6 +307,8 @@ public class MusicManager : MonoBehaviour
                 if (audio.isPlaying == false)
                 {
                     audio.clip = m_currentSource.m_clip;
+                    if (m_currentSource.m_restorePosition == true)
+                        audio.time = m_currentSource.m_floatPosSec;
                     audio.Play();
                 }
             }

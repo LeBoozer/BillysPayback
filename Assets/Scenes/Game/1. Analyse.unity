@@ -73,6 +73,7 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
+    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1001 &2463415
 Prefab:
@@ -1405,6 +1406,138 @@ Transform:
   - {fileID: 1974260065}
   m_Father: {fileID: 533222939}
   m_RootOrder: 2
+--- !u!1 &28689435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 28689436}
+  - 82: {fileID: 28689438}
+  - 114: {fileID: 28689437}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &28689436
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28689435}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 664327160}
+  m_RootOrder: 0
+--- !u!114 &28689437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28689435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904f91505df39a0469b5f48325a8c176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_isEnabled: 1
+  m_backgroundClips:
+  - m_uniqueID: Normal_1
+    m_enabled: 1
+    m_loop: 0
+    m_removeAfterPlay: 0
+    m_restorePosition: 0
+    m_targetVolume: .75
+    m_clip: {fileID: 8300000, guid: 14cf503abf4725048bf26c0ce09f49f1, type: 3}
+    m_fadeIn:
+      m_enabled: 1
+      m_fadeSpeedSec: .200000003
+      m_fadeValue: .100000001
+    m_fadeOut:
+      m_enabled: 1
+      m_fadeSpeedSec: .100000001
+      m_fadeValue: .100000001
+    m_floatPosSec: 0
+  - m_uniqueID: Normal_2
+    m_enabled: 1
+    m_loop: 0
+    m_removeAfterPlay: 0
+    m_restorePosition: 0
+    m_targetVolume: .75
+    m_clip: {fileID: 8300000, guid: 9f5f31ec55eb03e458130f8098ec58ae, type: 3}
+    m_fadeIn:
+      m_enabled: 1
+      m_fadeSpeedSec: .200000003
+      m_fadeValue: .100000001
+    m_fadeOut:
+      m_enabled: 1
+      m_fadeSpeedSec: .100000001
+      m_fadeValue: .100000001
+    m_floatPosSec: 0
+--- !u!82 &28689438
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28689435}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &29139318
 GameObject:
   m_ObjectHideFlags: 0
@@ -19073,8 +19206,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -39997,7 +40130,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 28689436}
   m_Father: {fileID: 561314207}
   m_RootOrder: 0
 --- !u!114 &664327161
@@ -122539,8 +122673,8 @@ AudioSource:
       inSlope: -.702372849
       outSlope: -.702372849
       tangentMode: 0
-    - time: .987096786
-      value: .0121212155
+    - time: 1
+      value: 0
       inSlope: -.133386567
       outSlope: -.133386567
       tangentMode: 0
@@ -133267,8 +133401,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ignoreReversedGraphics: 1
-  blockingObjects: 0
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
