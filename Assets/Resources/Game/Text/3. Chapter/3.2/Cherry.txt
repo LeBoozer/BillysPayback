@@ -1,0 +1,9 @@
+﻿<bw>
+	<conversation id="0" start="0">
+		<text id="0">
+			<part t="2.5" character="Billy">Cherry, endlich habe ich dich wieder!</part>
+			<part t="2.5" character="Cherry">Oh Billy, danke, dass du mich gerettet hast.</part>
+			<part t="2.5" character="Cherry">Ich hatte solche Angst. Nun wird alles wieder gut!</part>
+		</text>
+	</conversation>
+</bw>

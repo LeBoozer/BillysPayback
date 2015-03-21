@@ -1,7 +1,0 @@
-﻿<bw>
-	<conversation id="0" start="0">
-		<text id="0">
-			<part t="2.5" character="Guard">Eindringlinge! Alarm</part>
-		</text>
-	</conversation>
-</bw>
