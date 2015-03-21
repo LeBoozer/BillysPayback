@@ -26,6 +26,49 @@ public class ScriptEngineHolder : MonoBehaviour
     // Executes a script (parameters are not supported yet!)
     // Returns the script result (parameter _result)
     // Returns true on success
+    public bool executeScript<_T>(DynamicScript _script, ref _T _result)
+        where _T : new()
+    {
+        // Local variables
+        Type resultParamType = null;
+        _T defaultValueResultParam;
+        bool hasResult = false;
+
+        // Result required?
+        if (_script.ResultName != null && _script.ResultName.Length > 0 && _script.ResultTypeName != null && _script.ResultTypeName.Length > 0)
+        {
+            // Get type for the result param
+            resultParamType = Type.GetType(_script.ResultTypeName);
+            if (resultParamType == null)
+                return false;
+            if (resultParamType.IsValueType == false || Nullable.GetUnderlyingType(resultParamType) != null)
+                return false;
+
+            // Get default parameter for the result type
+            defaultValueResultParam = new _T();
+            if (defaultValueResultParam == null)
+                return false;
+
+            // Set global parameter for the result
+            m_scriptEngine.SetGlobalValue(_script.ResultName, defaultValueResultParam);
+
+            // Set flag
+            hasResult = true;
+        }
+
+        // Execute script
+        m_scriptEngine.Execute(_script.Code);
+
+        // Get result
+        if (hasResult)
+            _result = m_scriptEngine.GetGlobalValue<_T>(_script.ResultName);
+
+        return true;
+    }
+
+    // Executes a script (parameters are not supported yet!)
+    // Returns the script result (parameter _result)
+    // Returns true on success
     public bool executeScript(DynamicScript _script, ref object _result)
     {
         // Local variables
@@ -94,6 +137,8 @@ public class ScriptEngineHolder : MonoBehaviour
         m_scriptEngine.SetGlobalFunction("Player_GetCharacteristicCompassion", new System.Func<int>(Player_GetCharacteristicCompassion));
         m_scriptEngine.SetGlobalFunction("Player_GetCharacteristicLightness", new System.Func<int>(Player_GetCharacteristicLightness));
         m_scriptEngine.SetGlobalFunction("Player_GetCharacteristicPatience", new System.Func<int>(Player_GetCharacteristicPatience));
+
+        m_scriptEngine.SetGlobalFunction("Player_AddCharacteristicCompassion", new System.Action<int>(Player_AddCharacteristicCompassion));
     }
 
     #region Helper
@@ -170,6 +215,11 @@ public class ScriptEngineHolder : MonoBehaviour
     public int Player_GetCharacteristicPatience()
     {
         return Game.Instance.PlayerData.getPlayerCharacteristics(PlayerData.PlayerType.PT_PATIENCE);
+    }
+
+    public void Player_AddCharacteristicCompassion(int _d)
+    {
+        Game.Instance.PlayerData.addPlayerCharacteristics(PlayerData.PlayerType.PT_COMPASSION, (short)_d);
     }
     #endregion Characteristics
     #endregion Player data

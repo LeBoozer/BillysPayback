@@ -11,6 +11,10 @@
 			result = 0;					// Quest noch nicht erfüllt
 	</dynscript>
 
+	<dynscript name="subtractOneCompassion">
+		Player_AddCharacteristicCompassion(-1);
+	</dynscript>
+
 	<conversation id="0" start="0">
 		<text id="0">
 			<part t="2.5" character="Billy">Du scheinst Hilfe zu brauchen. Was ist passiert?</part>
@@ -21,7 +25,10 @@
 			<choice id="0" nextText="1">Keine Sorge Kleine. Ich werde deine Eltern retten.</choice>
 			<choice id="1" nextText="1">Das klingt gefährlich, aber ich werde versuchen, deinen Eltern zu helfen.</choice>
 			<choice id="2" nextText="2">Das klingt gefährlich. Ich hoffe du findest jemanden, der dir helfen kann.</choice>
-			<choice id="3" nextText="2">Ich sehe du kommst zurecht. Bis dann.</choice>
+			<choice id="3" nextText="2">
+				<data>Ich sehe du kommst zurecht. Bis dann.</data>
+				<refscript ref="subtractOneCompassion" runtime="onClick"/>
+			</choice>
 		</text>
 
 		<text id="1" exit="yes">
@@ -33,8 +40,14 @@
 			<part t="2.5" character="Kirsche">Bitte bitte ... (schluchzt)</part>
 
 			<choice id="0" nextText="3">Hmm, na gut, ich werde sehen, was ich für deine Eltern tun kann.</choice>
-			<choice id="1" exit="_cancel_">Ach was, ich bin gar nicht so stark wie ich aussehe. Da musst du dir wirklich jemand anderes suchen.</choice>
-			<choice id="2" exit="_cancel_">Ich denke nicht.</choice>
+			<choice id="1" exit="_cancel_">
+				<data>Ach was, ich bin gar nicht so stark wie ich aussehe. Da musst du dir wirklich jemand anderes suchen.</data>
+				<refscript ref="subtractOneCompassion" runtime="onClick"/>
+			</choice>
+			<choice id="2" exit="_cancel_">
+				<data>Ich denke nicht.</data>
+				<refscript ref="subtractOneCompassion" runtime="onClick"/>
+			</choice>
 		</text>
 
 		<text id="3" exit="yes">

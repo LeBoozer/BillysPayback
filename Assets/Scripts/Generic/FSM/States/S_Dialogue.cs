@@ -315,6 +315,10 @@ public class S_Dialogue : FSMState
         Choice choice = null;
         List<int> choiceIDs = null;
 
+        // Text set?
+        if (m_text == null)
+            return;
+
         // Compare answer with all choices
         choiceIDs = m_text.getChoicesIDs();
         foreach (int id in choiceIDs)
@@ -341,6 +345,11 @@ public class S_Dialogue : FSMState
      */
     private void onConversationExit(string _exitCode)
     {
+        // Clear
+        m_conversation = null;
+        m_text = null;
+        m_dialogue = null;
+
         // Notify transitions
         onNotifyDone(_exitCode);
     }

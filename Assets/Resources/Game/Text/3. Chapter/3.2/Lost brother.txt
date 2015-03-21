@@ -1,4 +1,25 @@
-﻿<bw>
+﻿<!--
+	Benutze globale Variablen:
+		- level_32_lost_brother_answer_2_clicked
+-->
+
+<bw>
+	<dynscript name="answer2Enabled" result="result" type="System.Boolean">
+		if(IsGlobalVar("level_32_lost_brother_answer_2_clicked") == true)
+		{
+			result = false;	// Antwort nicht anzeigen
+		}
+		else
+		{
+			result = true;	// Antwort zeigen
+		}
+		
+	</dynscript>
+
+	<dynscript name="markAnswer2Clicked">
+		AddGlobalVar("level_32_lost_brother_answer_2_clicked", 0);
+	</dynscript>
+
 	<conversation id="0" start="0">
 		<!-- 1 -->
 		<text id="0">
@@ -7,9 +28,12 @@
 			<part t="2.5" character="Antonio">befand sich auch mein kleiner Bruder.</part>
 
 			<choice id="1" nextText="11">Das ist ja schrecklich, Antonio. Wieso erzählst du mir das erst jetzt?</choice>
-			<choice id="2" nextText="21">Du hast einen Bruder?</choice>
+			<choice id="2" nextText="21" enabled="answer2Enabled">
+				<data>Du hast einen Bruder?</data>
+				<refscript ref="markAnswer2Clicked" runtime="onClick"/>
+			</choice>
 			<choice id="3" nextText="31">Verdammt, jetzt müssen wir schon zwei Kirschen befreien.</choice>
-			<choice id="4" nextText="41">Hmm, am besten trennen wir uns hier und suchen auf verschiedenen Wegen nach Cherry und deinem kleinen Bruder.</choice>
+			<choice id="4" nextText="41">Hmm, vielleicht sollten wir uns aufteilen, dann sind wir schneller, wenn wir sie beide suchen.</choice>
 		</text>
 
 		<!-- 1.1 -->
@@ -19,72 +43,56 @@
 			<part t="2.5" character="Antonio">da wollte ich dich nicht noch mehr belasten.</part>
 			<part t="2.5" character="Antonio">Hilfst du mir ihn zu retten?</part>
 
-			<choice id="111" nextText="1111">Natürlich helfe ich dir.</choice>
-			<choice id="112" nextText="1121">Tut mir leid, ich bin nur wegen Cherry hier. Du musst alleine weitersuchen.</choice>
+			<choice id="111" nextText="991">Na klar, für dich mache ich das gerne.</choice>
+			<choice id="112" nextText="992">Tut mir leid, ich möchte erst einmal Cherry finden, danach können wir nach deinem Bruder schauen.</choice>
+			<choice id="113" nextText="993">Lieber nicht. Wer weiß, was hier noch für gefährliche Vögel lauern.</choice>
 		</text>
 
 		<!-- 2.1 -->
-		<text id="21">
+		<text id="21" nextText="0">
 			<part t="2.5" character="Antonio">Ja. Er ist noch ganz klein und auf mich angewiesen.</part>
 			<part t="2.5" character="Antonio">Darum muss ich ihn finden.</part>
-
-			<choice id="211" nextText="2111">Ich helfe dir suchen.</choice>
-			<choice id="212" nextText="2121">Viel Glück. Ich kann dir nicht helfen. Cherry ist wichtiger.</choice>
-			<choice id="213" nextText="2131">Dieses Nest ist so groß. Wir sollten uns aufteilen und getrennt weitersuchen. Dann sind wir schneller!</choice>
 		</text>
 
 		<!-- 3.1 -->
 		<text id="31">
-			<part t="2.5" character="Antonio">Dieses Nest ist zu groß, um es zu zweit zu durchsuchen.</part>
-			<part t="2.5" character="Antonio">Vielleicht sollten wir uns trennen,</part>
-			<part t="2.5" character="Antonio">um so unsere Chancen zu verbessern?</part>
+			<part t="2.5" character="Antonio">Ich weiß es ist nicht leicht, aber wenn wir uns aufteilen,</part>
+			<part t="2.5" character="Antonio">könnten wir nach beiden suchen ohne viel Zeit zu verlieren.</part>
+			<part t="2.5" character="Antonio">Könntest du vielleicht nach meinem Bruder schauen,</part>
+			<part t="2.5" character="Antonio">während ich dort oben weiter nach Cherry suche?</part>   
 
-			<choice id="311" nextText="3111">Das ist eine gute Idee.</choice>
-			<choice id="312" nextText="3121">Lieber nicht. Wer weiß, was hier noch für gefährliche Vögel lauern.</choice>
+			<choice id="111" nextText="991">Na klar, für dich mache ich das gerne.</choice>
+			<choice id="112" nextText="992">Tut mir leid, ich möchte erst einmal Cherry finden, danach können wir nach deinem Bruder schauen.</choice>
+			<choice id="113" nextText="993">Lieber nicht. Wer weiß, was hier noch für gefährliche Vögel lauern.</choice>
 		</text>
 
 		<!-- 4.1 -->
-		<text id="41" exit="_done_">
-			<part t="2.5" character="Billy">Gut, ich folge dem Weg nach unten.</part>
-			<part t="2.5" character="Billy">Du suchst oben nach deinem kleinen Bruder.</part>
-			<part t="2.5" character="Billy">Wir treffen uns später wieder.</part>
+		<text id="41">
+			<part t="2.5" character="Billy">Das klingt nach einer guten Idee.</part>
+			<part t="2.5" character="Billy">Könntest du nach meinem Bruder schauen,</part>
+			<part t="2.5" character="Billy">während ich dort oben weiter nach Cherry suche?</part>
+
+			<choice id="111" nextText="991">Na klar, für dich mache ich das gerne.</choice>
+			<choice id="112" nextText="992">Tut mir leid, ich möchte erst einmal Cherry finden, danach können wir nach deinem Bruder schauen.</choice>
+			<choice id="113" nextText="993">Lieber nicht. Wer weiß, was hier noch für gefährliche Vögel lauern.</choice>
 		</text>
 
-		<!-- 1.1.1.1 -->
-		<text id="1111" exit="_done_">
+		<!-- 991 -->
+		<text id="991" exit="_done_">
 			<part t="2.5" character="Antonio">Danke Billy, du bist ein wahrer Freund.</part>
 		</text>
 
-		<!-- 1.1.2.1 -->
-		<text id="1121" exit="_done_">
-			<part t="2.5" character="Antonio">Das verstehe ich, dann trennen sich hier unsere Wege.</part>
+		<!-- 992 -->
+		<text id="992" exit="_done_">
+			<part t="2.5" character="Antonio">Das verstehe ich, aber dann trennen sich</part>
+			<part t="2.5" character="Antonio">hier unsere Weg und ich werde alleine nach meinem Bruder suchen.</part> 
 		</text>
 
-		<!-- 2.1.1.1 -->
-		<text id="2111" exit="_done_">
-			<part t="2.5" character="Antonio">Danke Billy, du bist ein wahrer Freund.</part>
-		</text>
-
-		<!-- 2.1.2.1 -->
-		<text id="2121" exit="_done_">
-			<part t="2.5" character="Antonio">Okay, dann wird es Zeit, sich hier zu trennen.</part>
-			<part t="2.5" character="Antonio">Ich suche alleine nach meinem Bruder.</part>
-		</text>
-
-		<!-- 2.1.3.1 -->
-		<text id="2131" exit="_done_">
-			<part t="2.5" character="Antonio">Gute Idee. Pass auf dich auf.</part>
-		</text>
-
-		<!-- 3.1.1.1 -->
-		<text id="3111" exit="_done_">
-			<part t="2.5" character="Antonio">Dann los!</part>
-		</text>
-
-		<!-- 3.1.2.1 -->
-		<text id="3121" exit="_done_">
-			<part t="2.5" character="Antonio">Ich muss jetzt zu meinem Bruder.</part>
-			<part t="2.5" character="Antonio">Dann musst du halt mitkommen.</part>
+		<!-- 993 -->
+		<text id="993" exit="_done_">
+			<part t="2.5" character="Antonio">Für Cherry habe ich das auch alles auf mich genommen,</part>
+			<part t="2.5" character="Antonio">aber nun gut, wenn du so denkst,</part>
+			<part t="2.5" character="Antonio">dann werde ich meinen Bruder eben alleine suchen gehen.</part>
 		</text>
 	</conversation>
 </bw>
