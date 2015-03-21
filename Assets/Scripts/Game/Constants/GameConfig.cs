@@ -25,7 +25,7 @@ public class GameConfig
 	public static readonly float 	BILLY_MAX_SPEED 				            = 10.0f;
 	public static readonly float 	BILLY_FLYING_FACTOR				            = 0.25f;
 	public static readonly float 	BILLY_JUMP_MINIMAL_HEIGHT 			        = 1f;
-	public static readonly float 	BILLY_JUMP_MAXIMAL_HEIGHT 			        = 4f;
+	public static readonly float 	BILLY_JUMP_MAXIMAL_HEIGHT 			        = 4.5f;
 	public static readonly float 	BILLY_JUMP_HEIGHT_FROM_ENEMY 	            = 2f;
     public static readonly float    BILLY_MINIMAL_KEYPRESS_TIME_FOR_JUMPING     = 0.1f;
     public static readonly float    BILLY_MAXIMAL_KEYPRESS_TIME_FOR_JUMPING     = 0.3f;
