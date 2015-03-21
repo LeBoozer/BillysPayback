@@ -14,6 +14,7 @@ public class GameConfig
 {
 	// Constant values
 	public static readonly float 	INTRO_SHOW_TIME_SEC                         = 3.0f;
+    public static readonly float    VICTORY_SHOW_TIME_SEC                       = 3.0f;
     public static readonly float    GAME_OVER_SHOW_TIME_SEC                     = 5.0f;
 	
 	public static readonly string 	LEVEL_ADDITIVE_ROOT_GO_NAME_RULE            = "_Root_x";

@@ -55,6 +55,9 @@ public class MusicManager : MonoBehaviour
     // True if the music manager is enabled
     public bool                         m_isEnabled = true;
 
+    // True to select a random start source
+    public bool                         m_random = true;
+
     // List with all registered audio clips (background music)
     public Source[]                     m_backgroundClips = null;
 
@@ -79,6 +82,11 @@ public class MusicManager : MonoBehaviour
     // Override: MonoBehaviour::Awake()
     void Awake()
     {
+        // Local variables
+        string[] ids = null;
+        int index = 0;
+        Source source = null;
+
         // Disabled?
         if (m_isEnabled == false)
             return;
@@ -96,6 +104,27 @@ public class MusicManager : MonoBehaviour
             // Add to list
             m_sources.Add(src.m_uniqueID, src);
             m_idQueue.Enqueue(src.m_uniqueID);
+        }
+
+        // Select random start source?
+        if (m_random == true)
+        {
+            // To array
+            ids = m_idQueue.ToArray();
+            
+            // Try to find suitable source
+            while(true)
+            {
+                // Get source
+                index = Random.Range(0, ids.Length);
+                source = getSourceByID(ids[index]);
+                if (source == null || source.m_enabled == false)
+                    continue;
+
+                // Source found, set as next source
+                m_nextSource = source;
+                break;
+            }
         }
 
         // Kick off the playing
@@ -208,7 +237,7 @@ public class MusicManager : MonoBehaviour
         else if (m_nextSource != null)
         {
             // Save current position
-            if (m_currentSource.m_restorePosition == true)
+            if (m_currentSource != null && m_currentSource.m_restorePosition == true)
                 m_currentSource.m_floatPosSec = audio.time;
 
             // Fade-out required?
