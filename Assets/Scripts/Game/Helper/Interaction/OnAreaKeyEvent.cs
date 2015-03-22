@@ -138,6 +138,8 @@ public class OnAreaKeyEvent : MonoBehaviour, DeActivatable
         if (isObjectEnlisted(_other.gameObject) == true)
         {
             ++m_canBeTriggered;
+            if (m_canBeTriggered > m_holders.Count)
+                m_canBeTriggered = m_holders.Count;
 
             // Show help text
             if (m_simpleTextDisplay != null)

@@ -27,7 +27,6 @@
 		<text id="0">
 			<part t="2.5" character="Manfred">Vielen Dank, dass ihr mir mein Zeug wiedergebracht habt.</part>
 			<part t="2.5" character="Manfred">Jetzt muss ich nur noch irgendwie aus diesem verdammten Wald herausfinden.</part>
-			<part t="2.5" character="Manfred">Vielen Dank, dass ihr mir mein Zeug wiedergebracht habt.</part>
 			<part t="2.5" character="Manfred">Hier ist eure Belohnung.</part>
 			<part t="2.5" character="Manfred">Ich wünsche euch noch viel Erfolg auf eurer Reise.</part>
 			<part t="2.5" character="Billy">Danke und pass diesmal besser auf dich auf!</part>

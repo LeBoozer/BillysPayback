@@ -348,7 +348,6 @@ public class S_Dialogue : FSMState
         // Clear
         m_conversation = null;
         m_text = null;
-        m_dialogue = null;
 
         // Notify transitions
         onNotifyDone(_exitCode);

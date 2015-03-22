@@ -22,7 +22,7 @@ public class SA_RestoreObjectTransform : FSMStateAction
         if (m_savedTransforms == null || m_savedTransforms.m_objects == null || m_savedTransforms.m_objects.Length == 0)
             return;
 
-        // Safe transforms of the registered objects
+        // Restore transforms of the registered objects
         foreach (var ent in m_savedTransforms.m_objects)
         {
             // Valid object?
