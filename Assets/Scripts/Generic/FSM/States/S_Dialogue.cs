@@ -209,8 +209,8 @@ public class S_Dialogue : FSMState
         // Increase index
         ++m_currentTextPartIndex;
 
-        // Reached?
-        if (m_currentTextPartIndex >= m_text.TextPartCount && m_isHandleNextTextPart == true)
+        // Reached or hidden?
+        if ((m_text.IsShowParts == false || m_currentTextPartIndex >= m_text.TextPartCount) && m_isHandleNextTextPart == true)
         {
             // Display choices
             if(onDisplayChoices() == false)

@@ -58,6 +58,17 @@ public class DialogueText
         private set { }
     }
 
+    // Value of the func: show parts
+    private string m_funcValuShowParts;
+
+    // True if the text-parts are enabled
+    private System.Func<bool> m_funcShowParts;
+    public bool IsShowParts
+    {
+        get { if (m_funcShowParts == null) return true; return m_funcShowParts(); }
+        private set { }
+    }
+
     // List with all text parts
     private List<TextPart> m_textParts = new List<TextPart>();
     public int TextPartCount
@@ -75,11 +86,12 @@ public class DialogueText
     }
 
     // Constructors
-    public DialogueText(int _id, int _nextTextID, string _exitValue, List<Choice> _choiceList, List<TextPart> _textParts)
+    public DialogueText(int _id, int _nextTextID, string _exitValue, string _funcValueShowParts, List<Choice> _choiceList, List<TextPart> _textParts)
     {
         // Copy
         m_textID = _id;
         m_exitValue = _exitValue;
+        m_funcValuShowParts = _funcValueShowParts;
         m_nextTextID = _nextTextID;
         m_textParts = _textParts;
 
@@ -99,7 +111,7 @@ public class DialogueText
             m_autoChoiceType = ChoiceType.CHOICE_EXIT;
     }
     public DialogueText(int _id, List<Choice> _choiceList, List<TextPart> _textParts) :
-        this(_id, -1, null, _choiceList, _textParts)
+        this(_id, -1, null, null, _choiceList, _textParts)
     { }
 
     // Returns a text-part by its index (can be null!)
@@ -124,5 +136,30 @@ public class DialogueText
         // Local variables
         List<int> keys = new List<int>(m_choiceList.Keys);
         return keys;
+    }
+
+    // Initializes the text
+    // Returns true on success
+    public bool initialize(AdvancedDialogue _dialog)
+    {
+        // Define function: show parts
+        if (m_funcValuShowParts == null || m_funcValuShowParts.Length == 0)
+        m_funcShowParts = new System.Func<bool>(() => { return true; });
+        else if (m_funcValuShowParts.Equals("0") || m_funcValuShowParts.Equals("1"))
+            m_funcShowParts = new System.Func<bool>(() => { return m_funcValuShowParts.Equals("0") == true ? false : true; });
+        else
+        {
+            // Try to get script
+            if (_dialog.DynamicScripts.ContainsKey(m_funcValuShowParts) == false)
+                return false;
+            m_funcShowParts = new System.Func<bool>(() =>
+            {
+                bool v = false;
+                Game.Instance.ScriptEngine.executeScript<bool>(_dialog.DynamicScripts[m_funcValuShowParts], ref v);
+                return v;
+            });
+        }
+
+        return true;
     }
 }

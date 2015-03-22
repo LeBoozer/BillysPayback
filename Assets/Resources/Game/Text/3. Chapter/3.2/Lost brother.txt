@@ -13,7 +13,6 @@
 		{
 			result = true;	// Antwort zeigen
 		}
-		
 	</dynscript>
 
 	<dynscript name="markAnswer2Clicked">
@@ -22,7 +21,7 @@
 
 	<conversation id="0" start="0">
 		<!-- 1 -->
-		<text id="0">
+		<text id="0" showParts="answer2Enabled">
 			<part t="2.5" character="Antonio">Billy, warte! Ich muss dir etwas gestehen...</part>
 			<part t="2.5" character="Antonio">unter den anderen verschleppten Kirschen</part>
 			<part t="2.5" character="Antonio">befand sich auch mein kleiner Bruder.</part>
