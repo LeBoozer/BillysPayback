@@ -111,13 +111,13 @@ public class HuntingEnemy : Hitable, DeActivatable
         if (m_numberOfModels != 1)
         {
             // let rotate the model in circel
-            float angle = 1 * m_direction ;
+            float angle = 1;
             Vector3 axis = new Vector3(0, 0, 1);
             this.transform.Rotate(axis, angle);
 
             foreach (GameObject obj in m_rotatedModels)
-                obj.transform.Rotate(axis, angle, Space.Self);
-
+                obj.transform.Rotate(axis * m_direction, angle, Space.Self);
+            //return;
             // let rotate to the player
             angle = 180;
             axis = new Vector3(0, 1, 0);
@@ -126,7 +126,7 @@ public class HuntingEnemy : Hitable, DeActivatable
             {
                 m_direction *= -1;
                 foreach (GameObject obj in m_rotatedModels)
-                    obj.transform.Rotate(axis, angle);
+                    obj.transform.Rotate(axis, angle, Space.Self);
             }
         }
 
