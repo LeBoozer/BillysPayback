@@ -31,8 +31,20 @@ public class CheckPoint : MonoBehaviour, DeActivatable
      */
     public void OnTriggerEnter(Collider _obj)
     {
+        if (!_obj.gameObject.tag.Equals(Tags.TAG_PLAYER))
+            return;
+
+        trigger();
+    }
+
+    /**
+     * execute the checkpoint routine
+     * possible to trigger from outside
+     */
+    public void trigger()
+    {
         // trigger not actived
-        if(!m_isActived || !_obj.gameObject.tag.Equals(Tags.TAG_PLAYER))
+        if(!m_isActived)
             return;
 
         // set checkpoint position and the attendant action

@@ -210,7 +210,7 @@ public class BlackSparrow : Enemy, Boss
     {
         m_isActive = true;
         if(m_antonio != null)
-            m_antonio.m_alloweToThrowPowerUps = false;
+            m_antonio.m_allowToThrowPowerUps = false;
     }
 
     // let the boss fight end
@@ -224,7 +224,7 @@ public class BlackSparrow : Enemy, Boss
     {
         m_isActive = false;
         if(m_antonio != null)
-            m_antonio.m_alloweToThrowPowerUps = true;
+            m_antonio.m_allowToThrowPowerUps = true;
 
         foreach (Feather f in m_flyingFeather)
             Destroy(f.m_feather.gameObject);
@@ -234,7 +234,7 @@ public class BlackSparrow : Enemy, Boss
     {
 
         if (m_antonio != null)
-            m_antonio.m_alloweToThrowPowerUps = true;
+            m_antonio.m_allowToThrowPowerUps = true;
         foreach (Action _a in m_deathEvent)
             _a();
         base.die();

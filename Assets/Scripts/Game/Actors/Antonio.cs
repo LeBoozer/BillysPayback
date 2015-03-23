@@ -63,7 +63,7 @@ public class Antonio : MonoBehaviour
     private Vector3                     m_nextWayPoint;
     
     // throw variable
-    public  bool                        m_alloweToThrowPowerUps     = true;
+    public  bool                        m_allowToThrowPowerUps     = true;
     private PlayerValues                m_lastPlayerValues;
     private Queue<double>               m_playerHitTimeStamp;
     private double                      m_lastGiftTimeStamp;
@@ -572,7 +572,7 @@ public class Antonio : MonoBehaviour
      */ 
     private void throwPowerUps()
     {
-        if (!m_chase || !m_alloweToThrowPowerUps)
+        if (!m_chase || !m_allowToThrowPowerUps)
             return;
         // useless time hits?
         if (m_playerHitTimeStamp == null)
@@ -681,7 +681,7 @@ public class Antonio : MonoBehaviour
         m_lastGiftTimeStamp = Time.time;
 
         // speak something
-        speak(ANTONIO_GIFT_SENTENCES[Random.Range(0, ANTONIO_GIFT_SENTENCES.Length)]);
+        speak("Antonio: " + ANTONIO_GIFT_SENTENCES[Random.Range(0, ANTONIO_GIFT_SENTENCES.Length)]);
     }
 
     /**

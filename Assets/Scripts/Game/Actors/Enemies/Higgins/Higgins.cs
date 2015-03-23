@@ -154,7 +154,7 @@ public class Higgins : Enemy, Boss
         m_active = true;
 
         if (m_antonio != null)
-            m_antonio.m_alloweToThrowPowerUps = false;
+            m_antonio.m_allowToThrowPowerUps = false;
     }
 
     public void BreakBossFight()
@@ -162,7 +162,7 @@ public class Higgins : Enemy, Boss
         m_active = false;
 
         if (m_antonio != null)
-            m_antonio.m_alloweToThrowPowerUps = true;
+            m_antonio.m_allowToThrowPowerUps = true;
 
         // destroy the eggs
         Transform parent = this.transform.parent;
@@ -180,7 +180,7 @@ public class Higgins : Enemy, Boss
     internal override void die()
     {
         if (m_antonio != null)
-            m_antonio.m_alloweToThrowPowerUps = true;
+            m_antonio.m_allowToThrowPowerUps = true;
 
         foreach (Action _a in m_deathEvent)
             _a();
