@@ -31,6 +31,7 @@ public class AntonioChange : MonoBehaviour
         }
         _antonio.GetComponent<Antonio>().enabled = false;
         _antonio.AddComponent("BossAntonio");
+        _antonio.tag = Tags.TAG_ENEMY;
 
         // set antonio to the boss fight area
         if(m_antonioBossFightArea != null)

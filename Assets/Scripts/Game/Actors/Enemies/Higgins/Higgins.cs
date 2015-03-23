@@ -26,7 +26,8 @@ public class Higgins : Enemy, Boss
 
     private bool                    m_active;
     private LinkedList<Action>      m_deathEvent = new LinkedList<Action>();
-    
+
+    private Antonio                 m_antonio;
 	// Use this for initialization
     void Start () 
     {
@@ -74,6 +75,18 @@ public class Higgins : Enemy, Boss
         //turnAround();
         m_direction *= -1;
         this.m_groundFlyValue /= 4;
+
+        // init antonio
+
+        m_antonio = null;
+        GameObject obj = GameObject.FindGameObjectWithTag(Tags.TAG_COMPANION);
+        if (obj == null)
+        {
+            Debug.Log("BS: Antonio dont found!");
+            return;
+        }
+
+        m_antonio = obj.GetComponent<Antonio>();
 	}
 
     new void FixedUpdate()
@@ -137,13 +150,19 @@ public class Higgins : Enemy, Boss
 
     // let the boss fight start
     public void StartBossFight()
-    { 
-        m_active = true; 
+    {
+        m_active = true;
+
+        if (m_antonio != null)
+            m_antonio.m_alloweToThrowPowerUps = false;
     }
 
     public void BreakBossFight()
     {
         m_active = false;
+
+        if (m_antonio != null)
+            m_antonio.m_alloweToThrowPowerUps = true;
 
         // destroy the eggs
         Transform parent = this.transform.parent;
@@ -160,6 +179,9 @@ public class Higgins : Enemy, Boss
 
     internal override void die()
     {
+        if (m_antonio != null)
+            m_antonio.m_alloweToThrowPowerUps = true;
+
         foreach (Action _a in m_deathEvent)
             _a();
         base.die();
