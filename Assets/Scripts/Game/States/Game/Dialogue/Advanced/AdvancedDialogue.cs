@@ -150,6 +150,7 @@ public class AdvancedDialogue
     {
         // Local variables
         List<int> textIDs = null;
+        DialogueText text = null;
 
         // Check parameter
         if (_c == null)
@@ -166,8 +167,19 @@ public class AdvancedDialogue
         textIDs = _c.getTextIDs();
         foreach (int id in textIDs)
         {
+            // Get text
+            text = _c.getTextByID(id);
+
+            // Validate
             if (validateText(_c, _c.getTextByID(id)) == false)
                 return false;
+
+            // Initialize text
+            if (text.initialize(this) == false)
+            {
+                Debug.LogError("Text initialization failed!");
+                return false;
+            }
         }
 
         return true;

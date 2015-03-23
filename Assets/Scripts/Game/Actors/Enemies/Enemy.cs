@@ -26,6 +26,7 @@ public class Enemy : Hitable
 	public  bool		            m_canFall			= false;
 	public  bool		            m_allowToMove		= false;
     public  bool                    m_disableRaycast    = false;
+    public  float                   m_speedMultiplier   = 1.0f;
     private  bool                   m_needTurnAround    = false;
 	private bool 		            first;
     protected CharacterController   m_controller;
@@ -129,7 +130,7 @@ public class Enemy : Hitable
             Destroy(this.gameObject);
 
 		// set new position
-		m_controller.Move (Time.deltaTime * new Vector3 (m_direction * GameConfig.ENEMY_MAX_SPEED, 							// x-direction
+        m_controller.Move(Time.deltaTime * new Vector3(m_direction * GameConfig.ENEMY_MAX_SPEED * m_speedMultiplier, 							// x-direction
 		                   	             					m_fly, 	// fly/falling value
 		                                					-this.transform.position.z / Time.deltaTime) ); // move object to z = 0
 	}

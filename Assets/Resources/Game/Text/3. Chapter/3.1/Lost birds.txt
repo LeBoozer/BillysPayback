@@ -1,0 +1,7 @@
+﻿<bw>
+	<conversation id="0" start="0">
+		<text id="0">
+			<part t="2.5" character="Antonio">Verdammt, jetzt haben wir sie verloren...</part>
+		</text>
+	</conversation>
+</bw>

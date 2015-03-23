@@ -1,0 +1,7 @@
+Challenge	0
+Attention	0
+Autonomous	0
+Collecting	0
+Compassion	0
+Lightness	0
+Patience	0

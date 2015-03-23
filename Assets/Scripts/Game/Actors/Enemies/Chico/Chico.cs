@@ -26,6 +26,7 @@ public class Chico : Enemy, Boss
     // death handling
     private bool                        m_isAlive;
     private LinkedList<Action>          m_deathEvent = new LinkedList<Action>();
+    private Antonio                     m_antonio;
 
 
     #endregion
@@ -64,6 +65,17 @@ public class Chico : Enemy, Boss
         // init death values 
         m_isAlive = true;
         m_deathEvent = new LinkedList<Action>();
+
+        // init antonio
+        m_antonio = null;
+        GameObject obj = GameObject.FindGameObjectWithTag(Tags.TAG_COMPANION);
+        if (obj == null)
+        {
+            Debug.Log("BS: Antonio dont found!");
+            return;
+        }
+
+        m_antonio = obj.GetComponent<Antonio>();
 	}
 
     new void FixedUpdate()
@@ -125,6 +137,8 @@ public class Chico : Enemy, Boss
     public void StartBossFight()
     {
         m_allowToSpawn = true;
+        if (m_antonio != null)
+            m_antonio.m_alloweToThrowPowerUps = false;
         m_lastSpawnTime = 0;
     }
 
@@ -137,6 +151,8 @@ public class Chico : Enemy, Boss
     public void BreakBossFight()
     {
         m_allowToSpawn = false;
+        if (m_antonio != null)
+            m_antonio.m_alloweToThrowPowerUps = true;
 
         // destroy the active crew
         for (int i = m_chicosActiveCrew.transform.childCount; --i >= 0; )
@@ -146,6 +162,8 @@ public class Chico : Enemy, Boss
 
     internal override void die()
     {
+        if(m_antonio != null)
+            m_antonio.m_alloweToThrowPowerUps = true;
         // destroy the chico model
         Destroy(transform.GetChild(0).gameObject);
 

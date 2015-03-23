@@ -27,6 +27,12 @@ public class T_OnInvalidDistance : FSMTransition
     // The time interval for the distance checking (in seconds)
     public float m_checkInterval = 1.0f;
 
+    // The transition will trigger on lower deviations
+    public bool  m_reportLowerDeviation = true;
+
+    // The transition will trigger on exceedances
+    public bool  m_reportExceedance = true;
+
     // True to check all distances before triggering the transition
     public bool  m_checkAgainstAll = true;
 
@@ -39,6 +45,10 @@ public class T_OnInvalidDistance : FSMTransition
     // Override: FSMTransition::OnEnable
     void OnEnable()
     {
+        // Start has been called?
+        if (wasStartCalled() == false)
+            return;
+
         // Validate reference
         if(m_reference == null)
         {
@@ -72,6 +82,7 @@ public class T_OnInvalidDistance : FSMTransition
         Vector3 direction = Vector3.zero;
         float distance = 0.0f;
         bool distanceSuccess = false;
+        bool lowerDeviation = true;
 
         // Reference deleted?
         if (m_reference == null)
@@ -98,8 +109,11 @@ public class T_OnInvalidDistance : FSMTransition
             // Check distance
             if (distance <= m_minDistance || distance >= m_maxDistance)
             {
+                // Lower deviation?
+                lowerDeviation = distance <= m_minDistance;
+
                 // Check all?
-                if(m_checkAgainstAll == false)
+                if (m_checkAgainstAll == false && (m_reportLowerDeviation == true && lowerDeviation == true || m_reportExceedance == true && lowerDeviation == false))
                 {
                     // Set target state
                     setTargetFSMState();

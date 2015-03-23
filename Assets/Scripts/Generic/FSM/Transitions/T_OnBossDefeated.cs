@@ -24,6 +24,10 @@ public class T_OnBossDefeated : FSMTransition
         // Local variables
         Component[] comps = null;
 
+        // Start has been called?
+        if (wasStartCalled() == false)
+            return;
+
         // Validate object
         if(m_bossObject == null)
         {

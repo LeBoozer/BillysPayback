@@ -16,25 +16,21 @@ public class MainMenuState : GameState, GameStateController
 	// Overrides: GameState::onInit()
 	public void onInit()
 	{
-		Debug.Log("MainMenu::onInit()");
 	}
 	
 	// Overrides: GameState::onExit()
 	public void onExit()
 	{
-		Debug.Log("MainMenu::onExit()");
 	}
 	
 	// Overrides: GameState::onEnter()
 	public void onEnter()
 	{
-		Debug.Log("MainMenu::onEnter()");
 	}
 	
 	// Overrides: GameState::onLeave()
 	public void onLeave()
 	{
-		Debug.Log("MainMenu::onLeave()");
 	}
 	
 	// Overrides: GameState::onUpdate()

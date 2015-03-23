@@ -42,7 +42,7 @@ public class T_OnEnterTriggers : FSMTransition
 	{	
 		// Local variables
 		FSMEventHighjack hj = null;
-	
+
 		// Check parameter
 		if(m_triggerObjects.Count == 0 || m_collider == null)
 			return;

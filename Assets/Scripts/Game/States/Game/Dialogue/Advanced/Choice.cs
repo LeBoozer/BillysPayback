@@ -126,8 +126,12 @@ public class Choice
             // Try to get script
             if(_dialog.DynamicScripts.ContainsKey(m_funcValueEnabled) == false)
                 return false;
-            script = _dialog.DynamicScripts[m_funcValueEnabled];
-            m_funcIsEnabled = new System.Func<bool>(() => { object v = false; Game.Instance.ScriptEngine.executeScript(script, ref v); return (System.Boolean)v; });
+            m_funcIsEnabled = new System.Func<bool>(() => 
+            {
+                bool v = false;
+                Game.Instance.ScriptEngine.executeScript<bool>(_dialog.DynamicScripts[m_funcValueEnabled], ref v);               
+                return v; 
+            });
         }
 
         // Define function: next text ID
@@ -148,8 +152,10 @@ public class Choice
                     Debug.LogError("Choice with \"next text\" identifiers need an valid ID!");
                     return false;
                 }
-                script = _dialog.DynamicScripts[m_funcValueNextTextID];
-                m_funcNextTextID = new System.Func<int>(() => { object v = null; Game.Instance.ScriptEngine.executeScript(script, ref v); return (System.Int32)v; });
+                m_funcNextTextID = new System.Func<int>(() => 
+                { 
+                    object v = null; Game.Instance.ScriptEngine.executeScript(_dialog.DynamicScripts[m_funcValueNextTextID], ref v); return (System.Int32)v; 
+                });
 
                 // Set flag
                 m_isNextTextIDFunc = true;

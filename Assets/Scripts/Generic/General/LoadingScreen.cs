@@ -41,7 +41,6 @@ public class LoadingScreen : MonoBehaviour
         if(m_defaultLoadingScreenBackground == null && m_targetConroller.isCustomScreen() == false)
         {
             m_defaultLoadingScreenBackground = Resources.Load("Misc/loadingscreen") as Texture;
-            Debug.LogWarning("hannes: " + m_defaultLoadingScreenBackground);
         }
 	}
 	

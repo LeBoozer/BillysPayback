@@ -20,6 +20,7 @@ public class HuntingEnemy : Hitable, DeActivatable
     public float                    m_modelScale = 1f;
     public float                    m_huntingVelocityFactor = 1f;
     public bool                     m_isActived = true;
+    private float                   m_direction;
 
     private GameObject              m_player;
     private Vector3                 m_startPosition;
@@ -38,7 +39,7 @@ public class HuntingEnemy : Hitable, DeActivatable
 
         if (m_model == null)
             return;
-
+        m_direction = 1;
         // get temporare the sphere
         SphereCollider sphere = GetComponent<SphereCollider>();
 
@@ -109,12 +110,24 @@ public class HuntingEnemy : Hitable, DeActivatable
 
         if (m_numberOfModels != 1)
         {
-            float angle = 1;
+            // let rotate the model in circel
+            float angle = 1 * m_direction ;
             Vector3 axis = new Vector3(0, 0, 1);
             this.transform.Rotate(axis, angle);
 
             foreach (GameObject obj in m_rotatedModels)
                 obj.transform.Rotate(axis, angle, Space.Self);
+
+            // let rotate to the player
+            angle = 180;
+            axis = new Vector3(0, 1, 0);
+
+            if ((m_player.transform.position.x - this.transform.position.x) * m_direction < 0)
+            {
+                m_direction *= -1;
+                foreach (GameObject obj in m_rotatedModels)
+                    obj.transform.Rotate(axis, angle);
+            }
         }
 
         // move to player

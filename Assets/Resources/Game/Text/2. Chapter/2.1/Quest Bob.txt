@@ -1,37 +1,88 @@
-﻿<bw overrideStartConversationID="getStartConvID">
+﻿<!--
+	Benutze globale Variablen:
+		- level_21_bob_answer_herb_clicked
+		- level_21_bob_answer_fetch_clicked
+-->
+
+<bw overrideStartConversationID="getStartConvID">
 	<dynscript name="getStartConvID" result="result" type="System.Int32">
 		if(Player_GetCharacteristicChallenge() > 0)
 		{
 			result = 1;	// Challenge
-			DebugLog("Conversation::Bob::Challenge");
 		}
 		else
 		{
 			result = 0;	// Standard
-			DebugLog("Conversation::Bob::Standard");
 		}
+	</dynscript>
+
+	<dynscript name="answerHerbEnabled" result="result" type="System.Boolean">
+		if(IsGlobalVar("level_21_bob_answer_herb_clicked") == true)
+		{
+			result = false;	// Antwort nicht anzeigen
+		}
+		else
+		{
+			result = true;	// Antwort zeigen
+		}
+	</dynscript>
+	<dynscript name="markAnswerHerbClicked">
+		AddGlobalVar("level_21_bob_answer_herb_clicked", 0);
+	</dynscript>
+
+	<dynscript name="answerFetchEnabled" result="result" type="System.Boolean">
+		if(IsGlobalVar("level_21_bob_answer_fetch_clicked") == true)
+		{
+			result = false;	// Antwort nicht anzeigen
+		}
+		else
+		{
+			result = true;	// Antwort zeigen
+		}
+	</dynscript>
+	<dynscript name="markAnswerFetchClicked">
+		AddGlobalVar("level_21_bob_answer_fetch_clicked", 0);
+	</dynscript>
+
+	<dynscript name="showTextPartsFirstBlock" result="result" type="System.Boolean">
+		<![CDATA[
+			if(IsGlobalVar("level_21_bob_answer_herb_clicked") == true || IsGlobalVar("level_21_bob_answer_fetch_clicked") == true)
+			{
+				result = false;	// Textparts nicht zeigen
+			}
+			else
+			{
+				result = true;	// Textparts zeigen
+			}
+		]]>
 	</dynscript>
 
 	<!-- Standard -->
 	<conversation id="0" start="1">
 		<!-- 1 -->
-		<text id="1">
+		<text id="1" showParts="showTextPartsFirstBlock">
 			<part t="2.5" character="Billy">Was ist hier geschehen?</part>
 			<part t="2.5" character="Bob">Diese völlig unentspannten Vögel haben bei ihrem letzten Überfall</part>
 			<part t="2.5" character="Bob">unseren Brunnen beschädigt und dessen Kurbel gestohlen.</part>
 			<part t="2.5" character="Bob">Ohne die kommen wir nicht mehr an das Wasser ran,</part>
 			<part t="2.5" character="Bob">um unsere Plantagen zu bewässern.</part>
 
-			<choice id="0" nextText="111">Wozu braucht ihr diese Pflanzen denn?</choice>
+			<choice id="0" nextText="111" enabled="answerHerbEnabled">
+				<data>Wozu braucht ihr diese Pflanzen denn?</data>
+				<refscript ref="markAnswerHerbClicked" runtime="onClick"/>
+			</choice>
 			<choice id="1" nextText="121">Können wir euch irgendwie helfen?</choice>   
 			<choice id="2" nextText="131">Wir könnten versuchen euch die Kurbel wiederzubringen, wenn ihr uns anschließen auf unserem Weg in Black Sparrows Nest helft. Seid ihr dabei?</choice>   
 			<choice id="3" nextText="141">Da müsst ihr aber ganz schön sauer auf Black Sparrow und seine Gefolgschaft sein was? Wir sind gerade auf dem Weg zu ihnen, um diesen Federviechern eine Lektion zu erteilen. Wärt ihr dabei?</choice>
-			<choice id="4" nextText="41">Warum holt ihr sie euch nicht einfach zurück?</choice>
+			<choice id="4" nextText="41" enabled="answerFetchEnabled">
+				<data>Warum holt ihr sie euch nicht einfach zurück?</data>
+				<refscript ref="markAnswerFetchClicked" runtime="onClick"/>
+			</choice>
 			<choice id="5" exit="_cancel_">Klingt ... interessant ... wir gehen dann mal.</choice>
 		</text>
 
 		<!-- 1.1.1 -->
-		<text id="111">
+		<text id="111" nextText="1">
 			<part t="2.5" character="Bob">Dieses Kraut hält uns davon ab genauso spießig und ungechillt</part>
 			<part t="2.5" character="Bob">wie Black Sparrow und seine Crew zu sein.</part>
 			<part t="2.5" character="Bob">Wenn diese Ernte ausfällt, drehen hier noch alle durch...</part>
@@ -81,8 +132,12 @@
 		</text>
 
 		<!-- 4.1 -->
-		<text id="41">
-			<part t="2.5" character="Bob">[empty]</part>
+		<text id="41" nextText="1">
+			<part t="2.5" character="Bob">Wir lehnen direkte körperliche Auseinandersetzungen strikt ab,</part>
+			<part t="2.5" character="Bob">deshalb haben wir hier auch keine geübten Kämpfer,</part>
+			<part t="2.5" character="Bob">die es mit den Vögeln aufnehmen könnten. Hach … gäbe es nur jemanden,</part>
+			<part t="2.5" character="Bob">der das für uns übernehmen würde.</part>
+			<part t="2.5" character="Bob">Dafür würden wir sogar unseren Vorrat an Diamanten opfern.</part>
 		</text>
 
 		<!-- 1.2.1.2.1 -->
@@ -100,7 +155,7 @@
 			<part t="2.5" character="Bob">Das dürfte euch euren Weg leichter machen. Ich würde es euch geben,</part>
 			<part t="2.5" character="Bob">wenn ihr uns dafür helft die Kurbel wiederzufinden,</part>
 			<part t="2.5" character="Bob">damit wir den Brunnen reparieren und das Dorf davor</part>
-			<part t="2.5" character="Bob">bewahren können im Chaos zu versinken. Was sagt ihr?</part>      
+			<part t="2.5" character="Bob">bewahren können im Chaos zu versinken. Was sagt ihr?</part>
 		</text>
 
 		<!-- 1.3.1.1.1 / 1.4.1.1.1 -->
@@ -133,7 +188,7 @@
 	<!-- Herausforderung suchend -->
 	<conversation id="1" start="1">
 		<!-- 1 -->
-		<text id="1">
+		<text id="1" showParts="showTextPartsFirstBlock">
 			<part t="2.5" character="Billy">Was ist hier geschehen?</part>
 			<part t="2.5" character="Bob">Diese völlig unentspannten Vögel haben bei ihrem letzten Überfall</part>
 			<part t="2.5" character="Bob">unseren Brunnen beschädigt und dessen Kurbel gestohlen.</part>
@@ -142,15 +197,21 @@
 			<part t="2.5" character="Bob">Wir bräuchten dringend jemanden,</part>
 			<part t="2.5" character="Bob">uder diese Spießvögel findet und ihnen zeigt, wo es langgeht...</part>
 			
-			<choice id="0" nextText="211">Wozu braucht ihr diese Pflanzen denn?</choice>
+			<choice id="0" nextText="211" enabled="answerHerbEnabled">
+				<data>Wozu braucht ihr diese Pflanzen denn?</data>
+				<refscript ref="markAnswerHerbClicked" runtime="onClick"/>
+			</choice>
 			<choice id="1" nextText="221">Ich denke dafür wären wir genau die Richtigen!</choice>   
 			<choice id="2" nextText="231">Das übernehmen wir, wenn ihr uns anschließen auf unserem Weg in Black Sparrows Nest helft. Seid ihr dabei?</choice>   
-			<choice id="3" nextText="41">Warum holt ihr sie euch nicht einfach zurück?</choice>
+			<choice id="3" nextText="41" enabled="answerFetchEnabled">
+				<data>Warum holt ihr sie euch nicht einfach zurück?</data>
+				<refscript ref="markAnswerFetchClicked" runtime="onClick"/>
+			</choice>
 			<choice id="4" exit="_cancel_">Klingt ... interessant ... wir gehen dann mal.</choice>
 		</text>
 
 		<!-- 2.1.1 -->
-		<text id="211">
+		<text id="211" nextText="1">
 			<part t="2.5" character="Bob">Dieses Kraut hält uns davon ab genauso spießig und ungechillt</part>
 			<part t="2.5" character="Bob">wie Black Sparrow und seine Crew zu sein.</part>
 			<part t="2.5" character="Bob">Wenn diese Ernte ausfällt, drehen hier noch alle durch...</part>
@@ -178,8 +239,12 @@
 		</text>
 
 		<!-- 4.1 -->
-		<text id="41">
-			<part t="2.5" character="Bob">[empty]</part>
+		<text id="41" nextText="1">
+			<part t="2.5" character="Bob">Wir lehnen direkte körperliche Auseinandersetzungen strikt ab,</part>
+			<part t="2.5" character="Bob">deshalb haben wir hier auch keine geübten Kämpfer,</part>
+			<part t="2.5" character="Bob">die es mit den Vögeln aufnehmen könnten. Hach … gäbe es nur jemanden,</part>
+			<part t="2.5" character="Bob">der das für uns übernehmen würde.</part>
+			<part t="2.5" character="Bob">Dafür würden wir sogar unseren Vorrat an Diamanten opfern.</part>
 		</text>
 
 		<!-- 2.3.1.1.1 / 2.4.1.1.1 => 791 -->

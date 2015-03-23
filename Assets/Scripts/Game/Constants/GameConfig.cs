@@ -14,6 +14,8 @@ public class GameConfig
 {
 	// Constant values
 	public static readonly float 	INTRO_SHOW_TIME_SEC                         = 3.0f;
+    public static readonly float    VICTORY_SHOW_TIME_SEC                       = 3.0f;
+    public static readonly float    GAME_OVER_SHOW_TIME_SEC                     = 5.0f;
 	
 	public static readonly string 	LEVEL_ADDITIVE_ROOT_GO_NAME_RULE            = "_Root_x";
 	
@@ -23,10 +25,10 @@ public class GameConfig
 	public static readonly float 	BILLY_MAX_SPEED 				            = 10.0f;
 	public static readonly float 	BILLY_FLYING_FACTOR				            = 0.25f;
 	public static readonly float 	BILLY_JUMP_MINIMAL_HEIGHT 			        = 1f;
-	public static readonly float 	BILLY_JUMP_MAXIMAL_HEIGHT 			        = 4f;
+	public static readonly float 	BILLY_JUMP_MAXIMAL_HEIGHT 			        = 4.5f;
 	public static readonly float 	BILLY_JUMP_HEIGHT_FROM_ENEMY 	            = 2f;
     public static readonly float    BILLY_MINIMAL_KEYPRESS_TIME_FOR_JUMPING     = 0.1f;
-    public static readonly float    BILLY_MAXIMAL_KEYPRESS_TIME_FOR_JUMPING     = 0.5f;
+    public static readonly float    BILLY_MAXIMAL_KEYPRESS_TIME_FOR_JUMPING     = 0.3f;
     public static readonly int      BILLY_NEEDED_DIAMONDS_FOR_NEW_LIFE          = 10;
     public static readonly float    BILLY_TIME_BETWEEN_TWO_ACCEPT_HITS          = 2f;
 

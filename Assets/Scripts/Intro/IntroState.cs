@@ -22,25 +22,21 @@ public class IntroState : GameState, GameStateController
 	// Overrides: GameState::onInit()
 	public void onInit()
 	{
-		Debug.Log("Intro::onInit()");
 	}
 	
 	// Overrides: GameState::onExit()
 	public void onExit()
 	{
-		Debug.Log("Intro::onExit()");
 	}
 	
 	// Overrides: GameState::onEnter()
 	public void onEnter()
 	{
-		Debug.Log("Intro::onEnter()");
 	}
 	
 	// Overrides: GameState::onLeave()
 	public void onLeave()
 	{
-		Debug.Log("Intro::onLeave()");
 	}
 	
 	// Overrides: GameState::onUpdate()

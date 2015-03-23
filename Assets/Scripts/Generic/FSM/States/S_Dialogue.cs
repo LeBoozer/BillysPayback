@@ -209,8 +209,8 @@ public class S_Dialogue : FSMState
         // Increase index
         ++m_currentTextPartIndex;
 
-        // Reached?
-        if (m_currentTextPartIndex >= m_text.TextPartCount && m_isHandleNextTextPart == true)
+        // Reached or hidden?
+        if ((m_text.IsShowParts == false || m_currentTextPartIndex >= m_text.TextPartCount) && m_isHandleNextTextPart == true)
         {
             // Display choices
             if(onDisplayChoices() == false)
@@ -315,6 +315,10 @@ public class S_Dialogue : FSMState
         Choice choice = null;
         List<int> choiceIDs = null;
 
+        // Text set?
+        if (m_text == null)
+            return;
+
         // Compare answer with all choices
         choiceIDs = m_text.getChoicesIDs();
         foreach (int id in choiceIDs)
@@ -341,6 +345,10 @@ public class S_Dialogue : FSMState
      */
     private void onConversationExit(string _exitCode)
     {
+        // Clear
+        m_conversation = null;
+        m_text = null;
+
         // Notify transitions
         onNotifyDone(_exitCode);
     }

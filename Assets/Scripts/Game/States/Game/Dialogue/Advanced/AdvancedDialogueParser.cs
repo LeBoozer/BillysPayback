@@ -279,6 +279,7 @@ public abstract class AdvancedDialogueParser
         int textID = -1;
         int nextTextID = -1;
         string exitValue = "";
+        string funcValueShowParts = "";
         DialogueText text = null;
         XmlNode xmlNode = null;
         XmlNode xmlNodeAtt = null;
@@ -305,6 +306,11 @@ public abstract class AdvancedDialogueParser
         xmlNodeAtt = _node.Attributes.GetNamedItem("exit");
         if (xmlNodeAtt != null)
             exitValue = xmlNodeAtt.Value;
+
+        // Get attribute: show parts
+        xmlNodeAtt = _node.Attributes.GetNamedItem("showParts");
+        if (xmlNodeAtt != null)
+            funcValueShowParts = xmlNodeAtt.Value;
 
         // Find first text/choice node
         xmlNode = _node.FirstChild;
@@ -355,7 +361,7 @@ public abstract class AdvancedDialogueParser
         while (xmlNode != null);
 
         // Create text
-        text = new DialogueText(textID, nextTextID, exitValue, choiceList, partList);
+        text = new DialogueText(textID, nextTextID, exitValue, funcValueShowParts, choiceList, partList);
 
         return text;
     }

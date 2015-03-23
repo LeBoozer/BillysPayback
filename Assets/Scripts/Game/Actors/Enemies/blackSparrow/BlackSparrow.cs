@@ -64,6 +64,7 @@ public class BlackSparrow : Enemy, Boss
     // external Objects
     private GameObject          FeatherPrefabs;
     private Transform           m_player;
+    private Antonio             m_antonio;
 
     #endregion
 
@@ -94,6 +95,19 @@ public class BlackSparrow : Enemy, Boss
         // call base start
         base.Awake();
 	}
+
+    void Start()
+    {
+        m_antonio = null;
+        GameObject obj = GameObject.FindGameObjectWithTag(Tags.TAG_COMPANION);
+        if (obj == null)
+        {
+            Debug.Log("BS: Antonio dont found!");
+            return;
+        }
+
+        m_antonio = obj.GetComponent<Antonio>();
+    }
 
     new void FixedUpdate()
     {
@@ -195,6 +209,8 @@ public class BlackSparrow : Enemy, Boss
     public void StartBossFight()
     {
         m_isActive = true;
+        if(m_antonio != null)
+            m_antonio.m_alloweToThrowPowerUps = false;
     }
 
     // let the boss fight end
@@ -205,8 +221,10 @@ public class BlackSparrow : Enemy, Boss
 
     // let the boss fight break
     public void BreakBossFight() 
-    { 
+    {
         m_isActive = false;
+        if(m_antonio != null)
+            m_antonio.m_alloweToThrowPowerUps = true;
 
         foreach (Feather f in m_flyingFeather)
             Destroy(f.m_feather.gameObject);
@@ -214,6 +232,9 @@ public class BlackSparrow : Enemy, Boss
 
     internal override void die()
     {
+
+        if (m_antonio != null)
+            m_antonio.m_alloweToThrowPowerUps = true;
         foreach (Action _a in m_deathEvent)
             _a();
         base.die();

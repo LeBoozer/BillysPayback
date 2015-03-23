@@ -63,6 +63,7 @@ public class Antonio : MonoBehaviour
     private Vector3                     m_nextWayPoint;
     
     // throw variable
+    public  bool                        m_alloweToThrowPowerUps     = true;
     private PlayerValues                m_lastPlayerValues;
     private Queue<double>               m_playerHitTimeStamp;
     private double                      m_lastGiftTimeStamp;
@@ -571,6 +572,8 @@ public class Antonio : MonoBehaviour
      */ 
     private void throwPowerUps()
     {
+        if (!m_chase || !m_alloweToThrowPowerUps)
+            return;
         // useless time hits?
         if (m_playerHitTimeStamp == null)
             Debug.Log("Queue: " + m_playerHitTimeStamp);

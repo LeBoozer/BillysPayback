@@ -21,6 +21,9 @@ public abstract class FSMTransition : MonoBehaviour, DeActivatable
 	
 	// The FSM instance
 	protected FSM 			m_fsm = null;
+
+    // True of the start method has been called
+    protected bool          m_startWasCalled = false;
 	
 	// The target FSM-state
 	public FSMState 		m_targetState = null;
@@ -57,6 +60,12 @@ public abstract class FSMTransition : MonoBehaviour, DeActivatable
         if (gameObject != null)
             gameObject.SetActive(_onOff);
     }
+
+    // Returns true if start has been called
+    public bool wasStartCalled()
+    {
+        return m_startWasCalled;
+    }
 	
 	// Will be called as soon as the host-state has finished its work (this call is not guaranteed and depends heavily on the host state!)
 	public virtual void onHostStateDone(object _param)
@@ -84,6 +93,9 @@ public abstract class FSMTransition : MonoBehaviour, DeActivatable
 		
 		// Retrieve host FSM-state
 		m_hostState = gameObject.transform.parent.gameObject.GetComponent<FSMState>();
+
+        // Set flag
+        m_startWasCalled = true;
 	}
 
     // Override: DeActivatable::isActivated()
