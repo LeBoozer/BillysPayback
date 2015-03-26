@@ -1,7 +1,7 @@
 Challenge	0
 Attention	0
-Autonomous	0
-Collecting	0
-Compassion	0
+Autonomous	-1
+Collecting	-1
+Compassion	1
 Lightness	0
 Patience	0
