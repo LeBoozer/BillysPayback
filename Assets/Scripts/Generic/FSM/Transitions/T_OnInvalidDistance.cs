@@ -75,6 +75,11 @@ public class T_OnInvalidDistance : FSMTransition
             StopCoroutine(m_coroutine);
     }
 
+    void FixedUpdate()
+    {
+      //  checkDistance();
+    }
+
     // Checks the distance
     private bool checkDistance()
     {

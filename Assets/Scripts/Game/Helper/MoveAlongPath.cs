@@ -44,6 +44,9 @@ public class MoveAlongPath : MonoBehaviour, DeActivatable
     // The smoothness factor
     public float m_smoothnessFactor = 100.0f;
 
+    // True to reset the current position of the object is deactivated
+    public bool m_resetPositionOnDeactivate = true;
+
     // True to ease in the function
     public bool m_easeIn = true;
 
@@ -146,5 +149,9 @@ public class MoveAlongPath : MonoBehaviour, DeActivatable
     {
         // Clear flag
         m_isActivated = false;
+
+        // Reset position?
+        if (m_resetPositionOnDeactivate == true)
+            m_currentPathPosition = 0;
     }
 }
