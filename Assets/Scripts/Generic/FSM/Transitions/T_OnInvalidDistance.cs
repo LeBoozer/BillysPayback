@@ -111,8 +111,6 @@ public class T_OnInvalidDistance : FSMTransition
             distance = direction.magnitude;
             direction.Normalize();
 
-            Debug.Log(distance + "\t" + m_minDistance + "\t" + m_maxDistance + "\tcheck distance: " + (distance <= m_minDistance || distance >= m_maxDistance));
-
             // Check distance
             if (distance <= m_minDistance || distance >= m_maxDistance)
             {

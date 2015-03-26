@@ -1,7 +1,8 @@
 ﻿<bw>
 	<conversation id="0" start="0">
 		<text id="0">
-			<part t="2.5" character="Antonio">Hilfe! Hilfe!</part>
+			<part t="2.5" character="Antonio">Mist! Sie haben uns entdeckt!</part>
+			<part t="3.5" character="Antonio">Jetzt haben wir keine Chance mehr den Weg zu finden...</part>
 		</text>
 	</conversation>
 </bw>

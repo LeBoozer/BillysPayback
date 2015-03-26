@@ -4,9 +4,9 @@
 		<text id="0">
 			<part t="2.5" character="Antonio">Was wollen wir machen?</part>
 
-			<choice id="0" exit="_cancel_">Hier bleiben!</choice>
-			<choice id="1" exit="level21">Zu Bob</choice>
-			<choice id="2" exit="level31">Nach 3.1</choice>
+			<choice id="0" exit="_cancel_">Abbrechen.</choice>
+			<choice id="1" exit="level21">Kiwano Dorf...</choice>
+			<choice id="2" exit="level31">Dunkler Wald...</choice>
 		</text>
 	</conversation>
 </bw>
