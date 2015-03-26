@@ -90174,11 +90174,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 81.6999969
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 14.3999996
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
       propertyPath: m_LocalPosition.z

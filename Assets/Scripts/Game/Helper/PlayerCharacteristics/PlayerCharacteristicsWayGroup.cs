@@ -79,8 +79,6 @@ public class PlayerCharacteristicsWayGroup : MonoBehaviour
 		m_startTrigger.gameObject.SetActive(true);
 		m_endTrigger.gameObject.SetActive(false);
 		m_containerWays.gameObject.SetActive(false);
-
-        Debug.Log(this.name);
 	}
 	
 	// Override: MonoBehaviour::OnDestroy()
