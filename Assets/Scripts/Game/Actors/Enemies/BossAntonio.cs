@@ -284,6 +284,7 @@ public class BossAntonio : Hitable, Boss
 
     private void die()
     {
+        Debug.Log("antonio::die");
         foreach (Action _a in m_deathEvents)
             _a();
         Destroy(this.gameObject);
