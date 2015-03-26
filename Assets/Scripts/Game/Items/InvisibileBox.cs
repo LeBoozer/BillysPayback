@@ -38,7 +38,7 @@ public class InvisibileBox : MonoBehaviour
 
         ++m_enter;
 
-        if(m_enter != 1)
+        if(m_enter != 2)
             return;
 
         Vector3 moveDirection = _other.gameObject.transform.position - m_enterPosition;
