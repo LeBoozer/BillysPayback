@@ -28,10 +28,6 @@ public class T_OnBossDefeated : FSMTransition
         // Local variables
         Component[] comps = null;
 
-        // Start has been called?
-        if (wasStartCalled() == false)
-            return;
-
         // Reset
         m_bosses.Clear();
         m_defeatCounter = 0;

@@ -45,7 +45,6 @@ public class Player : Hitable
     private float                   m_gameOverTime;
     private GameObject              m_gameOverGUI;
 	private	bool					m_loseLife;
-    public  bool                    IGNORE_CHECK_POINTS     = false;
 	private Vector3 				m_lastCheckPoint;
     private Action                  m_checkPointAction      = null;
 
@@ -200,7 +199,7 @@ public class Player : Hitable
             m_loseLife = false;
 
             // no lifepoints left?
-            if (m_playerData.m_lifePoints == 0)
+            if (m_playerData.m_lifePoints == 0 || underTheMap)
             {
                 --m_playerData.m_LifeNumber;
 
@@ -218,13 +217,9 @@ public class Player : Hitable
                 // reset lifepoints
                 m_playerData.m_lifePoints = GameConfig.BILLY_LIFE_POINT;
 
-                // not under the map and ignore check points
-                if (underTheMap || !IGNORE_CHECK_POINTS)
-                    setToCheckpoint();
-            }
-            // don't decrease the lifenumbers but under the map?
-            else if (underTheMap)
+                // set to the last check point
                 setToCheckpoint();
+            }
         }
 
         return true;

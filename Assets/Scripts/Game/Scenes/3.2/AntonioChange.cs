@@ -15,6 +15,7 @@ public class AntonioChange : MonoBehaviour
 {
     public GameObject m_brigde;
     public GameObject m_antonioBossFightArea;
+    public GameObject m_antonio;
 
     void OnTriggerEnter(Collider _other)
     {
@@ -22,24 +23,33 @@ public class AntonioChange : MonoBehaviour
         if (_other.tag != Tags.TAG_PLAYER)
             return;
 
-        // add and remove components
-        GameObject _antonio = GameObject.FindGameObjectWithTag(Tags.TAG_COMPANION);
-        if (_antonio == null)
-        { 
-            Debug.LogWarning("AntonioChange: Antonio dont found!");
+        // antonio not set?
+        if (m_antonio == null)
+        {
+            Debug.Log("AntonioChange: Antinio dont set!");
             return;
         }
-        _antonio.GetComponent<Antonio>().enabled = false;
-        _antonio.AddComponent<BossAntonio>();
-        _antonio.tag = Tags.TAG_ENEMY;
+
+        // enabled the antonio script
+        m_antonio.GetComponent<Antonio>().enabled = false;
+
+        // add the BossAntonio script if necessary
+        if(m_antonio.GetComponent<BossAntonio>() == null)
+            m_antonio.AddComponent<BossAntonio>();
+
+        // set the new tag of antonio
+        m_antonio.tag = Tags.TAG_ENEMY;
 
         // set antonio to the boss fight area
         if(m_antonioBossFightArea != null)
-            _antonio.transform.position = m_antonioBossFightArea.transform.position;
+            m_antonio.transform.position = m_antonioBossFightArea.transform.position;
 
         // destroy the bridge
-        if(m_brigde != null)
+        if (m_brigde != null)
+        {
             Destroy(m_brigde);
+            m_brigde = null;
+        }
     }
 
 }

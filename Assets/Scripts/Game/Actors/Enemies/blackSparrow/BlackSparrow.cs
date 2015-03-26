@@ -244,6 +244,8 @@ public class BlackSparrow : Enemy, Boss
 
     internal override void die()
     {
+        foreach (Feather f in m_flyingFeather)
+            Destroy(f.m_feather.gameObject);
 
         if (m_antonio != null)
             m_antonio.m_allowToThrowPowerUps = true;

@@ -1324,7 +1324,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 143693452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 65.3000031, y: -7.4000001, z: 0}
+  m_LocalPosition: {x: 56.2000008, y: .189999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 968833982}
@@ -1831,6 +1831,52 @@ MonoBehaviour:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: ff83fe6eb71ad1e468c2ce3a5e687883, type: 2}
   m_PrefabInternal: {fileID: 2053921243}
+--- !u!1 &232144171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 232144172}
+  - 114: {fileID: 232144173}
+  m_Layer: 0
+  m_Name: 'Transition to ''Unguided movement'' (lost) '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &232144172
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 232144171}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1152020705}
+  m_Father: {fileID: 1228923820}
+  m_RootOrder: 0
+--- !u!114 &232144173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 232144171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d62c8472d4b0584692aa837648ab969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_isActivated: 1
+  m_targetState: {fileID: 1670692979}
+  m_deleteOnUse: 0
+  m_actionsOnTransition: []
+  m_bossObjects:
+  - {fileID: 1878432829}
 --- !u!1001 &235081306
 Prefab:
   m_ObjectHideFlags: 0
@@ -3146,7 +3192,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 406095469}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 374.5, y: 3, z: 0}
+  m_LocalPosition: {x: 379.309998, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 538080569}
@@ -8173,7 +8219,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 968833981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 280.799988, y: 5.19999981, z: 0}
+  m_LocalPosition: {x: 291.299988, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 143693453}
@@ -8192,6 +8238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_brigde: {fileID: 1794405700}
   m_antonioBossFightArea: {fileID: 143693452}
+  m_antonio: {fileID: 1878432829}
 --- !u!65 &968833984
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9662,6 +9709,49 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 242ff6b89cd08ca46822749c6fd5dfcf, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1152020704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1152020705}
+  - 114: {fileID: 1152020706}
+  m_Layer: 0
+  m_Name: Action 'Change music'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1152020705
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1152020704}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 232144172}
+  m_RootOrder: 0
+--- !u!114 &1152020706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1152020704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb9fc61d5d812524b871a7e971c63a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_musicManager: {fileID: 528902356}
+  m_nextActiveSource: 
+  m_selectRandomly: 1
+  m_sources: []
 --- !u!4 &1152872677 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: baeda6a15b2085a44bf0d516c4b1a173, type: 2}
@@ -10584,6 +10674,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 232144172}
   - {fileID: 1937489294}
   m_Father: {fileID: 1171527141}
   m_RootOrder: 5
@@ -11663,7 +11754,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .0160000008
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13824,7 +13915,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1624814731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 461.76001, y: 4.73999977, z: 0}
+  m_LocalPosition: {x: 469.130005, y: 4.73999977, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1568940507}
@@ -13840,7 +13931,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4, y: 15, z: 5}
+  m_Size: {x: 1, y: 15, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1624814734
 MonoBehaviour:
@@ -16211,7 +16302,7 @@ Transform:
   - {fileID: 676105092}
   - {fileID: 1673193769}
   m_Father: {fileID: 1228923820}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &1937489295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16225,9 +16316,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_isActivated: 1
   m_targetState: {fileID: 474233267}
-  m_deleteOnUse: 1
+  m_deleteOnUse: 0
   m_actionsOnTransition: []
-  m_bossObjects: []
+  m_bossObjects:
+  - {fileID: 1878432829}
 --- !u!1 &1939828617
 GameObject:
   m_ObjectHideFlags: 0
