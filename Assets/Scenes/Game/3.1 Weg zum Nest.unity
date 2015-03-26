@@ -2163,9 +2163,9 @@ MonoBehaviour:
   m_targetObjects:
   - {fileID: 632763166}
   - {fileID: 805831749}
-  m_minDistance: 5
+  m_minDistance: 10
   m_maxDistance: 1000
-  m_checkInterval: 1
+  m_checkInterval: .100000001
   m_reportLowerDeviation: 1
   m_reportExceedance: 0
   m_checkAgainstAll: 0
@@ -7492,7 +7492,7 @@ MonoBehaviour:
   - {fileID: 632763166}
   - {fileID: 805831749}
   m_minDistance: 5
-  m_maxDistance: 85
+  m_maxDistance: 75
   m_checkInterval: .100000001
   m_reportLowerDeviation: 0
   m_reportExceedance: 1
@@ -11098,7 +11098,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 435522849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.1500015, y: -4.73000002, z: 0}
+  m_LocalPosition: {x: 36.1500015, y: -4.98999977, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 535222483}
@@ -18455,6 +18455,7 @@ MonoBehaviour:
   m_endRule: 0
   m_maxSpeed: 8
   m_smoothnessFactor: 100
+  m_resetPositionOnDeactivate: 1
   m_easeIn: 1
   m_easeOut: 1
 --- !u!1001 &711497511
@@ -22194,6 +22195,7 @@ MonoBehaviour:
   m_endRule: 0
   m_maxSpeed: 12
   m_smoothnessFactor: 100
+  m_resetPositionOnDeactivate: 1
   m_easeIn: 1
   m_easeOut: 1
 --- !u!1001 &846732968
@@ -26751,6 +26753,7 @@ MonoBehaviour:
   m_endRule: 0
   m_maxSpeed: 8
   m_smoothnessFactor: 100
+  m_resetPositionOnDeactivate: 1
   m_easeIn: 1
   m_easeOut: 1
 --- !u!1001 &1023895356
@@ -31732,9 +31735,9 @@ MonoBehaviour:
   m_targetObjects:
   - {fileID: 632763166}
   - {fileID: 805831749}
-  m_minDistance: 15
+  m_minDistance: 10
   m_maxDistance: 1000
-  m_checkInterval: 1
+  m_checkInterval: .100000001
   m_reportLowerDeviation: 1
   m_reportExceedance: 0
   m_checkAgainstAll: 0
@@ -37178,7 +37181,7 @@ MonoBehaviour:
   - {fileID: 805831749}
   m_minDistance: 5
   m_maxDistance: 75
-  m_checkInterval: 1
+  m_checkInterval: .100000001
   m_reportLowerDeviation: 0
   m_reportExceedance: 1
   m_checkAgainstAll: 0
@@ -51159,6 +51162,7 @@ MonoBehaviour:
   m_endRule: 0
   m_maxSpeed: 10
   m_smoothnessFactor: 100
+  m_resetPositionOnDeactivate: 1
   m_easeIn: 1
   m_easeOut: 1
 --- !u!1001 &1960541121
@@ -51510,6 +51514,7 @@ MonoBehaviour:
   m_endRule: 0
   m_maxSpeed: 10
   m_smoothnessFactor: 100
+  m_resetPositionOnDeactivate: 1
   m_easeIn: 1
   m_easeOut: 1
 --- !u!4 &1975088226 stripped
