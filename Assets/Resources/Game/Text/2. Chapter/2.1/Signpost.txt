@@ -16,7 +16,7 @@
 	<conversation id="0" start="0">
 		<!-- 1 -->
 		<text id="0">
-			<part t="2.5" character="Antonio">Was wollen wir machen?</part>
+			<part t="2.5" character="Antonio">Wo wollen wir hinreisen?</part>
 
 			<choice id="0" exit="_cancel_">Abbrechen.</choice>
 			<choice id="1" exit="level31">Dunkler Wald...</choice>
