@@ -18,8 +18,6 @@ public class RestoreObjectTransform : MonoBehaviour
     // Override: MonoBehaviour::Start()
 	void Start() 
     {
-        Debug.Log("Start");
-
 	    // Check
         if (m_savedTransforms == null || m_savedTransforms.m_objects == null || m_savedTransforms.m_objects.Length == 0)
             return;

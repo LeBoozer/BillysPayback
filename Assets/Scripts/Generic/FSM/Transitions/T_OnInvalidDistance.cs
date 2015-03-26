@@ -64,7 +64,7 @@ public class T_OnInvalidDistance : FSMTransition
         }
 
         // Start distance checking
-        m_coroutine = StartCoroutine("proc_checkDistance");
+       // m_coroutine = StartCoroutine("proc_checkDistance");
     }
 
     // Override: FSMTransition::OnDisable
@@ -77,7 +77,7 @@ public class T_OnInvalidDistance : FSMTransition
 
     void FixedUpdate()
     {
-      //  checkDistance();
+        checkDistance();
     }
 
     // Checks the distance
