@@ -21,27 +21,27 @@ public class CP_Boss : CheckPoint
         // constructor of the checkpoints
         base.Awake();
 
-        // 
-        if (m_boss == null)
-            return;
-
-        Vector3 startPositionOfBoss = m_boss.transform.position;
-        Boss script = null;
-        Component[] con = m_boss.GetComponents(typeof(Boss));
-        if (con != null && con.Length != 0)
-        {
-            foreach (Component com in con)
-            {
-                if (com is Boss)
-                {
-                    script = com as Boss;
-                    break;
-                }
-            }
-        }
-
         m_checkPointAction = () =>
         {
+            // 
+            if (m_boss == null)
+                return;
+
+            Vector3 startPositionOfBoss = m_boss.transform.position;
+            Boss script = null;
+            Component[] con = m_boss.GetComponents(typeof(Boss));
+            if (con != null && con.Length != 0)
+            {
+                foreach (Component com in con)
+                {
+                    if (com is Boss)
+                    {
+                        script = com as Boss;
+                        break;
+                    }
+                }
+            }
+
             // let break the boss fight
             script.BreakBossFight();
 
