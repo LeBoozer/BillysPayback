@@ -168,7 +168,7 @@ public class Higgins : Enemy, Boss
         Transform parent = this.transform.parent;
 
         for (int i = parent.childCount; i > 0; )
-            if (parent.GetChild(i).gameObject != this.gameObject)
+            if (parent.GetChild(--i).gameObject != this.gameObject)
                 Destroy(parent.GetChild(i).gameObject);
     }
 
