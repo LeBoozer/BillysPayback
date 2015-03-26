@@ -45,6 +45,8 @@ public class T_OnBossDefeated : FSMTransition
                 Debug.LogError("Invalid boss object has been defined!");
                 return;
             }
+            if (obj.activeSelf == false)
+                continue;
 
             // Extract components
             comps = obj.GetComponents(typeof(Boss));

@@ -40,7 +40,8 @@ public class FindMeshColliderMeshesWithTrigger : EditorWindow
         GUILayout.Label("# Meshes with triangle colliders as trigger (not supported):", EditorStyles.label);
         if(GUILayout.Button("Find meshes"))
         {
-            Selection.objects = FindObjectsOfType<MeshCollider>().Where(mc => mc.isTrigger && !mc.convex).Select(mc => mc.gameObject).ToArray();
+            Selection.objects = FindObjectsOfType<Enemy>().Where(mc => mc.m_disableRaycast == true).Select(mc => mc.gameObject).ToArray();
+            //Selection.objects = FindObjectsOfType<MeshCollider>().Where(mc => mc.isTrigger && !mc.convex).Select(mc => mc.gameObject).ToArray();
         }
     }
 }
