@@ -222,11 +222,11 @@ public class MusicManager : MonoBehaviour
                 // Set as current and start
                 m_currentSource = m_nextSource;
                 m_nextSource = null;
-                audio.volume = m_currentSource.m_targetVolume;
-                audio.clip = m_currentSource.m_clip;
+                GetComponent<AudioSource>().volume = m_currentSource.m_targetVolume;
+                GetComponent<AudioSource>().clip = m_currentSource.m_clip;
                 if (m_currentSource.m_restorePosition == true)
-                    audio.time = m_currentSource.m_floatPosSec;
-                audio.Play();
+                    GetComponent<AudioSource>().time = m_currentSource.m_floatPosSec;
+                GetComponent<AudioSource>().Play();
                 return Result.ePLAY;
             }
 
@@ -238,7 +238,7 @@ public class MusicManager : MonoBehaviour
         {
             // Save current position
             if (m_currentSource != null && m_currentSource.m_restorePosition == true)
-                m_currentSource.m_floatPosSec = audio.time;
+                m_currentSource.m_floatPosSec = GetComponent<AudioSource>().time;
 
             // Fade-out required?
             if (m_currentSource != null && m_currentSource.m_fadeOut != null && m_currentSource.m_fadeOut.m_enabled == true)
@@ -251,16 +251,16 @@ public class MusicManager : MonoBehaviour
             // Set next song as current
             m_currentSource = m_nextSource;
             m_nextSource = null;
-            audio.volume = m_currentSource.m_targetVolume;
-            audio.clip = m_currentSource.m_clip;
+            GetComponent<AudioSource>().volume = m_currentSource.m_targetVolume;
+            GetComponent<AudioSource>().clip = m_currentSource.m_clip;
             if (m_currentSource.m_restorePosition == true)
-                audio.time = m_currentSource.m_floatPosSec;
-            audio.Play();
+                GetComponent<AudioSource>().time = m_currentSource.m_floatPosSec;
+            GetComponent<AudioSource>().Play();
             return Result.ePLAY;
         }
 
         // Still playing?
-        if(audio.isPlaying == false)
+        if(GetComponent<AudioSource>().isPlaying == false)
         {
             // Reset position
             m_currentSource.m_floatPosSec = 0.0f;
@@ -269,7 +269,7 @@ public class MusicManager : MonoBehaviour
             if (m_currentSource.m_loop == true)
             {
                 // Restart
-                audio.Play();
+                GetComponent<AudioSource>().Play();
             }
             else
             {
@@ -289,7 +289,7 @@ public class MusicManager : MonoBehaviour
         float nextCheckSec = DEFAULT_FADE_INTERVAL_SEC;
 
         // Get current volume
-        m_currentVolume = audio.volume;
+        m_currentVolume = GetComponent<AudioSource>().volume;
 
         // Fade-out required?
         if (m_currentSource != null && m_currentSource.m_fadeOut != null && m_currentSource.m_fadeOut.m_enabled == true)
@@ -303,10 +303,10 @@ public class MusicManager : MonoBehaviour
                 m_currentSource = null;
 
                 // Start next audio source
-                audio.clip = m_nextSource.m_clip;
+                GetComponent<AudioSource>().clip = m_nextSource.m_clip;
                 if (m_nextSource.m_restorePosition == true)
-                    audio.time = m_nextSource.m_floatPosSec;
-                audio.Play();
+                    GetComponent<AudioSource>().time = m_nextSource.m_floatPosSec;
+                GetComponent<AudioSource>().Play();
             }
             else
                 nextCheckSec = m_currentSource.m_fadeOut.m_fadeSpeedSec;
@@ -333,12 +333,12 @@ public class MusicManager : MonoBehaviour
                 nextCheckSec = -1.0f;
 
                 // Start next audio source
-                if (audio.isPlaying == false)
+                if (GetComponent<AudioSource>().isPlaying == false)
                 {
-                    audio.clip = m_currentSource.m_clip;
+                    GetComponent<AudioSource>().clip = m_currentSource.m_clip;
                     if (m_currentSource.m_restorePosition == true)
-                        audio.time = m_currentSource.m_floatPosSec;
-                    audio.Play();
+                        GetComponent<AudioSource>().time = m_currentSource.m_floatPosSec;
+                    GetComponent<AudioSource>().Play();
                 }
             }
             else
@@ -346,7 +346,7 @@ public class MusicManager : MonoBehaviour
         }
 
         // Set volume
-        audio.volume = m_currentVolume;
+        GetComponent<AudioSource>().volume = m_currentVolume;
 
         return nextCheckSec;
     }

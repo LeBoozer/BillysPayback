@@ -34,18 +34,18 @@ public class AutoTransparent : MonoBehaviour
     void Awake()
     {
         // Got a material?
-        if (renderer.material != null)
+        if (GetComponent<Renderer>().material != null)
         {
             // Save the current shader
-            m_oldShader = renderer.material.shader;
+            m_oldShader = GetComponent<Renderer>().material.shader;
 
             // Set standard transparence shader
-            renderer.material.shader = Shader.Find("Transparent/Diffuse");
+            GetComponent<Renderer>().material.shader = Shader.Find("Transparent/Diffuse");
 
             // Material has color property?
-            if (renderer.material.HasProperty("_Color") == true)
+            if (GetComponent<Renderer>().material.HasProperty("_Color") == true)
             {
-                m_oldColor = renderer.material.color;
+                m_oldColor = GetComponent<Renderer>().material.color;
                 m_transparency = m_oldColor.a;
             }
         }
@@ -57,8 +57,8 @@ public class AutoTransparent : MonoBehaviour
         // Reset shader
         if (m_oldShader == null)
             return;
-        renderer.material.shader = m_oldShader;
-        renderer.material.color = m_oldColor;
+        GetComponent<Renderer>().material.shader = m_oldShader;
+        GetComponent<Renderer>().material.color = m_oldColor;
     }
 
     // Override: MonoBehaviour::Update()
@@ -86,9 +86,9 @@ public class AutoTransparent : MonoBehaviour
         }
 
         // Set transparency
-        currentColor = renderer.material.color;
+        currentColor = GetComponent<Renderer>().material.color;
         currentColor.a = m_transparency;
-        renderer.material.color = currentColor;
+        GetComponent<Renderer>().material.color = currentColor;
 
 	    // Clear flag
         m_isTransparent = false;
