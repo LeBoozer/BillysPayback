@@ -26,6 +26,7 @@ public class Chico : Enemy, Boss
     // death handling
     private bool                        m_isAlive;
     private LinkedList<Action>          m_deathEvent = new LinkedList<Action>();
+    private LinkedList<Action>          m_breakEvents = new LinkedList<Action>();
     private Antonio                     m_antonio;
 
 
@@ -150,6 +151,12 @@ public class Chico : Enemy, Boss
 
     public void BreakBossFight()
     {
+        foreach (Action e in m_breakEvents)
+        {
+            if (e != null)
+                e();
+        }
+
         m_allowToSpawn = false;
         if (m_antonio != null)
             m_antonio.m_allowToThrowPowerUps = true;
@@ -158,6 +165,11 @@ public class Chico : Enemy, Boss
         for (int i = m_chicosActiveCrew.transform.childCount; --i >= 0; )
             Destroy(m_chicosActiveCrew.transform.GetChild(i).gameObject);
 
+    }
+
+    public void OnBreakBossFight(Action _event)
+    {
+        m_breakEvents.AddLast(_event);
     }
 
     internal override void die()
@@ -187,5 +199,4 @@ public class Chico : Enemy, Boss
 
         Destroy(this.gameObject);
     }
-
 }

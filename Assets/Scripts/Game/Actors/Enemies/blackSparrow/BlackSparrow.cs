@@ -57,9 +57,10 @@ public class BlackSparrow : Enemy, Boss
     private float               m_nextFeatherThrow;
 
     // death handling
-    private bool                m_isActive;
-    private LinkedList<Action>  m_deathEvent = new LinkedList<Action>();
-    private LinkedList<Feather>  m_flyingFeather;
+    private bool                    m_isActive;
+    private LinkedList<Action>      m_deathEvent = new LinkedList<Action>();
+    private LinkedList<Action>      m_breakEvents = new LinkedList<Action>();
+    private LinkedList<Feather>     m_flyingFeather;
 
     // external Objects
     private GameObject          FeatherPrefabs;
@@ -222,12 +223,23 @@ public class BlackSparrow : Enemy, Boss
     // let the boss fight break
     public void BreakBossFight() 
     {
+        foreach (Action e in m_breakEvents)
+        {
+            if (e != null)
+                e();
+        }
+
         m_isActive = false;
         if(m_antonio != null)
             m_antonio.m_allowToThrowPowerUps = true;
 
         foreach (Feather f in m_flyingFeather)
             Destroy(f.m_feather.gameObject);
+    }
+
+    public void OnBreakBossFight(Action _event)
+    {
+        m_breakEvents.AddLast(_event);
     }
 
     internal override void die()

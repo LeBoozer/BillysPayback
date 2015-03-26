@@ -25,10 +25,16 @@ public class CP_Boss : CheckPoint
         // 
         if (m_boss == null)
             return;
-        Vector3[] startPositionOfBoss = new Vector3[m_boss.Count];
+        SA_SaveObjectTransform.Entry[] bossData = new SA_SaveObjectTransform.Entry[m_boss.Count];
         for (int i = 0; i < m_boss.Count; ++i)
             if (m_boss[i] != null)
-                startPositionOfBoss[i] = m_boss[i].transform.position;
+            {
+                bossData[i] = new SA_SaveObjectTransform.Entry();
+                bossData[i].m_transform = new SA_SaveObjectTransform.StoredTransforms();
+                bossData[i].m_transform.m_localPosition = m_boss[i].transform.localPosition;
+                bossData[i].m_transform.m_localRotation = m_boss[i].transform.localRotation;
+                bossData[i].m_transform.m_localScale    = m_boss[i].transform.localScale;
+            }
         m_checkPointAction = () =>
         {
             // for each game object in the list
@@ -57,11 +63,13 @@ public class CP_Boss : CheckPoint
                 }
 
                 // let break the boss fight
-                if(script != null)
+                if (script != null)
                     script.BreakBossFight();
 
                 // reset position of boss
-                boss.transform.position = startPositionOfBoss[i];
+                boss.transform.localPosition = bossData[i].m_transform.m_localPosition;
+                boss.transform.localRotation = bossData[i].m_transform.m_localRotation;
+                boss.transform.localScale    = bossData[i].m_transform.m_localScale;
             }
 
         };

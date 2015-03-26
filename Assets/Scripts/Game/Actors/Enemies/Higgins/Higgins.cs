@@ -26,6 +26,7 @@ public class Higgins : Enemy, Boss
 
     private bool                    m_active;
     private LinkedList<Action>      m_deathEvent = new LinkedList<Action>();
+    private LinkedList<Action>      m_breakEvents = new LinkedList<Action>();
 
     private Antonio                 m_antonio;
 	// Use this for initialization
@@ -159,6 +160,12 @@ public class Higgins : Enemy, Boss
 
     public void BreakBossFight()
     {
+        foreach (Action e in m_breakEvents)
+        {
+            if (e != null)
+                e();
+        }
+
         m_active = false;
 
         if (m_antonio != null)
@@ -175,6 +182,11 @@ public class Higgins : Enemy, Boss
     public void EndBossFight(Action _event)
     {
         m_deathEvent.AddLast(_event);
+    }
+
+    public void OnBreakBossFight(Action _event)
+    {
+        m_breakEvents.AddLast(_event);
     }
 
     internal override void die()

@@ -6,6 +6,7 @@
  */
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 /*
  * The transition will be triggered on boss defeated events
@@ -13,10 +14,13 @@ using System.Collections;
 public class T_OnBossDefeated : FSMTransition
 {
     // The target boss
-    public GameObject m_bossObject;
+    public GameObject[] m_bossObjects;
 
-    // The boss interface
-    private Boss m_boss = null;
+    // The boss interface list
+    private List<Boss> m_bosses = new List<Boss>();
+
+    // The defeat counter
+    private int         m_defeatCounter = 0;
 
     // Override: FSMTransition::OnEnable
     void OnEnable()
@@ -28,40 +32,50 @@ public class T_OnBossDefeated : FSMTransition
         if (wasStartCalled() == false)
             return;
 
-        // Validate object
-        if(m_bossObject == null)
-        {
-            Debug.LogError("No boss object has been defined!");
-            return;
-        }
+        // Reset
+        m_bosses.Clear();
+        m_defeatCounter = 0;
 
-        // Extract components
-        comps = m_bossObject.GetComponents(typeof(Boss));
-        if (comps == null || comps.Length == 0)
+        // Loop through all registered bosses
+        foreach (GameObject obj in m_bossObjects)
         {
-            Debug.LogError("Only game object with script inherting from 'Boss' can be used!");
-            return;
-        }
-
-        // Loop through all components
-        foreach (Component comp in comps)
-        {
-            // Requirements present?
-            if (comp is Boss == true)
+            // Validate object
+            if (obj == null)
             {
-                // Set
-                m_boss = comp as Boss;
-                break;
+                Debug.LogError("Invalid boss object has been defined!");
+                return;
+            }
+
+            // Extract components
+            comps = obj.GetComponents(typeof(Boss));
+            if (comps == null || comps.Length == 0)
+            {
+                Debug.LogError("Only game object with script inherting from 'Boss' can be used!");
+                return;
+            }
+
+            // Loop through all components
+            foreach (Component comp in comps)
+            {
+                // Requirements present?
+                if (comp is Boss == true)
+                {
+                    // Register event
+                    (comp as Boss).EndBossFight(() => 
+                    {
+                        ++m_defeatCounter;
+                        if (m_defeatCounter >= m_bosses.Count)
+                            setTargetFSMState();
+                    });
+
+                    // Add to list
+                    m_bosses.Add(comp as Boss);
+
+                    // Set
+                    break;
+                }
             }
         }
-        if(m_boss == null)
-        {
-            Debug.LogError("No valid boss object has been defined!");
-            return;
-        }
-
-        // Register event
-        m_boss.EndBossFight(() => { setTargetFSMState(); });
     }
 
     // Override: FSMTransition::OnDisable
