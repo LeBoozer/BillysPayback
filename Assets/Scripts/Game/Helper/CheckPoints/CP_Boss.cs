@@ -7,13 +7,14 @@
 
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 /*
  * special check point for the boss fight
  */
 public class CP_Boss : CheckPoint 
 {
-    public GameObject m_boss = null;
+    public List<GameObject> m_boss = new List<GameObject>();
 
     // Use this for initialization
     new void Awake()
@@ -21,32 +22,47 @@ public class CP_Boss : CheckPoint
         // constructor of the checkpoints
         base.Awake();
 
+        // 
+        if (m_boss == null)
+            return;
+        Vector3[] startPositionOfBoss = new Vector3[m_boss.Count];
+        for (int i = 0; i < m_boss.Count; ++i)
+            if (m_boss[i] != null)
+                startPositionOfBoss[i] = m_boss[i].transform.position;
         m_checkPointAction = () =>
         {
-            // 
-            if (m_boss == null)
-                return;
-
-            Vector3 startPositionOfBoss = m_boss.transform.position;
-            Boss script = null;
-            Component[] con = m_boss.GetComponents(typeof(Boss));
-            if (con != null && con.Length != 0)
+            // for each game object in the list
+            for (int i = 0; i < m_boss.Count; ++i)
             {
-                foreach (Component com in con)
+                // get the current game object
+                GameObject boss = m_boss[i];
+
+                // isnt a game object?
+                if (boss == null)
+                    continue;
+
+                // seek the boss-script
+                Boss script = null;
+                Component[] con = boss.GetComponents(typeof(Boss));
+                if (con != null && con.Length != 0)
                 {
-                    if (com is Boss)
+                    foreach (Component com in con)
                     {
-                        script = com as Boss;
-                        break;
+                        if (com is Boss)    
+                        {
+                            script = com as Boss;
+                            break;
+                        }
                     }
                 }
+
+                // let break the boss fight
+                if(script != null)
+                    script.BreakBossFight();
+
+                // reset position of boss
+                boss.transform.position = startPositionOfBoss[i];
             }
-
-            // let break the boss fight
-            script.BreakBossFight();
-
-            // reset position of boss
-            m_boss.transform.position = startPositionOfBoss;
 
         };
 
