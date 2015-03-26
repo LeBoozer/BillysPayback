@@ -1,0 +1,26 @@
+﻿<!--
+	Benutze globale Variablen:
+		- level_32_visited
+-->
+
+<bw>
+	<dynscript name="isLevel32" result="result" type="System.Boolean">
+		<![CDATA[
+			if(IsGlobalVar("level_32_visited") == true)
+				result = true;
+			else
+				result = false;
+		]]>
+	</dynscript>
+
+	<conversation id="0" start="0">
+		<!-- 1 -->
+		<text id="0">
+			<part t="2.5" character="Antonio">Was wollen wir machen?</part>
+
+			<choice id="0" exit="_cancel_">Hier bleiben!</choice>
+			<choice id="1" exit="level21">Zu Bob</choice>
+			<choice id="2" exit="level32" enabled="isLevel32">Zu Black Sparrow</choice>
+		</text>
+	</conversation>
+</bw>

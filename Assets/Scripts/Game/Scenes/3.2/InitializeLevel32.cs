@@ -18,8 +18,12 @@ public class InitializeLevel32 : MonoBehaviour
     // Override: MonoBehaviour::Start()
     void Start()
     {
+        // Set global variable
+        if (Game.Instance.ScriptEngine.IsGlobalVar("level_32_visited") == false)
+            Game.Instance.ScriptEngine.AddGlobalVar("level_32_visited", true);
+
         // Shield from Bob collected?
-        if (m_higgins != null && Game.Instance.ScriptEngine.IsGlobalVar("level_2_bob_received_shield") == true)
+        if (m_higgins != null && Game.Instance.ScriptEngine.IsGlobalVar("level_2_bob_received_shield") == false)
             m_higgins.gameObject.SetActive(true);
     }
 }
