@@ -86,7 +86,7 @@ public abstract class FSMTransition : MonoBehaviour, DeActivatable
 	}
 	
 	// Override: MonoBehaviour::Start()
-	void Start()
+    protected virtual void Start()
 	{
 		// Retrieve FSM instance
         m_fsm = gameObject.GetComponentInParent<FSM>();	

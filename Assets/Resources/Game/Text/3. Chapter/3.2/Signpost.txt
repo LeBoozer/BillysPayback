@@ -1,0 +1,12 @@
+﻿<bw>
+	<conversation id="0" start="0">
+		<!-- 1 -->
+		<text id="0">
+			<part t="2.5" character="Antonio">Wo wollen wir hinreisen?</part>
+
+			<choice id="0" exit="_cancel_">Abbrechen.</choice>
+			<choice id="1" exit="level21">Kiwano Dorf...</choice>
+			<choice id="2" exit="level31">Dunkler Wald...</choice>
+		</text>
+	</conversation>
+</bw>

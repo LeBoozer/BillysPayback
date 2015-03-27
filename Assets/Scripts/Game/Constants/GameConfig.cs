@@ -2,7 +2,7 @@
  * Project:	Billy's Payback
  * File:	GameConfig.cs
  * Authors:	Byron Worms
- * Editors:	-
+ * Editors:	Raik Dankworth
  */
 using UnityEngine;
 using System.Collections;

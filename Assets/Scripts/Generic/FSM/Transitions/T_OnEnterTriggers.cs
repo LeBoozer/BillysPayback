@@ -64,7 +64,7 @@ public class T_OnEnterTriggers : FSMTransition
 			hj.FSMOnTriggerEnter += (Collider _other) => 
 			{
 				// Collider hits one of the triggers?
-				if(_other.tag.Equals(m_collider.tag) == true)
+                if (_other.name.Equals(m_collider.name) == true)
 				{
 					// Update hit count
 					++t.m_currentHitCount;

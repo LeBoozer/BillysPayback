@@ -30,8 +30,6 @@ public class T_OnAreaKeyEvent : FSMTransition
         {
             // Set target game-state
             setTargetFSMState();
-
-            Debug.Log("Changed state");
         };
     }
 

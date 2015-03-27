@@ -67,7 +67,7 @@ public class LightFlickerFire : MonoBehaviour
             }
 
             // Calculatue intensity
-            light.intensity = Random.Range(m_minIntensity, m_maxIntensity);
+            GetComponent<Light>().intensity = Random.Range(m_minIntensity, m_maxIntensity);
 
             // Wait
             yield return new WaitForSeconds(m_flickerSpeed);

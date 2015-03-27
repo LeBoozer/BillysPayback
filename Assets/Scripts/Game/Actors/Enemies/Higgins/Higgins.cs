@@ -26,6 +26,7 @@ public class Higgins : Enemy, Boss
 
     private bool                    m_active;
     private LinkedList<Action>      m_deathEvent = new LinkedList<Action>();
+    private LinkedList<Action>      m_breakEvents = new LinkedList<Action>();
 
     private Antonio                 m_antonio;
 	// Use this for initialization
@@ -154,21 +155,27 @@ public class Higgins : Enemy, Boss
         m_active = true;
 
         if (m_antonio != null)
-            m_antonio.m_alloweToThrowPowerUps = false;
+            m_antonio.m_allowToThrowPowerUps = false;
     }
 
     public void BreakBossFight()
     {
+        foreach (Action e in m_breakEvents)
+        {
+            if (e != null)
+                e();
+        }
+
         m_active = false;
 
         if (m_antonio != null)
-            m_antonio.m_alloweToThrowPowerUps = true;
+            m_antonio.m_allowToThrowPowerUps = true;
 
         // destroy the eggs
         Transform parent = this.transform.parent;
 
         for (int i = parent.childCount; i > 0; )
-            if (parent.GetChild(i).gameObject != this.gameObject)
+            if (parent.GetChild(--i).gameObject != this.gameObject)
                 Destroy(parent.GetChild(i).gameObject);
     }
 
@@ -177,10 +184,15 @@ public class Higgins : Enemy, Boss
         m_deathEvent.AddLast(_event);
     }
 
+    public void OnBreakBossFight(Action _event)
+    {
+        m_breakEvents.AddLast(_event);
+    }
+
     internal override void die()
     {
         if (m_antonio != null)
-            m_antonio.m_alloweToThrowPowerUps = true;
+            m_antonio.m_allowToThrowPowerUps = true;
 
         foreach (Action _a in m_deathEvent)
             _a();

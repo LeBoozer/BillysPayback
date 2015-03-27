@@ -24,7 +24,7 @@
 
 	<!-- Alle Sachen gesammelt -->
 	<conversation id="1" start="0">
-		<text id="0">
+		<text id="0" exit="thx">
 			<part t="2.5" character="Manfred">Vielen Dank, dass ihr mir mein Zeug wiedergebracht habt.</part>
 			<part t="2.5" character="Manfred">Jetzt muss ich nur noch irgendwie aus diesem verdammten Wald herausfinden.</part>
 			<part t="2.5" character="Manfred">Hier ist eure Belohnung.</part>

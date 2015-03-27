@@ -63,7 +63,7 @@ public class Antonio : MonoBehaviour
     private Vector3                     m_nextWayPoint;
     
     // throw variable
-    public  bool                        m_alloweToThrowPowerUps     = true;
+    public  bool                        m_allowToThrowPowerUps     = true;
     private PlayerValues                m_lastPlayerValues;
     private Queue<double>               m_playerHitTimeStamp;
     private double                      m_lastGiftTimeStamp;
@@ -572,34 +572,14 @@ public class Antonio : MonoBehaviour
      */ 
     private void throwPowerUps()
     {
-        if (!m_chase || !m_alloweToThrowPowerUps)
+        if (!m_chase || !m_allowToThrowPowerUps)
             return;
-        // useless time hits?
-        if (m_playerHitTimeStamp == null)
-            Debug.Log("Queue: " + m_playerHitTimeStamp);
-        /*if(m_playerHitTimeStamp.Count > 0)
-            Debug.Log("peek: " + m_playerHitTimeStamp.Peek());*/
-        while (m_playerHitTimeStamp.Count > 0 && m_playerHitTimeStamp.Peek() + IGNORE_HIT_TIME_DIFFERENCE < Time.time)
-            m_playerHitTimeStamp.Dequeue();
-
-        // in last tick a hit by player?
-        if (m_playerData.LifePoints < m_lastPlayerValues.m_lifePoints)
-            m_playerHitTimeStamp.Enqueue(Time.time);
-
-        // a lot of hits in last time?
-        if (m_playerHitTimeStamp.Count > NUMBER_OF_NEEDED_HITS && m_lastGiftTimeStamp + MIN_GIFT_TIME_DIFFERENCE < Time.time)
-        {
-            if (Random.value < 0.5)
-                createGift(Raspberry);
-            else
-                createGift(Kiwano);
-        }
 
         // create sometimes a gift is possible to need
         if (m_lastGiftTimeStamp + GIFT_TIME_DIFFERENCE < Time.time)
         { 
-            // create a gift with a probability 5%
-            float randomValue = Random.value * 20 ;
+            // create a gift with a probability 2.5%
+            float randomValue = Random.value * 40 ;
             if (randomValue < 1)
             {
                 float probabilityLife, probabilityKiwano, probabilityRasp;
@@ -630,7 +610,7 @@ public class Antonio : MonoBehaviour
         _probabilityLife = 0;
         if (m_playerData.LifePoints == 1)
             _probabilityLife = 1;
-        else if (m_playerData.LifePoints < GameConfig.BILLY_LIFE_POINT)
+        else if (m_playerData.LifePoints < MAXIMAL_POWER_UPS_NUMBER)
             _probabilityLife = 0.5f;
         int kiw = 1, rasp = 1;
 
@@ -681,7 +661,7 @@ public class Antonio : MonoBehaviour
         m_lastGiftTimeStamp = Time.time;
 
         // speak something
-        speak(ANTONIO_GIFT_SENTENCES[Random.Range(0, ANTONIO_GIFT_SENTENCES.Length)]);
+        speak("Antonio: " + ANTONIO_GIFT_SENTENCES[Random.Range(0, ANTONIO_GIFT_SENTENCES.Length)]);
     }
 
     /**

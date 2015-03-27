@@ -95,9 +95,12 @@
 			<part t="2.5" character="Bob">und das Dorf davor bewahren können ins Chaos zu stürzen.</part>
 			<part t="2.5" character="Bob">Wenn ihr das schafft, könnt ihr unseren Vorrat an Diamanten haben.</part>
 
-			<choice id="0" nextText="111">Wozu braucht ihr diese Pflanzen denn?</choice>
+			<choice id="0" nextText="111" enabled="answerHerbEnabled">
+				<data>Wozu braucht ihr diese Pflanzen denn?</data>
+				<refscript ref="markAnswerHerbClicked" runtime="onClick"/>
+			</choice>
 			<choice id="1" nextText="12121">Das klingt fair. Wir werden uns gleich auf die Suche machen.</choice>
-			<choice id="2" nextText="12131">Das klingt fair, aber eigentlich haben wir noch ein anderes wichtiges Anliegen. Wir sind auf dem Weg zu Black Sparrows Nest und wollen ihm eine Lektion erteilen. Würdet ihr uns auch dabei helfen?</choice>
+			<choice id="2" nextText="141">Das klingt fair, aber eigentlich haben wir noch ein anderes wichtiges Anliegen. Wir sind auf dem Weg zu Black Sparrows Nest und wollen ihm eine Lektion erteilen. Würdet ihr uns auch dabei helfen?</choice>
 		</text>
 
 		<!-- 1.3.1 -->

@@ -23,4 +23,6 @@ public interface Boss
 
     // let the boss fight break
     void BreakBossFight();
+
+    void OnBreakBossFight(Action _event);
 }

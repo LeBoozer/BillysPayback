@@ -64,7 +64,7 @@ public class T_OnInvalidDistance : FSMTransition
         }
 
         // Start distance checking
-        m_coroutine = StartCoroutine("proc_checkDistance");
+       // m_coroutine = StartCoroutine("proc_checkDistance");
     }
 
     // Override: FSMTransition::OnDisable
@@ -73,6 +73,11 @@ public class T_OnInvalidDistance : FSMTransition
         // Stop the distance checking
         if (m_coroutine != null)
             StopCoroutine(m_coroutine);
+    }
+
+    void FixedUpdate()
+    {
+        checkDistance();
     }
 
     // Checks the distance
@@ -127,7 +132,6 @@ public class T_OnInvalidDistance : FSMTransition
                     return true;
             }
         }
-
         // All tests failed?
         if (distanceSuccess == false)
         {

@@ -25,6 +25,7 @@ public class BossAntonio : Hitable, Boss
     // die value
     private bool                    m_active;
     private LinkedList<Action>      m_deathEvents;
+    private LinkedList<Action>      m_breakEvents;
     private int                     m_lifepoints;
     private float                   m_lastHit;
 
@@ -50,6 +51,7 @@ public class BossAntonio : Hitable, Boss
         // init
         m_active = false;
         m_deathEvents = new LinkedList<Action>();
+        m_breakEvents = new LinkedList<Action>();
         m_lifepoints = GameConfig.ANTONIO_LIFE_POINTS;
 
         // get componente character controller
@@ -247,7 +249,17 @@ public class BossAntonio : Hitable, Boss
 
     public void BreakBossFight()
     {
+        foreach(Action e in m_breakEvents)
+        {
+            if (e != null)
+                e();
+        }
         m_active = false;
+    }
+
+    public void OnBreakBossFight(Action _event)
+    {
+        m_breakEvents.AddLast(_event);
     }
 
     #endregion
@@ -272,6 +284,7 @@ public class BossAntonio : Hitable, Boss
 
     private void die()
     {
+        Debug.Log("antonio::die");
         foreach (Action _a in m_deathEvents)
             _a();
         Destroy(this.gameObject);
