@@ -132,6 +132,7 @@ public class BlackSparrow : Enemy, Boss
         throwFeather();
 
         // call base update
+        m_allowToMove = false;
         base.Update();
     }
 
@@ -234,7 +235,10 @@ public class BlackSparrow : Enemy, Boss
             m_antonio.m_allowToThrowPowerUps = true;
 
         foreach (Feather f in m_flyingFeather)
+        {
+            if(f != null && f.m_feather != null)
             Destroy(f.m_feather.gameObject);
+        }
     }
 
     public void OnBreakBossFight(Action _event)

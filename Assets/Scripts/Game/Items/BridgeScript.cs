@@ -1,54 +1,56 @@
-﻿using UnityEngine;
+﻿/*
+ * Project:	Billy's Payback
+ * File:	BridgeScript.cs
+ * Authors:	Dominique Kasper
+ * Editors:	Raik Dankworth
+ */
+using UnityEngine;
 using System.Collections;
 
 public class BridgeScript : MonoBehaviour {
 
-	private Transform m_billy;
-
-	void Awake() {
-
-		//gets the player
-		m_billy = GameObject.Find("Billy").gameObject.transform;
-	}
+	private Transform m_billy = null;
 
 	// Use this for initialization
-	void Start () {
-
+	void Start () 
+    {
+        //gets the player
+        GameObject player = GameObject.FindGameObjectWithTag(Tags.TAG_PLAYER);
+        if (player == null)
+        {
+            Debug.Log("BrigdeScript: Player dont found!");
+            return;
+        }
+        m_billy = player.transform;
 	}
 	
-	// Update is called once per frame
-	void FixedUpdate () {
-		//checks if billy is under the bridge by now (make the bridge not solid again)
-		if (m_billy.position.y < this.transform.position.y) {
-			setTrigger(true);
-		} else if (m_billy.position.y > this.transform.position.y) { //makes bridge solid if Billy was above the bridge all the time
-			setTrigger (false);
-		}
-	
+	void OnTriggerEnter(Collider other)
+    {
+        setTrigger(m_billy.position.y < this.transform.position.y);
 	}
 
-	void OnTriggerEnter(Collider other) {
-	}
-
-	void OnTriggerExit(Collider other) {
-		setTrigger (false);
+	void OnTriggerExit(Collider other) 
+    {
+        setTrigger(m_billy.position.y < this.transform.position.y);
 	}
 
 	//sets the bridge to solid (false) or not solid (true)
 	public void setTrigger(bool isTrigger) {
+
 		//gets the whole bridge
-		Transform parent = this.transform.parent.transform.parent.transform;
+		Transform parent = this.transform.parent;
 		
 		Transform bridgeSegment = null;
 		Transform bridgeSegmentModell = null;
 		
 		//walks through the bridge segments
-		for (int i = 0; i < parent.childCount; i++) {
+		for (int i = 0; i < parent.childCount; i++) 
+        {
 			bridgeSegment = parent.GetChild(i);
 			bridgeSegmentModell = bridgeSegment.GetChild(0);
 			
 			//sets the collider of the bridge segment to no trigger (to make it solid)
-			bridgeSegmentModell.GetComponent<Collider>().isTrigger = isTrigger;
-		}
+            bridgeSegmentModell.GetComponent<BrigdeScriptHelper>().setIsTrigger(isTrigger);		
+        }
 	}
 }

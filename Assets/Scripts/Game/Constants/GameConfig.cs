@@ -17,6 +17,8 @@ public class GameConfig
     public static readonly float    VICTORY_SHOW_TIME_SEC                       = 3.0f;
     public static readonly float    GAME_OVER_SHOW_TIME_SEC                     = 5.0f;
 	
+    public static readonly string   CAMERA_NAME_PLAYER                          = "Player Camera";
+
 	public static readonly string 	LEVEL_ADDITIVE_ROOT_GO_NAME_RULE            = "_Root_x";
 	
 	// Billy related values
