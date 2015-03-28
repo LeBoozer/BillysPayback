@@ -62,6 +62,15 @@ public class Enemy : Hitable
 
         // calculate death value
         m_deathValue = -Mathf.Sqrt(Mathf.Abs(Physics.gravity.y) * 50 * m_worldScale.y * this.transform.localScale.y);
+
+        // Attach script
+        MeshRendererOnVisible.attachScriptToRenderer(gameObject,
+             (Camera _camera) =>
+             {
+                 // Player camera?
+                 if (Camera.current.name.Equals(GameConfig.CAMERA_NAME_PLAYER) == true)
+                     m_allowToMove = true;
+             });
 	}
    
     // Override: Monobehaviour::FixedUpdate()
@@ -117,17 +126,6 @@ public class Enemy : Hitable
             m_fly += 2 * Physics.gravity.y * Time.deltaTime;
     }
 
-    void OnBecameVisible()
-    {
-        m_allowToMove = true;
-        Debug.Log("HURE");
-    }
-    void OnBecameInvisible()
-    {
-        m_allowToMove = false;
-        Debug.Log("ARSCH");
-    }
-	
 	// Update is called once per frame
 	internal void Update () 
 	{
@@ -142,6 +140,9 @@ public class Enemy : Hitable
         m_controller.Move(Time.deltaTime * new Vector3(m_direction * GameConfig.ENEMY_MAX_SPEED * m_speedMultiplier, 							// x-direction
 		                   	             					m_fly, 	// fly/falling value
 		                                					-this.transform.position.z / Time.deltaTime) ); // move object to z = 0
+
+        // Reset flag
+        m_allowToMove = false;
 	}
 
 

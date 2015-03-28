@@ -19,6 +19,7 @@ public class JumpingLittleBird : Hitable
     private float                       m_fly;
     private float                       m_groundFlyValue;
     private float                       m_lastHit;
+    private bool                        m_skipUpdate = false;
     public int                          m_lifepoints = 1;
 
     protected CharacterController       m_controller;
@@ -40,11 +41,24 @@ public class JumpingLittleBird : Hitable
 
         // calculate the start velocity to jump
         m_groundFlyValue = 2 * Mathf.Sqrt(GameConfig.ENEMY_JUMP_HEIGHT * m_controller.height * m_worldScale.y * this.transform.localScale.y * Mathf.Abs(Physics.gravity.y));
+
+        // Attach script
+        MeshRendererOnVisible.attachScriptToRenderer(gameObject,
+             (Camera _camera) =>
+             {
+                 // Player camera?
+                 if (Camera.current.name.Equals(GameConfig.CAMERA_NAME_PLAYER) == true)
+                     m_skipUpdate = false;
+             });
 	}
-	
+
 	// Update is called once per frame
 	void Update ()
     {
+        // Skip?
+        if (m_skipUpdate == true)
+            return;
+
         // movement
         if (m_controller.isGrounded)
             m_fly = m_groundFlyValue;
@@ -52,6 +66,9 @@ public class JumpingLittleBird : Hitable
             m_fly += 2 * Physics.gravity.y * Time.deltaTime;
 
         m_controller.Move( Time.deltaTime * new Vector3(0, m_fly, -transform.position.z / Time.deltaTime));
+
+        // Set flag
+        m_skipUpdate = true;
 	}
 
     // Override: Hitable::onHit()

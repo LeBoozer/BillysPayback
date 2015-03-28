@@ -18,6 +18,9 @@ public class PowerUps : MonoBehaviour
     // The player instance
     private GameObject              m_player        = null;
 
+    // True to skip the update
+    private bool                    m_skipUpdate    = true;
+
     // Power-up type
     public PlayerData.PowerUpType   m_type          = PlayerData.PowerUpType.PUT_NONE;
 
@@ -78,6 +81,15 @@ public class PowerUps : MonoBehaviour
         m_offset = new Vector3(m_offset.x * playerWorldScale.x,
                                 m_offset.y * playerWorldScale.y,
                                 m_offset.z * playerWorldScale.z);
+
+        // Attach script
+        MeshRendererOnVisible.attachScriptToRenderer(gameObject,
+             (Camera _camera) =>
+             {
+                 // Player camera?
+                 if (Camera.current.name.Equals(GameConfig.CAMERA_NAME_PLAYER) == true)
+                     m_skipUpdate = false;
+             });
     }
 
     // Override: MonoBehaviour::Update()
@@ -91,8 +103,15 @@ public class PowerUps : MonoBehaviour
         if (m_type == PlayerData.PowerUpType.PUT_LIFE)
             return;
 
+        // Skip update?
+        if (m_skipUpdate == true)
+            return;
+
         // Rotate
         transform.Rotate(Vector3.up * Time.deltaTime * GameConfig.DIAMONG_ROTATION_SPEED);
+
+        // Set flag
+        m_skipUpdate = true;
     }
 
     // Override: MonoBehaviour::OnTriggerEnter()
