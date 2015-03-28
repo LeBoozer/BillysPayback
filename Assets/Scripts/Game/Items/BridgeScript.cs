@@ -17,7 +17,7 @@ public class BridgeScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		//checks if billy is under the bridge by now (make the bridge not solid again)
 		if (m_billy.position.y < this.transform.position.y) {
 			setTrigger(true);

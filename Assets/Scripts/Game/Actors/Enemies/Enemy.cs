@@ -115,8 +115,17 @@ public class Enemy : Hitable
         // in the air and allowed to fall/fly
         else
             m_fly += 2 * Physics.gravity.y * Time.deltaTime;
+    }
 
-        debug("fixedUpdate: " + m_fly + "\t" + m_groundFlyValue);
+    void OnBecameVisible()
+    {
+        m_allowToMove = true;
+        Debug.Log("HURE");
+    }
+    void OnBecameInvisible()
+    {
+        m_allowToMove = false;
+        Debug.Log("ARSCH");
     }
 	
 	// Update is called once per frame
