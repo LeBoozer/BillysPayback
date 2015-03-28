@@ -64,13 +64,16 @@ public class Enemy : Hitable
         m_deathValue = -Mathf.Sqrt(Mathf.Abs(Physics.gravity.y) * 50 * m_worldScale.y * this.transform.localScale.y);
 
         // Attach script
-        MeshRendererOnVisible.attachScriptToRenderer(gameObject,
-             (Camera _camera) =>
-             {
-                 // Player camera?
-                 if (Camera.current.name.Equals(GameConfig.CAMERA_NAME_PLAYER) == true)
-                     m_allowToMove = true;
-             });
+        if (m_allowToMove == true)
+        {
+            MeshRendererOnVisible.attachScriptToRenderer(gameObject,
+                 (Camera _camera) =>
+                 {
+                     // Player camera?
+                     if (Camera.current.name.Equals(GameConfig.CAMERA_NAME_PLAYER) == true)
+                         m_allowToMove = true;
+                 });
+        }
 	}
    
     // Override: Monobehaviour::FixedUpdate()
