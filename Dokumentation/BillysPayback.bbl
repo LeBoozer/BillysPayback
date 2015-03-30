@@ -1,0 +1,48 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.4 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{none}{none}
+    \entry{RSachseManipulationSelbsttaeuschung}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=8b0acf301e265f37d427d28bca889c9b}{Sachse}{S\bibinitperiod}{Rainer}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=8b0acf301e265f37d427d28bca889c9b}{Sachse}{S\bibinitperiod}{Rainer}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{8b0acf301e265f37d427d28bca889c9b}
+      \strng{fullhash}{8b0acf301e265f37d427d28bca889c9b}
+      \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
+      \field{labeltitle}{Manipulation und Selbsttäuschung}
+      \field{title}{Manipulation und Selbsttäuschung}
+      \field{year}{2014}
+    \endentry
+  \endsortlist
+  \missing{DieVersuchungAftermathmedia}
+  \missing{PsychoTricksPCGames}
+  \missing{DieVersuchungAdventureTreffKritik}
+  \missing{SpielStanleyParable}
+  \missing{SiewNareyekPlayerManipulation}
+  \missing{KZieroldComputerspielanalyse}
+  \missing{TestEthanCarterGameStar}
+  \missing{VideoEthanCarter}
+\endrefsection
+\endinput
+
