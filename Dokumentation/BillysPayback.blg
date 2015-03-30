@@ -1,24 +1,2 @@
 [0] Config.pm:320> INFO - This is Biber 1.9
 [0] Config.pm:323> INFO - Logfile is 'BillysPayback.blg'
-[31] biber-MSWIN:274> INFO - === %a %b %e, %Y, %H:%M:%S
-[31] Biber.pm:333> INFO - Reading 'BillysPayback.bcf'
-[93] Biber.pm:635> INFO - Found 9 citekeys in bib section 0
-[122] Biber.pm:3051> INFO - Processing section 0
-[147] Biber.pm:3189> INFO - Looking for bibtex format file 'Literaturverzeichnis.bib' for section 0
-[149] bibtex.pm:990> INFO - Decoding LaTeX character macros into UTF-8
-[150] bibtex.pm:864> INFO - Found BibTeX data source 'Literaturverzeichnis.bib'
-[153] Utils.pm:144> WARN - I didn't find a database entry for 'SiewNareyekPlayerManipulation' (section 0)
-[153] Utils.pm:144> WARN - I didn't find a database entry for 'PsychoTricksPCGames' (section 0)
-[153] Utils.pm:144> WARN - I didn't find a database entry for 'SpielStanleyParable' (section 0)
-[153] Utils.pm:144> WARN - I didn't find a database entry for 'VideoEthanCarter' (section 0)
-[153] Utils.pm:144> WARN - I didn't find a database entry for 'TestEthanCarterGameStar' (section 0)
-[153] Utils.pm:144> WARN - I didn't find a database entry for 'KZieroldComputerspielanalyse' (section 0)
-[153] Utils.pm:144> WARN - I didn't find a database entry for 'DieVersuchungAdventureTreffKritik' (section 0)
-[153] Utils.pm:144> WARN - I didn't find a database entry for 'DieVersuchungAftermathmedia' (section 0)
-[169] UCollate.pm:66> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[169] UCollate.pm:66> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[169] Biber.pm:2928> INFO - Sorting list 'none' of type 'entry' with scheme 'none' and locale 'de-DE'
-[170] Biber.pm:2932> INFO - No sort tailoring available for locale 'de-DE'
-[172] bbl.pm:517> INFO - Writing 'BillysPayback.bbl' with encoding 'latin1'
-[172] bbl.pm:606> INFO - Output to BillysPayback.bbl
-[172] Biber.pm:106> INFO - WARNINGS: 8
