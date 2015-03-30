@@ -7,6 +7,7 @@
 using UnityEngine;
 using System.Collections;
 using System;
+using System.Collections.Generic;
 
 
 /*
@@ -15,8 +16,18 @@ using System;
  */
 public class Player : Hitable
 {
+    #region Structs
 
-	#region Variable
+    private struct OwnMaterial
+    {
+        public Material     m_material;
+        public Color        m_startColor;
+    }
+
+    #endregion
+
+
+    #region Variable
     // Movement
 	private bool					m_allowToMove;
     // vertical
@@ -47,6 +58,8 @@ public class Player : Hitable
 	private	bool					m_loseLife;
 	private Vector3 				m_lastCheckPoint;
     private Action                  m_checkPointAction      = null;
+    private List<OwnMaterial>       m_material;
+    private float                   m_time;
 
     // impediments values
     private bool                    m_blockJumping;
@@ -117,6 +130,23 @@ public class Player : Hitable
         m_blockJumping = false;
         m_velocityFactor = 1f;
         m_slipDirection = Vector3.zero;
+
+        // seek all materials 
+        MeshRenderer[] meshRenderOfBilly = this.gameObject.GetComponentsInChildren<MeshRenderer>();
+        m_material = new List<OwnMaterial>();
+        foreach (MeshRenderer renderer in meshRenderOfBilly)
+            foreach (Material mat in renderer.materials)
+            {
+                OwnMaterial currentMat = new OwnMaterial();
+                currentMat.m_material = mat;
+                currentMat.m_startColor = mat.color;
+               // Debug.Log("Color: " + mat.color);
+                m_material.Add(currentMat);
+            }
+        //Debug.Log(m_material.Count);
+
+
+        m_time = GameConfig.BILLY_TIME_BETWEEN_TWO_ACCEPT_HITS / 4;
     }
 
 
@@ -158,6 +188,8 @@ public class Player : Hitable
      */
 	void Update () 
 	{
+        //updateRendererManipulationByHits();
+
         if (!alive())
             return;
 
@@ -167,6 +199,38 @@ public class Player : Hitable
 		if(m_allowToMove)
 			shooting ();
 	}
+
+    private void updateRendererManipulationByHits()
+    {
+        // nothing to do?
+        if (m_lastHit + GameConfig.BILLY_TIME_BETWEEN_TWO_ACCEPT_HITS + 1 < Time.time)
+            return;
+
+
+        // reset?
+        if (m_lastHit + GameConfig.BILLY_TIME_BETWEEN_TWO_ACCEPT_HITS < Time.time)
+        {
+            foreach (OwnMaterial mat in m_material)
+                mat.m_material.SetColor(mat.m_startColor.ToString(), mat.m_startColor);
+            return;
+        }
+
+        //Debug.Log("do something");
+
+        // update
+        float currentTime = (Time.time - m_lastHit) % (2 * m_time) ;
+        float value = Mathf.Abs(1 - currentTime / m_time);
+        //Debug.Log("value: " + value);
+        Color currentColor;
+        foreach (OwnMaterial mat in m_material)
+        {
+            currentColor = mat.m_startColor;
+            currentColor = new Color(currentColor.r, currentColor.g, currentColor.b, currentColor.a * value);
+            //Debug.Log("alpha: " + currentColor.a);
+            mat.m_material.SetColor(mat.m_startColor.ToString(), currentColor);
+        }
+
+    }
 
     /**
      * calculate whether the player lose lifepoints/lifenumbers
@@ -513,6 +577,10 @@ public class Player : Hitable
     // Override: Hitable::onHit()
     public override void onHit(Hitable _source)
     {
+        // Dont take a hit?
+        if (m_lastHit + GameConfig.BILLY_TIME_BETWEEN_TWO_ACCEPT_HITS > Time.time)
+            return;
+
         // distribute a hit
         if (m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_KIWANO) && m_playerData.getPowerUpStockSize(PlayerData.PowerUpType.PUT_KIWANO) > 0)
         {
@@ -522,12 +590,8 @@ public class Player : Hitable
             return;
         }
 
-        // Take a hit
-        if (m_lastHit + GameConfig.BILLY_TIME_BETWEEN_TWO_ACCEPT_HITS <= Time.time)
-        {
-            m_lastHit = Time.time;
-            m_loseLife = true;
-        }
+        m_lastHit = Time.time;
+        m_loseLife = true;
     }
 
     // Override: Monobehaviour::OnControllerColliderHit()
