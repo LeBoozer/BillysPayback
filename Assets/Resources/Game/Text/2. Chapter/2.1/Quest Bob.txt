@@ -198,7 +198,7 @@
 			<part t="2.5" character="Bob">Ohne die kommen wir nicht mehr an das Wasser ran,</part>
 			<part t="2.5" character="Bob">um unsere Plantagen zu bewässern.</part>
 			<part t="2.5" character="Bob">Wir bräuchten dringend jemanden,</part>
-			<part t="2.5" character="Bob">uder diese Spießvögel findet und ihnen zeigt, wo es langgeht...</part>
+			<part t="2.5" character="Bob">der diese Spießvögel findet und ihnen zeigt, wo es langgeht...</part>
 			
 			<choice id="0" nextText="211" enabled="answerHerbEnabled">
 				<data>Wozu braucht ihr diese Pflanzen denn?</data>
@@ -221,10 +221,9 @@
 		</text>
 
 		<!-- 2.2.1 -->
-		<text id="221">
+		<text id="221" exit="yes">
 			<part t="2.5" character="Bob">Stark ey! Ihr habt was gut bei mir.</part>
-
-			<choice id="0" exit="yes">Wir machen uns dann mal auf die Suche.</choice>
+			<part t="2.5" character="Billy">Wir machen uns dann mal auf die Suche.</part>
 		</text>
 
 		<!-- 2.3.1 -->

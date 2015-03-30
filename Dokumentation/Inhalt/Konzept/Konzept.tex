@@ -3,11 +3,63 @@
 % Autor	: Dominique Kasper
 %#####################################################################################################################
 \chapter{Konzeptionierung}
-Einleitung zu dem Konzept. 
+\label{chap:konzeptionierung}
+
+Aufbauend auf den in Kapitel \ref{chap:grundlagen} und \ref{chap:verwandte arbeiten} erlangten Erkenntnissen lassen sich nun die für den Prototypen relevanten Manipulationen und Spielereigenschaften ableiten, wobei letztere zur Unterstützung der Wirksamkeit der angewandten Manipulationen dienen.\\
+Anschließend werden die Ergebnisse dieser Analyse genutzt, um den entsprechenden Aufbau der Level auszuarbeiten. So ist zunächst ein Analyse-Level zu entwerfen, in welchem der Spieler auf die zuvor festgelegten Eigenschaften hin untersucht werden soll, indem sein Verhalten beobachtet und ausgewertet wird. Nachfolgend erfolgt der Entwurf der restlichen Level, in denen die theoretischen Konzepte einem praktischen Test unterzogen werden sollen.
 
 %................................................................
 \section{Manipulationen}
 \label{sec:konzept manipulationen}
+
+\subsection{Anforderungen}
+\label{subsec:anforderungen manipulationen}
+
+Bevor eine Auswahl an geeigneten Manipulationen getroffen werden kann, ist es zunächst einmal notwendig herauszustellen, welche Anforderungen für eine solche erfüllt sein müssen. Diese lassen sich hauptsächlich aus den in Kapitel \ref{chap:grundlagen} beschriebenen Erkenntnissen über die Voraussetzungen für eine erfolgreiche Manipulation herleiten:
+
+\begin{itemize}
+	\item Möglichst Verwendung positiver Manipulationsstrategien
+	\item Unauffälligkeit
+	\item Wirksamkeit bei möglichst großer Menge von Persönlichkeiten
+\end{itemize}
+
+Das Kriterium der Unauffälligkeit folgt hierbei implizit aus der Tatsache, dass ein wesentlicher Grundzug der Manipulation darin besteht die wahren Handlungsgründe des Manipulierenden zu verschleiern und somit den Interaktionspartner in seinen Entscheidungsmöglichkeiten einzuschränken. Aus diesem Grund ist anzunehmen, dass die Erfolgswahrscheinlichkeit einer Manipulation umso höher ist desto schwerer es fällt deren wahren Ziele zu erkennen.\\
+
+\subsection{Einschränkungen}
+\label{subsec:einschränkungen manipulationen}
+
+Neben den Anforderungen sind auch einige Einschränkungen zu beachten. Diese sind sowohl durch das Spielgenre des Jump and Runs als auch durch  die begrenzten Ressourcen (z.B. Entwicklungszeit) für die Entwicklung des Prototypen bedingt. Auf diese Art und Weise können Manipulationen mit folgenden Eigenschaften nicht zum Einsatz kommen:
+
+\begin{itemize}
+	\item Aufbau des Manipulationseffekts über eine lange Zeitspanne
+	\item Ansprache bestimmter Emotionen des Spielers (z.B. Mitleid) durch Mimik, Gestik oder Sprache der Charaktere
+	\item Einsatz der Theorie des sozialen Vergleichs
+	\item Verwendung von Questtagebüchern, um den Cliffhanger- bzw. Zeigarnik-Effekt zu erreichen
+\end{itemize}
+
+Während die ersten drei Punkte eher durch fehlende Ressourcen bei der Prototypenentwicklung bedingt werden, ergibt sich die vierte Einschränkung aus der Definition des Jump and Run Genres, da in diesem traditionell keine Questtagebücher vorgesehen und eher für andere Genres wie z.B. Rollenspiele typisch sind. Somit würde hier mit dem Einsatz eines solchen eine zu große Abweichung von dem zu untersuchenden Spielgenre erfolgen.
+
+\subsection{Ergebnisse}
+\label{subsec:ergebnisse manipulationen}
+
+Basierend auf den zuvor beschriebenen Anforderungen und Einschränkungen bezüglich geeigneter Manipulationen konnte schließlich eine Auswahl getroffen werden, die im Folgenden erläutert werden soll.\\
+
+\textbf{Armes-Schwein-Spiele} Diese Art Interaktionsspiel wurde gewählt, um Spieler anzusprechen, die sich durch Mitleid mit den Charakteren auszeichnen. Auf diese Art und Weise sollen sie dazu gebracht werden bestimmte Aufgaben zu erfüllen. Diese Manipulation erschien auch insofern erfolgversprechend, als dass beinahe jeder Mensch eine soziale Ader besitzt, die auf diese Art und Weise auch dann angesprochen werden könnte, wenn er nicht besonders viel Mitleid empfindet. Darüber hinaus wird in Kapitel \ref{chap:grundlagen} bereits erwähnt, dass einige Personen sich zuweilen durch die unlösbaren Aufgaben anderer herausgefordert fühlen, womit ein weiterer Personenkreis abgedeckt wird.\\
+
+\textbf{Nutzung des Gerechte-Welt-Glaubens} Mit Hilfe dieser Art von Manipulation soll der Spieler dazu gebracht werden eine gewisse Abneigung gegen einen bestimmten Charakter zu entwickeln, indem dieser sich verwerflich verhält. Diese Antipathie soll dann dafür sorgen, dass der Spieler den betreffenden Charakter auf die gewünschte Art und Weise bestraft. Laut dem in Abschnitt \ref{sec:die psychotricks der spieledesigner} erwähnten Artikel neigen Menschen dazu dieses Verhalten auch tatsächlich an den Tag zu legen, weshalb dieses Prinzip nun auf den Jump-and-Run-Prototypen angewandt werden soll, um seine Wirksamkeit zu überprüfen.\\
+
+\textbf{Verschleierung des fehlenden alternativen Weges} Diese Strategie umfasst eine Vielzahl von verschiedenen Manipulationsmöglichkeiten des Spielers, die hauptsächlich durch das in Abschnitt \ref{sec:the stanley parable} erwähnte Spiel \textit{The Stanley Parable} inspiriert sind. So werden hier tatsächlich zwei mögliche Wege umgesetzt, wobei jedoch der nicht für den weiteren Verlauf gewünschte schnell in eine Sackgasse führt, die der Spieler allerdings möglichst nicht zu sehen bekommen soll, indem der Weg dorthin gerade so unerreichbar gestaltet wird, dass er dennoch denkt, er hätte ihn erreichen können, hätte er sich nur mehr angestrengt. Dies sollte im Idealfall dazu führen, dass der Spieler die Schuld dafür bei seiner Leistung und somit nicht am Level selbst sieht. Besonders passend ist diese Art Manipulation im Falle eines Spielers, der es sich gerne einfach macht und deshalb gleich den leichten Weg wählt. Doch auch bei anderen Spielerpersönlichkeiten sollte sie aufgrund ihrer Unauffälligkeit bzw. schlechten Nachvollziehbarkeit gut anschlagen.\\
+
+\textbf{Umgebungshinweise} In der aktuellen Arbeit wird eine leicht abgewandelte Version der manipulierenden Umgebungshinweise aus dem in Abschnitt \ref{sec:player manipulation paper} beschriebenen Paper von Siew und Nareyek verwendet. Während dort eine menschliche Stimme den Spieler auffordert wegzugehen, sollen im Prototypen Charaktere nach Hilfe rufen bzw. schreien, um sowohl die aufmerksamen und neugierigen Spieler als auch solche, die dabei Mitleid empfinden oder sich herausgefordert fühlen, anzulocken. Auf diese Weise soll eine Verbesserung der Wirksamkeit im Gegensatz zu der vorherigen Umsetzung erreicht werden, da ein größerer Personenkreis angesprochen wird. Darüber hinaus soll dem Verbesserungsvorschlag von Siew und Nareyek nachgegangen und daher visuelle Umgebungshinweise verwendet werden, um zu prüfen, ob diese tatsächlich bessere Ergebnisse erzielen, weil sie möglicherweise besser vom Spieler wahrgenommen werden können.\\
+
+\textbf{Anfragen von kameradschaftlichen Charakteren} Diese Manipulation stellt eine Mischung aus zwei von Siew und Nareyek untersuchten Strategien dar. So soll zum einen versucht werden den Spieler an einen begleitenden Charakter zu binden, indem dieser ihm stets folgt und mit ihm interagiert, und zum anderen soll dieser Effekt dadurch verstärkt werden, dass dieser Partner den Spieler in kritischen Spielsituationen mit wichtigen Ressourcen unterstützt, wodurch sowohl Sympathie als auch Dankbarkeit erzeugt wird. Diese Kombination wurde nötig, da aufgrund der fehlenden Entwicklungsressourcen für den Prototypen das langfristige Aufbauen einer tieferen parasozialen Bindung zwischen Spieler und begleitendem Charakter nicht zuverlässig sichergestellt werden konnte und so um den Aspekts des Erbringens eines Gefallens seitens des Partners ergänzt werden musste, um die Erfolgswahrscheinlichkeit zu erhöhen. Außerdem besteht die Hoffnung, dass so die Wahrscheinlichkeit steigt, dass der Spieler später bereit ist seinem Kameraden ebenfalls einen Gefallen zu tun, obwohl nur ein Teil des Aufwands für den Aufbau einer parasozialen Beziehung erbracht wird. Somit ist die hier verwendete Manipulation als Erweiterung des zuvor in \textit{Player Manipulation} beschriebenen \glqq Erwidern eines Gefallens\grqq{} zu sehen.\\
+
+\textbf{Motivation zu Aufgaben durch Anfangserfolge} Im in \ref{sec:die psychotricks der spieledesigner} erwähnten Artikel \textit{Die Psycho-Tricks der Spiele-Designer: Das Spiel in deinem Kopf} der PC Games wird beschrieben, wie in Rollenspielen die Motivation zur Erfüllung bestimmter Quests bereits erfolgreich dadurch erhöht wird, dass der Spieler beim Annehmen der Aufgabe bereits einen Teil der zu sammelnden Gegenstände besitzt. Diese Strategie soll nun mithilfe des Prototypen auch für Jump and Runs anhand kleinerer Sammelaufgaben erprobt werden.\\
+
+\textbf{Anreiz durch die Beute}
+
+%Meisten Strategien auch tatsächlich positive Manipulationen, da der Spieler für das richtige Verhalten mit Diamanten und ähnlichem belohnt wird  --> man kann davon ausgehen, dass dies auch sein Ziel im Spiel ist
+%Unaufffälligkeit dadurch, dass der Spieler nicht explizit dazu gezwungen wird den gewünschten Dingen nachzugehen?
 
 \section{Spielereigenschaften}
 \label{sec:konzept spielereigenschaften}
