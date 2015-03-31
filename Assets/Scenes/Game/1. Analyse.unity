@@ -1637,6 +1637,47 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 62a378e4ea19ce94fabe701dea178e0c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &116547730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 116547731}
+  - 114: {fileID: 116547732}
+  m_Layer: 0
+  m_Name: Action 'Delete help sound'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &116547731
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 116547730}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 991386848}
+  m_RootOrder: 0
+--- !u!114 &116547732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 116547730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed088c43a85f5f04da193eb48730bd86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_objects:
+  - {fileID: 1864089144}
 --- !u!1001 &116890100
 Prefab:
   m_ObjectHideFlags: 0
@@ -13857,7 +13898,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 495.290009, y: 9.92000008, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 116547731}
   m_Father: {fileID: 1032171617}
   m_RootOrder: 10
 --- !u!65 &991386849
