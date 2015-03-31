@@ -4060,7 +4060,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 406095469}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 379.309998, y: 3, z: 0}
+  m_LocalPosition: {x: 374.769989, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 538080569}
@@ -7181,7 +7181,7 @@ Camera:
     height: 1
   near clip plane: 1
   far clip plane: 500
-  field of view: 50
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -7220,6 +7220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_object: {fileID: 0}
+  m_lookAtObject: {fileID: 973108261}
   m_distance_Z: 15
   m_distance_Y: 3.5
   m_damping: .800000012
@@ -10614,6 +10615,33 @@ MonoBehaviour:
   m_considerDialogueCancellation: 0
   m_considerNoChoiceExits: 0
   m_closeDialogWindowOnLeave: 0
+--- !u!1 &973108260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 973108261}
+  m_Layer: 10
+  m_Name: CameraLookAt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &973108261
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 973108260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .600000024, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2036242710}
+  m_RootOrder: 1
 --- !u!4 &973532838 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400006, guid: 084064893d6958d44940544e3cc28d16, type: 2}

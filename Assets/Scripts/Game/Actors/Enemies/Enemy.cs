@@ -162,7 +162,7 @@ public class Enemy : Hitable
             return;
 
         // Take a hit
-        if (m_lastHit + 0.5f < Time.time)
+        if (m_lastHit + 0.75f < Time.time)
         {
             --m_lifepoints;
             m_lastHit = Time.time;

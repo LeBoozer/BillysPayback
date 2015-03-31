@@ -15,6 +15,7 @@ public class PlayerCamera : MonoBehaviour {
 
 	#region Variable
 	public 	Transform 	m_object = null;
+    public  Transform   m_lookAtObject = null;
 	public  float		m_distance_Z = 15.0f;
 	public  float		m_distance_Y = 3.5f;
 	public  float		m_damping = 0.01f;
@@ -70,7 +71,7 @@ public class PlayerCamera : MonoBehaviour {
                                                      customize(m_object.transform.position.y, this.transform.position.y - m_distance_Y, 2),
                                                      customize(m_object.transform.position.z, this.transform.position.z + m_distance_Z, 1));
             if (m_lookAt)
-                this.transform.LookAt(m_object);
+                this.transform.LookAt(m_lookAtObject != null ? m_lookAtObject : m_object);
             return;
         }
 

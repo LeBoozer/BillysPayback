@@ -8,7 +8,10 @@
 			<part t="2.5" character="Jim">ich habe meine letzte Beute noch nicht einmal ganz aufgegessen</part>
 			<part t="2.5" character="Phil">Verdammt Jim, kommt jetzt, dein Appetit </part>
 			<part t="2.5" character="Phil">kostet uns irgendwann noch unseren Kopf!</part>
-			<part t="2.5" character="Jim">(Stöhnt) Ist ja gut, ich komme ja schon. Immer dieser Stress...</part> 
+			<part t="2.5" character="Jim">(Stöhnt) Ist ja gut, ich komme ja schon. Immer dieser Stress...</part>
+
+			<part t="2.5" character="Antonio">Wir müssen sie heimlich verfolgen!</part>
+			<part t="2.5" character="Antonio">Sie zeigen uns bestimmt den Weg zu Black Sparrow...</part> 
 		</text>
 	</conversation>
 </bw>
