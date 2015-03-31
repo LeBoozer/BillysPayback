@@ -4182,6 +4182,10 @@ Prefab:
       propertyPath: m_disableRaycast
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
   m_IsPrefabParent: 0
@@ -24178,6 +24182,10 @@ Prefab:
     - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
       propertyPath: m_disableRaycast
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
