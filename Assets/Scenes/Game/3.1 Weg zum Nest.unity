@@ -3958,6 +3958,10 @@ Prefab:
       propertyPath: m_disableRaycast
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_lifepoints
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
   m_IsPrefabParent: 0
@@ -4170,6 +4174,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dea5ce225446d064f9ea5e07df8add8a, type: 2}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_allowToMove
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_disableRaycast
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
   m_IsPrefabParent: 0
@@ -9363,7 +9375,7 @@ MonoBehaviour:
   m_targetObjects:
   - {fileID: 632763166}
   - {fileID: 805831749}
-  m_minDistance: 3
+  m_minDistance: 1
   m_maxDistance: 55
   m_checkInterval: .100000001
   m_reportLowerDeviation: 0
@@ -24083,6 +24095,14 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c616f91872456d1449a5f629917edd1f, type: 2}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_allowToMove
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_disableRaycast
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
   m_IsPrefabParent: 0
@@ -32530,6 +32550,10 @@ Prefab:
       propertyPath: m_disableRaycast
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_lifepoints
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
   m_IsPrefabParent: 0
@@ -38656,6 +38680,10 @@ Prefab:
       propertyPath: m_disableRaycast
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
+      propertyPath: m_lifepoints
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1783bdff9d3d67647a1fc2a4207a0b89, type: 2}
   m_IsPrefabParent: 0
@@ -38756,7 +38784,7 @@ MonoBehaviour:
   m_targetObjects:
   - {fileID: 632763166}
   - {fileID: 805831749}
-  m_minDistance: 3
+  m_minDistance: 4
   m_maxDistance: 1000
   m_checkInterval: .100000001
   m_reportLowerDeviation: 1
@@ -60755,7 +60783,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .600000024
+      value: .328000009
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e713489ace1cc6a48a81a92cf8ed42a7, type: 2}
       propertyPath: m_LocalPosition.z

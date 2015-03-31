@@ -13,7 +13,6 @@ using System.Collections;
  */
 public class Enemy : Hitable
 {
-
 	#region Variable	
 	protected float 		        m_direction;
     protected float                 m_fly;
@@ -163,13 +162,37 @@ public class Enemy : Hitable
             return;
 
         // Take a hit
-        if (m_lastHit + 1 < Time.time)
+        if (m_lastHit + 0.5f < Time.time)
         {
             --m_lifepoints;
             m_lastHit = Time.time;
+
+            if (m_lifepoints != 0)
+                StartCoroutine("doHitFlash");
         }
         if (m_lifepoints == 0)
             die();
+    }
+
+    IEnumerator doHitFlash()
+    {
+        Renderer[] renderer = null;
+        Color[] colors = null;
+
+        renderer = GetComponentsInChildren<Renderer>();
+        if(renderer == null || renderer.Length == 0)
+            yield break;
+        colors = new Color[renderer.Length];
+        for (int i = 0; i < renderer.Length; ++i)
+        {
+            colors[i] = renderer[i].material.color;
+            renderer[i].material.color = Color.white;
+        }
+
+        yield return new WaitForSeconds(0.1f);
+
+        for (int i = 0; i < renderer.Length; ++i)
+            renderer[i].material.color = colors[i];
     }
 
     internal virtual void die()
