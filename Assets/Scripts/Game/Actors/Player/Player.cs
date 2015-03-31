@@ -581,6 +581,8 @@ public class Player : Hitable
         if (m_lastHit + GameConfig.BILLY_TIME_BETWEEN_TWO_ACCEPT_HITS > Time.time)
             return;
 
+        StartCoroutine("doHitFlash");
+
         // distribute a hit
         if (m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_KIWANO) && m_playerData.getPowerUpStockSize(PlayerData.PowerUpType.PUT_KIWANO) > 0)
         {
@@ -592,6 +594,26 @@ public class Player : Hitable
 
         m_lastHit = Time.time;
         m_loseLife = true;
+    }
+
+    IEnumerator doHitFlash()
+    {
+        Renderer[] renderer = null;
+        Color[] colors = null;
+
+        renderer = GetComponentsInChildren<Renderer>();
+        if (renderer == null || renderer.Length == 0)
+            yield break;
+        colors = new Color[renderer.Length];
+        for (int i = 0; i < renderer.Length; ++i)
+        {
+            colors[i] = renderer[i].material.color;
+        }
+
+        yield return new WaitForSeconds(0.1f);
+
+        for (int i = 0; i < renderer.Length; ++i)
+            renderer[i].material.color = colors[i];
     }
 
     // Override: Monobehaviour::OnControllerColliderHit()
