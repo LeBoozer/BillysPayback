@@ -27,6 +27,8 @@ public class InitializeLevel31 : MonoBehaviour
     {
         // Local variables
         bool visited = Game.Instance.ScriptEngine.IsGlobalVar("level_31_visited");
+        AntialiasingAsPostEffect dlaa = GameObject.FindObjectOfType<AntialiasingAsPostEffect>();
+        SSAOEffect ssao = GameObject.FindObjectOfType<SSAOEffect>();
 
         // Set global variable
         if (visited == false)
@@ -35,6 +37,14 @@ public class InitializeLevel31 : MonoBehaviour
         // Disable background particles if quality level is simple or below
         if (m_backgroundParticle != null && QualityLevel.getCurrentLevelIndex() <= QualityLevel.LEVEL_INDEX_SIMPLE)
             m_backgroundParticle.SetActive(false);
+
+        // Disable DLAA if quality level is below beautiful
+        if (dlaa != null && QualityLevel.getCurrentLevelIndex() < QualityLevel.LEVEL_INDEX_BEAUTIFUL)
+            dlaa.enabled = false;
+
+        // Disable SSAO if quality level is below beautiful
+        if (ssao != null && QualityLevel.getCurrentLevelIndex() < QualityLevel.LEVEL_INDEX_BEAUTIFUL)
+            ssao.enabled = false;
 
         // Delete pursuit of the two birds if the level was already visited by the player
         if(visited == true)

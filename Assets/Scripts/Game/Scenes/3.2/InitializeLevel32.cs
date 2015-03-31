@@ -18,6 +18,10 @@ public class InitializeLevel32 : MonoBehaviour
     // Override: MonoBehaviour::Start()
     void Start()
     {
+        // Local variables
+        AntialiasingAsPostEffect dlaa = GameObject.FindObjectOfType<AntialiasingAsPostEffect>();
+        SSAOEffect ssao = GameObject.FindObjectOfType<SSAOEffect>();
+
         // Set global variable
         if (Game.Instance.ScriptEngine.IsGlobalVar("level_32_visited") == false)
             Game.Instance.ScriptEngine.AddGlobalVar("level_32_visited", true);
@@ -25,5 +29,13 @@ public class InitializeLevel32 : MonoBehaviour
         // Shield from Bob collected?
         if (m_higgins != null && Game.Instance.ScriptEngine.IsGlobalVar("level_2_bob_received_shield") == false)
             m_higgins.gameObject.SetActive(true);
+
+        // Disable DLAA if quality level is below beautiful
+        if (dlaa != null && QualityLevel.getCurrentLevelIndex() < QualityLevel.LEVEL_INDEX_BEAUTIFUL)
+            dlaa.enabled = false;
+
+        // Disable SSAO if quality level is below beautiful
+        if (ssao != null && QualityLevel.getCurrentLevelIndex() < QualityLevel.LEVEL_INDEX_BEAUTIFUL)
+            ssao.enabled = false;
     }
 }
