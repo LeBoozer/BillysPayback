@@ -9257,7 +9257,7 @@ GameObject:
   - 45: {fileID: 664327162}
   - 114: {fileID: 664327163}
   - 114: {fileID: 664327164}
-  - 114: {fileID: 664327165}
+  - 114: {fileID: 664327166}
   m_Layer: 0
   m_Name: Player Camera
   m_TagString: MainCamera
@@ -9314,7 +9314,7 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_HDR: 0
+  m_HDR: 1
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
@@ -9404,7 +9404,7 @@ MonoBehaviour:
   m_MinZ: .00999999978
   m_SSAOShader: {fileID: 4800000, guid: 43ca18288c424f645aaa1e9e07f04c50, type: 3}
   m_RandomTexture: {fileID: 2800000, guid: a181ca8e3c62f3e4b8f183f6c586b032, type: 3}
---- !u!114 &664327165
+--- !u!114 &664327166
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -9412,16 +9412,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 664327155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97b4768c3683045e4bfdb2e78272970c, type: 3}
+  m_Script: {fileID: 11500000, guid: a773099f140e846f7835d27351846623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshhold: .600000024
-  intensity: .400000006
-  blurSize: .5
-  resolution: 1
-  blurIterations: 2
-  blurType: 1
-  fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
+  tweakMode: 0
+  screenBlendMode: 1
+  hdr: 1
+  sepBlurSpread: .150000006
+  quality: 1
+  bloomIntensity: .75
+  bloomThreshhold: .699999988
+  bloomThreshholdColor: {r: 1, g: 1, b: 1, a: 1}
+  bloomBlurIterations: 2
+  hollywoodFlareBlurIterations: 2
+  flareRotation: 0
+  lensflareMode: 1
+  hollyStretchWidth: 2.5
+  lensflareIntensity: 0
+  lensflareThreshhold: .300000012
+  lensFlareSaturation: .75
+  flareColorA: {r: .400000006, g: .400000006, b: .800000012, a: .75}
+  flareColorB: {r: .400000006, g: .800000012, b: .800000012, a: .75}
+  flareColorC: {r: .800000012, g: .400000006, b: .800000012, a: .75}
+  flareColorD: {r: .800000012, g: .400000006, b: 0, a: .75}
+  blurWidth: 1
+  lensFlareVignetteMask: {fileID: 2800000, guid: 95ef4804fe0be4c999ddaa383536cde8,
+    type: 3}
+  lensFlareShader: {fileID: 4800000, guid: 459fe69d2f6d74ddb92f04dbf45a866b, type: 3}
+  screenBlendShader: {fileID: 4800000, guid: 7856cbff0a0ca45c787d5431eb805bb0, type: 3}
+  blurAndFlaresShader: {fileID: 4800000, guid: be6e39cf196f146d5be72fbefb18ed75, type: 3}
+  brightPassFilterShader: {fileID: 4800000, guid: 0aeaa4cb29f5d4e9c8455f04c8575c8c,
+    type: 3}
 --- !u!1001 &665106249
 Prefab:
   m_ObjectHideFlags: 0
@@ -14161,6 +14182,33 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400010, guid: 98560a5996eb2d940bdbea25f002f615, type: 2}
   m_PrefabInternal: {fileID: 701340845}
+--- !u!1 &1017155883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1017155884}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1017155884
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1017155883}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.7295609, y: -1.53747368, z: -12.9586105}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!1 &1017659221
 GameObject:
   m_ObjectHideFlags: 0
