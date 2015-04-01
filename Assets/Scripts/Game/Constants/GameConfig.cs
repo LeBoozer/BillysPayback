@@ -13,6 +13,8 @@ using System.Collections;
 public class GameConfig
 {
 	// Constant values
+    public static readonly int      TARGET_FRAME_RATE                           = 60;
+
 	public static readonly float 	INTRO_SHOW_TIME_SEC                         = 3.0f;
     public static readonly float    VICTORY_SHOW_TIME_SEC                       = 3.0f;
     public static readonly float    GAME_OVER_SHOW_TIME_SEC                     = 5.0f;

@@ -38,10 +38,11 @@
 			<part t="2.5" character="Antonio">Außerdem würde uns das bei Cherry’s Rettung helfen.</part>
 
 			<choice id="0" exit="_done_">Das hört sich gut an. Machen wir uns auf den Weg.</choice>
+			<choice id="1" exit="_done_">Ach was, wir brauchen keine Hilfe, wir schaffen das sicher auch alleine. Los, machen wir uns auf den Weg.</choice>
 		</text>
 
 		<!-- 1.2 -->
-		<text id="12">
+		<text id="12" exit="_done_">
 			<part t="2.5" character="Antonio">Warte, was hältst du davon, wenn wir versuchen würden</part>
 			<part t="2.5" character="Antonio">die anderen Früchte auf dem Weg zu Black Sparrows</part>
 			<part t="2.5" character="Antonio">Nest gegen ihn aufzuwiegeln?</part>
@@ -50,7 +51,8 @@
 			<part t="2.5" character="Antonio">Außerdem würde uns das bei Cherry’s Rettung helfen</part>
 			<part t="2.5" character="Antonio">und ein paar ihrer Dörfer liegen auf dem Weg zu seinem Nest.</part>
 
-			<choice id="0" exit="_done_">Ach was, wir brauchen keine Hilfe, wir schaffen das sicher auch alleine. Los, machen wir uns auf den Weg.</choice>
+			<part t="2.5" character="Billy">Ach was, wir brauchen keine Hilfe, wir schaffen das sicher auch alleine.</part>
+			<part t="2.5" character="Billy">Los, machen wir uns auf den Weg.</part>
 		</text>
 
 		<!-- 2.1 -->

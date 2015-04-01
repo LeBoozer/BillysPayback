@@ -65,7 +65,6 @@ public class Antonio : MonoBehaviour
     // throw variable
     public  bool                        m_allowToThrowPowerUps     = true;
     private PlayerValues                m_lastPlayerValues;
-    private Queue<double>               m_playerHitTimeStamp;
     private double                      m_lastGiftTimeStamp;
     private GameObject                  Kiwano                      = null;
     private GameObject                  Raspberry                   = null;
@@ -140,7 +139,6 @@ public class Antonio : MonoBehaviour
         m_lastPlayerValues.m_lifeNumbers    = m_playerData.LifeNumber;
         m_lastPlayerValues.m_kiwanos        = m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_KIWANO);
         m_lastPlayerValues.m_raspberry      = m_playerData.isPowerUpAvailable(PlayerData.PowerUpType.PUT_RASPBERRY);
-        m_playerHitTimeStamp = new Queue<double>();
         m_lastGiftTimeStamp = Time.time - GIFT_TIME_DIFFERENCE;
 
         // load prefabs 

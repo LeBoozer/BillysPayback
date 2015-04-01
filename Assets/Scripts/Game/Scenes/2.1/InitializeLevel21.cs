@@ -21,6 +21,12 @@ public class InitializeLevel21 : MonoBehaviour
     // Override: MonoBehaviour::Start()
     void Start()
     {
+        // Local variables
+        AntialiasingAsPostEffect dlaa = GameObject.FindObjectOfType<AntialiasingAsPostEffect>();
+        SSAOEffect ssao = GameObject.FindObjectOfType<SSAOEffect>();
+        Bloom bloom = GameObject.FindObjectOfType<Bloom>();
+        Camera playerCamera = GameObject.FindObjectOfType<Camera>();
+
         // Set global variable
         if (Game.Instance.ScriptEngine.IsGlobalVar("level_21_visited") == false)
             Game.Instance.ScriptEngine.AddGlobalVar("level_21_visited", true);
@@ -32,5 +38,20 @@ public class InitializeLevel21 : MonoBehaviour
         // Disable background particles if quality level is simple or below
         if (m_backgroundParticle != null && QualityLevel.getCurrentLevelIndex() <= QualityLevel.LEVEL_INDEX_SIMPLE)
             m_backgroundParticle.SetActive(false);
+
+        // Disable DLAA if quality level is below beautiful
+        if (dlaa != null && QualityLevel.getCurrentLevelIndex() < QualityLevel.LEVEL_INDEX_BEAUTIFUL)
+            dlaa.enabled = false;
+
+        // Disable SSAO if quality level is below beautiful
+        if (ssao != null && QualityLevel.getCurrentLevelIndex() < QualityLevel.LEVEL_INDEX_BEAUTIFUL)
+            ssao.enabled = false;
+
+        // Disable bloom if quality level is below fantastic
+        if (playerCamera != null && bloom != null && QualityLevel.getCurrentLevelIndex() < QualityLevel.LEVEL_INDEX_FANTASTIC)
+        {
+            playerCamera.hdr = false;
+            bloom.enabled = false;
+        }
     }
 }

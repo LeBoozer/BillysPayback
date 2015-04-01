@@ -6,7 +6,7 @@
 			<part t="2.5" character="Antonio">Ich weiß, aber wir müssen hier erst einmal weg. Hier ist es nicht sicher.</part>
 			<part t="2.5" character="Antonio">Wenn wir bei dir sind können wir weiter überlegen.</part>
 			<part t="2.5" character="Antonio">Erinnerst du dich noch, was du zu tun hast?</part>
-			<part t="2.5" character="Antonio">Ich bin nicht ganz sicher.</part>
+			<part t="2.5" character="Billy">Ich bin nicht ganz sicher.</part>
 		</text>
 	</conversation>
 </bw>
