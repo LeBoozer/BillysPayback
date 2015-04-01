@@ -18,6 +18,7 @@ public class InitializeLevel11 : MonoBehaviour
         // Local variables
         AntialiasingAsPostEffect dlaa = GameObject.FindObjectOfType<AntialiasingAsPostEffect>();
         SSAOEffect ssao = GameObject.FindObjectOfType<SSAOEffect>();
+        FastBloom bloom = GameObject.FindObjectOfType<FastBloom>();
 
         // Set global variable
         if (Game.Instance.ScriptEngine.IsGlobalVar("level_11_visited") == false)
@@ -30,5 +31,9 @@ public class InitializeLevel11 : MonoBehaviour
         // Disable SSAO if quality level is below beautiful
         if (ssao != null && QualityLevel.getCurrentLevelIndex() < QualityLevel.LEVEL_INDEX_BEAUTIFUL)
             ssao.enabled = false;
+
+        // Disable bloom if quality level is below fantastic
+        if (bloom != null && QualityLevel.getCurrentLevelIndex() < QualityLevel.LEVEL_INDEX_FANTASTIC)
+            bloom.enabled = false;
     }
 }

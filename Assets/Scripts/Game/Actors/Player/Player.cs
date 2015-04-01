@@ -608,6 +608,7 @@ public class Player : Hitable
         for (int i = 0; i < renderer.Length; ++i)
         {
             colors[i] = renderer[i].material.color;
+            renderer[i].material.color = new Color(colors[i].r + 0.35f, colors[i].g + 0.35f, colors[i].b + 0.35f);
         }
 
         yield return new WaitForSeconds(0.1f);
