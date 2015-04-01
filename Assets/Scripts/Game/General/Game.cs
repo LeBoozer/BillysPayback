@@ -102,6 +102,9 @@ public class Game
                 obj.transform.parent = m_singletonInstance.m_singletonGameObject.transform;
             }
 
+            // Set target frame rate
+            Application.targetFrameRate = GameConfig.TARGET_FRAME_RATE;
+
 			return m_singletonInstance;		
 		}
 	}
