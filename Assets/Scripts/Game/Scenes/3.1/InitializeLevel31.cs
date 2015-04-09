@@ -47,7 +47,7 @@ public class InitializeLevel31 : MonoBehaviour
             ssao.enabled = false;
 
         // Delete pursuit of the two birds if the level was already visited by the player
-        if(visited == true)
+        if (visited == true && Game.Instance.ScriptEngine.IsGlobalVar("level_32_visited"))
         {
             if (m_transitionPursuit != null)
                 GameObject.Destroy(m_transitionPursuit);
