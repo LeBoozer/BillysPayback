@@ -22,9 +22,11 @@ twoside,headsepline,footsepline,openright]{scrbook}
 \usepackage{colortbl}
 
 % Bibliothek für das Quellenverzeichnisse
-\usepackage[style=numeric,backend=biber,sorting=none,defernumbers=true]{biblatex}
+\usepackage[style=numeric,backend=biber,sorting=none]{biblatex}
 \addbibresource{Literaturverzeichnis.bib}
-\renewcommand{\bibfont}{\small}
+%\renewcommand{\bibfont}{\small} --> finde ich zu klein
+
+%defernumbers=true --> Das hat zu Problemen mit der Nummerierung geführt!
 
 % Verweise auf Title
 \usepackage{titleref}
@@ -81,6 +83,8 @@ twoside,headsepline,footsepline,openright]{scrbook}
 \usepackage{bbding} 
 \usepackage{dingbat}
 \usepackage{wasysym}
+
+\usepackage{url}
 
 % Querformat unterstützen
 \usepackage{pdflscape}

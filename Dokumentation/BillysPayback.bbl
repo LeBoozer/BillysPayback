@@ -26,6 +26,9 @@
       \name{author}{1}{}{%
         {{hash=8b0acf301e265f37d427d28bca889c9b}{Sachse}{S\bibinitperiod}{Rainer}{R\bibinitperiod}{}{}{}{}}%
       }
+      \list{publisher}{1}{%
+        {Springer-Verlag Berlin Heidelberg}%
+      }
       \strng{namehash}{8b0acf301e265f37d427d28bca889c9b}
       \strng{fullhash}{8b0acf301e265f37d427d28bca889c9b}
       \field{sortinit}{0}
@@ -34,15 +37,142 @@
       \field{title}{Manipulation und Selbsttäuschung}
       \field{year}{2014}
     \endentry
+    \entry{SiewNareyekPlayerManipulation}{inproceedings}{}
+      \name{labelname}{2}{}{%
+        {{hash=78172a752fa149e7e65ebbc4dd58332f}{Siew}{S\bibinitperiod}{Zi\bibnamedelima Xu}{Z\bibinitperiod\bibinitdelim X\bibinitperiod}{}{}{}{}}%
+        {{hash=bfb7265c872c21b7c3abe30003c1e746}{Nareyek}{N\bibinitperiod}{Alexander}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=78172a752fa149e7e65ebbc4dd58332f}{Siew}{S\bibinitperiod}{Zi\bibnamedelima Xu}{Z\bibinitperiod\bibinitdelim X\bibinitperiod}{}{}{}{}}%
+        {{hash=bfb7265c872c21b7c3abe30003c1e746}{Nareyek}{N\bibinitperiod}{Alexander}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{4d660e4856944e5a82c1cb94e8bb50d5}
+      \strng{fullhash}{4d660e4856944e5a82c1cb94e8bb50d5}
+      \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
+      \field{labeltitle}{Player Manipulation}
+      \field{booktitle}{Proceedings of the 14th International Conference on Computer Games: AI, Animation, Mobile, Interactive Media, Educational and Serious Games}
+      \field{title}{Player Manipulation}
+      \field{year}{2009}
+      \field{pages}{68\bibrangedash 75}
+    \endentry
+    \entry{PsychoTricksPCGames}{misc}{}
+      \name{labelname}{1}{}{%
+        {{hash=75d2b51a4810bbc5628a7278c5659e57}{Redaktion}{R\bibinitperiod}{PCGames}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=75d2b51a4810bbc5628a7278c5659e57}{Redaktion}{R\bibinitperiod}{PCGames}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{75d2b51a4810bbc5628a7278c5659e57}
+      \strng{fullhash}{75d2b51a4810bbc5628a7278c5659e57}
+      \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
+      \field{labeltitle}{Special - Die Psycho-Tricks der Spiele-Designer: Das Spiel in deinem Kopf}
+      \field{howpublished}{URL: \url{http://www.pcgames.de/Special-Thema-215651/Specials/Die-Psycho-Tricks-der-Spiele-Designer-Das-Spiel-in-deinem-Kopf-1144707/} (Zuletzt angesehen am 11.04.2015)}
+      \field{title}{Special - Die Psycho-Tricks der Spiele-Designer: Das Spiel in deinem Kopf}
+      \field{year}{2014}
+    \endentry
+    \entry{SpielStanleyParable}{misc}{}
+      \name{labelname}{1}{}{%
+        {{hash=c07625e09a3f5c61c6e9df61fb2a04a7}{Wreden}{W\bibinitperiod}{Davey}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=c07625e09a3f5c61c6e9df61fb2a04a7}{Wreden}{W\bibinitperiod}{Davey}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c07625e09a3f5c61c6e9df61fb2a04a7}
+      \strng{fullhash}{c07625e09a3f5c61c6e9df61fb2a04a7}
+      \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
+      \field{labeltitle}{The Stanley Parable}
+      \field{title}{The Stanley Parable}
+      \field{year}{2013}
+    \endentry
+    \entry{VideoEthanCarter}{misc}{}
+      \name{labelname}{1}{}{%
+        {{hash=b9546b0db6b0bd1e6253279f85285c83}{Astronauts}{A\bibinitperiod}{The}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=b9546b0db6b0bd1e6253279f85285c83}{Astronauts}{A\bibinitperiod}{The}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{b9546b0db6b0bd1e6253279f85285c83}
+      \strng{fullhash}{b9546b0db6b0bd1e6253279f85285c83}
+      \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
+      \field{labeltitle}{The Vanishing of Ethan Carter - Commented Gameplay}
+      \field{howpublished}{URL: \url{https://www.youtube.com/watch?v=lsHppcIcpfM} (Zuletzt angesehen am 11.04.2015)}
+      \field{title}{The Vanishing of Ethan Carter - Commented Gameplay}
+      \field{year}{2014}
+    \endentry
+    \entry{TestEthanCarterGameStar}{misc}{}
+      \name{labelname}{1}{}{%
+        {{hash=fbe6a1311a3680f89960baf192de732a}{Halley}{H\bibinitperiod}{Dimitry}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=fbe6a1311a3680f89960baf192de732a}{Halley}{H\bibinitperiod}{Dimitry}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{fbe6a1311a3680f89960baf192de732a}
+      \strng{fullhash}{fbe6a1311a3680f89960baf192de732a}
+      \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
+      \field{labeltitle}{The Vanishing of Ethan Carter Test}
+      \field{howpublished}{URL: \url{http://www.gamestar.de/spiele/the-vanishing-of-ethan-carter/test/the_vanishing_of_ethan_carter,49158,3078886.html} (Zuletzt angesehen am 19.02.2015)}
+      \field{title}{The Vanishing of Ethan Carter Test}
+      \field{year}{2014}
+    \endentry
+    \entry{KZieroldComputerspielanalyse}{book}{}
+      \name{labelname}{1}{}{%
+        {{hash=c61ecf4df9f38b8fa68441ba2c3ef2c5}{Zierold}{Z\bibinitperiod}{Kirsten}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=c61ecf4df9f38b8fa68441ba2c3ef2c5}{Zierold}{Z\bibinitperiod}{Kirsten}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {Trier}%
+      }
+      \list{publisher}{1}{%
+        {WVT Wissenschaftler Verlag}%
+      }
+      \strng{namehash}{c61ecf4df9f38b8fa68441ba2c3ef2c5}
+      \strng{fullhash}{c61ecf4df9f38b8fa68441ba2c3ef2c5}
+      \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
+      \field{labeltitle}{Computerspielanalyse}
+      \field{title}{Computerspielanalyse}
+      \field{year}{2011}
+    \endentry
+    \entry{DieVersuchungAdventureTreffKritik}{misc}{}
+      \name{labelname}{1}{}{%
+        {{hash=d696cbe18497aa15e7b7b872e9ce4464}{Frank}{F\bibinitperiod}{Hans}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=d696cbe18497aa15e7b7b872e9ce4464}{Frank}{F\bibinitperiod}{Hans}{H\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{d696cbe18497aa15e7b7b872e9ce4464}
+      \strng{fullhash}{d696cbe18497aa15e7b7b872e9ce4464}
+      \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
+      \field{labeltitle}{Die Versuchung}
+      \field{howpublished}{URL: \url{http://www.adventure-treff.de/artikel/klassiker.php?id=12} (Zuletzt angesehen am 12.04.2015). Adventure Treff}
+      \field{title}{Die Versuchung}
+      \field{year}{2005}
+    \endentry
+    \entry{DieVersuchungAftermathmedia}{misc}{}
+      \name{labelname}{1}{}{%
+        {{hash=554e01a9f1ce6a67530eec1c520cd6cf}{Media}{M\bibinitperiod}{Aftermath}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=554e01a9f1ce6a67530eec1c520cd6cf}{Media}{M\bibinitperiod}{Aftermath}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{554e01a9f1ce6a67530eec1c520cd6cf}
+      \strng{fullhash}{554e01a9f1ce6a67530eec1c520cd6cf}
+      \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
+      \field{labeltitle}{Tender Loving Care}
+      \field{howpublished}{URL: \url{http://www.aftermathmedia.com/tlc.html} (Zuletzt angesehen am 12.04.2015)}
+      \field{title}{Tender Loving Care}
+      \field{year}{2011}
+    \endentry
   \endsortlist
-  \missing{DieVersuchungAftermathmedia}
-  \missing{PsychoTricksPCGames}
-  \missing{DieVersuchungAdventureTreffKritik}
-  \missing{SpielStanleyParable}
-  \missing{SiewNareyekPlayerManipulation}
-  \missing{KZieroldComputerspielanalyse}
-  \missing{TestEthanCarterGameStar}
-  \missing{VideoEthanCarter}
 \endrefsection
 \endinput
 
