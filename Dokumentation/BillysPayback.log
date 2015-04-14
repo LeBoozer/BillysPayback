@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.4)  15 APR 2015 00:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.5.4)  15 APR 2015 00:22
 entering extended mode
 **BillysPayback.tex
 
@@ -1279,14 +1279,14 @@ mentation\Inhalt/Zusammenfassung/Zusammenfassung.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 171.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
 Package rerunfilecheck Info: File `BillysPayback.out' has not changed.
-(rerunfilecheck)             Checksum: 276B3A68F2FE84B76D2EBE64DC463776;2284.
+(rerunfilecheck)             Checksum: DEF397EA8F2953F3A82D232FA97970A7;2363.
 Package logreq Info: Writing requests to 'BillysPayback.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 17240 strings out of 493921
- 278828 string characters out of 3154489
- 803655 words of memory out of 3000000
- 20054 multiletter control sequences out of 15000+200000
+ 17244 strings out of 493921
+ 278896 string characters out of 3154489
+ 804707 words of memory out of 3000000
+ 20057 multiletter control sequences out of 15000+200000
  16105 words of font info for 39 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  56i,8n,55p,1801b,3414s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1303,9 +1303,9 @@ our\jknappen\ec\dpi600\ecsx2488.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.
 9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Dominique\AppData\L
 ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728.pk> <C:\Users\Domin
 ique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk>
-Output written on BillysPayback.pdf (41 pages, 588248 bytes).
+Output written on BillysPayback.pdf (41 pages, 592344 bytes).
 PDF statistics:
- 967 PDF objects out of 1000 (max. 8388607)
- 108 named destinations out of 1000 (max. 500000)
- 273 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 976 PDF objects out of 1000 (max. 8388607)
+ 109 named destinations out of 1000 (max. 500000)
+ 281 words of extra memory for PDF output out of 10000 (max. 10000000)
 
