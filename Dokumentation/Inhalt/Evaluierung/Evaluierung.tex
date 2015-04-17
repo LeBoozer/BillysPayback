@@ -4,9 +4,243 @@
 %#####################################################################################################################
 \chapter{Evaluierung}
 \label{chap:evaluierung}
-Einleitung zu der Evaluierung. 
+
+In diesem Kapitel soll zunächst besprochen werden, wie gut die Auswertung der Eigenschaftenanalyse funktioniert hat. Die Probanden sollten gemäß den Eigenschaften Sammler, Geduld, Ehrgeiz, Herausforderung, Mitleid, Autonomie und Aufmerksamkeit beurteilt werden. Anschließend erfolgt die Auswertung des Interviews mit den Probanden, welche auch gezielte Fragen zu den einzelnen Manipulationen enthalten. Dabei werden positive Aspekte, Gründe und auch Verbesserungsmöglichkeiten vorgestellt. Abschließend wird auf die allgemeinen Fragen zum Spiel eingegangen und die Erfolgskriterien bewertet, sodass ein Fazit getroffen werden kann, wie erfolgreich insgesamt die verwendeten Manipulationen waren.
 
 %................................................................
-% Hier die Sektionen für die Evaluierung
+\section{Auswertung Eigenschaftenanalyse}
+\label{sec:auswertung eigenschaftenanalyse}
+
+\subsection{Fehlerquellen in der Umsetzung}
+\label{subsec:fehlerquellen in der umsetzung}
+
+Eine große Fehlerquelle war die ungünstige Platzierung der Trigger, die für die Analyse der Eigenschaften dienen sollten. Dies hatte zur Folge, dass manche Probanden falsch bewertet und die nachfolgenden Level nicht entsprechend korrekt aufgebaut wurden. Problematisch dabei war die Annahme, dass der Spieler immer linear weiter laufen und nicht vor- und zurückspringen bzw. beide Wege abdecken soll. So kann gleich bei dem ersten Diamanten im Spiel passieren, dass der Spieler zunächst darüber springt und als Nicht-Sammler klassifiziert wird. Kehrt der Spieler dann aber zurück und sammelt den Diamanten ein, ist er offensichtlich doch ein Sammler. Bei der kleinen Kirsche, bei der der Spieler eine Aufgabe annehmen konnte, waren vier Vögel auf einem Plateau zu besiegen. Der Trigger wurde aber erst weiter hinten bei den Eltern der Kirsche gesetzt. Besiegt der Spieler die Vögel und geht nicht weiter zu den Eltern vor, löst er den Trigger ggf. nicht aus. Eine weitere Problemstelle war der bewegliche Baumstamm unter den vielen kleinen Baumstämmen. Wählt der Spieler den oberen, schwierigeren Weg und fällt dann runter auf dem Baumstamm, der ihn auf die andere Seite bringt, wird nicht das Nehmen des oberen, sondern das des unteren Weges gezählt. Die letzte Fehlplatzierung befand sich bei dem Pfeilschild, wo unter anderem die Geduld des Spielers getestet werden sollte, indem unter dem Baumstamm langsam Vögel hervorkamen. Der Trigger befand sich am Ende des unteren Baumstamms. Die meisten Spieler, die warteten, haben nur die Vögel besiegt und sich dann für den oberen Weg entschieden und haben so den vorgesehenen Trigger nicht erreicht. \\
+
+Eine weitere Fehlerquelle ist die fehlende Sichtbarkeit einiger Punkte, die zur Verzerrung der Bewertung führten. Dazu zählen zum Beispiel die Diamanten, die sich vor der großen Schlucht in einer kleinen Einbuchtung befinden. Auch die Kuhle mit den vielen Vögeln wurde nicht als solches erkannt, sondern als eine Art Schlucht, über die man springen muss, um nicht zu sterben. Oftmals war es den Probanden nicht klar, dass der bewegliche Baumstamm auch zum Ziel führt. Dieser war zunächst mit dem Gedanken an 2D-Jump-and-Runs entworfen worden, wo der Querschnitt des Bodens ebenfalls sichtbar ist, sodass man den Baumstamm und das zu erreichende Ziel auch gleich erkennt. Am Ende des Levels ist die zu rettende Kirsche nicht mehr erreichbar, wenn der Spieler schon alle Eier zerstört hat, sodass auch bei Mitleid des Spielers diese Eigenschaft nicht mehr erfasst werden konnte. Auch die Hilfeschreie dieser Kirsche wurden von den Probanden eher als witzig und nicht als mitleiderregend aufgefasst. Daraus und dass der Schrei in manchen Fällen schlecht wahrnehmbar war, lässt sich schließen, dass dies nicht der richtige Anreiz war, um Mitleid erzeugen zu können.
+
+\subsection{Verbesserungsmöglichkeiten}
+\label{subsec:verbesserungsmöglichkeiten}
+
+Eine wichtige technische Verbesserung wäre, dass das Triggersystem adaptiv arbeiten muss. Es muss auch Fälle abdecken, in denen der Spieler rückwärts läuft oder beide Wege nimmt. Dies führt allerdings auch zu mehr Komplexität.
+
+\subsection{Folgen}
+\label{subsec:folgen}
+
+\subsubsection{Sammler}
+
+Als Folge wurde das Sammeln meist falsch bewertet. Die meisten Probanden sammelten viel bis sehr viel, bekamen aber negative Bewertungen auf die Eigenschaft Sammeln. Positiv zu erwähnen ist, dass die Spieler tatsächlich bemüht waren, die Diamanten zu sammeln. Diese boten also einen entsprechenden Anreiz. Manche Probanden haben allerdings nicht mitbekommen, dass sie dadurch mehr Leben bekommen, haben aber trotzdem gesammelt. Der zu schnelle Text könnte dafür ein Grund sein. Weitere Gründe für die falsche Auswertung der Sammel-Eigenschaft liegen auch an dem bereits schon angesprochenen ersten Diamanten, der nachträglich noch eingesammelt werden konnte, sowie an den Diamanten, die sich in der Schlucht befanden, aber von den Probanden nicht gesehen wurden. Diese Stellen zu verbessern, würde eine korrektere Auswertung nach sich ziehen. Noch besser wäre aber die Analyse mittels eines Schwellenwertes, bei dem die Anzahl der gesammelten Diamanten mit der Anzahl der im Spiel befindlichen Diamanten verglichen wird. So ist die Sammeleigenschaft nicht nur an den Triggern festgemacht.
+
+\subsubsection{Geduld}
+
+Die größte Abweichung in der Analyse betraf die Eigenschaft Geduld. Bei einigen Probanden stimmte die Analyse mit dem Fragebogen überein. Bei anderen ergab sie Ungeduld, obwohl sich die Probanden selbst als geduldig eingestuft hatten. Hierbei ist zu erwähnen, dass die Einschätzung der Geduld im Fragebogen sehr subjektiv erfolgte und es nicht sicher ist, ob sich der Spieler richtig einschätzen konnte. Als weiterer Grund fehlte ein zusätzlicher Anreiz an entsprechenden Stellen (z.B. durch Diamanten), um auch wirklich geduldig sein zu müssen. Der von uns gewählte Ansatz, dass der geduldigere Weg angenehmer ist, da der andere Weg schwieriger oder durch Vögel blockiert ist, funktioniert nur, wenn der Spieler Feinde und schwere Wege scheut. Auch der bereits oben erwähnte falsch gesetzte Trigger bei dem Warten auf die Vögel bzw. das falsche Deuten des sich bewegenden Baumstammes sind mögliche Gründe der Fehlanalyse. Verbesserungen könnten einerseits durch besseres Setzen der Trigger und das Geben von mehr Anreizen für die Wahl des geduldigen Weges erzielt werden. 
+
+\subsubsection{Ehrgeiz}
+
+Eher geringe bis gar keine Abweichungen gab es bei der Eigenschaft, ob der Spieler den schweren Weg eher nimmt als den leichten. Dies führt zu der Schlussfolgerung, dass der schwere Weg am Anfang auch tatsächlich als solcher wahrgenommen wurde. Kaum ein Proband hat ihn gewählt. Wenn doch, dann wegen der sich dort befindlichen Diamanten oder der Proband sah diese Strecke als Herausforderung an und wählte sie deshalb, was auch so vorgesehen war. Für die geringen Abweichungen sei wieder auf das bereits erwähnte Herunterfallen vom schweren Weg auf den sich darunter bewegenden Baumstammes verwiesen. Auch ist die Wahrnehmung, ob ein Weg schwer oder leicht ist, abhängig vom Spieler und könnte so die Abweichungen im Fragebogen erklären.
+
+\subsubsection{Herausforderung}  
+
+Auch bei der Eigenschaft der Herausforderung gab es meist nur geringe Abweichungen bei der Analyse. Die Analyse hat also diesbezüglich allgemein gut geklappt. Es gab nur einen Ausreißer, der bei der Anzahl an Probanden vernachlässigbar ist. Positiv war hierbei, dass die Stellen bei der kleinen Kirsche und über dem matschigen Weg gut umgesetzt wurden. Der Spieler hatte bei der Aufgabe der kleinen Kirsche jederzeit die Wahl, aus Angst vor der Herausforderung auch abbrechen zu können. Der überwiegende Teil der Spieler hat sich als mehr Herausforderung suchend empfunden (im Fragebogen) als dies von der Analyse bewertet wurde. Ein Grund ist einmal die Kuhle mit vielen Feinden drin, die als solche nicht erkannt wurde. Ein weiterer Grund ist das lange Warten auf die Vögel und die darauf folgende Wahl, trotzdem oben lang zu gehen, sodass der richtige Trigger nicht ausgelöst wurde. Verbesserungsmöglichkeiten sind somit das Beheben des Triggerproblems, sowie die Verbesserung der Sichtbarkeit der Kuhle.  
+
+\subsubsection{Mitleid}
+
+Bei der Mitleids-Eigenschaft gab es einige Abweichungen bei der Analyse, sowohl zu mehr als auch zu weniger Mitleid. Positiv hervorzuheben ist, dass erreicht werden konnte, dass ein Proband tatsächlich Mitleid mit der kleinen Kirsche hatte. Einige Gründe für die Abweichungen wurden bereits angesprochen. Dazu zählen der Weg zur Kirsche, der durch zerstörte Eier unmöglich wurde, der nicht als Hilferuf wahrgenommene Schrei und der sich erst bei den Eltern befindliche Trigger. Alle drei Situationen sind Gründe dafür, dass jemand als weniger mitleidig eingestuft wurde, als er eigentlich ist. Wie mitleidig sich der jeweilige Spieler selbst einstuft ist zudem wieder sehr subjektiv. Möglicherweise wollten die männlichen Probanden ihr Mitleid nicht im Fragebogen zugeben. Auch ist oft die eigene Erfahrung ausschlaggebend, ob sich eine Person in die jeweilig Situation hineinversetzen kann (z.B. wie die Kirsche selbst Eltern verloren, etc.). Dies können sowohl Gründe für mehr als auch für weniger analysiertes Mitleid sein. Generell ist es schwierig, sich mit derart prototypischen und abstrakten Charakteren zu identifizieren. Es gibt einige Verbesserungsmöglichkeiten, die in diesem Fall getroffen werden können. Ein realistischerer Sound für den Schrei der Kirsche könnte beim Probanden mehr Mitleid erzeugen. Dies war für den Prototypen schwierig, da kostenlose Sounds nur schwer zu bekommen sind. Und auch das Einsprechen eines solchen berührenden Schreis erfordert ebenfalls Geschick, welches nicht jeder besitzt. Als weiterer Punkt kann die Kombination mit den Eiern verbessert bzw. vermieden werden. Da der Spieler vorab lernt, die Eier zu zerstören, ist es nicht zielführend, diese für den Weg zur Kirsche zu verwenden. Wichtiger wäre gewesen, beide Eigenschaften einzeln zu testen (einmal Mitleid für die Kirsche und einmal Aufmerksamkeit durch die glänzenden Eier). Allerdings bleibt zu sagen, dass es eher schwer ist, subjektive und individuelle Abweichungen bei der Bewertung und Analyse des Mitleids zu umgehen. Es kann maximal versucht werden, die Charaktere realistischer zu gestalten und über eine längere Zeit eine Beziehung zu ihnen aufzubauen, damit der Spieler eine parasoziale Beziehung eingeht. Dies ist jedoch im Rahmen eines kurzen Prototypen nicht möglich. Auch müsste die Story bunter und vielfältiger ausgebaut werden, damit sich der Spieler besser hineinfühlen kann, was wiederum erst in fertigen Spielen wirklich möglich ist.
+
+\subsubsection{Autonomie} 
+
+Bei der Autonomie gab es teilweise größere Abweichungen. Die Spieler haben sich größtenteils autonomer eingeschätzt als sie eigentlich analysiert wurden. Positiv ist, dass keine Fehler durch die Trigger zur Autonomiemessung auftauchten. Für die Abweichung mag der Hauptgrund sein, dass die Spieler es gewohnt sind, den Anweisungen in einem Tutorial zu folgen. Wenn ihnen gesagt wird, dass sie Dinge ausprobieren sollen (zum Beispiel Besiegen eines Gegners), machen sie es vor allem, um erste Erfahrungen mit der Steuerung, etc. zu bekommen. Somit sollte die Autonomie außerhalb des Tutorials getestet werden, indem zum Beispiel Antonio irgendwann auf einen Weg hinweist und Billy auffordert, diesen zu gehen.
+
+\subsubsection{Aufmerksamkeit} 
+
+Die Eigenschaft Aufmerksamkeit hatte die geringste mittlere Abweichung. Teilweise wurde der Spieler als weniger aufmerksam analysiert, meistens aber als aufmerksamer, wenn es überhaupt eine Abweichung gab. Die Situationen, in denen die Aufmerksamkeit gemessen wurden, waren kaum falsch zu verstehen und durch Fehler zu umgehen, sodass dies als positiv zu werten ist. Dennoch gab es auch hier Schwankungen, da auch Aufmerksamkeit eher eine subjektive Eigenschaft ist. Es ist auch denkbar, dass die Eier nicht aufgrund des Leuchtens, sondern zwecks Belohnung zerstört wurden. Durch zwei Verbesserungsmöglichkeiten könnte die Schwankung verringert werden. Das Pfeilschild war eher auffällig, auch wenn dies nicht unbedingt nach sich zog, dass der unsichtbare Baumstamm entdeckt wurde. Eine weniger auffällige Möglichkeit hätte zum Beispiel darin bestanden, eine kleine Pyramide dorthin zu stellen. Des weiteren wurde die Aufmerksamkeit in der Aushöhlung vor der Schlucht getestet. Da diese relativ schwer zu sehen und nur durch genaues Erkunden des Levels zu entdecken war, hätte das eine höhere Anforderung an die Aufmerksamkeit des Spielers bedeutet.
+
+
+
+\section{Auswertung Interview}
+\label{sec:auswertung interview}
+
+	
+\subsubsection{1. Inwiefern hast du dich durch die Gespräche mit den Charakteren beeinflusst gefühlt? Gab es Unterschiede zwischen dem Level 2.1 und den anderen Leveln?}
+
+Die Frage nach der Beeinflussung wurde sehr ausgewogen beantwortet. Ein Teil der Probanden hat sich beeinflusst gefühlt, der andere nicht. Ein Grund dafür ist einerseits die fehlende Beziehung zu den Charakteren. Dadurch fiel die Beeinflussung nicht sehr stark aus. Allerdings ist das auch wiederum eine Einstellungssache, da sich einige Spieler durchaus beeinflusst gefühlt haben. Ein paar wenige hatten sogar Mitleid mit den Figuren. Ein weiterer Grund für die geringe Beeinflussung war der zu schnelle Text, aufgrund dessen die Spieler der Geschichte nicht ganz folgen konnten. Verbesserungen können durch den Ausbau des Prototypen bezüglich der Story und des Beziehungsaufbaus zu den einzelnen Figuren erreicht werden. Zwischen dem langen, auf die Eigenschaften ausgerichteten Gespräch und den anderen Gesprächen, in denen nicht mehr zwischen den analysierten Eigenschaften differenziert wurde, wurden von den Probanden keine Unterschiede festgestellt. Nur ein Proband bemerkte, dass die Gespräche länger bzw. detaillierter waren. Im Allgemeinen scheint die Differenzierung nach Merkmalen in den Gesprächen bei den Spielern nicht bewusst aufgefallen zu sein. Dies kann als positiv gewertet werden, da so die versuchte Manipulation nicht bemerkt wurde. Auf der anderen Seite schien der Einfluss laut dem Interview nicht allzu groß zu sein. Hierbei ist besonders die noch folgende Befragung der Probanden zu den einzelnen Quests zu beachten, da es schwer einzuschätzen ist, was der wahre Grund für die Annahme der Quest war. Letztendlich haben die Spieler die Quests nicht abgelehnt, wodurch das angestrebte Ziel erreicht wurde und somit als Teilerfolg zu werten ist. \\
+
+\textbf{Schlussfolgerungen für die Wirksamkeit der angepassten Gespräche} \\
+
+Nur zwei Spieler wurden als Herausforderung suchend eingestuft und haben beide die Quests in Level 2.1 und 3.1 angenommen. Das könnte bedeuten, dass die Anpassung des Gesprächs keinen Einfluss hatte. Alle anderen Spieler bekamen den Text für Mitleid bzw. alle restlichen Eigenschaften zu sehen. Bis auf zwei davon haben alle Spieler sowohl in 2.1 als auch in 3.1 die Quests angenommen. In 2.1 lag die Begründung dafür bei der angepriesenen Belohnung. Diese war weitaus besser als die Belohnung in 3.1. Die Gesprächsanpassung scheint ebenfalls unwirksam, da Mitleid nicht der Grund des Annehmens war, sondern die bessere Belohnung. Im Allgemeinen lässt sich sagen, dass die Anpassung der Gespräche weniger sinnvoll war, denn die Wirkung war nicht dem Aufwand entsprechend, sodass ein weiteres Mal darauf verzichtet werden kann. Es gelten hier dieselben Gründe wie bereits bei der Beeinflussung genannt. Eine Verbesserung kann man höchstens durch den Ausbau des Prototypen erzielen, oder man schafft aufgrund des Aufwandes die Gesprächsdifferenzierung generell ab. \\
+
+\textbf{Fazit:} 
+Die Anpassung der Gespräche an die Eigenschaften der Spieler war nicht erfolgreich. 
+
+
+\subsubsection{2. Findest du, dass du dich an einem Wegpunkt falsch entschieden hast?}
+
+Diese Frage sollte dazu dienen, herauszufinden, ob die Manipulationen unauffällig genug waren. Die meisten Spieler haben sich insofern geäußert, dass sie einen alternativen Weg noch für möglich gehalten hätten bzw. sagten nicht explizit, dass sie ihn für unmöglich gehalten haben. Nur zwei Spieler haben entweder nicht gemerkt, dass es Alternativen gab oder gemerkt, dass der Entwickler nicht wollte, dass ein spezieller Weg genommen wird. Auf Verbesserungsmöglichkeiten bezüglich einzelner Manipulationen wird nachfolgend noch genauer eingegangen. \\
+
+\textbf{Fazit:} 
+Die verwendeten Manipulationen erfüllen das Kriterium der Unauffälligkeit und der Wirksamkeit bei einer möglichst großen Personenanzahl.
+
+
+\subsubsection{3. Glaubst du, du hättest ein alternatives Ende erreichen können? Warum?}
+
+Die meisten Spieler hielten kein alternatives Ende für möglich. Ein Spieler konnte nicht gewertet werden, da es einen technischen Fehler ab dem Kampf mit Black Sparrow gab, weshalb das Spiel nicht zu Ende gespielt werden konnte. Mithilfe von komplexeren Leveln könnten noch mehr unterschiedliche Wege eingebaut werden, sodass es nicht einfach überprüfbar ist, ob es andere mögliche Wege gegeben hätte. Auch eine komplexere Story und Interaktionsmöglichkeiten (z.B. umfangreichere Gespräche mit den Charakteren) kann zu einer Verbesserung führen. \\
+
+\textbf{Fazit:} 
+Es besteht kein großer Unterschied zwischen der Zahl von Spielern, die ein alternatives Ende für möglich hielten und denen, die dies nicht taten. Somit ist davon auszugehen, dass vorhandene Lösungen durchaus Potenzial haben, die durch Umsetzung der Verbesserungsvorschläge sogar zu guten Ergebnissen führen könnten.
+
+
+\subsubsection{4. Warum hast du Bob nicht geholfen? Wenn doch, warum?}
+
+Viele Spieler gaben an, dass sie nicht genau wussten, was im zweiten Level zu tun ist. Dies kann zum Beispiel an dem zu schnellen Text liegen. Einige Probanden sagten, dass sie dadurch die Handlung nicht mitbekommen haben. Auch der Wegweiser und seine Funktion war den Spielern nicht bekannt. Außerdem wurde von einigen Spielern Bob und die Interaktionsmöglichkeit mit ihm übersehen. Verbesserungsmöglichkeiten liegen bei der Einstellung eines langsameren und deutlicherer erkennbaren Text. Auch könnte Bob den Spieler beim Vorbeigehen automatisch ansprechen, sodass der Interaktionshinweis wegfallen kann. Dies könnte allerdings wieder die Selbstständigkeit des Spielers beeinflussen. Daher wäre eine andere Möglichkeit, den Spieler durch Rufen oder ähnliches auf Bob aufmerksam zu machen. Allgemein erscheint es besser, wenn die Figuren nicht durch Text, sondern mittels einer Stimme sprechen würden. Die Funktion des Wegweiser sollte schon am Anfang eingeführt werden, damit der Spieler weiß, wozu dieser gut ist. Noch besser wäre es allerdings, wenn der Wegweiser durch eine kleine Karte ersetzt werden würde, auf der sich der Spieler bewegen und dann das entsprechende Level betreten kann. Diese sollte außerdem schon ab Billys Haus zugänglich sein, um Verwirrung durch das automatische Weiterleiten zu 2.1 zu vermeiden. \\
+
+
+Die ursprüngliche Manipulation basierte auf \grqq Armes-Schwein-Spiel\grqq. Der Spieler sollte Mitleid mit Bob haben, da sein Dorf solche Schwierigkeiten hatte. Deshalb bekam auch jeder Spieler, es sei denn er war Herausforderung suchend, den Mitleidstext angezeigt. Als Ausweg war gedacht, dass der Spieler ohne das bei Bob erhältliche Schild nicht weiterkommt und so im Zweifelsfall gezwungen wird, dieses zu holen. Vier Spieler gaben letztendlich an, dass sie aus Hilfsbereitschaft/Verantwortungsgefühl/ Mitleid geholfen haben. Aber der am häufigsten genannte Grund (der auch zweimal in Kombination mit Mitleid/Verpflichtung auftrat) war die Belohnung, die der Spieler bei Hilfe erhalten würde. Meist hat also die sekundäre Manipulation angeschlagen und war somit wirksamer als die primäre, auch wenn einige auf diese eingingen. 50\% der als mitleidig eingestuften Spieler haben tatsächlich aus Mitleid gehandelt, die restlichen 50\% wegen der Belohnung. Einer der Nicht-Mitleidigen hat mitleidig gehandelt. Insgesamt scheint die Mitleidseigenschaft kaum Einfluss genommen zu haben, was wiederum unter anderem daran liegen kann, dass Bob als nicht sehr mitleiderregend wahrgenommen wurde. Die bereits vorgestellten Verbesserungsmöglichkeiten bzgl. der Gespräche und dem Realismus des Prototypen wären hier wieder hilfreich.
+
+
+\subsubsection{5. Denkst du, dass du Bob zu mehr Unterstützung hättest überreden können, wenn du das Gespräch anders geführt hättest?}
+
+Ungefähr die Hälfte der Probanden meinte, dass sie Bob hätten überreden können. Die andere Hälfte hielt dies für nicht möglich. Und ein Proband gab eine Antwort, die nicht interpretierbar ist. Auch hier könnten zum Beispiel komplexere Gespräche und Figuren zu einem besseren Ergebnis hinsichtlich des Manipulationsversuches führen. \\
+
+\textbf{Fazit:}
+Es kann keine eindeutige Aussage getroffen werden, da es weder in die eine noch die andere Richtung eine Tendenz gibt.
+
+
+\subsubsection{6. (Spieler hat den Untergrund ignoriert) Hast du den zerstörbaren Block gesehen? Wenn ja, wieso hast du dich dagegen entschieden?}
+
+Fast alle Spieler haben den versteckten Eingang nicht bemerkt. Ein Proband hat ihn zu spät gesehen, sodass dieser bereits eingestürzt war. Daraus folgt, dass die Umsetzung zu unauffällig war. Die zerstörbaren Blöcke müssten zu einem früheren Zeitpunkt des Levels eingeführt werden, damit der Spieler mit dem Prinzip bereits vertraut ist. Darüber hinaus müsste der Block besser erkenntlich gemacht werden, damit er nicht so leicht zu übersehen ist, zum Beispiel durch eine andere Farbe, Struktur oder ähnliches. \\
+
+\textbf{Fazit:}
+Aufgrund der Tatsache, dass der gewünschte Bereich nicht wahrgenommen wurde, lässt sich auch hier keine Einschätzung zu der Manipulation treffen.
+
+
+\subsubsection{7. (Spieler hat den Untergrund nicht ignoriert) Warum hast du dich nicht für den oberen Weg entschieden?}
+
+Es können keine Aussagen gemacht werden, da kein Spieler diesen Weg erreicht hat.
+
+
+\subsubsection{8. Warum hast du dich für diesen (Brücken-)Weg entschieden? Hättest du lieber den anderen Weg genommen?}
+
+Fünf Probanden haben nicht mitbekommen, dass der rechte Weg wieder auf den Hauptweg zurückführt. Sechs Probanden haben den rechten Weg nicht gesehen. Davon wurden alle durch den Vogel unter der Brücke gezwungen, den ersten Weg zu nehmen. Ein zusätzlicher Spieler hat zwar den rechten Weg gesehen, wurde aber ebenfall durch den Vogel nach oben gezwungen. Zwei Probanden haben gleich den rechten Weg genommen. Einer davon gleich beim ersten Mal, der andere erst im Nachhinein. Letzterer hat außerdem mitbekommen, dass beide Wege zum gleichen Ziel führen, während ersterer dies nicht tat. Somit sollte als Verbesserung erst einmal der Vogel nicht unter die Brücke gesetzte werden. Die Spieler waren so nicht in der Lage die zweite Wegmöglichkeit zu sehen, wodurch die Ablenkung von den vielen Manipulationen nicht so gut wie geplant erfolgen konnte. Der Spieler fühlte sich außerdem durch den Vogel genötigt, die linke Brücke zu nehmen. Zudem hätte das Einführen des Spielelements Brücke schon früher erfolgen müssen, damit kein Spieler \grqq aus versehen\grqq \ die Brücke hochspringt, ohne dass er diesen Weg nehmen wollte. Besonders die Kombination mit dem Vogel war daher sehr ungünstig. \\
+
+\textbf{Fazit:}
+Die Ablenkung von den Manipulationen konnte nicht ihre volle Wirkung entfalten, da die meisten Spieler den alternativen Weg nicht sahen und/oder vom Vogel auf den linken gezwungen wurden.
+
+
+\subsubsection{9. (Spieler ist gleich rechts lang) Warum hast du den linken Weg unbeachtet gelassen? }
+
+Fast alle Spieler wurden von dem schwierigen Weg abgeschreckt. Einer von ihnen hat mitbekommen, dass dies so war, weil der Entwickler nicht wollte, dass der Spieler den Weg nimmt. Nur ein Proband hat den schweren Weg genommen, weil er etwas großes dahinter vermutete. Vier Spieler sind zur sekundären Manipulation gelangt. Nur einer davon hat gemerkt, dass diese nicht zu überbrücken war. Die anderen dachten, dass es irgendwie möglich wäre, aber sie noch keinen geeigneten Weg zur Überbrückung gefunden haben. Nur ein Spieler hat den Schrei bemerkt und ihn mit in seine Entscheidung einbezogen, sodass sich sagen lässt, dass diese zusätzliche Manipulation nicht wirksam war. Der Schrei war möglicherweise zu unauffällig (zu leise, wiederum keine Sprache).  \\
+
+\textbf{Fazit:}
+Insgesamt wurden die Manipulationen kaum durchschaut und sind dadurch erfolgreich zum Abschrecken vieler Personen, während dieses nicht auf die Manipulation durch den Schrei zutrifft.
+
+
+\subsubsection{10. (Spieler ist bei Vogelschwarm nicht aus dem Nest raus) Warum hast du das Nest nicht durch die Tür verlassen?}
+
+So gut wie alle Spieler sind aus der Tür raus als der Vogelschwarm kam. Nur ein Spieler ist nach links gerannt, weil er die Tür nicht als solche erkannt hatte. An dieser Stelle sollte besser kenntlich gemacht werden, dass es sich um einen gefährlichen Vogelschwarm handelt, der nicht besiegt werden kann, um den Spieler nicht zu verwirren. Zusätzlich würde ein Feedback beim Tod durch den Vogelschwarm helfen. \\
+
+\textbf{Fazit:}
+Trotz der technischen/grafischen Mängel war die Manipulation für die Zwecke des Prototypen ausreichend und hat die meisten Spieler dazu gebracht, das Nest zu verlassen.
+
+
+\subsubsection{11. (Spieler hat die Kiwano ignoriert) Warum hast du die Kiwano nicht gerettet? Und wenn doch, warum?}
+
+Ungefähr die Hälfte der Spieler wurde durch den Schrei veranlasst, der Kiwano zu helfen. Ein Proband war allerdings vom Schrei genervt. Der Schrei wurde im Zusammenhang mit dem Charakter als Zeichen dafür gesehen, dass geholfen werden muss. Der Schrei alleine scheint nicht auszureichen.
+Fast alle Probanden haben der Kiwano geholfen bzw. wollten ihr helfen.  Drei Probanden gaben an, geholfen zu haben, weil sie sowieso schon da waren. \\
+
+\textbf{Fazit:}
+Im Vergleich zu der vorherigen Situationen, wo nur der Schrei zu hören war, ist davon auszugehen, dass die Unauffälligkeit des Schreis ein entscheidender Faktor ist, da hauptsächlich im Zusammenhang mit Sicht auf die schreiende Figur geholfen wurde. Dies wird dadurch bestätigt, dass ein paar wenige Probanden den Schrei nicht zuordnen konnten (sowohl in 1.1 als auch in 2.1). Ansonsten scheint diese Kombination aus Sicht und Schrei den meisten Spielern zu suggerieren, dass sie helfen müssen/sollen.
+
+
+\subsubsection{12. Warum bist du in die Höhle gegangen? Wenn nicht, warum nicht?}
+
+Mehr als die Hälfte der Spieler sind gleich in die Höhle gegangen, der Rest wählte den Weg nach oben, wovon zwei Spieler später noch die Höhle erkundet haben. Dadurch bekamen diese beiden Probanden mit, dass beide Wege zum selben Ziel führten. Keiner der Spieler gab an, wegen des Scheins aus der Höhle diesen Weg gewählt zu haben. Vier Probanden empfanden den Weg nach oben schwerer, einer davon hatte ihn genau deswegen genommen, die anderen drei vermieden. Zwei Probanden haben die Eier zerstört, sodass sie den Weg nach oben nicht mehr nehmen konnten. Einer davon wurde als unaufmerksam gewertet, der andere empfand den Weg nach oben als zu schwer. Die Höhle wurden von zwei Spielern sogar als gefährlich eingestuft. Und wiederum zwei Spieler haben erst gar nicht ihre Aufmerksamkeit nach oben gerichtet. Der Schein der Höhle sollte die Spieler anlocken. Anscheinend wurde dieser aber zu unauffällig dargestellt, sodass der Unterschied zwischen unterem und oberen Weg nicht groß genug war. Deshalb sollte für eine Verbesserung ein dominanterer visueller Umgebungshinweis als der Schein verwendet werden bzw. der Schein sich z.B. durch eine andere Farbe auffälliger von der Umgebung abheben. Auch der Weg nach oben sollte schwieriger zu entdecken sein. Die Stufen könnten dem Spieler assoziiert haben, dass er sich nach oben begeben soll, zumal dieser ein ganzes Stück vor der Höhle angefangen hat.  \\
+
+\textbf{Fazit:}
+Das Konzept des Zusammenspiels der Manipulationen funktionierte potenziell gut. Der Weg nach oben wurde zum Beispiel durch die Eier erschwert. Diese konnten durch Unaufmerksamkeit zerstört werden und die Höhle wurde durch Diamanten interessanter.
+Die Manipulation durch den Schein verlief allerdings besonders schlecht.
+
+
+\subsubsection{13. Warum hast du den Hut am Anfang nicht aufgenommen? Und wenn doch, warum?}
+
+Nur vier Probanden entschieden sich dafür, den Hut nicht aufzunehmen. Davon haben zwei Probanden ihn nicht erkannt. Ein weiterer Proband wollte sich von diesem nicht ablenken lassen und der letzte fand ihn generell einfach uninteressant. Die restlichen Spieler haben den Hut aufgrund von Neugier, aufgrund des Questgedankens oder einfach weil das Interface es so suggeriert hat, aufgenommen. Um noch mehr Probanden zur Aufnahme des Hutes zu motivieren, könnte dieser auffälliger gestaltet werden, zum Beispiel durch Leuchten oder anderweitigem Abgrenzen von der Umgebung. \\
+
+\textbf{Fazit:}
+Ein Fazit kann erst gezogen werden, wenn die dazugehörige Quest behandelt wird. Nachdenkbar wäre hier allerdings, die Neugier der Leute bei solchen Sachverhalten zum Zwecke weiterführender Manipulationen auszunutzen (zum Beispiel zum Leiten, ähnlich wie bei den Diamanten).
+
+
+\subsubsection{14. Warum hast du die Quest ignoriert? Wenn nicht, warum nicht?}
+
+Nur zwei Probanden haben die Quest ignoriert, weil sie kein Mitleid mit Manfred hatten. Die restlichen nahmen die Quest wegen der Belohnung, aus Mitleid oder auch aus Neugier an. Fünf Probanden haben allerdings die Quest nicht beendet, einerseits weil sie vorher in den Zustand der Vogelverfolgung gerieten und andererseits weil es vergessen wurde. Positiv hier zu erwähnen ist, dass bis auf zwei Spieler alle die Quest annahmen, davon sagte auch nur einer, dass er es tat, weil er eh schon den Hut hatte. Bei einer Überarbeitung könnten die Objekte auffälliger gestaltet werden, um diese besser finden zu können, da es ein paar Aussagen diesbezüglich gab. Außerdem sollte verhindert werden, dass der Spieler unbewusst vor Beendigung der Quest weiterkommt. \\
+
+\textbf{Fazit:}
+Die Manipulation hat gut funktioniert, wenn auch möglicherweise aus den falschen Gründen (Belohnung und Mitleid größtenteils). Aber es ist nicht eindeutig auszuschließen, dass sich nicht schon ein in Besitz befindlicher Hut auch ausgewirkt hat.
+
+
+\subsubsection{15. (Spieler vom Weg abgewichen) Warum bist du den Vögeln nicht gefolgt?}
+
+Viele Spieler haben nicht den Sinn der Vogelszene verstanden, denn sie wussten nicht, dass sie ihnen hätten folgen sollen. Hierbei ist jedoch zu beachten, dass bei sechs Spielern Bugs auftraten, durch die fünf von ihnen nicht wussten, was zu tun ist. Auffällig dabei ist, dass bei allen, die verstanden haben, was zu tun ist, auch keine Bugs mehr auftraten. Nach Überarbeitung waren die Vögel nämlich sichtbar und Antonio hat darauf hingewiesen, ihnen zu folgen. Von den Probanden sind zehn vom Weg abgewichen. Sie gaben an, die Umgebung des Weges zu interessant zu finden und versuchten deshalb z.B. noch schnell alle Diamanten einzusammeln. Außerdem sind einige den Weg nach oben gegangen, weil sie entweder den Weg nach unten als tödliche Schlucht ansahen oder weil sie dachten, dass die Vögel nach oben fliegen. Nur drei Probanden sind dem Pfad von Anfang an gefolgt, weil sie sich unter anderem von den Vögeln gezwungen fühlten, nicht abzuweichen. Insgesamt lässt sich feststellen, dass die Vielzahl von Bugs die Wirkung sehr verfälscht hat. Die Verfolgungssituation war nicht offensichtlich genug, die Vögel zu schlecht sichtbar und der unerwünschte Weg war deutlich attraktiver als der gewünschte. Diese Gründe sollten deshalb behoben werden, indem die Verfolgung besser eingeleitet und offensichtlicher gemacht wird, der Weg weniger attraktiv gestaltet wird und auch die Vögel von Anfang an sichtbar sind. \\
+
+\textbf{Fazit:}
+Es ist kaum eine Aussage über die Qualität der eigentlichen Manipulation möglich, da der Sachverhalt zu sehr durch Bugs verzerrt wurde, aber vor allem der unerwünschte Weg zu attraktiv im Gegensatz zum erwünschten ausgearbeitet wurde. Es ist aber abzusehen, dass weitere Tests mit dem Konzept sinnvoll sind, da Spieler, die keine Bugs hatten, die Situation besser bewältigen konnten.
+
+
+\subsubsection{16. Warum hast du den Bruder gesucht? Wenn nicht, warum?}
+
+Weniger als die Hälfte der Spieler hat die Quest nicht angenommen, weil sie entweder zu sehr auf Cherry fixiert waren und nicht abweichen wollten oder einfach neugierig waren, was denn passieren würden, wenn abgelehnt wird. Die restlichen Probanden nahmen die Quest an, weil sie Antonio als einen Freund oder Begleiter empfanden und ihm deshalb helfen wollten oder weil sie sich dadurch weitere Unterstützung erhofft hatten. Als Verbesserung könnte generell besser erkenntlich gemacht werden, dass Antonio dem Spieler mit Herzen und Schilden hilft. Antonio muss ein eigenständigerer Charakter werden und mehr interagieren bzw. mitkämpfen und nicht nur an Billy hängen, damit die Spieler besser bemerken, dass er ihnen hilft.. Für einen Prototypen wäre diese Umsetzung allerdings zu komplex. \\
+
+\textbf{Fazit:}
+Das Konzept der Manipulation scheint erfolgsversprechend bei besserer Umsetzung des Charakters von Antonio zu sein. Viele Spieler haben ihn schon allein wegen der Begleitung und den bisher vorhandenen Interaktionen als Begleiter angesehen, was ihn ihnen näher brachte.
+
+
+\subsubsection{17. Warum wolltest du Antonio trotz des Verrats nicht angreifen? Und wenn doch, warum?}
+
+Für den Angriff auf Antonio haben sich mehr als die Hälfte der Probanden entschieden. Davon wollten fünf ihn für seinen Verrat bestrafen. Die restlichen gaben an, sowieso keine Beziehung zu ihm aufgebaut zu haben. Fünf Spieler wollten Antonio aus folgenden Gründen nicht angreifen. Entweder wollten sie die Entscheidung Cherry überlassen, weil sie hofften, dass dadurch der Streit anders geschlichtet werden kann oder sie hofften generell, ein alternatives Ende erreichen zu können. Ein Proband gab an, eine zufällige Entscheidung getroffen zu haben. Bei dieser Manipulation könnte der Verrat noch schwerwiegender gestaltet werden, um noch mehr Spieler zum Angriff zu bewegen. Allerdings liegt die Schwere des Verrats wiederum beim Betrachter, weshalb manche reagierten und manche nicht. \\
+
+\textbf{Fazit:}
+Dieses Konzept der Manipulation ebenfalls erfolgsversprechend, da die Mehrzahl der Spieler Antonio angegriffen hat. Außerdem hielten die, die nicht angegriffen haben, größtenteils ein anderes Ende für möglich. Auch bei den angreifenden Spielern war nicht auszuschließen, dass sie ein alternatives Ende für möglich halten. Insgesamt waren die  Manipulationen nicht zu auffällig.
+
+
+
+
+
+\section{Auswertung der Erfolgskriterien und der allgemeinen Fragen}
+\label{sec:auswertung der erfolgskriterien und der allgemeinen fragen}
+
+
+\subsubsection{Erfolgskriterien}
+
+Die vorab gesetzten Erfolgskriterien konnten mit dem Prototypen erfüllt werden. 
+Zunächst gaben 85\% der Spieler an, Spaß beim Spielen gehabt zu haben. Von den Probanden hätten 77\% bei erneutem Durchlauf einen anderen Weg gewählt. Der Mittelwert lag dabei bei 4.08 (von 5), wodurch davon ausgegangen werden kann, dass die Manipulationen unauffällig genug waren, um den Spielern nicht unangenehm aufzufallen. 61\% der Spieler hielten ein anderes Ende für möglich. Hierbei lag der Mittelwert bei 3.69, was darauf hindeutet, dass die meisten Spieler gemerkt haben, dass kaum ein anderes Ende möglich ist. Allerdings konnten sie es auch nicht ganz ausschließen. Ein Proband hatte die Fragestellung falsch verstanden. Er dachte, dass die zukünftige Implementierung eines anderen Endes möglich ist. Zählt man diesen Probanden mit, kommt es zu einer Verschlechterung (3.38), was allerdings das Ergebnis nicht wesentlich beeinflusst, da ein alternatives Ende insgesamt immer noch für möglich gehalten wird. Insgesamt hielten damit 92\% der Probanden ein alternatives Ende oder einen alternativen Weg für möglich, was auch dieses gesetzte Erfolgskriterium erfüllt. Bei dem Erfolgskriterium für das Nehmen der gewünschten Wege lässt sich prinzipiell sagen, dass alle Manipulationen von 3D auf 2,5D-Jump-and-Runs übertragbar sind. Das Ergebnis lässt sich folgenderweise einteilen:
+
+\begin{itemize}
+	\item Bereits gut funktionierte bzw. erfolgsversprechende Manipulationen:
+	\begin{itemize}
+		\item Wegentscheidung am Nesteingang des zweiten Levels und Schräge
+		\item Vogelschwarm im Nest
+		\item Hut-Quest
+		\item Verlorener Bruder
+		\item Verrat von Antonio
+	\end{itemize}
+	\item Schlecht funktionierte Manipulationen:
+	\begin{itemize}
+		\item An Spielereigenschaften angepasste Gespräche
+		\item \grqq Armes-Schwein-Spiel\grqq \ bei Bob
+		\item Zerstörbarer Block vor Untergrund
+		\item Umgebungshinweise (Kiwano, Höhle)
+		\item Verfolgung der Vögel
+	\end{itemize}
+	\item Nicht bewertbar:
+	\begin{itemize}
+		\item Manipulation im Untergrund, da niemand diesen erreicht hat
+	\end{itemize}
+\end{itemize}
+
+Viele Manipulationen sind an die Beschränkungen (Audio, Charaktere, usw.) des Prototypen und Bugs (insbesondere das Folgen der Vögel) gestoßen. Wenn diese behoben werden,  ist jedoch zu erwarten, dass diese funktionieren. Die Analyse der Spielereigenschaften ist vom Ansatz her in Ordnung und auch sinnvoll, muss jedoch dringend erweitert werden. Da die Gespräche zu wenig differenziert waren, hatten diese auch keinen sonderlichen Einfluss auf den weiteren Verlauf. Das Ergebnis für die Umgebungshinweise bestätigt das Ergebnis des Papers \grqq Player Manipulation\grqq, wobei der visuelle Umgebungshinweis möglicherweise an der Umsetzung gescheitert ist. \\
+
+Insgesamt kann der Prototyp als erfolgreich bezeichnet werden, da einige Manipulationen auch trotz der Beschränkungen gut funktioniert haben und auch die zuvor festgelegten Erfolgskriterien in Bezug auf Spaß und Unauffälligkeit der Manipulationen erfüllt wurden. Das Erfolgskriterium für das Nehmen der gewünschten Wege betrug allerdings nur 77\% aufgrund der Bugs beim Verfolgen der Vögel, würde aber ansonsten bei 81\% liegen und somit auch dieses Erfolgskriterium erfüllen. Die Ergebnisse haben auch gezeigt, dass das Verhältnis zwischen positiven und negativen Manipulationen, wie in der Konzeption gefordert, angemessen war, da es kaum zu Frustrationen seitens der Probanden kam.
+
+
+\subsubsection{Allgemeine Fragen}
+
+Der Mittelwert bei der Identifizierung mit den Charakteren liegt bei 2.85, was die bereits vorher gemachte Einschätzung dahingehend bestätigt, dass die Charaktere aufgrund der prototypischen Umsetzung zu abstrakt ausgefallen sind. Die Sympathie für Antonio erlangte den niedrigsten Mittelwert mit 2.46. Positiv war dabei der Ansatz zur Interaktion zwischen Antonio und Billy. Die geringe Sympathie basiert darauf, dass kaum ein Spieler mitbekam, dass Antonio Billy Hilfe in Form von Herzen und Schildern zukommen lässt. Somit konnte diese Methode kaum ihre Wirkung entfalten. Auch hier ist ein Grund die sehr prototypische Umsetzung. Zudem war der gesprochene Text sehr schnell, sodass viele Probanden kaum mitkamen und so auch den Inhalt nicht voll erfassen konnten. Um bessere Werte zu erzielen, müsste Antonio mehr mit Billy interagieren, sodass eine Beziehung aufgebaut werden kann. Der gesprochene Text muss langsamer und auch auffälliger dargestellt werden. Außerdem sollte die Unterstützung durch Antonio besser zu erkennen sein, indem der Spieler auf die Handlung an sich besser fokussiert wird oder bessere Grafik- und Soundeffekte gewählt werden. Der Mittelwert zur Frage, ob die Story des Spiels gefallen hat, lag bei 4.15. Dies zeigt, dass der Ansatz des Spielkonzepts Potenzial hat und dieser bei einem Ausbau über den Prototypen hinaus durchaus entfaltet werden kann. Eine zusätzliche Bestätigung dazu liefert der Mittelwert von 4.31 bei der Frage nach dem Potenzial des Spiels bei einer Weiterentwicklung. Der Ansatz bei einem Ausbau erscheint für die Probanden sehr erfolgsversprechend.
 
 %................................................................
