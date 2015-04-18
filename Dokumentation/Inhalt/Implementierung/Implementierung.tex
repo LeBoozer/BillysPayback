@@ -3,9 +3,69 @@
 % Autor	: Implementierung Worms
 %#####################################################################################################################
 \chapter{Prototypische Umsetzung}
-Einleitung zu der Umsetzung. 
+\begin{itemize}
+	\item Wieso die prototypische Umsetzung?
+	\item Ziel der prototypischen Umsetzung
+	\item Übersicht mit kurzer Erläuterung der Implementierten Strukturen
+\end{itemize}
 
-%................................................................
+\subsubsection*{Entwicklungsumgebung}
+Während der Anfangsphase der prototypischen Umsetzung müssen zunächst die technischen Grundlagen und die eventuell 
+vorhandenen Hilfsmittel abgesteckt und benannt werden. Die folgenden Varianten wurden auf Machbarkeit, Effizienz 
+und Tauglichkeit hin für \textit{Billy's Payback} analysiert:
+\begin{itemize}[itemsep=0pt] 
+	\item ???: Sämtlich anfallende Aufgabenbereiche müssen von Grund auf entwickelt und implementiert werden. Die Variante bietet
+	neben einem sehr hohen Aufwand gleichzeitig eine gute Flexibilität in Bezug auf die Gestaltungsfreiheiten an.
+	\item Hybridsystem: Zu verallgemeinernde und wiederkehrende Strukturen werden mittels externen Fremdbibliotheken vereinfacht
+	in Form von Bauteilen dem Anwender bereitgestellt. Das Zusammenspiel der unterschiedlichen Komponenten muss nach wie vor
+	selbstständig erarbeitet werden. Beispiele für Bibliotheken sind Grafik-, Audio- sowie Physikbibliotheken.
+	\item Vollständiger Toolchain: Das Management für das Zusammenspiel der einzelnen Komponenten wird (komplett) von einer
+	sogenannten \textit{Game--Engine} bereitgestellt, sodass die Konzentration auf die alleinige Spielentwicklung und --Gestaltung
+	gerichtet werden kann.
+\end{itemize}
+Basierend auf den zeitlichen Restriktionen für das Projekt ist die Variante mit dem vollständigen Toolchain zum Einsatz gekommen.
+Anlässlich der hohen Anzahl von existierenden \textit{Game--Engines} wurde der nachstehende Anforderungskatalog aufgestellt
+und für die Entscheidungsfindung zu Hilfe genommen:
+\begin{itemize}[itemsep=0pt] 
+	\item Kostenlose Version für Entwicklungen und Veröffentlichungen von Inhalten.
+	\item Komprimierte und innovative Einarbeitung in grundlegenden Thematiken der \textit{Engine} möglich.
+	\item Realisierung von eigenen Scripten in einer bekannten Sprache ausführbar (keine hauseigene Scriptsprache).
+	\item Zuschnitt auf ein breites Spektrum von Genres (keine einschränkenden oder zeitaufwendigen Vorgaben).
+\end{itemize}
+Nach einer eingehenden Analyse vorhandener \textit{Game--Engines} hinsichtlich des Anforderungskatalogs, wie zum
+Beispiel die \textit{CryEngine}~\cite{CryEngine} und die \textit{UnrealEngine}~\cite{UnrealEngine}, ist die
+\textit{Unity--Engine}~\cite{Unity} für die prototypische Umsetzung ausgewählt worden.
+
+\subsubsection*{Projektversionierung}
+Bei größeren Softwareprojekten bietet sich die Möglichkeit an, die eingehenden Änderungen an der Struktur des Codes in
+regelmäßigen Abständen zu protokollieren. Ein weiteres, nicht zu unterschätzendes Features stellt die Archivierung der durch die beteiligten
+Entwickler eingetragenen Veränderungen dar, sodass ein vorheriger Stand der Arbeit unter bestimmten Voraussetzungen wiederherstellbar
+ist.
+\\
+Für die sogenannte \textit{Versionsverwaltung} existieren unterschiedliche Konzepte und Realisierungsansätze, zu denen sowohl
+\textit{Subversion (SVN)} als auch \textit{GIT} zählen. Für den prototypischen Anteil der wissenschaftlichen Arbeit
+diente \textit{GIT} aus den nachstehenden Gründen als Versionierungswerkzeug:
+\begin{itemize}[itemsep=0pt] 
+	\item Im Gegensatz zu \textit{SVN} stellt \textit{GIT} eine verteilte Versionierungsplattform dar. Hierbei werden die Daten
+	nicht ausschließlich auf dem zentralen Verwaltungsserver archiviert, sondern jeder beteiligte Entwicklungscomputer enthält
+	eine lokale Kopie des \textit{Repositories}.
+	
+	\item Die lokal gespeicherten \textit{Repositories} bieten die Möglichkeit bereits kleine lokale Änderungen zu
+	protokollieren, ohne dass diese unmittelbar sichtbar für die anderen Entwickler werden. Die Arbeit an dem Projekt ohne eine
+	bestehenden Internetverbindung wird ebenfalls durch die eigenständigen \textit{Repositories} begünstigt.
+\end{itemize}
+
+\subsubsection*{Implementierte Strukturen}
+Code:
+\begin{itemize}
+	\item Die wichtigsten Implementierung (bis auf 2 Partikelsysteme alles selber gemacht)
+	\item Aufteilung in die unterschiedlichen Gamestates (Prototyp -> nur das notwendigste ausgefüllt)
+	\item Ablaufsteuerung innerhalb des Spiel über eine FSM gelöst (kurze Erläuterung, evtl. kleines Diagramm)
+	\item Dialogsystem mit Integration in der FSM (flexibles Dateiformat "entwicklet" -> kurz Vorzüge erläutern)
+	\item Aktoren (kurze Erläuterung über generelle Funktionsweise)
+	\item Screenshots im Anhang
+\end{itemize}
+
+%....................................................................................................................
 % Hier die Sektionen für die Umsetzung
-
-%................................................................
+%....................................................................................................................
