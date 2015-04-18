@@ -172,6 +172,42 @@
       \field{title}{Tender Loving Care}
       \field{year}{2011}
     \endentry
+    \entry{CryEngine}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
+      \field{labeltitle}{CryEngine}
+      \field{day}{18}
+      \field{month}{04}
+      \field{title}{CryEngine}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.cryengine.com/get-cryengine
+      \endverb
+    \endentry
+    \entry{UnrealEngine}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
+      \field{labeltitle}{UnrealEngine}
+      \field{day}{18}
+      \field{month}{04}
+      \field{title}{UnrealEngine}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://www.unrealengine.com/what-is-unreal-engine-4
+      \endverb
+    \endentry
+    \entry{Unity}{online}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
+      \field{labeltitle}{Unity}
+      \field{day}{18}
+      \field{month}{04}
+      \field{title}{Unity}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://unity3d.com/
+      \endverb
+    \endentry
   \endsortlist
 \endrefsection
 \endinput
