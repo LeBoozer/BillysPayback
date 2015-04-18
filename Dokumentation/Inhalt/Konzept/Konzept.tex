@@ -71,7 +71,7 @@ Darüber hinaus war auch das Einsetzen beeinflussender Hintergrundmusik kaum mögl
 \section{Spielereigenschaften}
 \label{sec:konzept spielereigenschaften}
 
-Aufgrund der bisher erlangten Erkenntnisse zum Sachverhalt der Spielermanipulation und dessen Abhängigkeit von der Persönlichkeit des jeweiligen Spielers soll am Anfang des Spiels eine Analyse stattfinden, in der es gilt die Eigenschaften des Spielers herauszufinden, um anhand dieser Werte später die Manipulationen leicht anzupassen. Dies soll dazu beitragen deren Erfolgswahrscheinlichkeit zu erhöhen. So werden im Folgenden entsprechende Kategorien von Merkmalen definiert und deren Auswahl sowie mögliche Anpassungen der Manipulationen erörtert. Die Wahl basiert dabei sowohl auf den für das Spielgenre des Jump and Runs typischen Spielelementen als auch auf dem Wissen zu den Grundlagen der Manipulationen.
+Aufgrund der bisher erlangten Erkenntnisse zum Sachverhalt der Spielermanipulation und dessen Abhängigkeit von der Persönlichkeit des jeweiligen Spielers soll am Anfang des Spiels eine Analyse stattfinden, in der es gilt die Eigenschaften des Spielers herauszufinden, um anhand dieser Werte später die Manipulationen etwas anzupassen. Dies soll dazu beitragen deren Erfolgswahrscheinlichkeit zu erhöhen. So werden im Folgenden entsprechende Kategorien von Merkmalen definiert und deren Auswahl sowie mögliche Anpassungen der Manipulationen erörtert. Die Wahl basiert dabei sowohl auf den für das Spielgenre des Jump and Runs typischen Spielelementen als auch auf dem Wissen zu den Grundlagen der Manipulationen.
 
 \subsection{Sammlereigenschaft}
 \label{subsec:sammler eigenschaft}
@@ -118,7 +118,7 @@ Ebenfalls an einigen Stellen in Jump and Runs gefragt ist ein gewisser Grad an A
 \section{Level-Design}
 \label{sec:level design}
 
-Im Folgenden sollen die Ergebnisse aus den vergangenen Abschnitten in ein konkretes Konzept für den Prototypen umgesetzt werden. Dafür ist zunächst einmal das grobe Spielkonzept zu erläutern (Eckdaten der Handlung, in die das Spiel eingebettet ist, wurden bereits in \ref{} beschrieben). Danach kann damit begonnen werden den Entwurf des Analyse-Levels zu beschreiben, um sich anschließend den Leveln zuzuwenden, in denen die Resultate der Spieleranalyse sowie die gewählten Manipulationen zum Einsatz kommen.
+Im Folgenden sollen die Ergebnisse aus den vergangenen Abschnitten in ein konkretes Konzept für den Prototypen umgesetzt werden. Dafür ist zunächst einmal das grobe Spielkonzept zu erläutern (Eckdaten der Handlung, in die das Spiel eingebettet ist, wurden bereits in \ref{} beschrieben). Danach kann damit begonnen werden den Entwurf des Analyse-Levels zu erörtern, um sich anschließend den Leveln zuzuwenden, in denen die Resultate der Spieleranalyse sowie die gewählten Manipulationen zum Einsatz kommen.
 %ACHTUNG! Nicht vergessen die Referenz nach Einführung des Planungskapitels noch zu ergänzen!
 
 \subsection{Spielkonzept}
@@ -129,7 +129,7 @@ Bevor mit den Erläuterungen zum Aufbau der Level im Spiel begonnen werden kann, 
 \begin{itemize}
 	\item Laufen
 	\item Springen
-	\item Sammeln von Diamanten
+	\item Sammeln von Diamanten, um ab einer bestimmten Anzahl ein zusätzliches Leben zu erhalten
 	\item Besiegen von Feinden durch auf den Kopf Springen oder Verwendung eines besonderen Gegenstands
 	\item Erreichen des Levelendes ohne vorher alle Leben zu verlieren
 \end{itemize}
@@ -137,6 +137,36 @@ Bevor mit den Erläuterungen zum Aufbau der Level im Spiel begonnen werden kann, 
 Bei dem besonderen Gegenstand handelt es sich dabei um eine Art Schild, das der Spieler im Laufe des Spiels erhält. Für dieses gilt es innerhalb der darauffolgenden Level \glqq Ladungen\grqq{} zu finden, die das Schild aktivieren und von denen jeweils eine verbraucht wird, sobald der Spieler mit einem Feind auf eine andere Art und Weise, als das auf den Kopf Springen, kollidiert. Dabei wird dem Gegner außerdem Schaden zugefügt, der alle normalen Gegner außer Gefecht setzt und den Boss-Gegnern ein Leben abzieht.\\
 Des Weiteren besitzt der Spieler von Anfang an eine bestimmte Anzahl an Leben und Herzen. So muss er erst alle Herzen durch von Gegnern oder Fallen verursachten Schaden verlieren, um ein Leben einzubüßen. Sind hiervon alle verbraucht, verliert der Spieler das Spiel.\\
 Das Einzige, was den Prototypen von einem gewöhnlichen Jump and Run unterscheidet, ist, dass der Spieler innerhalb des Spiels Aufgaben von anderen Charakteren annehmen und einen Dialog mit ihnen führen sowie sich über Wegweiser zwischen den einzelnen Leveln hin und her bewegen kann. Während Ersteres eingeführt wurde, um die Vielfalt an Manipulationen zu erhöhen, die im Prototypen getestet werden können, entstand Letzteres hauptsächlich, um den Aufwand für die Einführung einer \glqq Weltkarte\grqq{}, wie sie sonst typisch ist, einzusparen, da diese weder essentiell für die Evaluierung noch für den Fokus der Arbeit ist. Darüber hinaus führt die Einführung der Questgeber innerhalb der Level nicht dazu, dass die Kriterien für die Einordnung in das Jump and Run Genre nicht mehr gegeben sind, da das Hauptaugenmerk immer noch auf dem Springen und Laufen liegt und dieses auch in anderen Spielen des Genres in den Kontext bestimmter Aufgaben eingebettet wird, auch wenn dies auf eine etwas andere Art und Weise geschieht.
+
+\subsection{Analyse-Level}
+\label{subsec: analyse level}
+
+Das Ziel des Analyselevels ist es die für das Spiel relevanten Eigenschaften des Spielers herauszufinden. Dies soll anhand des Verhaltens des Spielers geschehen. Dabei ist es wichtig, dass der Spieler von dieser Analyse nichts mitbekommt, weshalb es sich anbot diese unauffällig in den normalen Verlauf des Spiels zu integrieren. So wurde das Level als Einleitung der Handlung gestaltet, in der der Spieler in die Mechaniken des Spiels eingeführt wird, während er zusammen mit Antonio versucht seine sichere Hütte zu erreichen, was insbesondere für die Messung der Autonomieeigenschaft von Nutzen ist, da so geprüft werden kann, ob der Spieler schlicht alle Anweisungen befolgt oder seinen eigenen Weg geht. Die anderen Eigenschaften werden dann anhand bestimmter Stellen im Level gemessen, in denen sich der Spieler zwischen zwei verschiedenen Aktionen entscheiden muss. Diese müssen so gestaltet sein, dass sie in Hinsicht auf die verschiedenen Spielereigenschaften jeweils das Gegenteil voneinander sind, um eine eindeutige Bewertung des jeweiligen Merkmals vornehmen zu können.\\
+Im Folgenden soll daher zunächst das Bewertungssystem kurz erläutert werden, um anschließend das Konzept hinter den entsprechenden Passagen schildern zu können.
+
+\subsubsection{Bewertung}
+
+Der Einfachheit halber wurde jedes Merkmal so definiert, dass es sowohl einen positiven als auch einen negativen Wert haben kann. So bedeutet ein positiver Wert, dass der Spieler die entsprechende Eigenschafts besitzt, während ein negativer anzeigt, dass er diese nicht hat. Wird der Spieler in einem Merkmal mit null bewertet, ist dies als Neutralität in dieser Eigenschaft zu interpretieren. Dies ist z.B. der Fall, wenn er während des Analyse-Levels nicht eindeutig nur schwere oder nur leichte Wege bevorzugt.
+
+\subsubsection{Der erste Diamant}
+
+Die erste Entscheidung hat der Spieler zu treffen, als Antonio ihm erklärt, warum es stets nützlich ist die Diamanten zu sammeln, denn hier wird er aufgrund dessen dazu aufgefordert den ein paar Schritte von ihm entfernten Diamanten aufzusammeln. Tut er das, erhält er einen Punkt Abzug auf Autonomie, da er Antonios Rat befolgt und nicht aus Prinzip beschlossen hat, nicht auf ihn zu hören. Aus dem umgekehrten Grund bekommt der Spieler einen Punkt auf Autonomie, wenn er den Diamanten nicht einsammelt.
+
+\subsubsection{Antonio's Sprunganweisung}
+
+An dieser Stelle gilt das gleiche Prinzip wie schon zuvor bei dem Diamanten. So wird der Spieler hier von Antonio dazu aufgefordert seine Sprungfähigkeit zu erproben, indem er auf einen schwebenden Baumstamm springt. Tut er das, bekommt er erneut einen Punkt Abzug auf Autonomie oder einen Punkt plus auf diese Eigenschaft, wenn er darunter durch läuft.
+
+\subsubsection{Der Weg mit den vielen kleinen Lücken}
+
+Hier hat der Spieler die Wahl zwischen einem schweren Weg, der durch viele kleine Abgründe in sehr kurzen Abständen unterbrochen ist und zum Verlust eines Lebens führt, sollte er in einen dieser Abgründe fallen, und einem mit Abstand darüber befindlichen Baumstamm, der es ihm ermöglicht ganz einfach diesen steuerungstechnisch aufwendigen Weg zu umgehen. Hierbei ist der untere Weg außerdem mit Diamanten gespickt, um dem Spieler einen Anreiz zu geben, wegen dem er sich gegen den leichten Weg entscheiden könnte, denn sonst würde wahrscheinlich jeder den leichten oberen Weg nehmen, da der untere keinerlei Vorteile besitzt. Diese Diamanten sind dann auch der Grund, warum der Spieler beim Nehmen des schwereren Weges neben dem Punkt auf Ehrgeiz auch einen auf das Sammeln erhält, da er den erhöhten Aufwand für diese in Kauf nahm. Umgekehrt bekommt der Spieler daher sowohl einen Punkt Abzug auf Ehrgeiz als auch auf die Sammeleigenschaft.
+
+\subsubsection{Die kleine Kirsche}
+
+Im nächsten Abschnitt befindet sich eine kleine Kirsche, deren Eltern von den Vögeln verschleppt wurden und die nun dringend Hilfe braucht. Um der Kirsche seine Hilfe anzubieten, muss der Spieler diese jedoch zunächst ansprechen. Damit er diese Möglichkeit überhaupt wahrnehmen kann, wird ihm von Antonio vorher erläutert, dass er mit Hilfe einer bestimmten Taste andere Charaktere ansprechen kann. Außerdem macht er darauf aufmerksam, dass die kleine Kirsche womöglich Hilfe braucht. Bei diesem Test liegt der Fokus darauf, dass der Spieler Mitleid mit der Kleinen entwickeln soll. Daher muss, wenn er sie nicht anspricht, davon ausgegangen werden, dass er keines hat, weshalb dies einen Punkt Abzug auf diese Eigenschaft bedeutet. Ebenfalls einen Punkt Abzug bekommt er, wenn er die kleine Kirsche anspricht, aber ihre Bitte, die Eltern zu retten, ablehnt. Wenn dies passiert, wird sie außerdem versuchen den Spieler durch Betteln umzustimmen. Wirkt dies nicht, gibt es einen zusätzlichen Punkt Abzug auf Mitleid. Nur wenn der Spieler bei einer dieser beiden Möglichkeiten verspricht die Eltern zu retten und dies auch tut, kann er einen Punkt auf Mitleid bekommen. Da diese außerdem von einer großen Menge Feinde bewacht werden, gibt es in diesem Fall auch einen Punkt auf Herausforderung.
+
+\subsubsection{Die zerstörbaren Blöcke}
+
+An dieser Stelle findet der Spieler eine Reihe zerstörbarer Eier vor, zu denen Antonio ihm erklärt, dass sich in ihnen manchmal nützliche Gegenstände befinden und ihn auffordert diese zu zerbrechen. Kommt der Spieler dieser Aufforderung nach, gibt es sowohl einen Punkt auf die Sammlereigenschaft als auch einen Punkt Abzug auf Autonomie. Letzteres lässt sich erneut auf dieselbe Art und Weise erklären, wie schon bei dem ersten Diamanten und der Sprunganweisung, während Ersteres vergeben wird, da dies ein Hinweis darauf ist, dass sich der Spieler mit Hilfe von nützlichen Gegenständen, im Falle der zerbrechlichen Eier Diamanten, ködern lässt. Zerbricht der Spieler die Eier also nicht, erfolgt daher eine umgekehrte Punktevergabe.
 
 \section{Zusammenfassung}
 \label{sec:zusammenfassung konzeption}
