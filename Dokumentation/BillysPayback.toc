@@ -24,51 +24,41 @@
 \defcounter {refsection}{0}\relax 
 \setcounter {tocdepth}{2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Grundlagen}{3}{chapter.2}
+\contentsline {chapter}{\numberline {2}Grundlagen der Manipulation}{3}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Manipulation}{3}{section.2.1}
+\contentsline {section}{\numberline {2.1}Erkennbarkeit der Handlungsabsicht}{3}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Transparentes und intransparentes Handeln}{3}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.1}Transparentes Handeln}{3}{subsection.2.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Transparentes Handeln}{3}{section*.6}
+\contentsline {subsection}{\numberline {2.1.2}Intransparentes Handeln}{3}{subsection.2.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Intransparentes Handeln}{3}{section*.7}
+\contentsline {section}{\numberline {2.2}Definition der Manipulation}{4}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Definition der Manipulation}{4}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.3}Positive Manipulation}{4}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.3}Positive Manipulation}{4}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.4}Negative Manipulation}{5}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Vorteile}{4}{section*.8}
+\contentsline {section}{\numberline {2.5}Dosierung von Manipulationen}{6}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Nachteile}{5}{section*.9}
+\contentsline {section}{\numberline {2.6}Einfluss pers\"onlicher Faktoren auf den Manipulationserfolg}{6}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.4}Negative Manipulation}{5}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.6.1}Anf\"alligkeit reduzierende Faktoren}{6}{subsection.2.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Vorteile}{5}{section*.10}
+\contentsline {subsection}{\numberline {2.6.2}Anf\"alligkeit verst\"arkende Faktoren}{7}{subsection.2.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Nachteile}{5}{section*.11}
+\contentsline {section}{\numberline {2.7}Interaktionsspiele}{7}{section.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.5}Dosierung von Manipulationen}{6}{subsection.2.1.5}
+\contentsline {subsection}{\numberline {2.7.1}Attraktivit\"atsspiele}{7}{subsection.2.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.6}Einfluss pers\"onlicher Faktoren auf den Manipulationserfolg}{6}{subsection.2.1.6}
+\contentsline {subsection}{\numberline {2.7.2}Armes-Schwein-Spiele}{8}{subsection.2.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Anf\"alligkeit reduzierende Faktoren}{6}{section*.12}
+\contentsline {subsection}{\numberline {2.7.3}Opfer-Spiele}{8}{subsection.2.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Anf\"alligkeit verst\"arkende Faktoren}{7}{section*.13}
+\contentsline {subsection}{\numberline {2.7.4}Regel-Setzer-Spiele}{9}{subsection.2.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.7}Interaktionsspiele}{7}{subsection.2.1.7}
+\contentsline {subsection}{\numberline {2.7.5}Bl\"od-Spiele}{9}{subsection.2.7.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Attraktivit\"atsspiele}{7}{section*.14}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Armes-Schwein-Spiele}{8}{section*.15}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Opfer-Spiele}{8}{section*.16}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Regel-Setzer-Spiele}{8}{section*.17}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Bl\"od-Spiele}{9}{section*.18}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Zusammenfassung}{9}{section.2.2}
+\contentsline {section}{\numberline {2.8}Zusammenfassung}{9}{section.2.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Verwandte Arbeiten}{11}{chapter.3}
 \defcounter {refsection}{0}\relax 
@@ -92,13 +82,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.1}Anforderungen}{17}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Einschr\"ankungen}{17}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.2}Einschr\"ankungen}{18}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.3}Ergebnisse}{18}{subsection.4.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Ausgew\"ahlte Strategien}{18}{section*.26}
+\contentsline {subsubsection}{\nonumberline Ausgew\"ahlte Strategien}{18}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Verworfene Strategien}{21}{section*.27}
+\contentsline {subsubsection}{\nonumberline Verworfene Strategien}{21}{section*.18}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Spielereigenschaften}{21}{section.4.2}
 \defcounter {refsection}{0}\relax 
@@ -118,62 +108,62 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.1.3}Folgen}{28}{subsection.6.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Sammler}{28}{section*.28}
+\contentsline {subsubsection}{\nonumberline Sammler}{28}{section*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Geduld}{28}{section*.29}
+\contentsline {subsubsection}{\nonumberline Geduld}{28}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Ehrgeiz}{29}{section*.30}
+\contentsline {subsubsection}{\nonumberline Ehrgeiz}{29}{section*.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Herausforderung}{29}{section*.31}
+\contentsline {subsubsection}{\nonumberline Herausforderung}{29}{section*.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Mitleid}{29}{section*.32}
+\contentsline {subsubsection}{\nonumberline Mitleid}{29}{section*.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Autonomie}{30}{section*.33}
+\contentsline {subsubsection}{\nonumberline Autonomie}{30}{section*.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Aufmerksamkeit}{30}{section*.34}
+\contentsline {subsubsection}{\nonumberline Aufmerksamkeit}{30}{section*.25}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.2}Auswertung Interview}{31}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 1. Inwiefern hast du dich durch die Gespr\"ache mit den Charakteren beeinflusst gef\"uhlt? Gab es Unterschiede zwischen dem Level 2.1 und den anderen Leveln?}{31}{section*.35}
+\contentsline {subsubsection}{\nonumberline 1. Inwiefern hast du dich durch die Gespr\"ache mit den Charakteren beeinflusst gef\"uhlt? Gab es Unterschiede zwischen dem Level 2.1 und den anderen Leveln?}{31}{section*.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 2. Findest du, dass du dich an einem Wegpunkt falsch entschieden hast?}{32}{section*.36}
+\contentsline {subsubsection}{\nonumberline 2. Findest du, dass du dich an einem Wegpunkt falsch entschieden hast?}{32}{section*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 3. Glaubst du, du h\"attest ein alternatives Ende erreichen k\"onnen? Warum?}{32}{section*.37}
+\contentsline {subsubsection}{\nonumberline 3. Glaubst du, du h\"attest ein alternatives Ende erreichen k\"onnen? Warum?}{32}{section*.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 4. Warum hast du Bob nicht geholfen? Wenn doch, warum?}{32}{section*.38}
+\contentsline {subsubsection}{\nonumberline 4. Warum hast du Bob nicht geholfen? Wenn doch, warum?}{32}{section*.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 5. Denkst du, dass du Bob zu mehr Unterst\"utzung h\"attest \"uberreden k\"onnen, wenn du das Gespr\"ach anders gef\"uhrt h\"attest?}{33}{section*.39}
+\contentsline {subsubsection}{\nonumberline 5. Denkst du, dass du Bob zu mehr Unterst\"utzung h\"attest \"uberreden k\"onnen, wenn du das Gespr\"ach anders gef\"uhrt h\"attest?}{33}{section*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 6. (Spieler hat den Untergrund ignoriert) Hast du den zerst\"orbaren Block gesehen? Wenn ja, wieso hast du dich dagegen entschieden?}{33}{section*.40}
+\contentsline {subsubsection}{\nonumberline 6. (Spieler hat den Untergrund ignoriert) Hast du den zerst\"orbaren Block gesehen? Wenn ja, wieso hast du dich dagegen entschieden?}{33}{section*.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 7. (Spieler hat den Untergrund nicht ignoriert) Warum hast du dich nicht f\"ur den oberen Weg entschieden?}{33}{section*.41}
+\contentsline {subsubsection}{\nonumberline 7. (Spieler hat den Untergrund nicht ignoriert) Warum hast du dich nicht f\"ur den oberen Weg entschieden?}{33}{section*.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 8. Warum hast du dich f\"ur diesen (Br\"ucken-)Weg entschieden? H\"attest du lieber den anderen Weg genommen?}{34}{section*.42}
+\contentsline {subsubsection}{\nonumberline 8. Warum hast du dich f\"ur diesen (Br\"ucken-)Weg entschieden? H\"attest du lieber den anderen Weg genommen?}{34}{section*.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 9. (Spieler ist gleich rechts lang) Warum hast du den linken Weg unbeachtet gelassen?}{34}{section*.43}
+\contentsline {subsubsection}{\nonumberline 9. (Spieler ist gleich rechts lang) Warum hast du den linken Weg unbeachtet gelassen?}{34}{section*.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 10. (Spieler ist bei Vogelschwarm nicht aus dem Nest raus) Warum hast du das Nest nicht durch die T\"ur verlassen?}{34}{section*.44}
+\contentsline {subsubsection}{\nonumberline 10. (Spieler ist bei Vogelschwarm nicht aus dem Nest raus) Warum hast du das Nest nicht durch die T\"ur verlassen?}{34}{section*.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 11. (Spieler hat die Kiwano ignoriert) Warum hast du die Kiwano nicht gerettet? Und wenn doch, warum?}{35}{section*.45}
+\contentsline {subsubsection}{\nonumberline 11. (Spieler hat die Kiwano ignoriert) Warum hast du die Kiwano nicht gerettet? Und wenn doch, warum?}{35}{section*.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 12. Warum bist du in die H\"ohle gegangen? Wenn nicht, warum nicht?}{35}{section*.46}
+\contentsline {subsubsection}{\nonumberline 12. Warum bist du in die H\"ohle gegangen? Wenn nicht, warum nicht?}{35}{section*.37}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 13. Warum hast du den Hut am Anfang nicht aufgenommen? Und wenn doch, warum?}{36}{section*.47}
+\contentsline {subsubsection}{\nonumberline 13. Warum hast du den Hut am Anfang nicht aufgenommen? Und wenn doch, warum?}{36}{section*.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 14. Warum hast du die Quest ignoriert? Wenn nicht, warum nicht?}{36}{section*.48}
+\contentsline {subsubsection}{\nonumberline 14. Warum hast du die Quest ignoriert? Wenn nicht, warum nicht?}{36}{section*.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 15. (Spieler vom Weg abgewichen) Warum bist du den V\"ogeln nicht gefolgt?}{36}{section*.49}
+\contentsline {subsubsection}{\nonumberline 15. (Spieler vom Weg abgewichen) Warum bist du den V\"ogeln nicht gefolgt?}{36}{section*.40}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 16. Warum hast du den Bruder gesucht? Wenn nicht, warum?}{37}{section*.50}
+\contentsline {subsubsection}{\nonumberline 16. Warum hast du den Bruder gesucht? Wenn nicht, warum?}{37}{section*.41}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 17. Warum wolltest du Antonio trotz des Verrats nicht angreifen? Und wenn doch, warum?}{37}{section*.51}
+\contentsline {subsubsection}{\nonumberline 17. Warum wolltest du Antonio trotz des Verrats nicht angreifen? Und wenn doch, warum?}{37}{section*.42}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.3}Auswertung der Erfolgskriterien und der allgemeinen Fragen}{38}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Erfolgskriterien}{38}{section*.52}
+\contentsline {subsubsection}{\nonumberline Erfolgskriterien}{38}{section*.43}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Allgemeine Fragen}{39}{section*.53}
+\contentsline {subsubsection}{\nonumberline Allgemeine Fragen}{39}{section*.44}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{41}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{43}{chapter*.54}
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{43}{chapter*.45}
