@@ -6,7 +6,7 @@
 \label{chap:konzeptionierung}
 
 Aufbauend auf den in Kapitel \ref{chap:grundlagen manipulation} und \ref{chap:verwandte arbeiten} erlangten Erkenntnissen lassen sich nun die für den Prototypen relevanten Manipulationen und Spielereigenschaften ableiten, wobei letztere zur Unterstützung der Wirksamkeit der angewandten Manipulationen dienen.\\
-Anschließend werden die Ergebnisse dieser Analyse genutzt, um den entsprechenden Aufbau der Level auszuarbeiten. So ist anfangs ein Analyse-Level zu entwerfen, in welchem der Spieler auf die zuvor festgelegten Eigenschaften hin untersucht werden soll, indem sein Verhalten beobachtet und ausgewertet wird. Nachfolgend erfolgt der Entwurf der restlichen Level, in denen die theoretischen Konzepte einem praktischen Test unterzogen werden sollen.
+Anschließend werden die Ergebnisse dieser Analyse genutzt, um den entsprechenden Aufbau der Level auszuarbeiten. So wird anfangs kurz das Spielkonzept und die dazugehörige Geschichte umrissen, um sich dann der Konzeption des Analyse-Levels zuzuwenden, in welchem der Spieler auf die zuvor festgelegten Eigenschaften hin untersucht werden soll, indem sein Verhalten beobachtet und ausgewertet wird. Nachfolgend erfolgt der Entwurf der restlichen Level, in denen die theoretischen Konzepte einem praktischen Test unterzogen werden sollen.
 
 %................................................................
 \section{Manipulationen}
@@ -73,17 +73,41 @@ Darüber hinaus war auch das Einsetzen beeinflussender Hintergrundmusik kaum mögl
 
 Aufgrund der bisher erlangten Erkenntnisse zum Sachverhalt der Spielermanipulation und dessen Abhängigkeit von der Persönlichkeit des jeweiligen Spielers soll am Anfang des Spiels eine Analyse stattfinden, in der es gilt die Eigenschaften des Spielers herauszufinden, um anhand dieser Werte später die Manipulationen leicht anzupassen. Dies soll dazu beitragen deren Erfolgswahrscheinlichkeit zu erhöhen. So werden im Folgenden entsprechende Kategorien von Merkmalen definiert und deren Auswahl sowie mögliche Anpassungen der Manipulationen erörtert. Die Wahl basiert dabei sowohl auf den für das Spielgenre des Jump and Runs typischen Spielelementen als auch auf dem Wissen zu den Grundlagen der Manipulationen.
 
-\begin{itemize}
-	\item \textbf{Sammler} Das Sammeln von Gegenständen wie Diamanten, Münzen oder Ähnlichem ist ein ganz wesentlicher Bestandteil von Jump and Runs und stellte sich auch in den vergangenen Abschnitten (siehe \ref{sec:konzept manipulationen}) als ein wichtiges Mittel zur Spielermanipulation heraus. Aus diesem Grund erscheint es äußerst sinnvoll zu testen, inwiefern der Spieler auf das Sammeln dieser Objekte fixiert ist, um  ihn noch besser anhand dieses Mittels leiten zu können. Auf diese Art und Weise spielt diese Eigenschaft beim Anreiz durch die Beute eine nicht unbedeutende Rolle.
-	\item \textbf{Ehrgeiz} Unter diesem Merkmal ist die Motivation des Spielers, eher schwere Wege des Levels zu erkunden, zu verstehen. Besonders nützlich ist das Wissen über die Ausprägung dieser Eigenschaft beim Spieler dann, wenn es sich bei ihm um jemanden handelt, der schwere Wege meidet (also keinen allzu großen Ehrgeiz besitzt), da diesen Spielern schnell der gewünschte Weg schmackhaft gemacht werden kann, indem der nicht gewünschte besonders schwer gestaltet wird, so dass er diesen rasch zugunsten des leichteren Weges aufgibt. Zum Tragen kommt diese Strategie bei Manipulationen, in denen der fehlende alternative Weg verschleiert werden soll. Erläutert wurde dieser Zusammenhang bereits in Abschnitt \ref{sec:konzept manipulationen}.
-	\item \textbf{Herausforderung suchend} Spieler, die diese Eigenschaft besitzen, sind stets darauf bedacht möglichst viele Feinde zu besiegen und lassen sich daher leicht von Wegen verleiten, auf denen sich besonders viele Gegner befinden. Genau wie das Sammeln von Gegenständen gehört das Besiegen von Gegnern zum festen Bestandteil des Jump and Run Spielgenres und lässt sich auf ähnliche Art und Weise zum Leiten des Spielers verwenden. Auf der anderen Seite kann ein Spieler, welcher Herausforderungen durch Feinde meidet, ebenso, wie schon beim Merkmal des Ehrgeizes beschrieben, durch zu viele Feinde auf einem unerwünschten Weg abgeschreckt werden. Daher ist es wichtig über die Ausprägung dieses Merkmals Bescheid zu wissen.
-	%Verbesserungsvorschlag! In zukünftiger Umsetzung sollten auch die Vögel ab und zu Diamanten und Schilde droppen, um besser den beim Sammeln beschriebenen Effekt der Jagd nach der Beute zu erreichen
-	\item \textbf{Mitleid} Wie sich in Kapitel \ref{chap:grundlagen manipulation} und Abschnitt \ref{sec:konzept manipulationen} bereits herausstellte, gehört die Fähigkeit des Mitleids zu einer der wichtigsten Eigenschaften, da Spieler, die dieses schnell empfinden können, generell anfälliger gegenüber Manipulationen sind. Besonders bedeutsam ist die Ausprägung dieser Eigenschaft deshalb bei Beeinflussungen, die im Zusammenhang mit anderen Charakteren stehen. So ist es durchaus nützlich zu wissen, ob man hier auf Methoden zurückgreifen kann, die das Mitleid und somit die Erfolgswahrscheinlichkeit der Anfrage durch den jeweiligen Charakter steigern, oder ob dies vergebene Mühe ist bzw. den Spieler vielleicht sogar verschreckt.
-	\item \textbf{Autonomie} Während Mitleid eine dem Erfolg einer Manipulation sehr zuträgliche Eigenschaft ist, bewirkt Autonomie genau das Gegenteil. Aufgrund dieser Tatsache soll auch dieses Merkmal beim Spieler gemessen werden, um dessen Ausprägung in der späteren Evaluierung mit hinzuziehen zu können, wenn es darum geht den Erfolg/Misserfolg einer Manipulation zu erklären.
-	%!! Unbedingt bei der Evaluierung beachten, dass Autonomie auch mit einbezogen werden sollte, falls eine Manipulation nicht funktioniert hat
-	\item \textbf{Geduld} Ein weiteres wichtiges Merkmal ist die Geduld eines Spielers. Sie ist insbesondere in Jump and Runs während einiger schwieriger Passagen gefragt und daher gut geeignet einen Spieler dieses Genres zu klassifizieren. Bei dieser Eigenschaft verhält es sich ähnlich wie mit dem Ehrgeiz, da Spieler, die ungeduldig sind, von unerwünschten Wegen dadurch abgeschreckt werden können, dass sie sehr viel Geduld erfordern, um diese zu meistern, während gleichzeitig ein viel schnellerer, gewünschter Weg bereitgestellt werden kann, um seine Aufmerksamkeit auf diesen zu lenken. Somit ist es gut zu wissen, wenn ein Spieler keine Geduld besitzt, um dann diese eher unauffällige Strategie anwenden zu können. Aus diesem Grund lässt sie sich gut beim Verschleiern eines fehlenden alternativen Weges verwenden.
-	\item \textbf{Aufmerksamkeit} Ebenfalls an einigen Stellen in Jump and Runs gefragt ist ein gewisser Grad an Aufmerksamkeit, um beispielsweise eher versteckte Wege und gegebenenfalls Belohnungen bzw. Gegenstände zu entdecken. Auf diese Art und Weise erscheint es sinnvoll diese Eigenschaft des Spielers zu erfassen, um sie zum Zwecke der Manipulation einzusetzen. So sind besonders für aufmerksame Spieler die Umgebungshinweise von Bedeutung, da sie diese aller Wahrscheinlichkeit nach schneller und zuverlässiger entdecken, weshalb sie hier besonders gut verwendet werden können. Dahingegen kann fehlende Aufmerksamkeit insofern ausgenutzt werden, als dass sich so unerwünschte Wege vor unaufmerksamen Spielern leichter verbergen lassen, was abermals dem Verschleiern fehlender alternativer Wege zugute kommt.
-\end{itemize}
+\subsection{Sammlereigenschaft}
+\label{subsec:sammler eigenschaft}
+
+Das Sammeln von Gegenständen wie Diamanten, Münzen oder Ähnlichem ist ein ganz wesentlicher Bestandteil von Jump and Runs und stellte sich auch in den vergangenen Abschnitten (siehe \ref{sec:konzept manipulationen}) als ein wichtiges Mittel zur Spielermanipulation heraus. Aus diesem Grund erscheint es äußerst sinnvoll zu testen, inwiefern der Spieler auf das Sammeln dieser Objekte fixiert ist, um  ihn noch besser anhand dieses Mittels leiten zu können. Auf diese Art und Weise spielt diese Eigenschaft beim Anreiz durch die Beute eine nicht unbedeutende Rolle.
+
+\subsection{Ehrgeiz}
+\label{subsec:ehrgeiz eigenschaft}
+
+Unter diesem Merkmal ist die Motivation des Spielers, eher schwere Wege des Levels zu erkunden, zu verstehen. Besonders nützlich ist das Wissen über die Ausprägung dieser Eigenschaft beim Spieler dann, wenn es sich bei ihm um jemanden handelt, der schwere Wege meidet (also keinen allzu großen Ehrgeiz besitzt), da diesen Spielern schnell der gewünschte Weg schmackhaft gemacht werden kann, indem der nicht gewünschte besonders schwer gestaltet wird, so dass er diesen rasch zugunsten des leichteren Weges aufgibt. Zum Tragen kommt diese Strategie bei Manipulationen, in denen der fehlende alternative Weg verschleiert werden soll. Erläutert wurde dieser Zusammenhang bereits in Abschnitt \ref{sec:konzept manipulationen}.
+
+\subsection{Herausforderung suchend}
+\label{subsec:herausforderung suchend eigenschaft}
+
+Spieler, die diese Eigenschaft besitzen, sind stets darauf bedacht möglichst viele Feinde zu besiegen und lassen sich daher leicht von Wegen verleiten, auf denen sich besonders viele Gegner befinden. Genau wie das Sammeln von Gegenständen gehört das Besiegen von Gegnern zum festen Bestandteil des Jump and Run Spielgenres und lässt sich auf ähnliche Art und Weise zum Leiten des Spielers verwenden. Auf der anderen Seite kann ein Spieler, welcher Herausforderungen durch Feinde meidet, ebenso, wie schon beim Merkmal des Ehrgeizes beschrieben, durch zu viele Feinde auf einem unerwünschten Weg abgeschreckt werden. Daher ist es wichtig über die Ausprägung dieses Merkmals Bescheid zu wissen.
+%Verbesserungsvorschlag! In zukünftiger Umsetzung sollten auch die Vögel ab und zu Diamanten und Schilde droppen, um besser den beim Sammeln beschriebenen Effekt der Jagd nach der Beute zu erreichen
+
+\subsection{Mitleid}
+\label{subsec:mitleid eigenschaft}
+
+Wie sich in Kapitel \ref{chap:grundlagen manipulation} und Abschnitt \ref{sec:konzept manipulationen} bereits herausstellte, gehört die Fähigkeit des Mitleids zu einer der wichtigsten Eigenschaften, da Spieler, die dieses schnell empfinden können, generell anfälliger gegenüber Manipulationen sind. Besonders bedeutsam ist die Ausprägung dieser Eigenschaft deshalb bei Beeinflussungen, die im Zusammenhang mit anderen Charakteren stehen. So ist es durchaus nützlich zu wissen, ob man hier auf Methoden zurückgreifen kann, die das Mitleid und somit die Erfolgswahrscheinlichkeit der Anfrage durch den jeweiligen Charakter steigern, oder ob dies vergebene Mühe ist bzw. den Spieler vielleicht sogar verschreckt.
+
+\subsection{Autonomie}
+\label{subsec:autonomie eigenschaft}
+
+Während Mitleid eine dem Erfolg einer Manipulation sehr zuträgliche Eigenschaft ist, bewirkt Autonomie genau das Gegenteil. Aufgrund dieser Tatsache soll auch dieses Merkmal beim Spieler gemessen werden, um dessen Ausprägung in der späteren Evaluierung mit hinzuziehen zu können, wenn es darum geht den Erfolg/Misserfolg einer Manipulation zu erklären.
+
+\subsection{Geduld}
+\label{subsec:geduld eigenschaft}
+
+Ein weiteres wichtiges Merkmal ist die Geduld eines Spielers. Sie ist insbesondere in Jump and Runs während einiger schwieriger Passagen gefragt und daher gut geeignet einen Spieler dieses Genres zu klassifizieren. Bei dieser Eigenschaft verhält es sich ähnlich wie mit dem Ehrgeiz, da Spieler, die ungeduldig sind, von unerwünschten Wegen dadurch abgeschreckt werden können, dass sie sehr viel Geduld erfordern, um diese zu meistern, während gleichzeitig ein viel schnellerer, gewünschter Weg bereitgestellt werden kann, um seine Aufmerksamkeit auf diesen zu lenken. Somit ist es gut zu wissen, wenn ein Spieler keine Geduld besitzt, um dann diese eher unauffällige Strategie anwenden zu können. Aus diesem Grund lässt sie sich gut beim Verschleiern eines fehlenden alternativen Weges verwenden.
+
+\subsection{Aufmerksamkeit}
+\label{subsec:aufmerksamkeit eigenschaft}
+
+Ebenfalls an einigen Stellen in Jump and Runs gefragt ist ein gewisser Grad an Aufmerksamkeit, um beispielsweise eher versteckte Wege und gegebenenfalls Belohnungen bzw. Gegenstände zu entdecken. Auf diese Art und Weise erscheint es sinnvoll diese Eigenschaft des Spielers zu erfassen, um sie zum Zwecke der Manipulation einzusetzen. So sind besonders für aufmerksame Spieler die Umgebungshinweise von Bedeutung, da sie diese aller Wahrscheinlichkeit nach schneller und zuverlässiger entdecken, weshalb sie hier besonders gut verwendet werden können. Dahingegen kann fehlende Aufmerksamkeit insofern ausgenutzt werden, als dass sich so unerwünschte Wege vor unaufmerksamen Spielern leichter verbergen lassen, was abermals dem Verschleiern fehlender alternativer Wege zugute kommt.
 
 %Irgendwie nicht sinnvoll, da von denen, die mir dazu einfallen, keine eingehalten worden sind
 %\subsection{Anforderungen an die Analyse}
@@ -93,6 +117,26 @@ Aufgrund der bisher erlangten Erkenntnisse zum Sachverhalt der Spielermanipulati
 
 \section{Level-Design}
 \label{sec:level design}
+
+Im Folgenden sollen die Ergebnisse aus den vergangenen Abschnitten in ein konkretes Konzept für den Prototypen umgesetzt werden. Dafür ist zunächst einmal das grobe Spielkonzept zu erläutern (Eckdaten der Handlung, in die das Spiel eingebettet ist, wurden bereits in \ref{} beschrieben). Danach kann damit begonnen werden den Entwurf des Analyse-Levels zu beschreiben, um sich anschließend den Leveln zuzuwenden, in denen die Resultate der Spieleranalyse sowie die gewählten Manipulationen zum Einsatz kommen.
+%ACHTUNG! Nicht vergessen die Referenz nach Einführung des Planungskapitels noch zu ergänzen!
+
+\subsection{Spielkonzept}
+\label{subsec:spielkonzept}
+
+Bevor mit den Erläuterungen zum Aufbau der Level im Spiel begonnen werden kann, soll in diesem Abschnitt zuerst einmal das generelle Konzept des Spielprototypen beschrieben werden. Bei diesem handelt es sich, bis auf einige kleinere Elemente, um ein klassisches Jump and Run in 2,5D-Optik. So gliedern sich die Hauptaufgabe des Spielers in:
+
+\begin{itemize}
+	\item Laufen
+	\item Springen
+	\item Sammeln von Diamanten
+	\item Besiegen von Feinden durch auf den Kopf Springen oder Verwendung eines besonderen Gegenstands
+	\item Erreichen des Levelendes ohne vorher alle Leben zu verlieren
+\end{itemize}
+
+Bei dem besonderen Gegenstand handelt es sich dabei um eine Art Schild, das der Spieler im Laufe des Spiels erhält. Für dieses gilt es innerhalb der darauffolgenden Level \glqq Ladungen\grqq{} zu finden, die das Schild aktivieren und von denen jeweils eine verbraucht wird, sobald der Spieler mit einem Feind auf eine andere Art und Weise, als das auf den Kopf Springen, kollidiert. Dabei wird dem Gegner außerdem Schaden zugefügt, der alle normalen Gegner außer Gefecht setzt und den Boss-Gegnern ein Leben abzieht.\\
+Des Weiteren besitzt der Spieler von Anfang an eine bestimmte Anzahl an Leben und Herzen. So muss er erst alle Herzen durch von Gegnern oder Fallen verursachten Schaden verlieren, um ein Leben einzubüßen. Sind hiervon alle verbraucht, verliert der Spieler das Spiel.\\
+Das Einzige, was den Prototypen von einem gewöhnlichen Jump and Run unterscheidet, ist, dass der Spieler innerhalb des Spiels Aufgaben von anderen Charakteren annehmen und einen Dialog mit ihnen führen sowie sich über Wegweiser zwischen den einzelnen Leveln hin und her bewegen kann. Während Ersteres eingeführt wurde, um die Vielfalt an Manipulationen zu erhöhen, die im Prototypen getestet werden können, entstand Letzteres hauptsächlich, um den Aufwand für die Einführung einer \glqq Weltkarte\grqq{}, wie sie sonst typisch ist, einzusparen, da diese weder essentiell für die Evaluierung noch für den Fokus der Arbeit ist. Darüber hinaus führt die Einführung der Questgeber innerhalb der Level nicht dazu, dass die Kriterien für die Einordnung in das Jump and Run Genre nicht mehr gegeben sind, da das Hauptaugenmerk immer noch auf dem Springen und Laufen liegt und dieses auch in anderen Spielen des Genres in den Kontext bestimmter Aufgaben eingebettet wird, auch wenn dies auf eine etwas andere Art und Weise geschieht.
 
 \section{Zusammenfassung}
 \label{sec:zusammenfassung konzeption}
