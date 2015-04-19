@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  19 APR 2015 16:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.5)  19 APR 2015 16:42
 entering extended mode
 **BillysPayback.tex
 (H:\AGD\Dokumentation\BillysPayback.tex
@@ -1057,7 +1057,7 @@ LaTeX Info: Redefining \nameref on input line 139.
 \@outlinefile=\write6
 
 (H:\AGD\Dokumentation\Inhalt/Titel/Deckblatt.tex
-<Inhalt/Titel/acagamics.png, id=247, 1572.87625pt x 944.52875pt>
+<Inhalt/Titel/acagamics.png, id=251, 1572.87625pt x 944.52875pt>
 File: Inhalt/Titel/acagamics.png Graphic file (type png)
 
 <use Inhalt/Titel/acagamics.png>
@@ -1307,31 +1307,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--65
 
 LaTeX Warning: Reference `' on page 23 undefined on input line 121.
 
-[23]) [24] (H:\AGD\Dokumentation\Inhalt/Planung/Planung.tex
+[23] [24] [25]) [26] (H:\AGD\Dokumentation\Inhalt/Planung/Planung.tex
 Kapitel 5.
-[25
+[27
 
 
 
 
 ]
 
-LaTeX Warning: Citation 'KanbanFlow' on page 26 undefined on input line 48.
+LaTeX Warning: Citation 'KanbanFlow' on page 28 undefined on input line 48.
 
 
-LaTeX Warning: Citation 'Dropbox' on page 26 undefined on input line 50.
+LaTeX Warning: Citation 'Dropbox' on page 28 undefined on input line 50.
 
 
-LaTeX Warning: Citation 'Git' on page 26 undefined on input line 50.
+LaTeX Warning: Citation 'Git' on page 28 undefined on input line 50.
 
 
-LaTeX Warning: Citation 'GitHub' on page 26 undefined on input line 50.
+LaTeX Warning: Citation 'GitHub' on page 28 undefined on input line 50.
 
 
-LaTeX Warning: Citation 'Skype' on page 26 undefined on input line 50.
+LaTeX Warning: Citation 'Skype' on page 28 undefined on input line 50.
 
 
-LaTeX Warning: Citation 'TeamViewer' on page 26 undefined on input line 50.
+LaTeX Warning: Citation 'TeamViewer' on page 28 undefined on input line 50.
 
 )
 Overfull \hbox (54.19403pt too wide) in paragraph at lines 48--165
@@ -1339,8 +1339,8 @@ Overfull \hbox (54.19403pt too wide) in paragraph at lines 48--165
  Als ers-tes ist Kan-ban-Flow [[]
  []
 
-[26] [27] (H:\AGD\Dokumentation\Inhalt/Implementierung/Implementierung.tex
-[28
+[28] [29] (H:\AGD\Dokumentation\Inhalt/Implementierung/Implementierung.tex
+[30
 
 
 
@@ -1348,13 +1348,13 @@ Overfull \hbox (54.19403pt too wide) in paragraph at lines 48--165
 ]
 Kapitel 6.
 
-LaTeX Warning: Citation 'CryEngine' on page 29 undefined on input line 36.
+LaTeX Warning: Citation 'CryEngine' on page 31 undefined on input line 36.
 
 
-LaTeX Warning: Citation 'UnrealEngine' on page 29 undefined on input line 36.
+LaTeX Warning: Citation 'UnrealEngine' on page 31 undefined on input line 36.
 
 
-LaTeX Warning: Citation 'Unity' on page 29 undefined on input line 37.
+LaTeX Warning: Citation 'Unity' on page 31 undefined on input line 37.
 
 
 Overfull \hbox (52.6359pt too wide) in paragraph at lines 35--38
@@ -1363,24 +1363,24 @@ Overfull \hbox (52.6359pt too wide) in paragraph at lines 35--38
 2 [[]
  []
 
-[29]) [30] (H:\AGD\Dokumentation\Inhalt/Evaluierung/Evaluierung.tex
+[31]) [32] (H:\AGD\Dokumentation\Inhalt/Evaluierung/Evaluierung.tex
 Kapitel 7.
 
 Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-[31
+[33
 
 
 
 
-] [32] [33]
+] [34] [35]
 Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-[34]
+[36]
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
@@ -1395,7 +1395,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
-[35]
+[37]
 Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
@@ -1405,7 +1405,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
-[36]
+[38]
 Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
@@ -1420,7 +1420,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
 
-[37]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
@@ -1430,7 +1430,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
-[38]
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 146--148
 
  []
@@ -1445,7 +1445,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
-[39]
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 172--173
 
  []
@@ -1461,7 +1461,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
-[40]
+[42]
 Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
@@ -1471,20 +1471,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
-[41]
+[43]
 Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
-[42]) [43] (H:\AGD\Dokumentation\Inhalt/Zusammenfassung/Zusammenfassung.tex
-[44
+[44]) [45] (H:\AGD\Dokumentation\Inhalt/Zusammenfassung/Zusammenfassung.tex
+[46
 
 
 
 
 ]
 Kapitel 8.
-) [45]
+) [47]
 
 LaTeX Warning: Empty bibliography on input line 171.
 
@@ -1504,7 +1504,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 172.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 172.
 Package rerunfilecheck Info: File `BillysPayback.out' has not changed.
-(rerunfilecheck)             Checksum: 77603C4DA490415BA6F2A97C0039F642;4205.
+(rerunfilecheck)             Checksum: 18409BF0A9408C7F34AFB599AE3AFE93;4273.
 
 
 LaTeX Warning: There were undefined references.
@@ -1517,10 +1517,10 @@ Package biblatex Warning: Please (re)run Biber on the file:
 Package logreq Info: Writing requests to 'BillysPayback.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 17420 strings out of 493921
- 276477 string characters out of 3154504
- 809847 words of memory out of 3000000
- 20166 multiletter control sequences out of 15000+200000
+ 17432 strings out of 493921
+ 276637 string characters out of 3154504
+ 809895 words of memory out of 3000000
+ 20169 multiletter control sequences out of 15000+200000
  17328 words of font info for 40 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  56i,8n,52p,2556b,3409s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1539,9 +1539,9 @@ Users\Raik\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728
 ec\dpi600\ecbx2488.pk> <C:\Users\Raik\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
 jknappen\ec\dpi600\ecrm2488.pk> <C:\Users\Raik\AppData\Local\MiKTeX\2.9\fonts\p
 k\ljfour\jknappen\ec\dpi600\ecrm1440.pk>
-Output written on BillysPayback.pdf (55 pages, 8206224 bytes).
+Output written on BillysPayback.pdf (57 pages, 8225164 bytes).
 PDF statistics:
- 1252 PDF objects out of 1440 (max. 8388607)
- 167 named destinations out of 1000 (max. 500000)
- 494 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1276 PDF objects out of 1440 (max. 8388607)
+ 176 named destinations out of 1000 (max. 500000)
+ 502 words of extra memory for PDF output out of 10000 (max. 10000000)
 
