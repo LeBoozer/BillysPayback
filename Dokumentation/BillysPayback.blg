@@ -1,18 +1,15 @@
-[0] Config.pm:320> INFO - This is Biber 1.9
-[0] Config.pm:323> INFO - Logfile is 'BillysPayback.blg'
-[49] biber-MSWIN:274> INFO - === %a %b %e, %Y, %H:%M:%S
-[49] Biber.pm:333> INFO - Reading 'BillysPayback.bcf'
-[147] Biber.pm:635> INFO - Found 12 citekeys in bib section 0
-[193] Biber.pm:3051> INFO - Processing section 0
-[240] Biber.pm:3189> INFO - Looking for bibtex format file 'Literaturverzeichnis.bib' for section 0
-[245] bibtex.pm:990> INFO - Decoding LaTeX character macros into UTF-8
-[249] bibtex.pm:864> INFO - Found BibTeX data source 'Literaturverzeichnis.bib'
-[442] UCollate.pm:66> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[442] UCollate.pm:66> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[442] Biber.pm:2928> INFO - Sorting list 'none' of type 'entry' with scheme 'none' and locale 'de-DE'
-[443] Biber.pm:2932> INFO - No sort tailoring available for locale 'de-DE'
-[474] bbl.pm:517> INFO - Writing 'BillysPayback.bbl' with encoding 'latin1'
-[478] Utils.pm:144> WARN - The entry 'VideoEthanCarter' has characters which cannot be encoded in 'latin1'. Recoding problematic characters into macros.
-[479] Utils.pm:144> WARN - The entry 'DieVersuchungAdventureTreffKritik' has characters which cannot be encoded in 'latin1'. Recoding problematic characters into macros.
-[480] bbl.pm:606> INFO - Output to BillysPayback.bbl
-[481] Biber.pm:106> INFO - WARNINGS: 2
+This is BibTeX, Version 0.99dThe top-level auxiliary file: BillysPayback.aux
+A level-1 auxiliary file: Inhalt/Titel/Deckblatt.aux
+A level-1 auxiliary file: Inhalt/Kurzfassung/Abstrakt.aux
+A level-1 auxiliary file: Inhalt/Einleitung/Einleitung.aux
+A level-1 auxiliary file: Inhalt/Grundlagen/Grundlagen.aux
+A level-1 auxiliary file: Inhalt/VerwandteArbeiten/VerwandteArbeiten.aux
+A level-1 auxiliary file: Inhalt/Konzept/Konzept.aux
+A level-1 auxiliary file: Inhalt/Planung/Planung.aux
+A level-1 auxiliary file: Inhalt/Implementierung/Implementierung.aux
+A level-1 auxiliary file: Inhalt/Evaluierung/Evaluierung.aux
+A level-1 auxiliary file: Inhalt/Zusammenfassung/Zusammenfassung.aux
+I found no \citation commands---while reading file BillysPayback.aux
+I found no \bibdata command---while reading file BillysPayback.aux
+I found no \bibstyle command---while reading file BillysPayback.aux
+(There were 3 error messages)

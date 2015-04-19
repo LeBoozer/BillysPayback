@@ -3,39 +3,59 @@
 \BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 3
 \BOOKMARK [1][-]{section.1.1}{Zielsetzung}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.2}{\334bersicht \374ber die Arbeit}{chapter.1}% 5
-\BOOKMARK [0][-]{chapter.2}{Grundlagen}{}% 6
-\BOOKMARK [1][-]{section.2.1}{Manipulation}{chapter.2}% 7
-\BOOKMARK [2][-]{subsection.2.1.1}{Transparentes und intransparentes Handeln}{section.2.1}% 8
-\BOOKMARK [2][-]{subsection.2.1.2}{Definition der Manipulation}{section.2.1}% 9
-\BOOKMARK [2][-]{subsection.2.1.3}{Positive Manipulation}{section.2.1}% 10
-\BOOKMARK [2][-]{subsection.2.1.4}{Negative Manipulation}{section.2.1}% 11
-\BOOKMARK [2][-]{subsection.2.1.5}{Dosierung von Manipulationen}{section.2.1}% 12
-\BOOKMARK [2][-]{subsection.2.1.6}{Einfluss pers\366nlicher Faktoren auf den Manipulationserfolg}{section.2.1}% 13
-\BOOKMARK [2][-]{subsection.2.1.7}{Interaktionsspiele}{section.2.1}% 14
-\BOOKMARK [1][-]{section.2.2}{Zusammenfassung}{chapter.2}% 15
-\BOOKMARK [0][-]{chapter.3}{Verwandte Arbeiten}{}% 16
-\BOOKMARK [1][-]{section.3.1}{Player Manipulation}{chapter.3}% 17
-\BOOKMARK [1][-]{section.3.2}{Die Psycho-Tricks der Spiele-Designer: Das Spiel in deinem Kopf}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.3}{The Stanley Parable}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.4}{The Vanishing of Ethan Carter}{chapter.3}% 20
-\BOOKMARK [1][-]{section.3.5}{Fable}{chapter.3}% 21
-\BOOKMARK [1][-]{section.3.6}{Die Versuchung}{chapter.3}% 22
-\BOOKMARK [1][-]{section.3.7}{Zusammenfassung}{chapter.3}% 23
-\BOOKMARK [0][-]{chapter.4}{Konzeptionierung}{}% 24
-\BOOKMARK [1][-]{section.4.1}{Manipulationen}{chapter.4}% 25
-\BOOKMARK [2][-]{subsection.4.1.1}{Anforderungen}{section.4.1}% 26
-\BOOKMARK [2][-]{subsection.4.1.2}{Einschr\344nkungen}{section.4.1}% 27
-\BOOKMARK [2][-]{subsection.4.1.3}{Ergebnisse}{section.4.1}% 28
-\BOOKMARK [1][-]{section.4.2}{Spielereigenschaften}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.3}{Level-Design}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.4}{Zusammenfassung}{chapter.4}% 31
-\BOOKMARK [0][-]{chapter.5}{Prototypische Umsetzung}{}% 32
-\BOOKMARK [0][-]{chapter.6}{Evaluierung}{}% 33
-\BOOKMARK [1][-]{section.6.1}{Auswertung Eigenschaftenanalyse}{chapter.6}% 34
-\BOOKMARK [2][-]{subsection.6.1.1}{Fehlerquellen in der Umsetzung}{section.6.1}% 35
-\BOOKMARK [2][-]{subsection.6.1.2}{Verbesserungsm\366glichkeiten}{section.6.1}% 36
-\BOOKMARK [2][-]{subsection.6.1.3}{Folgen}{section.6.1}% 37
-\BOOKMARK [1][-]{section.6.2}{Auswertung Interview}{chapter.6}% 38
-\BOOKMARK [1][-]{section.6.3}{Auswertung der Erfolgskriterien und der allgemeinen Fragen}{chapter.6}% 39
-\BOOKMARK [0][-]{chapter.7}{Zusammenfassung und Ausblick}{}% 40
-\BOOKMARK [0][-]{chapter*.57}{Literaturverzeichnis}{}% 41
+\BOOKMARK [0][-]{chapter.2}{Grundlagen der Manipulation}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Erkennbarkeit der Handlungsabsicht}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.1.1}{Transparentes Handeln}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.2}{Intransparentes Handeln}{section.2.1}% 9
+\BOOKMARK [1][-]{section.2.2}{Definition der Manipulation}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Positive Manipulation}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.4}{Negative Manipulation}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.5}{Dosierung von Manipulationen}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.6}{Einfluss pers\366nlicher Faktoren auf den Manipulationserfolg}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.6.1}{Anf\344lligkeit reduzierende Faktoren}{section.2.6}% 15
+\BOOKMARK [2][-]{subsection.2.6.2}{Anf\344lligkeit verst\344rkende Faktoren}{section.2.6}% 16
+\BOOKMARK [1][-]{section.2.7}{Interaktionsspiele}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.7.1}{Attraktivit\344tsspiele}{section.2.7}% 18
+\BOOKMARK [2][-]{subsection.2.7.2}{Armes-Schwein-Spiele}{section.2.7}% 19
+\BOOKMARK [2][-]{subsection.2.7.3}{Opfer-Spiele}{section.2.7}% 20
+\BOOKMARK [2][-]{subsection.2.7.4}{Regel-Setzer-Spiele}{section.2.7}% 21
+\BOOKMARK [2][-]{subsection.2.7.5}{Bl\366d-Spiele}{section.2.7}% 22
+\BOOKMARK [1][-]{section.2.8}{Zusammenfassung}{chapter.2}% 23
+\BOOKMARK [0][-]{chapter.3}{Verwandte Arbeiten}{}% 24
+\BOOKMARK [1][-]{section.3.1}{Player Manipulation}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.2}{Die Psycho-Tricks der Spiele-Designer: Das Spiel in deinem Kopf}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.3}{The Stanley Parable}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.4}{The Vanishing of Ethan Carter}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.5}{Fable}{chapter.3}% 29
+\BOOKMARK [1][-]{section.3.6}{Die Versuchung}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.7}{Zusammenfassung}{chapter.3}% 31
+\BOOKMARK [0][-]{chapter.4}{Konzeptionierung}{}% 32
+\BOOKMARK [1][-]{section.4.1}{Manipulationen}{chapter.4}% 33
+\BOOKMARK [2][-]{subsection.4.1.1}{Anforderungen}{section.4.1}% 34
+\BOOKMARK [2][-]{subsection.4.1.2}{Einschr\344nkungen}{section.4.1}% 35
+\BOOKMARK [2][-]{subsection.4.1.3}{Ergebnisse}{section.4.1}% 36
+\BOOKMARK [1][-]{section.4.2}{Spielereigenschaften}{chapter.4}% 37
+\BOOKMARK [2][-]{subsection.4.2.1}{Sammlereigenschaft}{section.4.2}% 38
+\BOOKMARK [2][-]{subsection.4.2.2}{Ehrgeiz}{section.4.2}% 39
+\BOOKMARK [2][-]{subsection.4.2.3}{Herausforderung suchend}{section.4.2}% 40
+\BOOKMARK [2][-]{subsection.4.2.4}{Mitleid}{section.4.2}% 41
+\BOOKMARK [2][-]{subsection.4.2.5}{Autonomie}{section.4.2}% 42
+\BOOKMARK [2][-]{subsection.4.2.6}{Geduld}{section.4.2}% 43
+\BOOKMARK [2][-]{subsection.4.2.7}{Aufmerksamkeit}{section.4.2}% 44
+\BOOKMARK [1][-]{section.4.3}{Level-Design}{chapter.4}% 45
+\BOOKMARK [2][-]{subsection.4.3.1}{Spielkonzept}{section.4.3}% 46
+\BOOKMARK [1][-]{section.4.4}{Zusammenfassung}{chapter.4}% 47
+\BOOKMARK [0][-]{chapter.5}{Planung}{}% 48
+\BOOKMARK [1][-]{section.5.1}{Story}{chapter.5}% 49
+\BOOKMARK [1][-]{section.5.2}{Aufgabenteilung}{chapter.5}% 50
+\BOOKMARK [1][-]{section.5.3}{Meilensteine}{chapter.5}% 51
+\BOOKMARK [1][-]{section.5.4}{Werkzeuge}{chapter.5}% 52
+\BOOKMARK [0][-]{chapter.6}{Prototypische Umsetzung}{}% 53
+\BOOKMARK [0][-]{chapter.7}{Evaluierung}{}% 54
+\BOOKMARK [1][-]{section.7.1}{Auswertung Eigenschaftenanalyse}{chapter.7}% 55
+\BOOKMARK [2][-]{subsection.7.1.1}{Fehlerquellen in der Umsetzung}{section.7.1}% 56
+\BOOKMARK [2][-]{subsection.7.1.2}{Verbesserungsm\366glichkeiten}{section.7.1}% 57
+\BOOKMARK [2][-]{subsection.7.1.3}{Folgen}{section.7.1}% 58
+\BOOKMARK [1][-]{section.7.2}{Auswertung Interview}{chapter.7}% 59
+\BOOKMARK [1][-]{section.7.3}{Auswertung der Erfolgskriterien und der allgemeinen Fragen}{chapter.7}% 60
+\BOOKMARK [0][-]{chapter.8}{Zusammenfassung und Ausblick}{}% 61
