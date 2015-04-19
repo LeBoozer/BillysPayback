@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.5)  18 APR 2015 18:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.6.5)  19 APR 2015 22:21
 entering extended mode
 **BillysPayback.tex
 
@@ -1093,11 +1093,22 @@ umentation\BillysPayback.out")
 \@outlinefile=\write6
 
 ("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
-umentation\Inhalt/Titel/Deckblatt.tex") [1
+umentation\Inhalt/Titel/Deckblatt.tex"
+<Inhalt/Titel/acagamics.png, id=247, 1572.87625pt x 944.52875pt>
+File: Inhalt/Titel/acagamics.png Graphic file (type png)
+
+<use Inhalt/Titel/acagamics.png>
+Package pdftex.def Info: Inhalt/Titel/acagamics.png used on input line 10.
+(pdftex.def)             Requested size: 341.43307pt x 205.0298pt.
+ [1
 
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
+
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <D:/Dokumente/Universität
+/Projekt Advanced Game Development/BillysPayback/Dokumentation/Inhalt/Titel/aca
+gamics.png>]) [2
 
 
 
@@ -1118,12 +1129,12 @@ File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
 umentation\BillysPayback.toc"
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 19.
+(Font)              <12> on input line 33.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 19.
+(Font)              <8> on input line 33.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 19.
-LaTeX Font Info:    Try loading font information for U+wasy on input line 19.
+(Font)              <6> on input line 33.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 33.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\wasysym\uwasy.fd"
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
@@ -1231,35 +1242,121 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--65
 
 LaTeX Warning: Reference `' on page 23 undefined on input line 121.
 
-[23] [24] [25]) [26]
+[23] [24] <Grafiken/Weg_mit_vielen_Luecken.png, id=541, 325.215pt x 197.538pt>
+File: Grafiken/Weg_mit_vielen_Luecken.png Graphic file (type png)
+
+<use Grafiken/Weg_mit_vielen_Luecken.png>
+Package pdftex.def Info: Grafiken/Weg_mit_vielen_Luecken.png used on input line
+ 167.
+(pdftex.def)             Requested size: 204.85846pt x 124.43451pt.
+
+<Grafiken/Kleine_Kirsche.png, id=542, 389.65575pt x 316.18124pt>
+File: Grafiken/Kleine_Kirsche.png Graphic file (type png)
+
+<use Grafiken/Kleine_Kirsche.png>
+Package pdftex.def Info: Grafiken/Kleine_Kirsche.png used on input line 172.
+(pdftex.def)             Requested size: 204.85846pt x 166.23404pt.
+ [25 <D:/Dokumente/Universität/Projekt Advanced Game Development/BillysPayback
+/Dokumentation/Grafiken/Weg_mit_vielen_Luecken.png> <D:/Dokumente/Universität/
+Projekt Advanced Game Development/BillysPayback/Dokumentation/Grafiken/Kleine_K
+irsche.png>]
+<Grafiken/Abgrund_mit_Diamanten.png, id=554, 450.483pt x 256.5585pt>
+File: Grafiken/Abgrund_mit_Diamanten.png Graphic file (type png)
+
+<use Grafiken/Abgrund_mit_Diamanten.png>
+Package pdftex.def Info: Grafiken/Abgrund_mit_Diamanten.png used on input line 
+195.
+(pdftex.def)             Requested size: 204.85846pt x 116.67166pt.
+
+<Grafiken/Matschiger_Weg.png, id=555, 280.04625pt x 186.6975pt>
+File: Grafiken/Matschiger_Weg.png Graphic file (type png)
+
+<use Grafiken/Matschiger_Weg.png>
+Package pdftex.def Info: Grafiken/Matschiger_Weg.png used on input line 200.
+(pdftex.def)             Requested size: 204.85846pt x 136.57861pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[26]
+<Grafiken/Beweglicher_Baumstamm_ueber_Abgrund.png, id=566, 554.67226pt x 248.12
+7pt>
+File: Grafiken/Beweglicher_Baumstamm_ueber_Abgrund.png Graphic file (type png)
+ <use Grafiken/Beweglicher_Baumstamm_ueber_Abgrund.png>
+Package pdftex.def Info: Grafiken/Beweglicher_Baumstamm_ueber_Abgrund.png used 
+on input line 223.
+(pdftex.def)             Requested size: 204.85846pt x 91.64273pt.
+
+<Grafiken/Gefaehrliche_Grube.png, id=567, 469.755pt x 291.489pt>
+File: Grafiken/Gefaehrliche_Grube.png Graphic file (type png)
+
+<use Grafiken/Gefaehrliche_Grube.png>
+Package pdftex.def Info: Grafiken/Gefaehrliche_Grube.png used on input line 228
+.
+(pdftex.def)             Requested size: 204.85846pt x 127.11693pt.
+ [27 <D:/Dokumente/Universität/Projekt Advanced Game Development/BillysPayback
+/Dokumentation/Grafiken/Abgrund_mit_Diamanten.png> <D:/Dokumente/Universität/P
+rojekt Advanced Game Development/BillysPayback/Dokumentation/Grafiken/Matschige
+r_Weg.png> <D:/Dokumente/Universität/Projekt Advanced Game Development/BillysP
+ayback/Dokumentation/Grafiken/Beweglicher_Baumstamm_ueber_Abgrund.png> <D:/Doku
+mente/Universität/Projekt Advanced Game Development/BillysPayback/Dokumentatio
+n/Grafiken/Gefaehrliche_Grube.png>]
+<Grafiken/Unsichtbarer_Weg_Geduldsprobe_Voegel.png, id=582, 322.20375pt x 314.3
+745pt>
+File: Grafiken/Unsichtbarer_Weg_Geduldsprobe_Voegel.png Graphic file (type png)
+
+ <use Grafiken/Unsichtbarer_Weg_Geduldsprobe_Voegel.png>
+Package pdftex.def Info: Grafiken/Unsichtbarer_Weg_Geduldsprobe_Voegel.png used
+ on input line 251.
+(pdftex.def)             Requested size: 204.85846pt x 199.8894pt.
+
+<Grafiken/U_foermige_Einbuchtung_mit_Kirsche.png, id=583, 451.08525pt x 264.99p
+t>
+File: Grafiken/U_foermige_Einbuchtung_mit_Kirsche.png Graphic file (type png)
+ <use Grafiken/U_foermige_Einbuchtung_mit_Kirsche.png>
+Package pdftex.def Info: Grafiken/U_foermige_Einbuchtung_mit_Kirsche.png used o
+n input line 256.
+(pdftex.def)             Requested size: 204.85846pt x 120.34421pt.
+ [28 <D:/Dokumente/Universität/Projekt Advanced Game Development/BillysPayback
+/Dokumentation/Grafiken/Unsichtbarer_Weg_Geduldsprobe_Voegel.png> <D:/Dokumente
+/Universität/Projekt Advanced Game Development/BillysPayback/Dokumentation/Gra
+fiken/U_foermige_Einbuchtung_mit_Kirsche.png>] [29]
+<Grafiken/Bruecken.png, id=607, 720.291pt x 318.59026pt>
+File: Grafiken/Bruecken.png Graphic file (type png)
+
+<use Grafiken/Bruecken.png>
+Package pdftex.def Info: Grafiken/Bruecken.png used on input line 292.
+(pdftex.def)             Requested size: 432.17793pt x 191.15562pt.
+) [30 <D:/Dokumente/Universität/Projekt Advanced Game Development/BillysPaybac
+k/Dokumentation/Grafiken/Bruecken.png>] [31]
 ("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
-umentation\Inhalt/Implementierung/Implementierung.tex"
+umentation\Inhalt/Implementierung/Implementierung.tex" [32
+
+
+
+
+]
 Kapitel 5.
-) [27
-
-
-
-
-]
+[33]) [34]
 ("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
-umentation\Inhalt/Evaluierung/Evaluierung.tex" [28
-
-
-
-
-]
+umentation\Inhalt/Evaluierung/Evaluierung.tex"
 Kapitel 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-[29] [30] [31]
+[35
+
+
+
+
+] [36] [37]
 Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-[32]
+[38]
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
@@ -1274,7 +1371,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
-[33]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
@@ -1284,7 +1381,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
-[34]
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
@@ -1299,7 +1396,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
 
-[35]
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
@@ -1309,7 +1406,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
-[36]
+[42]
 Underfull \hbox (badness 10000) in paragraph at lines 146--148
 
  []
@@ -1324,7 +1421,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
-[37]
+[43]
 Underfull \hbox (badness 10000) in paragraph at lines 172--173
 
  []
@@ -1340,7 +1437,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
-[38]
+[44]
 Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
@@ -1350,21 +1447,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
-[39]
+[45]
 Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
-[40]) [41]
+[46]) [47]
 ("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
-umentation\Inhalt/Zusammenfassung/Zusammenfassung.tex" [42
+umentation\Inhalt/Zusammenfassung/Zusammenfassung.tex" [48
 
 
 
 
 ]
 Kapitel 7.
-) [43] [44
+) [49] [50
 
 
 
@@ -1374,13 +1471,8 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 170.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (14.55362pt too wide) in paragraph at lines 170--170
-[]$\T1/cmtt/m/n/12 https : / / www . youtube . com / watch ? v = lsHppcIcpfM$[]
- \T1/cmr/m/n/12 (Zu-letzt an-ge-se-hen am 11.04.2015).
- []
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
-[45]
+ [51]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 171.
 
 ("D:\Dokumente\Universität\Projekt Advanced Game Development\BillysPayback\Dok
@@ -1406,7 +1498,7 @@ umentation\Inhalt/Zusammenfassung/Zusammenfassung.aux"))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 171.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
 Package rerunfilecheck Info: File `BillysPayback.out' has not changed.
-(rerunfilecheck)             Checksum: B5013041E35B7CC697DD669903BC3E83;4055.
+(rerunfilecheck)             Checksum: 378F18F271F25C0B03815F0D36ADE08D;4307.
 
 
 LaTeX Warning: There were undefined references.
@@ -1414,29 +1506,34 @@ LaTeX Warning: There were undefined references.
 Package logreq Info: Writing requests to 'BillysPayback.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 17384 strings out of 493921
- 286257 string characters out of 3147271
- 806051 words of memory out of 3000000
- 20137 multiletter control sequences out of 15000+200000
- 16105 words of font info for 39 fonts, out of 3000000 for 9000
+ 17503 strings out of 493921
+ 289357 string characters out of 3147271
+ 807578 words of memory out of 3000000
+ 20210 multiletter control sequences out of 15000+200000
+ 18316 words of font info for 42 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
- 56i,8n,55p,2556b,3411s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,8n,55p,2556b,3407s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi
-600\ectt1200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
-knappen\ec\dpi600\ecbx1200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk> <C:\Users\Dominique\AppData\Local\
-MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk> <C:\Users\Dominique\
-AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1440.pk> <C:\Us
-ers\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1
-200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
-c\dpi600\ecsx1200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecsx2488.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.
-9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Dominique\AppData\L
-ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728.pk> <C:\Users\Domin
-ique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk>
-Output written on BillysPayback.pdf (55 pages, 772416 bytes).
+600\eccc1200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\j
+knappen\ec\dpi600\ectt1200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Dominique\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk> <C:\Users\Dominique\
+AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1200.pk> <C:\Us
+ers\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1
+440.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
+c\dpi600\ecti1200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\ecsx1200.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.
+9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx2488.pk> <C:\Users\Dominique\AppData\L
+ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Domin
+ique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsx1728.pk> <
+C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
+ecrm1728.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
+pen\ec\dpi600\ecbx2488.pk> <C:\Users\Dominique\AppData\Local\MiKTeX\2.9\fonts\p
+k\ljfour\jknappen\ec\dpi600\ecrm2488.pk> <C:\Users\Dominique\AppData\Local\MiKT
+eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk>
+Output written on BillysPayback.pdf (61 pages, 23172053 bytes).
 PDF statistics:
- 1222 PDF objects out of 1440 (max. 8388607)
- 169 named destinations out of 1000 (max. 500000)
- 465 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1449 PDF objects out of 1728 (max. 8388607)
+ 200 named destinations out of 1000 (max. 500000)
+ 539 words of extra memory for PDF output out of 10000 (max. 10000000)
 
