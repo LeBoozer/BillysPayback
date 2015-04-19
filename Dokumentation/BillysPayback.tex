@@ -102,14 +102,14 @@ twoside,headsepline,footsepline,openright]{scrbook}
 \pdfminorversion=6
 
 % Kompression ausschalten (hyperref setzt das Level auf 9!)
-\pdfcompresslevel=0
+\pdfcompresslevel=9
 
 % Verschiebungen und Formattierungen des Modus "twoside" aufheben
 \raggedbottom
 
 % Informationen zu dem Dokument
 \newcommand{\thetitle}{Billy's Payback: Rising of the Fruits}
-\newcommand{\theauthorr}{ToDo}
+\newcommand{\theauthorr}{Billy's Payback}
 \author{\theauthorr}
 \title{\thetitle}
 
@@ -149,7 +149,7 @@ twoside,headsepline,footsepline,openright]{scrbook}
 		\tableofcontents 										% Inhaltsverzeichnis generieren
 %		\include{Inhalt/ABK}									% Abkürzungsverzeichnis einbinden
 		\listoffigures{}										% Abbildungsverzeichnis generieren
-		\listoftables{}											% Tabellenverzeichnis generieren
+%		\listoftables{}											% Tabellenverzeichnis generieren
 	\myclearpage
 	\endgroup
 	
@@ -162,10 +162,11 @@ twoside,headsepline,footsepline,openright]{scrbook}
 	\include{Inhalt/Grundlagen/Grundlagen}						% Grundlagen einbinden
 	\include{Inhalt/VerwandteArbeiten/VerwandteArbeiten}		% Verwandte Arbeiten einbinden
 	\include{Inhalt/Konzept/Konzept}							% Konzeptionierung einbinden
+	\include{Inhalt/Planung/Planung}							% Planung einbinden
 	\include{Inhalt/Implementierung/Implementierung}			% Implementierung einbinden
 	\include{Inhalt/Evaluierung/Evaluierung}					% Evaluierung einbinden	
 	\include{Inhalt/Zusammenfassung/Zusammenfassung}			% Zusammenfassung einbinden	
 %................................................................
-	
 	\printbibliography[title={Literaturverzeichnis}]
+	\include{Inhalt/Anhang/Anhang}								% Anhang einbinden	
 \end{document}
