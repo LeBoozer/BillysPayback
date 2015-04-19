@@ -128,82 +128,92 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.4}Zusammenfassung}{26}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Prototypische Umsetzung}{27}{chapter.5}
+\contentsline {chapter}{\numberline {5}Planung}{27}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Evaluierung}{31}{chapter.6}
+\contentsline {section}{\numberline {5.1}Story}{27}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Auswertung Eigenschaftenanalyse}{31}{section.6.1}
+\contentsline {section}{\numberline {5.2}Aufgabenteilung}{27}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.1}Fehlerquellen in der Umsetzung}{31}{subsection.6.1.1}
+\contentsline {section}{\numberline {5.3}Meilensteine}{28}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.2}Verbesserungsm\"oglichkeiten}{32}{subsection.6.1.2}
+\contentsline {section}{\numberline {5.4}Werkzeuge}{28}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.3}Folgen}{32}{subsection.6.1.3}
+\contentsline {chapter}{\numberline {6}Prototypische Umsetzung}{31}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Sammler}{32}{section*.27}
+\contentsline {chapter}{\numberline {7}Evaluierung}{35}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Geduld}{32}{section*.28}
+\contentsline {section}{\numberline {7.1}Auswertung Eigenschaftenanalyse}{35}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Ehrgeiz}{33}{section*.29}
+\contentsline {subsection}{\numberline {7.1.1}Fehlerquellen in der Umsetzung}{35}{subsection.7.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Herausforderung}{33}{section*.30}
+\contentsline {subsection}{\numberline {7.1.2}Verbesserungsm\"oglichkeiten}{36}{subsection.7.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Mitleid}{33}{section*.31}
+\contentsline {subsection}{\numberline {7.1.3}Folgen}{36}{subsection.7.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Autonomie}{34}{section*.32}
+\contentsline {subsubsection}{\nonumberline Sammler}{36}{section*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Aufmerksamkeit}{34}{section*.33}
+\contentsline {subsubsection}{\nonumberline Geduld}{36}{section*.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Auswertung Interview}{35}{section.6.2}
+\contentsline {subsubsection}{\nonumberline Ehrgeiz}{37}{section*.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 1. Inwiefern hast du dich durch die Gespr\"ache mit den Charakteren beeinflusst gef\"uhlt? Gab es Unterschiede zwischen dem Level 2.1 und den anderen Leveln?}{35}{section*.34}
+\contentsline {subsubsection}{\nonumberline Herausforderung}{37}{section*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 2. Findest du, dass du dich an einem Wegpunkt falsch entschieden hast?}{36}{section*.35}
+\contentsline {subsubsection}{\nonumberline Mitleid}{37}{section*.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 3. Glaubst du, du h\"attest ein alternatives Ende erreichen k\"onnen? Warum?}{36}{section*.36}
+\contentsline {subsubsection}{\nonumberline Autonomie}{38}{section*.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 4. Warum hast du Bob nicht geholfen? Wenn doch, warum?}{36}{section*.37}
+\contentsline {subsubsection}{\nonumberline Aufmerksamkeit}{38}{section*.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 5. Denkst du, dass du Bob zu mehr Unterst\"utzung h\"attest \"uberreden k\"onnen, wenn du das Gespr\"ach anders gef\"uhrt h\"attest?}{37}{section*.38}
+\contentsline {section}{\numberline {7.2}Auswertung Interview}{39}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 6. (Spieler hat den Untergrund ignoriert) Hast du den zerst\"orbaren Block gesehen? Wenn ja, wieso hast du dich dagegen entschieden?}{37}{section*.39}
+\contentsline {subsubsection}{\nonumberline 1. Inwiefern hast du dich durch die Gespr\"ache mit den Charakteren beeinflusst gef\"uhlt? Gab es Unterschiede zwischen dem Level 2.1 und den anderen Leveln?}{39}{section*.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 7. (Spieler hat den Untergrund nicht ignoriert) Warum hast du dich nicht f\"ur den oberen Weg entschieden?}{37}{section*.40}
+\contentsline {subsubsection}{\nonumberline 2. Findest du, dass du dich an einem Wegpunkt falsch entschieden hast?}{40}{section*.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 8. Warum hast du dich f\"ur diesen (Br\"ucken-)Weg entschieden? H\"attest du lieber den anderen Weg genommen?}{38}{section*.41}
+\contentsline {subsubsection}{\nonumberline 3. Glaubst du, du h\"attest ein alternatives Ende erreichen k\"onnen? Warum?}{40}{section*.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 9. (Spieler ist gleich rechts lang) Warum hast du den linken Weg unbeachtet gelassen?}{38}{section*.42}
+\contentsline {subsubsection}{\nonumberline 4. Warum hast du Bob nicht geholfen? Wenn doch, warum?}{40}{section*.37}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 10. (Spieler ist bei Vogelschwarm nicht aus dem Nest raus) Warum hast du das Nest nicht durch die T\"ur verlassen?}{38}{section*.43}
+\contentsline {subsubsection}{\nonumberline 5. Denkst du, dass du Bob zu mehr Unterst\"utzung h\"attest \"uberreden k\"onnen, wenn du das Gespr\"ach anders gef\"uhrt h\"attest?}{41}{section*.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 11. (Spieler hat die Kiwano ignoriert) Warum hast du die Kiwano nicht gerettet? Und wenn doch, warum?}{39}{section*.44}
+\contentsline {subsubsection}{\nonumberline 6. (Spieler hat den Untergrund ignoriert) Hast du den zerst\"orbaren Block gesehen? Wenn ja, wieso hast du dich dagegen entschieden?}{41}{section*.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 12. Warum bist du in die H\"ohle gegangen? Wenn nicht, warum nicht?}{39}{section*.45}
+\contentsline {subsubsection}{\nonumberline 7. (Spieler hat den Untergrund nicht ignoriert) Warum hast du dich nicht f\"ur den oberen Weg entschieden?}{41}{section*.40}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 13. Warum hast du den Hut am Anfang nicht aufgenommen? Und wenn doch, warum?}{40}{section*.46}
+\contentsline {subsubsection}{\nonumberline 8. Warum hast du dich f\"ur diesen (Br\"ucken-)Weg entschieden? H\"attest du lieber den anderen Weg genommen?}{42}{section*.41}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 14. Warum hast du die Quest ignoriert? Wenn nicht, warum nicht?}{40}{section*.47}
+\contentsline {subsubsection}{\nonumberline 9. (Spieler ist gleich rechts lang) Warum hast du den linken Weg unbeachtet gelassen?}{42}{section*.42}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 15. (Spieler vom Weg abgewichen) Warum bist du den V\"ogeln nicht gefolgt?}{40}{section*.48}
+\contentsline {subsubsection}{\nonumberline 10. (Spieler ist bei Vogelschwarm nicht aus dem Nest raus) Warum hast du das Nest nicht durch die T\"ur verlassen?}{42}{section*.43}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 16. Warum hast du den Bruder gesucht? Wenn nicht, warum?}{41}{section*.49}
+\contentsline {subsubsection}{\nonumberline 11. (Spieler hat die Kiwano ignoriert) Warum hast du die Kiwano nicht gerettet? Und wenn doch, warum?}{43}{section*.44}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 17. Warum wolltest du Antonio trotz des Verrats nicht angreifen? Und wenn doch, warum?}{41}{section*.50}
+\contentsline {subsubsection}{\nonumberline 12. Warum bist du in die H\"ohle gegangen? Wenn nicht, warum nicht?}{43}{section*.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Auswertung der Erfolgskriterien und der allgemeinen Fragen}{42}{section.6.3}
+\contentsline {subsubsection}{\nonumberline 13. Warum hast du den Hut am Anfang nicht aufgenommen? Und wenn doch, warum?}{44}{section*.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Erfolgskriterien}{42}{section*.51}
+\contentsline {subsubsection}{\nonumberline 14. Warum hast du die Quest ignoriert? Wenn nicht, warum nicht?}{44}{section*.47}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Allgemeine Fragen}{43}{section*.52}
+\contentsline {subsubsection}{\nonumberline 15. (Spieler vom Weg abgewichen) Warum bist du den V\"ogeln nicht gefolgt?}{44}{section*.48}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{45}{chapter.7}
+\contentsline {subsubsection}{\nonumberline 16. Warum hast du den Bruder gesucht? Wenn nicht, warum?}{45}{section*.49}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{47}{chapter*.53}
+\contentsline {subsubsection}{\nonumberline 17. Warum wolltest du Antonio trotz des Verrats nicht angreifen? Und wenn doch, warum?}{45}{section*.50}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Anhang \numberline {A}Abbildungen}{49}{Anhang.a.A}
+\contentsline {section}{\numberline {7.3}Auswertung der Erfolgskriterien und der allgemeinen Fragen}{46}{section.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Erfolgskriterien}{46}{section*.51}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Allgemeine Fragen}{47}{section*.52}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{49}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{51}{chapter*.53}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Anhang \numberline {A}Abbildungen}{53}{Anhang.a.A}
 \defcounter {refsection}{0}\relax 
 \setcounter {tocdepth}{-1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Analyselevel}{49}{section.a.A.1}
+\contentsline {section}{\numberline {A.1}Analyselevel}{53}{section.a.A.1}
 \defcounter {refsection}{0}\relax 
 \setcounter {tocdepth}{2}
