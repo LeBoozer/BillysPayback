@@ -3,19 +3,29 @@
 % Autor	: Implementierung Worms
 %#####################################################################################################################
 \chapter{Prototypische Umsetzung}
-\begin{itemize}
-	\item Wieso die prototypische Umsetzung?
-	\item Ziel der prototypischen Umsetzung
-	\item Übersicht mit kurzer Erläuterung der Implementierten Strukturen
+Die experimentelle Untersuchung fokussiert die im Konzept (siehe Sektion~\ref{sec:konzept manipulationen} \textit{Manipulationen})
+aufgestellten und definierten Manipulationen in Bezug auf die zugrundeliegende wissenschaftliche Fragestellung
+(siehe Kapitel~\ref{chap:einleitung} \textit{Einleitung}) mit Hilfe einer prototypischen Implementierung.
+\\
+Abgeleitet aus den Konzept sowie dem fundamentalen Level--Design (siehe Sektion~\ref{sec:level design}
+\textit{Level-Design}) sind die folgenden Elemente für die Umsetzung relevant:
+\begin{itemize}[itemsep=0em] 
+	\item Das Spielkonzept ist auf ein minimal gestaltetes \textit{Jump and Run} Spiel mit 2.5D--Optik limitiert.
+	\item Ein anfänglicher Spielabschnitt für die Analyse der notwendigen Spielereigenschaften.
+	\item Verschiedene nach dem Konzept in manipulativer Weise gestaltete Levels. 
 \end{itemize}
+\noindent
+Detaillierte Einzelheiten sowie Vorgehensweisen zu der Realisierung ist nicht Bestandteil der vorliegenden Arbeit und
+wird somit nicht näher erläutert. Wichtige Bereiche des Spiels sind mit Bildern im Anhang~\ref{chap:anhang_abbildungen}
+(\textit{Abbildungen}) hervorgehoben.
 
 \subsubsection*{Entwicklungsumgebung}
 Während der Anfangsphase der prototypischen Umsetzung müssen zunächst die technischen Grundlagen und die eventuell 
 vorhandenen Hilfsmittel abgesteckt und benannt werden. Die folgenden Varianten wurden auf Machbarkeit, Effizienz 
 und Tauglichkeit hin für \textit{Billy's Payback} analysiert:
-\begin{itemize}[itemsep=0pt] 
-	\item ???: Sämtlich anfallende Aufgabenbereiche müssen von Grund auf entwickelt und implementiert werden. Die Variante bietet
-	neben einem sehr hohen Aufwand gleichzeitig eine gute Flexibilität in Bezug auf die Gestaltungsfreiheiten an.
+\begin{itemize}[itemsep=0em] 
+	\item Von Grund auf: Sämtlich anfallende Aufgabenbereiche müssen von Grund auf entwickelt und implementiert werden. Die Variante bietet
+	neben einem sehr hohen Aufwand gleichzeitig eine breite Flexibilität in Bezug auf die Gestaltungsfreiheiten an.
 	\item Hybridsystem: Zu verallgemeinernde und wiederkehrende Strukturen werden mittels externen Fremdbibliotheken vereinfacht
 	in Form von Bauteilen dem Anwender bereitgestellt. Das Zusammenspiel der unterschiedlichen Komponenten muss nach wie vor
 	selbstständig erarbeitet werden. Beispiele für Bibliotheken sind Grafik-, Audio- sowie Physikbibliotheken.
@@ -23,15 +33,17 @@ und Tauglichkeit hin für \textit{Billy's Payback} analysiert:
 	sogenannten \textit{Game--Engine} bereitgestellt, sodass die Konzentration auf die alleinige Spielentwicklung und --Gestaltung
 	gerichtet werden kann.
 \end{itemize}
+\noindent
 Basierend auf den zeitlichen Restriktionen für das Projekt ist die Variante mit dem vollständigen Toolchain zum Einsatz gekommen.
 Anlässlich der hohen Anzahl von existierenden \textit{Game--Engines} wurde der nachstehende Anforderungskatalog aufgestellt
 und für die Entscheidungsfindung zu Hilfe genommen:
-\begin{itemize}[itemsep=0pt] 
+\begin{itemize}[itemsep=0em]  
 	\item Kostenlose Version für Entwicklungen und Veröffentlichungen von Inhalten.
 	\item Komprimierte und innovative Einarbeitung in grundlegenden Thematiken der \textit{Engine} möglich.
 	\item Realisierung von eigenen Scripten in einer bekannten Sprache ausführbar (keine hauseigene Scriptsprache).
 	\item Zuschnitt auf ein breites Spektrum von Genres (keine einschränkenden oder zeitaufwendigen Vorgaben).
 \end{itemize}
+\noindent
 Nach einer eingehenden Analyse vorhandener \textit{Game--Engines} hinsichtlich des Anforderungskatalogs, wie zum
 Beispiel die \textit{CryEngine}~\cite{CryEngine} und die \textit{UnrealEngine}~\cite{UnrealEngine}, ist die
 \textit{Unity--Engine}~\cite{Unity} für die prototypische Umsetzung ausgewählt worden.
@@ -45,7 +57,7 @@ ist.
 Für die sogenannte \textit{Versionsverwaltung} existieren unterschiedliche Konzepte und Realisierungsansätze, zu denen sowohl
 \textit{Subversion (SVN)} als auch \textit{GIT} zählen. Für den prototypischen Anteil der wissenschaftlichen Arbeit
 diente \textit{GIT} aus den nachstehenden Gründen als Versionierungswerkzeug:
-\begin{itemize}[itemsep=0pt] 
+\begin{itemize}[itemsep=0em]
 	\item Im Gegensatz zu \textit{SVN} stellt \textit{GIT} eine verteilte Versionierungsplattform dar. Hierbei werden die Daten
 	nicht ausschließlich auf dem zentralen Verwaltungsserver archiviert, sondern jeder beteiligte Entwicklungscomputer enthält
 	eine lokale Kopie des \textit{Repositories}.
@@ -56,16 +68,29 @@ diente \textit{GIT} aus den nachstehenden Gründen als Versionierungswerkzeug:
 \end{itemize}
 
 \subsubsection*{Implementierte Strukturen}
-Code:
-\begin{itemize}
-	\item Die wichtigsten Implementierung (bis auf 2 Partikelsysteme alles selber gemacht)
-	\item Aufteilung in die unterschiedlichen Gamestates (Prototyp -> nur das notwendigste ausgefüllt)
-	\item Ablaufsteuerung innerhalb des Spiel über eine FSM gelöst (kurze Erläuterung, evtl. kleines Diagramm)
-	\item Dialogsystem mit Integration in der FSM (flexibles Dateiformat "entwicklet" -> kurz Vorzüge erläutern)
-	\item Aktoren (kurze Erläuterung über generelle Funktionsweise)
-	\item Screenshots im Anhang
-\end{itemize}
-
-%....................................................................................................................
-% Hier die Sektionen für die Umsetzung
-%....................................................................................................................
+Die prototypische Implementierung dient lediglich als autarkes Hilfsmittel für die Beantwortung der aufgestellten
+wissenschaftlichen Fragestellung und bedarf daher nur für die Evaluierung relevanten Strukturen eine Erläuterung der
+Funktionsweisen.
+\\
+Das durch die nachfolgende Abbildung~\ref{fig:prototyp_trigger_system} dargestellte theoretische Konstrukt zeigt die
+grundlegende Funktionsweise für Auswertung der im Analyselevel gesammelten Spielereigenschaften (siehe~\ref{subsec: analyse level}
+\textit{Analyse-Level}):
+\begin{figure}[H]
+	\begin{center}
+		\fbox{\includegraphics[page=1,width=0.98\linewidth]{Inhalt/Implementierung/Trigger.pdf}}
+	\end{center}	
+	\caption[Triggersystem für Messung von Spielereigenschaften]{Triggersystem für Messung von Spielereigenschaften (Eigene Darstellung)}
+	\label{fig:prototyp_trigger_system}
+\end{figure}
+\noindent
+Die Funktion des Systems beruht auf vier voneinander abhängigen Triggern, welche bei Berührung mit dem Spielerobjekt
+ausgelöst werden und zugeordnete Aktionen ausüben: dem \textit{Starttrigger}, dem \textit{Endtrigger} und die
+beiden \textit{Aktionstriggern}.
+\\
+Anfangs ist lediglich der Starttrigger aktiv, der bei Kontakt mit dem Spieler die restlichen drei Trigger aktiviert 
+und sich gleichzeitig selbst deaktiviert. Anschließend sieht die Idee vor, dass der Spieler einen von den zwei möglichen
+Alternativwegen einschlägt und dadurch einen der beiden Aktionstrigger auslöst (die ausgelöste Aktion protokolliert
+die festgelegten Spielereigenschaften).
+\\
+Durch den finalen Kontakt mit dem Endtrigger wird die Deaktivierung des Konstrukts bewirkt. Die Messung der für
+den Bereich vorgesehenen Charaktereigenschaften und somit beendet.
