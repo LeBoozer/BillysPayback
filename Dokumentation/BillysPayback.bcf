@@ -1969,9 +1969,6 @@
     <bcf:citekey order="21">GitHub</bcf:citekey>
     <bcf:citekey order="22">Skype</bcf:citekey>
     <bcf:citekey order="23">TeamViewer</bcf:citekey>
-    <bcf:citekey order="24">CryEngine</bcf:citekey>
-    <bcf:citekey order="25">UnrealEngine</bcf:citekey>
-    <bcf:citekey order="26">Unity</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="none" type="entry" sortscheme="none">
   <bcf:sorting>
