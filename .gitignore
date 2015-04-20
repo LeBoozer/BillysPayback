@@ -2,12 +2,12 @@
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
+Dokumentation/BillysPayback.pdf
 
 *.aux
 *.blg
 *.log
 *.out
-*.pdf
 *.toc
 *.gz
 
