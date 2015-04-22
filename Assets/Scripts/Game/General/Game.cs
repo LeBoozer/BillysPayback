@@ -94,6 +94,9 @@ public class Game
 			m_singletonInstance.m_playerData 	= m_singletonInstance.m_singletonGameObject.AddComponent<PlayerData>();
 			m_singletonInstance.m_scriptEngine  = m_singletonInstance.m_singletonGameObject.AddComponent<ScriptEngineHolder>();
 
+            // Add empty components
+            m_singletonInstance.m_singletonGameObject.AddComponent<TakeScreenshot>();
+
             // Add console game object
             obj = (GameObject)GameObject.Instantiate(Resources.Load("Helper/Console"));
             if (obj != null)

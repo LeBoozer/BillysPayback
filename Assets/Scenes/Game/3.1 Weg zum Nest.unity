@@ -21589,7 +21589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_object: {fileID: 0}
   m_lookAtObject: {fileID: 269501063}
-  m_distance_Z: 12
+  m_distance_Z: 15
   m_distance_Y: 3.5
   m_damping: .800000012
   m_threshold: .100000001
