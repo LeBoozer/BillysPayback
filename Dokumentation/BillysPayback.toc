@@ -22,7 +22,7 @@
 \defcounter {refsection}{0}\relax 
 \setcounter {tocdepth}{-1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}\"Ubersicht \"uber die Arbeit}{1}{section.1.2}
+\contentsline {section}{\numberline {1.2}\"Ubersicht \"uber die Arbeit}{2}{section.1.2}
 \defcounter {refsection}{0}\relax 
 \setcounter {tocdepth}{2}
 \defcounter {refsection}{0}\relax 
@@ -184,7 +184,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.3}Meilensteine}{36}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Werkzeuge}{36}{section.5.4}
+\contentsline {section}{\numberline {5.4}Werkzeuge}{37}{section.5.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Prototypische Umsetzung}{39}{chapter.6}
 \defcounter {refsection}{0}\relax 
@@ -250,14 +250,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\nonumberline Allgemeine Fragen}{56}{section*.70}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{57}{chapter.8}
+\contentsline {section}{\numberline {7.4}Zusammenfassung}{56}{section.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{59}{chapter*.71}
+\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{59}{chapter.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Anhang \numberline {A}Abbildungen}{61}{Anhang.a.A}
+\contentsline {section}{\numberline {8.1}Zusammenfassung}{59}{section.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.2}Ausblick}{59}{section.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{61}{chapter*.71}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Anhang \numberline {A}Abbildungen}{63}{Anhang.a.A}
 \defcounter {refsection}{0}\relax 
 \setcounter {tocdepth}{-1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Analyselevel}{61}{section.a.A.1}
+\contentsline {section}{\numberline {A.1}Analyselevel}{63}{section.a.A.1}
 \defcounter {refsection}{0}\relax 
 \setcounter {tocdepth}{2}
