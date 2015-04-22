@@ -78,192 +78,214 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.7}Zusammenfassung}{15}{section.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Konzeptionierung}{17}{chapter.4}
+\contentsline {chapter}{\numberline {4}Planung}{17}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Manipulationen}{17}{section.4.1}
+\contentsline {section}{\numberline {4.1}Story}{17}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Anforderungen}{17}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Aufgabenteilung}{17}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Einschr\"ankungen}{18}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.3}Meilensteine}{18}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.3}Ausgew\"ahlte Strategien}{18}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.4}Werkzeuge}{18}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Armes-Schwein-Spiele}{18}{section*.16}
+\contentsline {chapter}{\numberline {5}Konzeptionierung}{21}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Nutzung des Gerechte-Welt-Glaubens}{18}{section*.17}
+\contentsline {section}{\numberline {5.1}Manipulationen}{21}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Verschleierung des fehlenden alternativen Weges}{19}{section*.18}
+\contentsline {subsection}{\numberline {5.1.1}Anforderungen}{21}{subsection.5.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Umgebungshinweise}{19}{section*.19}
+\contentsline {subsection}{\numberline {5.1.2}Einschr\"ankungen}{22}{subsection.5.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Anfragen von kameradschaftlichen Charakteren}{19}{section*.20}
+\contentsline {subsection}{\numberline {5.1.3}Ausgew\"ahlte Strategien}{22}{subsection.5.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Motivation zu Aufgaben durch Anfangserfolge}{20}{section*.21}
+\contentsline {subsubsection}{\nonumberline Armes-Schwein-Spiele}{22}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Anreiz durch die Beute}{20}{section*.22}
+\contentsline {subsubsection}{\nonumberline Nutzung des Gerechte-Welt-Glaubens}{22}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Zeitdruck}{20}{section*.23}
+\contentsline {subsubsection}{\nonumberline Verschleierung des fehlenden alternativen Weges}{23}{section*.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.4}Verworfene Strategien}{21}{subsection.4.1.4}
+\contentsline {subsubsection}{\nonumberline Umgebungshinweise}{23}{section*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Spielereigenschaften}{21}{section.4.2}
+\contentsline {subsubsection}{\nonumberline Anfragen von kameradschaftlichen Charakteren}{23}{section*.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Sammlereigenschaft}{22}{subsection.4.2.1}
+\contentsline {subsubsection}{\nonumberline Motivation zu Aufgaben durch Anfangserfolge}{24}{section*.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Ehrgeiz}{22}{subsection.4.2.2}
+\contentsline {subsubsection}{\nonumberline Anreiz durch die Beute}{24}{section*.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}Herausforderung suchend}{22}{subsection.4.2.3}
+\contentsline {subsubsection}{\nonumberline Zeitdruck}{24}{section*.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.4}Mitleid}{22}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {5.1.4}Verworfene Strategien}{25}{subsection.5.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.5}Autonomie}{22}{subsection.4.2.5}
+\contentsline {section}{\numberline {5.2}Spielereigenschaften}{25}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.6}Geduld}{23}{subsection.4.2.6}
+\contentsline {subsection}{\numberline {5.2.1}Sammlereigenschaft}{26}{subsection.5.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.7}Aufmerksamkeit}{23}{subsection.4.2.7}
+\contentsline {subsection}{\numberline {5.2.2}Ehrgeiz}{26}{subsection.5.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Level-Design}{23}{section.4.3}
+\contentsline {subsection}{\numberline {5.2.3}Herausforderung suchend}{26}{subsection.5.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Spielkonzept}{23}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {5.2.4}Mitleid}{26}{subsection.5.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Analyse-Level}{24}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {5.2.5}Autonomie}{26}{subsection.5.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Bewertung}{25}{section*.24}
+\contentsline {subsection}{\numberline {5.2.6}Geduld}{27}{subsection.5.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Der erste Diamant}{25}{section*.25}
+\contentsline {subsection}{\numberline {5.2.7}Aufmerksamkeit}{27}{subsection.5.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Antonio's Sprunganweisung}{25}{section*.26}
+\contentsline {section}{\numberline {5.3}Level-Design}{27}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Der Weg mit den vielen kleinen L\"ucken}{25}{section*.27}
+\contentsline {subsection}{\numberline {5.3.1}Spielkonzept}{27}{subsection.5.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Die kleine Kirsche}{25}{section*.28}
+\contentsline {subsection}{\numberline {5.3.2}Analyse-Level}{28}{subsection.5.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Die zerst\"orbaren Bl\"ocke}{26}{section*.29}
+\contentsline {subsubsection}{\nonumberline Bewertung}{29}{section*.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Die Diamanten am Abgrund}{26}{section*.30}
+\contentsline {subsubsection}{\nonumberline Der erste Diamant}{29}{section*.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Der matschige Weg}{26}{section*.31}
+\contentsline {subsubsection}{\nonumberline Antonio's Sprunganweisung}{29}{section*.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Die gl\"anzenden, zerbrechliche Bl\"ocke}{27}{section*.32}
+\contentsline {subsubsection}{\nonumberline Der Weg mit den vielen kleinen L\"ucken}{29}{section*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Der bewegliche Baumstamm \"uber dem Abgrund}{27}{section*.33}
+\contentsline {subsubsection}{\nonumberline Die kleine Kirsche}{29}{section*.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Die gef\"ahrliche Grube}{27}{section*.34}
+\contentsline {subsubsection}{\nonumberline Die zerst\"orbaren Bl\"ocke}{30}{section*.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Die Geduldsprobe mit den V\"ogeln}{28}{section*.35}
+\contentsline {subsubsection}{\nonumberline Die Diamanten am Abgrund}{30}{section*.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Der unsichtbare Weg}{28}{section*.36}
+\contentsline {subsubsection}{\nonumberline Der matschige Weg}{30}{section*.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Die in Not geratene Kirsche}{28}{section*.37}
+\contentsline {subsubsection}{\nonumberline Die gl\"anzenden, zerbrechliche Bl\"ocke}{31}{section*.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Billy's H\"utte}{28}{section*.38}
+\contentsline {subsubsection}{\nonumberline Der bewegliche Baumstamm \"uber dem Abgrund}{31}{section*.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Level 2.1: Der kaputte Brunnen}{29}{subsection.4.3.3}
+\contentsline {subsubsection}{\nonumberline Die gef\"ahrliche Grube}{31}{section*.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Die gestohlene Kurbel}{29}{section*.39}
+\contentsline {subsubsection}{\nonumberline Die Geduldsprobe mit den V\"ogeln}{32}{section*.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Der Untergrund}{30}{section*.40}
+\contentsline {subsubsection}{\nonumberline Der unsichtbare Weg}{32}{section*.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Die Lava}{31}{section*.41}
+\contentsline {subsubsection}{\nonumberline Die in Not geratene Kirsche}{32}{section*.37}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Ablenkung durch mehrere Wege}{32}{section*.42}
+\contentsline {subsubsection}{\nonumberline Billy's H\"utte}{32}{section*.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Das Versteck der V\"ogel}{32}{section*.43}
+\contentsline {subsection}{\numberline {5.3.3}Level 2.1: Der kaputte Brunnen}{33}{subsection.5.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.4}Level 3.1: Der dunkle Wald}{32}{subsection.4.3.4}
+\contentsline {subsubsection}{\nonumberline Die gestohlene Kurbel}{33}{section*.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.5}Level 3.2: Black Sparrow's Nest}{32}{subsection.4.3.5}
+\contentsline {subsubsection}{\nonumberline Der Untergrund}{34}{section*.40}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Zusammenfassung}{32}{section.4.4}
+\contentsline {subsubsection}{\nonumberline Die Lava}{35}{section*.41}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Planung}{35}{chapter.5}
+\contentsline {subsubsection}{\nonumberline Ablenkung durch mehrere Wege}{36}{section*.42}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Story}{35}{section.5.1}
+\contentsline {subsubsection}{\nonumberline Das Versteck der V\"ogel}{36}{section*.43}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Aufgabenteilung}{35}{section.5.2}
+\contentsline {subsubsection}{\nonumberline Die Schr\"age}{37}{section*.44}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Meilensteine}{36}{section.5.3}
+\contentsline {subsubsection}{\nonumberline Der t\"odliche Vogelschwarm}{37}{section*.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Werkzeuge}{37}{section.5.4}
+\contentsline {subsubsection}{\nonumberline Higgins}{38}{section*.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Prototypische Umsetzung}{39}{chapter.6}
+\contentsline {subsection}{\numberline {5.3.4}Level 3.1: Der dunkle Wald}{38}{subsection.5.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Evaluierung}{43}{chapter.7}
+\contentsline {subsubsection}{\nonumberline Die leuchtende H\"ohle}{38}{section*.47}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Auswertung Eigenschaftenanalyse}{43}{section.7.1}
+\contentsline {subsubsection}{\nonumberline Weitere Ablenkung}{38}{section*.48}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.1}Fehlerquellen in der Umsetzung}{43}{subsection.7.1.1}
+\contentsline {subsubsection}{\nonumberline Manfreds verlorene Sachen}{39}{section*.49}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.2}Verbesserungsm\"oglichkeiten}{44}{subsection.7.1.2}
+\contentsline {subsubsection}{\nonumberline Die Verfolgung}{39}{section*.50}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.3}Folgen}{44}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {5.3.5}Level 3.2: Black Sparrow's Nest}{40}{subsection.5.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Sammler}{44}{section*.47}
+\contentsline {subsubsection}{\nonumberline Antonio's kleiner Bruder}{40}{section*.51}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Geduld}{44}{section*.48}
+\contentsline {subsubsection}{\nonumberline Die einst\"urzende Br\"ucke}{40}{section*.52}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Ehrgeiz}{45}{section*.49}
+\contentsline {subsubsection}{\nonumberline Der Kampf gegen Black Sparrow}{40}{section*.53}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Herausforderung}{45}{section*.50}
+\contentsline {subsubsection}{\nonumberline Antonios Verrat}{41}{section*.54}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Mitleid}{45}{section*.51}
+\contentsline {section}{\numberline {5.4}Zusammenfassung}{41}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Autonomie}{46}{section*.52}
+\contentsline {chapter}{\numberline {6}Prototypische Umsetzung}{43}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Aufmerksamkeit}{46}{section*.53}
+\contentsline {chapter}{\numberline {7}Evaluierung}{47}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Auswertung Interview}{47}{section.7.2}
+\contentsline {section}{\numberline {7.1}Auswertung Eigenschaftenanalyse}{47}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 1. Beeinflussung durch Gespr\"ache mit Charakteren und deren Anpassung}{47}{section*.54}
+\contentsline {subsection}{\numberline {7.1.1}Fehlerquellen in der Umsetzung}{47}{subsection.7.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 2. Falsch getroffene Entscheidung an einem Wegpunkt}{47}{section*.55}
+\contentsline {subsection}{\numberline {7.1.2}Verbesserungsm\"oglichkeiten}{48}{subsection.7.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 3. Alternatives Ende}{48}{section*.56}
+\contentsline {subsection}{\numberline {7.1.3}Folgen}{48}{subsection.7.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 4. Bob und seine Quest}{48}{section*.57}
+\contentsline {subsubsection}{\nonumberline Sammler}{48}{section*.58}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 5. Aufmerksamkeit durch zerst\"orbaren Block}{49}{section*.58}
+\contentsline {subsubsection}{\nonumberline Geduld}{48}{section*.59}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 6. Linke und rechte Br\"ucke}{50}{section*.59}
+\contentsline {subsubsection}{\nonumberline Ehrgeiz}{49}{section*.60}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 7. Wahl zwischen schwerem und leichterem Weg}{50}{section*.60}
+\contentsline {subsubsection}{\nonumberline Herausforderung}{49}{section*.61}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 8. Verlassen des Nestes durch die T\"ur beim Auftauchen des Vogelschwarms}{51}{section*.61}
+\contentsline {subsubsection}{\nonumberline Mitleid}{49}{section*.62}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 9. Rettung der Kiwano}{51}{section*.62}
+\contentsline {subsubsection}{\nonumberline Autonomie}{50}{section*.63}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 10. Wahl zwischen H\"ohle und oberen Weg}{51}{section*.63}
+\contentsline {subsubsection}{\nonumberline Aufmerksamkeit}{50}{section*.64}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 11. Auff\"alliger Gegenstand (Hut)}{52}{section*.64}
+\contentsline {section}{\numberline {7.2}Auswertung Interview}{51}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 12. Annahme der Quest in Level 3.1}{52}{section*.65}
+\contentsline {subsubsection}{\nonumberline 1. Beeinflussung durch Gespr\"ache mit Charakteren und deren Anpassung}{51}{section*.65}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 13. Vogelverfolgung}{53}{section*.66}
+\contentsline {subsubsection}{\nonumberline 2. Falsch getroffene Entscheidung an einem Wegpunkt}{51}{section*.66}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 14. Suche nach Antonios Bruder}{54}{section*.67}
+\contentsline {subsubsection}{\nonumberline 3. Alternatives Ende}{52}{section*.67}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline 15. Angriff auf Antonio}{54}{section*.68}
+\contentsline {subsubsection}{\nonumberline 4. Bob und seine Quest}{52}{section*.68}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Auswertung der Erfolgskriterien und der allgemeinen Fragen}{55}{section.7.3}
+\contentsline {subsubsection}{\nonumberline 5. Aufmerksamkeit durch zerst\"orbaren Block}{53}{section*.69}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Erfolgskriterien}{55}{section*.69}
+\contentsline {subsubsection}{\nonumberline 6. Linke und rechte Br\"ucke}{54}{section*.70}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Allgemeine Fragen}{56}{section*.70}
+\contentsline {subsubsection}{\nonumberline 7. Wahl zwischen schwerem und leichterem Weg}{54}{section*.71}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Zusammenfassung}{56}{section.7.4}
+\contentsline {subsubsection}{\nonumberline 8. Verlassen des Nestes durch die T\"ur beim Auftauchen des Vogelschwarms}{55}{section*.72}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{59}{chapter.8}
+\contentsline {subsubsection}{\nonumberline 9. Rettung der Kiwano}{55}{section*.73}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Zusammenfassung}{59}{section.8.1}
+\contentsline {subsubsection}{\nonumberline 10. Wahl zwischen H\"ohle und oberen Weg}{55}{section*.74}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Ausblick}{59}{section.8.2}
+\contentsline {subsubsection}{\nonumberline 11. Auff\"alliger Gegenstand (Hut)}{56}{section*.75}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{61}{chapter*.71}
+\contentsline {subsubsection}{\nonumberline 12. Annahme der Quest in Level 3.1}{56}{section*.76}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Anhang \numberline {A}Abbildungen}{63}{Anhang.a.A}
+\contentsline {subsubsection}{\nonumberline 13. Vogelverfolgung}{57}{section*.77}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline 14. Suche nach Antonios Bruder}{58}{section*.78}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline 15. Angriff auf Antonio}{58}{section*.79}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.3}Auswertung der Erfolgskriterien und der allgemeinen Fragen}{59}{section.7.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Erfolgskriterien}{59}{section*.80}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Allgemeine Fragen}{60}{section*.81}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.4}Zusammenfassung}{60}{section.7.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Zusammenfassung und Ausblick}{63}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.1}Zusammenfassung}{63}{section.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.2}Ausblick}{63}{section.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{65}{chapter*.82}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Anhang \numberline {A}Abbildungen}{67}{Anhang.a.A}
 \defcounter {refsection}{0}\relax 
 \setcounter {tocdepth}{-1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Analyselevel}{63}{section.a.A.1}
+\contentsline {section}{\numberline {A.1}Analyselevel}{67}{section.a.A.1}
 \defcounter {refsection}{0}\relax 
 \setcounter {tocdepth}{2}
