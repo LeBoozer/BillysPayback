@@ -1,18 +1,15 @@
 [0] Config.pm:320> INFO - This is Biber 1.9
 [0] Config.pm:323> INFO - Logfile is 'BillysPayback.blg'
-[53] biber-MSWIN:274> INFO - === %a %b %e, %Y, %H:%M:%S
-[53] Biber.pm:333> INFO - Reading 'BillysPayback.bcf'
-[153] Biber.pm:635> INFO - Found 18 citekeys in bib section 0
-[199] Biber.pm:3051> INFO - Processing section 0
-[244] Biber.pm:3189> INFO - Looking for bibtex format file 'Literaturverzeichnis.bib' for section 0
-[249] bibtex.pm:990> INFO - Decoding LaTeX character macros into UTF-8
-[253] bibtex.pm:864> INFO - Found BibTeX data source 'Literaturverzeichnis.bib'
-[515] UCollate.pm:66> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[515] UCollate.pm:66> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[515] Biber.pm:2928> INFO - Sorting list 'none' of type 'entry' with scheme 'none' and locale 'de-DE'
-[515] Biber.pm:2932> INFO - No sort tailoring available for locale 'de-DE'
-[557] bbl.pm:517> INFO - Writing 'BillysPayback.bbl' with encoding 'latin1'
-[561] Utils.pm:144> WARN - The entry 'VideoEthanCarter' has characters which cannot be encoded in 'latin1'. Recoding problematic characters into macros.
-[563] Utils.pm:144> WARN - The entry 'DieVersuchungAdventureTreffKritik' has characters which cannot be encoded in 'latin1'. Recoding problematic characters into macros.
-[564] bbl.pm:606> INFO - Output to BillysPayback.bbl
-[564] Biber.pm:106> INFO - WARNINGS: 2
+[30] biber-MSWIN:274> INFO - === %a %b %e, %Y, %H:%M:%S
+[31] Biber.pm:333> INFO - Reading 'BillysPayback.bcf'
+[93] Biber.pm:635> INFO - Found 14 citekeys in bib section 0
+[120] Biber.pm:3051> INFO - Processing section 0
+[145] Biber.pm:3189> INFO - Looking for bibtex format file 'Literaturverzeichnis.bib' for section 0
+[147] bibtex.pm:990> INFO - Decoding LaTeX character macros into UTF-8
+[150] bibtex.pm:864> INFO - Found BibTeX data source 'Literaturverzeichnis.bib'
+[278] UCollate.pm:66> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[278] UCollate.pm:66> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[278] Biber.pm:2928> INFO - Sorting list 'none' of type 'entry' with scheme 'none' and locale 'de-DE'
+[278] Biber.pm:2932> INFO - No sort tailoring available for locale 'de-DE'
+[301] bbl.pm:517> INFO - Writing 'BillysPayback.bbl' with encoding 'latin1'
+[303] bbl.pm:606> INFO - Output to BillysPayback.bbl

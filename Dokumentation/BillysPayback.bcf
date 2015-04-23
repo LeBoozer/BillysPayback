@@ -1958,20 +1958,16 @@
     <bcf:citekey order="11">SiewNareyekPlayerManipulation</bcf:citekey>
     <bcf:citekey order="12">PsychoTricksPCGames</bcf:citekey>
     <bcf:citekey order="13">SpielStanleyParable</bcf:citekey>
-    <bcf:citekey order="14">VideoEthanCarter</bcf:citekey>
-    <bcf:citekey order="15">TestEthanCarterGameStar</bcf:citekey>
-    <bcf:citekey order="16">KZieroldComputerspielanalyse</bcf:citekey>
-    <bcf:citekey order="17">DieVersuchungAdventureTreffKritik</bcf:citekey>
-    <bcf:citekey order="17">DieVersuchungAftermathmedia</bcf:citekey>
-    <bcf:citekey order="18">KanbanFlow</bcf:citekey>
-    <bcf:citekey order="19">Dropbox</bcf:citekey>
-    <bcf:citekey order="20">Git</bcf:citekey>
-    <bcf:citekey order="21">GitHub</bcf:citekey>
-    <bcf:citekey order="22">Skype</bcf:citekey>
-    <bcf:citekey order="23">TeamViewer</bcf:citekey>
-    <bcf:citekey order="24">CryEngine</bcf:citekey>
-    <bcf:citekey order="25">UnrealEngine</bcf:citekey>
-    <bcf:citekey order="26">Unity</bcf:citekey>
+    <bcf:citekey order="14">KZieroldComputerspielanalyse</bcf:citekey>
+    <bcf:citekey order="15">KanbanFlow</bcf:citekey>
+    <bcf:citekey order="16">Dropbox</bcf:citekey>
+    <bcf:citekey order="17">Git</bcf:citekey>
+    <bcf:citekey order="18">GitHub</bcf:citekey>
+    <bcf:citekey order="19">Skype</bcf:citekey>
+    <bcf:citekey order="20">TeamViewer</bcf:citekey>
+    <bcf:citekey order="21">CryEngine</bcf:citekey>
+    <bcf:citekey order="22">UnrealEngine</bcf:citekey>
+    <bcf:citekey order="23">Unity</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="none" type="entry" sortscheme="none">
   <bcf:sorting>

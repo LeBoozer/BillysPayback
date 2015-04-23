@@ -1,4 +1,4 @@
-\BOOKMARK [0][-]{chapter*.4}{Abbildungsverzeichnis}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{Abbildungsverzeichnis}{}% 1
 \BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 2
 \BOOKMARK [1][-]{section.1.1}{Zielsetzung}{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.2}{\334bersicht \374ber die Arbeit}{chapter.1}% 4
@@ -24,15 +24,15 @@
 \BOOKMARK [1][-]{section.3.1}{Player Manipulation}{chapter.3}% 24
 \BOOKMARK [1][-]{section.3.2}{Die Psycho-Tricks der Spiele-Designer: Das Spiel in deinem Kopf}{chapter.3}% 25
 \BOOKMARK [1][-]{section.3.3}{The Stanley Parable}{chapter.3}% 26
-\BOOKMARK [1][-]{section.3.4}{The Vanishing of Ethan Carter}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.5}{Fable}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.6}{Die Versuchung}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.7}{Zusammenfassung}{chapter.3}% 30
-\BOOKMARK [0][-]{chapter.4}{Planung}{}% 31
-\BOOKMARK [1][-]{section.4.1}{Story}{chapter.4}% 32
-\BOOKMARK [1][-]{section.4.2}{Aufgabenteilung}{chapter.4}% 33
+\BOOKMARK [1][-]{section.3.4}{Fable}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.5}{Zusammenfassung}{chapter.3}% 28
+\BOOKMARK [0][-]{chapter.4}{Planung}{}% 29
+\BOOKMARK [1][-]{section.4.1}{Story}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.2}{Aufgabenteilung}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.2.1}{Geplante Verteilung}{section.4.2}% 32
+\BOOKMARK [2][-]{subsection.4.2.2}{Umgesetzte Verteilung}{section.4.2}% 33
 \BOOKMARK [1][-]{section.4.3}{Meilensteine}{chapter.4}% 34
-\BOOKMARK [1][-]{section.4.4}{Werkzeuge}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.4}{Projektmanagement-Werkzeuge}{chapter.4}% 35
 \BOOKMARK [0][-]{chapter.5}{Konzeptionierung}{}% 36
 \BOOKMARK [1][-]{section.5.1}{Manipulationen}{chapter.5}% 37
 \BOOKMARK [2][-]{subsection.5.1.1}{Anforderungen}{section.5.1}% 38
@@ -52,7 +52,7 @@
 \BOOKMARK [2][-]{subsection.5.3.2}{Analyse-Level}{section.5.3}% 52
 \BOOKMARK [2][-]{subsection.5.3.3}{Level 2.1: Der kaputte Brunnen}{section.5.3}% 53
 \BOOKMARK [2][-]{subsection.5.3.4}{Level 3.1: Der dunkle Wald}{section.5.3}% 54
-\BOOKMARK [2][-]{subsection.5.3.5}{Level 3.2: Black Sparrow's Nest}{section.5.3}% 55
+\BOOKMARK [2][-]{subsection.5.3.5}{Level 3.2: Black Sparrows Nest}{section.5.3}% 55
 \BOOKMARK [1][-]{section.5.4}{Zusammenfassung}{chapter.5}% 56
 \BOOKMARK [0][-]{chapter.6}{Prototypische Umsetzung}{}% 57
 \BOOKMARK [0][-]{chapter.7}{Evaluierung}{}% 58
@@ -66,11 +66,25 @@
 \BOOKMARK [0][-]{chapter.8}{Zusammenfassung und Ausblick}{}% 66
 \BOOKMARK [1][-]{section.8.1}{Zusammenfassung}{chapter.8}% 67
 \BOOKMARK [1][-]{section.8.2}{Ausblick}{chapter.8}% 68
-\BOOKMARK [0][-]{chapter*.82}{Literaturverzeichnis}{}% 69
-\BOOKMARK [0][-]{Anhang.a.A}{Anhang Abbildungen}{}% 70
-\BOOKMARK [1][-]{section.a.A.1}{Screenshots}{Anhang.a.A}% 71
-\BOOKMARK [2][-]{subsection.a.A.1.1}{Hauptmen\374}{section.a.A.1}% 72
-\BOOKMARK [2][-]{subsection.a.A.1.2}{Analyse\205Level}{section.a.A.1}% 73
-\BOOKMARK [2][-]{subsection.a.A.1.3}{Der kaputte Brunnen}{section.a.A.1}% 74
-\BOOKMARK [2][-]{subsection.a.A.1.4}{Der dunkle Wald}{section.a.A.1}% 75
-\BOOKMARK [2][-]{subsection.a.A.1.5}{Black Sparrow's Nest}{section.a.A.1}% 76
+\BOOKMARK [0][-]{chapter*.67}{Literaturverzeichnis}{}% 69
+\BOOKMARK [0][-]{Anhang.a.A}{Anhang Aufbau des Analyselevels}{}% 70
+\BOOKMARK [1][-]{section.a.A.1}{Der erste Diamant}{Anhang.a.A}% 71
+\BOOKMARK [1][-]{section.a.A.2}{Antonios Sprunganweisung}{Anhang.a.A}% 72
+\BOOKMARK [1][-]{section.a.A.3}{Der Weg mit den vielen kleinen L\374cken}{Anhang.a.A}% 73
+\BOOKMARK [1][-]{section.a.A.4}{Die kleine Kirsche}{Anhang.a.A}% 74
+\BOOKMARK [1][-]{section.a.A.5}{Die zerst\366rbaren Bl\366cke}{Anhang.a.A}% 75
+\BOOKMARK [1][-]{section.a.A.6}{Die Diamanten am Abgrund}{Anhang.a.A}% 76
+\BOOKMARK [1][-]{section.a.A.7}{Der matschige Weg}{Anhang.a.A}% 77
+\BOOKMARK [1][-]{section.a.A.8}{Die gl\344nzenden, zerbrechliche Bl\366cke}{Anhang.a.A}% 78
+\BOOKMARK [1][-]{section.a.A.9}{Der bewegliche Baumstamm \374ber dem Abgrund}{Anhang.a.A}% 79
+\BOOKMARK [1][-]{section.a.A.10}{Die gef\344hrliche Grube}{Anhang.a.A}% 80
+\BOOKMARK [1][-]{section.a.A.11}{Die Geduldsprobe mit den V\366geln}{Anhang.a.A}% 81
+\BOOKMARK [1][-]{section.a.A.12}{Der unsichtbare Weg}{Anhang.a.A}% 82
+\BOOKMARK [1][-]{section.a.A.13}{Die in Not geratene Kirsche}{Anhang.a.A}% 83
+\BOOKMARK [0][-]{Anhang.a.B}{Anhang Abbildungen}{}% 84
+\BOOKMARK [1][-]{section.a.B.1}{Screenshots}{Anhang.a.B}% 85
+\BOOKMARK [2][-]{subsection.a.B.1.1}{Hauptmen\374}{section.a.B.1}% 86
+\BOOKMARK [2][-]{subsection.a.B.1.2}{Analyse\205Level}{section.a.B.1}% 87
+\BOOKMARK [2][-]{subsection.a.B.1.3}{Der kaputte Brunnen}{section.a.B.1}% 88
+\BOOKMARK [2][-]{subsection.a.B.1.4}{Der dunkle Wald}{section.a.B.1}% 89
+\BOOKMARK [2][-]{subsection.a.B.1.5}{Black Sparrows Nest}{section.a.B.1}% 90
